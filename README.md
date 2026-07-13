@@ -14,10 +14,12 @@
 
 ## The Classifieds — App Sections
 
-- **Security & Protection** — Guardr, Signature Security Specialist
-- **Social & Connection** — Friendr
-- **Community** — Sacramento Buy Nothing
-- **Lifestyle & Culture** — StrainVerse, SpiritsVerse, Cookbook.io
+Each section includes an editorial on why that venture group exists.
+
+1. **Social & Connection** — Friendr
+2. **Community** — Sacramento Buy Nothing
+3. **Lifestyle & Culture** — StrainVerse, SpiritsVerse, Cookbook.io
+4. **Security & Protection** — Guardr, Signature Security Specialist
 
 Each app has its own detail page under `apps/`.
 

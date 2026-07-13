@@ -16,9 +16,9 @@
 
 Each section includes an editorial on why that venture group exists.
 
-1. **Social & Connection** — Friendr
-2. **Community** — Sacramento Buy Nothing
-3. **Lifestyle & Culture** — StrainVerse, SpiritsVerse, Cookbook.io
+1. **Community** — Sacramento Buy Nothing
+2. **Lifestyle & Culture** — StrainVerse, SpiritsVerse, Cookbook.io
+3. **Social & Connection** — Friendr
 4. **Security & Protection** — Guardr, Signature Security Specialist
 
 Each app has its own detail page under `apps/`.

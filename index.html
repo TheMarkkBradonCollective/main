@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Markkade — the official newsroom for everything built by Markeith Nicholas White (Markk Brandon / StickzCoder.Lua).">
+<meta name="theme-color" content="#1a1208">
+<title>The Markkade — Everything Markk Brandon</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --ink:#1a1208;
+  --paper:#f4efe4;
+  --paper-dark:#e8e0d0;
+  --accent:#8b1a1a;
+  --accent-light:#c0392b;
+  --muted:#5c5347;
+  --rule:#2a2218;
+  --gold:#b8860b;
+  --column-gap:2rem;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:Georgia,"Times New Roman",Times,serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:17px;
+}
+
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--accent-light)}
+
+.paper{
+  max-width:1100px;
+  margin:0 auto;
+  background:var(--paper);
+  box-shadow:0 0 60px rgba(0,0,0,.12);
+  min-height:100vh;
+}
+
+/* Masthead */
+.masthead{
+  text-align:center;
+  padding:2.5rem 1.5rem 1.5rem;
+  border-bottom:4px double var(--rule);
+}
+
+.masthead-meta{
+  font-family:"Courier New",Courier,monospace;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:.75rem;
+}
+
+.masthead h1{
+  font-size:clamp(2.8rem,8vw,4.5rem);
+  font-weight:900;
+  letter-spacing:.06em;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+.masthead-sub{
+  margin-top:.75rem;
+  font-style:italic;
+  font-size:1.05rem;
+  color:var(--muted);
+}
+
+.masthead-byline{
+  margin-top:1rem;
+  font-size:.85rem;
+  letter-spacing:.04em;
+}
+
+.masthead-byline strong{display:block;font-size:.95rem;margin-bottom:.15rem}
+
+.tagline{
+  margin-top:1.25rem;
+  padding:.75rem 1rem;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--muted);
+}
+
+/* Layout */
+.content{padding:2rem 1.5rem 3rem}
+
+.section{margin-bottom:3rem}
+
+.section-head{
+  text-align:center;
+  margin-bottom:2rem;
+  padding-bottom:.75rem;
+  border-bottom:2px solid var(--rule);
+}
+
+.section-head h2{
+  font-size:1.6rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+
+.section-head p{
+  margin-top:.35rem;
+  font-style:italic;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.columns{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:var(--column-gap);
+}
+
+/* Headline cards */
+.headline{
+  border:1px solid var(--rule);
+  padding:1.25rem;
+  background:#fff;
+  break-inside:avoid;
+  position:relative;
+}
+
+.headline::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:var(--accent);
+}
+
+.headline-icon{font-size:1.5rem;margin-bottom:.35rem}
+
+.headline h3{
+  font-size:1.35rem;
+  font-weight:900;
+  margin-bottom:.15rem;
+}
+
+.headline .deck{
+  font-style:italic;
+  color:var(--accent);
+  font-size:.95rem;
+  margin-bottom:.75rem;
+  font-weight:600;
+}
+
+.headline p{
+  font-size:.92rem;
+  margin-bottom:.65rem;
+  text-align:justify;
+  hyphens:auto;
+}
+
+.headline ul{
+  font-size:.85rem;
+  margin:.5rem 0 .75rem 1.1rem;
+  color:var(--muted);
+}
+
+.headline .link-btn{
+  display:inline-block;
+  font-family:"Courier New",Courier,monospace;
+  font-size:.75rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--rule);
+  padding:.4rem .75rem;
+  color:var(--ink);
+  transition:background .2s,color .2s;
+}
+
+.headline .link-btn:hover{
+  background:var(--ink);
+  color:var(--paper);
+}
+
+/* Welcome / prose blocks */
+.prose{
+  column-count:1;
+  column-gap:var(--column-gap);
+}
+
+@media(min-width:700px){
+  .prose.wide{column-count:2}
+}
+
+.prose p{margin-bottom:1rem;text-align:justify;hyphens:auto}
+.prose p:first-child::first-letter{
+  float:left;
+  font-size:3.2rem;
+  line-height:.85;
+  padding-right:.08em;
+  font-weight:900;
+  color:var(--accent);
+}
+
+/* Newsroom list */
+.newsroom-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:.5rem 1.5rem;
+  list-style:none;
+  font-size:.9rem;
+}
+
+.newsroom-grid li::before{content:"▪ ";color:var(--accent)}
+
+/* Tech stack */
+.tech-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  justify-content:center;
+}
+
+.tech-tags span{
+  font-family:"Courier New",Courier,monospace;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border:1px solid var(--rule);
+  padding:.3rem .6rem;
+  background:#fff;
+}
+
+/* Table */
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.9rem;
+}
+
+th,td{
+  border:1px solid var(--rule);
+  padding:.6rem .85rem;
+  text-align:left;
+}
+
+th{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:"Courier New",Courier,monospace;
+  font-size:.75rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+tr:nth-child(even) td{background:rgba(0,0,0,.03)}
+
+.status{
+  font-family:"Courier New",Courier,monospace;
+  font-size:.72rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+.status.active{color:#1a6b3a}
+.status.dev{color:var(--gold)}
+
+/* Timeline */
+.timeline{list-style:none;border-left:2px solid var(--rule);padding-left:1.5rem}
+
+.timeline li{margin-bottom:1.25rem;position:relative}
+
+.timeline li::before{
+  content:"";
+  position:absolute;
+  left:-1.72rem;top:.35rem;
+  width:10px;height:10px;
+  border-radius:50%;
+  background:var(--accent);
+  border:2px solid var(--paper);
+}
+
+.timeline .year{
+  font-family:"Courier New",Courier,monospace;
+  font-size:.75rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:700;
+}
+
+/* Motto block */
+.motto{
+  text-align:center;
+  padding:2rem 1.5rem;
+  border-top:4px double var(--rule);
+  border-bottom:4px double var(--rule);
+  margin:2rem 0;
+}
+
+.motto blockquote{
+  font-size:1.4rem;
+  font-weight:900;
+  font-style:italic;
+  letter-spacing:.04em;
+  color:var(--accent);
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:2rem 1.5rem;
+  border-top:4px double var(--rule);
+  font-size:.82rem;
+  color:var(--muted);
+}
+
+.footer strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="paper">
+
+<header class="masthead">
+  <div class="masthead-meta">Est. 2026 · Sacramento, California · Digital Edition</div>
+  <h1>The Markkade</h1>
+  <p class="masthead-sub">Everything Markk Brandon</p>
+  <div class="masthead-byline">
+    <strong>aka StickzCoder.Lua</strong>
+    Markeith Nicholas White
+  </div>
+  <p class="tagline">"Every project has a story. Every line of code becomes tomorrow's headline."</p>
+</header>
+
+<main class="content">
+
+<section class="section">
+  <div class="section-head"><h2>Welcome</h2></div>
+  <div class="prose wide">
+    <p>Welcome to <strong>The Markkade</strong>, a newspaper-inspired digital archive documenting the work, ideas, businesses, software, and creative projects built by <strong>Markeith Nicholas White</strong>, also known as <strong>Markk Brandon</strong> and <strong>StickzCoder.Lua</strong>.</p>
+    <p>From security marketplaces and social platforms to community gifting apps and AI-powered experiences, The Markkade serves as the official newsroom for everything I create.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Featured Headlines</h2>
+    <p>Front-page projects from the newsroom</p>
+  </div>
+  <div class="columns">
+
+    <article class="headline">
+      <div class="headline-icon">🛡</div>
+      <h3>Guardr</h3>
+      <p class="deck">Independent Security Marketplace</p>
+      <p>An independent security marketplace connecting people with protection services — anytime, anywhere. Built as a platform for discovering and engaging security professionals on demand.</p>
+      <a class="link-btn" href="https://www.guardr.co" target="_blank" rel="noopener">Visit guardr.co</a>
+    </article>
+
+    <article class="headline">
+      <div class="headline-icon">👥</div>
+      <h3>Friendr</h3>
+      <p class="deck">Consent-First Social Connection</p>
+      <p>A free, ad-free social app built around three opt-in connection layers: <strong>Friends</strong> (platonic hangouts and local groups), <strong>A Bit More</strong> (spontaneous proximity matching), and <strong>Way More</strong> (intentional deeper connections with mutual escalation). Every account is 18+ ID-verified with human moderation — no bots, no ads, no data sold.</p>
+      <a class="link-btn" href="https://friendr-web.vercel.app" target="_blank" rel="noopener">Visit friendr-web.vercel.app</a>
+    </article>
+
+    <article class="headline">
+      <div class="headline-icon">🌿</div>
+      <h3>StrainVerse</h3>
+      <p class="deck">Stoner-First Social Network</p>
+      <p>A cannabis-centered social platform built around strain culture and community. Browse the StrainVerse directory, explore HerbHub, join SocialSesh group chats, use MatchIt for connections, and curate your profile stash — powered by Supabase and Gemini AI.</p>
+      <ul>
+        <li>Strain pages, reviews, and photos</li>
+        <li>Community feeds and group sessions</li>
+        <li>Age-gated features with geolocation</li>
+      </ul>
+      <a class="link-btn" href="https://strainverse.vercel.app" target="_blank" rel="noopener">Visit strainverse.vercel.app</a>
+    </article>
+
+    <article class="headline">
+      <div class="headline-icon">🥃</div>
+      <h3>SpiritsVerse</h3>
+      <p class="deck">The Social Network for Drink Lovers</p>
+      <p>A social platform for cocktails, beers, spirits, and wine. Explore the Drink Directory, scroll SipStream, find your Local Pub, join BarSesh groups, and share your digital bar with drinking buddies — with Gemini-powered features like drunken wisdom and bar-lens imagery.</p>
+      <ul>
+        <li>Drink profiles, reviews, and tasting notes</li>
+        <li>PourUp social feed and community stories</li>
+        <li>Location-aware pub discovery</li>
+      </ul>
+      <a class="link-btn" href="https://spiritsverse.vercel.app" target="_blank" rel="noopener">Visit spiritsverse.vercel.app</a>
+    </article>
+
+    <article class="headline">
+      <div class="headline-icon">🍳</div>
+      <h3>Cookbook.io</h3>
+      <p class="deck">The Social Table</p>
+      <p>A social cooking platform featuring <strong>Chef Gemini</strong>, an AI kitchen concierge that helps with flavor pairings, gourmet substitutions, cooking techniques, and recipe guidance. More than a recipe box — it's a shared table for kitchen experiments and culinary discovery.</p>
+      <a class="link-btn" href="https://cookbook-io-ten.vercel.app" target="_blank" rel="noopener">Visit cookbook-io-ten.vercel.app</a>
+    </article>
+
+    <article class="headline">
+      <div class="headline-icon">🤝</div>
+      <h3>Sacramento Buy Nothing</h3>
+      <p class="deck">Give Freely. Ask Kindly.</p>
+      <p>A community-powered free gifting platform for Sacramento neighbors. Post items you no longer need, request what you're looking for, and connect locally — with no selling, no bidding, and no flipping. 100% free, no ads, ever. Built with Supabase and Vercel.</p>
+      <a class="link-btn" href="https://www.sacramentobuynothing.com" target="_blank" rel="noopener">Visit sacramentobuynothing.com</a>
+    </article>
+
+    <article class="headline">
+      <div class="headline-icon">🔒</div>
+      <h3>Signature Security Specialist</h3>
+      <p class="deck">Protect with Purpose · Perform with Excellence</p>
+      <p>An executive-level security company connecting qualified guards, event staff, and medical responders with clients across Sacramento and the San Francisco Bay Area. Features a mobile-first operations platform with mission scheduling, live tracking, a 10-rank career system, certifications, training (LMS), and role-based dashboards for guards, staff, and clients.</p>
+      <ul>
+        <li>Unarmed, armed, event, retail, and mobile patrol</li>
+        <li>SigSecSpec Companion &amp; Messenger apps</li>
+        <li>Currently obtaining licenses — applications accepted</li>
+      </ul>
+      <a class="link-btn" href="https://signaturesecurityspecialist.com" target="_blank" rel="noopener">Visit signaturesecurityspecialist.com</a>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Newsroom</h2></div>
+  <div class="prose">
+    <p>The Markkade isn't just a portfolio. It's a living newspaper documenting launches, ventures, and experiments as they happen.</p>
+  </div>
+  <ul class="newsroom-grid" style="margin-top:1.25rem">
+    <li>Website launches</li>
+    <li>Business ventures</li>
+    <li>Software releases</li>
+    <li>Lua projects</li>
+    <li>AI experiments</li>
+    <li>Open-source work</li>
+    <li>Design systems</li>
+    <li>Security research</li>
+    <li>Mobile apps</li>
+    <li>Startup ideas</li>
+    <li>Personal blog posts</li>
+    <li>Behind-the-scenes development</li>
+  </ul>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Technology Stack</h2></div>
+  <div class="tech-tags">
+    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span>
+    <span>Lua</span><span>React</span><span>Next.js</span><span>Vercel</span>
+    <span>Firebase</span><span>Supabase</span><span>Node.js</span><span>Gemini AI</span>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Current Projects</h2></div>
+  <table>
+    <thead><tr><th>Project</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Guardr</td><td class="status active">Active</td></tr>
+      <tr><td>Friendr</td><td class="status active">Active</td></tr>
+      <tr><td>SpiritsVerse</td><td class="status active">Active</td></tr>
+      <tr><td>StrainVerse</td><td class="status active">Active</td></tr>
+      <tr><td>Cookbook.io</td><td class="status active">Active</td></tr>
+      <tr><td>Signature Security Specialist</td><td class="status dev">In Development</td></tr>
+      <tr><td>Sacramento Buy Nothing</td><td class="status active">Active</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Mission</h2></div>
+  <div class="prose wide">
+    <p>Build software that helps people. Create useful websites. Experiment with new technologies. Share knowledge. Never stop building.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Timeline</h2></div>
+  <ul class="timeline">
+    <li><div class="year">2024</div>Beginning new web projects and platform experiments.</li>
+    <li><div class="year">2025</div>Expanding into multiple platforms — social apps, security operations, and AI-powered experiences.</li>
+    <li><div class="year">2026</div>Launching The Markkade as the central hub for every project.</li>
+    <li><div class="year">Future</div>Whatever gets built next becomes tomorrow's headline.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Contact</h2></div>
+  <div class="prose">
+    <p>Interested in collaborating? Have an idea? Need software built? Reach out through any of the platforms listed above.</p>
+  </div>
+</section>
+
+<div class="motto">
+  <blockquote>Code. Create. Protect. Share. Repeat.</blockquote>
+</div>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
+  <p>All Rights Reserved.</p>
+  <p style="margin-top:.5rem">Built with care by <strong>StickzCoder.Lua</strong></p>
+</footer>
+
+</div>
+</body>
+</html>

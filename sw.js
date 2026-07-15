@@ -1,4 +1,4 @@
-const CACHE_NAME = 'markkade-v1';
+const CACHE_NAME = 'markkade-v3';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -12,6 +12,17 @@ const PRECACHE_URLS = [
   '/apps/signature-security.html',
   '/apps/spiritsverse.html',
   '/apps/strainverse.html',
+  '/servers/',
+  '/servers/index.html',
+  '/servers/co-op-metaverse.html',
+  '/servers/mis-development.html',
+  '/servers/racen-rollenspel.html',
+  '/features/',
+  '/features/index.html',
+  '/features/photography.html',
+  '/features/comics.html',
+  '/features/crossword.html',
+  '/features/wordsearch.html',
   '/css/style.css',
   '/manifest.webmanifest',
   '/icons/icon-192.png',
@@ -19,6 +30,9 @@ const PRECACHE_URLS = [
   '/icons/apple-touch-icon.png',
   '/icons/favicon-32.png',
   '/js/pwa.js',
+  '/js/puzzle-data.js',
+  '/js/crossword.js',
+  '/js/wordsearch.js',
 ];
 
 self.addEventListener('install', (event) => {

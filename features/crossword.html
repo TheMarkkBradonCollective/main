@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Markkade crossword — favorite color, food, drink, car, and more.">
+<meta name="theme-color" content="#121212">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="The Markkade">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Crossword — The Features Desk</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="site">
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="logo" href="../index.html">The Markkade</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Front Page</a></li>
+      <li><a href="../news.html">Newsroom</a></li>
+      <li><a href="../apps/">The Classifieds</a></li>
+      <li><a href="../servers/">Game Servers</a></li>
+      <li><a href="./" class="active">Features Desk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="content">
+
+<p class="breadcrumb"><a href="../index.html">Front Page</a> / <a href="./">The Features Desk</a> / Crossword</p>
+
+<div class="section-head">
+  <p class="kicker">Puzzle Edition I</p>
+  <h2>The Markkade Crossword</h2>
+  <p>Same clues as the <a href="wordsearch.html">word search</a> — personal favorites edition.</p>
+</div>
+
+<div class="puzzle-wrap">
+  <div>
+    <div id="crossword-board" class="puzzle-board" aria-label="Crossword grid"></div>
+    <div class="puzzle-tools">
+      <button class="btn btn-primary" type="button" id="crossword-check">Check Answers</button>
+      <button class="btn" type="button" id="crossword-reveal">Reveal All</button>
+      <button class="btn" type="button" id="crossword-clear">Clear Grid</button>
+    </div>
+    <p id="crossword-status" class="puzzle-status puzzle-status-info" role="status"></p>
+  </div>
+
+  <aside class="puzzle-clues">
+    <h3>Across</h3>
+    <ul id="clues-across"></ul>
+    <h3>Down</h3>
+    <ul id="clues-down"></ul>
+  </aside>
+</div>
+
+<div class="cover-cta" style="margin-top:2rem">
+  <p>Prefer finding letters in a grid? Try the matching word search edition.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="wordsearch.html">Word Search</a>
+    <a class="btn" href="./">Features Desk</a>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="../index.html">Front Page</a>
+    <a href="../news.html">Newsroom</a>
+    <a href="../apps/">The Classifieds</a>
+    <a href="../servers/">Game Servers</a>
+    <a href="./">Features Desk</a>
+  </nav>
+  <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
+</footer>
+
+</div>
+<script src="/js/puzzle-data.js"></script>
+<script src="/js/crossword.js"></script>
+<script src="/js/pwa.js"></script>
+</body>
+</html>

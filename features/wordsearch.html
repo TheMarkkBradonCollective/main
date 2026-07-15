@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Markkade word search — same clues as the crossword puzzle edition.">
+<meta name="theme-color" content="#121212">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="The Markkade">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Word Search — The Features Desk</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="site">
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="logo" href="../index.html">The Markkade</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Front Page</a></li>
+      <li><a href="../news.html">Newsroom</a></li>
+      <li><a href="../apps/">The Classifieds</a></li>
+      <li><a href="./" class="active">Features Desk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="content">
+
+<p class="breadcrumb"><a href="../index.html">Front Page</a> / <a href="./">The Features Desk</a> / Word Search</p>
+
+<div class="section-head">
+  <p class="kicker">Puzzle Edition I</p>
+  <h2>The Markkade Word Search</h2>
+  <p>Find every word from the <a href="crossword.html">crossword</a> — tap the first and last letter of each answer.</p>
+</div>
+
+<div class="puzzle-wrap">
+  <div>
+    <div id="wordsearch-board" class="puzzle-board" aria-label="Word search grid"></div>
+    <div class="puzzle-tools">
+      <button class="btn" type="button" id="wordsearch-reset">Reset Found Words</button>
+    </div>
+    <p id="wordsearch-status" class="puzzle-status puzzle-status-info" role="status"></p>
+  </div>
+
+  <aside class="puzzle-clues">
+    <h3>Word List</h3>
+    <ul id="wordsearch-words"></ul>
+  </aside>
+</div>
+
+<div class="cover-cta" style="margin-top:2rem">
+  <p>Includes favorites: <span class="features-accent">Green</span>, burger, tea, Mustang — plus Markkade extras.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="crossword.html">Crossword</a>
+    <a class="btn" href="./">Features Desk</a>
+  </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="../index.html">Front Page</a>
+    <a href="../news.html">Newsroom</a>
+    <a href="../apps/">The Classifieds</a>
+    <a href="./">Features Desk</a>
+  </nav>
+  <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
+</footer>
+
+</div>
+<script src="/js/puzzle-data.js"></script>
+<script src="/js/wordsearch.js"></script>
+<script src="/js/pwa.js"></script>
+</body>
+</html>

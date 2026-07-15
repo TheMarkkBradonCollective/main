@@ -1,4 +1,4 @@
-const CACHE_NAME = 'markkade-v2';
+const CACHE_NAME = 'markkade-v3';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -12,6 +12,11 @@ const PRECACHE_URLS = [
   '/apps/signature-security.html',
   '/apps/spiritsverse.html',
   '/apps/strainverse.html',
+  '/servers/',
+  '/servers/index.html',
+  '/servers/co-op-metaverse.html',
+  '/servers/mis-development.html',
+  '/servers/racen-rollenspel.html',
   '/features/',
   '/features/index.html',
   '/features/photography.html',

@@ -4,5 +4,6 @@
   <rect x="48" y="48" width="416" height="416" fill="none" stroke="#f7f7f5" stroke-width="6"/>
   <line x1="48" y1="128" x2="464" y2="128" stroke="#f7f7f5" stroke-width="4"/>
   <text x="256" y="340" text-anchor="middle" fill="#f7f7f5" font-family="Georgia, 'Times New Roman', serif" font-size="220" font-weight="700">M</text>
-  <text x="256" y="92" text-anchor="middle" fill="#f7f7f5" font-family="Helvetica, Arial, sans-serif" font-size="28" letter-spacing="8">THE MARKKADE</text>
+  <text x="256" y="78" text-anchor="middle" fill="#f7f7f5" font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="6">THE MARKK</text>
+  <text x="256" y="108" text-anchor="middle" fill="#f7f7f5" font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="4">BRANDON COLLECTIVE</text>
 </svg>

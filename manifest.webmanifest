@@ -1,7 +1,7 @@
 {
-  "name": "The Markkade",
-  "short_name": "Markkade",
-  "description": "The official newspaper of Markeith Nicholas White — everything Markk Brandon builds, documented.",
+  "name": "The Markk Brandon Collective",
+  "short_name": "MBC",
+  "description": "The Markk Brandon Collective — everything Markk Brandon builds, documented.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

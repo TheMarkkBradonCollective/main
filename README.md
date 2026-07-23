@@ -1,4 +1,4 @@
-# THE MARKKADE
+# THE MARKK BRANDON COLLECTIVE
 
 > **Everything Markk Brandon** · aka **StickzCoder.Lua** · **Markeith Nicholas White**
 

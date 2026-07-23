@@ -1,5 +1,5 @@
 (function () {
-  const puzzle = window.MARKKADE_PUZZLE;
+  const puzzle = window.MBC_PUZZLE;
   const board = document.getElementById('wordsearch-board');
   const wordList = document.getElementById('wordsearch-words');
   const statusEl = document.getElementById('wordsearch-status');

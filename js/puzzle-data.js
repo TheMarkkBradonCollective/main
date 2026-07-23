@@ -1,4 +1,4 @@
-window.MARKKADE_PUZZLE = {
+window.MBC_PUZZLE = {
   entries: [
     { id: 1, direction: 'across', clue: 'Favorite color', answer: 'GREEN' },
     { id: 2, direction: 'across', clue: 'Favorite thing to drink', answer: 'TEA' },
@@ -20,7 +20,7 @@ window.MARKKADE_PUZZLE = {
       { word: 'BURGER', clue: 'Favorite thing to eat' },
       { word: 'TEA', clue: 'Favorite thing to drink' },
       { word: 'MUSTANG', clue: 'Favorite car' },
-      { word: 'MARKKADE', clue: 'This newspaper' },
+      { word: 'COLLECTIVE', clue: 'This collective' },
       { word: 'PHOTO', clue: 'Pictures section' },
       { word: 'COMICS', clue: 'Strips & panels' },
       { word: 'LUA', clue: 'StickzCoder language' },

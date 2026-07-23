@@ -1,5 +1,5 @@
 (function () {
-  const puzzle = window.MARKKADE_PUZZLE;
+  const puzzle = window.MBC_PUZZLE;
   const board = document.getElementById('crossword-board');
   const acrossList = document.getElementById('clues-across');
   const downList = document.getElementById('clues-down');

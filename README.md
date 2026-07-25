@@ -2,6 +2,8 @@
 
 > An umbrella of companies by **Markk Brandon** · **Markeith Nicholas White**
 
+Newspaper-style single-page site with a front page, headlines, and The Classifieds section for every company in the collective.
+
 ## Companies
 
 | Company | Category | URL |

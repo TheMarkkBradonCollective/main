@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The Markk Brandon Collective — an umbrella of companies by Markk Brandon.">
+<meta name="description" content="The Markk Brandon Collective — an umbrella of companies by Markk Brandon. The official newspaper of Markeith Nicholas White.">
 <meta name="theme-color" content="#121212">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
@@ -12,137 +12,338 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="MBC">
 <meta name="mobile-web-app-capable" content="yes">
-<title>The Markk Brandon Collective</title>
+<title>The Markk Brandon Collective — Front Page</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="site">
 
-<header class="masthead">
+<div class="cover-banner">Sacramento, California · Digital Edition · Vol. I</div>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="logo" href="index.html">The Markk Brandon Collective</a>
+    <ul class="nav-links">
+      <li><a href="#front-page" class="active">Front Page</a></li>
+      <li><a href="#classifieds">The Classifieds</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#lifestyle">Lifestyle</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#security">Security</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="masthead" id="front-page">
   <div class="masthead-top-rule"></div>
+  <div class="masthead-edition">
+    <span>Vol. I, No. 1</span>
+    <span class="edition-center">Sacramento, Calif.</span>
+    <span>Saturday, July 25, 2026</span>
+  </div>
   <h1>The Markk Brandon<br>Collective</h1>
   <p class="masthead-tagline">An umbrella of companies by me</p>
-  <p class="masthead-rule"><strong>Markeith Nicholas White</strong> · Markk Brandon</p>
+  <p class="masthead-rule"><strong>Markeith Nicholas White</strong> · Markk Brandon · StickzCoder.Lua</p>
   <div class="masthead-bottom-rule"></div>
 </header>
 
 <main class="content">
 
+<div class="cover-quote">
+  "Every company has a story. Every venture becomes tomorrow's headline."
+</div>
+
 <section class="bio-hero">
   <div class="bio-card">
+    <p class="name">Markeith Nicholas White</p>
+    <p class="aliases">Markk Brandon · StickzCoder.Lua</p>
     <div class="prose">
-      <p class="drop-cap">The Markk Brandon Collective is the parent company behind every venture I build — from community platforms and social apps to security businesses and lifestyle brands. Each company operates independently; this is where they live under one roof.</p>
+      <p class="drop-cap">Welcome to The Markk Brandon Collective — my personal newspaper and the umbrella company behind every venture I build. From security marketplaces and social platforms to community apps and AI-powered experiences, this is where my companies live, launch, and get documented like front-page news.</p>
+      <p>Each company operates independently under one roof. I build software that helps people, run businesses that protect communities, and ship platforms where culture meets code. Every venture that launches becomes tomorrow's headline.</p>
+      <p>Based in Sacramento, California, browse <a href="#classifieds">The Classifieds</a> below for every company in the collective — organized by section, each with its own listing and link to the live site.</p>
     </div>
   </div>
+  <aside class="bio-sidebar">
+    <h3>At a Glance</h3>
+    <ul>
+      <li>Founder, Signature Security Specialist</li>
+      <li>Director, Sacramento Buy Nothing</li>
+      <li>Builder of Guardr, Friendr, StrainVerse &amp; more</li>
+      <li>Sacramento · San Francisco Bay Area</li>
+      <li>Full-stack · Mobile · AI · Security</li>
+    </ul>
+    <h3 style="margin-top:1.25rem">Sections</h3>
+    <ul>
+      <li><a href="#classifieds">The Classifieds</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#lifestyle">Lifestyle &amp; Culture</a></li>
+      <li><a href="#social">Social &amp; Connection</a></li>
+      <li><a href="#security">Security &amp; Protection</a></li>
+    </ul>
+  </aside>
 </section>
 
-<section class="classified-section" id="community">
-  <div class="classified-section-head">
-    <h3>Community</h3>
+<section class="section">
+  <div class="section-head">
+    <p class="kicker">Above the Fold</p>
+    <h2>Today's Headlines</h2>
+    <p>Latest from the collective</p>
   </div>
-  <div class="classified-grid">
-    <article class="classified-ad">
-      <div class="ad-icon">🤝</div>
-      <h4>Sacramento Buy Nothing</h4>
-      <p class="ad-tagline">Give Freely. Ask Kindly.</p>
-      <p>Community-powered free gifting for Sacramento neighbors. No selling, no bidding, no flipping.</p>
-      <p class="ad-status live">● Active</p>
-      <div class="ad-links">
-        <a class="btn btn-primary" href="https://www.sacramentobuynothing.com" target="_blank" rel="noopener">Visit Site</a>
+
+  <div class="front-grid">
+    <div class="front-main">
+      <article class="story-card">
+        <p class="kicker">The Classifieds · Community</p>
+        <h3><a href="https://www.sacramentobuynothing.com" target="_blank" rel="noopener">Sacramento Buy Nothing Connects Neighbors Through Free Gifting</a></h3>
+        <p class="deck">Give freely. Ask kindly.</p>
+        <p>A community-powered platform where Sacramento neighbors give away what they no longer need — no selling, no bidding, no flipping. 100% free, no ads, ever.</p>
+        <a class="read-more" href="#community">Read Full Listing →</a>
+      </article>
+
+      <article class="story-card">
+        <p class="kicker">The Classifieds · Lifestyle</p>
+        <h3><a href="#lifestyle">StrainVerse, SpiritsVerse &amp; Cookbook.io Build Culture-First Platforms</a></h3>
+        <p class="deck">Where culture meets code</p>
+        <p>Experimental social platforms for cannabis culture, drink lovers, and the kitchen — each powered by Supabase and Gemini AI, built for the communities that live in those worlds.</p>
+        <a class="read-more" href="#lifestyle">Browse Lifestyle →</a>
+      </article>
+
+      <article class="story-card">
+        <p class="kicker">The Classifieds · Social</p>
+        <h3><a href="https://friendr-web.vercel.app" target="_blank" rel="noopener">Friendr Puts Consent First in Social Connection</a></h3>
+        <p class="deck">Real people. Real choices.</p>
+        <p>A free, ad-free social app with opt-in intimacy layers, ID verification, and human moderation — built because your attention isn't the product.</p>
+        <a class="read-more" href="#social">Read Full Listing →</a>
+      </article>
+
+      <article class="story-card">
+        <p class="kicker">The Classifieds · Security</p>
+        <h3><a href="#security">Guardr &amp; Signature Security Specialist Lead Protection Ventures</a></h3>
+        <p class="deck">Code. Create. Protect.</p>
+        <p>An independent security marketplace and an executive security company — two ventures built on the belief that real protection is professionalism first, always.</p>
+        <a class="read-more" href="#security">Browse Security →</a>
+      </article>
+
+      <article class="story-card">
+        <p class="kicker">Front Page</p>
+        <h3><a href="#classifieds">The Markk Brandon Collective Opens as Umbrella for Every Company</a></h3>
+        <p class="deck">2026 — A new chapter begins</p>
+        <p>After years of building across security, social, community, and lifestyle platforms, The Markk Brandon Collective launches as the official newspaper and parent company documenting every venture under one roof.</p>
+        <a class="read-more" href="#classifieds">Browse The Classifieds →</a>
+      </article>
+    </div>
+
+    <aside class="front-aside">
+      <p class="sidebar-label">Also in Today's Edition</p>
+
+      <div class="sidebar-story">
+        <h4><a href="#community">Sacramento Buy Nothing</a></h4>
+        <p>Free local gifting — give freely, ask kindly.</p>
       </div>
-    </article>
+      <div class="sidebar-story">
+        <h4><a href="https://strainverse.vercel.app" target="_blank" rel="noopener">StrainVerse</a></h4>
+        <p>Stoner-first social network for cannabis culture.</p>
+      </div>
+      <div class="sidebar-story">
+        <h4><a href="https://spiritsverse.vercel.app" target="_blank" rel="noopener">SpiritsVerse</a></h4>
+        <p>Social network for drink lovers and digital bars.</p>
+      </div>
+      <div class="sidebar-story">
+        <h4><a href="https://cookbook-io-ten.vercel.app" target="_blank" rel="noopener">Cookbook.io</a></h4>
+        <p>The Social Table with Chef Gemini AI.</p>
+      </div>
+      <div class="sidebar-story">
+        <h4><a href="https://friendr-web.vercel.app" target="_blank" rel="noopener">Friendr</a></h4>
+        <p>Consent-first social connection.</p>
+      </div>
+      <div class="sidebar-story">
+        <h4><a href="https://www.guardr.co" target="_blank" rel="noopener">Guardr</a></h4>
+        <p>Independent security marketplace.</p>
+      </div>
+      <div class="sidebar-story">
+        <h4><a href="https://signaturesecurityspecialist.com" target="_blank" rel="noopener">Signature Security Specialist</a></h4>
+        <p>Executive security operations platform.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
-<section class="classified-section" id="lifestyle">
-  <div class="classified-section-head">
-    <h3>Lifestyle &amp; Culture</h3>
+<div class="motto">
+  <blockquote>Code. Create. Protect. Share. Repeat.</blockquote>
+</div>
+
+<section id="classifieds">
+  <header class="masthead" style="border-bottom:none;padding-top:0">
+    <div class="masthead-top-rule"></div>
+    <div class="masthead-edition">
+      <span>Section C</span>
+      <span class="edition-center">The Classifieds</span>
+      <span>Est. 2026</span>
+    </div>
+    <h1 class="unstyled">The Classifieds</h1>
+    <p class="masthead-tagline">Companies · Ventures · Platforms — Organized by Section</p>
+    <div class="masthead-bottom-rule"></div>
+  </header>
+
+  <div class="prose" style="max-width:720px;margin:1.5rem auto 2.5rem;text-align:center">
+    <p>Every company in the collective gets its own listing. The Classifieds are organized by venture group — browse below, or click through to visit each company on its own site.</p>
   </div>
-  <div class="classified-grid">
-    <article class="classified-ad">
-      <div class="ad-icon">🌿</div>
-      <h4>StrainVerse</h4>
-      <p class="ad-tagline">Stoner-First Social Network</p>
-      <p>Cannabis-centered social platform with strain directory, community feeds, and connections.</p>
-      <p class="ad-status live">● Active</p>
-      <div class="ad-links">
-        <a class="btn btn-primary" href="https://strainverse.vercel.app" target="_blank" rel="noopener">Visit Site</a>
-      </div>
-    </article>
-    <article class="classified-ad">
-      <div class="ad-icon">🥃</div>
-      <h4>SpiritsVerse</h4>
-      <p class="ad-tagline">Social Network for Drink Lovers</p>
-      <p>Explore cocktails, beers, spirits, and wine with a social drink directory and digital bar.</p>
-      <p class="ad-status live">● Active</p>
-      <div class="ad-links">
-        <a class="btn btn-primary" href="https://spiritsverse.vercel.app" target="_blank" rel="noopener">Visit Site</a>
-      </div>
-    </article>
-    <article class="classified-ad">
-      <div class="ad-icon">🍳</div>
-      <h4>Cookbook.io</h4>
-      <p class="ad-tagline">The Social Table</p>
-      <p>Social cooking platform with Chef Gemini AI — flavor pairings, techniques, and kitchen experiments.</p>
-      <p class="ad-status live">● Active</p>
-      <div class="ad-links">
-        <a class="btn btn-primary" href="https://cookbook-io-ten.vercel.app" target="_blank" rel="noopener">Visit Site</a>
-      </div>
-    </article>
-  </div>
+
+  <section class="classified-section" id="community">
+    <div class="classified-section-head">
+      <h3>Community</h3>
+      <span>Section I</span>
+    </div>
+    <div class="classified-intro">
+      <p class="intro-label">Why This Section Exists</p>
+      <p>Sacramento is my home. I watched neighbors throw away perfectly good furniture, clothes, and tools while other neighbors were struggling to afford the same things — and every existing platform wanted money in the middle. Buy/sell groups turn gifting into commerce. Marketplace apps invite flipping and bidding. Nobody was building something that was simply free, local, and human.</p>
+      <p>Sacramento Buy Nothing is the community venture group — mutual aid without a price tag. Give freely, ask kindly, keep good things out of the landfill, and let neighbors help neighbors with no ads and no paywalls, ever.</p>
+    </div>
+    <div class="classified-grid">
+      <article class="classified-ad">
+        <p class="ad-number">Listing #001</p>
+        <div class="ad-icon">🤝</div>
+        <h4>Sacramento Buy Nothing</h4>
+        <p class="ad-tagline">Give Freely. Ask Kindly.</p>
+        <p>Community-powered free gifting for Sacramento neighbors. No selling, no bidding, no flipping. 100% free, no ads, ever.</p>
+        <p class="ad-status live">● Active</p>
+        <div class="ad-links">
+          <a class="btn btn-primary" href="https://www.sacramentobuynothing.com" target="_blank" rel="noopener">Visit Site</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="classified-section" id="lifestyle">
+    <div class="classified-section-head">
+      <h3>Lifestyle &amp; Culture</h3>
+      <span>Section II</span>
+    </div>
+    <div class="classified-intro">
+      <p class="intro-label">Why This Section Exists</p>
+      <p>Not everything I build is a business or a utility — some ventures start from culture, curiosity, and community around the things people actually enjoy. Cannabis culture deserved more than a dry database. Drink lovers deserved a social network, not just a review site. The kitchen deserved a shared table with AI that actually helps you cook, not just a list of recipes.</p>
+      <p>StrainVerse, SpiritsVerse, and Cookbook.io are the lifestyle venture group — experimental social platforms where culture meets code, powered by Supabase and Gemini AI. Each one is its own world, built for the people who live in that world.</p>
+    </div>
+    <div class="classified-grid">
+      <article class="classified-ad">
+        <p class="ad-number">Listing #002</p>
+        <div class="ad-icon">🌿</div>
+        <h4>StrainVerse</h4>
+        <p class="ad-tagline">Stoner-First Social Network</p>
+        <p>Cannabis-centered social platform with strain directory, HerbHub, SocialSesh chats, MatchIt connections, and community feeds.</p>
+        <p class="ad-status live">● Active</p>
+        <div class="ad-links">
+          <a class="btn btn-primary" href="https://strainverse.vercel.app" target="_blank" rel="noopener">Visit Site</a>
+        </div>
+      </article>
+      <article class="classified-ad">
+        <p class="ad-number">Listing #003</p>
+        <div class="ad-icon">🥃</div>
+        <h4>SpiritsVerse</h4>
+        <p class="ad-tagline">Social Network for Drink Lovers</p>
+        <p>Explore cocktails, beers, spirits, and wine. Drink Directory, SipStream, Local Pub, BarSesh groups, and your digital bar.</p>
+        <p class="ad-status live">● Active</p>
+        <div class="ad-links">
+          <a class="btn btn-primary" href="https://spiritsverse.vercel.app" target="_blank" rel="noopener">Visit Site</a>
+        </div>
+      </article>
+      <article class="classified-ad">
+        <p class="ad-number">Listing #004</p>
+        <div class="ad-icon">🍳</div>
+        <h4>Cookbook.io</h4>
+        <p class="ad-tagline">The Social Table</p>
+        <p>Social cooking platform with Chef Gemini AI — flavor pairings, gourmet substitutions, techniques, and kitchen experiments.</p>
+        <p class="ad-status live">● Active</p>
+        <div class="ad-links">
+          <a class="btn btn-primary" href="https://cookbook-io-ten.vercel.app" target="_blank" rel="noopener">Visit Site</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="classified-section" id="social">
+    <div class="classified-section-head">
+      <h3>Social &amp; Connection</h3>
+      <span>Section III</span>
+    </div>
+    <div class="classified-intro">
+      <p class="intro-label">Why This Section Exists</p>
+      <p>I started building in social because the apps people use every day weren't built for them — they were built for advertisers. Bots, fake profiles, data sold without consent, and algorithms that push engagement over honesty. I wanted something different: a place where real people connect on their own terms, where every layer of intimacy is opt-in, and where safety isn't a marketing line but the foundation of the product.</p>
+      <p>Friendr is the answer to that problem. It's the social venture group — software where consent comes first, moderation is human, and the platform is free because your attention isn't the product.</p>
+    </div>
+    <div class="classified-grid">
+      <article class="classified-ad">
+        <p class="ad-number">Listing #005</p>
+        <div class="ad-icon">👥</div>
+        <h4>Friendr</h4>
+        <p class="ad-tagline">Consent-First Social Connection</p>
+        <p>Free, ad-free social app with three opt-in layers: Friends, A Bit More, and Way More. 18+ ID-verified, human moderation, no data sold.</p>
+        <p class="ad-status live">● Active</p>
+        <div class="ad-links">
+          <a class="btn btn-primary" href="https://friendr-web.vercel.app" target="_blank" rel="noopener">Visit Site</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="classified-section" id="security">
+    <div class="classified-section-head">
+      <h3>Security &amp; Protection</h3>
+      <span>Section IV</span>
+    </div>
+    <div class="classified-intro">
+      <p class="intro-label">Why This Section Exists</p>
+      <p>Protection is the thread that runs through everything I do — it's in the motto: Code. Create. Protect. Share. Repeat. I didn't stumble into security; I built a career around it. Signature Security Specialist started because professional security operations in Northern California needed a company that treated guards like customer-service professionals, not brute force. Guardr started because people deserve access to protection on their own terms — an independent marketplace, not a gatekept industry.</p>
+      <p>This is the security venture group — the businesses and platforms built to protect persons, places, and things, backed by mobile-first technology, training systems, and the belief that real security is professionalism first, always.</p>
+    </div>
+    <div class="classified-grid">
+      <article class="classified-ad">
+        <p class="ad-number">Listing #006</p>
+        <div class="ad-icon">🛡</div>
+        <h4>Guardr</h4>
+        <p class="ad-tagline">Independent Security Marketplace</p>
+        <p>Connect with protection services on demand — an independent marketplace for discovering and engaging security professionals, anytime, anywhere.</p>
+        <p class="ad-status live">● Active</p>
+        <div class="ad-links">
+          <a class="btn btn-primary" href="https://www.guardr.co" target="_blank" rel="noopener">Visit Site</a>
+        </div>
+      </article>
+      <article class="classified-ad">
+        <p class="ad-number">Listing #007</p>
+        <div class="ad-icon">🔒</div>
+        <h4>Signature Security Specialist</h4>
+        <p class="ad-tagline">Protect with Purpose · Perform with Excellence</p>
+        <p>Executive security company connecting guards, event staff, and medical responders with clients. Mobile-first ops platform with mission scheduling, training LMS, and companion apps.</p>
+        <p class="ad-status dev">● In Development</p>
+        <div class="ad-links">
+          <a class="btn btn-primary" href="https://signaturesecurityspecialist.com" target="_blank" rel="noopener">Visit Site</a>
+        </div>
+      </article>
+    </div>
+  </section>
 </section>
 
-<section class="classified-section" id="social">
-  <div class="classified-section-head">
-    <h3>Social &amp; Connection</h3>
+<div class="cover-cta">
+  <p>Every company in the collective has its own listing in The Classifieds — browse by section above.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="#classifieds">Browse The Classifieds</a>
+    <a class="btn" href="#front-page">Back to Front Page</a>
   </div>
-  <div class="classified-grid">
-    <article class="classified-ad">
-      <div class="ad-icon">👥</div>
-      <h4>Friendr</h4>
-      <p class="ad-tagline">Consent-First Social Connection</p>
-      <p>Free, ad-free social app with opt-in intimacy layers, ID verification, and human moderation.</p>
-      <p class="ad-status live">● Active</p>
-      <div class="ad-links">
-        <a class="btn btn-primary" href="https://friendr-web.vercel.app" target="_blank" rel="noopener">Visit Site</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="classified-section" id="security">
-  <div class="classified-section-head">
-    <h3>Security &amp; Protection</h3>
-  </div>
-  <div class="classified-grid">
-    <article class="classified-ad">
-      <div class="ad-icon">🛡</div>
-      <h4>Guardr</h4>
-      <p class="ad-tagline">Independent Security Marketplace</p>
-      <p>Connect with protection services on demand — an independent marketplace for security professionals.</p>
-      <p class="ad-status live">● Active</p>
-      <div class="ad-links">
-        <a class="btn btn-primary" href="https://www.guardr.co" target="_blank" rel="noopener">Visit Site</a>
-      </div>
-    </article>
-    <article class="classified-ad">
-      <div class="ad-icon">🔒</div>
-      <h4>Signature Security Specialist</h4>
-      <p class="ad-tagline">Protect with Purpose · Perform with Excellence</p>
-      <p>Executive security company connecting guards, event staff, and medical responders with clients.</p>
-      <p class="ad-status dev">● In Development</p>
-      <div class="ad-links">
-        <a class="btn btn-primary" href="https://signaturesecurityspecialist.com" target="_blank" rel="noopener">Visit Site</a>
-      </div>
-    </article>
-  </div>
-</section>
+</div>
 
 </main>
 
 <footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="#front-page">Front Page</a>
+    <a href="#classifieds">The Classifieds</a>
+    <a href="#community">Community</a>
+    <a href="#lifestyle">Lifestyle</a>
+    <a href="#social">Social</a>
+    <a href="#security">Security</a>
+  </nav>
   <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
-  <p>All Rights Reserved</p>
+  <p>All Rights Reserved · Built with care by <strong>StickzCoder.Lua</strong></p>
 </footer>
 
 </div>

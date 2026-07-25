@@ -2,7 +2,16 @@
 
 > An umbrella of companies by **Markk Brandon** · **Markeith Nicholas White**
 
-## Companies
+Newspaper-style site with a front page and **The Classifieds** — where every company in the collective is listed.
+
+## Site Structure
+
+| Page | URL | Description |
+|------|-----|-------------|
+| **Front Page** | `index.html` | Newspaper cover — bio, headlines, welcome |
+| **The Classifieds** | `apps/` | All companies organized by section |
+
+## The Classifieds — Companies
 
 | Company | Category | URL |
 |---------|----------|-----|

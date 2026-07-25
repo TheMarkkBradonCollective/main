@@ -1,7 +1,9 @@
-const CACHE_NAME = 'mbc-v2';
+const CACHE_NAME = 'mbc-v3';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
+  '/apps/',
+  '/apps/index.html',
   '/css/style.css',
   '/manifest.webmanifest',
   '/icons/icon-192.png',

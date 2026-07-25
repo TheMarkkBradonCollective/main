@@ -1,7 +1,7 @@
 {
   "name": "The Markk Brandon Collective",
   "short_name": "MBC",
-  "description": "The Markk Brandon Collective — everything Markk Brandon builds, documented.",
+  "description": "The Markk Brandon Collective — an umbrella of companies by Markk Brandon.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -9,7 +9,7 @@
   "background_color": "#f7f7f5",
   "theme_color": "#121212",
   "lang": "en",
-  "categories": ["news", "portfolio"],
+  "categories": ["business"],
   "icons": [
     {
       "src": "/icons/icon-192.png",

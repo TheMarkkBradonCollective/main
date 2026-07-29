@@ -20,6 +20,7 @@ Newspaper-style site with a front page and **The Classifieds** — where every c
 | SpiritsVerse | Lifestyle & Culture | [spiritsverse.vercel.app](https://spiritsverse.vercel.app) |
 | Cookbook.io | Lifestyle & Culture | [cookbook-io-ten.vercel.app](https://cookbook-io-ten.vercel.app) |
 | Friendr | Social & Connection | [friendr-web.vercel.app](https://friendr-web.vercel.app) |
+| Findr | Social & Connection | [findr-web.vercel.app](https://findr-web.vercel.app) |
 | Guardr | Security & Protection | [guardr.co](https://www.guardr.co) |
 | Signature Security Specialist | Security & Protection | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
 

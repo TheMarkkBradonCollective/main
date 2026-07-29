@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mbc-v3';
+const CACHE_NAME = 'mbc-v4';
 const PRECACHE_URLS = [
   '/',
   '/index.html',

@@ -16,9 +16,9 @@ Newspaper-style site with a front page and **The Classifieds** — where every c
 | Company | Category | URL |
 |---------|----------|-----|
 | Sacramento Buy Nothing | Community | [sacramentobuynothing.com](https://www.sacramentobuynothing.com) |
-| StrainVerse | Lifestyle & Culture | [strainverse.vercel.app](https://strainverse.vercel.app) |
-| SpiritsVerse | Lifestyle & Culture | [spiritsverse.vercel.app](https://spiritsverse.vercel.app) |
-| Cookbook.io | Lifestyle & Culture | [cookbook-io-ten.vercel.app](https://cookbook-io-ten.vercel.app) |
+| StrainVerse | Lifestyle & Culture | [strainverse-web.vercel.app](https://strainverse-web.vercel.app) |
+| SpiritsVerse | Lifestyle & Culture | [spiritsverse-web.vercel.app](https://spiritsverse-web.vercel.app) |
+| Cookbook.io | Lifestyle & Culture | [cookbook-web.vercel.app](https://cookbook-web.vercel.app) |
 | Friendr | Social & Connection | [friendr-web.vercel.app](https://friendr-web.vercel.app) |
 | Findr | Social & Connection | [findr-web.vercel.app](https://findr-web.vercel.app) |
 | Guardr | Security & Protection | [guardr.co](https://www.guardr.co) |

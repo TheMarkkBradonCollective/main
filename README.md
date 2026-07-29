@@ -15,12 +15,14 @@ Newspaper-style site with a front page and **The Classifieds** — where every c
 
 | Company | Category | URL |
 |---------|----------|-----|
-| Sacramento Buy Nothing | Community | [sacramentobuynothing.com](https://www.sacramentobuynothing.com) |
-| StrainVerse | Lifestyle & Culture | [strainverse.vercel.app](https://strainverse.vercel.app) |
-| SpiritsVerse | Lifestyle & Culture | [spiritsverse.vercel.app](https://spiritsverse.vercel.app) |
-| Cookbook.io | Lifestyle & Culture | [cookbook-io-ten.vercel.app](https://cookbook-io-ten.vercel.app) |
-| Friendr | Social & Connection | [friendr-web.vercel.app](https://friendr-web.vercel.app) |
-| Guardr | Security & Protection | [guardr.co](https://www.guardr.co) |
+| Sacramento Buy Nothing | Community | [sacramentobuynothing.com](https://sacramentobuynothing.com) |
+| StrainVerse | Lifestyle & Culture | [strainverse-tmbc.vercel.app](https://strainverse-tmbc.vercel.app) |
+| SpiritsVerse | Lifestyle & Culture | [spiritsverse-tmbc.vercel.app](https://spiritsverse-tmbc.vercel.app) |
+| Cookverse | Lifestyle & Culture | [cookverse-tmbc.vercel.app](https://cookverse-tmbc.vercel.app) |
+| Friendr | Social & Connection | [friendr-tmbc.vercel.app](https://friendr-tmbc.vercel.app) |
+| Findr | Social & Connection | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
+| Chatr | Social & Connection | [chatr-tmbc.vercel.app](https://chatr-tmbc.vercel.app) |
+| Guardr | Security & Protection | [guardr.co](https://guardr.co) |
 | Signature Security Specialist | Security & Protection | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
 
 ## Local Development

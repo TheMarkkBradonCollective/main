@@ -1,11 +1,11 @@
 {
   "name": "The Markk Brandon Collective",
   "shortName": "MBC",
-  "version": "1.3.1",
-  "updatedAt": "2026-07-30T20:50:00.000Z",
+  "version": "1.3.2",
+  "updatedAt": "2026-07-30T21:18:00.000Z",
   "pwa": true,
   "sql": null,
-  "note": "Static newspaper site \u2014 brand badge + wordmark. Company apps keep their own sql/update.sql.",
+  "note": "Static site. Prefer GitHub Pages if Vercel production alias is missing.",
   "apk": {
     "packageId": "com.themarkkbradoncollective.mbc",
     "name": "The Markk Brandon Collective",

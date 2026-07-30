@@ -1,24 +1,24 @@
-const CACHE_NAME = 'mbc-v1-3-1';
+const CACHE_NAME = 'mbc-v1-3-2';
 const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/apps/',
-  '/apps/index.html',
-  '/support/',
-  '/support/index.html',
-  '/request/',
-  '/request/index.html',
-  '/css/style.css',
-  '/manifest.webmanifest',
-  '/version.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/icons/logo.png',
-  '/icons/wordmark.png',
-  '/icons/apple-touch-icon.png',
-  '/icons/favicon-32.png',
-  '/js/pwa.js',
-  '/js/version.js',
+  './',
+  './index.html',
+  './apps/',
+  './apps/index.html',
+  './support/',
+  './support/index.html',
+  './request/',
+  './request/index.html',
+  './css/style.css',
+  './manifest.webmanifest',
+  './version.json',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/apple-touch-icon.png',
+  './icons/favicon-32.png',
+  './icons/logo.png',
+  './icons/wordmark.png',
+  './js/pwa.js',
+  './js/version.js',
 ];
 
 self.addEventListener('install', (event) => {
@@ -49,7 +49,8 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (url.pathname === '/sw.js' || url.pathname === '/version.json') {
+  // Always network-first for SW + version stamp so updates land quickly
+  if (url.pathname.endsWith('/sw.js') || url.pathname.endsWith('/version.json')) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
@@ -64,6 +65,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Stale-while-revalidate for navigations and assets
   event.respondWith(
     caches.match(event.request).then((cached) => {
       const networkFetch = fetch(event.request)

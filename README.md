@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.3.0** (see [`version.json`](version.json))
+**Version:** **v1.3.1** (see [`version.json`](version.json))
 
 ## Site Structure
 
@@ -34,7 +34,7 @@
 
 ## Brand logo
 
-Official circular badge lives at [`icons/logo.png`](icons/logo.png). Run `npm run update` (or `node scripts/generate-icons.mjs`) to refresh favicon / PWA sizes from that master.
+Circular badge: [`icons/logo.png`](icons/logo.png). Horizontal wordmark: [`icons/wordmark.png`](icons/wordmark.png). Run `npm run update` (or `node scripts/generate-icons.mjs`) to refresh favicon / PWA sizes from that master.
 
 ## Local Development
 

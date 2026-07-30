@@ -1,5 +1,5 @@
 (function () {
-  const VERSION_FALLBACK = '1.2.0';
+  const VERSION_FALLBACK = '1.2.1';
 
   function showSplashVersion(version) {
     const el = document.getElementById('mbc-splash-version');

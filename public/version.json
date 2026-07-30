@@ -1,11 +1,11 @@
 {
   "name": "The Markk Brandon Collective",
   "shortName": "MBC",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "updatedAt": "2026-07-30T20:30:00.000Z",
   "pwa": true,
   "sql": null,
-  "note": "Static newspaper / showcase site — no app SQL schema.",
+  "note": "Static newspaper site \u2014 no app SQL schema. Company apps keep their own sql/update.sql.",
   "apk": {
     "packageId": "com.themarkkbradoncollective.mbc",
     "name": "The Markk Brandon Collective",

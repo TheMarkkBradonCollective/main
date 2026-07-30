@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.2.1** (see [`version.json`](version.json))
+**Version:** **v1.3.0** (see [`version.json`](version.json))
 
 ## Site Structure
 
@@ -31,6 +31,10 @@
 |---------|-------|-----|
 | Guardr | Marketplace angle | [guardr.co](https://guardr.co) |
 | Signature Security Specialist | Company / ops angle | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
+
+## Brand logo
+
+Official circular badge lives at [`icons/logo.png`](icons/logo.png). Run `npm run update` (or `node scripts/generate-icons.mjs`) to refresh favicon / PWA sizes from that master.
 
 ## Local Development
 

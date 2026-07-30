@@ -53,6 +53,14 @@ body{
   transition:opacity .35s ease,visibility .35s ease;
 }
 .mbc-splash.is-done{opacity:0;visibility:hidden;pointer-events:none}
+.mbc-splash-logo{
+  width:clamp(7.5rem,28vw,11rem);
+  height:auto;
+  aspect-ratio:1;
+  object-fit:contain;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(247,247,245,.12);
+}
 .mbc-splash-mark{
   font-family:var(--serif-display);
   font-size:clamp(2.5rem,10vw,3.5rem);
@@ -167,8 +175,23 @@ a:hover{color:var(--grey-500)}
   align-items:center;
   justify-content:center;
   padding:.7rem 1.25rem;
-  gap:2rem;
+  gap:1.25rem 2rem;
   flex-wrap:wrap;
+}
+
+.nav-brand{
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+  flex-shrink:0;
+}
+.nav-brand-logo{
+  width:2.5rem;
+  height:2.5rem;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  border:1px solid var(--rule);
 }
 
 .site-nav .logo{display:none}
@@ -232,6 +255,17 @@ a:hover{color:var(--grey-500)}
   font-weight:600;
   color:var(--ink);
   letter-spacing:.22em;
+}
+
+.masthead-logo{
+  width:clamp(4.5rem,16vw,6rem);
+  height:auto;
+  aspect-ratio:1;
+  border-radius:50%;
+  object-fit:cover;
+  margin:.35rem auto .65rem;
+  display:block;
+  border:1px solid var(--rule);
 }
 
 .masthead h1{

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mbc-v1-2-1';
+const CACHE_NAME = 'mbc-v1-3-0';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -13,6 +13,7 @@ const PRECACHE_URLS = [
   '/version.json',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
+  '/icons/logo.png',
   '/icons/apple-touch-icon.png',
   '/icons/favicon-32.png',
   '/js/pwa.js',

@@ -1,5 +1,14 @@
 (function () {
-  const VERSION_FALLBACK = '1.3.1';
+  const VERSION_FALLBACK = '1.3.2';
+  // Resolve site root from this script (/js/pwa.js → /) so GitHub Pages + Vercel both work
+  const SCRIPT = document.currentScript;
+  const ROOT = SCRIPT
+    ? new URL('../', SCRIPT.src)
+    : new URL('./', window.location.href);
+
+  function asset(path) {
+    return new URL(path.replace(/^\//, ''), ROOT).href;
+  }
 
   function showSplashVersion(version) {
     const el = document.getElementById('mbc-splash-version');
@@ -31,7 +40,7 @@
   }
 
   // Version stamp on splash + auto-hide after first paint
-  fetch('/version.json', { cache: 'no-store' })
+  fetch(asset('version.json'), { cache: 'no-store' })
     .then((r) => (r.ok ? r.json() : null))
     .then((data) => {
       showSplashVersion((data && data.version) || VERSION_FALLBACK);
@@ -64,7 +73,7 @@
 
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('/sw.js')
+      .register(asset('sw.js'), { scope: ROOT.href })
       .then((reg) => {
         if (reg.waiting) {
           reg.waiting.postMessage({ type: 'SKIP_WAITING' });
@@ -79,7 +88,6 @@
             }
           });
         });
-        // Periodic update checks while the PWA / TWA is open
         window.setInterval(() => void reg.update(), 5 * 60 * 1000);
       })
       .catch(() => {

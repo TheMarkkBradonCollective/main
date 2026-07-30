@@ -2,7 +2,16 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.3.1** (see [`version.json`](version.json))
+**Version:** **v1.3.2** (see [`version.json`](version.json))
+
+## Live site
+
+| Host | URL |
+|------|-----|
+| **GitHub Pages (working)** | [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/) |
+| Vercel project | `the-markkade-io` under the Markk Brandon Collective team |
+
+> If you see a Vercel `404: NOT_FOUND`, the production domain alias isn’t pointed at a live deployment. Use the GitHub Pages link above, or in the [Vercel dashboard](https://vercel.com/themarkkbrandoncollective/the-markkade-io) → **Domains** re-assign `*.vercel.app` / your custom domain to the latest Production deployment.
 
 ## Site Structure
 
@@ -34,7 +43,7 @@
 
 ## Brand logo
 
-Circular badge: [`icons/logo.png`](icons/logo.png). Horizontal wordmark: [`icons/wordmark.png`](icons/wordmark.png). Run `npm run update` (or `node scripts/generate-icons.mjs`) to refresh favicon / PWA sizes from that master.
+Circular badge: [`icons/logo.png`](icons/logo.png). Horizontal wordmark: [`icons/wordmark.png`](icons/wordmark.png). Run `npm run update` (or `node scripts/generate-icons.mjs`) to refresh favicon / PWA sizes from the masters.
 
 ## Local Development
 

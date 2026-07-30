@@ -17,6 +17,7 @@
   --grey-600:#3a3a38;
   --rule:#121212;
   --rule-light:#c8c8c6;
+  --brand-green:#1B4D3E;
   --column-gap:1.75rem;
   --max-width:1100px;
   --serif-display:"Playfair Display",Georgia,"Times New Roman",serif;
@@ -167,6 +168,7 @@ a:hover{color:var(--grey-500)}
   font-size:.62rem;
   letter-spacing:.2em;
   text-transform:uppercase;
+  border-bottom:2px solid var(--brand-green);
 }
 
 .site-nav{

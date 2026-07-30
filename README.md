@@ -4,6 +4,8 @@
 
 Newspaper-style site with a front page and **The Classifieds** — where every company in the collective is listed.
 
+**Version:** see [`version.json`](version.json) / `package.json` (currently **v1.1.0**).
+
 ## Site Structure
 
 | Page | URL | Description |
@@ -32,5 +34,17 @@ Static site — open `index.html` in a browser or serve with any static file ser
 ```bash
 python3 -m http.server 8080
 ```
+
+## App readiness (`/update`)
+
+Refresh installable PWA + Android TWA metadata whenever you ship UI changes:
+
+```bash
+npm run update
+```
+
+Cursor slash command **`/update`** runs the same workflow (see `.cursor/commands/update.md`).
+
+This newspaper hub is static (no app SQL). Company apps keep their own `sql/update.sql` (e.g. StrainVerse, SpiritsVerse). Map fullscreen shells live in those apps (MatchIt / Local), not here.
 
 © 2026 Markk Brandon (Markeith Nicholas White)

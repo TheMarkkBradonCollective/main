@@ -1,50 +1,53 @@
 # THE MARKK BRANDON COLLECTIVE
 
-> An umbrella of companies by **Markk Brandon** · **Markeith Nicholas White**
+> Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-Newspaper-style site with a front page and **The Classifieds** — where every company in the collective is listed.
-
-**Version:** see [`version.json`](version.json) / `package.json` (currently **v1.1.0**).
+**Version:** **v1.2.0** (see [`version.json`](version.json))
 
 ## Site Structure
 
 | Page | URL | Description |
 |------|-----|-------------|
-| **Front Page** | `index.html` | Newspaper cover — bio, headlines, welcome |
-| **The Classifieds** | `apps/` | All companies organized by section |
+| **Front Page** | `/` | Who I am, why I build, AI note, CTAs |
+| **Showcase** | `/apps/` | Free apps first; Guardr & SSS in a separate security lane |
+| **Support** | `/support/` | GoFundMe — keep free apps online |
+| **Hire Me** | `/request/` | Request a website/app build + budget range |
 
-## The Classifieds — Companies
+## Showcase — Free apps
 
-| Company | Category | URL |
-|---------|----------|-----|
-| Sacramento Buy Nothing | Community | [sacramentobuynothing.com](https://sacramentobuynothing.com) |
-| StrainVerse | Lifestyle & Culture | [strainverse-tmbc.vercel.app](https://strainverse-tmbc.vercel.app) |
-| SpiritsVerse | Lifestyle & Culture | [spiritsverse-tmbc.vercel.app](https://spiritsverse-tmbc.vercel.app) |
-| Cookverse | Lifestyle & Culture | [cookverse-tmbc.vercel.app](https://cookverse-tmbc.vercel.app) |
-| Friendr | Social & Connection | [friendr-tmbc.vercel.app](https://friendr-tmbc.vercel.app) |
-| Findr | Social & Connection | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
-| Chatr | Social & Connection | [chatr-tmbc.vercel.app](https://chatr-tmbc.vercel.app) |
-| Guardr | Security & Protection | [guardr.co](https://guardr.co) |
-| Signature Security Specialist | Security & Protection | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
+| Project | Notes | URL |
+|---------|-------|-----|
+| Sacramento Buy Nothing | Free local gifting | [sacramentobuynothing.com](https://sacramentobuynothing.com) |
+| StrainVerse | Fun / boredom build | [strainverse-tmbc.vercel.app](https://strainverse-tmbc.vercel.app) |
+| SpiritsVerse | Fun / boredom build | [spiritsverse-tmbc.vercel.app](https://spiritsverse-tmbc.vercel.app) |
+| Cookverse | Fun / boredom build | [cookverse-tmbc.vercel.app](https://cookverse-tmbc.vercel.app) |
+| Friendr | Free by design | [friendr-tmbc.vercel.app](https://friendr-tmbc.vercel.app) |
+| Findr | Free by design | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
+| Chatr | Free by design | [chatr-tmbc.vercel.app](https://chatr-tmbc.vercel.app) |
+
+## Security (listed separately)
+
+| Project | Notes | URL |
+|---------|-------|-----|
+| Guardr | Marketplace angle | [guardr.co](https://guardr.co) |
+| Signature Security Specialist | Company / ops angle | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
 
 ## Local Development
-
-Static site — open `index.html` in a browser or serve with any static file server:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-## App readiness (`/update`)
+## GoFundMe
 
-Refresh installable PWA + Android TWA metadata whenever you ship UI changes:
+Edit the campaign URL on [`support/index.html`](support/index.html) (`#gofundme-link`) once the GoFundMe is live.
+
+## App readiness (`/update`)
 
 ```bash
 npm run update
 ```
 
-Cursor slash command **`/update`** runs the same workflow (see `.cursor/commands/update.md`).
-
-This newspaper hub is static (no app SQL). Company apps keep their own `sql/update.sql` (e.g. StrainVerse, SpiritsVerse). Map fullscreen shells live in those apps (MatchIt / Local), not here.
+Cursor slash command **`/update`** — see `.cursor/commands/update.md`.
 
 © 2026 Markk Brandon (Markeith Nicholas White)

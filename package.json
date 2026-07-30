@@ -1,8 +1,8 @@
 {
   "name": "the-markk-brandon-collective",
   "private": true,
-  "version": "1.1.0",
-  "description": "The Markk Brandon Collective — newspaper site and company classifieds",
+  "version": "1.2.0",
+  "description": "The Markk Brandon Collective — showcase of free apps, support, and hire-me requests",
   "type": "module",
   "scripts": {
     "update": "node scripts/update.mjs",

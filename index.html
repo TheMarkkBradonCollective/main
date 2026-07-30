@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The Markk Brandon Collective — an umbrella of companies by Markk Brandon. The official newspaper of Markeith Nicholas White.">
+<meta name="description" content="The Markk Brandon Collective — a showcase of free apps and websites I built, plus a place to support the work or request your own build.">
 <meta name="theme-color" content="#121212">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
@@ -20,7 +20,7 @@
   <div class="mbc-splash-mark">MBC</div>
   <p class="mbc-splash-title">The Markk Brandon Collective</p>
   <p class="mbc-splash-loading">Loading edition…</p>
-  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.1.0</p>
+  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.2.0</p>
 </div>
 <div class="site">
 
@@ -31,7 +31,9 @@
     <a class="logo" href="index.html">The Markk Brandon Collective</a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Front Page</a></li>
-      <li><a href="apps/">The Classifieds</a></li>
+      <li><a href="apps/">Showcase</a></li>
+      <li><a href="support/">Support</a></li>
+      <li><a href="request/">Hire Me</a></li>
     </ul>
   </div>
 </nav>
@@ -39,20 +41,21 @@
 <header class="masthead" id="front-page">
   <div class="masthead-top-rule"></div>
   <div class="masthead-edition">
-    <span>Vol. I, No. 1</span>
+    <span>Vol. I, No. 2</span>
     <span class="edition-center">Sacramento, Calif.</span>
-    <span>Saturday, July 25, 2026</span>
+    <span>Thursday, July 30, 2026</span>
   </div>
   <h1>The Markk Brandon<br>Collective</h1>
-  <p class="masthead-tagline">An umbrella of companies by me</p>
+  <p class="masthead-tagline">My apps. My websites. My work — under one roof.</p>
   <p class="masthead-rule"><strong>Markeith Nicholas White</strong> · Markk Brandon · StickzCoder.Lua</p>
   <div class="masthead-bottom-rule"></div>
 </header>
 
 <main class="content">
 
-<div class="cover-quote">
-  "Every company has a story. Every venture becomes tomorrow's headline."
+<div class="ai-note" id="about-ai">
+  <p class="ai-note-label">Real talk, up front</p>
+  <p>Yes — I use AI (Cursor and friends) to build. I'm not hiding that. But without the years I already put into code, servers, and shipping real products, none of this would be finished full-stack apps. These aren't one-shot AI previews with buttons that don't click. I work them part by part, over a long time, test them, and make sure they actually run — including a real database. Roughly <strong>67%</strong> more functionality than your average front page <span class="six-seven" title="6 7">(6&nbsp;7)</span>. Display sites are fine. Mine do stuff.</p>
 </div>
 
 <section class="bio-hero">
@@ -60,83 +63,88 @@
     <p class="name">Markeith Nicholas White</p>
     <p class="aliases">Markk Brandon · StickzCoder.Lua</p>
     <div class="prose">
-      <p class="drop-cap">Welcome to The Markk Brandon Collective — my personal newspaper and the umbrella behind every company I build. From security marketplaces and social platforms to community apps and AI-powered experiences, this is where my ventures live, launch, and get documented like front-page news.</p>
-      <p>Each company operates independently under one roof. I build software that helps people, run businesses that protect communities, and ship platforms where culture meets code. Every venture that launches becomes tomorrow's headline.</p>
-      <p>Based in Sacramento, California, browse <a href="apps/">The Classifieds</a> for every company in the collective — organized by section, each with its own listing and link to the live site.</p>
+      <p class="drop-cap">This is The Markk Brandon Collective — a showcase of projects I built with Cursor, Vercel, Supabase, and a whole lot of late nights. Some of them came out of spite for apps that keep charging people for basic features. My goal there is simple: <strong>keep them free to use, no matter what</strong>. Others — StrainVerse, SpiritsVerse, Cookverse — came from boredom, for fun, or straight off a random idea. Either way, I want to see them actually get used. So I'm listing them here, under one umbrella, for people to check out on their own.</p>
+      <p>Before all this web and app work, I spent about five years building game servers — Minecraft, FiveM, Assetto Corsa, Beaming, and yeah, sadly, even a Roblox server. The last two to three years I've been deep in full websites and apps. I feel ready to put myself out there and build for other people too — for a fee, of course. If you want something made, there's a request form for that.</p>
+      <p>Keeping free apps online isn't free for me. Hosting, databases, domains, tools — it adds up. If you like what you see and want this stuff to keep running the way it should, there's a GoFundMe page so you can chip in.</p>
     </div>
   </div>
   <aside class="bio-sidebar">
-    <h3>At a Glance</h3>
+    <h3>What this site is</h3>
     <ul>
-      <li>Founder, Signature Security Specialist</li>
-      <li>Director, Sacramento Buy Nothing</li>
-      <li>Builder of Guardr, Friendr, Findr, Chatr, StrainVerse &amp; more</li>
-      <li>Sacramento · San Francisco Bay Area</li>
-      <li>Full-stack · Mobile · AI · Security</li>
+      <li>A showcase of my free apps &amp; sites</li>
+      <li>A place to support keeping them online</li>
+      <li>A door to hire me for your build</li>
+      <li>Sacramento · Bay Area</li>
+      <li>Cursor · Vercel · Supabase · full stack</li>
     </ul>
-    <h3 style="margin-top:1.25rem">Sections</h3>
+    <h3 style="margin-top:1.25rem">Jump to</h3>
     <ul>
-      <li><a href="apps/">The Classifieds</a></li>
-      <li><a href="apps/#community">Community</a></li>
-      <li><a href="apps/#lifestyle">Lifestyle &amp; Culture</a></li>
-      <li><a href="apps/#social">Social &amp; Connection</a></li>
-      <li><a href="apps/#security">Security &amp; Protection</a></li>
+      <li><a href="apps/">App Showcase</a></li>
+      <li><a href="apps/#security">Security Company</a></li>
+      <li><a href="support/">GoFundMe / Support</a></li>
+      <li><a href="request/">Request a Build</a></li>
     </ul>
   </aside>
 </section>
 
+<div class="cta-strip">
+  <a class="btn btn-primary" href="apps/">Browse the Showcase</a>
+  <a class="btn" href="support/">Support on GoFundMe</a>
+  <a class="btn" href="request/">Request a Build</a>
+</div>
+
 <section class="section">
   <div class="section-head">
     <p class="kicker">Above the Fold</p>
-    <h2>Today's Headlines</h2>
-    <p>Latest from The Classifieds</p>
+    <h2>Why I build this stuff</h2>
+    <p>Spite, boredom, and wanting things to stay free</p>
   </div>
 
   <div class="front-grid">
     <div class="front-main">
       <article class="story-card">
-        <p class="kicker">The Classifieds · Community</p>
-        <h3><a href="https://sacramentobuynothing.com" target="_blank" rel="noopener">Sacramento Buy Nothing Connects Neighbors Through Free Gifting</a></h3>
-        <p class="deck">Give freely. Ask kindly.</p>
-        <p>A community-powered platform where Sacramento neighbors give away what they no longer need — no selling, no bidding, no flipping. 100% free, no ads, ever.</p>
-        <a class="read-more" href="apps/#community">Read Full Listing →</a>
+        <p class="kicker">Free by design</p>
+        <h3><a href="apps/#social">Built because other apps wouldn't stop charging</a></h3>
+        <p class="deck">Your attention isn't the product here.</p>
+        <p>Some of these projects exist because I got tired of platforms nickel-and-diming people. Friendr, Findr, Chatr, Sacramento Buy Nothing — free to use. No ads selling you. No paywall for the basics. I want them used, not locked behind a subscription.</p>
+        <a class="read-more" href="apps/">See the free apps →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">The Classifieds · Lifestyle</p>
-        <h3><a href="apps/#lifestyle">StrainVerse, SpiritsVerse &amp; Cookverse Build Culture-First Platforms</a></h3>
-        <p class="deck">Where culture meets code</p>
-        <p>Experimental social platforms for cannabis culture, drink lovers, and the kitchen — each powered by Supabase and Gemini AI, built for the communities that live in those worlds.</p>
-        <a class="read-more" href="apps/#lifestyle">Browse Lifestyle →</a>
+        <p class="kicker">For fun / off the top</p>
+        <h3><a href="apps/#lifestyle">StrainVerse, SpiritsVerse &amp; Cookverse</a></h3>
+        <p class="deck">Boredom builds too.</p>
+        <p>Not everything starts as a business plan. The Verse apps came from culture, curiosity, and random ideas — cannabis, drinks, the kitchen. Built with Supabase and AI helpers, still real products with real databases, not throwaway demos.</p>
+        <a class="read-more" href="apps/#lifestyle">Browse the Verse →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">The Classifieds · Social</p>
-        <h3><a href="https://friendr-tmbc.vercel.app" target="_blank" rel="noopener">Friendr, Findr &amp; Chatr Expand the Social Connection Family</a></h3>
-        <p class="deck">Real people. Real choices. Real discovery.</p>
-        <p>Friendr puts consent first with opt-in intimacy layers. Findr helps you discover people, places, and communities. Chatr is your private bulletin board for encrypted sticky-note chat.</p>
-        <a class="read-more" href="apps/#social">Read Full Listing →</a>
+        <p class="kicker">Support</p>
+        <h3><a href="support/">Keeping free apps online costs money</a></h3>
+        <p class="deck">I've built a ton. Operating them isn't free.</p>
+        <p>I want these apps to keep running the way they should and get into people's hands. That means hosting, databases, domains, and time. If you check something out and it clicks, the GoFundMe is there so this can stay alive.</p>
+        <a class="read-more" href="support/">Go to Support →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">The Classifieds · Security</p>
-        <h3><a href="apps/#security">Guardr &amp; Signature Security Specialist Lead Protection Ventures</a></h3>
-        <p class="deck">Code. Create. Protect.</p>
-        <p>An independent security marketplace and an executive security company — two ventures built on the belief that real protection is professionalism first, always.</p>
-        <a class="read-more" href="apps/#security">Browse Security →</a>
+        <p class="kicker">Hire me</p>
+        <h3><a href="request/">Need a website or app? Request a build</a></h3>
+        <p class="deck">After game servers and years of shipping products.</p>
+        <p>Five years of game servers, then two to three years of full apps and sites. I'm opening the door for people to request their own build — tell me what you need, your min–max budget, and I'll reach out.</p>
+        <a class="read-more" href="request/">Open the request form →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">Front Page</p>
-        <h3><a href="apps/">The Markk Brandon Collective Opens as Umbrella for Every Company</a></h3>
-        <p class="deck">2026 — A new chapter begins</p>
-        <p>After years of building across security, social, community, and lifestyle platforms, The Markk Brandon Collective launches as the official newspaper and parent company — with every venture listed in The Classifieds.</p>
-        <a class="read-more" href="apps/">Browse The Classifieds →</a>
+        <p class="kicker">Security · separate lane</p>
+        <h3><a href="apps/#security">Guardr &amp; Signature Security Specialist</a></h3>
+        <p class="deck">Entrepreneur path I've always wanted in security.</p>
+        <p>Aside from the umbrella apps, I'm actively working on starting my own security company from two different angles — Guardr as a marketplace, Signature Security Specialist as the ops company. Listed away from the rest on purpose.</p>
+        <a class="read-more" href="apps/#security">See the security lane →</a>
       </article>
     </div>
 
     <aside class="front-aside">
-      <p class="sidebar-label">Also in Today's Edition</p>
+      <p class="sidebar-label">Quick links</p>
 
       <div class="sidebar-story">
         <h4><a href="apps/#community">Sacramento Buy Nothing</a></h4>
@@ -144,11 +152,11 @@
       </div>
       <div class="sidebar-story">
         <h4><a href="https://strainverse-tmbc.vercel.app" target="_blank" rel="noopener">StrainVerse</a></h4>
-        <p>Stoner-first social network for cannabis culture.</p>
+        <p>Stoner-first social — for fun, still real.</p>
       </div>
       <div class="sidebar-story">
         <h4><a href="https://spiritsverse-tmbc.vercel.app" target="_blank" rel="noopener">SpiritsVerse</a></h4>
-        <p>Social network for drink lovers and digital bars.</p>
+        <p>Drinks, pubs, crawls — boredom build.</p>
       </div>
       <div class="sidebar-story">
         <h4><a href="https://cookverse-tmbc.vercel.app" target="_blank" rel="noopener">Cookverse</a></h4>
@@ -156,7 +164,7 @@
       </div>
       <div class="sidebar-story">
         <h4><a href="https://friendr-tmbc.vercel.app" target="_blank" rel="noopener">Friendr</a></h4>
-        <p>Consent-first social connection.</p>
+        <p>Consent-first. Free. No data sold.</p>
       </div>
       <div class="sidebar-story">
         <h4><a href="https://findr-tmbc.vercel.app" target="_blank" rel="noopener">Findr</a></h4>
@@ -164,15 +172,17 @@
       </div>
       <div class="sidebar-story">
         <h4><a href="https://chatr-tmbc.vercel.app" target="_blank" rel="noopener">Chatr</a></h4>
-        <p>Secure private chat — encrypted sticky notes.</p>
+        <p>Encrypted sticky-note chat.</p>
       </div>
+
+      <p class="sidebar-label" style="margin-top:1.25rem">Security (separate)</p>
       <div class="sidebar-story">
         <h4><a href="https://guardr.co" target="_blank" rel="noopener">Guardr</a></h4>
         <p>Independent security marketplace.</p>
       </div>
       <div class="sidebar-story">
         <h4><a href="https://signaturesecurityspecialist.com" target="_blank" rel="noopener">Signature Security Specialist</a></h4>
-        <p>Executive security operations platform.</p>
+        <p>Executive security ops company.</p>
       </div>
     </aside>
   </div>
@@ -183,9 +193,11 @@
 </div>
 
 <div class="cover-cta">
-  <p>Every company in the collective has its own listing in The Classifieds.</p>
+  <p>Check out the apps. If they matter to you, help keep them running — or tell me what you want built.</p>
   <div class="btn-row">
-    <a class="btn btn-primary" href="apps/">Browse The Classifieds</a>
+    <a class="btn btn-primary" href="apps/">Showcase</a>
+    <a class="btn" href="support/">Support</a>
+    <a class="btn" href="request/">Hire Me</a>
   </div>
 </div>
 
@@ -194,11 +206,13 @@
 <footer class="site-footer">
   <nav class="footer-nav">
     <a href="index.html">Front Page</a>
-    <a href="apps/">The Classifieds</a>
+    <a href="apps/">Showcase</a>
+    <a href="support/">Support</a>
+    <a href="request/">Hire Me</a>
   </nav>
   <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
   <p>All Rights Reserved · Built with care by <strong>StickzCoder.Lua</strong></p>
-  <p class="site-version">MBC v1.1.0</p>
+  <p class="site-version">MBC v1.2.0</p>
 </footer>
 
 </div>

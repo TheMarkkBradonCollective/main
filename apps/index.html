@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The Classifieds — every company in The Markk Brandon Collective, organized by section.">
+<meta name="description" content="Showcase — free apps and websites by Markk Brandon, plus a separate lane for Guardr and Signature Security Specialist.">
 <meta name="theme-color" content="#121212">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
@@ -12,15 +12,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="MBC">
 <meta name="mobile-web-app-capable" content="yes">
-<title>The Classifieds — The Markk Brandon Collective</title>
+<title>Showcase — The Markk Brandon Collective</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <div id="mbc-splash" class="mbc-splash" aria-live="polite">
   <div class="mbc-splash-mark">MBC</div>
-  <p class="mbc-splash-title">The Classifieds</p>
+  <p class="mbc-splash-title">Showcase</p>
   <p class="mbc-splash-loading">Loading listings…</p>
-  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.1.0</p>
+  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.2.0</p>
 </div>
 <div class="site">
 
@@ -29,7 +29,9 @@
     <a class="logo" href="../index.html">The Markk Brandon Collective</a>
     <ul class="nav-links">
       <li><a href="../index.html">Front Page</a></li>
-      <li><a href="./" class="active">The Classifieds</a></li>
+      <li><a href="./" class="active">Showcase</a></li>
+      <li><a href="../support/">Support</a></li>
+      <li><a href="../request/">Hire Me</a></li>
     </ul>
   </div>
 </nav>
@@ -38,31 +40,35 @@
   <div class="masthead-top-rule"></div>
   <div class="masthead-edition">
     <span>Section C</span>
-    <span class="edition-center">The Classifieds</span>
+    <span class="edition-center">Showcase</span>
     <span>Est. 2026</span>
   </div>
-  <h1 class="unstyled">The Classifieds</h1>
-  <p class="masthead-tagline">My Companies — Organized by Section</p>
+  <h1 class="unstyled">Showcase</h1>
+  <p class="masthead-tagline">Apps &amp; sites to try — free ones first, security company below</p>
   <div class="masthead-bottom-rule"></div>
 </header>
 
 <main class="content">
 
-<p class="breadcrumb"><a href="../index.html">Front Page</a> / The Classifieds</p>
+<p class="breadcrumb"><a href="../index.html">Front Page</a> / Showcase</p>
 
-<div class="prose" style="max-width:720px;margin:0 auto 2.5rem;text-align:center">
-  <p>Every company in the collective gets its own classified listing. Browse by section below, or click through to visit each company on its own site.</p>
+<div class="prose showcase-lead">
+  <p>This is the list. Click through, poke around, break nothing important. Most of these are free to use on purpose. The security stuff sits in its own section at the bottom — different lane, different goal.</p>
+</div>
+
+<div class="cta-strip compact">
+  <a class="btn" href="../support/">Support on GoFundMe</a>
+  <a class="btn" href="../request/">Request a Build</a>
 </div>
 
 <section class="classified-section" id="community">
   <div class="classified-section-head">
     <h3>Community</h3>
-    <span>Section I</span>
+    <span>Free on purpose</span>
   </div>
   <div class="classified-intro">
-    <p class="intro-label">Why This Section Exists</p>
-    <p>Sacramento is my home. I watched neighbors throw away perfectly good furniture, clothes, and tools while other neighbors were struggling to afford the same things — and every existing platform wanted money in the middle. Buy/sell groups turn gifting into commerce. Marketplace apps invite flipping and bidding. Nobody was building something that was simply free, local, and human.</p>
-    <p>Sacramento Buy Nothing is the community venture group — mutual aid without a price tag. Give freely, ask kindly, keep good things out of the landfill, and let neighbors help neighbors with no ads and no paywalls, ever.</p>
+    <p class="intro-label">Why this exists</p>
+    <p>Sacramento is home. I watched good stuff hit the curb while neighbors needed the same things — and every “free” app still wanted a cut somewhere. So I built something that stays free: give, ask, no selling, no flipping, no ads.</p>
   </div>
   <div class="classified-grid">
     <article class="classified-ad">
@@ -71,7 +77,7 @@
       <h4>Sacramento Buy Nothing</h4>
       <p class="ad-tagline">Give Freely. Ask Kindly.</p>
       <p>Community-powered free gifting for Sacramento neighbors. No selling, no bidding, no flipping. 100% free, no ads, ever.</p>
-      <p class="ad-status live">● Active</p>
+      <p class="ad-status live">● Active · Free</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://sacramentobuynothing.com" target="_blank" rel="noopener">Visit Site</a>
       </div>
@@ -82,12 +88,11 @@
 <section class="classified-section" id="lifestyle">
   <div class="classified-section-head">
     <h3>Lifestyle &amp; Culture</h3>
-    <span>Section II</span>
+    <span>Boredom / fun / random ideas</span>
   </div>
   <div class="classified-intro">
-    <p class="intro-label">Why This Section Exists</p>
-    <p>Not everything I build is a business or a utility — some ventures start from culture, curiosity, and community around the things people actually enjoy. Cannabis culture deserved more than a dry database. Drink lovers deserved a social network, not just a review site. The kitchen deserved a shared table with AI that actually helps you cook, not just a list of recipes.</p>
-    <p>StrainVerse, SpiritsVerse, and Cookverse are the lifestyle venture group — experimental social platforms where culture meets code, powered by Supabase and Gemini AI. Each one is its own world, built for the people who live in that world.</p>
+    <p class="intro-label">Why this exists</p>
+    <p>StrainVerse, SpiritsVerse, and Cookverse weren't born from a pitch deck. Boredom. Fun. Off-the-top ideas. Culture stuff I wanted to play with — cannabis, drinks, cooking — turned into real apps with real databases (Supabase + AI helpers), not throwaway demos. Still free to use. Still meant to get used.</p>
   </div>
   <div class="classified-grid">
     <article class="classified-ad">
@@ -95,8 +100,8 @@
       <div class="ad-icon">🌿</div>
       <h4>StrainVerse</h4>
       <p class="ad-tagline">Stoner-First Social Network</p>
-      <p>Cannabis-centered social platform with strain directory, HerbHub, SocialSesh chats, MatchIt connections, and community feeds.</p>
-      <p class="ad-status live">● Active</p>
+      <p>Cannabis-centered social platform with strain directory, HerbHub, SocialSesh chats, MatchIt, and community feeds.</p>
+      <p class="ad-status live">● Active · Free</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://strainverse-tmbc.vercel.app" target="_blank" rel="noopener">Visit Site</a>
       </div>
@@ -106,8 +111,8 @@
       <div class="ad-icon">🥃</div>
       <h4>SpiritsVerse</h4>
       <p class="ad-tagline">Social Network for Drink Lovers</p>
-      <p>Explore cocktails, beers, spirits, and wine. Drink Directory, SipStream, Local Pub, BarSesh groups, and your digital bar.</p>
-      <p class="ad-status live">● Active</p>
+      <p>Cocktails, beer, spirits, wine. Drink Directory, SipStream, Local Pub map, BarSesh groups, digital bar.</p>
+      <p class="ad-status live">● Active · Free</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://spiritsverse-tmbc.vercel.app" target="_blank" rel="noopener">Visit Site</a>
       </div>
@@ -117,8 +122,8 @@
       <div class="ad-icon">🍳</div>
       <h4>Cookverse</h4>
       <p class="ad-tagline">The Social Table</p>
-      <p>Social cooking platform with Chef Gemini AI — flavor pairings, gourmet substitutions, techniques, and kitchen experiments. Part of the shared Verse family.</p>
-      <p class="ad-status live">● Active</p>
+      <p>Social cooking with Chef Gemini AI — pairings, substitutions, techniques, kitchen experiments. Part of the Verse family.</p>
+      <p class="ad-status live">● Active · Free</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://cookverse-tmbc.vercel.app" target="_blank" rel="noopener">Visit Site</a>
       </div>
@@ -129,12 +134,11 @@
 <section class="classified-section" id="social">
   <div class="classified-section-head">
     <h3>Social &amp; Connection</h3>
-    <span>Section III</span>
+    <span>Spite for paywalled apps</span>
   </div>
   <div class="classified-intro">
-    <p class="intro-label">Why This Section Exists</p>
-    <p>I started building in social because the apps people use every day weren't built for them — they were built for advertisers. Bots, fake profiles, data sold without consent, and algorithms that push engagement over honesty. I wanted something different: a place where real people connect on their own terms, where every layer of intimacy is opt-in, and where safety isn't a marketing line but the foundation of the product.</p>
-    <p>Friendr, Findr, and Chatr are the social venture group — software where consent comes first, discovery is intentional, private chat stays encrypted, moderation is human, and the platform is free because your attention isn't the product.</p>
+    <p class="intro-label">Why this exists</p>
+    <p>A lot of social apps weren't built for you — they were built for advertisers. Bots, fake profiles, data sold off, paywalls for basics. Friendr, Findr, and Chatr are my answer: consent first, free to use, real databases, human moderation where it matters. Check them out. If they help, <a href="../support/">help keep them online</a>.</p>
   </div>
   <div class="classified-grid">
     <article class="classified-ad">
@@ -143,7 +147,7 @@
       <h4>Friendr</h4>
       <p class="ad-tagline">Consent-First Social Connection</p>
       <p>Free, ad-free social app with three opt-in layers: Friends, A Bit More, and Way More. 18+ ID-verified, human moderation, no data sold.</p>
-      <p class="ad-status live">● Active</p>
+      <p class="ad-status live">● Active · Free</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://friendr-tmbc.vercel.app" target="_blank" rel="noopener">Visit Site</a>
       </div>
@@ -154,7 +158,7 @@
       <h4>Findr</h4>
       <p class="ad-tagline">Location sharing for your people</p>
       <p>Share live location with the people you trust — account on the web, map sharing from the Findr app.</p>
-      <p class="ad-status live">● Active</p>
+      <p class="ad-status live">● Active · Free</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://findr-tmbc.vercel.app" target="_blank" rel="noopener">Visit Site</a>
       </div>
@@ -164,8 +168,8 @@
       <div class="ad-icon">💬</div>
       <h4>Chatr</h4>
       <p class="ad-tagline">Secure Private Chat</p>
-      <p>Your private bulletin board — pin encrypted sticky notes to anyone with a code. Works offline and syncs when you're back online.</p>
-      <p class="ad-status live">● Active</p>
+      <p>Your private bulletin board — pin encrypted sticky notes to anyone with a code. Works offline and syncs when you're back.</p>
+      <p class="ad-status live">● Active · Free</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://chatr-tmbc.vercel.app" target="_blank" rel="noopener">Visit Site</a>
       </div>
@@ -173,34 +177,37 @@
   </div>
 </section>
 
-<section class="classified-section" id="security">
+<!-- Security intentionally separated from the free-app showcase -->
+<hr class="section-break" id="security-break">
+
+<section class="classified-section security-lane" id="security">
   <div class="classified-section-head">
-    <h3>Security &amp; Protection</h3>
-    <span>Section IV</span>
+    <h3>Security Company</h3>
+    <span>Separate lane · not the free-app list</span>
   </div>
   <div class="classified-intro">
-    <p class="intro-label">Why This Section Exists</p>
-    <p>Protection is the thread that runs through everything I do — it's in the motto: Code. Create. Protect. Share. Repeat. I didn't stumble into security; I built a career around it. Signature Security Specialist started because professional security operations in Northern California needed a company that treated guards like customer-service professionals, not brute force. Guardr started because people deserve access to protection on their own terms — an independent marketplace, not a gatekept industry.</p>
-    <p>This is the security venture group — the businesses and platforms built to protect persons, places, and things, backed by mobile-first technology, training systems, and the belief that real security is professionalism first, always.</p>
+    <p class="intro-label">Why this is listed apart</p>
+    <p>Aside from the websites and apps under the umbrella, I'm actively working on starting my own security company — from two different angles. From wanting to be an entrepreneur, I've always wanted it to be in security. So Guardr and Signature Security Specialist sit here on purpose, away from the free showcase apps above.</p>
+    <p><strong>Guardr</strong> is the marketplace angle — protection on demand, independent, not gatekept. <strong>Signature Security Specialist</strong> is the company angle — ops, guards, events, training, the real business of protecting people and places. Same passion, two paths.</p>
   </div>
   <div class="classified-grid">
-    <article class="classified-ad">
-      <p class="ad-number">Listing #006</p>
+    <article class="classified-ad security-ad">
+      <p class="ad-number">Security · A</p>
       <div class="ad-icon">🛡</div>
       <h4>Guardr</h4>
       <p class="ad-tagline">Independent Security Marketplace</p>
-      <p>Connect with protection services on demand — an independent marketplace for discovering and engaging security professionals, anytime, anywhere.</p>
+      <p>Connect with protection services on demand — discovering and engaging security professionals, anytime, anywhere.</p>
       <p class="ad-status live">● Active</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://guardr.co" target="_blank" rel="noopener">Visit Site</a>
       </div>
     </article>
-    <article class="classified-ad">
-      <p class="ad-number">Listing #007</p>
+    <article class="classified-ad security-ad">
+      <p class="ad-number">Security · B</p>
       <div class="ad-icon">🔒</div>
       <h4>Signature Security Specialist</h4>
       <p class="ad-tagline">Protect with Purpose · Perform with Excellence</p>
-      <p>Executive security company connecting guards, event staff, and medical responders with clients. Mobile-first ops platform with mission scheduling, training LMS, and companion apps.</p>
+      <p>Executive security company connecting guards, event staff, and medical responders with clients. Mobile-first ops, mission scheduling, training LMS, companion apps.</p>
       <p class="ad-status dev">● In Development</p>
       <div class="ad-links">
         <a class="btn btn-primary" href="https://signaturesecurityspecialist.com" target="_blank" rel="noopener">Visit Site</a>
@@ -209,16 +216,26 @@
   </div>
 </section>
 
+<div class="cover-cta">
+  <p>Tried something you like? Help keep the free ones running — or ask me to build yours.</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="../support/">Support</a>
+    <a class="btn" href="../request/">Hire Me</a>
+  </div>
+</div>
+
 </main>
 
 <footer class="site-footer">
   <nav class="footer-nav">
     <a href="../index.html">Front Page</a>
-    <a href="./">The Classifieds</a>
+    <a href="./">Showcase</a>
+    <a href="../support/">Support</a>
+    <a href="../request/">Hire Me</a>
   </nav>
   <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
   <p>All Rights Reserved · Built with care by <strong>StickzCoder.Lua</strong></p>
-  <p class="site-version">MBC v1.1.0</p>
+  <p class="site-version">MBC v1.2.0</p>
 </footer>
 
 </div>

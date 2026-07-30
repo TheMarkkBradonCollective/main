@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Request a website or app build from Markk Brandon — tell me what you need and your budget range.">
+<meta name="theme-color" content="#121212">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MBC">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Hire Me — The Markk Brandon Collective</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="mbc-splash" class="mbc-splash" aria-live="polite">
+  <div class="mbc-splash-mark">MBC</div>
+  <p class="mbc-splash-title">Hire Me</p>
+  <p class="mbc-splash-loading">Loading…</p>
+  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.2.1</p>
+</div>
+<div class="site">
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="logo" href="../index.html">The Markk Brandon Collective</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Front Page</a></li>
+      <li><a href="../apps/">Showcase</a></li>
+      <li><a href="../support/">Support</a></li>
+      <li><a href="./" class="active">Hire Me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="masthead-top-rule"></div>
+  <div class="masthead-edition">
+    <span>Section H</span>
+    <span class="edition-center">Hire Me</span>
+    <span>Build requests</span>
+  </div>
+  <h1 class="unstyled">Request a build</h1>
+  <p class="masthead-tagline">Tell me what you need · add your min–max · I'll reach out</p>
+  <div class="masthead-bottom-rule"></div>
+</header>
+
+<main class="content">
+
+<p class="breadcrumb"><a href="../index.html">Front Page</a> / Hire Me</p>
+
+<section class="request-intro prose">
+  <p class="drop-cap">This page stays open for people who want me to build their website or app. I've gained a ton of knowledge developing these projects over the past two to three years — right after about five years building game servers (Minecraft, FiveM, Assetto Corsa, Beaming, and yes, sadly, a Roblox server). That path taught me how to ship things people actually use, not just screenshots.</p>
+  <p>I feel ready to put myself out there and start building for others — at a cost, of course. Here's where you make that request: say what you want, add your price range (min–max), and I'll reach out if it's something I can take on. No fake “instant quote” bots. Just me reading what you sent.</p>
+  <p>What you get when we work together is the same standard I hold my own apps to — full stack when that's what you need, real databases, tested flows, buttons that work. AI helps me move faster; the experience is what makes it finish. And I don't call a project done until it feels usable.</p>
+  <p class="request-aside">Want to support the free apps instead of hiring? That's the <a href="../support/">Support / GoFundMe</a> page — different door, same Collective.</p>
+</section>
+
+<section class="section how-it-works">
+  <div class="section-head">
+    <p class="kicker">How it works</p>
+    <h2>Simple process</h2>
+  </div>
+  <ol class="steps-list">
+    <li><strong>You fill out the form</strong> — what you need, who it's for, must-haves, and your budget min–max.</li>
+    <li><strong>I read it</strong> — if the scope and budget can meet, I'll email you back.</li>
+    <li><strong>We talk it through</strong> — goals, timeline, what's in / out, how we'll build it.</li>
+    <li><strong>I build and ship</strong> — part by part, tested, connected to whatever backend you need — not a dead preview.</li>
+  </ol>
+</section>
+
+<section class="request-form-wrap" id="request">
+  <form
+    class="request-form"
+    action="https://formsubmit.co/themarkkbrandoncollective@gmail.com"
+    method="POST"
+  >
+    <input type="hidden" name="_subject" value="MBC build request">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+    <div class="form-row">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" required autocomplete="name" placeholder="What should I call you?">
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="So I can reach you">
+    </div>
+
+    <div class="form-row">
+      <label for="project_type">What do you need?</label>
+      <select id="project_type" name="project_type" required>
+        <option value="">Pick one</option>
+        <option value="website">Website</option>
+        <option value="web-app">Web app</option>
+        <option value="mobile-pwa">Mobile / PWA</option>
+        <option value="full-stack">Full-stack product</option>
+        <option value="other">Other / not sure yet</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="details">Project details</label>
+      <textarea id="details" name="details" rows="6" required placeholder="What are you trying to build? Who's it for? Anything must-have?"></textarea>
+    </div>
+
+    <div class="form-grid-2">
+      <div class="form-row">
+        <label for="budget_min">Budget min (USD)</label>
+        <input id="budget_min" name="budget_min" type="number" min="0" step="50" required placeholder="e.g. 500">
+      </div>
+      <div class="form-row">
+        <label for="budget_max">Budget max (USD)</label>
+        <input id="budget_max" name="budget_max" type="number" min="0" step="50" required placeholder="e.g. 2500">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="timeline">Timeline (optional)</label>
+      <input id="timeline" name="timeline" type="text" placeholder="Whenever / this month / soft deadline…">
+    </div>
+
+    <div class="form-row">
+      <label for="links">Links (optional)</label>
+      <input id="links" name="links" type="text" placeholder="Site, mockups, inspo, Discord, etc.">
+    </div>
+
+    <button class="btn btn-primary btn-lg" type="submit">Send request</button>
+    <p class="form-footnote">Submits to my inbox. I'll reply if it's something I can take on. Be honest on the budget — it saves both of us time.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="../index.html">Front Page</a>
+    <a href="../apps/">Showcase</a>
+    <a href="../support/">Support</a>
+    <a href="./">Hire Me</a>
+  </nav>
+  <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
+  <p>All Rights Reserved · Built with care by <strong>StickzCoder.Lua</strong></p>
+  <p class="site-version">MBC v1.2.1</p>
+</footer>
+
+</div>
+<script src="/js/pwa.js"></script>
+</body>
+</html>

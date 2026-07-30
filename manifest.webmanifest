@@ -9,7 +9,7 @@
   "background_color": "#f7f7f5",
   "theme_color": "#121212",
   "lang": "en",
-  "categories": ["business"],
+  "categories": ["business", "news"],
   "icons": [
     {
       "src": "/icons/icon-192.png",

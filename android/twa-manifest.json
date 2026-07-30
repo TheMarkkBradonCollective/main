@@ -1,0 +1,26 @@
+{
+  "packageId": "com.themarkkbradoncollective.mbc",
+  "name": "The Markk Brandon Collective",
+  "launcherName": "MBC",
+  "display": "standalone",
+  "themeColor": "#121212",
+  "navigationColor": "#121212",
+  "navigationColorDark": "#121212",
+  "backgroundColor": "#f7f7f5",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "../icons/icon-512.png",
+  "maskableIconUrl": "../icons/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "mbc"
+  },
+  "appVersionName": "1.2.1",
+  "appVersionCode": 121,
+  "shortcuts": [],
+  "generatorApp": "mbc-update",
+  "webManifestUrl": "/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {}
+}

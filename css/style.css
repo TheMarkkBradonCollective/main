@@ -1097,9 +1097,11 @@ tr:nth-child(even) td{background:var(--grey-100)}
 }
 .ai-note p:last-child{margin-bottom:0}
 .six-seven{
-  font-style:normal;
+  font-style:italic;
   white-space:nowrap;
   letter-spacing:.02em;
+  color:var(--grey-500);
+  font-size:.9em;
 }
 
 .cta-strip{

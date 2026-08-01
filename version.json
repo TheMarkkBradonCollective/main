@@ -5,7 +5,7 @@
   "updatedAt": "2026-07-30T21:18:00.000Z",
   "pwa": true,
   "sql": null,
-  "note": "Static site. Live on GitHub Pages. themarkkbrandoncollective.vercel.app / the-markkade-io.vercel.app need Domains reassigned in Vercel.",
+  "note": "Static site. Canonical host is GitHub Pages (Vercel project for this repo removed).",
   "apk": {
     "packageId": "com.themarkkbradoncollective.mbc",
     "name": "The Markk Brandon Collective",

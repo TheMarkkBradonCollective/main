@@ -6,29 +6,11 @@
 
 ## Live site
 
-| Host | URL | Status |
-|------|-----|--------|
-| **GitHub Pages** | [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/) | **Working — use this** |
-| Vercel project | [`the-markkade-io`](https://vercel.com/themarkkbrandoncollective/the-markkade-io) | Deploys succeed; public aliases broken |
+**Canonical host:** [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/)
 
-### Vercel `404: NOT_FOUND` (e.g. `themarkkbrandoncollective.vercel.app`)
+This showcase ships on **GitHub Pages** only. The old Vercel project for this repo (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) is intentionally removed — ignore those URLs if they still 404.
 
-That hostname is **not** attached to a live production deployment. The code on `main` is fine — GitHub Pages proves it. This is a **Vercel Domains / project** setting, not a missing file in the repo.
-
-| URL you might try | What Vercel returns | Meaning |
-|-------------------|---------------------|---------|
-| `themarkkbrandoncollective.vercel.app` | `NOT_FOUND` | No project production alias for this name |
-| `the-markkade-io.vercel.app` | `DEPLOYMENT_NOT_FOUND` | Alias exists but points at a deleted/expired deployment |
-
-**Fix in the Vercel dashboard** (you must be logged in as the team owner):
-
-1. Open [the-markkade-io → Deployments](https://vercel.com/themarkkbrandoncollective/the-markkade-io/deployments) and confirm the latest **Production** deploy from `main` is Ready.
-2. Open that deployment → **⋯** → **Assign Domain** (or **Promote to Production**).
-3. Assign `the-markkade-io.vercel.app` to that deployment.
-4. If you specifically want `themarkkbrandoncollective.vercel.app`, either:
-   - **Rename** the project to `themarkkbrandoncollective` (Settings → General → Project Name), **or**
-   - Create/use a project with that exact name and connect this GitHub repo (`TheMarkkBradonCollective/TheMarkkade.io`) as its production git source, then redeploy.
-5. Optional: Settings → **Deployment Protection** — turn off **Vercel Authentication** if team URLs only show a Vercel login page.
+> After deleting the Vercel project, also clear the GitHub repo **Homepage** URL if it still points at `*.vercel.app` (Settings → General → Website). Point it at the Pages link above.
 
 ## Site Structure
 

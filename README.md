@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.4.5** (see [`version.json`](version.json))
+**Version:** **v1.4.6** (see [`version.json`](version.json))
 
 ## Live site
 

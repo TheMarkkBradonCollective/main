@@ -31,7 +31,7 @@
     "slug": "spiritsverse",
     "name": "SpiritsVerse",
     "projectUrl": "https://spiritsverse-tmbc.vercel.app",
-    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png",
+    "source": "https://spiritsverse-tmbc.vercel.app/pwa-512.png",
     "file": "icons/apps/spiritsverse.png"
   },
   {

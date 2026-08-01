@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.5.0** (see [`version.json`](version.json))
+**Version:** **v1.5.1** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -53,9 +53,20 @@ npm run sync-app-icons
 
 ### Private repo APKs
 
-Several apps live in **private** GitHub repos. The sync script can discover APKs in `release/`, `android-app/`, etc. and **mirror** them to `apks/{slug}/` on this site so the App Market stays publicly downloadable.
+Several apps live in **private** GitHub repos under `TheMarkkBradonCollective`. The sync script discovers APKs in `release/`, `android-app/`, etc. and **mirrors** them to `apks/{slug}/` on this site so the App Market stays publicly downloadable.
 
-1. Add or fix each app's `github` URL in [`My-Projects.json`](My-Projects.json) (set `"githubPrivate": true` when needed).
+| App | Repo | Visibility |
+|-----|------|------------|
+| StrainVerse | `StrainVerse` | Public |
+| SpiritsVerse | `SpiritsVerse` | Private |
+| CookVerse | `CookVerse` | Private |
+| Friendr | `Friendr` | Private |
+| Findr | `Findr` | Private |
+| Chatr | `Chatr` | Private |
+| Sacramento Buy Nothing | `SacramentoBuyNothing` | Private |
+| Guardr | `Guardr` | Private |
+
+1. Repo URLs and `githubPrivate` flags live in [`My-Projects.json`](My-Projects.json).
 2. Export a GitHub token with `repo` scope:
    ```bash
    export GITHUB_TOKEN=ghp_your_token_here

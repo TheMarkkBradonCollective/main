@@ -60,9 +60,8 @@
     "url": "https://spiritsverse-tmbc.vercel.app",
     "section": "lifestyle",
     "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
-      "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png",
       "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
     ]
   },
@@ -72,7 +71,7 @@
     "tagline": "The Social Table",
     "url": "https://cookverse-tmbc.vercel.app",
     "section": "lifestyle",
-    "github": "https://github.com/TheMarkkBradonCollective/Cookverse",
+    "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
     "githubPrivate": true,
     "iconSources": [
       "https://cookverse-tmbc.vercel.app/logo-mark.png",

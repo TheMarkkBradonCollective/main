@@ -61,6 +61,7 @@ Display assets are **transparent PNGs** (black knocked out) so they sit cleanly 
 ```bash
 npm run process-brand   # masters → transparent logo + wordmark
 npm run sync-app-icons  # pull each app's icon from GitHub / live site → icons/apps/
+npm run sync-apk-catalog  # discover Android APKs from each app's version.json → apk-catalog.json
 npm run generate-icons  # also rebuilds favicon / PWA tiles (opaque black)
 # or
 npm run update

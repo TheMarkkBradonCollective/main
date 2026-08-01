@@ -30,6 +30,15 @@ if (appIcons.status !== 0) {
   console.warn('⚠ App icon sync skipped or partial (network / missing sources).');
 }
 
+console.log('→ Syncing APK catalog…');
+const apkCatalog = spawnSync(process.execPath, [resolve(root, 'scripts/sync-apk-catalog.mjs')], {
+  cwd: root,
+  stdio: 'inherit',
+});
+if (apkCatalog.status !== 0) {
+  console.warn('⚠ APK catalog sync skipped or partial (network / missing sources).');
+}
+
 // 1) PWA icons (skip gracefully if sharp isn't installed and icons already exist)
 console.log('→ Regenerating PWA icons…');
 const icons = spawnSync(process.execPath, [resolve(root, 'scripts/generate-icons.mjs')], {

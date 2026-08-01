@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Download Android APKs for Markk Brandon Collective apps — sideload, install, and update from one place.">
+<meta name="theme-color" content="#121212">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MBC">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Downloads — The Markk Brandon Collective</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="mbc-splash" class="mbc-splash" aria-live="polite">
+  <p class="mbc-splash-mark">MBC</p>
+  <p class="mbc-splash-title">The Markk Brandon Collective</p>
+  <p class="mbc-splash-loading">Loading downloads…</p>
+  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.4.0</p>
+</div>
+<div class="site">
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="logo" href="../index.html">The Markk Brandon Collective</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Front Page</a></li>
+      <li><a href="../apps/">The Classifieds</a></li>
+      <li><a href="./" class="active">Downloads</a></li>
+      <li><a href="../support/">Support</a></li>
+      <li><a href="../request/">Hire Me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="masthead masthead-branded">
+  <div class="masthead-top-rule"></div>
+  <div class="masthead-edition">
+    <span>Section D</span>
+    <span class="edition-center">Downloads</span>
+    <span>Android · APK</span>
+  </div>
+  <h1 class="unstyled page-title">The MBC App Store</h1>
+  <p class="masthead-tagline">Sideload, install, and update — all my apps from one newsstand</p>
+  <div class="masthead-bottom-rule"></div>
+</header>
+
+<main class="content">
+
+<p class="breadcrumb"><a href="../index.html">Front Page</a> / Downloads</p>
+
+<section class="download-hero prose">
+  <p class="drop-cap">This is the download desk. Every app I ship under the Markk Brandon Collective lives here when an Android APK is ready — one place to grab the latest build, reinstall after a reset, or check if something new dropped. No Play Store gatekeeping. Download the APK, install it, and come back here when I push an update.</p>
+  <p>APK listings are pulled live from each app's own deployment when you load this page (or hit <strong>Refresh listings</strong>). If an app only shows “Web only,” the Android package isn't published yet — use the web app link until it lands.</p>
+</section>
+
+<div class="cta-strip compact">
+  <button class="btn btn-primary" type="button" id="download-refresh">Refresh listings</button>
+  <a class="btn" href="../apps/">The Classifieds</a>
+</div>
+
+<p id="download-stamp" class="download-stamp mono">Checking listings…</p>
+
+<div id="download-grid" class="classified-grid download-grid">
+  <p class="dl-loading">Checking the wire for latest APK listings…</p>
+</div>
+
+<section class="section install-guide">
+  <div class="section-head">
+    <p class="kicker">How to install</p>
+    <h2>Android sideload · 60 seconds</h2>
+  </div>
+  <ol class="steps-list">
+    <li><strong>Download the APK</strong> from the card above (tap Download APK).</li>
+    <li><strong>Allow installs</strong> — Android may ask you to allow installs from your browser or Files app (Settings → Security → Install unknown apps).</li>
+    <li><strong>Open the file</strong> from your notification shade or Downloads folder and tap Install.</li>
+    <li><strong>Update later</strong> — come back here, hit Refresh listings, and download the newest APK. Install over the old one to update.</li>
+  </ol>
+  <p class="install-footnote">These are my own apps, signed and hosted on each project's deployment. If your phone warns about an unknown source, that's normal for sideloading outside the Play Store — only install apps you trust.</p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <a class="footer-brand" href="../index.html" aria-label="The Markk Brandon Collective">
+    <p class="footer-masthead">The Markk Brandon Collective</p>
+    <p class="footer-masthead-sub">All the projects fit to ship</p>
+  </a>
+  <nav class="footer-nav">
+    <a href="../index.html">Front Page</a>
+    <a href="../apps/">The Classifieds</a>
+    <a href="../download/">Downloads</a>
+    <a href="../support/">Support</a>
+    <a href="../request/">Hire Me</a>
+  </nav>
+  <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
+  <p>All Rights Reserved · Built with care by <strong>StickzCoder.Lua</strong></p>
+  <p class="site-version">MBC v1.4.0</p>
+</footer>
+
+</div>
+<script src="../js/pwa.js"></script>
+<script src="../js/downloads.js"></script>
+</body>
+</html>

@@ -1438,3 +1438,76 @@ tr:nth-child(even) td{background:var(--grey-100)}
   .form-grid-2{grid-template-columns:1fr}
   .cta-strip .btn{flex:1 1 auto;text-align:center}
 }
+
+/* —— Downloads / App Store —— */
+.download-hero{max-width:720px;margin:0 auto 1.25rem}
+.download-stamp{
+  text-align:center;
+  margin:0 0 1.25rem;
+  color:var(--grey-500);
+}
+.download-grid{margin-bottom:2rem}
+.dl-card .dl-meta{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.62rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--grey-500);
+  margin-bottom:.55rem;
+  font-weight:600;
+}
+.dl-card .dl-notes{
+  font-size:.82rem;
+  color:var(--ink-soft);
+  margin-bottom:.65rem;
+  line-height:1.5;
+}
+.dl-card .dl-sha{
+  font-size:.58rem;
+  color:var(--grey-400);
+  margin-bottom:.5rem;
+  word-break:break-all;
+}
+.dl-loading{
+  grid-column:1 / -1;
+  text-align:center;
+  font-style:italic;
+  color:var(--grey-500);
+  padding:2rem 1rem;
+}
+.dl-archives{
+  margin-top:.75rem;
+  font-size:.78rem;
+}
+.dl-archives summary{
+  cursor:pointer;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.62rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--grey-500);
+  font-weight:600;
+}
+.dl-archives ul{
+  list-style:none;
+  margin-top:.45rem;
+}
+.dl-archives li{margin-bottom:.25rem}
+.dl-archives a{font-size:.8rem}
+.dl-size{color:var(--grey-400);font-style:normal}
+.install-guide .steps-list{
+  max-width:640px;
+  margin:0 auto 1rem;
+  padding-left:1.25rem;
+}
+.install-guide .steps-list li{margin-bottom:.65rem;font-size:.92rem;color:var(--ink-soft)}
+.install-footnote{
+  margin-top:1rem;
+  font-size:.82rem;
+  color:var(--grey-500);
+  font-style:italic;
+  text-align:center;
+  max-width:640px;
+  margin-left:auto;
+  margin-right:auto;
+}

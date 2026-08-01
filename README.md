@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.3.7** (see [`version.json`](version.json))
+**Version:** **v1.4.0** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -18,6 +18,7 @@ This newspaper site ships on **GitHub Pages** only. The old Vercel project for t
 |------|-----|-------------|
 | **Front Page** | `/` | Who I am, why I build, AI note, CTAs |
 | **The Classifieds** | `/apps/` | Free apps first; Guardr & SSS in a separate security lane |
+| **Downloads** | `/download/` | Android APK app store — sideload & update MBC apps |
 | **Support** | `/support/` | GoFundMe — keep free apps online |
 | **Hire Me** | `/request/` | Request a website/app build + budget range |
 

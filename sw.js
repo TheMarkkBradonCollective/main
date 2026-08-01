@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mbc-v1-3-7';
+const CACHE_NAME = 'mbc-v1-4-0';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -8,6 +8,9 @@ const PRECACHE_URLS = [
   './support/index.html',
   './request/',
   './request/index.html',
+  './download/',
+  './download/index.html',
+  './apk-catalog.json',
   './css/style.css',
   './manifest.webmanifest',
   './version.json',
@@ -27,6 +30,7 @@ const PRECACHE_URLS = [
   './icons/apps/guardr.png',
   './icons/apps/sss.png',
   './js/pwa.js',
+  './js/downloads.js',
   './js/version.js',
 ];
 

@@ -397,12 +397,44 @@ a:hover{color:var(--grey-500)}
 .bio-with-portrait .bio-portrait-link,
 .bio-with-portrait > .bio-portrait{
   grid-column:1;
-  grid-row:1 / span 3;
+  grid-row:1 / 4;
   float:none;
   margin:0;
   max-width:none;
   width:100%;
-  align-self:start;
+  align-self:stretch;
+  min-height:0;
+}
+
+@media(min-width:768px){
+  .bio-with-portrait .bio-portrait-link,
+  .bio-with-portrait > .bio-portrait{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .bio-with-portrait .bio-portrait-link .bio-portrait,
+  .bio-with-portrait > .bio-portrait{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+  }
+
+  .bio-with-portrait .bio-portrait img{
+    flex:1 1 auto;
+    width:100%;
+    height:100%;
+    min-height:0;
+    aspect-ratio:unset;
+    object-fit:cover;
+    object-position:center 20%;
+  }
+
+  .bio-with-portrait .bio-portrait figcaption{
+    flex:0 0 auto;
+    margin-top:.4rem;
+  }
 }
 
 .bio-with-portrait .name{grid-column:2;grid-row:1}

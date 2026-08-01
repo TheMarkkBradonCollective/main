@@ -6,6 +6,7 @@
     "url": "https://signaturesecurityspecialist.com",
     "section": "security",
     "github": "https://github.com/TheMarkkBradonCollective/SSS",
+    "githubPrivate": false,
     "iconSources": [
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
@@ -17,7 +18,8 @@
     "tagline": "Independent Security Marketplace",
     "url": "https://guardr.co",
     "section": "security",
-    "github": null,
+    "github": "https://github.com/TheMarkkBradonCollective/Guardr",
+    "githubPrivate": true,
     "iconSources": [
       "https://www.guardr.co/logo.png",
       "https://www.guardr.co/icon-512.png",
@@ -31,7 +33,8 @@
     "tagline": "Give Freely. Ask Kindly.",
     "url": "https://sacramentobuynothing-tmbc.vercel.app",
     "section": "community",
-    "github": null,
+    "github": "https://github.com/TheMarkkBradonCollective/SacramentoBuyNothing",
+    "githubPrivate": true,
     "iconSources": [
       "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg",
       "https://sacramentobuynothing.com/Logo.jpeg"
@@ -44,6 +47,7 @@
     "url": "https://strainverse-tmbc.vercel.app",
     "section": "lifestyle",
     "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
+    "githubPrivate": false,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png",
       "https://strainverse-tmbc.vercel.app/pwa-512.png"
@@ -56,6 +60,7 @@
     "url": "https://spiritsverse-tmbc.vercel.app",
     "section": "lifestyle",
     "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
+    "githubPrivate": false,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png",
       "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
@@ -67,7 +72,8 @@
     "tagline": "The Social Table",
     "url": "https://cookverse-tmbc.vercel.app",
     "section": "lifestyle",
-    "github": null,
+    "github": "https://github.com/TheMarkkBradonCollective/Cookverse",
+    "githubPrivate": true,
     "iconSources": [
       "https://cookverse-tmbc.vercel.app/logo-mark.png",
       "https://cookverse-tmbc.vercel.app/logo.png",
@@ -80,7 +86,8 @@
     "tagline": "Consent-First Social Connection",
     "url": "https://friendr-tmbc.vercel.app",
     "section": "social",
-    "github": null,
+    "github": "https://github.com/TheMarkkBradonCollective/Friendr",
+    "githubPrivate": true,
     "iconSources": [
       "https://friendr-tmbc.vercel.app/icons/icon-512.png",
       "https://friendr-tmbc.vercel.app/brand/mark.png"
@@ -92,7 +99,8 @@
     "tagline": "Location sharing for your people",
     "url": "https://findr-tmbc.vercel.app",
     "section": "social",
-    "github": null,
+    "github": "https://github.com/TheMarkkBradonCollective/Findr",
+    "githubPrivate": true,
     "iconSources": [
       "https://findr-tmbc.vercel.app/logo.png",
       "https://findr-tmbc.vercel.app/icons/icon-192.png"
@@ -104,7 +112,8 @@
     "tagline": "Secure Private Chat",
     "url": "https://chatr-tmbc.vercel.app",
     "section": "social",
-    "github": null,
+    "github": "https://github.com/TheMarkkBradonCollective/Chatr",
+    "githubPrivate": true,
     "iconSources": [
       "https://chatr-tmbc.vercel.app/icon.png",
       "https://chatr-tmbc.vercel.app/apple-touch-icon.png"

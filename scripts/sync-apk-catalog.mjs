@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 /**
  * Discover Android APKs for each app in My-Projects.json.
- * Reads version.json manifests, probes common APK paths on live hosts,
- * and scans linked GitHub repos (release/, android-app/, etc.).
+ * Reads version.json manifests, probes live hosts, and scans GitHub repos.
+ * Private repos require GITHUB_TOKEN (or GH_TOKEN / gh auth token) — APKs are
+ * mirrored to apks/{slug}/ on this site so downloads stay public.
  */
+import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const catalogPath = join(root, 'My-Projects.json');
-
-const GITHUB_SCAN_DIRS = ['release', 'android-app', 'apk', 'downloads', 'dist', 'public'];
+const apkMirrorRoot = join(root, 'apks');
 
 function normalizeBase(url) {
   let base = url.replace(/\/$/, '');
@@ -54,9 +56,31 @@ function compareVersions(a, b) {
   return 0;
 }
 
-async function isRealApk(url) {
+function getGithubToken() {
+  const fromEnv = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (fromEnv) return fromEnv;
   try {
-    const res = await fetch(url, { method: 'HEAD', redirect: 'follow' });
+    return execSync('gh auth token', { encoding: 'utf8' }).trim();
+  } catch {
+    return null;
+  }
+}
+
+const githubToken = getGithubToken();
+
+function githubHeaders(extra = {}) {
+  const headers = {
+    Accept: 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    ...extra,
+  };
+  if (githubToken) headers.Authorization = `Bearer ${githubToken}`;
+  return headers;
+}
+
+async function isRealApk(url, headers = {}) {
+  try {
+    const res = await fetch(url, { method: 'HEAD', redirect: 'follow', headers });
     if (!res.ok) return false;
     const ct = (res.headers.get('content-type') || '').toLowerCase();
     const len = Number(res.headers.get('content-length') || 0);
@@ -85,7 +109,6 @@ async function fetchVersionManifest(base) {
 function apkFromManifest(base, manifest) {
   const apk = manifest?.apk;
   if (!apk) return null;
-
   if (apk.ready === false) return null;
 
   const url = resolveUrl(base, apk.url || apk.downloadUrl);
@@ -155,17 +178,21 @@ async function probeCandidates(base, slug, manifest) {
   return null;
 }
 
-async function fetchGithubDefaultBranch(owner, repo) {
+async function fetchRepoMeta(owner, repo) {
   try {
     const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
-      headers: { Accept: 'application/vnd.github+json' },
+      headers: githubHeaders(),
     });
-    if (!res.ok) return 'main';
-    const data = await res.json();
-    return data.default_branch || 'main';
+    if (!res.ok) return null;
+    return await res.json();
   } catch {
-    return 'main';
+    return null;
   }
+}
+
+async function fetchGithubDefaultBranch(owner, repo) {
+  const meta = await fetchRepoMeta(owner, repo);
+  return meta?.default_branch || 'main';
 }
 
 async function fetchGithubApkTree(owner, repo) {
@@ -176,7 +203,7 @@ async function fetchGithubApkTree(owner, repo) {
     try {
       const res = await fetch(
         `https://api.github.com/repos/${owner}/${repo}/git/trees/${ref}?recursive=1`,
-        { headers: { Accept: 'application/vnd.github+json' } }
+        { headers: githubHeaders() }
       );
       if (!res.ok) continue;
       const data = await res.json();
@@ -219,53 +246,127 @@ function pickBestGithubApk(apks) {
   })[0];
 }
 
+async function downloadGithubApk(owner, repo, entry) {
+  const encodedPath = entry.path.split('/').map(encodeURIComponent).join('/');
+  const metaRes = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${encodedPath}?ref=${entry.branch}`,
+    { headers: githubHeaders() }
+  );
+  if (!metaRes.ok) {
+    throw new Error(`GitHub contents API ${metaRes.status} for ${owner}/${repo}/${entry.path}`);
+  }
+
+  const meta = await metaRes.json();
+  let buffer;
+
+  if (meta.content && meta.encoding === 'base64') {
+    buffer = Buffer.from(meta.content, 'base64');
+  } else if (meta.download_url) {
+    const dlRes = await fetch(meta.download_url, { headers: githubHeaders() });
+    if (!dlRes.ok) throw new Error(`GitHub download ${dlRes.status} for ${entry.path}`);
+    buffer = Buffer.from(await dlRes.arrayBuffer());
+  } else {
+    throw new Error(`No downloadable content for ${owner}/${repo}/${entry.path}`);
+  }
+
+  if (buffer.length < 50_000) {
+    throw new Error(`APK too small (${buffer.length} bytes) for ${entry.path}`);
+  }
+
+  return buffer;
+}
+
+async function mirrorApk(slug, fileName, buffer) {
+  const dir = join(apkMirrorRoot, slug);
+  await mkdir(dir, { recursive: true });
+  const dest = join(dir, fileName);
+  await writeFile(dest, buffer);
+  const sha256 = createHash('sha256').update(buffer).digest('hex');
+  return {
+    downloadUrl: `apks/${slug}/${fileName}`,
+    downloadName: fileName,
+    fileSize: buffer.length,
+    sha256,
+  };
+}
+
+async function resolveGithubDownload(app, owner, repo, entry, isPrivate) {
+  const fileName = entry.path.split('/').pop();
+  const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${entry.branch}/${entry.path}`;
+
+  if (!isPrivate && (await isRealApk(rawUrl))) {
+    return {
+      downloadUrl: rawUrl,
+      downloadName: fileName,
+      fileSize: entry.size ?? null,
+      sha256: null,
+    };
+  }
+
+  if (!githubToken) {
+    if (isPrivate) {
+      console.warn(`\n  ⚠ ${app.slug}: private repo ${owner}/${repo} — set GITHUB_TOKEN to mirror APK`);
+    }
+    return null;
+  }
+
+  const buffer = await downloadGithubApk(owner, repo, entry);
+  const mirrored = await mirrorApk(app.slug, fileName, buffer);
+  return mirrored;
+}
+
 async function discoverGithubApk(app) {
-  const repoInfo = parseGithubRepo(app.github);
+  const repoUrl = app.apkGithub || app.github;
+  const repoInfo = parseGithubRepo(repoUrl);
   if (!repoInfo) return null;
 
   const { owner, repo } = repoInfo;
+  const meta = await fetchRepoMeta(owner, repo);
+  if (!meta && !githubToken) return null;
+  const isPrivate = meta?.private === true || app.githubPrivate === true;
+
   const apks = await fetchGithubApkTree(owner, repo);
   const best = pickBestGithubApk(apks);
   if (!best) return null;
 
-  const downloadUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${best.branch}/${best.path}`;
-  if (!(await isRealApk(downloadUrl))) return null;
+  const primary = await resolveGithubDownload(app, owner, repo, best, isPrivate);
+  if (!primary) return null;
 
   const fileName = best.path.split('/').pop();
   const version = parseVersionFromFilename(fileName);
+  const source = primary.downloadUrl.startsWith('apks/') ? 'github-mirror' : 'github';
 
-  const archives = apks
-    .filter((entry) => entry.path !== best.path)
-    .sort((a, b) =>
-      compareVersions(
-        parseVersionFromFilename(b.path.split('/').pop()),
-        parseVersionFromFilename(a.path.split('/').pop())
-      )
-    )
-    .map((entry) => {
-      const name = entry.path.split('/').pop();
-      return {
-        label: name.replace(/\.apk$/i, ''),
-        version: parseVersionFromFilename(name),
-        versionCode: null,
-        downloadUrl: `https://raw.githubusercontent.com/${owner}/${repo}/${entry.branch}/${entry.path}`,
-        downloadName: name,
-        fileSize: entry.size ?? null,
-        sha256: null,
-        releaseNotes: null,
-      };
+  const archives = [];
+  for (const entry of apks.filter((item) => item.path !== best.path)) {
+    const name = entry.path.split('/').pop();
+    const archived = await resolveGithubDownload(app, owner, repo, entry, isPrivate);
+    if (!archived) continue;
+    archives.push({
+      label: name.replace(/\.apk$/i, ''),
+      version: parseVersionFromFilename(name),
+      versionCode: null,
+      downloadUrl: archived.downloadUrl,
+      downloadName: archived.downloadName,
+      fileSize: archived.fileSize ?? entry.size ?? null,
+      sha256: archived.sha256 ?? null,
+      releaseNotes: null,
     });
+  }
+
+  archives.sort((a, b) => compareVersions(b.version, a.version));
 
   return {
     version,
     versionCode: null,
-    downloadUrl,
-    downloadName: fileName,
-    fileSize: best.size ?? null,
-    sha256: null,
-    releaseNotes: version ? `Android APK from ${owner}/${repo} (v${version})` : `Android APK from ${owner}/${repo}`,
+    downloadUrl: primary.downloadUrl,
+    downloadName: primary.downloadName,
+    fileSize: primary.fileSize ?? best.size ?? null,
+    sha256: primary.sha256 ?? null,
+    releaseNotes: version
+      ? `Android APK from ${owner}/${repo} (v${version})`
+      : `Android APK from ${owner}/${repo}`,
     packageId: null,
-    source: 'github',
+    source,
     archives,
   };
 }
@@ -283,7 +384,7 @@ async function discoverApp(app) {
     android = await probeCandidates(base, app.slug, manifest);
   }
 
-  if (!android && app.github) {
+  if (!android && (app.github || app.apkGithub)) {
     android = await discoverGithubApk(app);
   }
 
@@ -308,7 +409,12 @@ async function discoverApp(app) {
 }
 
 const apps = JSON.parse(await readFile(catalogPath, 'utf8'));
-console.log(`\nSyncing APK catalog for ${apps.length} apps…\n`);
+console.log(`\nSyncing APK catalog for ${apps.length} apps…`);
+if (githubToken) {
+  console.log('GitHub token found — private repos can be scanned and mirrored.\n');
+} else {
+  console.log('No GITHUB_TOKEN — only public repos and live deployments.\n');
+}
 
 const results = [];
 for (const app of apps) {

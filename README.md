@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.4.7** (see [`version.json`](version.json))
+**Version:** **v1.4.8** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -50,6 +50,25 @@ Canonical live links + icon sources for every listed app live in [`My-Projects.j
 ```bash
 npm run sync-app-icons
 ```
+
+### Private repo APKs
+
+Several apps live in **private** GitHub repos. The sync script can discover APKs in `release/`, `android-app/`, etc. and **mirror** them to `apks/{slug}/` on this site so the App Market stays publicly downloadable.
+
+1. Add or fix each app's `github` URL in [`My-Projects.json`](My-Projects.json) (set `"githubPrivate": true` when needed).
+2. Export a GitHub token with `repo` scope:
+   ```bash
+   export GITHUB_TOKEN=ghp_your_token_here
+   # or: export GITHUB_TOKEN=$(gh auth token)
+   ```
+3. Run:
+   ```bash
+   npm run sync-apk-catalog
+   # or
+   npm run update
+   ```
+
+Mirrored APKs are committed under `apks/` (see `.gitignore` exception). Live deployments with `version.json` `apk.ready` still take priority when available.
 
 ## Brand logo
 

@@ -6,6 +6,12 @@
     return new URL(path.replace(/^\//, ''), ROOT).href;
   }
 
+  function downloadHref(url) {
+    if (!url) return '#';
+    if (url.startsWith('http://') || url.startsWith('https://')) return url;
+    return asset(url);
+  }
+
   function formatBytes(bytes) {
     if (!bytes || Number.isNaN(bytes)) return null;
     if (bytes < 1024) return `${bytes} B`;
@@ -27,7 +33,7 @@
     const size = formatBytes(archive.fileSize);
     return `
       <li>
-        <a href="${archive.downloadUrl}" download="${archive.downloadName || ''}" rel="noopener">
+        <a href="${downloadHref(archive.downloadUrl)}" download="${archive.downloadName || ''}" rel="noopener">
           ${archive.label || archive.version || 'Archive'}
           ${size ? ` <span class="dl-size">(${size})</span>` : ''}
         </a>
@@ -61,7 +67,7 @@
 
     const actions = isAvailable
       ? `<div class="ad-links">
-          <a class="btn btn-primary" href="${android.downloadUrl}" download="${android.downloadName || ''}" rel="noopener">Download APK</a>
+          <a class="btn btn-primary" href="${downloadHref(android.downloadUrl)}" download="${android.downloadName || ''}" rel="noopener">Download APK</a>
           <a class="btn" href="${app.webUrl}" target="_blank" rel="noopener">Open in Browser</a>
         </div>`
       : `<div class="ad-links">

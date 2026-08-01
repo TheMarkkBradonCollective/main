@@ -8,7 +8,7 @@
   "navigationColorDark": "#121212",
   "backgroundColor": "#f7f7f5",
   "enableNotifications": false,
-  "startUrl": "/",
+  "startUrl": "/main/",
   "iconUrl": "../icons/icon-512.png",
   "maskableIconUrl": "../icons/icon-512.png",
   "splashScreenFadeOutDuration": 300,
@@ -16,11 +16,11 @@
     "path": "./android.keystore",
     "alias": "mbc"
   },
-  "appVersionName": "1.4.2",
-  "appVersionCode": 142,
+  "appVersionName": "1.4.3",
+  "appVersionCode": 143,
   "shortcuts": [],
   "generatorApp": "mbc-update",
-  "webManifestUrl": "/manifest.webmanifest",
+  "webManifestUrl": "/main/manifest.webmanifest",
   "fallbackType": "customtabs",
   "features": {}
 }

@@ -385,6 +385,31 @@ a:hover{color:var(--grey-500)}
 
 .bio-card{border-top:3px solid var(--ink);padding:1.25rem 0 0;background:transparent}
 
+.bio-with-portrait .bio-portrait-link,
+.bio-with-portrait > .bio-portrait{
+  float:left;
+  margin:0 1.35rem 1rem 0;
+  max-width:min(240px,42%);
+}
+
+.bio-with-portrait .bio-portrait{
+  margin:0;
+  max-width:none;
+}
+
+.bio-with-portrait .bio-timeline{clear:both}
+
+@media(max-width:520px){
+  .bio-with-portrait .bio-portrait-link,
+  .bio-with-portrait > .bio-portrait{
+    float:none;
+    max-width:200px;
+    margin:0 auto 1rem;
+  }
+
+  .bio-with-portrait .bio-portrait-link{display:block}
+}
+
 .bio-portrait{
   margin:0 0 1rem;
   max-width:220px;
@@ -400,9 +425,9 @@ a:hover{color:var(--grey-500)}
 
 .bio-portrait img{
   width:100%;
-  aspect-ratio:3/4;
+  aspect-ratio:4/3;
   object-fit:cover;
-  object-position:center top;
+  object-position:center 20%;
   display:block;
   border:1px solid var(--rule);
   background:var(--grey-100);
@@ -417,16 +442,13 @@ a:hover{color:var(--grey-500)}
 }
 
 .about-hero{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:1.5rem 2rem;
   margin-bottom:2rem;
   border-top:3px solid var(--ink);
   padding-top:1.25rem;
 }
 
-@media(min-width:768px){
-  .about-hero{grid-template-columns:minmax(200px,260px) 1fr;align-items:start}
+.about-hero .about-body{
+  min-width:0;
 }
 
 .about-body .name{

@@ -19,9 +19,10 @@
     "section": "security",
     "github": null,
     "iconSources": [
+      "https://www.guardr.co/logo.png",
+      "https://www.guardr.co/icon-512.png",
       "https://guardr.co/logo.png",
-      "https://guardr.co/icon-512.png",
-      "https://guardr.co/apple-touch-icon.png"
+      "https://guardr.co/icon-512.png"
     ]
   },
   {

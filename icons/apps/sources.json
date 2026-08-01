@@ -7,6 +7,13 @@
     "file": "icons/apps/sss.png"
   },
   {
+    "slug": "guardr",
+    "name": "Guardr",
+    "projectUrl": "https://guardr.co",
+    "source": "https://www.guardr.co/logo.png",
+    "file": "icons/apps/guardr.png"
+  },
+  {
     "slug": "buynothing",
     "name": "Sacramento Buy Nothing",
     "projectUrl": "https://sacramentobuynothing-tmbc.vercel.app",

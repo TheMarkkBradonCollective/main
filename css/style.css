@@ -413,7 +413,8 @@ a:hover{color:var(--grey-500)}
   min-width:0;
 }
 
-.bio-with-portrait .bio-timeline{
+.bio-with-portrait .bio-timeline,
+.bio-with-portrait .ai-note{
   grid-column:1 / -1;
   clear:both;
 }
@@ -1358,24 +1359,22 @@ tr:nth-child(even) td{background:var(--grey-100)}
   font-style:italic;
 }
 
-/* —— Showcase / voice update —— */
+/* —— Real talk / voice —— */
 .ai-note{
-  border:2px solid var(--rule);
-  background:linear-gradient(180deg,var(--paper-bright),var(--grey-100));
-  padding:1.25rem 1.35rem 1.35rem;
-  margin:0 0 1.75rem;
+  border-top:1px solid var(--rule-light);
+  padding-top:1.25rem;
+  margin-top:1.25rem;
 }
 .ai-note-label{
-  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size:.62rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
+  font-family:var(--serif-display);
+  font-size:1.05rem;
   font-weight:700;
-  margin-bottom:.55rem;
-  color:var(--grey-500);
+  font-style:italic;
+  margin-bottom:.75rem;
+  color:var(--ink);
 }
 .ai-note p{
-  font-size:.95rem;
+  font-size:inherit;
   color:var(--ink-soft);
   line-height:1.65;
   text-align:left;

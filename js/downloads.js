@@ -1,6 +1,7 @@
 (function () {
   const SCRIPT = document.currentScript;
   const ROOT = SCRIPT ? new URL('../', SCRIPT.src) : new URL('./', window.location.href);
+  const SORT_KEY = 'mbc-download-sort';
 
   function asset(path) {
     return new URL(path.replace(/^\//, ''), ROOT).href;
@@ -31,9 +32,51 @@
     'sss',
   ];
 
-  function sortApps(apps) {
-    const rank = Object.fromEntries(MARKET_ORDER.map((slug, index) => [slug, index]));
-    return [...apps].sort((a, b) => (rank[a.slug] ?? 999) - (rank[b.slug] ?? 999));
+  const SECTION_ORDER = ['community', 'lifestyle', 'social', 'security'];
+
+  function compareVersions(a, b) {
+    const pa = String(a || '0').split('.').map(Number);
+    const pb = String(b || '0').split('.').map(Number);
+    const len = Math.max(pa.length, pb.length);
+    for (let i = 0; i < len; i++) {
+      const diff = (pa[i] || 0) - (pb[i] || 0);
+      if (diff !== 0) return diff;
+    }
+    return 0;
+  }
+
+  function sortApps(apps, mode) {
+    const list = [...apps];
+    const marketRank = Object.fromEntries(MARKET_ORDER.map((slug, index) => [slug, index]));
+    const sectionRank = Object.fromEntries(SECTION_ORDER.map((section, index) => [section, index]));
+
+    switch (mode) {
+      case 'name':
+        return list.sort((a, b) => a.name.localeCompare(b.name));
+      case 'available':
+        return list.sort((a, b) => {
+          const aReady = a.android?.status === 'available' ? 0 : 1;
+          const bReady = b.android?.status === 'available' ? 0 : 1;
+          if (aReady !== bReady) return aReady - bReady;
+          return (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999);
+        });
+      case 'section':
+        return list.sort((a, b) => {
+          const sectionDiff =
+            (sectionRank[a.section] ?? 999) - (sectionRank[b.section] ?? 999);
+          if (sectionDiff !== 0) return sectionDiff;
+          return a.name.localeCompare(b.name);
+        });
+      case 'version':
+        return list.sort((a, b) => {
+          const versionDiff = compareVersions(b.android?.version, a.android?.version);
+          if (versionDiff !== 0) return versionDiff;
+          return a.name.localeCompare(b.name);
+        });
+      case 'site':
+      default:
+        return list.sort((a, b) => (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999));
+    }
   }
 
   function sectionLabel(section) {
@@ -111,12 +154,21 @@
       </article>`;
   }
 
+  let currentCatalog = null;
+
+  function getSortMode() {
+    const select = document.getElementById('download-sort');
+    return select?.value || 'site';
+  }
+
   function renderCatalog(catalog) {
     const grid = document.getElementById('download-grid');
     const stamp = document.getElementById('download-stamp');
     if (!grid) return;
 
-    const apps = sortApps(catalog.apps || []);
+    currentCatalog = catalog;
+    const mode = getSortMode();
+    const apps = sortApps(catalog.apps || [], mode);
     const available = apps.filter((a) => a.android?.status === 'available').length;
 
     grid.innerHTML = apps.map(renderCard).join('');
@@ -146,10 +198,34 @@
     }
   }
 
+  function initSort() {
+    const select = document.getElementById('download-sort');
+    if (!select) return;
+
+    try {
+      const saved = localStorage.getItem(SORT_KEY);
+      if (saved && [...select.options].some((opt) => opt.value === saved)) {
+        select.value = saved;
+      }
+    } catch {
+      /* ignore */
+    }
+
+    select.addEventListener('change', () => {
+      try {
+        localStorage.setItem(SORT_KEY, select.value);
+      } catch {
+        /* ignore */
+      }
+      if (currentCatalog) renderCatalog(currentCatalog);
+    });
+  }
+
   document.getElementById('download-refresh')?.addEventListener('click', (e) => {
     e.preventDefault();
     loadCatalog();
   });
 
+  initSort();
   loadCatalog();
 })();

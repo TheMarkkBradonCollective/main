@@ -385,28 +385,59 @@ a:hover{color:var(--grey-500)}
 
 .bio-card{border-top:3px solid var(--ink);padding:1.25rem 0 0;background:transparent}
 
+/* Portrait + bio: grid wrap on wide screens, full-bleed banner on thin */
+.bio-with-portrait{
+  display:grid;
+  grid-template-columns:minmax(160px,240px) minmax(0,1fr);
+  column-gap:1.35rem;
+  row-gap:0;
+  align-items:start;
+}
+
 .bio-with-portrait .bio-portrait-link,
 .bio-with-portrait > .bio-portrait{
-  float:left;
-  margin:0 1.35rem 1rem 0;
-  max-width:min(240px,42%);
+  grid-column:1;
+  grid-row:1 / span 3;
+  float:none;
+  margin:0;
+  max-width:none;
+  width:100%;
+  align-self:start;
+}
+
+.bio-with-portrait .name{grid-column:2;grid-row:1}
+.bio-with-portrait .aliases{grid-column:2;grid-row:2;margin-bottom:1rem}
+.bio-with-portrait .prose{
+  grid-column:2;
+  grid-row:3;
+  min-width:0;
+}
+
+.bio-with-portrait .bio-timeline{
+  grid-column:1 / -1;
+  clear:both;
 }
 
 .bio-with-portrait .bio-portrait{
   margin:0;
   max-width:none;
+  width:100%;
 }
 
-.bio-with-portrait .bio-timeline{clear:both}
+@media(max-width:767px){
+  .bio-with-portrait{
+    display:block;
+    --bio-bleed:1.5rem;
+  }
 
-@media(max-width:600px){
   .bio-with-portrait .bio-portrait-link,
   .bio-with-portrait > .bio-portrait{
-    float:none;
     display:block;
-    width:100vw;
-    max-width:100vw;
-    margin:0 calc(50% - 50vw) 1rem;
+    grid-row:auto;
+    grid-column:auto;
+    width:calc(100% + (var(--bio-bleed) * 2));
+    max-width:none;
+    margin:0 calc(-1 * var(--bio-bleed)) 1rem;
   }
 
   .bio-with-portrait .bio-portrait img{
@@ -419,7 +450,7 @@ a:hover{color:var(--grey-500)}
 
   .bio-with-portrait .bio-portrait figcaption{
     text-align:center;
-    padding:0 1.25rem;
+    padding:0 var(--bio-bleed);
   }
 }
 

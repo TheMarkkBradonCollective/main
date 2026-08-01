@@ -399,15 +399,28 @@ a:hover{color:var(--grey-500)}
 
 .bio-with-portrait .bio-timeline{clear:both}
 
-@media(max-width:520px){
+@media(max-width:600px){
   .bio-with-portrait .bio-portrait-link,
   .bio-with-portrait > .bio-portrait{
     float:none;
-    max-width:200px;
-    margin:0 auto 1rem;
+    display:block;
+    width:100vw;
+    max-width:100vw;
+    margin:0 calc(50% - 50vw) 1rem;
   }
 
-  .bio-with-portrait .bio-portrait-link{display:block}
+  .bio-with-portrait .bio-portrait img{
+    width:100%;
+    aspect-ratio:16/10;
+    object-position:center 22%;
+    border-left:none;
+    border-right:none;
+  }
+
+  .bio-with-portrait .bio-portrait figcaption{
+    text-align:center;
+    padding:0 1.25rem;
+  }
 }
 
 .bio-portrait{

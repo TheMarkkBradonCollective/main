@@ -412,6 +412,54 @@ a:hover{color:var(--grey-500)}
 .bio-sidebar li{margin-bottom:.35rem;padding-left:.65rem;position:relative;line-height:1.45}
 .bio-sidebar li::before{content:"·";position:absolute;left:0;font-weight:700}
 
+.bio-timeline{
+  margin-top:1.25rem;
+  border-top:1px solid var(--rule-light);
+  padding-top:1rem;
+}
+
+.bio-timeline-toggle{
+  list-style:none;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.62rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--ink);
+  border:1px solid var(--ink);
+  padding:.45rem .75rem;
+  background:transparent;
+  transition:background .15s,color .15s;
+  user-select:none;
+}
+
+.bio-timeline-toggle:hover{background:var(--ink);color:var(--paper)}
+.bio-timeline-toggle::-webkit-details-marker{display:none}
+.bio-timeline[open] .label-show{display:none}
+.bio-timeline:not([open]) .label-hide{display:none}
+
+.bio-timeline-panel{
+  margin-top:1rem;
+  padding-top:.25rem;
+}
+
+.bio-timeline-intro{
+  font-size:.85rem;
+  color:var(--grey-500);
+  font-style:italic;
+  margin-bottom:.85rem;
+}
+
+.bio-timeline .timeline li{
+  font-size:.88rem;
+  color:var(--ink-soft);
+  line-height:1.55;
+}
+
 .front-grid{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--rule);padding-top:1.25rem}
 
 @media(min-width:800px){

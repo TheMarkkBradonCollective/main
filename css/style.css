@@ -1495,6 +1495,19 @@ tr:nth-child(even) td{background:var(--grey-100)}
 .dl-archives li{margin-bottom:.25rem}
 .dl-archives a{font-size:.8rem}
 .dl-size{color:var(--grey-400);font-style:normal}
+.btn-soon{
+  display:inline-block;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.62rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-weight:600;
+  padding:.55rem .9rem;
+  border:1px dashed var(--grey-300);
+  color:var(--grey-500);
+  cursor:default;
+  user-select:none;
+}
 .install-guide .steps-list{
   max-width:640px;
   margin:0 auto 1rem;

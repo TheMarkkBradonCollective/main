@@ -39,14 +39,17 @@
     const isAvailable = android.status === 'available';
     const versionLine = isAvailable
       ? `Android v${android.version || '?'}${android.versionCode ? ` · build ${android.versionCode}` : ''}`
-      : android.status === 'web-only'
-        ? 'Web only — APK coming soon'
-        : 'Status unavailable';
+      : app.webVersion
+        ? `Coming soon · web v${app.webVersion}`
+        : 'Coming soon';
 
     const size = formatBytes(android.fileSize);
-    const notes = android.releaseNotes
-      ? `<p class="dl-notes">${android.releaseNotes}</p>`
-      : '';
+    const notes =
+      isAvailable && android.releaseNotes
+        ? `<p class="dl-notes">${android.releaseNotes}</p>`
+        : !isAvailable
+          ? `<p class="dl-notes">Android APK not published yet — use the browser version for now.</p>`
+          : '';
 
     const archives =
       isAvailable && android.archives?.length
@@ -59,10 +62,11 @@
     const actions = isAvailable
       ? `<div class="ad-links">
           <a class="btn btn-primary" href="${android.downloadUrl}" download="${android.downloadName || ''}" rel="noopener">Download APK</a>
-          <a class="btn" href="${app.webUrl}" target="_blank" rel="noopener">Open Web App</a>
+          <a class="btn" href="${app.webUrl}" target="_blank" rel="noopener">Open in Browser</a>
         </div>`
       : `<div class="ad-links">
-          <a class="btn btn-primary" href="${app.webUrl}" target="_blank" rel="noopener">Use Web App</a>
+          <span class="btn btn-soon" aria-disabled="true">Coming Soon</span>
+          <a class="btn btn-primary" href="${app.webUrl}" target="_blank" rel="noopener">Open in Browser</a>
         </div>`;
 
     const sha = android.sha256
@@ -75,10 +79,10 @@
         <img class="ad-thumb" src="../${app.icon}" width="64" height="64" alt="" loading="lazy">
         <h4>${app.name}</h4>
         <p class="ad-tagline">${app.tagline || ''}</p>
-        <p class="dl-meta">${versionLine}${size ? ` · ${size}` : ''}${app.webVersion && !isAvailable ? ` · web v${app.webVersion}` : ''}</p>
+        <p class="dl-meta">${versionLine}${size ? ` · ${size}` : ''}</p>
         ${notes}
         ${sha}
-        <p class="ad-status ${isAvailable ? 'live' : 'dev'}">${isAvailable ? '● APK ready' : '○ No APK yet'}</p>
+        <p class="ad-status ${isAvailable ? 'live' : 'dev'}">${isAvailable ? '● APK ready' : '○ Coming soon'}</p>
         ${actions}
         ${archives}
       </article>`;

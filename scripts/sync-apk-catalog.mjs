@@ -146,9 +146,7 @@ async function discoverApp(app) {
       : {
           status: 'web-only',
           version: webVersion,
-          releaseNotes: manifest?.apk?.packageId
-            ? 'Android build in progress — install the web app or check back soon.'
-            : 'Web app available now. APK packaging coming when the Android build ships.',
+          releaseNotes: 'Coming soon',
         },
   };
 }

@@ -7,6 +7,7 @@ import sharp from 'sharp';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { knockOutSolidBackdrop } from './knock-out-backdrop.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = join(root, 'icons', 'apps');
@@ -47,7 +48,15 @@ for (const app of apps) {
   try {
     const { url, buf } = await fetchFirst(app.iconSources || []);
     const dest = join(outDir, `${app.slug}.png`);
-    await sharp(buf)
+
+    const { data, info } = await sharp(buf).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const knocked = knockOutSolidBackdrop(data, info.width, info.height, info.channels);
+    const trimmed = await sharp(knocked, { raw: { width: info.width, height: info.height, channels: info.channels } })
+      .trim({ threshold: 0 })
+      .png()
+      .toBuffer();
+
+    await sharp(trimmed)
       .resize(SIZE, SIZE, {
         fit: 'contain',
         background: { r: 0, g: 0, b: 0, alpha: 0 },

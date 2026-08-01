@@ -1,8 +1,8 @@
 {
   "name": "The Markk Brandon Collective",
   "shortName": "MBC",
-  "version": "1.3.6",
-  "updatedAt": "2026-08-01T10:12:36.251Z",
+  "version": "1.3.7",
+  "updatedAt": "2026-08-01T10:13:21.212Z",
   "pwa": true,
   "sql": null,
   "note": "Static newspaper site — no app SQL schema. Company apps (StrainVerse, SpiritsVerse, Findr, etc.) keep their own sql/update.sql.",

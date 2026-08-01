@@ -444,6 +444,7 @@ a:hover{color:var(--grey-500)}
   display:block;
   border:1px solid var(--rule);
   background:var(--grey-100);
+  filter:grayscale(100%) contrast(1.1);
 }
 
 .bio-portrait figcaption{
@@ -627,7 +628,9 @@ a:hover{color:var(--grey-500)}
   border:none;
   padding:0;
   flex-shrink:0;
-  opacity:.95;
+  filter:grayscale(100%) contrast(1.05);
+  opacity:.88;
+  mix-blend-mode:multiply;
 }
 .sidebar-story h4{
   font-family:var(--serif-display);
@@ -721,7 +724,7 @@ a:hover{color:var(--grey-500)}
   text-transform:uppercase;
 }
 
-.classified-ad .ad-icon{font-size:1.25rem;margin-bottom:.2rem;opacity:.85}
+.classified-ad .ad-icon{font-size:1.25rem;margin-bottom:.2rem;filter:grayscale(100%);opacity:.7}
 
 .classified-ad .ad-thumb{
   width:3.25rem;
@@ -733,10 +736,13 @@ a:hover{color:var(--grey-500)}
   background:transparent;
   border:none;
   padding:0;
-  opacity:.95;
+  filter:grayscale(100%) contrast(1.08);
+  opacity:.9;
+  mix-blend-mode:multiply;
 }
 .security-lane .ad-thumb{
-  opacity:.95;
+  filter:grayscale(100%) contrast(1.15);
+  opacity:.85;
 }
 
 .classified-ad h4{
@@ -793,7 +799,7 @@ a:hover{color:var(--grey-500)}
 .btn-primary:hover{background:var(--grey-600);color:var(--paper)}
 
 .app-hero{border-bottom:1px solid var(--rule);padding-bottom:1.75rem;margin-bottom:1.75rem}
-.app-hero .app-icon{font-size:2rem;margin-bottom:.4rem;opacity:.9}
+.app-hero .app-icon{font-size:2rem;margin-bottom:.4rem;filter:grayscale(100%);opacity:.75}
 
 .app-hero h1{
   font-family:var(--serif-display);

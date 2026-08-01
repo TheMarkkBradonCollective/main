@@ -2,13 +2,13 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.3.4** (see [`version.json`](version.json))
+**Version:** **v1.3.5** (see [`version.json`](version.json))
 
 ## Live site
 
 **Canonical host:** [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/)
 
-This showcase ships on **GitHub Pages** only. The old Vercel project for this repo (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) is intentionally removed — ignore those URLs if they still 404.
+This newspaper site ships on **GitHub Pages** only. The old Vercel project for this repo (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) is intentionally removed — ignore those URLs if they still 404.
 
 > After deleting the Vercel project, also clear the GitHub repo **Homepage** URL if it still points at `*.vercel.app` (Settings → General → Website). Point it at the Pages link above.
 
@@ -17,11 +17,11 @@ This showcase ships on **GitHub Pages** only. The old Vercel project for this re
 | Page | URL | Description |
 |------|-----|-------------|
 | **Front Page** | `/` | Who I am, why I build, AI note, CTAs |
-| **Showcase** | `/apps/` | Free apps first; Guardr & SSS in a separate security lane |
+| **The Classifieds** | `/apps/` | Free apps first; Guardr & SSS in a separate security lane |
 | **Support** | `/support/` | GoFundMe — keep free apps online |
 | **Hire Me** | `/request/` | Request a website/app build + budget range |
 
-## Showcase — Free apps
+## The Classifieds — Free apps
 
 | Project | Notes | URL |
 |---------|-------|-----|
@@ -40,7 +40,7 @@ This showcase ships on **GitHub Pages** only. The old Vercel project for this re
 | Guardr | Marketplace angle | [guardr.co](https://guardr.co) |
 | Signature Security Specialist | Company / ops angle | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
 
-## Showcase apps (`My-Projects.json`)
+## Classifieds apps (`My-Projects.json`)
 
 Canonical live links + icon sources for every listed app live in [`My-Projects.json`](My-Projects.json). Icons are pulled from those URLs (GitHub raw when a public repo exists, otherwise the live deployment):
 

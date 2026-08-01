@@ -6,12 +6,29 @@
 
 ## Live site
 
-| Host | URL |
-|------|-----|
-| **GitHub Pages (working)** | [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/) |
-| Vercel project | `the-markkade-io` under the Markk Brandon Collective team |
+| Host | URL | Status |
+|------|-----|--------|
+| **GitHub Pages** | [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/) | **Working — use this** |
+| Vercel project | [`the-markkade-io`](https://vercel.com/themarkkbrandoncollective/the-markkade-io) | Deploys succeed; public aliases broken |
 
-> If you see a Vercel `404: NOT_FOUND`, the production domain alias isn’t pointed at a live deployment. Use the GitHub Pages link above, or in the [Vercel dashboard](https://vercel.com/themarkkbrandoncollective/the-markkade-io) → **Domains** re-assign `*.vercel.app` / your custom domain to the latest Production deployment.
+### Vercel `404: NOT_FOUND` (e.g. `themarkkbrandoncollective.vercel.app`)
+
+That hostname is **not** attached to a live production deployment. The code on `main` is fine — GitHub Pages proves it. This is a **Vercel Domains / project** setting, not a missing file in the repo.
+
+| URL you might try | What Vercel returns | Meaning |
+|-------------------|---------------------|---------|
+| `themarkkbrandoncollective.vercel.app` | `NOT_FOUND` | No project production alias for this name |
+| `the-markkade-io.vercel.app` | `DEPLOYMENT_NOT_FOUND` | Alias exists but points at a deleted/expired deployment |
+
+**Fix in the Vercel dashboard** (you must be logged in as the team owner):
+
+1. Open [the-markkade-io → Deployments](https://vercel.com/themarkkbrandoncollective/the-markkade-io/deployments) and confirm the latest **Production** deploy from `main` is Ready.
+2. Open that deployment → **⋯** → **Assign Domain** (or **Promote to Production**).
+3. Assign `the-markkade-io.vercel.app` to that deployment.
+4. If you specifically want `themarkkbrandoncollective.vercel.app`, either:
+   - **Rename** the project to `themarkkbrandoncollective` (Settings → General → Project Name), **or**
+   - Create/use a project with that exact name and connect this GitHub repo (`TheMarkkBradonCollective/TheMarkkade.io`) as its production git source, then redeploy.
+5. Optional: Settings → **Deployment Protection** — turn off **Vercel Authentication** if team URLs only show a Vercel login page.
 
 ## Site Structure
 

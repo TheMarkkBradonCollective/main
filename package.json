@@ -1,8 +1,13 @@
 {
   "name": "the-markk-brandon-collective",
   "private": true,
-  "version": "1.4.1",
-  "description": "The Markk Brandon Collective \u2014 showcase of free apps, support, and hire-me requests",
+  "version": "1.4.2",
+  "description": "The Markk Brandon Collective — newspaper site, classifieds, downloads, support, and hire-me requests",
+  "homepage": "https://themarkkbradoncollective.github.io/main/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheMarkkBradonCollective/main.git"
+  },
   "type": "module",
   "scripts": {
     "update": "node scripts/update.mjs",

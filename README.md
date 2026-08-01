@@ -2,13 +2,15 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.4.0** (see [`version.json`](version.json))
+**Version:** **v1.4.2** (see [`version.json`](version.json))
 
 ## Live site
 
-**Canonical host:** [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/)
+**Canonical host:** [themarkkbradoncollective.github.io/main](https://themarkkbradoncollective.github.io/main/)
 
-This newspaper site ships on **GitHub Pages** only. The old Vercel project for this repo (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) is intentionally removed — ignore those URLs if they still 404.
+**Repository:** [github.com/TheMarkkBradonCollective/main](https://github.com/TheMarkkBradonCollective/main)
+
+This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkkade.io`) and Vercel project (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) are retired — ignore those URLs if they still 404.
 
 > After deleting the Vercel project, also clear the GitHub repo **Homepage** URL if it still points at `*.vercel.app` (Settings → General → Website). Point it at the Pages link above.
 

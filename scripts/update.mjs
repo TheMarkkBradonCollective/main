@@ -14,6 +14,9 @@ const root = resolve(__dirname, '..');
 const pkgPath = resolve(root, 'package.json');
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8'));
 
+const SITE_HOMEPAGE = 'https://themarkkbradoncollective.github.io/main/';
+const SITE_REPOSITORY = 'https://github.com/TheMarkkBradonCollective/main';
+
 const version = pkg.version || '1.1.0';
 const now = new Date().toISOString();
 const cacheToken = `mbc-v${version.replace(/\./g, '-')}`;
@@ -78,7 +81,9 @@ const versionPayload = {
   updatedAt: now,
   pwa: true,
   sql: null,
-  note: 'Static newspaper site — no app SQL schema. Company apps (StrainVerse, SpiritsVerse, Findr, etc.) keep their own sql/update.sql.',
+  homepage: SITE_HOMEPAGE,
+  repository: SITE_REPOSITORY,
+  note: 'Grey NYC broadsheet newspaper site. Canonical host is GitHub Pages at /main/.',
   apk: {
     packageId: 'com.themarkkbradoncollective.mbc',
     name: 'The Markk Brandon Collective',
@@ -114,7 +119,7 @@ const twa = {
   navigationColorDark: '#121212',
   backgroundColor: '#f7f7f5',
   enableNotifications: false,
-  startUrl: '/',
+  startUrl: '/main/',
   iconUrl: '../icons/icon-512.png',
   maskableIconUrl: '../icons/icon-512.png',
   splashScreenFadeOutDuration: 300,
@@ -126,7 +131,7 @@ const twa = {
   appVersionCode: Number(String(version).replace(/\D/g, '') || '110') || 110,
   shortcuts: [],
   generatorApp: 'mbc-update',
-  webManifestUrl: '/manifest.webmanifest',
+  webManifestUrl: '/main/manifest.webmanifest',
   fallbackType: 'customtabs',
   features: {},
 };

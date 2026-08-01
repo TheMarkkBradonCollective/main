@@ -1429,7 +1429,7 @@ tr:nth-child(even) td{background:var(--grey-100)}
   .cta-strip .btn{flex:1 1 auto;text-align:center}
 }
 
-/* —— Downloads / App Store —— */
+/* —— Downloads / App Market —— */
 .download-hero{max-width:720px;margin:0 auto 1.25rem}
 .download-stamp{
   text-align:center;

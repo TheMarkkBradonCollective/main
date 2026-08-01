@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.4.4** (see [`version.json`](version.json))
+**Version:** **v1.4.5** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -20,7 +20,7 @@ This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkk
 |------|-----|-------------|
 | **Front Page** | `/` | Who I am, why I build, AI note, CTAs |
 | **The Classifieds** | `/apps/` | Free apps first; Guardr & SSS in a separate security lane |
-| **Downloads** | `/download/` | Android APK app store — sideload & update MBC apps |
+| **Downloads** | `/download/` | Android APK app market — sideload & update MBC apps |
 | **Support** | `/support/` | GoFundMe — keep free apps online |
 | **Hire Me** | `/request/` | Request a website/app build + budget range |
 

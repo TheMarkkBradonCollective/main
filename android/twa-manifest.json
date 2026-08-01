@@ -16,8 +16,8 @@
     "path": "./android.keystore",
     "alias": "mbc"
   },
-  "appVersionName": "1.4.4",
-  "appVersionCode": 144,
+  "appVersionName": "1.4.5",
+  "appVersionCode": 145,
   "shortcuts": [],
   "generatorApp": "mbc-update",
   "webManifestUrl": "/main/manifest.webmanifest",

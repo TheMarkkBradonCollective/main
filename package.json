@@ -1,12 +1,13 @@
 {
   "name": "the-markk-brandon-collective",
   "private": true,
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "The Markk Brandon Collective \u2014 showcase of free apps, support, and hire-me requests",
   "type": "module",
   "scripts": {
     "update": "node scripts/update.mjs",
     "process-brand": "node scripts/process-brand-assets.mjs",
+    "sync-app-icons": "node scripts/sync-app-icons.mjs",
     "generate-icons": "node scripts/generate-icons.mjs"
   },
   "devDependencies": {

@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "strainverse",
+    "name": "StrainVerse",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png",
+    "file": "icons/apps/strainverse.png"
+  },
+  {
+    "slug": "spiritsverse",
+    "name": "SpiritsVerse",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png",
+    "file": "icons/apps/spiritsverse.png"
+  },
+  {
+    "slug": "cookverse",
+    "name": "Cookverse",
+    "source": "https://cookverse-tmbc.vercel.app/logo-mark.png",
+    "file": "icons/apps/cookverse.png"
+  },
+  {
+    "slug": "friendr",
+    "name": "Friendr",
+    "source": "https://friendr-tmbc.vercel.app/icons/icon-512.png",
+    "file": "icons/apps/friendr.png"
+  },
+  {
+    "slug": "findr",
+    "name": "Findr",
+    "source": "https://findr-tmbc.vercel.app/logo.png",
+    "file": "icons/apps/findr.png"
+  },
+  {
+    "slug": "chatr",
+    "name": "Chatr",
+    "source": "https://chatr-tmbc.vercel.app/icon.png",
+    "file": "icons/apps/chatr.png"
+  },
+  {
+    "slug": "buynothing",
+    "name": "Sacramento Buy Nothing",
+    "source": "https://sacramentobuynothing.com/Logo.jpeg",
+    "file": "icons/apps/buynothing.png"
+  },
+  {
+    "slug": "guardr",
+    "name": "Guardr",
+    "source": "https://www.guardr.co/logo.png",
+    "file": "icons/apps/guardr.png"
+  },
+  {
+    "slug": "sss",
+    "name": "Signature Security Specialist",
+    "source": "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
+    "file": "icons/apps/sss.png"
+  }
+]

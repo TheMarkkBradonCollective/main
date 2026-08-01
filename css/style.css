@@ -533,7 +533,20 @@ a:hover{color:var(--grey-500)}
 
 .sidebar-story{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--rule-light)}
 .sidebar-story:last-child{border-bottom:none}
-
+.sidebar-story-row{
+  display:flex;
+  gap:.65rem;
+  align-items:flex-start;
+}
+.sidebar-thumb{
+  width:2.25rem;
+  height:2.25rem;
+  object-fit:contain;
+  border-radius:.4rem;
+  background:#0a0a0a;
+  border:1px solid var(--grey-200);
+  flex-shrink:0;
+}
 .sidebar-story h4{
   font-family:var(--serif-display);
   font-size:.95rem;
@@ -627,6 +640,21 @@ a:hover{color:var(--grey-500)}
 }
 
 .classified-ad .ad-icon{font-size:1.25rem;margin-bottom:.2rem;filter:grayscale(100%);opacity:.7}
+
+.classified-ad .ad-thumb{
+  width:3.25rem;
+  height:3.25rem;
+  object-fit:contain;
+  display:block;
+  margin:0 0 .55rem;
+  border-radius:.55rem;
+  background:#0a0a0a;
+  border:1px solid var(--grey-200);
+}
+.security-lane .ad-thumb{
+  border-color:rgba(247,247,245,.2);
+  background:#000;
+}
 
 .classified-ad h4{
   font-family:var(--serif-display);

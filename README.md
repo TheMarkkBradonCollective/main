@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.3.3** (see [`version.json`](version.json))
+**Version:** **v1.3.4** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -51,6 +51,7 @@ Display assets are **transparent PNGs** (black knocked out) so they sit cleanly 
 
 ```bash
 npm run process-brand   # masters → transparent logo + wordmark
+npm run sync-app-icons  # pull each app's icon from GitHub / live site → icons/apps/
 npm run generate-icons  # also rebuilds favicon / PWA tiles (opaque black)
 # or
 npm run update

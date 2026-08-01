@@ -25,10 +25,10 @@ This showcase ships on **GitHub Pages** only. The old Vercel project for this re
 
 | Project | Notes | URL |
 |---------|-------|-----|
-| Sacramento Buy Nothing | Free local gifting | [sacramentobuynothing.com](https://sacramentobuynothing.com) |
+| Sacramento Buy Nothing | Free local gifting | [sacramentobuynothing-tmbc.vercel.app](https://sacramentobuynothing-tmbc.vercel.app) |
 | StrainVerse | Fun / boredom build | [strainverse-tmbc.vercel.app](https://strainverse-tmbc.vercel.app) |
 | SpiritsVerse | Fun / boredom build | [spiritsverse-tmbc.vercel.app](https://spiritsverse-tmbc.vercel.app) |
-| Cookverse | Fun / boredom build | [cookverse-tmbc.vercel.app](https://cookverse-tmbc.vercel.app) |
+| Cookbook.io | Fun / boredom build | [cookverse-tmbc.vercel.app](https://cookverse-tmbc.vercel.app) |
 | Friendr | Free by design | [friendr-tmbc.vercel.app](https://friendr-tmbc.vercel.app) |
 | Findr | Free by design | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
 | Chatr | Free by design | [chatr-tmbc.vercel.app](https://chatr-tmbc.vercel.app) |

@@ -1,12 +1,38 @@
 [
   {
+    "slug": "sss",
+    "name": "Signature Security Specialist",
+    "tagline": "Protect with Purpose · Perform with Excellence",
+    "url": "https://signaturesecurityspecialist.com",
+    "section": "security",
+    "github": "https://github.com/TheMarkkBradonCollective/SSS",
+    "iconSources": [
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
+    ]
+  },
+  {
+    "slug": "guardr",
+    "name": "Guardr",
+    "tagline": "Independent Security Marketplace",
+    "url": "https://guardr.co",
+    "section": "security",
+    "github": null,
+    "iconSources": [
+      "https://guardr.co/logo.png",
+      "https://guardr.co/icon-512.png",
+      "https://guardr.co/apple-touch-icon.png"
+    ]
+  },
+  {
     "slug": "buynothing",
     "name": "Sacramento Buy Nothing",
     "tagline": "Give Freely. Ask Kindly.",
-    "url": "https://sacramentobuynothing.com",
+    "url": "https://sacramentobuynothing-tmbc.vercel.app",
     "section": "community",
     "github": null,
     "iconSources": [
+      "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg",
       "https://sacramentobuynothing.com/Logo.jpeg"
     ]
   },
@@ -36,7 +62,7 @@
   },
   {
     "slug": "cookverse",
-    "name": "Cookverse",
+    "name": "Cookbook.io",
     "tagline": "The Social Table",
     "url": "https://cookverse-tmbc.vercel.app",
     "section": "lifestyle",
@@ -81,31 +107,6 @@
     "iconSources": [
       "https://chatr-tmbc.vercel.app/icon.png",
       "https://chatr-tmbc.vercel.app/apple-touch-icon.png"
-    ]
-  },
-  {
-    "slug": "guardr",
-    "name": "Guardr",
-    "tagline": "Independent Security Marketplace",
-    "url": "https://www.guardr.co",
-    "section": "security",
-    "github": null,
-    "iconSources": [
-      "https://www.guardr.co/logo.png",
-      "https://www.guardr.co/icon-512.png",
-      "https://www.guardr.co/apple-touch-icon.png"
-    ]
-  },
-  {
-    "slug": "sss",
-    "name": "Signature Security Specialist",
-    "tagline": "Protect with Purpose · Perform with Excellence",
-    "url": "https://signaturesecurityspecialist.com",
-    "section": "security",
-    "github": "https://github.com/TheMarkkBradonCollective/SSS",
-    "iconSources": [
-      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
-      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
     ]
   }
 ]

@@ -5,7 +5,7 @@
   "updatedAt": "2026-07-30T21:18:00.000Z",
   "pwa": true,
   "sql": null,
-  "note": "Static site. Prefer GitHub Pages if Vercel production alias is missing.",
+  "note": "Static site. Canonical host is GitHub Pages (Vercel project for this repo removed).",
   "apk": {
     "packageId": "com.themarkkbradoncollective.mbc",
     "name": "The Markk Brandon Collective",

@@ -6,12 +6,11 @@
 
 ## Live site
 
-| Host | URL |
-|------|-----|
-| **GitHub Pages (working)** | [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/) |
-| Vercel project | `the-markkade-io` under the Markk Brandon Collective team |
+**Canonical host:** [themarkkbradoncollective.github.io/TheMarkkade.io](https://themarkkbradoncollective.github.io/TheMarkkade.io/)
 
-> If you see a Vercel `404: NOT_FOUND`, the production domain alias isn’t pointed at a live deployment. Use the GitHub Pages link above, or in the [Vercel dashboard](https://vercel.com/themarkkbrandoncollective/the-markkade-io) → **Domains** re-assign `*.vercel.app` / your custom domain to the latest Production deployment.
+This showcase ships on **GitHub Pages** only. The old Vercel project for this repo (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) is intentionally removed — ignore those URLs if they still 404.
+
+> After deleting the Vercel project, also clear the GitHub repo **Homepage** URL if it still points at `*.vercel.app` (Settings → General → Website). Point it at the Pages link above.
 
 ## Site Structure
 

@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.5.1** (see [`version.json`](version.json))
+**Version:** **v1.5.2** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -65,6 +65,7 @@ Several apps live in **private** GitHub repos under `TheMarkkBradonCollective`. 
 | Chatr | `Chatr` | Private |
 | Sacramento Buy Nothing | `SacramentoBuyNothing` | Private |
 | Guardr | `Guardr` | Private |
+| Signature Security Specialist | `Signature-Security-Specialist` | Private |
 
 1. Repo URLs and `githubPrivate` flags live in [`My-Projects.json`](My-Projects.json).
 2. Export a GitHub token with `repo` scope:

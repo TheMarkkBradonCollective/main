@@ -5,8 +5,8 @@
     "tagline": "Protect with Purpose · Perform with Excellence",
     "url": "https://signaturesecurityspecialist.com",
     "section": "security",
-    "github": "https://github.com/TheMarkkBradonCollective/SSS",
-    "githubPrivate": false,
+    "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
+    "githubPrivate": true,
     "iconSources": [
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"

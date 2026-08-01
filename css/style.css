@@ -1399,10 +1399,11 @@ tr:nth-child(even) td{background:var(--grey-100)}
 }
 .ai-note-label{
   font-family:var(--serif-display);
-  font-size:1.05rem;
+  font-size:clamp(1.35rem,3.5vw,1.65rem);
   font-weight:700;
   font-style:italic;
-  margin-bottom:.75rem;
+  line-height:1.15;
+  margin-bottom:.85rem;
   color:var(--ink);
 }
 .ai-note p{

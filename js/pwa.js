@@ -1,8 +1,8 @@
 (function () {
-  const VERSION_FALLBACK = '1.5.7';
-  const VERSION_KEY = 'mbc_seen_version';
-  const VERSION_POLL_MS = 60 * 1000;
-  const SW_POLL_MS = 60 * 1000;
+  const VERSION_FALLBACK = '1.5.8';
+  const STAMP_KEY = 'mbc_deploy_stamp';
+  const VERSION_POLL_MS = 30 * 1000;
+  const SW_POLL_MS = 30 * 1000;
 
   const SCRIPT = document.currentScript;
   const ROOT = SCRIPT ? new URL('../', SCRIPT.src) : new URL('./', window.location.href);
@@ -42,56 +42,69 @@
 
   let reloading = false;
 
-  function reloadForUpdate(message) {
+  async function clearSiteCaches() {
+    if (!('caches' in window)) return;
+    const keys = await caches.keys();
+    await Promise.all(keys.map((key) => caches.delete(key)));
+  }
+
+  async function reloadForUpdate(message) {
     if (reloading) return;
     reloading = true;
     showUpdateChip(message || 'Updating MBC…');
-    window.setTimeout(() => window.location.reload(), 300);
+    await clearSiteCaches();
+    window.setTimeout(() => {
+      const url = new URL(window.location.href);
+      url.searchParams.set('_', String(Date.now()));
+      window.location.replace(url.toString());
+    }, 250);
   }
 
-  async function fetchLiveVersion() {
+  async function fetchDeployInfo() {
     const res = await fetch(asset('version.json'), { cache: 'no-store' });
     if (!res.ok) throw new Error('version fetch failed');
     const data = await res.json();
-    return data && data.version ? String(data.version) : VERSION_FALLBACK;
+    const version = data && data.version ? String(data.version) : VERSION_FALLBACK;
+    const stamp = data && data.updatedAt ? `${version}|${data.updatedAt}` : version;
+    return { version, stamp };
   }
 
   async function checkDeployVersion() {
     try {
-      const remote = await fetchLiveVersion();
+      const { version, stamp } = await fetchDeployInfo();
       let seen = null;
       try {
-        seen = localStorage.getItem(VERSION_KEY);
+        seen = localStorage.getItem(STAMP_KEY);
       } catch {
         /* ignore */
       }
 
-      if (seen && seen !== remote) {
+      if (seen && seen !== stamp) {
         try {
-          localStorage.setItem(VERSION_KEY, remote);
+          localStorage.setItem(STAMP_KEY, stamp);
         } catch {
           /* ignore */
         }
-        reloadForUpdate('New edition — refreshing…');
-        return remote;
+        await reloadForUpdate('New edition — refreshing…');
+        return version;
       }
 
       if (!seen) {
         try {
-          localStorage.setItem(VERSION_KEY, remote);
+          localStorage.setItem(STAMP_KEY, stamp);
         } catch {
           /* ignore */
         }
       }
 
-      return remote;
+      return version;
     } catch {
       return VERSION_FALLBACK;
     }
   }
 
-  fetchLiveVersion()
-    .then((version) => showSplashVersion(version))
+  fetchDeployInfo()
+    .then(({ version }) => showSplashVersion(version))
     .catch(() => showSplashVersion(VERSION_FALLBACK))
     .finally(() => {
       window.requestAnimationFrame(() => {
@@ -115,12 +128,14 @@
   if (!('serviceWorker' in navigator)) return;
 
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    reloadForUpdate('Updating MBC…');
+    void reloadForUpdate('Updating MBC…');
   });
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register(asset('sw.js'), { scope: ROOT.href })
+    fetchDeployInfo()
+      .then(({ stamp }) =>
+        navigator.serviceWorker.register(asset(`sw.js?v=${encodeURIComponent(stamp)}`), { scope: ROOT.href })
+      )
       .then((reg) => {
         if (reg.waiting) {
           reg.waiting.postMessage({ type: 'SKIP_WAITING' });

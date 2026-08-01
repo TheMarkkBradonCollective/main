@@ -97,6 +97,27 @@ writeFileSync(resolve(root, 'version.json'), JSON.stringify(versionPayload, null
 writeFileSync(resolve(root, 'public/version.json'), JSON.stringify(versionPayload, null, 2) + '\n');
 console.log('→ Wrote version.json');
 
+// 3b) Cache-bust CSS/JS in HTML so GitHub Pages never serves stale bundles
+const htmlFiles = [
+  'index.html',
+  'about/index.html',
+  'apps/index.html',
+  'download/index.html',
+  'support/index.html',
+  'request/index.html',
+];
+for (const rel of htmlFiles) {
+  const htmlPath = resolve(root, rel);
+  if (!existsSync(htmlPath)) continue;
+  let html = readFileSync(htmlPath, 'utf-8');
+  html = html.replace(/(href="[^"]*style\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*pwa\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*downloads\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*timeline\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  writeFileSync(htmlPath, html);
+}
+console.log('→ Cache-busted CSS/JS in HTML pages');
+
 // 4) Bump service worker cache name so installs pick up the new build
 const swPath = resolve(root, 'sw.js');
 if (existsSync(swPath)) {

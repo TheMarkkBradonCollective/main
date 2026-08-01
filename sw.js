@@ -1,44 +1,14 @@
-const CACHE_NAME = 'mbc-v1-5-7';
+const CACHE_NAME = 'mbc-v1-5-8';
 
 const PRECACHE_URLS = [
-  './',
-  './index.html',
-  './about/',
-  './about/index.html',
-  './apps/',
-  './apps/index.html',
-  './support/',
-  './support/index.html',
-  './request/',
-  './request/index.html',
-  './download/',
-  './download/index.html',
-  './apk-catalog.json',
-  './css/style.css',
-  './manifest.webmanifest',
-  './version.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/apple-touch-icon.png',
   './icons/favicon-32.png',
   './icons/logo.png',
-  './icons/wordmark.png',
-  './icons/apps/buynothing.png',
-  './icons/apps/strainverse.png',
-  './icons/apps/spiritsverse.png',
-  './icons/apps/cookverse.png',
-  './icons/apps/friendr.png',
-  './icons/apps/findr.png',
-  './icons/apps/chatr.png',
-  './icons/apps/guardr.png',
-  './icons/apps/sss.png',
-  './js/pwa.js',
-  './js/timeline.js',
-  './js/downloads.js',
-  './js/version.js',
 ];
 
-function isNetworkFirst(url) {
+function isNetworkOnly(url) {
   const path = url.pathname;
   if (path.endsWith('/sw.js') || path.endsWith('/version.json')) return true;
   if (path.endsWith('.html') || path.endsWith('/') || !/\.[a-z0-9]+$/i.test(path)) return true;
@@ -55,9 +25,11 @@ function cachePut(request, response) {
 }
 
 function networkFirst(request) {
-  return fetch(request)
+  return fetch(request, { cache: 'no-store' })
     .then((response) => {
-      cachePut(request, response);
+      if (!isNetworkOnly(new URL(request.url))) {
+        cachePut(request, response);
+      }
       return response;
     })
     .catch(() => caches.match(request));
@@ -65,7 +37,7 @@ function networkFirst(request) {
 
 function staleWhileRevalidate(request) {
   return caches.match(request).then((cached) => {
-    const networkFetch = fetch(request)
+    const networkFetch = fetch(request, { cache: 'no-store' })
       .then((response) => {
         cachePut(request, response);
         return response;
@@ -102,7 +74,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (isNetworkFirst(url)) {
+  if (isNetworkOnly(url)) {
     event.respondWith(networkFirst(event.request));
     return;
   }

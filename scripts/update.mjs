@@ -20,6 +20,16 @@ const cacheToken = `mbc-v${version.replace(/\./g, '-')}`;
 
 console.log(`\nMBC /update — v${version}\n`);
 
+// 0) Showcase app icons (best-effort — needs network)
+console.log('→ Syncing showcase app icons…');
+const appIcons = spawnSync(process.execPath, [resolve(root, 'scripts/sync-app-icons.mjs')], {
+  cwd: root,
+  stdio: 'inherit',
+});
+if (appIcons.status !== 0) {
+  console.warn('⚠ App icon sync skipped or partial (network / missing sources).');
+}
+
 // 1) PWA icons (skip gracefully if sharp isn't installed and icons already exist)
 console.log('→ Regenerating PWA icons…');
 const icons = spawnSync(process.execPath, [resolve(root, 'scripts/generate-icons.mjs')], {

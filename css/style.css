@@ -60,6 +60,7 @@ body{
   aspect-ratio:1;
   object-fit:contain;
   border-radius:50%;
+  background:#000;
   box-shadow:0 0 0 1px rgba(247,247,245,.12);
 }
 .mbc-splash-wordmark{
@@ -190,25 +191,25 @@ a:hover{color:var(--grey-500)}
 .nav-brand{
   display:inline-flex;
   align-items:center;
-  gap:.65rem;
+  gap:.55rem;
   text-decoration:none;
   flex-shrink:0;
+  background:#000;
+  padding:.35rem .55rem .35rem .4rem;
+  border:1px solid var(--rule);
 }
 .nav-brand-logo{
   width:2.5rem;
   height:2.5rem;
   border-radius:50%;
-  object-fit:cover;
+  object-fit:contain;
   display:block;
-  border:1px solid var(--rule);
+  background:#000;
 }
 .nav-brand-wordmark{
   height:1.85rem;
   width:auto;
   display:block;
-  background:#000;
-  border-radius:2px;
-  padding:.15rem .35rem;
 }
 
 .site-nav .logo{display:none}
@@ -281,7 +282,8 @@ a:hover{color:var(--grey-500)}
   height:auto;
   aspect-ratio:1;
   border-radius:50%;
-  object-fit:cover;
+  object-fit:contain;
+  background:#000;
   border:1px solid rgba(247,247,245,.25);
 }
 .brand-lockup-compact .brand-badge{width:clamp(3.25rem,12vw,4rem)}
@@ -531,7 +533,20 @@ a:hover{color:var(--grey-500)}
 
 .sidebar-story{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--rule-light)}
 .sidebar-story:last-child{border-bottom:none}
-
+.sidebar-story-row{
+  display:flex;
+  gap:.65rem;
+  align-items:flex-start;
+}
+.sidebar-thumb{
+  width:2.25rem;
+  height:2.25rem;
+  object-fit:contain;
+  border-radius:.4rem;
+  background:#0a0a0a;
+  border:1px solid var(--grey-200);
+  flex-shrink:0;
+}
 .sidebar-story h4{
   font-family:var(--serif-display);
   font-size:.95rem;
@@ -625,6 +640,21 @@ a:hover{color:var(--grey-500)}
 }
 
 .classified-ad .ad-icon{font-size:1.25rem;margin-bottom:.2rem;filter:grayscale(100%);opacity:.7}
+
+.classified-ad .ad-thumb{
+  width:3.25rem;
+  height:3.25rem;
+  object-fit:contain;
+  display:block;
+  margin:0 0 .55rem;
+  border-radius:.55rem;
+  background:#0a0a0a;
+  border:1px solid var(--grey-200);
+}
+.security-lane .ad-thumb{
+  border-color:rgba(247,247,245,.2);
+  background:#000;
+}
 
 .classified-ad h4{
   font-family:var(--serif-display);
@@ -857,7 +887,8 @@ tr:nth-child(even) td{background:var(--grey-100)}
   width:2.75rem;
   height:2.75rem;
   border-radius:50%;
-  object-fit:cover;
+  object-fit:contain;
+  background:#000;
 }
 .footer-wordmark{
   width:min(12rem,70vw);

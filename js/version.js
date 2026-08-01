@@ -1,5 +1,5 @@
 /** App version shown on loading splash and update tooling. */
-export const APP_VERSION = '1.3.2';
+export const APP_VERSION = '1.3.4';
 export const APP_NAME = 'The Markk Brandon Collective';
 export const APP_SHORT = 'MBC';
 

@@ -1,5 +1,5 @@
 (function () {
-  const VERSION_FALLBACK = '1.3.2';
+  const VERSION_FALLBACK = '1.3.4';
   // Resolve site root from this script (/js/pwa.js → /) so GitHub Pages + Vercel both work
   const SCRIPT = document.currentScript;
   const ROOT = SCRIPT

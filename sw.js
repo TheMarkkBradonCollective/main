@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mbc-v1-3-2';
+const CACHE_NAME = 'mbc-v1-3-4';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -17,6 +17,15 @@ const PRECACHE_URLS = [
   './icons/favicon-32.png',
   './icons/logo.png',
   './icons/wordmark.png',
+  './icons/apps/buynothing.png',
+  './icons/apps/strainverse.png',
+  './icons/apps/spiritsverse.png',
+  './icons/apps/cookverse.png',
+  './icons/apps/friendr.png',
+  './icons/apps/findr.png',
+  './icons/apps/chatr.png',
+  './icons/apps/guardr.png',
+  './icons/apps/sss.png',
   './js/pwa.js',
   './js/version.js',
 ];

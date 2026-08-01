@@ -1,0 +1,113 @@
+[
+  {
+    "slug": "sss",
+    "name": "Signature Security Specialist",
+    "tagline": "Protect with Purpose · Perform with Excellence",
+    "url": "https://signaturesecurityspecialist.com",
+    "section": "security",
+    "github": "https://github.com/TheMarkkBradonCollective/SSS",
+    "iconSources": [
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
+    ]
+  },
+  {
+    "slug": "guardr",
+    "name": "Guardr",
+    "tagline": "Independent Security Marketplace",
+    "url": "https://guardr.co",
+    "section": "security",
+    "github": null,
+    "iconSources": [
+      "https://www.guardr.co/logo.png",
+      "https://www.guardr.co/icon-512.png",
+      "https://guardr.co/logo.png",
+      "https://guardr.co/icon-512.png"
+    ]
+  },
+  {
+    "slug": "buynothing",
+    "name": "Sacramento Buy Nothing",
+    "tagline": "Give Freely. Ask Kindly.",
+    "url": "https://sacramentobuynothing-tmbc.vercel.app",
+    "section": "community",
+    "github": null,
+    "iconSources": [
+      "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg",
+      "https://sacramentobuynothing.com/Logo.jpeg"
+    ]
+  },
+  {
+    "slug": "strainverse",
+    "name": "StrainVerse",
+    "tagline": "Stoner-First Social Network",
+    "url": "https://strainverse-tmbc.vercel.app",
+    "section": "lifestyle",
+    "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
+    "iconSources": [
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png",
+      "https://strainverse-tmbc.vercel.app/pwa-512.png"
+    ]
+  },
+  {
+    "slug": "spiritsverse",
+    "name": "SpiritsVerse",
+    "tagline": "Social Network for Drink Lovers",
+    "url": "https://spiritsverse-tmbc.vercel.app",
+    "section": "lifestyle",
+    "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
+    "iconSources": [
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png",
+      "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
+    ]
+  },
+  {
+    "slug": "cookverse",
+    "name": "Cookbook.io",
+    "tagline": "The Social Table",
+    "url": "https://cookverse-tmbc.vercel.app",
+    "section": "lifestyle",
+    "github": null,
+    "iconSources": [
+      "https://cookverse-tmbc.vercel.app/logo-mark.png",
+      "https://cookverse-tmbc.vercel.app/logo.png",
+      "https://cookverse-tmbc.vercel.app/pwa-512.png"
+    ]
+  },
+  {
+    "slug": "friendr",
+    "name": "Friendr",
+    "tagline": "Consent-First Social Connection",
+    "url": "https://friendr-tmbc.vercel.app",
+    "section": "social",
+    "github": null,
+    "iconSources": [
+      "https://friendr-tmbc.vercel.app/icons/icon-512.png",
+      "https://friendr-tmbc.vercel.app/brand/mark.png"
+    ]
+  },
+  {
+    "slug": "findr",
+    "name": "Findr",
+    "tagline": "Location sharing for your people",
+    "url": "https://findr-tmbc.vercel.app",
+    "section": "social",
+    "github": null,
+    "iconSources": [
+      "https://findr-tmbc.vercel.app/logo.png",
+      "https://findr-tmbc.vercel.app/icons/icon-192.png"
+    ]
+  },
+  {
+    "slug": "chatr",
+    "name": "Chatr",
+    "tagline": "Secure Private Chat",
+    "url": "https://chatr-tmbc.vercel.app",
+    "section": "social",
+    "github": null,
+    "iconSources": [
+      "https://chatr-tmbc.vercel.app/icon.png",
+      "https://chatr-tmbc.vercel.app/apple-touch-icon.png"
+    ]
+  }
+]

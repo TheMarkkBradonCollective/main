@@ -114,7 +114,7 @@
       isAvailable && android.releaseNotes
         ? `<p class="dl-notes">${android.releaseNotes}</p>`
         : !isAvailable
-          ? `<p class="dl-notes">Android APK not published yet — use the browser version for now.</p>`
+          ? `<p class="dl-notes">Android APK not published yet — try the web version from The Classifieds.</p>`
           : '';
 
     const archives =
@@ -128,11 +128,9 @@
     const actions = isAvailable
       ? `<div class="ad-links">
           <a class="btn btn-primary" href="${downloadHref(android.downloadUrl)}" download="${android.downloadName || ''}" rel="noopener">Download APK</a>
-          <a class="btn" href="${app.webUrl}" target="_blank" rel="noopener">Open in Browser</a>
         </div>`
       : `<div class="ad-links">
           <span class="btn btn-soon" aria-disabled="true">Coming Soon</span>
-          <a class="btn btn-primary" href="${app.webUrl}" target="_blank" rel="noopener">Open in Browser</a>
         </div>`;
 
     const sha = android.sha256

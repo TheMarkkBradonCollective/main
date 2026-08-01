@@ -1,16 +1,20 @@
 {
   "name": "The Markk Brandon Collective",
   "shortName": "MBC",
-  "version": "1.3.2",
-  "updatedAt": "2026-07-30T21:18:00.000Z",
+  "version": "1.3.3",
+  "updatedAt": "2026-08-01T09:29:19.894Z",
   "pwa": true,
   "sql": null,
+<<<<<<< HEAD
   "note": "Static site. Canonical host is GitHub Pages (Vercel project for this repo removed).",
+=======
+  "note": "Static newspaper site — no app SQL schema. Company apps (StrainVerse, SpiritsVerse, Findr, etc.) keep their own sql/update.sql.",
+>>>>>>> 142f22d (Make brand logo and wordmark transparent (v1.3.3))
   "apk": {
     "packageId": "com.themarkkbradoncollective.mbc",
     "name": "The Markk Brandon Collective",
     "themeColor": "#121212",
-    "backgroundColor": "#000000",
+    "backgroundColor": "#f7f7f5",
     "icon": "/icons/icon-512.png"
   }
 }

@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.3.2** (see [`version.json`](version.json))
+**Version:** **v1.3.3** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -42,7 +42,19 @@ This showcase ships on **GitHub Pages** only. The old Vercel project for this re
 
 ## Brand logo
 
-Circular badge: [`icons/logo.png`](icons/logo.png). Horizontal wordmark: [`icons/wordmark.png`](icons/wordmark.png). Run `npm run update` (or `node scripts/generate-icons.mjs`) to refresh favicon / PWA sizes from the masters.
+Masters (black backdrop): [`icons/logo-master.png`](icons/logo-master.png), [`icons/wordmark-master.png`](icons/wordmark-master.png).
+
+Display assets are **transparent PNGs** (black knocked out) so they sit cleanly on the dark splash / masthead and on black brand plates in the nav and footer:
+
+- Circular badge: [`icons/logo.png`](icons/logo.png)
+- Horizontal wordmark: [`icons/wordmark.png`](icons/wordmark.png)
+
+```bash
+npm run process-brand   # masters → transparent logo + wordmark
+npm run generate-icons  # also rebuilds favicon / PWA tiles (opaque black)
+# or
+npm run update
+```
 
 ## Local Development
 

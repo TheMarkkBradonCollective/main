@@ -1,19 +1,5 @@
 [
   {
-    "slug": "sss",
-    "name": "Signature Security Specialist",
-    "projectUrl": "https://signaturesecurityspecialist.com",
-    "source": "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
-    "file": "icons/apps/sss.png"
-  },
-  {
-    "slug": "guardr",
-    "name": "Guardr",
-    "projectUrl": "https://guardr.co",
-    "source": "https://www.guardr.co/logo.png",
-    "file": "icons/apps/guardr.png"
-  },
-  {
     "slug": "buynothing",
     "name": "Sacramento Buy Nothing",
     "projectUrl": "https://sacramentobuynothing-tmbc.vercel.app",
@@ -61,5 +47,19 @@
     "projectUrl": "https://chatr-tmbc.vercel.app",
     "source": "https://chatr-tmbc.vercel.app/icon.png",
     "file": "icons/apps/chatr.png"
+  },
+  {
+    "slug": "guardr",
+    "name": "Guardr",
+    "projectUrl": "https://guardr.co",
+    "source": "https://www.guardr.co/logo.png",
+    "file": "icons/apps/guardr.png"
+  },
+  {
+    "slug": "sss",
+    "name": "Signature Security Specialist",
+    "projectUrl": "https://signaturesecurityspecialist.com",
+    "source": "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
+    "file": "icons/apps/sss.png"
   }
 ]

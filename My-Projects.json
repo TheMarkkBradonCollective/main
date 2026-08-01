@@ -1,33 +1,5 @@
 [
   {
-    "slug": "sss",
-    "name": "Signature Security Specialist",
-    "tagline": "Protect with Purpose · Perform with Excellence",
-    "url": "https://signaturesecurityspecialist.com",
-    "section": "security",
-    "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
-    "githubPrivate": true,
-    "iconSources": [
-      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
-      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
-    ]
-  },
-  {
-    "slug": "guardr",
-    "name": "Guardr",
-    "tagline": "Independent Security Marketplace",
-    "url": "https://guardr.co",
-    "section": "security",
-    "github": "https://github.com/TheMarkkBradonCollective/Guardr",
-    "githubPrivate": true,
-    "iconSources": [
-      "https://www.guardr.co/logo.png",
-      "https://www.guardr.co/icon-512.png",
-      "https://guardr.co/logo.png",
-      "https://guardr.co/icon-512.png"
-    ]
-  },
-  {
     "slug": "buynothing",
     "name": "Sacramento Buy Nothing",
     "tagline": "Give Freely. Ask Kindly.",
@@ -116,6 +88,34 @@
     "iconSources": [
       "https://chatr-tmbc.vercel.app/icon.png",
       "https://chatr-tmbc.vercel.app/apple-touch-icon.png"
+    ]
+  },
+  {
+    "slug": "guardr",
+    "name": "Guardr",
+    "tagline": "Independent Security Marketplace",
+    "url": "https://guardr.co",
+    "section": "security",
+    "github": "https://github.com/TheMarkkBradonCollective/Guardr",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://www.guardr.co/logo.png",
+      "https://www.guardr.co/icon-512.png",
+      "https://guardr.co/logo.png",
+      "https://guardr.co/icon-512.png"
+    ]
+  },
+  {
+    "slug": "sss",
+    "name": "Signature Security Specialist",
+    "tagline": "Protect with Purpose · Perform with Excellence",
+    "url": "https://signaturesecurityspecialist.com",
+    "section": "security",
+    "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
     ]
   }
 ]

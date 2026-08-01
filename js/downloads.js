@@ -19,6 +19,23 @@
     return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
   }
 
+  const MARKET_ORDER = [
+    'buynothing',
+    'strainverse',
+    'spiritsverse',
+    'cookverse',
+    'friendr',
+    'findr',
+    'chatr',
+    'guardr',
+    'sss',
+  ];
+
+  function sortApps(apps) {
+    const rank = Object.fromEntries(MARKET_ORDER.map((slug, index) => [slug, index]));
+    return [...apps].sort((a, b) => (rank[a.slug] ?? 999) - (rank[b.slug] ?? 999));
+  }
+
   function sectionLabel(section) {
     const map = {
       community: 'Community',
@@ -99,7 +116,7 @@
     const stamp = document.getElementById('download-stamp');
     if (!grid) return;
 
-    const apps = catalog.apps || [];
+    const apps = sortApps(catalog.apps || []);
     const available = apps.filter((a) => a.android?.status === 'available').length;
 
     grid.innerHTML = apps.map(renderCard).join('');

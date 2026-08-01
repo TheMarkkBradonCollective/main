@@ -1,10 +1,11 @@
 (function () {
-  const VERSION_FALLBACK = '1.5.5';
-  // Resolve site root from this script (/js/pwa.js → /) so GitHub Pages + Vercel both work
+  const VERSION_FALLBACK = '1.5.7';
+  const VERSION_KEY = 'mbc_seen_version';
+  const VERSION_POLL_MS = 60 * 1000;
+  const SW_POLL_MS = 60 * 1000;
+
   const SCRIPT = document.currentScript;
-  const ROOT = SCRIPT
-    ? new URL('../', SCRIPT.src)
-    : new URL('./', window.location.href);
+  const ROOT = SCRIPT ? new URL('../', SCRIPT.src) : new URL('./', window.location.href);
 
   function asset(path) {
     return new URL(path.replace(/^\//, ''), ROOT).href;
@@ -39,12 +40,58 @@
     if (chip) chip.hidden = true;
   }
 
-  // Version stamp on splash + auto-hide after first paint
-  fetch(asset('version.json'), { cache: 'no-store' })
-    .then((r) => (r.ok ? r.json() : null))
-    .then((data) => {
-      showSplashVersion((data && data.version) || VERSION_FALLBACK);
-    })
+  let reloading = false;
+
+  function reloadForUpdate(message) {
+    if (reloading) return;
+    reloading = true;
+    showUpdateChip(message || 'Updating MBC…');
+    window.setTimeout(() => window.location.reload(), 300);
+  }
+
+  async function fetchLiveVersion() {
+    const res = await fetch(asset('version.json'), { cache: 'no-store' });
+    if (!res.ok) throw new Error('version fetch failed');
+    const data = await res.json();
+    return data && data.version ? String(data.version) : VERSION_FALLBACK;
+  }
+
+  async function checkDeployVersion() {
+    try {
+      const remote = await fetchLiveVersion();
+      let seen = null;
+      try {
+        seen = localStorage.getItem(VERSION_KEY);
+      } catch {
+        /* ignore */
+      }
+
+      if (seen && seen !== remote) {
+        try {
+          localStorage.setItem(VERSION_KEY, remote);
+        } catch {
+          /* ignore */
+        }
+        reloadForUpdate('New edition — refreshing…');
+        return remote;
+      }
+
+      if (!seen) {
+        try {
+          localStorage.setItem(VERSION_KEY, remote);
+        } catch {
+          /* ignore */
+        }
+      }
+
+      return remote;
+    } catch {
+      return VERSION_FALLBACK;
+    }
+  }
+
+  fetchLiveVersion()
+    .then((version) => showSplashVersion(version))
     .catch(() => showSplashVersion(VERSION_FALLBACK))
     .finally(() => {
       window.requestAnimationFrame(() => {
@@ -52,23 +99,23 @@
       });
     });
 
-  // Soft auto-refresh: revalidate when tab becomes visible
+  checkDeployVersion();
+  window.setInterval(() => void checkDeployVersion(), VERSION_POLL_MS);
+
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState !== 'visible') return;
-    if (!('serviceWorker' in navigator)) return;
-    navigator.serviceWorker.getRegistration().then((reg) => {
-      if (reg) void reg.update();
-    });
+    void checkDeployVersion();
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistration().then((reg) => {
+        if (reg) void reg.update();
+      });
+    }
   });
 
   if (!('serviceWorker' in navigator)) return;
 
-  let refreshing = false;
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (refreshing) return;
-    refreshing = true;
-    showUpdateChip('Updating MBC…');
-    window.setTimeout(() => window.location.reload(), 400);
+    reloadForUpdate('Updating MBC…');
   });
 
   window.addEventListener('load', () => {
@@ -78,17 +125,18 @@
         if (reg.waiting) {
           reg.waiting.postMessage({ type: 'SKIP_WAITING' });
         }
+
         reg.addEventListener('updatefound', () => {
           const worker = reg.installing;
           if (!worker) return;
           worker.addEventListener('statechange', () => {
             if (worker.state === 'installed' && navigator.serviceWorker.controller) {
-              showUpdateChip('Updating MBC…');
               worker.postMessage({ type: 'SKIP_WAITING' });
             }
           });
         });
-        window.setInterval(() => void reg.update(), 5 * 60 * 1000);
+
+        window.setInterval(() => void reg.update(), SW_POLL_MS);
       })
       .catch(() => {
         hideUpdateChip();

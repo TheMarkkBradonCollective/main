@@ -1,7 +1,10 @@
-const CACHE_NAME = 'mbc-v1-5-6';
+const CACHE_NAME = 'mbc-v1-5-7';
+
 const PRECACHE_URLS = [
   './',
   './index.html',
+  './about/',
+  './about/index.html',
   './apps/',
   './apps/index.html',
   './support/',
@@ -35,6 +38,44 @@ const PRECACHE_URLS = [
   './js/version.js',
 ];
 
+function isNetworkFirst(url) {
+  const path = url.pathname;
+  if (path.endsWith('/sw.js') || path.endsWith('/version.json')) return true;
+  if (path.endsWith('.html') || path.endsWith('/') || !/\.[a-z0-9]+$/i.test(path)) return true;
+  if (/\.(css|js|json)$/i.test(path)) return true;
+  if (path.includes('/images/')) return true;
+  return false;
+}
+
+function cachePut(request, response) {
+  if (response && response.status === 200 && response.type === 'basic') {
+    const copy = response.clone();
+    caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+  }
+}
+
+function networkFirst(request) {
+  return fetch(request)
+    .then((response) => {
+      cachePut(request, response);
+      return response;
+    })
+    .catch(() => caches.match(request));
+}
+
+function staleWhileRevalidate(request) {
+  return caches.match(request).then((cached) => {
+    const networkFetch = fetch(request)
+      .then((response) => {
+        cachePut(request, response);
+        return response;
+      })
+      .catch(() => cached);
+
+    return cached || networkFetch;
+  });
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(PRECACHE_URLS)).then(() => self.skipWaiting())
@@ -44,9 +85,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(
-        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
-      )
+      Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))
     ).then(() => self.clients.claim())
   );
 });
@@ -63,36 +102,10 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
 
-  // Always network-first for SW + version stamp so updates land quickly
-  if (url.pathname.endsWith('/sw.js') || url.pathname.endsWith('/version.json')) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          if (response && response.status === 200) {
-            const copy = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-          }
-          return response;
-        })
-        .catch(() => caches.match(event.request))
-    );
+  if (isNetworkFirst(url)) {
+    event.respondWith(networkFirst(event.request));
     return;
   }
 
-  // Stale-while-revalidate for navigations and assets
-  event.respondWith(
-    caches.match(event.request).then((cached) => {
-      const networkFetch = fetch(event.request)
-        .then((response) => {
-          if (response && response.status === 200 && response.type === 'basic') {
-            const copy = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-          }
-          return response;
-        })
-        .catch(() => cached);
-
-      return cached || networkFetch;
-    })
-  );
+  event.respondWith(staleWhileRevalidate(event.request));
 });

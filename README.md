@@ -40,6 +40,14 @@ This showcase ships on **GitHub Pages** only. The old Vercel project for this re
 | Guardr | Marketplace angle | [guardr.co](https://guardr.co) |
 | Signature Security Specialist | Company / ops angle | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
 
+## Showcase apps (`My-Projects.json`)
+
+Canonical live links + icon sources for every listed app live in [`My-Projects.json`](My-Projects.json). Icons are pulled from those URLs (GitHub raw when a public repo exists, otherwise the live deployment):
+
+```bash
+npm run sync-app-icons
+```
+
 ## Brand logo
 
 Masters (black backdrop): [`icons/logo-master.png`](icons/logo-master.png), [`icons/wordmark-master.png`](icons/wordmark-master.png).

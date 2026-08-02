@@ -1,7 +1,7 @@
 {
   "name": "the-markk-brandon-collective",
   "private": true,
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "The Markk Brandon Collective — newspaper site, classifieds, downloads, support, and hire-me requests",
   "homepage": "https://themarkkbradoncollective.github.io/main/",
   "repository": {
@@ -14,7 +14,8 @@
     "process-brand": "node scripts/process-brand-assets.mjs",
     "sync-app-icons": "node scripts/sync-app-icons.mjs",
     "sync-apk-catalog": "node scripts/sync-apk-catalog.mjs",
-    "generate-icons": "node scripts/generate-icons.mjs"
+    "generate-icons": "node scripts/generate-icons.mjs",
+    "capture-screenshots": "node scripts/capture-app-screenshots.mjs"
   },
   "devDependencies": {
     "sharp": "^0.34.3"

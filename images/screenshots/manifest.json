@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-08-01T23:56:33.002Z",
+  "note": "Demo accounts use disposable emails and are not committed as credentials.",
+  "results": [
+    {
+      "slug": "buynothing",
+      "url": "https://sacramentobuynothing-tmbc.vercel.app",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/buynothing.jpg"
+    },
+    {
+      "slug": "strainverse",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/strainverse.jpg"
+    },
+    {
+      "slug": "spiritsverse",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/spiritsverse.jpg"
+    },
+    {
+      "slug": "cookverse",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/cookverse.jpg"
+    },
+    {
+      "slug": "friendr",
+      "url": "https://friendr-tmbc.vercel.app",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/friendr.jpg"
+    },
+    {
+      "slug": "findr",
+      "url": "https://findr-tmbc.vercel.app",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/findr.jpg"
+    },
+    {
+      "slug": "chatr",
+      "url": "https://chatr-tmbc.vercel.app",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/chatr.jpg"
+    },
+    {
+      "slug": "guardr",
+      "url": "https://www.guardr.co",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/guardr.jpg"
+    },
+    {
+      "slug": "sss",
+      "url": "https://signaturesecurityspecialist.com",
+      "ok": true,
+      "error": null,
+      "file": "images/screenshots/sss.jpg"
+    }
+  ]
+}

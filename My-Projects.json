@@ -10,7 +10,8 @@
     "iconSources": [
       "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg",
       "https://sacramentobuynothing.com/Logo.jpeg"
-    ]
+    ],
+    "screenshot": "images/screenshots/buynothing.jpg"
   },
   {
     "slug": "strainverse",
@@ -23,7 +24,8 @@
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png",
       "https://strainverse-tmbc.vercel.app/pwa-512.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/strainverse.jpg"
   },
   {
     "slug": "spiritsverse",
@@ -35,7 +37,8 @@
     "githubPrivate": true,
     "iconSources": [
       "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/spiritsverse.jpg"
   },
   {
     "slug": "cookverse",
@@ -49,7 +52,8 @@
       "https://cookverse-tmbc.vercel.app/logo-mark.png",
       "https://cookverse-tmbc.vercel.app/logo.png",
       "https://cookverse-tmbc.vercel.app/pwa-512.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/cookverse.jpg"
   },
   {
     "slug": "friendr",
@@ -62,7 +66,8 @@
     "iconSources": [
       "https://friendr-tmbc.vercel.app/icons/icon-512.png",
       "https://friendr-tmbc.vercel.app/brand/mark.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/friendr.jpg"
   },
   {
     "slug": "findr",
@@ -75,7 +80,8 @@
     "iconSources": [
       "https://findr-tmbc.vercel.app/logo.png",
       "https://findr-tmbc.vercel.app/icons/icon-192.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/findr.jpg"
   },
   {
     "slug": "chatr",
@@ -88,7 +94,8 @@
     "iconSources": [
       "https://chatr-tmbc.vercel.app/icon.png",
       "https://chatr-tmbc.vercel.app/apple-touch-icon.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/chatr.jpg"
   },
   {
     "slug": "guardr",
@@ -103,7 +110,8 @@
       "https://www.guardr.co/icon-512.png",
       "https://guardr.co/logo.png",
       "https://guardr.co/icon-512.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/guardr.jpg"
   },
   {
     "slug": "sss",
@@ -116,6 +124,7 @@
     "iconSources": [
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
-    ]
+    ],
+    "screenshot": "images/screenshots/sss.jpg"
   }
 ]

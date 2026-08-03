@@ -1,5 +1,5 @@
 (function () {
-  const VERSION_FALLBACK = '1.5.8';
+  const VERSION_FALLBACK = '1.5.11';
   const STAMP_KEY = 'mbc_deploy_stamp';
   const VERSION_POLL_MS = 30 * 1000;
   const SW_POLL_MS = 30 * 1000;

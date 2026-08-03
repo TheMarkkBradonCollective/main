@@ -312,3 +312,9 @@ body[data-showcase-theme="sss"] .masthead{background:#1f2529;color:#f3f1ea}
 body[data-showcase-theme="sss"] .masthead-tagline,
 body[data-showcase-theme="sss"] .masthead-edition{color:#c4a35a}
 body[data-showcase-theme="sss"] .page-title{color:#f3e6c4}
+
+.showcase-loading{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--grey-500);text-align:center;padding:2rem 0;
+}

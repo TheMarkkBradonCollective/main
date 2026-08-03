@@ -1,6 +1,7 @@
 [
   {
     "slug": "buynothing",
+    "theme": "buynothing",
     "name": "Sacramento Buy Nothing",
     "tagline": "Give Freely. Ask Kindly.",
     "url": "https://sacramentobuynothing-tmbc.vercel.app",
@@ -8,41 +9,68 @@
     "listing": "Listing #001",
     "status": "live",
     "statusLabel": "Active · Free",
+    "heroLine": "See what neighbors are giving — before you join.",
     "description": "Community-powered free gifting for Sacramento neighbors. No selling, no bidding, no flipping. 100% free, no ads, ever.",
     "features": [
       {
-        "title": "Give & ask listings",
-        "blurb": "Post what you’re giving away or what you need — neighbors coordinate pickup."
+        "title": "Neighborhood feed",
+        "blurb": "Giving, looking, and trade — filter by area, photos, and pickup.",
+        "shot": 0
       },
       {
-        "title": "Local by design",
-        "blurb": "Built around Sacramento so free stuff stays in the community."
+        "title": "Listing detail",
+        "blurb": "Photos, pickup notes, and message the poster when you’re ready.",
+        "shot": 1
       },
       {
-        "title": "No marketplace tax",
-        "blurb": "No ads, no selling, no flipping — spite for paywalled “free” apps."
+        "title": "Your neighbor profile",
+        "blurb": "Track what you’ve given and claimed in your sector.",
+        "shot": 2
+      }
+    ],
+    "steps": [
+      {
+        "title": "Browse the feed",
+        "blurb": "See live gifts near you."
+      },
+      {
+        "title": "Open a listing",
+        "blurb": "Check photos and pickup notes."
+      },
+      {
+        "title": "Go get it",
+        "blurb": "Coordinate with a neighbor — free."
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/SacramentoBuyNothing",
     "githubPrivate": true,
     "iconSources": [
-      "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg",
-      "https://sacramentobuynothing.com/Logo.jpeg"
+      "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg"
     ],
-    "screenshot": "images/screenshots/buynothing.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/buynothing.jpg",
-        "caption": "Listing preview"
+        "src": "images/screenshots/buynothing-1.jpg",
+        "caption": "Community feed"
       },
       {
         "src": "images/screenshots/buynothing-2.jpg",
-        "caption": "Browse / home"
+        "caption": "Listing detail"
+      },
+      {
+        "src": "images/screenshots/buynothing-3.jpg",
+        "caption": "Neighbor profile"
+      },
+      {
+        "src": "images/screenshots/buynothing.jpg",
+        "caption": "Listing preview"
       }
     ]
   },
   {
     "slug": "strainverse",
+    "theme": "verse",
+    "verseAccent": "#2d6a4f",
+    "verseTint": "#e8f5ee",
     "name": "StrainVerse",
     "tagline": "Stoner-First Social Network",
     "url": "https://strainverse-tmbc.vercel.app",
@@ -50,37 +78,72 @@
     "listing": "Listing #002",
     "status": "live",
     "statusLabel": "Active · Free",
+    "heroLine": "Inside the Verse — strains, sessions, and your stash.",
     "description": "Cannabis-centered social platform with strain directory, HerbHub, SocialSesh chats, MatchIt, and community feeds.",
     "features": [
       {
-        "title": "Strain encyclopedia",
-        "blurb": "Browse a living directory with community photos and reviews."
+        "title": "Strain detail",
+        "blurb": "Genetics, effects, flavors, and live chat on every strain.",
+        "shot": 0
       },
       {
-        "title": "Smoke Circles",
-        "blurb": "Every strain can have a live chat — find your people."
+        "title": "HerbHub",
+        "blurb": "Stories and posts from the culture — add yours.",
+        "shot": 1
       },
       {
-        "title": "MatchIt & HerbHub",
-        "blurb": "Social tools built for the culture, not advertisers."
+        "title": "MatchIt",
+        "blurb": "Find people near you once you set a city.",
+        "shot": 2
+      },
+      {
+        "title": "SocialSesh",
+        "blurb": "Private and public smoke sessions.",
+        "shot": 3
+      },
+      {
+        "title": "My Stash",
+        "blurb": "Your profile, posts, and friends in one place.",
+        "shot": 4
       }
+    ],
+    "sisters": [
+      "spiritsverse",
+      "cookverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
     "githubPrivate": false,
     "iconSources": [
-      "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png",
       "https://strainverse-tmbc.vercel.app/pwa-512.png"
     ],
-    "screenshot": "images/screenshots/strainverse.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/strainverse.jpg",
-        "caption": "Home & explore"
+        "src": "images/screenshots/strainverse-11.jpg",
+        "caption": "Blue Dream detail"
+      },
+      {
+        "src": "images/screenshots/strainverse-3.jpg",
+        "caption": "HerbHub"
+      },
+      {
+        "src": "images/screenshots/strainverse-4.jpg",
+        "caption": "MatchIt"
+      },
+      {
+        "src": "images/screenshots/strainverse-5.jpg",
+        "caption": "SocialSesh"
+      },
+      {
+        "src": "images/screenshots/strainverse-6.jpg",
+        "caption": "My Stash"
       }
     ]
   },
   {
     "slug": "spiritsverse",
+    "theme": "verse",
+    "verseAccent": "#0d9488",
+    "verseTint": "#e6fffa",
     "name": "SpiritsVerse",
     "tagline": "Social Network for Drink Lovers",
     "url": "https://spiritsverse-tmbc.vercel.app",
@@ -88,36 +151,72 @@
     "listing": "Listing #003",
     "status": "live",
     "statusLabel": "Active · Free",
+    "heroLine": "Inside the Verse — drinks, crawls, and SipStream.",
     "description": "Cocktails, beer, spirits, wine. Drink Directory, SipStream, Local Pub map, BarSesh groups, digital bar.",
     "features": [
       {
-        "title": "Drink Encyclopedia",
-        "blurb": "Cocktails, beer, spirits, and wine with community ratings."
+        "title": "Drink feed",
+        "blurb": "Thousands of pours — filter by flavor mood and type.",
+        "shot": 0
       },
       {
-        "title": "Bar crawls",
-        "blurb": "Map multi-stop nights and track the route."
+        "title": "Bar Crawl",
+        "blurb": "Public routes and multi-stop nights you can start.",
+        "shot": 1
       },
       {
-        "title": "SipStream & BarSesh",
-        "blurb": "Feeds and groups for people who care about a good pour."
+        "title": "SipStream",
+        "blurb": "Live updates from bars and homes.",
+        "shot": 2
+      },
+      {
+        "title": "Local map",
+        "blurb": "Bars, pubs, and clubs near you.",
+        "shot": 3
+      },
+      {
+        "title": "Your bar profile",
+        "blurb": "Edit bio, track your pours, own your shelf.",
+        "shot": 4
       }
+    ],
+    "sisters": [
+      "strainverse",
+      "cookverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
     "githubPrivate": true,
     "iconSources": [
       "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
     ],
-    "screenshot": "images/screenshots/spiritsverse.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/spiritsverse.jpg",
-        "caption": "Home & drink encyclopedia"
+        "src": "images/screenshots/spiritsverse-2.jpg",
+        "caption": "Drink feed"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-3.jpg",
+        "caption": "Bar Crawl"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-4.jpg",
+        "caption": "SipStream"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-5.jpg",
+        "caption": "Local map"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-6.jpg",
+        "caption": "Profile"
       }
     ]
   },
   {
     "slug": "cookverse",
+    "theme": "verse",
+    "verseAccent": "#e85d04",
+    "verseTint": "#fff4eb",
     "name": "Cookverse",
     "tagline": "The Social Table",
     "url": "https://cookverse-tmbc.vercel.app",
@@ -125,38 +224,70 @@
     "listing": "Listing #004",
     "status": "live",
     "statusLabel": "Active · Free",
+    "heroLine": "Inside the Verse — recipes, pantry, and the table.",
     "description": "Social cooking with Chef Gemini AI — pairings, substitutions, techniques, kitchen experiments. Part of the Verse family.",
     "features": [
       {
         "title": "The Table",
-        "blurb": "A home feed for what’s cooking — recipes, ideas, community."
+        "blurb": "Home feed — what’s cooking, categories, trending.",
+        "shot": 0
       },
       {
-        "title": "Chef Gemini",
-        "blurb": "AI help for pairings, substitutions, and techniques."
+        "title": "Create a dish",
+        "blurb": "New recipe flow with cover photo and kitchen tools.",
+        "shot": 1
       },
       {
-        "title": "Pantry & forum",
-        "blurb": "Save menus, track pantry items, talk shop in The Forum."
+        "title": "My Pantry",
+        "blurb": "Stock ingredients from thousands of items.",
+        "shot": 2
+      },
+      {
+        "title": "Profile kitchen",
+        "blurb": "Followers, dishes, and your saved recipes.",
+        "shot": 3
+      },
+      {
+        "title": "The Forum",
+        "blurb": "Kitchen stories from the community.",
+        "shot": 4
       }
+    ],
+    "sisters": [
+      "strainverse",
+      "spiritsverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
     "githubPrivate": true,
     "iconSources": [
-      "https://cookverse-tmbc.vercel.app/logo-mark.png",
-      "https://cookverse-tmbc.vercel.app/logo.png",
-      "https://cookverse-tmbc.vercel.app/pwa-512.png"
+      "https://cookverse-tmbc.vercel.app/logo-mark.png"
     ],
-    "screenshot": "images/screenshots/cookverse.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/cookverse.jpg",
-        "caption": "Get started"
+        "src": "images/screenshots/cookverse-1.jpg",
+        "caption": "The Table"
+      },
+      {
+        "src": "images/screenshots/cookverse-2.jpg",
+        "caption": "Create a dish"
+      },
+      {
+        "src": "images/screenshots/cookverse-3.jpg",
+        "caption": "My Pantry"
+      },
+      {
+        "src": "images/screenshots/cookverse-4.jpg",
+        "caption": "Profile"
+      },
+      {
+        "src": "images/screenshots/cookverse-5.jpg",
+        "caption": "The Forum"
       }
     ]
   },
   {
     "slug": "friendr",
+    "theme": "friendr",
     "name": "Friendr",
     "tagline": "Consent-First Social Connection",
     "url": "https://friendr-tmbc.vercel.app",
@@ -164,37 +295,57 @@
     "listing": "Listing #005",
     "status": "live",
     "statusLabel": "Active · Free",
+    "heroLine": "Three layers. You decide how far things go.",
     "description": "Free, ad-free social app with three opt-in layers: Friends, A Bit More, and Way More. 18+ ID-verified, human moderation, no data sold.",
     "features": [
       {
-        "title": "Three opt-in layers",
-        "blurb": "Friends, A Bit More, and Way More — you decide how far things go."
+        "title": "Consent-first home",
+        "blurb": "Friends · A Bit More · Way More — opt in on purpose.",
+        "shot": 0
       },
       {
-        "title": "18+ verified",
-        "blurb": "ID-verified adults only, with human moderation where it matters."
+        "title": "18+ ID verification",
+        "blurb": "Real checks before the deeper layers unlock.",
+        "shot": 1
+      }
+    ],
+    "layers": [
+      {
+        "title": "Friends",
+        "blurb": "Connection without the dating pressure."
       },
       {
-        "title": "No ads, no data sold",
-        "blurb": "Built as spite for paywalled, ad-driven social apps."
+        "title": "A Bit More",
+        "blurb": "Opt-in when you want something closer."
+      },
+      {
+        "title": "Way More",
+        "blurb": "The deepest layer — still your call."
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Friendr",
     "githubPrivate": true,
     "iconSources": [
-      "https://friendr-tmbc.vercel.app/icons/icon-512.png",
-      "https://friendr-tmbc.vercel.app/brand/mark.png"
+      "https://friendr-tmbc.vercel.app/icons/icon-512.png"
     ],
-    "screenshot": "images/screenshots/friendr.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/friendr.jpg",
+        "src": "images/screenshots/friendr-1.jpg",
         "caption": "Landing"
+      },
+      {
+        "src": "images/screenshots/friendr-2.jpg",
+        "caption": "ID verification"
+      },
+      {
+        "src": "images/screenshots/friendr.jpg",
+        "caption": "Get started"
       }
     ]
   },
   {
     "slug": "findr",
+    "theme": "findr",
     "name": "Findr",
     "tagline": "Location sharing for your people",
     "url": "https://findr-tmbc.vercel.app",
@@ -202,29 +353,39 @@
     "listing": "Listing #008",
     "status": "live",
     "statusLabel": "Active · Free",
+    "heroLine": "Account on the web. Live map with your people.",
     "description": "Share live location with the people you trust — account on the web, map sharing from the Findr app.",
     "features": [
       {
-        "title": "People you trust",
-        "blurb": "Share live location on your terms — not a public feed."
+        "title": "Account home",
+        "blurb": "Profile, devices, privacy, and open the live app.",
+        "shot": 0
       },
       {
-        "title": "Web account + app map",
-        "blurb": "Manage profile on the web; share live from the Findr app."
+        "title": "Account & security",
+        "blurb": "Handle, bio, password, and Findr+ controls.",
+        "shot": 1
       },
       {
-        "title": "Device tools",
-        "blurb": "Install, recover, and control sharing from one account home."
+        "title": "Get started",
+        "blurb": "Sign up, then install for map sharing.",
+        "shot": 2
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Findr",
     "githubPrivate": true,
     "iconSources": [
-      "https://findr-tmbc.vercel.app/logo.png",
-      "https://findr-tmbc.vercel.app/icons/icon-192.png"
+      "https://findr-tmbc.vercel.app/logo.png"
     ],
-    "screenshot": "images/screenshots/findr.jpg",
     "screenshots": [
+      {
+        "src": "images/screenshots/findr-1.jpg",
+        "caption": "Account home"
+      },
+      {
+        "src": "images/screenshots/findr-2.jpg",
+        "caption": "Profile & security"
+      },
       {
         "src": "images/screenshots/findr.jpg",
         "caption": "Get started"
@@ -233,6 +394,7 @@
   },
   {
     "slug": "chatr",
+    "theme": "chatr",
     "name": "Chatr",
     "tagline": "Secure Private Chat",
     "url": "https://chatr-tmbc.vercel.app",
@@ -240,41 +402,57 @@
     "listing": "Listing #009",
     "status": "live",
     "statusLabel": "Active · Free",
+    "heroLine": "Pin encrypted sticky notes to anyone with a code.",
     "description": "Your private bulletin board — pin encrypted sticky notes to anyone with a code. Works offline and syncs when you're back.",
     "features": [
       {
-        "title": "Code-based connect",
-        "blurb": "Share your board code so others can pin you a note."
+        "title": "Pin to the board",
+        "blurb": "Pick a name — get your code on the corkboard.",
+        "shot": 0
       },
       {
-        "title": "Encrypted sticky notes",
-        "blurb": "Private messages that feel like a corkboard, not a chat dump."
+        "title": "Share your code",
+        "blurb": "Invite link + connect by typing their code.",
+        "shot": 1
       },
       {
-        "title": "Works offline",
-        "blurb": "Pin locally and sync when you’re back online."
+        "title": "Chats / notes",
+        "blurb": "Encrypted notes land on your board.",
+        "shot": 2
+      },
+      {
+        "title": "Account & expiry",
+        "blurb": "Control how long notes live.",
+        "shot": 3
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Chatr",
     "githubPrivate": true,
     "iconSources": [
-      "https://chatr-tmbc.vercel.app/icon.png",
-      "https://chatr-tmbc.vercel.app/apple-touch-icon.png"
+      "https://chatr-tmbc.vercel.app/icon.png"
     ],
-    "screenshot": "images/screenshots/chatr.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/chatr.jpg",
-        "caption": "Board & connect"
+        "src": "images/screenshots/chatr-1.jpg",
+        "caption": "Welcome"
       },
       {
         "src": "images/screenshots/chatr-2.jpg",
-        "caption": "Welcome board"
+        "caption": "Board & connect"
+      },
+      {
+        "src": "images/screenshots/chatr-3.jpg",
+        "caption": "Chats"
+      },
+      {
+        "src": "images/screenshots/chatr-4.jpg",
+        "caption": "Account"
       }
     ]
   },
   {
     "slug": "guardr",
+    "theme": "guardr",
     "name": "Guardr",
     "tagline": "Independent Security Marketplace",
     "url": "https://guardr.co",
@@ -282,43 +460,71 @@
     "listing": "Security · A",
     "status": "live",
     "statusLabel": "Active",
+    "heroLine": "Post coverage. Hire licensed guards. Or find the work.",
     "description": "Connect with protection services on demand — discovering and engaging security professionals, anytime, anywhere.",
     "features": [
       {
-        "title": "Post coverage",
-        "blurb": "Request licensed guards for a site, event, or shift."
+        "title": "Marketplace home",
+        "blurb": "Post a job or find work — map-first, licensed only.",
+        "shot": 0
       },
       {
-        "title": "Find work as a guard",
-        "blurb": "Independent pros browse jobs without a gatekept agency stack."
+        "title": "Guard sign-in",
+        "blurb": "Jobs and earnings for independent guards.",
+        "shot": 1
       },
       {
-        "title": "Map-first marketplace",
-        "blurb": "Browse coverage needs and opportunities in your area."
+        "title": "Create guard account",
+        "blurb": "Independent onboarding for licensed pros.",
+        "shot": 2
+      },
+      {
+        "title": "Create client account",
+        "blurb": "Post coverage requests as a client.",
+        "shot": 3
+      }
+    ],
+    "roles": [
+      {
+        "title": "For clients",
+        "blurb": "Post coverage, schedule shifts, hire licensed guards."
+      },
+      {
+        "title": "For guards",
+        "blurb": "Browse jobs, get paid direct, track shifts."
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Guardr",
     "githubPrivate": true,
     "iconSources": [
-      "https://www.guardr.co/logo.png",
-      "https://www.guardr.co/icon-512.png",
-      "https://guardr.co/logo.png",
-      "https://guardr.co/icon-512.png"
+      "https://www.guardr.co/logo.png"
     ],
-    "screenshot": "images/screenshots/guardr.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/guardr.jpg",
-        "caption": "Post coverage / find work"
+        "src": "images/screenshots/guardr-1.jpg",
+        "caption": "Marketplace home"
       },
       {
-        "src": "images/screenshots/guardr-2.jpg",
-        "caption": "Explore Guardr"
+        "src": "images/screenshots/guardr-7.jpg",
+        "caption": "Guard sign-in"
+      },
+      {
+        "src": "images/screenshots/guardr-10.jpg",
+        "caption": "Guard signup"
+      },
+      {
+        "src": "images/screenshots/guardr-11.jpg",
+        "caption": "Client signup"
+      },
+      {
+        "src": "images/screenshots/guardr-5.jpg",
+        "caption": "Explore paths"
       }
     ]
   },
   {
     "slug": "sss",
+    "theme": "sss",
     "name": "Signature Security Specialist",
     "tagline": "Protect with Purpose · Perform with Excellence",
     "url": "https://signaturesecurityspecialist.com",
@@ -326,32 +532,60 @@
     "listing": "Security · B",
     "status": "dev",
     "statusLabel": "In Development",
+    "heroLine": "Ops, training, and the company behind the badge.",
     "description": "Executive security company connecting guards, event staff, and medical responders with clients. Mobile-first ops, mission scheduling, training LMS, companion apps.",
     "features": [
       {
-        "title": "Ops & dispatch",
-        "blurb": "Team, scheduling, and command-center workflows."
+        "title": "Company home",
+        "blurb": "Sacramento · San Francisco — persons, places, things.",
+        "shot": 0
       },
       {
-        "title": "Events & venues",
-        "blurb": "Guards, event staff, and medical responders for real jobs."
+        "title": "Training paths",
+        "blurb": "Unarmed, armed, event security — get training.",
+        "shot": 1
       },
       {
-        "title": "Training LMS",
-        "blurb": "Companion apps and training for the people who show up."
+        "title": "Certifications",
+        "blurb": "Rank levels and training tracks.",
+        "shot": 2
+      },
+      {
+        "title": "Trusted voices",
+        "blurb": "What clients and pros say.",
+        "shot": 3
+      },
+      {
+        "title": "The platform story",
+        "blurb": "Why Signature exists.",
+        "shot": 4
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
     "githubPrivate": true,
     "iconSources": [
-      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
-      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch-bg.png"
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png"
     ],
-    "screenshot": "images/screenshots/sss.jpg",
     "screenshots": [
       {
-        "src": "images/screenshots/sss.jpg",
-        "caption": "Company landing"
+        "src": "images/screenshots/sss-1.jpg",
+        "caption": "Company home"
+      },
+      {
+        "src": "images/screenshots/sss-5.jpg",
+        "caption": "Training"
+      },
+      {
+        "src": "images/screenshots/sss-9.jpg",
+        "caption": "Certifications"
+      },
+      {
+        "src": "images/screenshots/sss-10.jpg",
+        "caption": "Testimonials"
+      },
+      {
+        "src": "images/screenshots/sss-15.jpg",
+        "caption": "About the platform"
       }
     ]
   }

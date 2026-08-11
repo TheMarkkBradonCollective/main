@@ -64,6 +64,57 @@
         "src": "images/screenshots/buynothing.jpg",
         "caption": "Listing preview"
       }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Sacramento Buy Nothing is a neighborhood gifting board — not a marketplace. Neighbors post what they are giving away, what they need, or what they would trade. No money changes hands.",
+      "Built for Sacramento because this is home. The app runs on Supabase with real-time listings, photos, and messaging. Install as a PWA on Android, tablet, or Chromebook — same account everywhere.",
+      "No ads, no data selling, no premium tier. If you use it and want it to stay online, the Support page is there."
+    ],
+    "highlights": [
+      "100% free · no ads",
+      "Sacramento neighborhoods",
+      "PWA on phone, tablet, Chromebook"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/buynothing-1.jpg",
+        "caption": "Community feed"
+      },
+      {
+        "src": "images/screenshots/buynothing-2.jpg",
+        "caption": "Listing detail"
+      },
+      {
+        "src": "images/screenshots/buynothing-3.jpg",
+        "caption": "Neighbor profile"
+      },
+      {
+        "src": "images/screenshots/buynothing.jpg",
+        "caption": "Listing preview"
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/buynothing-1.jpg",
+        "caption": "Community feed"
+      },
+      {
+        "src": "images/screenshots/buynothing-2.jpg",
+        "caption": "Listing detail"
+      },
+      {
+        "src": "images/screenshots/buynothing-3.jpg",
+        "caption": "Neighbor profile"
+      },
+      {
+        "src": "images/screenshots/buynothing.jpg",
+        "caption": "Listing preview"
+      }
     ]
   },
   {
@@ -117,6 +168,65 @@
       "https://strainverse-tmbc.vercel.app/pwa-512.png"
     ],
     "screenshots": [
+      {
+        "src": "images/screenshots/strainverse-11.jpg",
+        "caption": "Blue Dream detail"
+      },
+      {
+        "src": "images/screenshots/strainverse-3.jpg",
+        "caption": "HerbHub"
+      },
+      {
+        "src": "images/screenshots/strainverse-4.jpg",
+        "caption": "MatchIt"
+      },
+      {
+        "src": "images/screenshots/strainverse-5.jpg",
+        "caption": "SocialSesh"
+      },
+      {
+        "src": "images/screenshots/strainverse-6.jpg",
+        "caption": "My Stash"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "StrainVerse is a cannabis-first social network — strain directory, community feeds, HerbHub stories, SocialSesh chats, and MatchIt for meeting people near you.",
+      "Part of the Verse family alongside SpiritsVerse and Cookverse. Same newspaper energy on the Collective site; full color inside the app. Works on phone, tablet, and desktop Chromebook as a PWA.",
+      "Free to use. Real database, real moderation hooks, real features — not a landing-page demo."
+    ],
+    "highlights": [
+      "Strain directory + social feeds",
+      "HerbHub & SocialSesh",
+      "Verse family app"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/strainverse-11.jpg",
+        "caption": "Blue Dream detail"
+      },
+      {
+        "src": "images/screenshots/strainverse-3.jpg",
+        "caption": "HerbHub"
+      },
+      {
+        "src": "images/screenshots/strainverse-4.jpg",
+        "caption": "MatchIt"
+      },
+      {
+        "src": "images/screenshots/strainverse-5.jpg",
+        "caption": "SocialSesh"
+      },
+      {
+        "src": "images/screenshots/strainverse-6.jpg",
+        "caption": "My Stash"
+      }
+    ],
+    "screenshotsDesktop": [
       {
         "src": "images/screenshots/strainverse-11.jpg",
         "caption": "Blue Dream detail"
@@ -210,6 +320,65 @@
         "src": "images/screenshots/spiritsverse-6.jpg",
         "caption": "Profile"
       }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "SpiritsVerse is the drinks side of the Verse — cocktails, beer, wine, spirits. Drink Directory, SipStream live updates, Local Pub map, BarSesh groups, and your digital bar shelf.",
+      "Built the same way as StrainVerse: Supabase backend, PWA install on Android phone, tablet, or Chromebook. One account, three screen sizes.",
+      "For people who care about what is in the glass and who they share a pour with."
+    ],
+    "highlights": [
+      "Drink Directory & SipStream",
+      "Bar Crawl routes",
+      "Local pub map"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/spiritsverse-2.jpg",
+        "caption": "Drink feed"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-3.jpg",
+        "caption": "Bar Crawl"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-4.jpg",
+        "caption": "SipStream"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-5.jpg",
+        "caption": "Local map"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-6.jpg",
+        "caption": "Profile"
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/spiritsverse-2.jpg",
+        "caption": "Drink feed"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-3.jpg",
+        "caption": "Bar Crawl"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-4.jpg",
+        "caption": "SipStream"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-5.jpg",
+        "caption": "Local map"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-6.jpg",
+        "caption": "Profile"
+      }
     ]
   },
   {
@@ -263,6 +432,65 @@
       "https://cookverse-tmbc.vercel.app/logo-mark.png"
     ],
     "screenshots": [
+      {
+        "src": "images/screenshots/cookverse-1.jpg",
+        "caption": "The Table"
+      },
+      {
+        "src": "images/screenshots/cookverse-2.jpg",
+        "caption": "Create a dish"
+      },
+      {
+        "src": "images/screenshots/cookverse-3.jpg",
+        "caption": "My Pantry"
+      },
+      {
+        "src": "images/screenshots/cookverse-4.jpg",
+        "caption": "Profile"
+      },
+      {
+        "src": "images/screenshots/cookverse-5.jpg",
+        "caption": "The Forum"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Cookverse is the social table — recipes, pantry tracking, Chef Gemini AI for pairings and substitutions, and a community forum for kitchen experiments.",
+      "Third sister in the Verse. Responsive layouts mean the same app on your phone in the kitchen, a tablet on the counter, or a Chromebook for longer writes.",
+      "Free, ad-free, and meant to be used weekly — not once and forgotten."
+    ],
+    "highlights": [
+      "Chef Gemini AI assistant",
+      "Pantry + recipes",
+      "Community forum"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/cookverse-1.jpg",
+        "caption": "The Table"
+      },
+      {
+        "src": "images/screenshots/cookverse-2.jpg",
+        "caption": "Create a dish"
+      },
+      {
+        "src": "images/screenshots/cookverse-3.jpg",
+        "caption": "My Pantry"
+      },
+      {
+        "src": "images/screenshots/cookverse-4.jpg",
+        "caption": "Profile"
+      },
+      {
+        "src": "images/screenshots/cookverse-5.jpg",
+        "caption": "The Forum"
+      }
+    ],
+    "screenshotsDesktop": [
       {
         "src": "images/screenshots/cookverse-1.jpg",
         "caption": "The Table"
@@ -341,6 +569,49 @@
         "src": "images/screenshots/friendr.jpg",
         "caption": "Get started"
       }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Friendr is consent-first social connection. Three opt-in layers: Friends, A Bit More, and Way More. You choose how far things go — the app never opts you in.",
+      "18+ ID verification before deeper layers unlock. Human moderation, no ads, no data sold. Android PWA plus tablet and Chromebook layouts.",
+      "Built as a direct answer to paywalled, ad-driven social apps that treat people as inventory."
+    ],
+    "highlights": [
+      "Three consent layers",
+      "18+ ID verified",
+      "No ads · no data sold"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/friendr-1.jpg",
+        "caption": "Landing"
+      },
+      {
+        "src": "images/screenshots/friendr-2.jpg",
+        "caption": "ID verification"
+      },
+      {
+        "src": "images/screenshots/friendr.jpg",
+        "caption": "Get started"
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/friendr-1.jpg",
+        "caption": "Landing"
+      },
+      {
+        "src": "images/screenshots/friendr-2.jpg",
+        "caption": "ID verification"
+      },
+      {
+        "src": "images/screenshots/friendr.jpg",
+        "caption": "Get started"
+      }
     ]
   },
   {
@@ -378,6 +649,49 @@
       "https://findr-tmbc.vercel.app/logo.png"
     ],
     "screenshots": [
+      {
+        "src": "images/screenshots/findr-1.jpg",
+        "caption": "Account home"
+      },
+      {
+        "src": "images/screenshots/findr-2.jpg",
+        "caption": "Profile & security"
+      },
+      {
+        "src": "images/screenshots/findr.jpg",
+        "caption": "Get started"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Findr is live location sharing for people you trust. Account and privacy controls on the web; map sharing from the mobile app.",
+      "Works across phone, tablet, and Chromebook for account management. The map experience is tuned for mobile; settings and billing are comfortable on a laptop too.",
+      "Free core — Findr+ adds extras without locking basics behind a wall."
+    ],
+    "highlights": [
+      "Trust-circle location sharing",
+      "Web account + mobile map",
+      "Privacy controls built in"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/findr-1.jpg",
+        "caption": "Account home"
+      },
+      {
+        "src": "images/screenshots/findr-2.jpg",
+        "caption": "Profile & security"
+      },
+      {
+        "src": "images/screenshots/findr.jpg",
+        "caption": "Get started"
+      }
+    ],
+    "screenshotsDesktop": [
       {
         "src": "images/screenshots/findr-1.jpg",
         "caption": "Account home"
@@ -448,6 +762,57 @@
         "src": "images/screenshots/chatr-4.jpg",
         "caption": "Account"
       }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Chatr is a private bulletin board. Pin encrypted sticky notes to anyone with a code. Works offline and syncs when you are back.",
+      "No phone number required. No public feed. Connect by code, write a note, it lands on their board. PWA on Android, tablet, and Chromebook.",
+      "For conversations that should not live in a group chat forever."
+    ],
+    "highlights": [
+      "Encrypted sticky notes",
+      "Connect by code",
+      "Offline-capable PWA"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/chatr-1.jpg",
+        "caption": "Welcome"
+      },
+      {
+        "src": "images/screenshots/chatr-2.jpg",
+        "caption": "Board & connect"
+      },
+      {
+        "src": "images/screenshots/chatr-3.jpg",
+        "caption": "Chats"
+      },
+      {
+        "src": "images/screenshots/chatr-4.jpg",
+        "caption": "Account"
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/chatr-1.jpg",
+        "caption": "Welcome"
+      },
+      {
+        "src": "images/screenshots/chatr-2.jpg",
+        "caption": "Board & connect"
+      },
+      {
+        "src": "images/screenshots/chatr-3.jpg",
+        "caption": "Chats"
+      },
+      {
+        "src": "images/screenshots/chatr-4.jpg",
+        "caption": "Account"
+      }
     ]
   },
   {
@@ -486,12 +851,22 @@
     ],
     "roles": [
       {
-        "title": "For clients",
-        "blurb": "Post coverage, schedule shifts, hire licensed guards."
+        "id": "guard",
+        "title": "Guard",
+        "blurb": "Browse open shifts, clock in, track earnings, and manage your guard profile — independent licensed pros only.",
+        "shot": 1
       },
       {
-        "title": "For guards",
-        "blurb": "Browse jobs, get paid direct, track shifts."
+        "id": "client",
+        "title": "Client",
+        "blurb": "Post coverage requests, schedule shifts, review guard profiles, and hire licensed protection on demand.",
+        "shot": 3
+      },
+      {
+        "id": "staff",
+        "title": "Staff",
+        "blurb": "Operations dashboard — verify licenses, dispatch coverage, monitor active posts, and support guards and clients.",
+        "shot": 0
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Guardr",
@@ -500,6 +875,65 @@
       "https://www.guardr.co/logo.png"
     ],
     "screenshots": [
+      {
+        "src": "images/screenshots/guardr-1.jpg",
+        "caption": "Marketplace home"
+      },
+      {
+        "src": "images/screenshots/guardr-7.jpg",
+        "caption": "Guard sign-in"
+      },
+      {
+        "src": "images/screenshots/guardr-10.jpg",
+        "caption": "Guard signup"
+      },
+      {
+        "src": "images/screenshots/guardr-11.jpg",
+        "caption": "Client signup"
+      },
+      {
+        "src": "images/screenshots/guardr-5.jpg",
+        "caption": "Explore paths"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Guardr is an independent security marketplace. Clients post coverage needs. Licensed guards browse jobs, clock shifts, and get paid direct. Staff ops handle verification and dispatch.",
+      "Three distinct experiences — Guard, Client, and Staff — each with flows tuned to that role. Map-first job discovery, license checks, and shift tracking.",
+      "Available on Android phone, tablet, and Chromebook/desktop web. Same platform, role-based views."
+    ],
+    "highlights": [
+      "Guard · Client · Staff roles",
+      "Licensed guards only",
+      "Map-first job board"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/guardr-1.jpg",
+        "caption": "Marketplace home"
+      },
+      {
+        "src": "images/screenshots/guardr-7.jpg",
+        "caption": "Guard sign-in"
+      },
+      {
+        "src": "images/screenshots/guardr-10.jpg",
+        "caption": "Guard signup"
+      },
+      {
+        "src": "images/screenshots/guardr-11.jpg",
+        "caption": "Client signup"
+      },
+      {
+        "src": "images/screenshots/guardr-5.jpg",
+        "caption": "Explore paths"
+      }
+    ],
+    "screenshotsDesktop": [
       {
         "src": "images/screenshots/guardr-1.jpg",
         "caption": "Marketplace home"
@@ -567,6 +1001,65 @@
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png"
     ],
     "screenshots": [
+      {
+        "src": "images/screenshots/sss-1.jpg",
+        "caption": "Company home"
+      },
+      {
+        "src": "images/screenshots/sss-5.jpg",
+        "caption": "Training"
+      },
+      {
+        "src": "images/screenshots/sss-9.jpg",
+        "caption": "Certifications"
+      },
+      {
+        "src": "images/screenshots/sss-10.jpg",
+        "caption": "Testimonials"
+      },
+      {
+        "src": "images/screenshots/sss-15.jpg",
+        "caption": "About the platform"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Signature Security Specialist is the company angle — executive protection, event security, training LMS, and ops tooling for guards and medical responders.",
+      "Mobile-first missions, scheduling, certifications, and the public company site. In active development with live training and company pages shipping incrementally.",
+      "Phone for field work, tablet for briefings, Chromebook for admin — all part of the same stack."
+    ],
+    "highlights": [
+      "Training & certifications",
+      "Event & executive security",
+      "Company ops platform"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/sss-1.jpg",
+        "caption": "Company home"
+      },
+      {
+        "src": "images/screenshots/sss-5.jpg",
+        "caption": "Training"
+      },
+      {
+        "src": "images/screenshots/sss-9.jpg",
+        "caption": "Certifications"
+      },
+      {
+        "src": "images/screenshots/sss-10.jpg",
+        "caption": "Testimonials"
+      },
+      {
+        "src": "images/screenshots/sss-15.jpg",
+        "caption": "About the platform"
+      }
+    ],
+    "screenshotsDesktop": [
       {
         "src": "images/screenshots/sss-1.jpg",
         "caption": "Company home"

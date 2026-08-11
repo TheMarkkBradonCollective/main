@@ -33,42 +33,93 @@
     return (params.get('app') || params.get('slug') || '').trim().toLowerCase();
   }
 
-  function normalize(raw) {
-    const screenshots = (Array.isArray(raw.screenshots) && raw.screenshots.length
-      ? raw.screenshots
-      : raw.screenshot
-        ? [{ src: raw.screenshot, caption: 'App screen' }]
-        : []
-    ).map((shot, i) =>
+  function normalizeScreenshots(list, fallback = []) {
+    const source = Array.isArray(list) && list.length ? list : fallback;
+    return source.map((shot, i) =>
       typeof shot === 'string'
         ? { src: shot, caption: `Screen ${i + 1}` }
         : { src: shot.src, caption: shot.caption || `Screen ${i + 1}` }
     );
+  }
+
+  function normalize(raw) {
+    const phoneShots = normalizeScreenshots(raw.screenshots);
+    const tabletShots = normalizeScreenshots(raw.screenshotsTablet, phoneShots);
+    const desktopShots = normalizeScreenshots(raw.screenshotsDesktop, phoneShots);
 
     return {
       ...raw,
       theme: raw.theme || 'default',
-      screenshots,
+      screenshots: phoneShots,
+      screenshotsTablet: tabletShots,
+      screenshotsDesktop: desktopShots,
       features: Array.isArray(raw.features) ? raw.features : [],
       steps: Array.isArray(raw.steps) ? raw.steps : [],
       layers: Array.isArray(raw.layers) ? raw.layers : [],
       roles: Array.isArray(raw.roles) ? raw.roles : [],
       sisters: Array.isArray(raw.sisters) ? raw.sisters : [],
+      readDetails: Array.isArray(raw.readDetails) ? raw.readDetails : [],
+      platforms: Array.isArray(raw.platforms) ? raw.platforms : ['phone', 'tablet', 'chromebook'],
     };
   }
 
-  function phone(shot, opts = {}) {
+  function deviceScreen(shot, type) {
     if (!shot) return '';
+    const wrapClass =
+      type === 'tablet'
+        ? 'sc-tablet-screen-wrap'
+        : type === 'chromebook'
+          ? 'sc-chromebook-screen-wrap'
+          : 'sc-phone-screen-wrap';
+    return `
+      <div class="${wrapClass} sc-device-screen">
+        ${type === 'phone' ? '<span class="sc-phone-camera" aria-hidden="true"></span>' : ''}
+        ${type === 'tablet' ? '<span class="sc-tablet-camera" aria-hidden="true"></span>' : ''}
+        ${type === 'chromebook' ? '<span class="sc-chromebook-webcam" aria-hidden="true"></span>' : ''}
+        <img src="${escapeHtml(asset(shot.src))}" alt="${escapeHtml(shot.caption)}" loading="lazy">
+      </div>`;
+  }
+
+  function device(shot, opts = {}) {
+    if (!shot) return '';
+    const type = opts.type || 'phone';
     const cls = opts.className ? ` ${opts.className}` : '';
     const loading = opts.eager ? 'eager' : 'lazy';
+    const caption = opts.hideCaption ? '' : `<figcaption>${escapeHtml(shot.caption)}</figcaption>`;
+
+    if (type === 'tablet') {
+      return `
+        <figure class="sc-tablet sc-device${cls}">
+          <div class="sc-tablet-body">
+            ${deviceScreen(shot, 'tablet')}
+          </div>
+          ${caption}
+        </figure>`;
+    }
+
+    if (type === 'chromebook') {
+      return `
+        <figure class="sc-chromebook sc-device${cls}">
+          <div class="sc-chromebook-lid">
+            ${deviceScreen(shot, 'chromebook')}
+          </div>
+          <div class="sc-chromebook-base" aria-hidden="true"></div>
+          ${caption}
+        </figure>`;
+    }
+
     return `
-      <figure class="sc-phone${cls}">
-        <div class="sc-phone-bezel" aria-hidden="true"><span class="sc-phone-notch"></span></div>
-        <div class="sc-phone-screen">
-          <img src="${escapeHtml(asset(shot.src))}" alt="${escapeHtml(shot.caption)}" width="390" height="844" loading="${loading}">
+      <figure class="sc-phone sc-device${cls}">
+        <div class="sc-phone-body">
+          ${deviceScreen(shot, 'phone').replace('loading="lazy"', `loading="${loading}"`)}
+          <div class="sc-phone-chin" aria-hidden="true"></div>
         </div>
-        ${opts.hideCaption ? '' : `<figcaption>${escapeHtml(shot.caption)}</figcaption>`}
+        ${caption}
       </figure>`;
+  }
+
+  function phone(shot, opts = {}) {
+    return device(shot, { ...opts, type: 'phone' });
   }
 
   function actions(project) {
@@ -87,6 +138,63 @@
         <a href="../">The Classifieds</a> /
         ${escapeHtml(project.name)}
       </p>`;
+  }
+
+  function readDetails(project) {
+    const paragraphs = project.readDetails.length
+      ? project.readDetails
+      : [project.description, project.heroLine].filter(Boolean);
+
+    if (!paragraphs.length) return '';
+
+    const bullets = project.highlights?.length
+      ? `<ul>${project.highlights.map((h) => `<li>${escapeHtml(h)}</li>`).join('')}</ul>`
+      : '';
+
+    return `
+      <section class="sc-read-details">
+        <div class="section-head">
+          <p class="kicker">Read the listing</p>
+          <h2>What this app is — and why it exists</h2>
+        </div>
+        <div class="prose">
+          ${paragraphs.map((p) => `<p>${escapeHtml(p)}</p>`).join('')}
+          ${bullets}
+        </div>
+      </section>`;
+  }
+
+  function devicePlatforms(project, shotIndex = 0) {
+    const phoneShot = project.screenshots[shotIndex] || project.screenshots[0];
+    const tabletShot = project.screenshotsTablet[shotIndex] || project.screenshotsTablet[0] || phoneShot;
+    const desktopShot = project.screenshotsDesktop[shotIndex] || project.screenshotsDesktop[0] || phoneShot;
+
+    const platforms = [
+      { key: 'phone', label: 'Android phone', shot: phoneShot, type: 'phone' },
+      { key: 'tablet', label: 'Tablet', shot: tabletShot, type: 'tablet' },
+      { key: 'chromebook', label: 'Chromebook / desktop', shot: desktopShot, type: 'chromebook' },
+    ].filter((p) => project.platforms.includes(p.key));
+
+    if (!platforms.length) return '';
+
+    return `
+      <section class="sc-platforms">
+        <div class="section-head">
+          <p class="kicker">Works on your devices</p>
+          <h2>Phone, tablet, and Chromebook</h2>
+        </div>
+        <div class="sc-device-platforms">
+          ${platforms
+            .map(
+              (p) => `
+            <div class="sc-device-platform">
+              <h4>${escapeHtml(p.label)}</h4>
+              ${device(p.shot, { type: p.type, hideCaption: true, eager: p.key === 'phone' })}
+            </div>`
+            )
+            .join('')}
+        </div>
+      </section>`;
   }
 
   function featureRows(project) {
@@ -115,7 +223,7 @@
           <p class="kicker">Interface show</p>
           <h2>${escapeHtml(title)}</h2>
         </div>
-        <div class="sc-phone-rail">
+        <div class="sc-device-rail">
           ${project.screenshots.map((s, i) => phone(s, { eager: i < 2 })).join('')}
         </div>
       </section>`;
@@ -151,14 +259,97 @@
       </div>`;
   }
 
+  function guardrTabs(project) {
+    const defaultRoles = [
+      { id: 'guard', title: 'Guard', blurb: 'Browse jobs, clock shifts, get paid direct — independent licensed pros.', shot: 1 },
+      { id: 'client', title: 'Client', blurb: 'Post coverage, schedule shifts, hire licensed guards on demand.', shot: 3 },
+      { id: 'staff', title: 'Staff', blurb: 'Operations dashboard — dispatch, verify licenses, manage active posts.', shot: 0 },
+    ];
+
+    const roles = (project.roles.length >= 3 ? project.roles : defaultRoles).slice(0, 3).map((role, i) => ({
+      id: role.id || ['guard', 'client', 'staff'][i],
+      title: role.title,
+      blurb: role.blurb || '',
+      shot: role.shot ?? [1, 3, 0][i],
+    }));
+
+    const tabId = `gu-tabs-${project.slug}`;
+
+    return `
+      <section class="sc-gu-tabs" id="${tabId}">
+        <div class="section-head">
+          <p class="kicker">Three doors in</p>
+          <h2>Guard · Client · Staff</h2>
+        </div>
+        <div class="sc-gu-tablist" role="tablist" aria-label="Guardr user roles">
+          ${roles
+            .map(
+              (role, i) => `
+            <button
+              type="button"
+              class="sc-gu-tab"
+              role="tab"
+              id="${tabId}-tab-${role.id}"
+              aria-selected="${i === 0 ? 'true' : 'false'}"
+              aria-controls="${tabId}-panel-${role.id}"
+              data-tab="${role.id}"
+            >${escapeHtml(role.title)}</button>`
+            )
+            .join('')}
+        </div>
+        ${roles
+          .map((role, i) => {
+            const shotIdx = role.shot;
+            const phoneShot = project.screenshots[shotIdx] || project.screenshots[0];
+            const tabletShot = project.screenshotsTablet[shotIdx] || project.screenshotsTablet[0] || phoneShot;
+            const desktopShot = project.screenshotsDesktop[shotIdx] || project.screenshotsDesktop[0] || phoneShot;
+            return `
+          <div
+            class="sc-gu-tabpanel${i === 0 ? ' is-active' : ''}"
+            role="tabpanel"
+            id="${tabId}-panel-${role.id}"
+            aria-labelledby="${tabId}-tab-${role.id}"
+            data-panel="${role.id}"
+            ${i === 0 ? '' : 'hidden'}
+          >
+            <h3>${escapeHtml(role.title)} view</h3>
+            <p>${escapeHtml(role.blurb)}</p>
+            <div class="sc-gu-tab-devices">
+              ${phone(phoneShot, { hideCaption: true, eager: i === 0 })}
+              ${device(tabletShot, { type: 'tablet', hideCaption: true })}
+              ${device(desktopShot, { type: 'chromebook', hideCaption: true })}
+            </div>
+          </div>`;
+          })
+          .join('')}
+      </section>`;
+  }
+
+  function bindGuardrTabs(root) {
+    root.querySelectorAll('.sc-gu-tabs').forEach((section) => {
+      const tabs = section.querySelectorAll('.sc-gu-tab');
+      const panels = section.querySelectorAll('.sc-gu-tabpanel');
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const id = tab.dataset.tab;
+          tabs.forEach((t) => t.setAttribute('aria-selected', t.dataset.tab === id ? 'true' : 'false'));
+          panels.forEach((p) => {
+            const active = p.dataset.panel === id;
+            p.classList.toggle('is-active', active);
+            if (active) p.removeAttribute('hidden');
+            else p.setAttribute('hidden', '');
+          });
+        });
+      });
+    });
+  }
+
   /* —— Theme renderers —— */
 
   function renderVerse(project) {
-    const accent = project.verseAccent || '#2d6a4f';
-    const tint = project.verseTint || '#e8f5ee';
     const shots = project.screenshots;
     return `
-      <div class="sc sc-verse" style="--sc-accent:${escapeHtml(accent)};--sc-tint:${escapeHtml(tint)}">
+      <div class="sc sc-verse">
         ${breadcrumb(project)}
         <section class="sc-verse-hero">
           <div class="sc-verse-copy">
@@ -181,10 +372,12 @@
             ${phone(shots[2] || shots[0], { className: 'is-side', hideCaption: true, eager: true })}
           </div>
         </section>
+        ${readDetails(project)}
+        ${devicePlatforms(project, 0)}
         <section class="sc-deep">
           <div class="section-head">
             <p class="kicker">Inside the product</p>
-            <h2>Features you’ll actually use</h2>
+            <h2>Features you'll actually use</h2>
           </div>
           ${featureRows(project)}
         </section>
@@ -218,6 +411,8 @@
             ${phone(shots[1], { className: 'is-stack', eager: true })}
           </div>
         </section>
+        ${readDetails(project)}
+        ${devicePlatforms(project, 0)}
         <section class="sc-bn-steps">
           <div class="section-head">
             <p class="kicker">How neighbors use it</p>
@@ -264,6 +459,8 @@
           </div>
           <div class="sc-fr-device">${phone(shots[0], { className: 'is-hero', eager: true })}</div>
         </section>
+        ${readDetails(project)}
+        ${devicePlatforms(project, 0)}
         <section class="sc-fr-layers">
           <div class="section-head">
             <p class="kicker">Connection layers</p>
@@ -315,6 +512,8 @@
           </div>
           <div class="sc-fi-device">${phone(shots[0], { className: 'is-hero', eager: true })}</div>
         </section>
+        ${readDetails(project)}
+        ${devicePlatforms(project, 0)}
         <section class="sc-fi-tools">
           <div class="section-head">
             <p class="kicker">Account tools</p>
@@ -360,6 +559,8 @@
           </div>
           <div class="sc-ch-device">${phone(shots[1] || shots[0], { className: 'is-hero', eager: true })}</div>
         </section>
+        ${readDetails(project)}
+        ${devicePlatforms(project, 1)}
         <section class="sc-ch-notes">
           <div class="section-head">
             <p class="kicker">On the board</p>
@@ -405,24 +606,8 @@
           </div>
           <div class="sc-gu-device">${phone(shots[0], { className: 'is-hero', eager: true })}</div>
         </section>
-        <section class="sc-gu-roles">
-          <div class="section-head">
-            <p class="kicker">Two doors in</p>
-            <h2>Clients post. Guards work.</h2>
-          </div>
-          <div class="sc-gu-role-grid">
-            ${(project.roles.length ? project.roles : project.features.slice(0, 2))
-              .map(
-                (role, i) => `
-              <article class="sc-gu-role">
-                <h3>${escapeHtml(role.title)}</h3>
-                <p>${escapeHtml(role.blurb || '')}</p>
-                ${phone(shots[i + 2] || shots[i], { hideCaption: true })}
-              </article>`
-              )
-              .join('')}
-          </div>
-        </section>
+        ${readDetails(project)}
+        ${guardrTabs(project)}
         <section class="sc-deep">
           <div class="section-head">
             <p class="kicker">Product walkthrough</p>
@@ -457,6 +642,8 @@
           </div>
           <div class="sc-sss-device">${phone(shots[0], { className: 'is-hero', eager: true })}</div>
         </section>
+        ${readDetails(project)}
+        ${devicePlatforms(project, 0)}
         <section class="sc-deep sc-sss-deep">
           <div class="section-head">
             <p class="kicker">Company surface</p>
@@ -470,7 +657,7 @@
   }
 
   function renderDefault(project) {
-    return renderVerse({ ...project, verseAccent: '#1B4D3E', verseTint: '#f0f0ee' });
+    return renderVerse({ ...project });
   }
 
   const RENDERERS = {
@@ -507,6 +694,7 @@
     document.body.dataset.showcaseTheme = project.theme;
     const renderer = RENDERERS[project.theme] || RENDERERS.default;
     root.innerHTML = renderer(project);
+    bindGuardrTabs(root);
   }
 
   async function init() {
@@ -531,7 +719,7 @@
       root.innerHTML = `
         <p class="breadcrumb"><a href="../">The Classifieds</a> / Showcase</p>
         <div class="prose">
-          <h2>Couldn’t load showcase</h2>
+          <h2>Couldn't load showcase</h2>
           <p>${escapeHtml(err.message || err)}</p>
           <p><a class="btn btn-primary" href="../">Back to The Classifieds</a></p>
         </div>`;

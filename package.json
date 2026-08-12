@@ -15,9 +15,11 @@
     "sync-app-icons": "node scripts/sync-app-icons.mjs",
     "sync-apk-catalog": "node scripts/sync-apk-catalog.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
-    "capture-screenshots": "node scripts/capture-app-screenshots.mjs"
+    "capture-screenshots": "node scripts/capture-app-screenshots.mjs",
+    "capture-device-screenshots": "node scripts/capture-device-screenshots.mjs"
   },
   "devDependencies": {
+    "playwright": "^1.49.0",
     "sharp": "^0.34.3"
   }
 }

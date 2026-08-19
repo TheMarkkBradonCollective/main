@@ -528,31 +528,77 @@ RUNRs are paid per completed delivery, not for time reserved at a restaurant.
 - Delivery incentives (if applicable)
 - Customer tips
 
-**Payout schedule**
+**Weekly payout schedule**
+
+RUNR uses **weekly payouts** as the default pay cycle for all RUNRs.
 
 | Setting | Default |
 |---|---|
-| Payout frequency | Daily (Stripe standard) |
-| Minimum payout threshold | Configurable by region |
+| Payout frequency | **Weekly** |
+| Pay period | Monday 12:00 AM – Sunday 11:59 PM (local market time) |
+| Payout day | Wednesday (for prior week's completed pay period) |
+| Processing window | Monday–Tuesday (earnings finalized, Prop 22 adjustments calculated) |
+| Minimum payout threshold | $1.00 (no hold unless Stripe/account issue) |
 | Payout destination | RUNR bank account or debit card (via Stripe) |
+
+**Weekly payout flow**
+
+1. RUNR completes deliveries throughout the week
+2. Per-delivery earnings accrue in real time to pending balance
+3. Pay period closes Sunday at midnight
+4. Platform calculates gross delivery earnings, tips, incentives, and adjustments
+5. Platform calculates Prop 22 minimum earnings top-up (California RUNRs only)
+6. Platform calculates healthcare stipend eligibility (California RUNRs only)
+7. Stripe initiates weekly payout on Wednesday
+8. RUNR receives deposit and weekly earnings statement
+
+**Between payout days**
+
+- Earnings are visible in real time but marked as **Pending — pays Wednesday**
+- RUNR can see running week-to-date totals at all times
+- Tips and delivery pay update immediately after each completed delivery
+- Prop 22 top-up amount updates as engaged time and miles accumulate
 
 **RUNR Earnings screen should show**
 
+- Current pay period dates (e.g., Aug 11–Aug 17)
+- Next payout date and amount (estimated)
+- Week-to-date delivery earnings
+- Week-to-date tips (separate line)
+- Engaged time and engaged miles (California)
+- Prop 22 minimum earnings status (California)
+- Prop 22 top-up amount, if applicable (California)
 - Pending earnings (not yet paid out)
-- Available balance
-- Tips (separate from delivery pay)
-- Payout history
+- Available balance (from prior completed payouts)
+- Payout history (weekly statements)
 - Per-delivery earnings breakdown
 - Stripe payout status
 
-**Example payout**
+**Example weekly payout**
 
-> Payout #1092  
-> Period: Aug 18, 2026  
-> Delivery earnings: $71.50  
-> Tips: $32.50  
+> **Weekly Payout #47**  
+> Pay period: Aug 11–Aug 17, 2026  
+> Payout date: Aug 20, 2026
+>
+> Delivery earnings: $412.50  
+> Tips: $186.00  
+> Incentives: $25.00  
+> Prop 22 top-up: $18.75  
+> Healthcare stipend: $0.00  
 > Adjustments: -$0.00  
-> **Total deposited: $104.00**
+> **Total deposited: $642.25**
+
+**Weekly earnings statement**
+
+Each payout includes a downloadable weekly earnings statement showing:
+
+- Every completed delivery with pay breakdown
+- Total engaged time and engaged miles
+- Tips (itemized separately)
+- Prop 22 minimum earnings calculation (California)
+- Healthcare stipend, if earned (California)
+- Net deposit amount
+- Year-to-date totals
 
 ---
 
@@ -573,13 +619,537 @@ Tips are collected at checkout or added after delivery (if enabled).
 1. Customer selects or enters tip at checkout
 2. Tip amount included in total Payment Intent
 3. On delivery completion, tip is allocated to the assigned RUNR
-4. Tip appears in RUNR earnings and next payout
+4. Tip appears in RUNR earnings and next weekly payout
+
+---
+
+## California Prop 22 Compliance
+
+RUNR operates in California as a **network company** under Proposition 22. All California RUNRs are classified as **independent contractors** and receive the benefits and protections required by Prop 22.
+
+This section defines every Prop 22 requirement the platform must implement, track, and report.
+
+---
+
+### Prop 22 Overview
+
+Proposition 22 (California Business and Professions Code § 7448–7467) requires app-based delivery platforms to provide:
+
+| Requirement | Description |
+|---|---|
+| Minimum earnings guarantee | Net earnings floor for each earnings period |
+| Engaged mileage reimbursement | Per-mile pay during engaged time |
+| Healthcare stipends | Quarterly stipend for eligible RUNRs with qualifying health coverage |
+| Occupational accident insurance | Medical and disability coverage while engaged |
+| Accidental death insurance | Coverage for death while engaged |
+| Rest periods | Mandatory break after 12 hours engaged time in 24 hours |
+| Anti-discrimination | Protection from discrimination |
+| Safety training | Required safety education |
+| Background checks | Criminal background screening |
+| Deactivation appeals | Fair process for account deactivation |
+| Pay transparency | Clear disclosure of how earnings are calculated |
+
+Prop 22 applies to all California RUNRs. Non-California markets follow regional compliance rules separately.
+
+---
+
+### Engaged Time
+
+Prop 22 compensation is based on **engaged time**, not total time online or time reserved at a restaurant.
+
+**Engaged time begins when:**
+
+- RUNR accepts a delivery assignment
+
+**Engaged time ends when:**
+
+- RUNR completes the delivery (drop-off confirmed)
+
+**Engaged time does NOT include:**
+
+- Time waiting for a delivery assignment
+- Time between deliveries
+- Time reserved at a restaurant with no active delivery
+- Time after a customer cancels before pickup
+- Time after a RUNR abandons a delivery
+
+**Platform must track per delivery:**
+
+| Metric | Tracked |
+|---|---|
+| Accept timestamp | ✓ |
+| Pickup timestamp | ✓ |
+| Drop-off timestamp | ✓ |
+| Engaged time (minutes) | ✓ |
+| Engaged miles | ✓ |
+| Pickup location (for local minimum wage) | ✓ |
+
+**RUNR dashboard should display:**
+
+> **This Week**  
+> Engaged time: 14h 32m  
+> Engaged miles: 87.4 mi  
+> Deliveries completed: 28
+
+---
+
+### Minimum Earnings Guarantee (Net Earnings Floor)
+
+For each earnings period, RUNR must ensure every California RUNR earns at least the **net earnings floor**.
+
+**Net earnings floor formula:**
+
+> **(120% × applicable minimum wage × engaged hours) + (engaged miles × per-mile rate)**
+
+| Component | Rate (2026) | Notes |
+|---|---|---|
+| Minimum wage multiplier | 120% | Of applicable minimum wage |
+| Applicable minimum wage | $16.90/hr (state) or higher local wage | Determined at **pickup location** |
+| Per-mile rate | $0.37/mile | Adjusted annually for inflation |
+| Earnings period | Up to 14 days | RUNR uses **7-day weekly periods** |
+
+**Applicable minimum wage**
+
+- Use California state minimum wage ($16.90/hr as of 2026) by default
+- If pickup is in a city/county with a higher minimum wage, use the **local minimum wage**
+- Platform must maintain an updated local minimum wage database by pickup location
+
+**Net earnings calculation**
+
+Net earnings include:
+
+- Base delivery pay
+- Distance-based compensation
+- Delivery incentives
+- Prop 22 per-mile engaged mileage amount (included in floor, not additive on top)
+
+Net earnings do **NOT** include:
+
+- Customer tips (tips are always 100% RUNR's — separate from floor calculation)
+- Healthcare stipends
+- Prop 22 top-up payments themselves
+
+**Top-up payment**
+
+If a RUNR's net earnings for the pay period fall below the net earnings floor, RUNR pays the difference as a **Prop 22 top-up** included in the weekly payout.
+
+**Example: Weekly Prop 22 calculation**
+
+| Metric | Value |
+|---|---:|
+| Engaged time | 18.5 hours |
+| Engaged miles | 112 miles |
+| Applicable minimum wage (pickup avg) | $17.50/hr |
+| Gross delivery earnings | $310.00 |
+| Tips (not in floor) | $95.00 |
+
+**Net earnings floor:**
+
+> (18.5 × $17.50 × 1.20) + (112 × $0.37)  
+> = $388.50 + $41.44  
+> = **$429.94**
+
+**Top-up required:**
+
+> $429.94 − $310.00 = **$119.94**
+
+**Weekly payout:**
+
+> Delivery earnings: $310.00  
+> Tips: $95.00  
+> Prop 22 top-up: $119.94  
+> **Total: $524.94**
+
+**RUNR app must show:**
+
+- Current week net earnings vs. floor (real-time)
+- Whether RUNR is above or below floor
+- Estimated top-up amount
+- Final top-up on weekly earnings statement
+
+---
+
+### Healthcare Stipends
+
+California RUNRs who meet engaged-time and enrollment requirements receive a **quarterly healthcare stipend**.
+
+**Eligibility requirements**
+
+- RUNR completes average of **15+ hours engaged time per week** during the calendar quarter
+- RUNR is the **primary policyholder** of a qualifying health plan
+- Health plan is **not employer-sponsored**
+- RUNR is **not enrolled in Medi-Cal** or other public assistance programs that disqualify eligibility
+- RUNR submits **proof of enrollment** within 15 days after quarter end
+
+**Stipend amounts (based on average weekly engaged time for the quarter)**
+
+| Avg Weekly Engaged Time | Stipend |
+|---|---|
+| Under 15 hours | $0 |
+| 15 – 24.9 hours | 50% of average Covered California bronze plan premium |
+| 25+ hours | 100% of average Covered California bronze plan premium |
+
+**Calendar quarters**
+
+| Quarter | Period |
+|---|---|
+| Q1 | January 1 – March 31 |
+| Q2 | April 1 – June 30 |
+| Q3 | July 1 – September 30 |
+| Q4 | October 1 – December 31 |
+
+**Healthcare stipend flow**
+
+1. Platform tracks engaged time throughout the quarter
+2. Quarter ends — platform calculates average weekly engaged hours
+3. RUNR notified of eligibility and documentation requirements
+4. RUNR uploads proof of qualifying health plan enrollment
+5. Platform verifies within 15 days
+6. Stipend paid within 15 days of verified documentation
+7. Stipend appears on California Earnings Statement
+
+**RUNR app must include:**
+
+- Quarter-to-date engaged hours and weekly average
+- Healthcare stipend eligibility status
+- Document upload for proof of enrollment
+- Stipend payment history
+- Link to Covered California resources
+
+---
+
+### Insurance Requirements
+
+RUNR must provide insurance coverage to California RUNRs while they are engaged in deliveries.
+
+#### Occupational Accident Insurance
+
+Covers injuries sustained while engaged in a delivery.
+
+| Coverage | Minimum |
+|---|---|
+| Medical expenses | Up to $1,000,000 |
+| Disability payments | As required by Prop 22 |
+| Coverage period | From acceptance to delivery completion |
+
+**Platform must:**
+
+- Maintain occupational accident insurance policy for all California RUNRs
+- Provide insurance certificate and coverage details in RUNR app
+- Process injury claims through designated insurance workflow
+- Document all injury reports
+
+#### Accidental Death Insurance
+
+Covers death while engaged in a delivery.
+
+| Coverage | Minimum |
+|---|---|
+| Accidental death benefit | As required by Prop 22 |
+| Coverage period | From acceptance to delivery completion |
+
+**Platform must:**
+
+- Maintain accidental death insurance for California RUNRs
+- Provide beneficiary designation flow in RUNR onboarding
+- Display coverage summary in RUNR profile
+
+#### Auto Insurance
+
+RUNRs must maintain valid personal auto insurance meeting California minimum requirements.
+
+**Platform must:**
+
+- Verify auto insurance during onboarding
+- Require proof of insurance renewal
+- Suspend RUNR if insurance lapses
+
+---
+
+### Rest Period Requirements
+
+California RUNRs cannot exceed **12 hours of engaged time within any 24-hour period** without a mandatory rest break.
+
+**Rules**
+
+| Rule | Requirement |
+|---|---|
+| Maximum engaged time | 12 hours in any rolling 24-hour window |
+| Required rest break | 6 consecutive hours off after hitting 12-hour limit |
+| During rest break | RUNR cannot accept new deliveries |
+| RUN scheduling | Platform must block delivery assignment during rest period |
+
+**Platform behavior when rest is required**
+
+> ⚠️ REST PERIOD REQUIRED
+>
+> You've reached 12 hours of engaged time in the last 24 hours.
+>
+> You must take a 6-hour break before accepting new deliveries.
+>
+> Rest period ends: 2:30 AM
+
+**Platform must:**
+
+- Track rolling 24-hour engaged time windows
+- Automatically block new delivery assignments during rest
+- Allow RUNR to remain checked in at restaurant but not accept deliveries
+- Log rest period events for compliance audit
+
+---
+
+### Anti-Discrimination Protections
+
+Prop 22 prohibits discrimination against RUNRs based on:
+
+- Race, color, national origin, ancestry
+- Religion
+- Sex, gender, gender identity, gender expression
+- Sexual orientation
+- Disability
+- Medical condition
+- Age
+- Military or veteran status
+- Any other protected class under California law
+
+**Platform must:**
+
+- Enforce anti-discrimination policy in RUNR terms
+- Provide reporting mechanism for discrimination claims
+- Investigate reports through Moderator/Administrator workflow
+- Document all discrimination complaints and resolutions
+- Train internal staff on Prop 22 anti-discrimination requirements
+
+---
+
+### Background Checks
+
+California RUNRs must pass a criminal background check before activation.
+
+**Platform must:**
+
+- Conduct background check during RUNR onboarding
+- Re-check on a defined schedule (at least every 12 months)
+- Disqualify RUNRs per Prop 22 and platform safety standards
+- Provide adverse action notice if denied based on background check
+- Allow RUNR to dispute inaccurate background check results
+
+**Disqualifying offenses (per Prop 22 and platform policy)**
+
+- Violent felonies
+- Sexual offenses
+- DUI within defined lookback period
+- Other offenses as defined in platform safety policy
+
+---
+
+### Deactivation and Appeals
+
+Prop 22 requires a fair deactivation process with the right to appeal.
+
+**Deactivation rules**
+
+| Rule | Requirement |
+|---|---|
+| Notice | RUNR notified of deactivation reason |
+| Appeal window | RUNR may appeal within defined period |
+| Response time | Platform must respond within **5 business days** |
+| Appeal review | Independent review of deactivation decision |
+| Reinstatement | RUNR reinstated if appeal upheld |
+
+**Deactivation flow**
+
+1. Platform or Moderator initiates deactivation with documented reason
+2. RUNR receives notification with reason and appeal instructions
+3. RUNR submits appeal with supporting information
+4. Administrator reviews appeal within 5 business days
+5. Decision communicated to RUNR
+6. If upheld, account reinstated; if denied, deactivation stands with final explanation
+
+**Platform must track:**
+
+- Deactivation reason and timestamp
+- Appeal submission and review timeline
+- Appeal outcome
+- Reinstatement date, if applicable
+
+---
+
+### Safety Training
+
+California RUNRs must complete safety training before accepting deliveries.
+
+**Required training topics**
+
+- Safe driving practices
+- Food safety and handling
+- Contactless delivery procedures
+- Accident and injury reporting
+- Harassment and discrimination prevention
+- Prop 22 rights and benefits overview
+
+**Platform must:**
+
+- Provide training module during onboarding
+- Require completion before first delivery
+- Require annual refresher training
+- Track training completion dates
+- Block delivery assignment if training is expired
+
+---
+
+### Pay Transparency
+
+Prop 22 requires clear disclosure of how RUNR earnings are calculated.
+
+**Before each delivery acceptance, RUNR must see:**
+
+- Estimated delivery pay
+- Estimated distance pay
+- Estimated engaged time
+- Estimated engaged miles
+- Tip amount (if pre-selected by customer)
+- Confirmation that tips are 100% RUNR's
+
+**RUNR must have access to:**
+
+- Full pay policy documentation
+- Prop 22 rights summary
+- How engaged time is calculated
+- How minimum earnings guarantee works
+- Healthcare stipend eligibility rules
+- Insurance coverage details
+- Weekly and quarterly earnings statements
+
+**Example pre-acceptance display**
+
+> **Delivery #2847 — Tony's Pizza**  
+> Estimated pay: $7.25  
+> Distance pay: $3.10  
+> Est. engaged time: 22 min  
+> Est. engaged miles: 4.2 mi  
+> Customer tip: $5.00  
+> Tips are 100% yours.
+
+---
+
+### Prop 22 Earnings Statement
+
+California RUNRs receive a **Prop 22 Earnings Statement** with each weekly payout and quarterly for healthcare.
+
+**Weekly statement includes:**
+
+| Field | Included |
+|---|---|
+| Pay period dates | ✓ |
+| Total deliveries completed | ✓ |
+| Total engaged time | ✓ |
+| Total engaged miles | ✓ |
+| Gross delivery earnings | ✓ |
+| Tips (separate) | ✓ |
+| Incentives | ✓ |
+| Net earnings floor calculation | ✓ |
+| Prop 22 top-up amount | ✓ |
+| Net deposit | ✓ |
+| Year-to-date earnings | ✓ |
+| Year-to-date engaged time | ✓ |
+
+**Quarterly statement adds:**
+
+| Field | Included |
+|---|---|
+| Calendar quarter | ✓ |
+| Average weekly engaged hours | ✓ |
+| Healthcare stipend eligibility | ✓ |
+| Healthcare stipend amount | ✓ |
+| Proof of enrollment status | ✓ |
+
+Statements must be available in-app and downloadable as PDF.
+
+---
+
+### Prop 22 Platform Systems
+
+The platform must build these systems to maintain Prop 22 compliance.
+
+| System | Purpose |
+|---|---|
+| Engaged time engine | Track accept-to-complete time per delivery |
+| Engaged miles engine | Track miles during engaged time via GPS |
+| Local minimum wage database | Apply correct wage by pickup location |
+| Net earnings floor calculator | Real-time and end-of-period floor calculation |
+| Top-up payment processor | Auto-calculate and pay shortfall via Stripe |
+| Healthcare stipend tracker | Quarterly hours + enrollment verification |
+| Insurance management | Policy docs, claims, beneficiary records |
+| Rest period enforcer | Block assignments after 12hr engaged / 24hr window |
+| Background check integration | Onboarding and recurring checks |
+| Deactivation appeals workflow | 5-business-day response compliance |
+| Safety training module | Onboarding + annual refresher |
+| Earnings statement generator | Weekly + quarterly Prop 22 statements |
+| Compliance audit log | Immutable record of all compliance actions |
+
+---
+
+### Prop 22 Admin Controls
+
+| Role | Prop 22 Controls |
+|---|---|
+| Support | View engaged time, earnings statements (read-only) |
+| Moderator | Manage deactivation appeals, discrimination reports |
+| Administrator | Process healthcare stipend verification, injury claims |
+| Director | Configure local minimum wage overrides, stipend rates |
+| Founder | Full compliance configuration, insurance policy management |
+
+---
+
+### Prop 22 MVP Requirements
+
+Build these Prop 22 features for California launch.
+
+**RUNR**
+
+- Engaged time and miles tracking (per delivery)
+- Real-time weekly earnings vs. net earnings floor
+- Prop 22 top-up displayed on weekly payout
+- Weekly Prop 22 Earnings Statement (PDF)
+- Healthcare stipend eligibility tracker
+- Healthcare enrollment document upload
+- Rest period notifications and assignment blocking
+- Pre-delivery pay transparency display
+- Safety training module
+- Prop 22 rights summary in app
+- Insurance coverage details and beneficiary designation
+
+**Platform**
+
+- Engaged time engine
+- Engaged miles engine (GPS)
+- Local minimum wage database by pickup location
+- Net earnings floor calculator (weekly)
+- Automatic top-up payment via Stripe (weekly)
+- Healthcare stipend quarterly calculator
+- Healthcare enrollment verification workflow
+- Occupational accident insurance integration
+- Accidental death insurance integration
+- Rest period enforcement (12hr/24hr rule)
+- Background check integration
+- Deactivation appeals workflow (5-business-day SLA)
+- Safety training content and completion tracking
+- Prop 22 Earnings Statement generator
+- Compliance audit logging
+- California geofence — Prop 22 rules apply only to CA deliveries
 
 ---
 
 ### Business Payouts
 
-Businesses receive food order revenue minus applicable platform fees.
+Businesses receive food order revenue minus applicable platform fees on a **weekly payout schedule**.
+
+| Setting | Default |
+|---|---|
+| Payout frequency | Weekly |
+| Pay period | Monday – Sunday |
+| Payout day | Wednesday |
 
 **Business dashboard should show**
 
@@ -592,8 +1162,9 @@ Businesses receive food order revenue minus applicable platform fees.
 
 **Example business payout**
 
-> Payout #338  
-> Period: Aug 18, 2026  
+> **Weekly Payout #338**  
+> Pay period: Aug 11–Aug 17, 2026  
+> Payout date: Aug 20, 2026  
 > Gross sales: $1,842.00  
 > Platform fees: -$92.10  
 > Refunds: -$24.50  
@@ -725,6 +1296,17 @@ RUNR admin tools should embed or link to Stripe Express Dashboard for businesses
 - Stripe generates 1099 forms for eligible RUNRs and businesses (US)
 - Tax information collected during Connect onboarding
 - Platform provides annual earnings summaries in-app
+- California RUNRs receive Prop 22 Earnings Statements (weekly and quarterly)
+
+**California Prop 22 compliance**
+
+- Engaged time and mileage tracking for all California deliveries
+- Weekly net earnings floor calculation and automatic top-up
+- Quarterly healthcare stipend tracking and payment
+- Occupational accident and accidental death insurance
+- Rest period enforcement (12-hour engaged time limit)
+- Background checks, safety training, and deactivation appeals
+- See [California Prop 22 Compliance](#california-prop-22-compliance) for full requirements
 
 **Fraud prevention**
 
@@ -770,10 +1352,11 @@ Updated order lifecycle with Stripe:
 9. RUNR picks up and delivers order
 10. Delivery marked complete
 11. Platform records earnings split
-12. Stripe transfers funds to business and RUNR connected accounts
-13. Funds included in next scheduled payout
-14. Customer can add post-delivery tip (optional)
-15. Customer rates order, business, and RUNR
+12. Engaged time and miles logged (California — Prop 22)
+13. Funds accrue to RUNR weekly payout balance
+14. Weekly payout processed Wednesday (includes Prop 22 top-up if applicable)
+15. Customer can add post-delivery tip (optional)
+16. Customer rates order, business, and RUNR
 
 ---
 
@@ -796,7 +1379,11 @@ Build these payment features first.
 - Onboarding status in profile
 - Per-delivery earnings breakdown
 - Tips displayed separately
-- Payout history
+- Weekly payout history
+- Weekly Prop 22 Earnings Statement (California)
+- Engaged time and miles dashboard (California)
+- Prop 22 top-up tracking (California)
+- Healthcare stipend tracker (California)
 - Link to Stripe Express Dashboard
 
 **Business**
@@ -812,10 +1399,16 @@ Build these payment features first.
 - Webhook endpoint and event handling
 - Application fee configuration
 - Transfer logic (business + RUNR splits)
+- Weekly payout scheduler (Stripe)
+- Prop 22 engaged time and miles engine
+- Prop 22 net earnings floor calculator
+- Prop 22 top-up payment processor
+- Healthcare stipend quarterly system
+- Rest period enforcement
 - Refund processing
 - Dispute notification and admin tools
 - Test mode and live mode environment switching
-- Audit logging for all payment actions
+- Audit logging for all payment and compliance actions
 
 ---
 
@@ -852,7 +1445,8 @@ When a restaurant receives a delivery order:
 10. Driver delivers order
 11. Customer receives order
 12. Platform records earnings split and initiates Stripe transfers
-13. Driver earnings and tips update in payout balance
+13. Engaged time and miles logged for Prop 22 (California)
+14. Driver earnings and tips accrue to weekly payout balance
 
 ---
 
@@ -1371,7 +1965,8 @@ The RUNR should never wonder:
 | "Where is the work?" | The map |
 | "When can I work?" | The coverage timeline |
 | "How much did I make?" | The Earnings screen |
-| "When do I get paid?" | Stripe payout history |
+| "When do I get paid?" | Weekly payout — every Wednesday |
+| "Am I meeting Prop 22 minimum?" | Weekly earnings vs. net earnings floor (CA) |
 
 ---
 
@@ -1385,7 +1980,7 @@ The business should never wonder:
 | "Where are my deliveries?" | Live map |
 | "Who is delivering this?" | Order detail |
 | "What did I earn today?" | Sales and payout dashboard |
-| "When is my payout?" | Stripe payout schedule |
+| "When is my payout?" | Weekly — every Wednesday |
 
 ---
 
@@ -1412,7 +2007,7 @@ RUNR's defining feature is:
 |---|---|
 | Businesses | How many RUNRs they want |
 | RUNRs | Where and when they want to work |
-| RUNR (platform) | Matching and delivery dispatch |
+| RUNR (platform) | Matching, delivery dispatch, weekly payouts, Prop 22 compliance |
 | Support → Founder | Escalating internal operations, safety, and governance |
 
 This should be reflected throughout the application.
@@ -1461,6 +2056,9 @@ Build these first.
 - History
 - Stripe Connect onboarding
 - Payout history
+- Weekly Prop 22 Earnings Statement (California)
+- Engaged time and miles tracking (California)
+- Healthcare stipend enrollment (California)
 
 ### Business
 
@@ -1488,6 +2086,8 @@ Build these first.
 - Stripe Connect platform setup
 - Payment Intents and checkout
 - Application fees and transfers
+- Weekly payout scheduler
+- Prop 22 compliance engine (California)
 - Refund and dispute handling
 - Stripe webhooks
 - Payout management
@@ -1571,7 +2171,15 @@ Stripe Connect onboarding
 ↓  
 Payment Intents and checkout  
 ↓  
-Transfers and payouts  
+Weekly payouts  
+↓  
+Prop 22 compliance engine (California)  
+↓  
+Engaged time and miles tracking  
+↓  
+Healthcare stipends  
+↓  
+Insurance integration  
 ↓  
 Refunds and disputes  
 ↓  
@@ -1630,11 +2238,11 @@ They earn:
 - Distance Pay
 - Tips
 
-Stripe processes their payout on the next deposit schedule.
+Stripe processes their **weekly payout** every Wednesday.
 
 The RUN ends.
 
-Their earnings update.
+Their earnings update — delivery pay, tips, and Prop 22 top-up if applicable.
 
 The RUNR can choose another business.
 

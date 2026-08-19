@@ -61,7 +61,286 @@ There are no mandatory preset shifts.
 
 ---
 
-## Example
+## RUNR Sign-Up
+
+Every RUNR must complete sign-up and document verification before they can schedule a RUN or accept deliveries.
+
+### Sign-Up Flow
+
+1. Create account (email / phone + password or OAuth)
+2. Basic profile (name, date of birth, photo)
+3. **Driver's license** — upload and verify
+4. **Vehicle insurance** — upload and verify
+5. Vehicle information (make, model, year, color, license plate)
+6. Background check authorization
+7. Safety training completion
+8. Stripe Connect payout setup
+9. Account review and activation
+
+RUNRs cannot browse coverage, schedule a RUN, or accept deliveries until steps 3 and 4 are approved.
+
+---
+
+### Driver's License Requirements
+
+RUNRs must hold a **valid, unexpired driver's license** to deliver on the platform.
+
+**Required information**
+
+| Field | Required |
+|---|---|
+| Legal first and last name | ✓ |
+| Date of birth | ✓ |
+| License number | ✓ |
+| Issuing state | ✓ |
+| Expiration date | ✓ |
+| License class | ✓ |
+| Front of license (photo) | ✓ |
+| Back of license (photo) | ✓ |
+
+**Eligibility rules**
+
+- License must be **currently valid** — not expired
+- RUNR must be at least **18 years old**
+- License must authorize operation of the vehicle type used for deliveries
+- Name on license must match RUNR account name (or verified legal name change)
+- Temporary permits and learner's permits are **not accepted**
+- Suspended or revoked licenses result in immediate account suspension
+
+**Accepted license types**
+
+| License Type | Accepted |
+|---|---|
+| Standard Class C (California) | ✓ |
+| Valid out-of-state U.S. license | ✓ |
+| Commercial license (if applicable) | ✓ |
+| Motorcycle-only license | ✗ (unless motorcycle delivery enabled) |
+| Learner's permit / provisional only | ✗ |
+
+**Upload requirements**
+
+- Photo of **front** of license — clear, unobstructed, all corners visible
+- Photo of **back** of license — clear, unobstructed, all corners visible
+- No glare, blur, or cropped edges
+- Document must be legible — all text readable
+- Photos must be taken at time of upload (no screenshots of prior uploads unless re-verification)
+
+**Verification process**
+
+1. RUNR uploads front and back license photos
+2. Platform runs automated document scan (OCR + fraud detection)
+3. Platform validates expiration date, license number format, and issuing state
+4. Name and date of birth matched against account profile
+5. If automated check passes → approved
+6. If automated check fails or flags concern → manual review by Administrator
+7. RUNR notified of approval, rejection, or request to re-upload
+
+**Verification statuses**
+
+| Status | Meaning | Can deliver? |
+|---|---|---|
+| Not submitted | License not yet uploaded | ✗ |
+| Pending review | Uploaded, awaiting verification | ✗ |
+| Approved | License verified and valid | ✓ |
+| Rejected | Failed verification — must re-upload | ✗ |
+| Expired | License passed expiration date | ✗ |
+| Suspended | License flagged or revoked | ✗ |
+
+**Expiration handling**
+
+- Platform tracks license expiration date
+- RUNR notified **30 days**, **14 days**, and **7 days** before expiration
+- Account automatically suspended on expiration date
+- RUNR must upload renewed license to reactivate
+- Deliveries blocked immediately when license expires
+
+**Example — license upload screen**
+
+> **Driver's License**
+>
+> Upload a clear photo of the front and back of your driver's license.
+>
+> [Upload Front]  
+> [Upload Back]
+>
+> Requirements:
+> - Valid and unexpired
+> - All four corners visible
+> - No glare or blur
+> - Name must match your account
+
+---
+
+### Vehicle Insurance Requirements
+
+RUNRs must maintain **active personal auto insurance** that meets platform and state minimum requirements.
+
+**Required information**
+
+| Field | Required |
+|---|---|
+| Insurance company name | ✓ |
+| Policy number | ✓ |
+| Policyholder name | ✓ |
+| Effective date | ✓ |
+| Expiration date | ✓ |
+| Insurance declaration page (photo/PDF) | ✓ |
+
+**Minimum coverage requirements (California)**
+
+| Coverage Type | Minimum |
+|---|---|
+| Bodily injury liability | $15,000 per person / $30,000 per accident |
+| Property damage liability | $5,000 per accident |
+| Uninsured motorist (if required by state) | Per state minimum |
+
+Platform may require **higher minimums** than state law. Director/Founder can configure coverage requirements by market.
+
+**Eligibility rules**
+
+- Policy must be **currently active** — not expired
+- Policyholder name must match RUNR account name or list RUNR as a covered driver
+- Policy must cover the vehicle used for deliveries
+- Commercial-only policies accepted if they cover delivery activity
+- Personal auto policies must **not exclude** commercial or delivery use (RUNR must confirm)
+- Platform may require delivery/ride-share endorsement where applicable
+
+**Upload requirements**
+
+- Photo or PDF of **insurance declaration page** (proof of insurance)
+- Document must show policyholder name, policy number, effective dates, and coverage amounts
+- Must be current — not expired
+- All text legible, no cropped edges
+
+**Verification process**
+
+1. RUNR uploads insurance declaration page
+2. RUNR enters policy number, carrier, and expiration date
+3. Platform validates policy number format and expiration date
+4. Automated verification where carrier API available; otherwise manual review
+5. Coverage amounts checked against platform minimums
+6. If approved → RUNR insurance status set to Active
+7. If rejected → RUNR notified with reason and re-upload instructions
+
+**Verification statuses**
+
+| Status | Meaning | Can deliver? |
+|---|---|---|
+| Not submitted | Insurance not yet uploaded | ✗ |
+| Pending review | Uploaded, awaiting verification | ✗ |
+| Approved | Insurance verified and active | ✓ |
+| Rejected | Failed verification — must re-upload | ✗ |
+| Expired | Policy passed expiration date | ✗ |
+| Lapsed | Policy cancelled or non-renewed | ✗ |
+
+**Expiration and renewal handling**
+
+- Platform tracks insurance expiration date
+- RUNR notified **30 days**, **14 days**, and **7 days** before expiration
+- Account automatically suspended on expiration date
+- RUNR must upload renewed declaration page to reactivate
+- Deliveries blocked immediately when insurance expires
+- Mid-term cancellation flagged via carrier notification (if integrated)
+
+**Example — insurance upload screen**
+
+> **Vehicle Insurance**
+>
+> Upload your current insurance declaration page.
+>
+> [Upload Document]
+>
+> Insurance company: ___________  
+> Policy number: ___________  
+> Expiration date: ___________
+>
+> Requirements:
+> - Active and not expired
+> - Covers the vehicle you use for deliveries
+> - Meets California minimum coverage
+> - Policyholder name matches your account
+
+---
+
+### Sign-Up Account States
+
+A RUNR account progresses through states based on document verification.
+
+| State | License | Insurance | Can Schedule RUN? | Can Deliver? |
+|---|---|---|---|---|
+| Incomplete | Not submitted | Not submitted | ✗ | ✗ |
+| Docs pending | Pending | Pending | ✗ | ✗ |
+| Partial | Approved | Not submitted | ✗ | ✗ |
+| Partial | Not submitted | Approved | ✗ | ✗ |
+| Docs approved | Approved | Approved | ✓ (after background check + training) | ✓ |
+| Suspended | Expired / rejected | Any | ✗ | ✗ |
+| Suspended | Any | Expired / lapsed | ✗ | ✗ |
+| Active | Approved | Approved | ✓ | ✓ |
+
+**Activation checklist**
+
+Before a RUNR can go live, all of the following must be complete:
+
+- [ ] Driver's license — approved
+- [ ] Vehicle insurance — approved
+- [ ] Vehicle information — submitted
+- [ ] Background check — passed
+- [ ] Safety training — completed
+- [ ] Stripe Connect — active (required for payouts, not scheduling)
+
+---
+
+### Document Re-Verification
+
+RUNRs must keep license and insurance current at all times.
+
+**Triggers for re-verification**
+
+| Trigger | Action |
+|---|---|
+| License approaching expiration | Notify RUNR, require re-upload before expiry |
+| Insurance approaching expiration | Notify RUNR, require re-upload before expiry |
+| Name change on account | Require new license upload |
+| New vehicle added | Require updated insurance showing new vehicle |
+| Random audit | Platform may request fresh document upload |
+| Fraud flag | Immediate suspension pending re-verification |
+
+**Admin re-verification controls**
+
+| Role | Can review license/insurance? |
+|---|---|
+| Support | View status (read-only) |
+| Moderator | Flag documents for review |
+| Administrator | Approve, reject, request re-upload |
+| Director | Override rejections, set coverage minimums |
+| Founder | Full document management access |
+
+---
+
+### Sign-Up MVP Requirements
+
+**RUNR app**
+
+- Account creation (email/phone)
+- Basic profile setup
+- Driver's license upload (front + back)
+- Insurance declaration page upload
+- Policy number and expiration entry
+- Vehicle information form
+- Document verification status display
+- Expiration reminders (push + email)
+- Re-upload flow for rejected/expired documents
+
+**Platform**
+
+- License OCR and fraud detection
+- Insurance document verification
+- Expiration date tracking and auto-suspension
+- Manual document review queue for Administrators
+- Notification system for expiration warnings
+- Audit log for all document submissions and approvals
+
+---
 
 A driver opens:
 
@@ -856,13 +1135,15 @@ Covers death while engaged in a delivery.
 
 #### Auto Insurance
 
-RUNRs must maintain valid personal auto insurance meeting California minimum requirements.
+RUNRs must maintain valid personal auto insurance meeting California minimum requirements. See [RUNR Sign-Up — Vehicle Insurance Requirements](#vehicle-insurance-requirements) for full upload and verification requirements.
 
 **Platform must:**
 
-- Verify auto insurance during onboarding
-- Require proof of insurance renewal
-- Suspend RUNR if insurance lapses
+- Verify auto insurance during sign-up and onboarding
+- Require proof of insurance renewal before expiration
+- Suspend RUNR immediately if insurance lapses or expires
+- Track policy number, carrier, and expiration date
+- Send expiration reminders at 30, 14, and 7 days
 
 ---
 
@@ -924,11 +1205,12 @@ Prop 22 prohibits discrimination against RUNRs based on:
 
 ### Background Checks
 
-California RUNRs must pass a criminal background check before activation.
+California RUNRs must pass a criminal background check before activation. RUNRs must also have an approved driver's license and active vehicle insurance on file. See [RUNR Sign-Up](#runnr-sign-up).
 
 **Platform must:**
 
-- Conduct background check during RUNR onboarding
+- Verify driver's license during sign-up (before background check)
+- Conduct background check after license and insurance are approved
 - Re-check on a defined schedule (at least every 12 months)
 - Disqualify RUNRs per Prop 22 and platform safety standards
 - Provide adverse action notice if denied based on background check
@@ -2039,6 +2321,10 @@ Build these first.
 
 - Authentication
 - RUNR profile
+- Sign-up and document verification
+- Driver's license upload (front + back)
+- Vehicle insurance upload and verification
+- Vehicle information
 - Location
 - Map
 - Business discovery
@@ -2081,6 +2367,9 @@ Build these first.
 - User management
 - Business management
 - RUNR management
+- Driver's license verification queue
+- Insurance verification queue
+- Document expiration tracking and auto-suspension
 - Dispatch
 - Coverage engine
 - Stripe Connect platform setup
@@ -2108,6 +2397,8 @@ Build the application in this order:
 Design system  
 ↓  
 Authentication  
+↓  
+RUNR sign-up (license + insurance)  
 ↓  
 Navigation  
 ↓  

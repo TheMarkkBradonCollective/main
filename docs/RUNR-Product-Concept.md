@@ -401,6 +401,424 @@ Example:
 
 ---
 
+## Stripe Connection and Payments
+
+RUNR uses **Stripe** as the platform payment provider. Stripe Connect powers the marketplace model so customers, businesses, and RUNRs can all transact through one integrated payment system.
+
+### Payment Architecture Overview
+
+RUNR operates as a **Stripe Connect marketplace platform**.
+
+| Party | Stripe Object | Purpose |
+|---|---|---|
+| RUNR (platform) | Platform Stripe account | Collects payments, routes funds, takes platform fees |
+| Customer | Stripe Customer | Saved cards, checkout, order charges |
+| Business | Connected Account | Receives food order revenue |
+| RUNR (driver) | Connected Account | Receives delivery pay and tips |
+
+Money flow:
+
+**Customer → Platform charge → Split between Business, RUNR, and RUNR platform fee**
+
+---
+
+### Stripe Connect Setup
+
+Each business and RUNR must complete Stripe onboarding before receiving payouts.
+
+**Business onboarding**
+
+- Business owner creates or links a Stripe Connect account
+- Stripe collects identity, business, and bank details
+- Platform verifies onboarding status before enabling payouts
+- Business dashboard shows payout status, pending balance, and payout history
+
+**RUNR onboarding**
+
+- RUNR completes Stripe Express onboarding during account setup
+- Identity verification, tax information, and payout destination required
+- RUNR cannot receive delivery earnings until Stripe onboarding is complete
+- Incomplete onboarding blocks payout but does not block scheduling a RUN (configurable by policy)
+
+**Onboarding states**
+
+| Status | Meaning |
+|---|---|
+| Not started | User has not begun Stripe setup |
+| In progress | Onboarding started but incomplete |
+| Pending verification | Stripe reviewing submitted information |
+| Active | Eligible to receive payouts |
+| Restricted | Action required — payouts paused |
+| Rejected | Cannot receive payouts until resolved |
+
+---
+
+### Customer Payments
+
+Customers pay for orders through Stripe at checkout.
+
+**Supported payment methods (MVP)**
+
+- Credit and debit cards
+- Apple Pay
+- Google Pay
+
+**Future payment methods**
+
+- Cash App Pay
+- Link
+- Buy now, pay later (region-dependent)
+
+**Checkout flow**
+
+1. Customer reviews cart (food + delivery fee + tax + tip)
+2. Platform creates a Stripe **Payment Intent**
+3. Customer confirms payment via Stripe Payment Element
+4. Stripe authorizes and captures payment
+5. Order is created only after successful payment confirmation
+6. Customer receives receipt and order confirmation
+
+**Saved payment methods**
+
+- Stripe Customer objects store tokenized payment methods
+- Customers can save a default card for faster checkout
+- No raw card data is stored on RUNR servers
+
+**Example checkout breakdown**
+
+| Line Item | Amount |
+|---|---:|
+| Food subtotal | $24.50 |
+| Delivery fee | $4.99 |
+| Service fee | $1.50 |
+| Tax | $2.14 |
+| Tip | $5.00 |
+| **Total charged** | **$38.13** |
+
+---
+
+### Order Payment Split
+
+Each completed order payment is split across marketplace participants.
+
+**Example: Order #4821**
+
+Customer total charged: **$38.13**
+
+| Recipient | Amount | Type |
+|---|---:|---|
+| Tony's Pizza (Business) | $24.50 | Food subtotal |
+| RUNR (Driver) | $7.25 | Base pay + distance pay |
+| RUNR (Driver) | $5.00 | Tip |
+| RUNR (Platform) | $1.50 | Service / platform fee |
+| Tax (held/remitted per policy) | $2.14 | Tax |
+
+The platform uses Stripe **application fees** and **transfers** to route funds to connected accounts.
+
+---
+
+### Delivery Earnings and Payouts
+
+RUNRs are paid per completed delivery, not for time reserved at a restaurant.
+
+**Earnings components (per delivery)**
+
+- Base delivery pay
+- Distance-based compensation
+- Delivery incentives (if applicable)
+- Customer tips
+
+**Payout schedule**
+
+| Setting | Default |
+|---|---|
+| Payout frequency | Daily (Stripe standard) |
+| Minimum payout threshold | Configurable by region |
+| Payout destination | RUNR bank account or debit card (via Stripe) |
+
+**RUNR Earnings screen should show**
+
+- Pending earnings (not yet paid out)
+- Available balance
+- Tips (separate from delivery pay)
+- Payout history
+- Per-delivery earnings breakdown
+- Stripe payout status
+
+**Example payout**
+
+> Payout #1092  
+> Period: Aug 18, 2026  
+> Delivery earnings: $71.50  
+> Tips: $32.50  
+> Adjustments: -$0.00  
+> **Total deposited: $104.00**
+
+---
+
+### Tips Through Stripe
+
+Tips are collected at checkout or added after delivery (if enabled).
+
+**Rules**
+
+- Tips are associated with the specific delivery and RUNR
+- Tips are displayed separately from delivery pay in all earnings views
+- Tips transfer to the assigned RUNR's connected account
+- Platform does not take a fee on tips (unless policy changes — document explicitly if so)
+- Post-delivery tip additions create a separate Stripe charge or Payment Intent
+
+**Tip flow**
+
+1. Customer selects or enters tip at checkout
+2. Tip amount included in total Payment Intent
+3. On delivery completion, tip is allocated to the assigned RUNR
+4. Tip appears in RUNR earnings and next payout
+
+---
+
+### Business Payouts
+
+Businesses receive food order revenue minus applicable platform fees.
+
+**Business dashboard should show**
+
+- Gross order revenue
+- Platform fees deducted
+- Refunds and adjustments
+- Net payout amount
+- Payout schedule and history
+- Pending vs. available balance
+
+**Example business payout**
+
+> Payout #338  
+> Period: Aug 18, 2026  
+> Gross sales: $1,842.00  
+> Platform fees: -$92.10  
+> Refunds: -$24.50  
+> **Net deposited: $1,725.40**
+
+---
+
+### Platform Fees
+
+RUNR collects platform revenue through Stripe application fees.
+
+**Fee types**
+
+| Fee | Applied to | Example |
+|---|---|---|
+| Service fee | Customer order | $1.50 per order |
+| Platform commission | Business food subtotal | 5% of food sales |
+| Delivery fee share | Delivery fee | Configurable split between platform and RUNR |
+
+Fees should be configurable by Director/Founder per market or business tier.
+
+All fees must be visible to the customer at checkout before payment confirmation.
+
+---
+
+### Refunds and Adjustments
+
+Refunds are processed through Stripe and reflected across all connected accounts.
+
+**Refund scenarios**
+
+| Scenario | Action |
+|---|---|
+| Order cancelled before preparation | Full refund to customer |
+| Item unavailable | Partial or full refund |
+| Delivery never completed | Full refund; RUNR may not receive delivery pay |
+| Customer dispute | Refund or credit per policy |
+| Incorrect charge | Administrator-initiated refund |
+
+**Refund flow**
+
+1. Support/Administrator initiates refund in RUNR admin
+2. Platform creates Stripe refund against original Payment Intent
+3. Funds reversed from business, RUNR, and platform shares proportionally
+4. Customer receives refund to original payment method
+5. Refund logged in order history and audit trail
+
+**Partial refunds**
+
+- Item-level refunds adjust business share only
+- Delivery fee refunds may adjust RUNR share depending on delivery stage
+- Tips may be refunded if delivery was not completed
+
+---
+
+### Disputes and Chargebacks
+
+Stripe handles card network disputes. RUNR must surface dispute status internally.
+
+**Dispute workflow**
+
+1. Stripe webhook notifies platform of dispute opened
+2. Order flagged in admin dashboard
+3. Administrator gathers evidence (order details, delivery proof, timestamps)
+4. Evidence submitted to Stripe within deadline
+5. Outcome recorded — won, lost, or accepted
+
+**Internal visibility**
+
+- Support can view dispute status (read-only)
+- Moderator can flag accounts with dispute patterns
+- Administrator manages dispute evidence and responses
+- Director approves large dispute losses or policy exceptions
+
+---
+
+### Stripe Webhooks
+
+The platform must listen to Stripe webhooks for real-time payment state.
+
+**Required webhook events (MVP)**
+
+| Event | Action |
+|---|---|
+| `payment_intent.succeeded` | Confirm order, begin fulfillment |
+| `payment_intent.payment_failed` | Show checkout error, do not create order |
+| `charge.refunded` | Update order refund status |
+| `charge.dispute.created` | Flag order, notify admin |
+| `charge.dispute.closed` | Record dispute outcome |
+| `account.updated` | Update business/RUNR onboarding status |
+| `payout.paid` | Record payout in earnings history |
+| `payout.failed` | Alert user, prompt to update bank details |
+| `transfer.created` | Log fund transfer to connected account |
+
+Webhooks must be verified using Stripe signing secrets. All webhook events should be logged for audit.
+
+---
+
+### Stripe Dashboard Access
+
+| Role | Stripe Access |
+|---|---|
+| Customer | Receipts via email; payment history in app |
+| Business | Stripe Express Dashboard (payouts, tax docs) |
+| RUNR | Stripe Express Dashboard (earnings, payouts, tax docs) |
+| Support | Read-only payment status in RUNR admin |
+| Administrator | Refund initiation, dispute management in RUNR admin |
+| Director | Fee configuration, payout exception approval |
+| Founder | Full Stripe platform dashboard access |
+
+RUNR admin tools should embed or link to Stripe Express Dashboard for businesses and RUNRs where appropriate.
+
+---
+
+### Security and Compliance
+
+**PCI compliance**
+
+- Use Stripe Payment Element — card data never touches RUNR servers
+- Stripe handles PCI DSS compliance for card processing
+
+**Identity and verification**
+
+- Stripe Identity (optional) for enhanced RUNR verification
+- Stripe Connect onboarding handles KYC for connected accounts
+
+**Tax reporting**
+
+- Stripe generates 1099 forms for eligible RUNRs and businesses (US)
+- Tax information collected during Connect onboarding
+- Platform provides annual earnings summaries in-app
+
+**Fraud prevention**
+
+- Stripe Radar for fraud scoring on customer payments
+- Velocity checks on refunds and new accounts
+- Flag high-risk transactions for manual review
+
+---
+
+### Environment Configuration
+
+| Environment | Purpose |
+|---|---|
+| Stripe Test Mode | Development and QA — test cards, no real money |
+| Stripe Live Mode | Production — real payments and payouts |
+
+**Required secrets (server-side only)**
+
+- `STRIPE_SECRET_KEY`
+- `STRIPE_WEBHOOK_SECRET`
+- `STRIPE_CONNECT_CLIENT_ID` (if using OAuth onboarding)
+
+**Publishable key (client-safe)**
+
+- `STRIPE_PUBLISHABLE_KEY` — used by Payment Element in checkout
+
+Never expose secret keys in client-side code, mobile apps, or public repositories.
+
+---
+
+### Payment-Integrated Order Flow
+
+Updated order lifecycle with Stripe:
+
+1. Customer builds cart
+2. Customer enters tip and reviews total
+3. Platform creates Stripe Payment Intent
+4. Customer confirms payment
+5. `payment_intent.succeeded` webhook received
+6. Order created and sent to business
+7. Business accepts and prepares order
+8. Platform assigns RUNR and dispatches delivery
+9. RUNR picks up and delivers order
+10. Delivery marked complete
+11. Platform records earnings split
+12. Stripe transfers funds to business and RUNR connected accounts
+13. Funds included in next scheduled payout
+14. Customer can add post-delivery tip (optional)
+15. Customer rates order, business, and RUNR
+
+---
+
+### Stripe MVP Requirements
+
+Build these payment features first.
+
+**Customer**
+
+- Stripe Payment Element at checkout
+- Payment Intent creation and confirmation
+- Order total breakdown (food, fees, tax, tip)
+- Payment success and failure handling
+- Email receipt via Stripe or platform
+- Saved payment methods (Stripe Customer)
+
+**RUNR**
+
+- Stripe Connect Express onboarding
+- Onboarding status in profile
+- Per-delivery earnings breakdown
+- Tips displayed separately
+- Payout history
+- Link to Stripe Express Dashboard
+
+**Business**
+
+- Stripe Connect onboarding
+- Payout status and history
+- Gross sales and fee breakdown
+- Refund visibility on orders
+
+**Platform**
+
+- Stripe Connect platform account setup
+- Webhook endpoint and event handling
+- Application fee configuration
+- Transfer logic (business + RUNR splits)
+- Refund processing
+- Dispute notification and admin tools
+- Test mode and live mode environment switching
+- Audit logging for all payment actions
+
+---
+
 ## Restaurant-Specific Delivery Routing
 
 When a driver is actively assigned to a restaurant during their selected period, the platform prioritizes eligible delivery orders originating from that restaurant.
@@ -422,17 +840,19 @@ The driver does not need to repeatedly search for individual orders.
 
 When a restaurant receives a delivery order:
 
-1. Customer places order
-2. Restaurant accepts order
-3. Restaurant prepares food
-4. Platform identifies eligible drivers
-5. Platform selects an available driver
-6. Driver receives delivery
-7. Driver accepts/fulfills delivery
-8. Driver picks up order
-9. Driver delivers order
-10. Customer receives order
-11. Driver earnings are recorded
+1. Customer places order and pays via Stripe
+2. Payment Intent succeeds — order is created
+3. Restaurant accepts order
+4. Restaurant prepares food
+5. Platform identifies eligible drivers
+6. Platform selects an available driver
+7. Driver receives delivery
+8. Driver accepts/fulfills delivery
+9. Driver picks up order
+10. Driver delivers order
+11. Customer receives order
+12. Platform records earnings split and initiates Stripe transfers
+13. Driver earnings and tips update in payout balance
 
 ---
 
@@ -673,6 +1093,7 @@ The platform dynamically matches available driver time with restaurant demand.
 - Notifications
 - Payments
 - Delivery tracking
+- Stripe Connect marketplace payments
 
 ### Internal roles control
 
@@ -950,6 +1371,7 @@ The RUNR should never wonder:
 | "Where is the work?" | The map |
 | "When can I work?" | The coverage timeline |
 | "How much did I make?" | The Earnings screen |
+| "When do I get paid?" | Stripe payout history |
 
 ---
 
@@ -962,6 +1384,8 @@ The business should never wonder:
 | "Do I have enough drivers?" | Coverage dashboard |
 | "Where are my deliveries?" | Live map |
 | "Who is delivering this?" | Order detail |
+| "What did I earn today?" | Sales and payout dashboard |
+| "When is my payout?" | Stripe payout schedule |
 
 ---
 
@@ -974,6 +1398,7 @@ The customer should never wonder:
 | "Where is my order?" | Tracking map |
 | "When will it arrive?" | ETA |
 | "Who is delivering it?" | Assigned RUNR information |
+| "What was I charged?" | Order receipt and payment breakdown |
 
 ---
 
@@ -1008,10 +1433,12 @@ Build these first.
 - Menus
 - Cart
 - Checkout
+- Stripe Payment Element
 - Orders
 - Order tracking
 - Tips
 - Ratings
+- Payment receipts
 
 ### RUNR
 
@@ -1032,6 +1459,8 @@ Build these first.
 - Earnings
 - Tips
 - History
+- Stripe Connect onboarding
+- Payout history
 
 ### Business
 
@@ -1046,6 +1475,8 @@ Build these first.
 - Live RUNR view
 - Delivery management
 - Analytics
+- Stripe Connect onboarding
+- Sales and payout dashboard
 
 ### Platform
 
@@ -1054,7 +1485,12 @@ Build these first.
 - RUNR management
 - Dispatch
 - Coverage engine
-- Payments architecture
+- Stripe Connect platform setup
+- Payment Intents and checkout
+- Application fees and transfers
+- Refund and dispute handling
+- Stripe webhooks
+- Payout management
 - Notifications
 - Support ticketing
 - Role-based access control (Support, Moderator, Administrator, Director, Founder)
@@ -1131,7 +1567,13 @@ Earnings
 ↓  
 Tips  
 ↓  
-Payments  
+Stripe Connect onboarding  
+↓  
+Payment Intents and checkout  
+↓  
+Transfers and payouts  
+↓  
+Refunds and disputes  
 ↓  
 Notifications  
 ↓  
@@ -1187,6 +1629,8 @@ They earn:
 - Delivery Pay
 - Distance Pay
 - Tips
+
+Stripe processes their payout on the next deposit schedule.
 
 The RUN ends.
 

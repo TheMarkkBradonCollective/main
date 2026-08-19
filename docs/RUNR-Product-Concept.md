@@ -11,12 +11,16 @@
 7. [California Prop 22](#california-prop-22-compliance)
 8. [Delivery Routing & Dispatch](#restaurant-specific-delivery-routing)
 9. [Complete Platform Specification](#complete-platform-specification) — customer, business, orders, delivery, safety, legal, tech
-10. [Platform Roles](#platform-roles-and-controls)
-11. [Experience Priorities](#runnr-experience-priority)
-12. [MVP & Development Roadmap](#mvp-priority)
-13. [Brand & UI Principles](#final-brand-message)
+10. [Ratings & Reviews](#ratings--reviews) — DoorDash-style feedback system
+11. [Customer Preferences](#customer-preferences) — dietary, delivery, and personalization
+12. [Platform Roles](#platform-roles-and-controls)
+13. [Experience Priorities](#runnr-experience-priority)
+14. [MVP & Development Roadmap](#mvp-priority)
+15. [Brand & UI Principles](#final-brand-message)
 
 ---
+
+## Overview
 
 A food delivery platform that operates similarly to traditional delivery apps, but with a fundamentally different driver model.
 
@@ -2240,7 +2244,7 @@ The sections above define RUNR's unique delivery workforce model. This section d
 | Saved payment methods | Cards via Stripe Customer |
 | Order history | All past orders with reorder button |
 | Favorites | Saved restaurants and menu items |
-| Dietary preferences | Vegetarian, vegan, gluten-free, allergies (profile-level) |
+| Preferences | Dietary, delivery defaults, cuisine interests — see [Customer Preferences](#customer-preferences) |
 | Notification preferences | Push, SMS, email toggles per event type |
 | Account deletion | Self-service with data retention policy |
 | 2FA | Optional two-factor authentication |
@@ -2630,25 +2634,288 @@ When an order is READY, the platform selects a RUNR:
 
 ### Ratings & Reviews
 
-#### Who Rates Whom
+RUNR uses a **DoorDash-style ratings system** — separate feedback flows for the business, the RUNR, and individual menu items, with quick tags, optional written reviews, and public or private visibility options.
 
-| Rater | Rates | Scale |
+---
+
+#### Post-Delivery Rating Flow
+
+After every delivery, the customer is prompted to rate **two things separately**:
+
+1. **The business** (food and order experience)
+2. **The RUNR** (delivery experience)
+
+These are always separate screens. A customer cannot skip the business rating to only rate the RUNR, but both can be submitted quickly.
+
+**Prompt timing**
+
+- Rating prompt appears when order status = DELIVERED
+- Push notification: "How was your order from Tony's Pizza?"
+- In-app banner on next open if not yet rated
+- 72-hour window to submit or edit ratings
+- One verified review per order (cannot rate same order twice)
+
+---
+
+#### Business Rating (Store Feedback)
+
+**Step 1 — Overall rating (required)**
+
+DoorDash-style three-option system:
+
+| Rating | Meaning | Maps to |
 |---|---|---|
-| Customer | Business (food quality) | 1–5 stars + optional text |
-| Customer | RUNR (delivery experience) | 1–5 stars + optional text |
-| RUNR | Business (pickup experience) | 1–5 stars (private to platform) |
-| RUNR | Customer (delivery experience) | 1–5 stars (private to platform) |
-| Business | RUNR (professionalism) | 1–5 stars (private to platform) |
+| 😍 **Loved it** | Excellent experience | 5 stars |
+| 👍 **Liked it** | Good experience | 4 stars |
+| 👎 **Didn't like it** | Poor experience | 2 stars |
 
-#### Rating Rules
+**Step 2 — Experience tags (optional, multi-select)**
 
-- Ratings prompted after delivery completion
-- 72-hour window to submit or edit
-- Text reviews moderated for inappropriate content
-- Businesses can respond to public reviews
-- RUNR ratings affect reliability score and dispatch priority
-- Business ratings affect search ranking and discovery placement
-- Accounts below minimum rating threshold flagged for review
+Tags shown based on rating selected:
+
+**Positive tags (Loved / Liked)**
+
+| Tag | Category |
+|---|---|
+| Good flavor | Food quality |
+| Accurate order | Order accuracy |
+| Hot & fresh | Food temperature |
+| Good portion size | Value |
+| Well packaged | Packaging |
+| Fast preparation | Speed |
+| Great value | Price |
+
+**Negative tags (Didn't like)**
+
+| Tag | Category |
+|---|---|
+| Missing items | Order accuracy |
+| Wrong order | Order accuracy |
+| Cold food | Food temperature |
+| Poor packaging | Packaging |
+| Small portions | Value |
+| Too slow | Speed |
+| Overpriced | Price |
+| Not as described | Accuracy |
+
+**Step 3 — Item ratings (optional)**
+
+Rate individual menu items from the order:
+
+| Rating | Display |
+|---|---|
+| 👍 Thumbs up | Item liked |
+| 👎 Thumbs down | Item disliked |
+
+- Item ratings submitted alongside store rating
+- Items with consistently high thumbs-up ratings earn **Most Liked** badge on menu
+- Up to 3 **Most Liked** items displayed on business page at a time
+- Ranked by % positive ratings from verified RUNR orders
+
+**Step 4 — Written review (optional)**
+
+| Visibility | Who sees it |
+|---|---|
+| **Everyone** | Public on business page and customer profile (if profile public) |
+| **Store feedback only** | Business and RUNR platform only — not shown publicly |
+
+- Written review optional regardless of rating selected
+- Photo upload optional (food photo attached to review)
+- Photos may be lightly enhanced for clarity (lighting, blur correction)
+- All content moderated before display
+- Verified reviews show **"Ordered on RUNR"** badge
+
+**Example — business rating screen**
+
+> **How was Tony's Pizza?**
+>
+> 😍 Loved it &nbsp; 👍 Liked it &nbsp; 👎 Didn't like it
+>
+> What stood out?  
+> [Good flavor] [Accurate order] [Hot & fresh] [Great value]
+>
+> Rate your items:  
+> 🍕 Pepperoni Pizza — 👍 👎  
+> 🥗 Caesar Salad — 👍 👎
+>
+> Add a review (optional)  
+> [Everyone ▾] [Write a review...]  
+> [Add photo]
+>
+> [Submit]
+
+---
+
+#### RUNR Rating (Delivery Feedback)
+
+Separate, simpler flow — no written review option for RUNR ratings.
+
+**Rating options**
+
+| Rating | Meaning |
+|---|---|
+| 👍 **Thumbs up** | Great delivery |
+| 👎 **Thumbs down** | Poor delivery |
+
+**Optional delivery tags (multi-select)**
+
+| Positive | Negative |
+|---|---|
+| Friendly | Unprofessional |
+| On time | Late delivery |
+| Followed instructions | Ignored instructions |
+| Careful with order | Damaged order |
+| Good communication | Hard to reach |
+
+- RUNR rating is **private** — not shown publicly on RUNR profile
+- RUNR sees their aggregate rating score in their app (e.g., 4.87)
+- Customer cannot see RUNR's rating history from other customers
+- RUNR name and photo shown to customer during delivery; rating affects dispatch priority internally
+
+**Example — RUNR rating screen**
+
+> **How was your delivery?**
+>
+> Your RUNR: **Marcus T.** 🚗
+>
+> 👍 Great &nbsp; 👎 Poor
+>
+> [On time] [Friendly] [Followed instructions] [Careful with order]
+>
+> [Submit]
+
+---
+
+#### Business Page — Ratings Display
+
+**Lifetime rating**
+
+- Displayed as **1–5 star average** on business page (e.g., ⭐ 4.7)
+- Calculated from all verified Loved/Liked/Didn't Like ratings
+- Review count shown (e.g., "500+ ratings")
+- Tapping rating opens full reviews section
+
+**Reviews section on business page**
+
+- Recent public reviews ("Everyone" visibility)
+- Star rating, tags, written review, photo (if submitted)
+- "Ordered on RUNR" verified badge
+- Date of order
+- Items ordered (visible on public reviews)
+- Business owner response (if responded within 7 days)
+- Sort: Most recent, Highest rated, Lowest rated
+
+**Rating breakdown**
+
+| Metric | Displayed |
+|---|---|
+| Lifetime average | ⭐ 4.7 |
+| Last 30 days average | ⭐ 4.8 |
+| Loved it % | 72% |
+| Liked it % | 21% |
+| Didn't like it % | 7% |
+| Most common positive tag | "Good flavor" |
+| Most common negative tag | "Cold food" |
+
+**Most Liked items**
+
+- Up to 3 menu items with **Most Liked** badge on business page
+- Badge: "Most Liked · 94% liked this"
+- Eligibility: minimum order threshold of ratings, majority thumbs up
+- Displayed in menu with badge on item card
+
+---
+
+#### Most Loved Program (Business Recognition)
+
+Top-performing businesses earn **Most Loved** status — displayed as a badge on discovery and business page.
+
+**Eligibility requirements**
+
+| Requirement | Threshold |
+|---|---|
+| Lifetime rating | 4.5+ stars |
+| Lifetime orders | 25+ orders |
+| Monthly cancellation rate | Below platform threshold |
+| Menu photos | Logo and header uploaded |
+| Price parity | Menu prices match in-store pricing |
+
+**Most Loved badge display**
+
+> ⭐ **Most Loved** — Top-rated on RUNR
+
+- Featured placement in discovery carousels
+- Higher search ranking priority
+- Eligible for "Top Rated" filter
+- Badge visible on map pins and list view
+
+---
+
+#### Business Review Management
+
+**Business dashboard — Ratings & Reviews tab**
+
+- All ratings and tags (public and store-feedback-only)
+- Item-level thumbs up/down aggregate (not individual votes)
+- Rating trends over time (daily, weekly, monthly)
+- Tag frequency breakdown
+- Operations quality score
+- Response queue for public reviews
+
+**Business can:**
+
+- Read all store feedback (public and private)
+- Respond to public reviews within **7 days** of receipt
+- View tag trends to identify improvement areas
+- See Most Loved eligibility status and gaps
+- Export ratings report (CSV)
+
+**Example — business response**
+
+> ⭐ Loved it · Good flavor · Accurate order  
+> *"Best pizza in town, always hot!"* — Sarah M. · Aug 15  
+>
+> **Tony's Pizza responded:**  
+> *"Thank you Sarah! We're glad you enjoyed it. See you next time!"*
+
+---
+
+#### RUNR Rating Management
+
+**RUNR app — My Ratings**
+
+- Aggregate delivery rating (e.g., 4.91 / 5.00)
+- Rating trend over last 30 / 90 days
+- Most common positive tags received
+- Most common negative tags received
+- Rating does not display individual customer reviews (no text reviews for RUNR)
+- Rating below 4.2 triggers coaching notification
+- Rating below 4.0 flagged for Moderator review
+- Rating below 3.5 may restrict high-demand RUN reservations
+
+**Private ratings (RUNR rates others)**
+
+| RUNR rates | Visibility |
+|---|---|
+| Business (pickup experience) | Private — platform only |
+| Customer (delivery experience) | Private — platform only |
+
+---
+
+#### Rating Rules & Policies
+
+| Rule | Policy |
+|---|---|
+| One review per order | Only one verified review per completed order |
+| Edit window | 72 hours after delivery to edit or add review |
+| Moderation | All public reviews and photos moderated before display |
+| Prohibited content | Profanity, threats, personal info, off-topic content |
+| Fake reviews | Orders must be verified RUNR orders; fraud flagged |
+| Business response window | 7 days to respond to public reviews |
+| Rating removal | Moderator can remove reviews violating guidelines |
+| Disputed reviews | Customer or business can flag review for Moderator review |
+
+---
 
 #### Reliability Score (RUNR)
 
@@ -2660,7 +2927,7 @@ Calculated from:
 | On-time delivery rate | High |
 | Cancellation rate | Negative |
 | No-show rate | High negative |
-| Customer RUNR rating | Medium |
+| Customer RUNR rating (thumbs up/down) | Medium |
 | Late RUN cancellations | Medium negative |
 | Check-in punctuality | Low |
 
@@ -2668,6 +2935,323 @@ Calculated from:
 - Minimum score to accept deliveries: 70 (configurable)
 - Score visible to RUNR in profile
 - Score affects dispatch priority
+
+---
+
+#### Ratings MVP Requirements
+
+**Customer**
+
+- Post-delivery business rating (Loved / Liked / Didn't Like)
+- Experience tag selection
+- Item-level thumbs up/down
+- Optional written review with visibility toggle (Everyone / Store feedback)
+- Photo upload on review
+- Separate RUNR rating (thumbs up/down + tags)
+- View public reviews on business page
+- Edit rating within 72 hours
+
+**Business**
+
+- Ratings & Reviews dashboard
+- Tag trend analytics
+- Respond to public reviews
+- Most Loved eligibility tracker
+- Most Liked items visibility
+
+**RUNR**
+
+- Aggregate rating display in profile
+- Rating trend and tag summary
+- Coaching alerts for low ratings
+
+**Platform**
+
+- Rating aggregation engine (lifetime + rolling averages)
+- Most Loved program eligibility checker
+- Most Liked items calculator
+- Review moderation queue
+- Verified order badge system
+- Tag analytics and reporting
+
+---
+
+### Customer Preferences
+
+RUNR provides **DoorDash-style customer preferences** — saved settings that personalize discovery, filter menus, and set delivery defaults so every order starts with the right choices already applied.
+
+---
+
+#### Preference Onboarding
+
+During first sign-up (or first order), customers are prompted to set preferences:
+
+> **Let's personalize your experience**
+>
+> What do you like to eat?  
+> [🍕 Pizza] [🌮 Mexican] [🍣 Asian] [🍔 Burgers] [🥗 Healthy] [☕ Coffee] [+ More]
+>
+> Any dietary needs?  
+> [Vegetarian] [Vegan] [Gluten-free] [Dairy-free] [Nut-free] [Halal] [Kosher]
+>
+> [Save preferences] [Skip for now]
+
+- Preferences can be updated anytime in **Account → Preferences**
+- Skipping onboarding shows preferences prompt again after 3 orders
+
+---
+
+#### Cuisine Preferences
+
+Customers select cuisines they enjoy. These power the **"For You"** personalized feed.
+
+| Cuisine | Examples |
+|---|---|
+| Pizza | Italian, flatbread |
+| Mexican | Tacos, burritos |
+| Asian | Chinese, Japanese, Thai, Korean, Vietnamese |
+| Burgers & Sandwiches | American, fast food |
+| Healthy | Salads, bowls, organic |
+| Seafood | Fish, sushi |
+| Indian | Curry, tandoori |
+| Mediterranean | Greek, Middle Eastern |
+| Desserts & Bakery | Cakes, pastries |
+| Coffee & Breakfast | Cafes, brunch |
+| Late Night | Open after 10 PM |
+| Comfort Food | Soul food, homestyle |
+
+- Multi-select — choose as many as apply
+- "For You" tab on home screen shows restaurants matching cuisine preferences
+- Order history also influences recommendations (collaborative filtering)
+- Preferences used to rank search results
+
+---
+
+#### Dietary Preferences & Restrictions
+
+**Dietary lifestyle (multi-select)**
+
+| Preference | Effect |
+|---|---|
+| Vegetarian | Highlights vegetarian items; filters available |
+| Vegan | Highlights vegan items; filters available |
+| Pescatarian | Highlights seafood and vegetarian |
+| Gluten-free | Highlights GF items; shows GF filter |
+| Dairy-free | Highlights dairy-free items |
+| Nut-free | Highlights nut-free items; allergy alert |
+| Halal | Highlights halal-certified businesses |
+| Kosher | Highlights kosher-certified businesses |
+| Low-carb / Keto | Highlights low-carb items |
+
+**Allergen alerts**
+
+- Customer enters specific allergens (e.g., peanuts, shellfish, eggs, soy, wheat)
+- Allergen set in profile applies as a **persistent warning** on menu items
+- Items containing flagged allergens show ⚠️ alert on menu card and item detail
+- Alert shown again at checkout: "Your order contains [allergen] — please confirm"
+- Allergen data sourced from business menu labels (business-confirmed)
+
+**Food labels on menu items (business-set, customer-filtered)**
+
+| Label | Filterable |
+|---|---|
+| Vegetarian | ✓ |
+| Vegan | ✓ |
+| Gluten-free | ✓ |
+| Dairy-free | ✓ |
+| Spicy 🌶️ | ✓ |
+| Contains nuts | ✓ |
+| Halal | ✓ |
+| Organic | ✓ |
+| Low calorie | ✓ |
+
+- Sensitive labels (gluten-free, vegan, allergen-free) require business confirmation before display
+- Customers can filter menu by any label
+- Labels appear as badges on item cards in menu and search results
+
+---
+
+#### Delivery Preferences (Defaults)
+
+Saved defaults applied automatically at checkout. Customer can override per order.
+
+| Preference | Options | Default |
+|---|---|---|
+| Delivery type | Hand to me / Leave at door | Hand to me |
+| Contactless delivery | On / Off | Off |
+| Include utensils | Yes / No | No |
+| Default tip | $0 / $2 / $3 / $5 / 15% / 20% / Custom | $3 |
+| Delivery instructions | Free text (per saved address) | — |
+| Ring doorbell | Yes / No / Only if needed | Only if needed |
+| Call on arrival | Yes / No | No |
+
+**Per-address instructions**
+
+Each saved address can have unique instructions:
+
+> **Home**  
+> 123 Oak Street, Apt 4B  
+> Gate code: #4521 · Leave at door · Don't ring doorbell
+
+- Instructions auto-applied when address selected at checkout
+- RUNR sees delivery instructions on assignment screen
+- Instructions editable per order without changing saved default
+
+---
+
+#### Discovery & Filter Preferences
+
+**Default sort preference**
+
+| Option | Behavior |
+|---|---|
+| Recommended | Personalized based on preferences + history |
+| Nearest | Closest to delivery address |
+| Highest rated | Best lifetime rating first |
+| Fastest delivery | Shortest ETA first |
+| Lowest delivery fee | Cheapest delivery first |
+
+**Default filters (always applied unless cleared)**
+
+- Cuisine preferences (from profile)
+- Dietary filters (from profile)
+- Open now
+- Minimum rating (e.g., 4.0+ only)
+- Price range ($ to $$$$)
+- Delivery fee max
+- Distance max
+
+**"For You" personalized feed**
+
+Built from:
+
+| Signal | Weight |
+|---|---|
+| Cuisine preferences | High |
+| Order history (reorder patterns) | High |
+| Dietary preferences | High |
+| Favorited restaurants | Medium |
+| Highly rated businesses (customer's own ratings) | Medium |
+| Nearby RUNR coverage (delivery reliability) | Low |
+| Trending in area | Low |
+
+- "For You" is the default home tab
+- Refreshes based on time of day (breakfast spots in morning, dinner in evening)
+- Shows "Because you ordered [item]" recommendations
+- Shows "New for you" for unexplored cuisines matching preferences
+
+---
+
+#### Favorite Restaurants & Items
+
+**Favorite restaurants**
+
+- Tap ♥ on any business page to save
+- Saved restaurants appear in **Favorites** tab
+- Favorites sorted by most recently ordered
+- Notification when a favorited restaurant has a promotion or new menu items
+- Quick reorder from favorites list
+
+**Favorite menu items**
+
+- Tap ♥ on any menu item to save
+- Saved items appear in **Favorites → Items**
+- "Order again" button on each saved item
+- Item availability checked in real time (grayed out if 86'd)
+- Cross-restaurant item favorites supported
+
+---
+
+#### Notification Preferences
+
+Granular control per notification type:
+
+| Notification | Push | SMS | Email |
+|---|---|---|---|
+| Order status updates | ✓ default on | ✓ default on | ✓ default on |
+| RUNR arriving | ✓ | ✓ | — |
+| Delivery complete | ✓ | — | ✓ (receipt) |
+| Promotions & deals | opt-in | — | opt-in |
+| New restaurants nearby | opt-in | — | opt-in |
+| Favorited restaurant updates | opt-in | — | opt-in |
+| Reorder reminders | opt-in | — | opt-in |
+| Account & security | ✓ | ✓ | ✓ |
+| Weekly order summary | — | — | opt-in |
+
+- Marketing notifications off by default (opt-in required)
+- Order-critical notifications cannot be fully disabled (push required for active orders)
+- Quiet hours setting: no promotional push between 10 PM – 8 AM
+
+---
+
+#### Privacy Preferences
+
+| Setting | Options |
+|---|---|
+| Profile visibility | Public / Private |
+| Show my reviews publicly | On / Off |
+| Show order history on profile | On / Off |
+| Personalized ads & recommendations | On / Off |
+| Share order data for recommendations | On / Off |
+| Location tracking | While using app / Always / Never |
+
+- Public profile shows customer's first name and public reviews only
+- Private profile: reviews still count toward business ratings but not shown on profile
+
+---
+
+#### Preferences Screen (Account → Preferences)
+
+**Example layout**
+
+> **Preferences**
+>
+> **Cuisines I like**  
+> 🍕 Pizza · 🌮 Mexican · 🍣 Asian · [Edit]
+>
+> **Dietary needs**  
+> Vegetarian · Gluten-free · [Edit]
+>
+> **Allergens**  
+> ⚠️ Peanuts · Shellfish · [Edit]
+>
+> **Delivery defaults**  
+> Leave at door · No utensils · $3 tip · [Edit]
+>
+> **Sort & filters**  
+> Recommended · Open now · 4.0+ rating · [Edit]
+>
+> **Notifications**  
+> [Manage]
+>
+> **Privacy**  
+> [Manage]
+
+---
+
+#### Preferences MVP Requirements
+
+**Customer**
+
+- Preference onboarding flow (cuisine + dietary)
+- Cuisine multi-select with "For You" feed
+- Dietary preferences and allergen alerts
+- Menu item food label filters
+- Delivery defaults (type, utensils, tip, instructions)
+- Per-address delivery instructions
+- Favorite restaurants and items
+- Notification preference toggles
+- Privacy settings
+- Preferences screen in account settings
+
+**Platform**
+
+- Preference storage and sync across devices
+- "For You" recommendation engine
+- Allergen warning system on menu and checkout
+- Food label filter engine
+- Default application at checkout
+- Preference-based search ranking
 
 ---
 
@@ -2895,13 +3479,20 @@ Add these to the existing MVP lists.
 
 **Customer (additions)**
 
-- Phone verification, saved addresses, dietary preferences
-- Search, filters, categories, favorites
+- Phone verification, saved addresses
+- Preference onboarding (cuisine + dietary + allergens)
+- "For You" personalized feed
+- Food label filters on menu
+- Delivery defaults (type, utensils, tip, instructions)
+- Favorite restaurants and items
+- Search, filters, categories
 - Menu modifiers and item-level instructions
 - Delivery type (hand to me / leave at door)
 - Scheduled orders, promo codes
 - Live order tracking map, in-app chat with RUNR
-- Ratings and reviews, reorder, referral codes
+- DoorDash-style ratings (Loved/Liked/Didn't Like, tags, item thumbs, RUNR thumbs)
+- Public and private review visibility, photo reviews
+- Reorder, referral codes
 
 **RUNR (additions)**
 
@@ -2922,6 +3513,9 @@ Add these to the existing MVP lists.
 - Operating hours and holiday overrides
 - Delivery zone configuration
 - Review responses, business analytics
+- Most Loved program tracker
+- Most Liked items badges
+- Tag trend analytics
 
 **Platform (additions)**
 
@@ -2930,6 +3524,12 @@ Add these to the existing MVP lists.
 - Delivery zone and fee engine
 - Notification service (push, SMS, email)
 - Ratings and reliability score engine
+- Most Loved program eligibility engine
+- Most Liked items calculator
+- Review moderation queue
+- "For You" recommendation engine
+- Allergen warning and food label filter system
+- Customer preferences storage and defaults engine
 - Promo code and referral system
 - In-app chat and masked calling (Twilio)
 - Content moderation queue
@@ -3015,6 +3615,8 @@ The customer should never wonder:
 | "When will it arrive?" | ETA |
 | "Who is delivering it?" | Assigned RUNR information |
 | "What was I charged?" | Order receipt and payment breakdown |
+| "What's good near me?" | "For You" feed based on preferences |
+| "Does this have my allergen?" | Allergen alerts on menu items |
 
 ---
 
@@ -3053,7 +3655,7 @@ Build these first.
 - Orders
 - Order tracking
 - Tips
-- Ratings
+- Ratings (DoorDash-style) and preferences
 - Payment receipts
 
 ### RUNR
@@ -3173,27 +3775,31 @@ Coverage engine
 
 ### Phase 4
 
-Dispatch  
+Dispatch algorithm  
 ↓  
 Delivery workflow  
 ↓  
-Navigation  
+Navigation and geofencing  
 ↓  
-Pickup  
+Pickup verification  
 ↓  
-Dropoff
+Dropoff and photo proof  
+↓  
+In-app chat and masked calling
 
 ### Phase 5
 
-Business dashboard  
+Business onboarding and approval  
 ↓  
-Orders  
+Menu management  
 ↓  
-RUNRs  
+Business dashboard and order queue  
 ↓  
-Coverage  
+RUNRs and coverage  
 ↓  
-Live operations
+Live operations map  
+↓  
+Analytics
 
 ### Phase 6
 
@@ -3217,9 +3823,15 @@ Insurance integration
 ↓  
 Refunds and disputes  
 ↓  
-Notifications  
+Ratings and reliability scores  
 ↓  
-Ratings
+Promotions and referrals  
+↓  
+Notifications (push, SMS, email)  
+↓  
+Safety (SOS, incident reporting)  
+↓  
+Legal and privacy (CCPA, terms)
 
 ---
 

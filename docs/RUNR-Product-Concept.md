@@ -1,6 +1,22 @@
 # Restaurant-Based Delivery Marketplace
 
-## Overview
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Core Concept](#core-concept)
+3. [Driver Model](#driver-model)
+4. [RUNR Sign-Up](#runnr-sign-up)
+5. [Coverage System](#example) — staffing, discovery, dashboards
+6. [Payments & Stripe](#stripe-connection-and-payments)
+7. [California Prop 22](#california-prop-22-compliance)
+8. [Delivery Routing & Dispatch](#restaurant-specific-delivery-routing)
+9. [Complete Platform Specification](#complete-platform-specification) — customer, business, orders, delivery, safety, legal, tech
+10. [Platform Roles](#platform-roles-and-controls)
+11. [Experience Priorities](#runnr-experience-priority)
+12. [MVP & Development Roadmap](#mvp-priority)
+13. [Brand & UI Principles](#final-brand-message)
+
+---
 
 A food delivery platform that operates similarly to traditional delivery apps, but with a fundamentally different driver model.
 
@@ -341,6 +357,8 @@ RUNRs must keep license and insurance current at all times.
 - Audit log for all document submissions and approvals
 
 ---
+
+## Example
 
 A driver opens:
 
@@ -2203,6 +2221,727 @@ The dashboard should surface only the tools and data each role is authorized to 
 
 ---
 
+## Complete Platform Specification
+
+The sections above define RUNR's unique delivery workforce model. This section documents **everything else** required to operate a full food delivery marketplace.
+
+---
+
+### Customer App
+
+#### Account & Authentication
+
+| Feature | Details |
+|---|---|
+| Sign-up | Email, phone, or OAuth (Apple, Google) |
+| Phone verification | SMS OTP required for first order |
+| Profile | Name, photo, email, phone |
+| Saved addresses | Home, work, custom labels, delivery instructions per address |
+| Saved payment methods | Cards via Stripe Customer |
+| Order history | All past orders with reorder button |
+| Favorites | Saved restaurants and menu items |
+| Dietary preferences | Vegetarian, vegan, gluten-free, allergies (profile-level) |
+| Notification preferences | Push, SMS, email toggles per event type |
+| Account deletion | Self-service with data retention policy |
+| 2FA | Optional two-factor authentication |
+
+#### Discovery & Search
+
+- Map-based restaurant discovery (primary)
+- List view with distance, rating, ETA, delivery fee
+- Search by restaurant name, cuisine, dish, or category
+- Filters: cuisine type, rating, delivery fee, distance, open now, price range
+- Sort: nearest, highest rated, fastest delivery, most popular
+- Categories: Pizza, Mexican, Asian, Burgers, Healthy, Late Night, etc.
+- Featured and promoted restaurants (platform-controlled)
+- "Order again" shortcuts from order history
+- Nearby RUNR coverage indicator (indirect signal of delivery reliability)
+
+#### Restaurant Page (Customer-Facing)
+
+- Hero image, name, cuisine tags, rating, review count
+- Operating hours and open/closed status
+- Estimated delivery time and delivery fee
+- Minimum order amount
+- Full menu with categories
+- Item photos, descriptions, prices, calorie info (optional)
+- Modifiers and customizations (size, toppings, extras, special instructions)
+- Allergen warnings per item
+- Out-of-stock items grayed out
+- Popular items highlighted
+- Reviews and ratings tab
+
+#### Cart & Checkout
+
+| Step | Details |
+|---|---|
+| Cart review | Items, quantities, modifiers, per-item notes |
+| Delivery address | Select or add; gate code, apt/unit, instructions |
+| Delivery type | Hand to me / Leave at door |
+| Contactless | Optional no-contact delivery toggle |
+| Utensils | Include utensils yes/no |
+| Scheduled order | Order now or schedule for later (within business hours) |
+| Tip | Preset ($2/$3/$5) or custom; option to tip after delivery |
+| Promo code | Apply discount codes |
+| Order summary | Subtotal, delivery fee, service fee, tax, tip, total |
+| Payment | Stripe Payment Element |
+| Confirmation | Order number, estimated prep and delivery time |
+
+#### Order Tracking
+
+**Order statuses (customer-visible)**
+
+| Status | Customer Sees |
+|---|---|
+| Order placed | "Order received" |
+| Confirmed | "Restaurant is preparing your order" |
+| Preparing | "Your food is being prepared" |
+| Ready for pickup | "Waiting for RUNR pickup" |
+| RUNR assigned | RUNR name, photo, vehicle info |
+| RUNR en route to restaurant | Map — RUNR heading to restaurant |
+| Picked up | Map — RUNR heading to you |
+| Arriving | "Your RUNR is nearby" |
+| Delivered | "Enjoy your meal!" |
+| Cancelled | Reason and refund status |
+
+- Live map with RUNR location (when assigned)
+- ETA updates in real time
+- Contact RUNR (masked call/text in-app)
+- Order details and receipt accessible throughout
+- Push notifications at every status change
+- Photo proof of delivery (when left at door)
+
+#### Customer Cancellations
+
+| Timing | Policy |
+|---|---|
+| Before restaurant confirms | Free cancellation, full refund |
+| After confirm, before prep starts | Full refund (configurable) |
+| After prep starts | Partial or no refund; business discretion |
+| After RUNR pickup | No cancellation; contact support |
+
+---
+
+### Business Onboarding & Management
+
+#### Business Sign-Up
+
+1. Create business account
+2. Business information (legal name, DBA, EIN/tax ID)
+3. Business address and location pin on map
+4. Business license upload and verification
+5. Food handler permit / health department certificate
+6. Owner identity verification
+7. Bank account / Stripe Connect setup
+8. Menu setup (manual or import)
+9. Delivery zone and radius configuration
+10. Operating hours setup
+11. RUNR capacity schedule setup
+12. Platform review and approval
+13. Go live
+
+**Business cannot receive orders until approved by Administrator.**
+
+#### Business Staff Roles
+
+| Role | Permissions |
+|---|---|
+| Owner | Full access — menu, orders, staff, payouts, settings |
+| Manager | Orders, menu edits, RUNR capacity, analytics; no payout/bank changes |
+| Staff | View and manage incoming orders only; mark ready for pickup |
+| Accountant | View payouts and sales reports (read-only) |
+
+- Owner can invite staff by email
+- Role assigned per location (multi-location support)
+- Staff activity logged in audit trail
+
+#### Business Profile & Settings
+
+- Business name, description, logo, cover photo
+- Cuisine categories and tags
+- Phone number (customer-visible)
+- Operating hours (per day; holiday overrides)
+- Delivery radius (miles from location)
+- Minimum order amount
+- Average prep time (manual or auto-calculated)
+- Auto-pause orders when kitchen overwhelmed
+- Accept/prepare time targets
+- Delivery fee (platform-set or business contribution — configurable)
+- Special instructions field for all orders
+- Printer/tablet mode for order tickets
+
+#### Menu Management
+
+**Menu structure**
+
+```
+Menu
+├── Category (e.g., Appetizers)
+│   ├── Item (e.g., Garlic Bread)
+│   │   ├── Base price
+│   │   ├── Description, photo, calories
+│   │   ├── Allergens
+│   │   ├── Modifier groups
+│   │   │   ├── Size (required, pick 1): Small / Medium / Large
+│   │   │   ├── Toppings (optional, pick up to 5): Pepperoni, Mushroom...
+│   │   │   └── Extras (optional): Extra cheese +$1.50
+│   │   └── Availability schedule (e.g., breakfast only)
+│   └── Item...
+└── Category...
+```
+
+**Menu controls**
+
+- Add, edit, archive items and categories
+- Drag-and-drop category and item ordering
+- Item photos (required for featured items)
+- Mark items out of stock (86'd) — real-time sync to customer app
+- Scheduled availability (lunch menu, dinner menu)
+- Price changes with effective date
+- Modifier pricing (per-option upcharges)
+- Menu versioning — changes go live immediately or scheduled
+- Bulk import via CSV
+- Clone menu across locations (multi-location)
+
+#### Business Order Management
+
+**Business-facing order statuses**
+
+| Status | Business Action |
+|---|---|
+| New | Accept or reject (timer — auto-reject if no response in X min) |
+| Accepted | Begin preparation |
+| Preparing | In kitchen |
+| Ready | Mark ready for RUNR pickup |
+| Picked up | RUNR confirmed pickup |
+| Completed | Delivered |
+| Cancelled | With reason |
+
+- Order ticket printing (Bluetooth / network printer)
+- Tablet-optimized order queue view
+- Sound/push alert on new order
+- Prep time adjustment per order
+- Item-level "unavailable" from active order
+- Internal notes on orders
+- Daily order volume and revenue summary
+
+#### Business Analytics
+
+| Metric | Available to |
+|---|---|
+| Orders today / week / month | Manager+ |
+| Revenue (gross and net) | Owner, Accountant |
+| Average order value | Manager+ |
+| Peak hours | Manager+ |
+| Most popular items | Manager+ |
+| Average prep time | Manager+ |
+| RUNR coverage vs. demand | Manager+ |
+| Customer ratings trend | Manager+ |
+| Cancellation rate | Manager+ |
+| Payout history | Owner, Accountant |
+
+---
+
+### Orders & Fulfillment
+
+#### Full Order Lifecycle (System)
+
+```
+PLACED → CONFIRMED → PREPARING → READY → ASSIGNED → PICKED_UP → EN_ROUTE → ARRIVED → DELIVERED
+                                                                              ↘ CANCELLED (any stage with rules)
+```
+
+| Stage | Triggered By | System Action |
+|---|---|---|
+| PLACED | Customer payment succeeds | Notify business; start accept timer |
+| CONFIRMED | Business accepts | Notify customer; begin prep tracking |
+| PREPARING | Business starts prep | Update customer ETA |
+| READY | Business marks ready | Notify eligible RUNRs; begin dispatch |
+| ASSIGNED | Dispatch selects RUNR | Notify RUNR and customer; show on maps |
+| PICKED_UP | RUNR confirms at restaurant | Start engaged time (Prop 22); navigate to customer |
+| EN_ROUTE | RUNR leaves restaurant | Live tracking for customer |
+| ARRIVED | RUNR within geofence of customer | Notify customer |
+| DELIVERED | RUNR confirms drop-off | Complete payment split; prompt ratings |
+| CANCELLED | Customer, business, or system | Process refund per policy |
+
+#### Dispatch Algorithm
+
+When an order is READY, the platform selects a RUNR:
+
+**Eligibility criteria (all must pass)**
+
+1. RUNR is actively checked in at the originating restaurant
+2. RUNR's RUN period covers current time
+3. RUNR is not in Prop 22 rest period
+4. RUNR has no active delivery in progress (or batching enabled)
+5. RUNR reliability score above minimum threshold
+6. RUNR vehicle type compatible with order
+
+**Selection priority**
+
+1. RUNRs at the restaurant with fewest active/completed deliveries this RUN
+2. Shortest idle time since last delivery
+3. Highest reliability score (tiebreaker)
+4. Closest to ready time (minimize food wait)
+
+**Dispatch rules**
+
+- Auto-assign with 30-second accept window (configurable)
+- If RUNR declines or times out → offer to next eligible RUNR
+- If no RUNR available → alert business; extend ready time; notify customer of delay
+- Manual override available to Administrator
+
+#### Pickup Verification
+
+- RUNR must be within restaurant geofence to mark "Arrived at restaurant"
+- Order confirmation PIN shown to RUNR (last 4 of order # or unique PIN)
+- Business marks order handed off → RUNR confirms pickup
+- Photo of order/bag optional at pickup
+- Engaged time starts at pickup confirmation
+
+#### Delivery Completion
+
+- RUNR must be within customer delivery geofence to complete
+- Delivery type determines completion flow:
+
+| Type | Completion |
+|---|---|
+| Hand to customer | RUNR taps "Delivered" after handoff |
+| Leave at door | RUNR takes photo → taps "Delivered" |
+| Contactless | Photo required; no contact confirmation |
+
+- Customer receives delivery notification with photo (if applicable)
+- RUNR prompted to rate experience (optional, non-blocking)
+
+---
+
+### Delivery Zones & Fees
+
+#### Service Areas
+
+- Each business defines a delivery radius (default: 5 miles)
+- Platform can enforce maximum radius per market
+- Customer address validated against business delivery zone at checkout
+- Out-of-zone addresses blocked with clear message
+- Map overlay shows delivery zone on business page
+
+#### Delivery Fee Calculation
+
+| Component | How Calculated |
+|---|---|
+| Base delivery fee | Flat fee per market (e.g., $2.99) |
+| Distance fee | Per-mile beyond base distance |
+| Small order fee | If subtotal below minimum |
+| Busy area fee | Optional surge during high demand |
+| RUNR share | Configurable % of delivery fee |
+| Platform share | Remainder of delivery fee |
+
+**Example**
+
+> Distance: 3.2 miles  
+> Base fee: $2.99  
+> Distance fee (3.2 mi × $0.50): $1.60  
+> **Total delivery fee: $4.59**
+
+#### ETA Calculation
+
+| Factor | Weight |
+|---|---|
+| Business average prep time | 40% |
+| Current kitchen queue | 20% |
+| RUNR availability at restaurant | 20% |
+| Distance to customer | 15% |
+| Traffic (real-time) | 5% |
+
+- ETA shown at checkout (range, e.g., 25–35 min)
+- ETA updates at each order status change
+- Customer notified if ETA changes by more than 10 minutes
+
+---
+
+### Navigation & Maps
+
+#### Map Infrastructure
+
+- Primary map provider: Google Maps (or Mapbox — configurable)
+- Real-time location tracking for RUNRs (when on active delivery or checked in)
+- Customer sees RUNR on map during EN_ROUTE and ARRIVED
+- Business sees all active RUNRs on live map
+- RUNR sees restaurant, customer, and route
+
+#### RUNR Navigation
+
+- Turn-by-turn navigation (in-app or deep link to Google/Apple Maps)
+- Route optimized for driving
+- Multiple stops if batching enabled (future)
+- Arrival geofence triggers (restaurant and customer)
+- Offline map fallback for poor connectivity areas
+
+#### Map-First UI (All Apps)
+
+| App | Map Shows |
+|---|---|
+| Customer | Nearby restaurants, active order RUNR location |
+| RUNR | Nearby businesses with coverage gaps, active delivery route |
+| Business | Active RUNRs, delivery destinations for current orders |
+
+---
+
+### Notifications
+
+#### Push Notifications
+
+| Event | Customer | RUNR | Business |
+|---|---|---|---|
+| Order confirmed | ✓ | | ✓ |
+| Order ready | | ✓ | |
+| RUNR assigned | ✓ | ✓ | |
+| RUNR arriving | ✓ | | |
+| Delivered | ✓ | ✓ | ✓ |
+| New order | | | ✓ |
+| RUN gap alert | | ✓ | |
+| Coverage low | | | ✓ |
+| Payout processed | | ✓ | ✓ |
+| Document expiring | | ✓ | |
+| Promo / marketing | ✓ (opt-in) | ✓ (opt-in) | ✓ (opt-in) |
+
+#### SMS Notifications
+
+- Order status updates (opt-in)
+- Delivery arriving alerts
+- Account verification OTP
+- Critical security alerts (all users)
+
+#### Email Notifications
+
+- Order receipts
+- Weekly payout statements
+- Account changes (password, email)
+- Prop 22 earnings statements (California RUNRs)
+- Marketing (opt-in)
+
+#### In-App Notifications
+
+- Notification center with read/unread state
+- Deep links to relevant screen (order, payout, coverage)
+- Badge counts on tab bar icons
+
+---
+
+### Ratings & Reviews
+
+#### Who Rates Whom
+
+| Rater | Rates | Scale |
+|---|---|---|
+| Customer | Business (food quality) | 1–5 stars + optional text |
+| Customer | RUNR (delivery experience) | 1–5 stars + optional text |
+| RUNR | Business (pickup experience) | 1–5 stars (private to platform) |
+| RUNR | Customer (delivery experience) | 1–5 stars (private to platform) |
+| Business | RUNR (professionalism) | 1–5 stars (private to platform) |
+
+#### Rating Rules
+
+- Ratings prompted after delivery completion
+- 72-hour window to submit or edit
+- Text reviews moderated for inappropriate content
+- Businesses can respond to public reviews
+- RUNR ratings affect reliability score and dispatch priority
+- Business ratings affect search ranking and discovery placement
+- Accounts below minimum rating threshold flagged for review
+
+#### Reliability Score (RUNR)
+
+Calculated from:
+
+| Factor | Impact |
+|---|---|
+| Completion rate | High |
+| On-time delivery rate | High |
+| Cancellation rate | Negative |
+| No-show rate | High negative |
+| Customer RUNR rating | Medium |
+| Late RUN cancellations | Medium negative |
+| Check-in punctuality | Low |
+
+- Score: 0–100
+- Minimum score to accept deliveries: 70 (configurable)
+- Score visible to RUNR in profile
+- Score affects dispatch priority
+
+---
+
+### Promotions & Pricing
+
+#### Promo Codes
+
+| Type | Example |
+|---|---|
+| Percentage off | 20% off first order |
+| Fixed amount off | $5 off orders over $25 |
+| Free delivery | Waive delivery fee |
+| BOGO | Buy one get one (business-funded) |
+| RUNR incentive | Bonus per delivery during gap periods |
+
+- Platform-funded or business-funded (configured per code)
+- Usage limits: per user, total redemptions, date range
+- Minimum order amount requirement
+- Single-use or multi-use codes
+- Referral codes tied to user accounts
+
+#### Referral Program
+
+- Customer refers customer: both get credit after first order
+- RUNR refers RUNR: bonus after referred RUNR completes X deliveries
+- Business refers business: platform credit
+- Unique referral link and code per user
+- Referral tracking dashboard
+
+#### RUNR Incentives
+
+- **Gap bonuses**: Extra pay per delivery when restaurant has coverage gap
+- **Quest bonuses**: "Complete 10 deliveries this RUN for $20 bonus"
+- **Peak bonuses**: Higher pay during high-demand periods
+- **New RUNR bonus**: First-week incentive for new RUNRs
+- Incentives shown on map and business profile
+- Paid in weekly payout as separate line item
+
+---
+
+### Communication
+
+#### In-App Messaging
+
+- Customer ↔ RUNR: masked in-app chat (no personal phone numbers exposed)
+- Available from RUNR assignment until delivery complete
+- Pre-set quick messages: "I'm here", "Running 5 min late", "Where's the gate code?"
+- Messages logged for support and safety review
+- Chat disabled after delivery completed
+
+#### Masked Calling
+
+- Tap-to-call between customer and RUNR via proxy number
+- Numbers never exposed to either party
+- Calls logged (metadata only, not recorded)
+- Available during active delivery only
+
+---
+
+### Safety & Trust
+
+#### RUNR Safety
+
+- **SOS button**: Emergency alert with live location sent to platform safety team
+- **Share trip**: RUNR can share live delivery location with personal contact
+- **Incident reporting**: Report safety issue, harassment, accident, or theft
+- **Community guidelines**: Clear conduct standards for all users
+- **Account verification**: Phone, email, license, insurance, background check
+
+#### Customer Safety
+
+- Verified RUNR profiles (name, photo, vehicle, rating)
+- Live tracking during delivery
+- Report a problem on any order
+- Block RUNR from future deliveries to their address
+
+#### Business Safety
+
+- Verified business licenses on file
+- Health permit tracking and expiration alerts
+- Report problematic RUNRs or customers
+- Fraud detection on high-value or suspicious orders
+
+#### Content Moderation
+
+- Review text screened for profanity, threats, and personal info
+- Photo uploads (menu, delivery proof) screened for inappropriate content
+- Moderator queue for flagged content
+- Three-strike policy for policy violations
+
+---
+
+### Vehicle Types
+
+| Type | Requirements | Use Case |
+|---|---|---|
+| Car | Valid license + auto insurance | Standard deliveries |
+| Motorcycle | Motorcycle license + insurance | Fast urban deliveries |
+| Bicycle | ID verification only | Short-distance, eco zones |
+| Scooter | ID verification | Campus and downtown zones |
+
+- RUNR selects vehicle type during sign-up
+- Vehicle type shown on customer tracking screen
+- Some businesses or orders may require car (large orders, catering)
+- Insurance requirements vary by vehicle type
+
+---
+
+### Legal, Privacy & Compliance
+
+#### Required Legal Documents
+
+- Terms of Service (customer, RUNR, business — separate or combined)
+- Privacy Policy
+- Cookie Policy (web)
+- RUNR Independent Contractor Agreement
+- Business Partner Agreement
+- Prop 22 disclosure and rights summary (California RUNRs)
+- Community Guidelines
+- Refund and Cancellation Policy
+
+#### Data & Privacy
+
+- CCPA compliance (California users): right to access, delete, opt-out of sale
+- Data retention policy: order data 7 years; location data 90 days; chat 1 year
+- Location data collected only during active delivery or check-in
+- Users can download their data (data portability)
+- Account deletion removes PII; anonymized order data retained for analytics
+- No sale of personal data to third parties
+
+#### Tax
+
+- Sales tax calculated via Stripe Tax (or TaxJar) based on delivery address
+- Tax remittance handled per state/local requirements
+- 1099 issued to RUNRs and businesses via Stripe
+- Customers receive itemized tax on receipts
+
+---
+
+### Technical Architecture
+
+#### Platforms
+
+| Platform | Technology |
+|---|---|
+| Customer app | React Native (iOS + Android) + Web (PWA) |
+| RUNR app | React Native (iOS + Android) |
+| Business app | Web dashboard (tablet-optimized) + optional tablet app |
+| Admin console | Web (internal) |
+| API | REST + WebSocket (real-time) |
+| Database | PostgreSQL (primary) + Redis (cache/sessions) |
+| File storage | S3-compatible (menu photos, delivery proof, documents) |
+| Maps | Google Maps Platform |
+| Payments | Stripe Connect |
+| Push notifications | Firebase Cloud Messaging (FCM) + APNs |
+| SMS | Twilio |
+| Email | SendGrid or Postmark |
+| Background checks | Checkr (or equivalent) |
+| Real-time | WebSocket server (order status, location, coverage) |
+
+#### Real-Time Requirements
+
+| Data | Update Frequency |
+|---|---|
+| RUNR location (active delivery) | Every 5 seconds |
+| Coverage counts | Every 30 seconds |
+| Order status | Immediate (WebSocket push) |
+| Menu availability | Immediate on change |
+| ETA | Every 60 seconds or on status change |
+
+#### API Design Principles
+
+- Versioned API (`/v1/`)
+- JWT authentication with refresh tokens
+- Role-based access on every endpoint
+- Rate limiting per user and IP
+- Webhook signatures verified (Stripe, background check provider)
+- Idempotent payment and order endpoints
+- Audit log on all write operations
+
+#### Environments
+
+| Environment | Purpose |
+|---|---|
+| Development | Local development |
+| Staging | QA, Stripe test mode, test maps |
+| Production | Live users, Stripe live mode |
+
+#### Monitoring & Reliability
+
+- Uptime monitoring on API and WebSocket
+- Error tracking (Sentry or equivalent)
+- Performance monitoring (response times, dispatch latency)
+- Alerting for payment failures, dispatch failures, coverage gaps
+- Database backups daily; point-in-time recovery
+- 99.9% uptime target for order and payment flows
+
+---
+
+### Scheduled & Future Orders
+
+- Customer can schedule order up to 7 days in advance
+- Scheduled orders enter business queue at configured lead time (e.g., 30 min before requested time)
+- RUNR coverage for scheduled periods should be visible when scheduling
+- Customer can cancel scheduled order free up to 1 hour before prep starts
+- Future: group ordering, catering, subscription/meal plans, gift cards, POS integration
+
+---
+
+### Accessibility
+
+- WCAG 2.1 AA compliance target for all apps
+- Screen reader support
+- Minimum touch target sizes
+- High contrast mode
+- Scalable text
+- Alt text on all menu and profile images
+- Keyboard navigation on web dashboards
+
+---
+
+### Complete Platform MVP Additions
+
+Add these to the existing MVP lists.
+
+**Customer (additions)**
+
+- Phone verification, saved addresses, dietary preferences
+- Search, filters, categories, favorites
+- Menu modifiers and item-level instructions
+- Delivery type (hand to me / leave at door)
+- Scheduled orders, promo codes
+- Live order tracking map, in-app chat with RUNR
+- Ratings and reviews, reorder, referral codes
+
+**RUNR (additions)**
+
+- Vehicle type selection, reliability score
+- Turn-by-turn navigation, pickup/delivery geofencing
+- Delivery photo proof, in-app chat with customer
+- SOS button, incident reporting
+- RUNR incentives and quest bonuses
+- Masked calling
+
+**Business (additions)**
+
+- Business sign-up and document verification (license, health permit)
+- Staff roles (owner, manager, staff, accountant)
+- Full menu management with modifiers and photos
+- Order queue with printer support
+- Auto-pause orders, prep time management
+- Operating hours and holiday overrides
+- Delivery zone configuration
+- Review responses, business analytics
+
+**Platform (additions)**
+
+- Dispatch algorithm engine
+- ETA calculation service
+- Delivery zone and fee engine
+- Notification service (push, SMS, email)
+- Ratings and reliability score engine
+- Promo code and referral system
+- In-app chat and masked calling (Twilio)
+- Content moderation queue
+- Stripe Tax integration
+- Business approval workflow
+- Real-time WebSocket infrastructure
+- Background check integration (Checkr)
+- Legal document management
+- CCPA data export and deletion tools
+
+---
+
 ## The Big Idea
 
 This is not simply another food delivery app.
@@ -2408,13 +3147,17 @@ Map infrastructure
 
 Customer discovery  
 ↓  
+Search, filters, and categories  
+↓  
 Business pages  
 ↓  
-Menus  
+Menus and modifiers  
 ↓  
-Cart  
+Cart and checkout  
 ↓  
-Orders
+Saved addresses and delivery instructions  
+↓  
+Orders and tracking
 
 ### Phase 3
 

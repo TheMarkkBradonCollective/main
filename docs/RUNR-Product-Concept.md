@@ -674,6 +674,236 @@ The platform dynamically matches available driver time with restaurant demand.
 - Payments
 - Delivery tracking
 
+### Internal roles control
+
+- Support tickets and customer/RUNR/business assistance
+- Moderation, policy enforcement, and account safety
+- Platform administration and operational overrides
+- Regional strategy, approvals, and policy configuration
+- Founder-level governance, role assignment, and system authority
+
+---
+
+## Platform Roles and Controls
+
+RUNR operates with a clear internal role hierarchy. Each role inherits the permissions of roles below it unless explicitly restricted.
+
+| Role | Primary Focus | Scope |
+|---|---|---|
+| Support | User assistance | Ticket-based, read-heavy |
+| Moderator | Safety and policy | Account and content enforcement |
+| Administrator | Platform operations | Day-to-day system management |
+| Director | Regional and strategic ops | Approvals, policy, escalations |
+| Founder | Platform governance | Full authority |
+
+Higher roles can perform all actions available to lower roles within their assigned scope.
+
+---
+
+### Support
+
+Support is the front-line operational role for helping customers, RUNRs, and businesses use the platform.
+
+**Purpose**
+
+- Resolve user issues quickly
+- Answer questions about orders, deliveries, earnings, and account access
+- Triage problems to the correct internal team
+
+**Controls**
+
+- View customer, RUNR, and business profiles (limited)
+- View order and delivery details (read-only)
+- View payment and earnings summaries (read-only, no payout changes)
+- Create, assign, and resolve support tickets
+- Add internal notes to accounts and orders
+- Send platform notifications and templated messages
+- Reset passwords and unlock accounts (with verification workflow)
+- Escalate issues to Moderator or Administrator
+
+**Restrictions**
+
+- Cannot suspend or ban accounts
+- Cannot modify menus, pricing, or business settings
+- Cannot override dispatch or coverage
+- Cannot issue refunds or adjust payouts without approval
+- Cannot assign or change internal roles
+
+---
+
+### Moderator
+
+Moderators enforce platform rules and protect marketplace integrity across customers, RUNRs, and businesses.
+
+**Purpose**
+
+- Maintain trust and safety on the platform
+- Review reports, disputes, and policy violations
+- Take corrective action on accounts and content
+
+**Controls**
+
+Everything Support can do, plus:
+
+- Review and action user reports
+- Suspend or restrict customer, RUNR, or business accounts (temporary)
+- Remove or flag inappropriate content (reviews, messages, profile content)
+- Manage dispute workflows between customers, RUNRs, and businesses
+- Review cancellation patterns, no-shows, and reliability issues
+- Apply warnings and account strikes
+- Freeze suspicious accounts pending review
+- Request documentation (ID, business license, insurance)
+- Escalate fraud, safety, or legal issues to Administrator or Director
+
+**Restrictions**
+
+- Cannot permanently delete platform accounts without Administrator approval
+- Cannot modify dispatch rules or coverage engine logic
+- Cannot change platform-wide fees or payment architecture
+- Cannot assign internal roles above Support
+- Cannot access full financial reporting or payout configuration
+
+---
+
+### Administrator
+
+Administrators manage day-to-day platform operations and have operational override authority across the marketplace.
+
+**Purpose**
+
+- Keep the platform running smoothly
+- Manage businesses, RUNRs, and live operations
+- Resolve escalated operational issues
+
+**Controls**
+
+Everything Moderator can do, plus:
+
+- Approve, reject, or suspend business onboarding
+- Approve or deactivate RUNR accounts
+- Override dispatch assignments in exceptional cases
+- Manually reassign deliveries
+- Adjust coverage visibility and promotional driver openings
+- Issue refunds, credits, and payout adjustments (within policy limits)
+- Manage business menus, hours, and operational settings (when authorized)
+- Configure notification templates and operational alerts
+- View platform analytics and operational dashboards
+- Manage Support and Moderator accounts within assigned teams
+- Access audit logs for orders, deliveries, and account actions
+
+**Restrictions**
+
+- Cannot change core platform architecture or global policy without Director approval
+- Cannot modify payment provider configuration or treasury settings
+- Cannot assign Director or Founder roles
+- Cannot delete historical financial or audit records
+
+---
+
+### Director
+
+Directors oversee regional operations, strategic platform policy, and high-impact decisions that affect marketplace behavior.
+
+**Purpose**
+
+- Set operational standards across regions or business categories
+- Approve high-risk or high-impact platform changes
+- Resolve escalations that Administrators cannot safely close
+
+**Controls**
+
+Everything Administrator can do, plus:
+
+- Define and update regional operating policies
+- Approve major business partnerships and enterprise accounts
+- Set platform-wide fee structures and incentive programs (within Founder policy)
+- Approve large refunds, chargebacks, and payout exceptions
+- Configure coverage and dispatch policies by market
+- Manage Administrator teams and regional staffing
+- Assign Support, Moderator, and Administrator roles
+- Access advanced analytics, forecasting, and performance reporting
+- Approve platform experiments and feature rollouts by region
+- Halt operations in a region during safety or compliance events
+
+**Restrictions**
+
+- Cannot modify core system infrastructure or security architecture
+- Cannot assign Founder role
+- Cannot override Founder-level governance decisions
+
+---
+
+### Founder
+
+The Founder role holds ultimate platform authority and is reserved for platform ownership and executive governance.
+
+**Purpose**
+
+- Define the long-term direction of RUNR
+- Maintain final authority over platform rules, systems, and internal access
+- Protect the integrity of the business model and brand
+
+**Controls**
+
+Full platform authority, including everything Director can do, plus:
+
+- Assign and revoke all internal roles (Support through Director)
+- Configure global platform settings and system behavior
+- Manage payment architecture, treasury, and financial integrations
+- Set immutable platform policies and terms of service enforcement rules
+- Access all data, logs, and administrative tools
+- Enable or disable major platform features globally
+- Approve or reject core product and infrastructure changes
+- Manage legal, compliance, and executive-level incident response
+- Create and destroy internal organizations, regions, and operating units
+
+**Governance rules**
+
+- Founder actions should always be logged and auditable
+- Sensitive actions (payout changes, role assignment, policy overrides) require confirmation
+- Founder access should be limited to the smallest possible number of accounts
+
+---
+
+### Role Assignment Rules
+
+| Action | Support | Moderator | Administrator | Director | Founder |
+|---|---|---|---|---|---|
+| Assign Support | — | — | ✓ | ✓ | ✓ |
+| Assign Moderator | — | — | ✓ | ✓ | ✓ |
+| Assign Administrator | — | — | — | ✓ | ✓ |
+| Assign Director | — | — | — | — | ✓ |
+| Assign Founder | — | — | — | — | ✓ |
+
+- Role changes must be logged with actor, timestamp, and reason
+- Higher roles can demote or revoke lower roles within their authority
+- No role can elevate itself
+- Temporary elevation (e.g., on-call Administrator) should expire automatically when possible
+
+---
+
+### Internal Operations Dashboard
+
+Internal roles should have a unified operations console.
+
+Example:
+
+#### RUNR Operations
+
+**Open Tickets:** 14  
+**Active Disputes:** 3  
+**Coverage Alerts:** 7  
+**Suspended Accounts:** 2
+
+| Queue | Owner | Priority |
+|---|---|---|
+| Missing delivery | Support | High |
+| RUNR no-show | Moderator | High |
+| Refund request | Administrator | Medium |
+| Regional coverage gap | Director | Medium |
+
+The dashboard should surface only the tools and data each role is authorized to see.
+
 ---
 
 ## The Big Idea
@@ -758,6 +988,7 @@ RUNR's defining feature is:
 | Businesses | How many RUNRs they want |
 | RUNRs | Where and when they want to work |
 | RUNR (platform) | Matching and delivery dispatch |
+| Support → Founder | Escalating internal operations, safety, and governance |
 
 This should be reflected throughout the application.
 
@@ -825,7 +1056,10 @@ Build these first.
 - Coverage engine
 - Payments architecture
 - Notifications
-- Support
+- Support ticketing
+- Role-based access control (Support, Moderator, Administrator, Director, Founder)
+- Internal operations dashboard
+- Audit logging
 
 ---
 

@@ -49,8 +49,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/buynothing-1.jpg",
-        "caption": "Community feed"
+        "src": "images/screenshots/buynothing-phone-hero.jpg",
+        "caption": "Sacramento Buy Nothing on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/buynothing-2.jpg",
@@ -82,38 +84,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/buynothing-1.jpg",
-        "caption": "Community feed"
-      },
-      {
-        "src": "images/screenshots/buynothing-2.jpg",
-        "caption": "Listing detail"
-      },
-      {
-        "src": "images/screenshots/buynothing-3.jpg",
-        "caption": "Neighbor profile"
-      },
-      {
-        "src": "images/screenshots/buynothing.jpg",
-        "caption": "Listing preview"
+        "src": "images/screenshots/buynothing-tablet-hero.jpg",
+        "caption": "Sacramento Buy Nothing on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/buynothing-1.jpg",
-        "caption": "Community feed"
-      },
-      {
-        "src": "images/screenshots/buynothing-2.jpg",
-        "caption": "Listing detail"
-      },
-      {
-        "src": "images/screenshots/buynothing-3.jpg",
-        "caption": "Neighbor profile"
-      },
-      {
-        "src": "images/screenshots/buynothing.jpg",
-        "caption": "Listing preview"
+        "src": "images/screenshots/buynothing-desktop-hero.jpg",
+        "caption": "Sacramento Buy Nothing on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -169,8 +151,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/strainverse-11.jpg",
-        "caption": "Blue Dream detail"
+        "src": "images/screenshots/strainverse-phone-hero.jpg",
+        "caption": "StrainVerse on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/strainverse-3.jpg",
@@ -206,46 +190,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/strainverse-11.jpg",
-        "caption": "Blue Dream detail"
-      },
-      {
-        "src": "images/screenshots/strainverse-3.jpg",
-        "caption": "HerbHub"
-      },
-      {
-        "src": "images/screenshots/strainverse-4.jpg",
-        "caption": "MatchIt"
-      },
-      {
-        "src": "images/screenshots/strainverse-5.jpg",
-        "caption": "SocialSesh"
-      },
-      {
-        "src": "images/screenshots/strainverse-6.jpg",
-        "caption": "My Stash"
+        "src": "images/screenshots/strainverse-tablet-hero.jpg",
+        "caption": "StrainVerse on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/strainverse-11.jpg",
-        "caption": "Blue Dream detail"
-      },
-      {
-        "src": "images/screenshots/strainverse-3.jpg",
-        "caption": "HerbHub"
-      },
-      {
-        "src": "images/screenshots/strainverse-4.jpg",
-        "caption": "MatchIt"
-      },
-      {
-        "src": "images/screenshots/strainverse-5.jpg",
-        "caption": "SocialSesh"
-      },
-      {
-        "src": "images/screenshots/strainverse-6.jpg",
-        "caption": "My Stash"
+        "src": "images/screenshots/strainverse-desktop-hero.jpg",
+        "caption": "StrainVerse on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -301,8 +257,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/spiritsverse-2.jpg",
-        "caption": "Drink feed"
+        "src": "images/screenshots/spiritsverse-phone-hero.jpg",
+        "caption": "SpiritsVerse on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/spiritsverse-3.jpg",
@@ -338,46 +296,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/spiritsverse-2.jpg",
-        "caption": "Drink feed"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-3.jpg",
-        "caption": "Bar Crawl"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-4.jpg",
-        "caption": "SipStream"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-5.jpg",
-        "caption": "Local map"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-6.jpg",
-        "caption": "Profile"
+        "src": "images/screenshots/spiritsverse-tablet-hero.jpg",
+        "caption": "SpiritsVerse on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/spiritsverse-2.jpg",
-        "caption": "Drink feed"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-3.jpg",
-        "caption": "Bar Crawl"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-4.jpg",
-        "caption": "SipStream"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-5.jpg",
-        "caption": "Local map"
-      },
-      {
-        "src": "images/screenshots/spiritsverse-6.jpg",
-        "caption": "Profile"
+        "src": "images/screenshots/spiritsverse-desktop-hero.jpg",
+        "caption": "SpiritsVerse on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -433,8 +363,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/cookverse-1.jpg",
-        "caption": "The Table"
+        "src": "images/screenshots/cookverse-phone-hero.jpg",
+        "caption": "Cookverse on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/cookverse-2.jpg",
@@ -470,46 +402,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/cookverse-1.jpg",
-        "caption": "The Table"
-      },
-      {
-        "src": "images/screenshots/cookverse-2.jpg",
-        "caption": "Create a dish"
-      },
-      {
-        "src": "images/screenshots/cookverse-3.jpg",
-        "caption": "My Pantry"
-      },
-      {
-        "src": "images/screenshots/cookverse-4.jpg",
-        "caption": "Profile"
-      },
-      {
-        "src": "images/screenshots/cookverse-5.jpg",
-        "caption": "The Forum"
+        "src": "images/screenshots/cookverse-tablet-hero.jpg",
+        "caption": "Cookverse on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/cookverse-1.jpg",
-        "caption": "The Table"
-      },
-      {
-        "src": "images/screenshots/cookverse-2.jpg",
-        "caption": "Create a dish"
-      },
-      {
-        "src": "images/screenshots/cookverse-3.jpg",
-        "caption": "My Pantry"
-      },
-      {
-        "src": "images/screenshots/cookverse-4.jpg",
-        "caption": "Profile"
-      },
-      {
-        "src": "images/screenshots/cookverse-5.jpg",
-        "caption": "The Forum"
+        "src": "images/screenshots/cookverse-desktop-hero.jpg",
+        "caption": "Cookverse on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -558,8 +462,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/friendr-1.jpg",
-        "caption": "Landing"
+        "src": "images/screenshots/friendr-phone-hero.jpg",
+        "caption": "Friendr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/friendr-2.jpg",
@@ -587,30 +493,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/friendr-1.jpg",
-        "caption": "Landing"
-      },
-      {
-        "src": "images/screenshots/friendr-2.jpg",
-        "caption": "ID verification"
-      },
-      {
-        "src": "images/screenshots/friendr.jpg",
-        "caption": "Get started"
+        "src": "images/screenshots/friendr-tablet-hero.jpg",
+        "caption": "Friendr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/friendr-1.jpg",
-        "caption": "Landing"
-      },
-      {
-        "src": "images/screenshots/friendr-2.jpg",
-        "caption": "ID verification"
-      },
-      {
-        "src": "images/screenshots/friendr.jpg",
-        "caption": "Get started"
+        "src": "images/screenshots/friendr-desktop-hero.jpg",
+        "caption": "Friendr on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -650,8 +544,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/findr-1.jpg",
-        "caption": "Account home"
+        "src": "images/screenshots/findr-phone-hero.jpg",
+        "caption": "Findr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/findr-2.jpg",
@@ -679,30 +575,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/findr-1.jpg",
-        "caption": "Account home"
-      },
-      {
-        "src": "images/screenshots/findr-2.jpg",
-        "caption": "Profile & security"
-      },
-      {
-        "src": "images/screenshots/findr.jpg",
-        "caption": "Get started"
+        "src": "images/screenshots/findr-tablet-hero.jpg",
+        "caption": "Findr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/findr-1.jpg",
-        "caption": "Account home"
-      },
-      {
-        "src": "images/screenshots/findr-2.jpg",
-        "caption": "Profile & security"
-      },
-      {
-        "src": "images/screenshots/findr.jpg",
-        "caption": "Get started"
+        "src": "images/screenshots/findr-desktop-hero.jpg",
+        "caption": "Findr on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -747,8 +631,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/chatr-1.jpg",
-        "caption": "Welcome"
+        "src": "images/screenshots/chatr-phone-hero.jpg",
+        "caption": "Chatr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/chatr-2.jpg",
@@ -780,38 +666,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/chatr-1.jpg",
-        "caption": "Welcome"
-      },
-      {
-        "src": "images/screenshots/chatr-2.jpg",
-        "caption": "Board & connect"
-      },
-      {
-        "src": "images/screenshots/chatr-3.jpg",
-        "caption": "Chats"
-      },
-      {
-        "src": "images/screenshots/chatr-4.jpg",
-        "caption": "Account"
+        "src": "images/screenshots/chatr-tablet-hero.jpg",
+        "caption": "Chatr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/chatr-1.jpg",
-        "caption": "Welcome"
-      },
-      {
-        "src": "images/screenshots/chatr-2.jpg",
-        "caption": "Board & connect"
-      },
-      {
-        "src": "images/screenshots/chatr-3.jpg",
-        "caption": "Chats"
-      },
-      {
-        "src": "images/screenshots/chatr-4.jpg",
-        "caption": "Account"
+        "src": "images/screenshots/chatr-desktop-hero.jpg",
+        "caption": "Chatr on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -876,8 +742,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/guardr-1.jpg",
-        "caption": "Marketplace home"
+        "src": "images/screenshots/guardr-phone-hero.jpg",
+        "caption": "Guardr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/guardr-7.jpg",
@@ -913,46 +781,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/guardr-1.jpg",
-        "caption": "Marketplace home"
-      },
-      {
-        "src": "images/screenshots/guardr-7.jpg",
-        "caption": "Guard sign-in"
-      },
-      {
-        "src": "images/screenshots/guardr-10.jpg",
-        "caption": "Guard signup"
-      },
-      {
-        "src": "images/screenshots/guardr-11.jpg",
-        "caption": "Client signup"
-      },
-      {
-        "src": "images/screenshots/guardr-5.jpg",
-        "caption": "Explore paths"
+        "src": "images/screenshots/guardr-tablet-hero.jpg",
+        "caption": "Guardr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/guardr-1.jpg",
-        "caption": "Marketplace home"
-      },
-      {
-        "src": "images/screenshots/guardr-7.jpg",
-        "caption": "Guard sign-in"
-      },
-      {
-        "src": "images/screenshots/guardr-10.jpg",
-        "caption": "Guard signup"
-      },
-      {
-        "src": "images/screenshots/guardr-11.jpg",
-        "caption": "Client signup"
-      },
-      {
-        "src": "images/screenshots/guardr-5.jpg",
-        "caption": "Explore paths"
+        "src": "images/screenshots/guardr-desktop-hero.jpg",
+        "caption": "Guardr on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   },
@@ -1002,8 +842,10 @@
     ],
     "screenshots": [
       {
-        "src": "images/screenshots/sss-1.jpg",
-        "caption": "Company home"
+        "src": "images/screenshots/sss-phone-hero.jpg",
+        "caption": "Signature Security Specialist on Google Pixel 6",
+        "device": "phone",
+        "framed": true
       },
       {
         "src": "images/screenshots/sss-5.jpg",
@@ -1039,46 +881,18 @@
     ],
     "screenshotsTablet": [
       {
-        "src": "images/screenshots/sss-1.jpg",
-        "caption": "Company home"
-      },
-      {
-        "src": "images/screenshots/sss-5.jpg",
-        "caption": "Training"
-      },
-      {
-        "src": "images/screenshots/sss-9.jpg",
-        "caption": "Certifications"
-      },
-      {
-        "src": "images/screenshots/sss-10.jpg",
-        "caption": "Testimonials"
-      },
-      {
-        "src": "images/screenshots/sss-15.jpg",
-        "caption": "About the platform"
+        "src": "images/screenshots/sss-tablet-hero.jpg",
+        "caption": "Signature Security Specialist on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
       }
     ],
     "screenshotsDesktop": [
       {
-        "src": "images/screenshots/sss-1.jpg",
-        "caption": "Company home"
-      },
-      {
-        "src": "images/screenshots/sss-5.jpg",
-        "caption": "Training"
-      },
-      {
-        "src": "images/screenshots/sss-9.jpg",
-        "caption": "Certifications"
-      },
-      {
-        "src": "images/screenshots/sss-10.jpg",
-        "caption": "Testimonials"
-      },
-      {
-        "src": "images/screenshots/sss-15.jpg",
-        "caption": "About the platform"
+        "src": "images/screenshots/sss-desktop-hero.jpg",
+        "caption": "Signature Security Specialist on Macbook Air",
+        "device": "desktop",
+        "framed": true
       }
     ]
   }

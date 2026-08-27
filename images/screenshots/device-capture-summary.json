@@ -1,0 +1,213 @@
+{
+  "generatedAt": "2026-08-12T06:28:44.595Z",
+  "source": "webmobilefirst-aligned presets",
+  "results": [
+    {
+      "slug": "buynothing",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/buynothing-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/buynothing-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/buynothing-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "strainverse",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/strainverse-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/strainverse-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/strainverse-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "spiritsverse",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/spiritsverse-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/spiritsverse-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/spiritsverse-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "cookverse",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/cookverse-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/cookverse-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/cookverse-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "friendr",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/friendr-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/friendr-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/friendr-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "findr",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/findr-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/findr-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/findr-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "chatr",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/chatr-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/chatr-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/chatr-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "guardr",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/guardr-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/guardr-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/guardr-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    },
+    {
+      "slug": "sss",
+      "devices": {
+        "phone": {
+          "file": "images/screenshots/sss-phone-hero.jpg",
+          "device": "phone",
+          "framed": true,
+          "label": "Google Pixel 6"
+        },
+        "tablet": {
+          "file": "images/screenshots/sss-tablet-hero.jpg",
+          "device": "tablet",
+          "framed": true,
+          "label": "Samsung Galaxy Tab S7"
+        },
+        "desktop": {
+          "file": "images/screenshots/sss-desktop-hero.jpg",
+          "device": "desktop",
+          "framed": true,
+          "label": "Macbook Air"
+        }
+      }
+    }
+  ]
+}

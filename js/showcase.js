@@ -35,17 +35,21 @@
 
   function normalizeScreenshots(list, fallback = []) {
     const source = Array.isArray(list) && list.length ? list : fallback;
-    return source.map((shot, i) =>
-      typeof shot === 'string'
-        ? { src: shot, caption: `Screen ${i + 1}` }
-        : { src: shot.src, caption: shot.caption || `Screen ${i + 1}` }
-    );
+    return source.map((shot, i) => {
+      if (typeof shot === 'string') return { src: shot, caption: `Screen ${i + 1}` };
+      return {
+        src: shot.src,
+        caption: shot.caption || `Screen ${i + 1}`,
+        device: shot.device,
+        framed: Boolean(shot.framed),
+      };
+    });
   }
 
   function normalize(raw) {
     const phoneShots = normalizeScreenshots(raw.screenshots);
-    const tabletShots = normalizeScreenshots(raw.screenshotsTablet, phoneShots);
-    const desktopShots = normalizeScreenshots(raw.screenshotsDesktop, phoneShots);
+    const tabletShots = normalizeScreenshots(raw.screenshotsTablet);
+    const desktopShots = normalizeScreenshots(raw.screenshotsDesktop);
 
     return {
       ...raw,
@@ -78,6 +82,28 @@
         ${type === 'chromebook' ? '<span class="sc-chromebook-webcam" aria-hidden="true"></span>' : ''}
         <img src="${escapeHtml(asset(shot.src))}" alt="${escapeHtml(shot.caption)}" loading="lazy">
       </div>`;
+  }
+
+  function shotDeviceType(shot) {
+    if (!shot) return 'phone';
+    if (shot.device === 'desktop') return 'chromebook';
+    return shot.device || 'phone';
+  }
+
+  function renderShot(shot, opts = {}) {
+    if (!shot) return '';
+    if (shot.framed) {
+      const cls = opts.className ? ` ${opts.className}` : '';
+      const loading = opts.eager ? 'eager' : 'lazy';
+      const caption = opts.hideCaption ? '' : `<figcaption>${escapeHtml(shot.caption)}</figcaption>`;
+      return `
+        <figure class="sc-framed-shot${cls}">
+          <img src="${escapeHtml(asset(shot.src))}" alt="${escapeHtml(shot.caption)}" width="900" height="640" loading="${loading}">
+          ${caption}
+        </figure>`;
+    }
+    const type = opts.type || shotDeviceType(shot);
+    return device(shot, { ...opts, type });
   }
 
   function device(shot, opts = {}) {
@@ -119,7 +145,7 @@
   }
 
   function phone(shot, opts = {}) {
-    return device(shot, { ...opts, type: 'phone' });
+    return renderShot(shot, { ...opts, type: 'phone' });
   }
 
   function actions(project) {
@@ -165,15 +191,32 @@
   }
 
   function devicePlatforms(project, shotIndex = 0) {
-    const phoneShot = project.screenshots[shotIndex] || project.screenshots[0];
-    const tabletShot = project.screenshotsTablet[shotIndex] || project.screenshotsTablet[0] || phoneShot;
-    const desktopShot = project.screenshotsDesktop[shotIndex] || project.screenshotsDesktop[0] || phoneShot;
+    const platforms = [];
 
-    const platforms = [
-      { key: 'phone', label: 'Android phone', shot: phoneShot, type: 'phone' },
-      { key: 'tablet', label: 'Tablet', shot: tabletShot, type: 'tablet' },
-      { key: 'chromebook', label: 'Chromebook / desktop', shot: desktopShot, type: 'chromebook' },
-    ].filter((p) => project.platforms.includes(p.key));
+    if (project.screenshots.length && project.platforms.includes('phone')) {
+      platforms.push({
+        key: 'phone',
+        label: 'Google Pixel 6',
+        shot: project.screenshots[shotIndex] || project.screenshots[0],
+        type: 'phone',
+      });
+    }
+    if (project.screenshotsTablet.length && project.platforms.includes('tablet')) {
+      platforms.push({
+        key: 'tablet',
+        label: 'Galaxy Tab S7',
+        shot: project.screenshotsTablet[shotIndex] || project.screenshotsTablet[0],
+        type: 'tablet',
+      });
+    }
+    if (project.screenshotsDesktop.length && project.platforms.includes('chromebook')) {
+      platforms.push({
+        key: 'chromebook',
+        label: 'Chromebook / desktop',
+        shot: project.screenshotsDesktop[shotIndex] || project.screenshotsDesktop[0],
+        type: 'chromebook',
+      });
+    }
 
     if (!platforms.length) return '';
 
@@ -182,6 +225,7 @@
         <div class="section-head">
           <p class="kicker">Works on your devices</p>
           <h2>Phone, tablet, and Chromebook</h2>
+          <p class="sc-platform-note">Captured with <a href="https://www.webmobilefirst.com/en/" target="_blank" rel="noopener">Mobile FIRST</a> device presets — each view matches its screen size.</p>
         </div>
         <div class="sc-device-platforms">
           ${platforms
@@ -189,7 +233,7 @@
               (p) => `
             <div class="sc-device-platform">
               <h4>${escapeHtml(p.label)}</h4>
-              ${device(p.shot, { type: p.type, hideCaption: true, eager: p.key === 'phone' })}
+              ${renderShot(p.shot, { type: p.type, hideCaption: true, eager: p.key === 'phone' })}
             </div>`
             )
             .join('')}
@@ -301,8 +345,13 @@
           .map((role, i) => {
             const shotIdx = role.shot;
             const phoneShot = project.screenshots[shotIdx] || project.screenshots[0];
-            const tabletShot = project.screenshotsTablet[shotIdx] || project.screenshotsTablet[0] || phoneShot;
-            const desktopShot = project.screenshotsDesktop[shotIdx] || project.screenshotsDesktop[0] || phoneShot;
+            const tabletShot = project.screenshotsTablet[shotIdx] || project.screenshotsTablet[0];
+            const desktopShot = project.screenshotsDesktop[shotIdx] || project.screenshotsDesktop[0];
+            const deviceShots = [
+              phoneShot && renderShot(phoneShot, { hideCaption: true, eager: i === 0, type: 'phone' }),
+              tabletShot && renderShot(tabletShot, { hideCaption: true, type: 'tablet' }),
+              desktopShot && renderShot(desktopShot, { hideCaption: true, type: 'chromebook' }),
+            ].filter(Boolean);
             return `
           <div
             class="sc-gu-tabpanel${i === 0 ? ' is-active' : ''}"
@@ -314,11 +363,7 @@
           >
             <h3>${escapeHtml(role.title)} view</h3>
             <p>${escapeHtml(role.blurb)}</p>
-            <div class="sc-gu-tab-devices">
-              ${phone(phoneShot, { hideCaption: true, eager: i === 0 })}
-              ${device(tabletShot, { type: 'tablet', hideCaption: true })}
-              ${device(desktopShot, { type: 'chromebook', hideCaption: true })}
-            </div>
+            <div class="sc-gu-tab-devices">${deviceShots.join('')}</div>
           </div>`;
           })
           .join('')}

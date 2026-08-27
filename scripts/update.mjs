@@ -102,6 +102,8 @@ const htmlFiles = [
   'index.html',
   'about/index.html',
   'apps/index.html',
+  'apps/showcase/index.html',
+  'security/index.html',
   'download/index.html',
   'support/index.html',
   'request/index.html',
@@ -111,9 +113,12 @@ for (const rel of htmlFiles) {
   if (!existsSync(htmlPath)) continue;
   let html = readFileSync(htmlPath, 'utf-8');
   html = html.replace(/(href="[^"]*style\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(href="[^"]*showcase\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*pwa\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*downloads\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*timeline\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*showcase\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*security\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   writeFileSync(htmlPath, html);
 }
 console.log('→ Cache-busted CSS/JS in HTML pages');

@@ -148,12 +148,24 @@
     return renderShot(shot, { ...opts, type: 'phone' });
   }
 
+  function isSecurity(project) {
+    return project.section === 'security';
+  }
+
+  function catalogHref(project) {
+    return isSecurity(project) ? '../../security/' : '../';
+  }
+
+  function catalogLabel(project) {
+    return isSecurity(project) ? 'Security' : 'The Classifieds';
+  }
+
   function actions(project) {
     return `
       <div class="btn-row sc-actions">
         <a class="btn btn-primary" href="${escapeHtml(project.url)}" target="_blank" rel="noopener">Open live app</a>
         <a class="btn" href="../../download/">Downloads</a>
-        <a class="btn" href="../">Back to Classifieds</a>
+        <a class="btn" href="${catalogHref(project)}">Back to ${catalogLabel(project)}</a>
       </div>`;
   }
 
@@ -161,7 +173,7 @@
     return `
       <p class="breadcrumb">
         <a href="../../index.html">Front Page</a> /
-        <a href="../">The Classifieds</a> /
+        <a href="${catalogHref(project)}">${catalogLabel(project)}</a> /
         ${escapeHtml(project.name)}
       </p>`;
   }
@@ -737,6 +749,10 @@
     if (tagEl) tagEl.textContent = project.heroLine || project.tagline || 'Screenshots & features';
     if (editionEl) editionEl.textContent = project.name;
     document.body.dataset.showcaseTheme = project.theme;
+    document.querySelectorAll('.nav-links a').forEach((a) => a.classList.remove('active'));
+    const navHref = isSecurity(project) ? '../../security/' : '../';
+    const navMatch = document.querySelector(`.nav-links a[href="${navHref}"]`);
+    if (navMatch) navMatch.classList.add('active');
     const renderer = RENDERERS[project.theme] || RENDERERS.default;
     root.innerHTML = renderer(project);
     bindGuardrTabs(root);

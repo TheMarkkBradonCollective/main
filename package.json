@@ -1,8 +1,8 @@
 {
   "name": "the-markk-brandon-collective",
   "private": true,
-  "version": "1.5.11",
-  "description": "The Markk Brandon Collective — newspaper site, classifieds, downloads, support, and hire-me requests",
+  "version": "1.5.12",
+  "description": "The Markk Brandon Collective — newspaper site, classifieds, security showcase, downloads, support, and hire-me requests",
   "homepage": "https://themarkkbradoncollective.github.io/main/",
   "repository": {
     "type": "git",

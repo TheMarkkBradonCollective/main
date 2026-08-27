@@ -4,189 +4,377 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Private preview — The Rink Sacramento website redesign concept">
+<meta name="description" content="Private preview — The Rink Sacramento 10× website concept">
 <title>The Rink Sacramento — Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div id="loader" class="loader" aria-live="polite">
+  <div class="loader-wheel" aria-hidden="true"></div>
+  <p class="loader-copy">Lacing up…</p>
+  <p class="loader-ref">Private preview · 202608270756</p>
+</div>
+
+<canvas id="skate-canvas" class="skate-canvas" aria-hidden="true"></canvas>
+<div class="skate-2d" id="skate-2d" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="disco" aria-hidden="true">
+  <span></span><span></span><span></span><span></span>
+</div>
+
 <div class="preview-banner">
-  <strong>Private preview</strong> — not the live site · ref <code>202608270756</code> · built by <a href="../../request/">Markk Brandon Collective</a>
+  <strong>Private preview</strong> — not the live site · ref <code>202608270756</code> · <a href="../../request/">Markk Brandon Collective</a>
 </div>
 
 <header class="site-header">
   <div class="nav-inner">
-    <a class="logo" href="#">The <span>Rink</span></a>
-    <ul class="nav-links">
-      <li><a href="#sessions">Sessions</a></li>
-      <li><a href="#parties">Parties</a></li>
-      <li><a href="#careers">Careers</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="btn btn-primary" href="#careers">Apply online</a>
+    <a class="logo" href="#top" data-egg="logo">The <span>Rink</span></a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#skate">Skate</a>
+      <a href="#events">Events</a>
+      <a href="#parties">Parties</a>
+      <a href="#groups">Groups</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-tickets" href="#schedule">Get tickets</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div>
-      <p class="hero-kicker">Sacramento · Est. 1947 · 2900 Bradshaw Rd</p>
-      <h1>Roll in. <em>Stay awhile.</em></h1>
-      <p>A faster, mobile-friendly home for sessions, parties, and hiring — with forms that actually work on every phone. This is a concept preview of what your upgraded site could look like.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#sessions">See session times</a>
-        <a class="btn btn-ghost" href="#contact">Send a message</a>
-      </div>
+<nav class="mobile-dock" aria-label="Quick links">
+  <a href="#top">Home</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#events">Events</a>
+  <a href="#schedule">Tickets</a>
+</nav>
+
+<main id="top">
+
+<section class="hero" data-scene="welcome">
+  <div class="hero-floor" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="kicker">Sacramento · Est. 1947 · 2900 Bradshaw Rd</p>
+    <h1>Roll into<br><em>the fun.</em></h1>
+    <p class="lede">Sacramento’s place to skate, celebrate, and make memories.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#experiences">Skate with us</a>
+      <a class="btn btn-ghost" href="#schedule">View schedule</a>
     </div>
-    <aside class="hero-card">
-      <h2>Today at The Rink</h2>
-      <ul class="hours-list">
-        <li><span>Friday evening</span><span>6:00 – 10:30 PM</span></li>
-        <li><span>Admission</span><span>$12</span></li>
-        <li><span>Skate rental</span><span>$5 quad / $7 blade</span></li>
-        <li><span>Office hours</span><span>Mon–Fri 11 AM – 3:30 PM</span></li>
-        <li><span>Call</span><span>(916) 363-2643</span></li>
-      </ul>
+  </div>
+</section>
+
+<section class="tonight" id="tonight">
+  <div class="section-head">
+    <p class="kicker">Live on the floor</p>
+    <h2>Tonight at The Rink</h2>
+  </div>
+  <div class="tonight-track" id="tonight-track"></div>
+</section>
+
+<section class="experiences" id="experiences" data-scene="public">
+  <div class="section-head">
+    <p class="kicker">What are you here for?</p>
+    <h2>Pick your experience</h2>
+  </div>
+  <div class="exp-grid">
+    <a class="exp-card" href="#skate">
+      <span class="exp-label">01</span>
+      <h3>Public skating</h3>
+      <p>Come roll with us.</p>
+    </a>
+    <a class="exp-card adult" href="#events">
+      <span class="exp-label">02</span>
+      <h3>Adult night</h3>
+      <p>Leave the kids at home.</p>
+    </a>
+    <a class="exp-card party" href="#parties">
+      <span class="exp-label">03</span>
+      <h3>Birthday parties</h3>
+      <p>Make their day unforgettable.</p>
+    </a>
+    <a class="exp-card group" href="#groups">
+      <span class="exp-label">04</span>
+      <h3>Group events</h3>
+      <p>Bring the whole crew.</p>
+    </a>
+  </div>
+</section>
+
+<section class="schedule" id="schedule" data-scene="events">
+  <div class="section-head">
+    <p class="kicker">When are you rolling?</p>
+    <h2>Weekly schedule</h2>
+  </div>
+  <div class="day-tabs" id="day-tabs" role="tablist"></div>
+  <div class="day-panel" id="day-panel"></div>
+</section>
+
+<section class="story" id="skate" data-scene="public">
+  <article class="story-block">
+    <p class="kicker">You arrive</p>
+    <h2>Welcome to The Rink</h2>
+    <p>Lights low. Floor open. Wheels ready. This is Sacramento’s home rink — public sessions, adult nights, parties, and fundraisers under one roof.</p>
+  </article>
+  <article class="story-block">
+    <p class="kicker">You get your skates</p>
+    <h2>Need skates?</h2>
+    <p>Quad rentals $5. Rollerblades $7. Trainers included. Bring your own if that’s your thing.</p>
+    <div class="rental-row" id="rental-row">
+      <button class="rental" type="button" data-kind="regular"><span>Regular</span><small>Quads · $5</small></button>
+      <button class="rental" type="button" data-kind="blades"><span>Blades</span><small>Inlines · $7</small></button>
+      <button class="rental" type="button" data-kind="kids"><span>Kids</span><small>Trainers included</small></button>
+    </div>
+    <p class="rental-detail" id="rental-detail">Tap a skate to see details.</p>
+  </article>
+  <article class="story-block">
+    <p class="kicker">You hit the floor</p>
+    <h2>Public skating</h2>
+    <p>Admission $12. Extra sessions $5 on Fridays and Saturdays. Spectator $5 most days — $12 on Sunday adult night.</p>
+    <a class="btn btn-primary" href="#schedule">Get tickets</a>
+  </article>
+</section>
+
+<section class="words" id="words" data-scene="events">
+  <p class="word" data-word>Skate.</p>
+  <p class="word" data-word>Dance.</p>
+  <p class="word" data-word>Celebrate.</p>
+  <p class="word" data-word>Connect.</p>
+  <p class="words-sub">There’s always something happening at The Rink.</p>
+</section>
+
+<section class="nights" id="events">
+  <div class="section-head">
+    <p class="kicker">Find your night</p>
+    <h2>Upcoming on the floor</h2>
+  </div>
+  <div class="filters" id="event-filters">
+    <button type="button" class="is-on" data-filter="all">All</button>
+    <button type="button" data-filter="family">Family</button>
+    <button type="button" data-filter="adult">Adult</button>
+    <button type="button" data-filter="special">Special</button>
+    <button type="button" data-filter="private">Private</button>
+  </div>
+  <div class="nights-track" id="nights-track"></div>
+</section>
+
+<section class="parties" id="parties" data-scene="party">
+  <div class="section-head">
+    <p class="kicker">Make their day unforgettable</p>
+    <h2>Make your birthday a rolling party.</h2>
+    <p>Rink to yourself, snack bar open, quads or blades, trainers included. Outside food OK — no alcohol. You bring plates, napkins, cups, and utensils.</p>
+  </div>
+  <div class="party-grid">
+    <article class="party-card">
+      <h3>2-hour party</h3>
+      <p class="price">$550</p>
+      <p>Up to 75 guests · +$7 each extra</p>
+    </article>
+    <article class="party-card">
+      <h3>3-hour party</h3>
+      <p class="price">$675</p>
+      <p>Up to 75 guests · +$8 each extra</p>
+    </article>
+    <article class="party-card">
+      <h3>Deposit</h3>
+      <p class="price">$100</p>
+      <p>Collected at booking. Office hours Mon–Fri 11–3.</p>
+    </article>
+  </div>
+  <form class="party-builder" id="party-builder">
+    <h3>Build your party</h3>
+    <label>Guests <input type="number" name="guests" min="1" max="200" value="25"></label>
+    <label>Package
+      <select name="pkg">
+        <option value="2">2 hour · $550</option>
+        <option value="3">3 hour · $675</option>
+      </select>
+    </label>
+    <label>Add-ons
+      <select name="addon">
+        <option value="none">None</option>
+        <option value="extra">Extra session time</option>
+        <option value="snack">Snack-bar tab</option>
+      </select>
+    </label>
+    <label>Preferred date <input type="date" name="date"></label>
+    <p class="estimate" id="party-estimate">Estimated from $550 · request only — no payment on this preview.</p>
+    <button class="btn btn-primary" type="submit">Plan your party</button>
+  </form>
+</section>
+
+<section class="groups" id="groups" data-scene="groups">
+  <div class="section-head">
+    <p class="kicker">Bring the whole crew</p>
+    <h2>Group events &amp; fundraisers</h2>
+    <p>Schools, youth groups, day cares, and churches. Monday or Tuesday evenings. $150 deposit. $8 per skater (includes regular skates). $3 per person refunded plus deposit if you hit 75 paid skaters.</p>
+    <a class="btn btn-ghost" href="#contact">Book the rink</a>
+  </div>
+</section>
+
+<section class="map-sec" id="map">
+  <div class="section-head">
+    <p class="kicker">Know the floor</p>
+    <h2>Interactive rink map</h2>
+  </div>
+  <div class="map-layout">
+    <svg class="rink-map" viewBox="0 0 640 360" role="img" aria-label="Stylized map of The Rink">
+      <rect class="map-floor" x="40" y="40" width="560" height="280" rx="80"/>
+      <g class="map-zone" data-zone="rink"><ellipse cx="320" cy="180" rx="180" ry="90"/><text x="320" y="185" text-anchor="middle">Rink</text></g>
+      <g class="map-zone" data-zone="dj"><rect x="490" y="70" width="90" height="50" rx="8"/><text x="535" y="100" text-anchor="middle">DJ</text></g>
+      <g class="map-zone" data-zone="snack"><rect x="70" y="70" width="110" height="50" rx="8"/><text x="125" y="100" text-anchor="middle">Snack bar</text></g>
+      <g class="map-zone" data-zone="party"><rect x="70" y="240" width="120" height="55" rx="8"/><text x="130" y="273" text-anchor="middle">Party</text></g>
+      <g class="map-zone" data-zone="rental"><rect x="450" y="240" width="130" height="55" rx="8"/><text x="515" y="273" text-anchor="middle">Skate rental</text></g>
+      <g class="map-zone" data-zone="arcade"><rect x="250" y="40" width="140" height="36" rx="8"/><text x="320" y="64" text-anchor="middle">Arcade</text></g>
+    </svg>
+    <aside class="map-info" id="map-info">
+      <h3>Tap a zone</h3>
+      <p>Hover or tap the floor, DJ, snack bar, party area, skate rental, or arcade.</p>
     </aside>
-  </section>
+  </div>
+</section>
 
-  <section id="sessions">
-    <div class="section-head">
-      <h2>Sessions &amp; skating</h2>
-      <p>Clear schedules, tap-to-call, and maps — no hunting through menus.</p>
+<section class="music" id="music">
+  <div class="section-head">
+    <p class="kicker">The rink is about music</p>
+    <h2>What’s playing?</h2>
+  </div>
+  <div class="now-playing">
+    <div class="eq" id="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div>
+      <p class="now-label">Now playing</p>
+      <p class="now-track" id="now-track">Press play — audio never autoplays.</p>
+      <p class="now-artist" id="now-artist">Adult night · throwbacks &amp; floor-fillers</p>
     </div>
-    <div class="grid-3">
-      <article class="card">
-        <span class="tag">Weekends</span>
-        <h3>Morning Zoo &amp; afternoon</h3>
-        <p>Saturday lessons 9:30 AM, public sessions through the evening. Spectator fee and extra sessions listed up front.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Adult nights</span>
-        <h3>18+ skate sessions</h3>
-        <p>Thursday and Sunday adult skate, Tuesday coffee club — each with its own card and price.</p>
-      </article>
-      <article class="card">
-        <span class="tag">Lessons</span>
-        <h3>Saturday free skate class</h3>
-        <p>9:30–10:30 AM with paid session. Certified instructor info and private lesson contact built in.</p>
-      </article>
-    </div>
-  </section>
+    <button class="btn btn-ghost" type="button" id="music-toggle">Play vibe</button>
+  </div>
+</section>
 
-  <section id="parties">
-    <div class="section-head">
-      <h2>Parties &amp; fundraisers</h2>
-      <p>Online inquiry forms replace phone tag — deposits, guest counts, and availability requests in one place.</p>
-    </div>
-    <div class="grid-3">
-      <article class="card">
-        <h3>Private parties</h3>
-        <p>2-hour from $550 · 3-hour from $675 · up to 75 guests. Request form captures date, time, and headcount.</p>
-      </article>
-      <article class="card">
-        <h3>School &amp; church groups</h3>
-        <p>Fundraiser nights with deposit and per-skater pricing — automated confirmation email to your inbox.</p>
-      </article>
-      <article class="card">
-        <h3>Field trips</h3>
-        <p>Dedicated booking flow for schools and youth groups with waiver links and chaperone notes.</p>
-      </article>
-    </div>
-  </section>
+<section class="first-time" id="first-time">
+  <div class="section-head">
+    <p class="kicker">First time at The Rink?</p>
+    <h2>Four steps. Then you’re rolling.</h2>
+  </div>
+  <ol class="steps">
+    <li><strong>Choose your session</strong> Pick a day on the schedule.</li>
+    <li><strong>Get your skates</strong> Rent quads, blades, or bring yours.</li>
+    <li><strong>Hit the floor</strong> Lights, music, open skate.</li>
+    <li><strong>Have fun</strong> You won’t want to leave.</li>
+  </ol>
+  <a class="btn btn-primary" href="#schedule">I’m ready</a>
+</section>
 
-  <section id="careers">
-    <div class="section-head">
-      <h2>Careers — apply online</h2>
-      <p>No more “email us your resume during office hours only.” Collect applications 24/7.</p>
-    </div>
-    <div class="apply-grid">
-      <div>
-        <ul class="checklist">
-          <li>Admissions / cashier</li>
-          <li>Snack bar &amp; concessions</li>
-          <li>Floor staff &amp; skate attendants</li>
-          <li>Party &amp; event support</li>
-          <li>Security (when posted)</li>
-          <li>Resume upload + email alerts to hiring</li>
-        </ul>
-      </div>
-      <form class="form-card" action="#" method="post" onsubmit="event.preventDefault(); alert('Preview only — this form is a demo. On the live build, applications would email you or save to a dashboard.');">
-        <div class="form-row">
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name">
-        </div>
-        <div class="form-row">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" placeholder="(916) 555-0100" autocomplete="tel">
-        </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email">
-        </div>
-        <div class="form-row">
-          <label for="role">Position interested in</label>
-          <select id="role" name="role">
-            <option>Admissions / cashier</option>
-            <option>Snack bar / concessions</option>
-            <option>Party &amp; event staff</option>
-            <option>Floor / skate attendant</option>
-            <option>Security</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="resume">Resume (PDF)</label>
-          <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx">
-        </div>
-        <div class="form-row">
-          <label for="message">Anything else?</label>
-          <textarea id="message" name="message" placeholder="Availability, skating experience, etc."></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Submit application</button>
-        <p class="form-note">Demo form for preview purposes. Production version connects to your email or admin panel.</p>
-      </form>
-    </div>
-  </section>
+<section class="faq" id="about">
+  <div class="section-head">
+    <p class="kicker">Quick answers</p>
+    <h2>FAQ</h2>
+  </div>
+  <div class="faq-list">
+    <details open><summary>Do I need to bring my own skates?</summary><p>No. Quad rentals are $5 and rollerblades are $7. Bring your own if you want.</p></details>
+    <details><summary>How much is admission?</summary><p>Most public sessions are $12. Tuesday coffee club is $8 ($10 with rental). Extra sessions $5 Fri/Sat.</p></details>
+    <details><summary>What ages can skate?</summary><p>All ages for public sessions. Adult nights are 18+.</p></details>
+    <details><summary>Do you offer birthday parties?</summary><p>Yes — private 2- and 3-hour packages. Public-session birthday packages are paused; private parties are still booking.</p></details>
+    <details><summary>Can I bring outside food?</summary><p>Yes for private parties. No alcohol. Bring your own plates, napkins, cups, and utensils. Snack bar is open for purchase.</p></details>
+    <details><summary>What should I wear?</summary><p>Comfortable clothes you can move in. Socks required for rentals.</p></details>
+    <details><summary>Do I need to reserve ahead?</summary><p>Walk-ins welcome for public skate. Parties and fundraisers need a call or request during office hours.</p></details>
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="section-head">
-      <h2>Contact</h2>
-      <p>Working contact form on mobile and desktop — messages go straight to therinksacramento@gmail.com.</p>
-    </div>
-    <form class="form-card" style="max-width:32rem" action="#" method="post" onsubmit="event.preventDefault(); alert('Preview only — contact form demo.');">
-      <div class="form-row">
-        <label for="c-name">Name</label>
-        <input id="c-name" type="text" placeholder="Your name">
-      </div>
-      <div class="form-row">
-        <label for="c-email">Email</label>
-        <input id="c-email" type="email" placeholder="you@email.com">
-      </div>
-      <div class="form-row">
-        <label for="c-subject">Subject</label>
-        <select id="c-subject">
-          <option>General question</option>
-          <option>Party / private rental</option>
-          <option>Fundraiser</option>
-          <option>Lessons</option>
-          <option>Employment</option>
-        </select>
-      </div>
-      <div class="form-row">
-        <label for="c-msg">Message</label>
-        <textarea id="c-msg" placeholder="How can we help?"></textarea>
-      </div>
-      <button class="btn btn-primary" type="submit">Send message</button>
-    </form>
-  </section>
+<section class="find" id="find">
+  <div class="section-head">
+    <p class="kicker">Find the rink</p>
+    <h2>2900 Bradshaw Rd, Sacramento, CA 95827</h2>
+    <p>Parking on site. Entrance at the front. Bring socks if you’re renting.</p>
+    <a class="btn btn-primary" href="https://maps.google.com/?q=2900+Bradshaw+Road+Sacramento+CA+95827" target="_blank" rel="noopener">Get directions</a>
+  </div>
+  <iframe class="gmap" title="Map of The Rink Sacramento" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=2900%20Bradshaw%20Road%20Sacramento%20CA%2095827&output=embed"></iframe>
+</section>
+
+<section class="social" id="social">
+  <div class="section-head">
+    <p class="kicker">See what’s happening</p>
+    <h2>Roll with us</h2>
+  </div>
+  <div class="photo-grid">
+    <figure><span>Best birthday party ever.</span></figure>
+    <figure><span>The adult nights are 🔥</span></figure>
+    <figure><span>We’ve been coming here for years.</span></figure>
+    <figure><span>Tag us @ The Rink</span></figure>
+  </div>
+</section>
+
+<section class="careers" id="careers">
+  <div class="section-head">
+    <p class="kicker">Work here</p>
+    <h2>Apply online</h2>
+    <p>Admissions, snack bar, floor staff, parties, or security when posted.</p>
+  </div>
+  <form class="apply-form" id="apply-form">
+    <label>Full name <input name="name" required></label>
+    <label>Phone <input name="phone" type="tel" required></label>
+    <label>Email <input name="email" type="email" required></label>
+    <label>Position
+      <select name="role">
+        <option>Admissions / cashier</option>
+        <option>Snack bar / concessions</option>
+        <option>Party &amp; event staff</option>
+        <option>Floor / skate attendant</option>
+        <option>Security</option>
+      </select>
+    </label>
+    <label>Resume <input name="resume" type="file" accept=".pdf,.doc,.docx"></label>
+    <button class="btn btn-primary" type="submit">Submit application</button>
+    <p class="form-note">Preview only — live build emails hiring or saves to a dashboard.</p>
+  </form>
+</section>
+
+<section class="contact" id="contact" data-scene="contact">
+  <div class="section-head">
+    <p class="kicker">Ready to roll?</p>
+    <h2>Get on the floor.</h2>
+    <p>Office hours Mon–Fri 11:00 AM–3:30 PM · (916) 363-2643 · therinksacramento@gmail.com</p>
+  </div>
+  <form class="contact-form" id="contact-form">
+    <label>Name <input name="name" required></label>
+    <label>Email <input name="email" type="email" required></label>
+    <label>Subject
+      <select name="subject">
+        <option>General</option>
+        <option>Party / private rental</option>
+        <option>Fundraiser</option>
+        <option>Lessons</option>
+        <option>Employment</option>
+      </select>
+    </label>
+    <label>Message <textarea name="message" required></textarea></label>
+    <button class="btn btn-primary" type="submit">Send message</button>
+  </form>
+</section>
+
 </main>
 
 <footer class="site-footer">
-  <p><strong>The Rink Sacramento</strong> · 2900 Bradshaw Rd, Sacramento, CA 95827</p>
-  <p>Website concept preview · ref <code>202608270756</code> (2026-08-27 07:56 UTC)</p>
-  <p>Designed &amp; built by <a href="../../request/">Markk Brandon Collective</a> · Markeith White</p>
+  <p class="footer-cta">Ready to roll?</p>
+  <div class="footer-actions">
+    <a class="btn btn-primary" href="#schedule">View schedule</a>
+    <a class="btn btn-ghost" href="#schedule">Get tickets</a>
+  </div>
+  <p class="logo footer-logo">The <span>Rink</span></p>
+  <p>2900 Bradshaw Rd, Sacramento, CA 95827</p>
+  <p>Mon–Fri office 11:00 AM–3:30 PM · (916) 363-2643</p>
+  <p><a href="https://www.facebook.com/TheRinkSacramento/" target="_blank" rel="noopener">Facebook</a></p>
+  <p class="footer-ref">Concept preview · ref 202608270756 · <a href="../../request/">Markk Brandon Collective</a></p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/skate.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

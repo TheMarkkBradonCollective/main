@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.5.4** (see [`version.json`](version.json))
+**Version:** **v1.5.12** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -19,7 +19,8 @@ This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkk
 | Page | URL | Description |
 |------|-----|-------------|
 | **Front Page** | `/` | Who I am, why I build, AI note, CTAs |
-| **The Classifieds** | `/apps/` | Free apps first; Guardr & SSS in a separate security lane |
+| **The Classifieds** | `/apps/` | Free apps & sites to try |
+| **Security Showcase** | `/security/` | Guardr, Signature Security Specialist, and BSIS certificates |
 | **Downloads** | `/download/` | Android APK app market — sideload & update MBC apps |
 | **Support** | `/support/` | GoFundMe — keep free apps online |
 | **Hire Me** | `/request/` | Request a website/app build + budget range |
@@ -36,7 +37,9 @@ This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkk
 | Findr | Free by design | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
 | Chatr | Free by design | [chatr-tmbc.vercel.app](https://chatr-tmbc.vercel.app) |
 
-## Security (listed separately)
+## Security Showcase
+
+Guardr and Signature Security Specialist live on [`/security/`](security/) with BSIS training certificates. Operator credentials (guard card, etc.) go in `security/certs.json` under `operators` once the scans are in — drop JPEGs in `images/certs/` and add an entry.
 
 | Project | Notes | URL |
 |---------|-------|-----|

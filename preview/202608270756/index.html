@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Private preview — The Rink Sacramento website redesign concept">
+<title>The Rink Sacramento — Preview</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="preview-banner">
+  <strong>Private preview</strong> — not the live site · ref <code>202608270756</code> · built by <a href="../../request/">Markk Brandon Collective</a>
+</div>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="logo" href="#">The <span>Rink</span></a>
+    <ul class="nav-links">
+      <li><a href="#sessions">Sessions</a></li>
+      <li><a href="#parties">Parties</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#careers">Apply online</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <p class="hero-kicker">Sacramento · Est. 1947 · 2900 Bradshaw Rd</p>
+      <h1>Roll in. <em>Stay awhile.</em></h1>
+      <p>A faster, mobile-friendly home for sessions, parties, and hiring — with forms that actually work on every phone. This is a concept preview of what your upgraded site could look like.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#sessions">See session times</a>
+        <a class="btn btn-ghost" href="#contact">Send a message</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h2>Today at The Rink</h2>
+      <ul class="hours-list">
+        <li><span>Friday evening</span><span>6:00 – 10:30 PM</span></li>
+        <li><span>Admission</span><span>$12</span></li>
+        <li><span>Skate rental</span><span>$5 quad / $7 blade</span></li>
+        <li><span>Office hours</span><span>Mon–Fri 11 AM – 3:30 PM</span></li>
+        <li><span>Call</span><span>(916) 363-2643</span></li>
+      </ul>
+    </aside>
+  </section>
+
+  <section id="sessions">
+    <div class="section-head">
+      <h2>Sessions &amp; skating</h2>
+      <p>Clear schedules, tap-to-call, and maps — no hunting through menus.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <span class="tag">Weekends</span>
+        <h3>Morning Zoo &amp; afternoon</h3>
+        <p>Saturday lessons 9:30 AM, public sessions through the evening. Spectator fee and extra sessions listed up front.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Adult nights</span>
+        <h3>18+ skate sessions</h3>
+        <p>Thursday and Sunday adult skate, Tuesday coffee club — each with its own card and price.</p>
+      </article>
+      <article class="card">
+        <span class="tag">Lessons</span>
+        <h3>Saturday free skate class</h3>
+        <p>9:30–10:30 AM with paid session. Certified instructor info and private lesson contact built in.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="parties">
+    <div class="section-head">
+      <h2>Parties &amp; fundraisers</h2>
+      <p>Online inquiry forms replace phone tag — deposits, guest counts, and availability requests in one place.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <h3>Private parties</h3>
+        <p>2-hour from $550 · 3-hour from $675 · up to 75 guests. Request form captures date, time, and headcount.</p>
+      </article>
+      <article class="card">
+        <h3>School &amp; church groups</h3>
+        <p>Fundraiser nights with deposit and per-skater pricing — automated confirmation email to your inbox.</p>
+      </article>
+      <article class="card">
+        <h3>Field trips</h3>
+        <p>Dedicated booking flow for schools and youth groups with waiver links and chaperone notes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="careers">
+    <div class="section-head">
+      <h2>Careers — apply online</h2>
+      <p>No more “email us your resume during office hours only.” Collect applications 24/7.</p>
+    </div>
+    <div class="apply-grid">
+      <div>
+        <ul class="checklist">
+          <li>Admissions / cashier</li>
+          <li>Snack bar &amp; concessions</li>
+          <li>Floor staff &amp; skate attendants</li>
+          <li>Party &amp; event support</li>
+          <li>Security (when posted)</li>
+          <li>Resume upload + email alerts to hiring</li>
+        </ul>
+      </div>
+      <form class="form-card" action="#" method="post" onsubmit="event.preventDefault(); alert('Preview only — this form is a demo. On the live build, applications would email you or save to a dashboard.');">
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="(916) 555-0100" autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="role">Position interested in</label>
+          <select id="role" name="role">
+            <option>Admissions / cashier</option>
+            <option>Snack bar / concessions</option>
+            <option>Party &amp; event staff</option>
+            <option>Floor / skate attendant</option>
+            <option>Security</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="resume">Resume (PDF)</label>
+          <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx">
+        </div>
+        <div class="form-row">
+          <label for="message">Anything else?</label>
+          <textarea id="message" name="message" placeholder="Availability, skating experience, etc."></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit application</button>
+        <p class="form-note">Demo form for preview purposes. Production version connects to your email or admin panel.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>Working contact form on mobile and desktop — messages go straight to therinksacramento@gmail.com.</p>
+    </div>
+    <form class="form-card" style="max-width:32rem" action="#" method="post" onsubmit="event.preventDefault(); alert('Preview only — contact form demo.');">
+      <div class="form-row">
+        <label for="c-name">Name</label>
+        <input id="c-name" type="text" placeholder="Your name">
+      </div>
+      <div class="form-row">
+        <label for="c-email">Email</label>
+        <input id="c-email" type="email" placeholder="you@email.com">
+      </div>
+      <div class="form-row">
+        <label for="c-subject">Subject</label>
+        <select id="c-subject">
+          <option>General question</option>
+          <option>Party / private rental</option>
+          <option>Fundraiser</option>
+          <option>Lessons</option>
+          <option>Employment</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg" placeholder="How can we help?"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Send message</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>The Rink Sacramento</strong> · 2900 Bradshaw Rd, Sacramento, CA 95827</p>
+  <p>Website concept preview · ref <code>202608270756</code> (2026-08-27 07:56 UTC)</p>
+  <p>Designed &amp; built by <a href="../../request/">Markk Brandon Collective</a> · Markeith White</p>
+</footer>
+
+</body>
+</html>

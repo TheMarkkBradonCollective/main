@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-order pickup — My Happy Plate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body data-season="fall">
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-name">My Happy Plate</span>
+    </a>
+    <a class="btn btn-ghost" href="../index.html">Back to menu</a>
+  </div>
+</header>
+<main>
+  <section>
+    <p class="kicker">Hold a plate</p>
+    <h2>Pre-order for pickup</h2>
+    <p class="home-copy">Tyrone cooks it. You roll up. Pay at the window. No account needed.</p>
+  </section>
+  <section class="order-layout">
+    <div>
+      <h3>Your bag</h3>
+      <div id="cart" class="happy-card"></div>
+      <p style="margin-top:.8rem"><a class="btn btn-ghost" href="../index.html#menu">Add more from the menu</a></p>
+    </div>
+    <form class="happy-card" id="order-form">
+      <h3>Pickup details</h3>
+      <label>Your name <input name="name" required autocomplete="name"></label>
+      <label>Phone <input name="phone" type="tel" required autocomplete="tel" placeholder="530-555-0100"></label>
+      <label>Pickup window <select name="pickup" required></select></label>
+      <label>Note for the kitchen <textarea name="note" placeholder="No onions, extra gravy…"></textarea></label>
+      <p class="sides" id="order-total"></p>
+      <p class="sides">Pay at pickup — card or cash at the truck.</p>
+      <p style="margin-top:1rem"><button class="btn btn-primary" type="submit">Place pre-order</button></p>
+    </form>
+  </section>
+  <section id="confirm" class="hidden">
+    <article class="dinner">
+      <p class="kicker">You’re on the list ❤️</p>
+      <h2 id="confirm-code"></h2>
+      <p id="confirm-copy"></p>
+      <p><a class="btn btn-green" href="../index.html">Back home</a></p>
+    </article>
+  </section>
+</main>
+<script src="../js/store.js"></script>
+<script src="order.js"></script>
+</body>
+</html>

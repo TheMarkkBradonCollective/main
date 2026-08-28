@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitchen — My Happy Plate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body data-season="fall">
+<header class="admin-top">
+  <div>
+    <p class="kicker">Good morning, Tyrone 👋</p>
+    <h1>Kitchen</h1>
+  </div>
+  <a class="btn btn-ghost" href="../index.html">Public site</a>
+</header>
+<main class="admin">
+  <section class="quick">
+    <a class="btn btn-primary" href="#orders">Pre-orders</a>
+    <button class="btn btn-green" type="button" data-open="dinner">+ What’s for dinner?</button>
+    <a class="btn btn-ghost" href="#menu">Today’s menu</a>
+    <a class="btn btn-ghost" href="#truck">Truck</a>
+  </section>
+  <section class="cards" id="dash-cards"></section>
+
+  <section id="orders">
+    <h2>Pre-orders</h2>
+    <p class="sides">New tickets land here. Mark them cooking, ready, then picked up.</p>
+    <div id="order-board"></div>
+  </section>
+
+  <section id="dinner-builder" class="builder hidden">
+    <h2>Dinner special builder</h2>
+    <form id="dinner-form">
+      <label>Special name <input name="name" required></label>
+      <label>Description <textarea name="description"></textarea></label>
+      <label>Main dish <input name="main"></label>
+      <label>Sides (comma separated) <input name="sides"></label>
+      <label>Bread <input name="bread"></label>
+      <label>Price <input name="price" type="number" step="0.01"></label>
+      <label>Quantity <input name="qty" type="number"></label>
+      <label>Sold so far <input name="sold" type="number"></label>
+      <label>Availability
+        <select name="status">
+          <option value="available">Available</option>
+          <option value="almost">Almost gone</option>
+          <option value="sold">Sold out</option>
+          <option value="coming">Coming soon</option>
+        </select>
+      </label>
+      <p class="actions">
+        <button class="btn btn-primary" type="submit">Publish dinner</button>
+        <button class="btn btn-ghost" type="button" id="mark-sold">Sold out</button>
+      </p>
+    </form>
+  </section>
+
+  <section id="menu">
+    <h2>Today’s menu</h2>
+    <div id="admin-menu"></div>
+  </section>
+
+  <section id="truck" class="builder">
+    <h2>Truck status</h2>
+    <form id="truck-form">
+      <label>Status
+        <select name="status">
+          <option value="open">Open</option>
+          <option value="soon">Opening soon</option>
+          <option value="closed">Closed</option>
+        </select>
+      </label>
+      <label>Location label <input name="label"></label>
+      <label>Address / notes <input name="address"></label>
+      <label>Hours <input name="hours"></label>
+      <label>Map search <input name="mapQuery"></label>
+      <p class="actions"><button class="btn btn-green" type="submit">Update location</button></p>
+    </form>
+  </section>
+</main>
+<script src="../js/store.js"></script>
+<script src="kitchen.js"></script>
+</body>
+</html>

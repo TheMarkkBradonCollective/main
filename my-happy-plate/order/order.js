@@ -76,6 +76,12 @@
   renderCart();
   window.addEventListener("mhp-cart", renderCart);
 
+  document.querySelector(".nav-toggle")?.addEventListener("click", () => {
+    const links = document.getElementById("nav-links");
+    const open = links.classList.toggle("is-open");
+    document.querySelector(".nav-toggle").setAttribute("aria-expanded", String(open));
+  });
+
   $("#order-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const cart = window.MHPStore.cart();

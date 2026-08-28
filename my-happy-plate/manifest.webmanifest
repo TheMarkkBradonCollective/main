@@ -1,0 +1,16 @@
+{
+  "name": "My Happy Plate",
+  "short_name": "Happy Plate",
+  "description": "A Little Happy in Every Bite. Pre-order pickup from Tyrone’s food truck.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6efe4",
+  "theme_color": "#7a1f33",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

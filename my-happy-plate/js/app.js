@@ -94,6 +94,15 @@
   });
   $("#contact-form")?.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("Saved for Tyrone — preview contact. For food, use Pre-order.");
+    const fd = new FormData(e.target);
+    const notes = window.MHPStore.load().notes || [];
+    notes.unshift({
+      name: String(fd.get("name") || "").trim(),
+      message: String(fd.get("message") || "").trim(),
+      at: new Date().toISOString()
+    });
+    window.MHPStore.save({ notes });
+    e.target.reset();
+    alert("Got it — Tyrone will see this. Hungry? Pre-order a plate.");
   });
 })();

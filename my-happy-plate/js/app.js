@@ -26,17 +26,22 @@
     const dinnerCard = $("#dinner-card");
     if (dinner.status === "sold" || remaining === 0) {
       dinnerCard.innerHTML = `
-        <p class="dinner-heart">❤️</p>
-        <div class="sold-out-msg">
-          <p class="kicker">You guys ate it all!</p>
-          <h2>Tonight’s dinner is sold out</h2>
-          <p>Check back tomorrow for another Happy Plate — or see if the menu still has a plate for you.</p>
-          <p style="margin-top:1rem"><a class="btn btn-ghost" href="order/">Pre-order from the menu</a></p>
+        <div class="dinner-intro">
+          <p class="dinner-heart">❤️</p>
+          <div class="sold-out-msg">
+            <p class="kicker">You guys ate it all!</p>
+            <h2>Tonight’s dinner is sold out</h2>
+            <p>Check back tomorrow for another Happy Plate — or see if the menu still has a plate for you.</p>
+            <p class="hero-actions" style="justify-content:flex-start;margin-top:1rem"><a class="btn btn-ghost" href="order/">Pre-order from the menu</a></p>
+          </div>
         </div>`;
     } else {
       dinnerCard.innerHTML = `
-        <p class="kicker dinner-heart">❤️ What’s for dinner?</p>
-        <h2>Tonight’s Happy Plate</h2>
+        <div class="dinner-intro">
+          <p class="kicker dinner-heart">❤️ What’s for dinner?</p>
+          <h2>Tonight’s Happy Plate</h2>
+          <p class="sides">Come get you a plate. ${remaining} left tonight.</p>
+        </div>
         <div class="dinner-plate">
           <h3>${dinner.name}</h3>
           <p>${dinner.description || ""}</p>
@@ -65,9 +70,9 @@
         return `<article class="menu-item">
           <div><strong>${i.name}</strong>${i.desc ? `<p>${i.desc}</p>` : ""}
           <span class="badge ${status}">${statusLabel(status)}</span>
-          ${canOrder ? `<p><a class="btn btn-primary" style="margin-top:.5rem" href="${orderHref(i.id, i.name, i.price)}">Pre-order</a></p>` : ""}
+          ${canOrder ? `<p><a class="btn btn-primary" href="${orderHref(i.id, i.name, i.price)}">Pre-order</a></p>` : ""}
           </div>
-          <div>$${i.price}</div>
+          <div class="price-col">$${i.price}</div>
         </article>`;
       }).join("")}</div>`;
     }).join("");

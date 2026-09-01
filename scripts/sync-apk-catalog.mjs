@@ -371,6 +371,51 @@ async function discoverGithubApk(app) {
   };
 }
 
+function versionCodeFromSemver(version) {
+  const parts = String(version || '0').split('.').map((n) => Number.parseInt(n, 10) || 0);
+  const major = parts[0] || 0;
+  const minor = parts[1] || 0;
+  const patch = parts[2] || 0;
+  return major * 10000 + minor * 100 + patch;
+}
+
+async function discoverLocalMirror(app) {
+  const dir = join(apkMirrorRoot, app.slug);
+  try {
+    const { readdir } = await import('node:fs/promises');
+    const files = (await readdir(dir)).filter((name) => name.endsWith('.apk'));
+    if (!files.length) return null;
+
+    const ranked = files
+      .map((name) => ({
+        name,
+        version: parseVersionFromFilename(name),
+      }))
+      .sort((a, b) => compareVersions(b.version, a.version));
+
+    const best = ranked[0];
+    const filePath = join(dir, best.name);
+    const buffer = await readFile(filePath);
+    const sha256 = createHash('sha256').update(buffer).digest('hex');
+    const relPath = `apks/${app.slug}/${best.name}`;
+
+    return {
+      version: best.version,
+      versionCode: best.version ? versionCodeFromSemver(best.version) : null,
+      downloadUrl: relPath,
+      downloadName: best.name,
+      fileSize: buffer.length,
+      sha256,
+      releaseNotes: `${app.name} v${best.version || 'apk'} — custom GPS with OpenStreetMap routing and Android Auto.`,
+      packageId: app.slug === 'navigate' ? 'com.themarkkbradoncollective.navigate' : null,
+      source: 'mirror',
+      archives: [],
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function discoverApp(app) {
   const base = normalizeBase(app.url);
   const manifest = await fetchVersionManifest(base);
@@ -386,6 +431,10 @@ async function discoverApp(app) {
 
   if (!android && (app.github || app.apkGithub)) {
     android = await discoverGithubApk(app);
+  }
+
+  if (!android) {
+    android = await discoverLocalMirror(app);
   }
 
   const webVersion = manifest?.version || manifest?.label || manifest?.versionName || null;

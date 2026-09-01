@@ -5,6 +5,7 @@
   const SECTION_KEY = 'mbc-store-section';
 
   const MARKET_ORDER = [
+    'navigate',
     'buynothing',
     'strainverse',
     'spiritsverse',
@@ -16,9 +17,10 @@
     'sss',
   ];
 
-  const SECTION_ORDER = ['all', 'community', 'lifestyle', 'social', 'security'];
+  const SECTION_ORDER = ['all', 'navigation', 'community', 'lifestyle', 'social', 'security'];
   const SECTION_LABELS = {
     all: 'All apps',
+    navigation: 'Navigation & Drive',
     community: 'Community',
     lifestyle: 'Lifestyle & Culture',
     social: 'Social & Connection',

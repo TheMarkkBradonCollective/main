@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.MbcStore" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:navigationBarColor">#121212</item>
+        <item name="android:windowBackground">#f7f7f5</item>
+    </style>
+</resources>

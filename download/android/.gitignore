@@ -1,0 +1,11 @@
+# Build outputs
+.gradle/
+build/
+app/build/
+local.properties
+gradle-8.6/
+gradle.zip
+
+# IDE
+.idea/
+*.iml

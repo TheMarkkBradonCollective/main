@@ -1,0 +1,41 @@
+name: Navigate Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build release zip
+        run: |
+          cd Navigate || true
+          if [ -f package.json ]; then
+            npm ci
+            npm run release:zip
+          else
+            npm run release:zip
+          fi
+        working-directory: ${{ github.workspace }}
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="v${VERSION}"
+          APK="public/navigate.apk"
+          ZIP="release/Navigate-v${VERSION}-release.zip"
+          gh release create "$TAG" \
+            --title "Navigate v${VERSION}" \
+            --notes "Custom GPS + Android Auto. Install via MBC App Store or APK below." \
+            "$APK#Navigate-v${VERSION}.apk" \
+            "$ZIP"

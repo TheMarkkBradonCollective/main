@@ -1,0 +1,221 @@
+/* MBC App Store — scoped to /download/ */
+.store-shell{max-width:960px;margin:0 auto}
+.store-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:.75rem;
+  margin:1.25rem 0 1.5rem;
+}
+.store-stat{
+  border:1px solid var(--rule-light);
+  background:var(--paper-bright);
+  padding:.85rem 1rem;
+  text-align:center;
+}
+.store-stat strong{
+  display:block;
+  font-family:var(--serif-display);
+  font-size:1.65rem;
+  line-height:1.1;
+  margin-bottom:.2rem;
+}
+.store-stat span{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.58rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--grey-500);
+  font-weight:600;
+}
+.store-banner{
+  border:2px solid var(--ink);
+  background:var(--ink);
+  color:var(--paper);
+  padding:1.1rem 1.25rem;
+  margin-bottom:1.5rem;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:1rem 1.25rem;
+}
+.store-banner.is-native{background:var(--paper-bright);color:var(--ink);border-color:var(--rule)}
+.store-banner-text{flex:1 1 16rem;min-width:0}
+.store-banner-text h2{
+  font-family:var(--serif-display);
+  font-size:1.15rem;
+  margin:0 0 .35rem;
+  color:inherit;
+}
+.store-banner-text p{font-size:.88rem;margin:0;color:inherit;opacity:.88;line-height:1.45}
+.store-banner-actions{display:flex;flex-wrap:wrap;gap:.5rem}
+.store-banner .btn{border-color:currentColor}
+.store-banner:not(.is-native) .btn-primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.store-banner:not(.is-native) .btn-primary:hover{background:var(--grey-100)}
+.store-toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.65rem 1rem;
+  margin-bottom:1rem;
+  padding-bottom:1rem;
+  border-bottom:1px solid var(--rule-light);
+}
+.store-search{
+  flex:1 1 12rem;
+  min-width:0;
+  font-family:var(--serif-body);
+  font-size:.92rem;
+  padding:.5rem .65rem;
+  border:1px solid var(--rule);
+  background:var(--paper-bright);
+}
+.store-search:focus{outline:2px solid var(--ink);outline-offset:2px}
+.store-section-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem;
+  margin-bottom:1.25rem;
+}
+.store-tab{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.58rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:600;
+  padding:.45rem .7rem;
+  border:1px solid var(--rule);
+  background:var(--paper-bright);
+  color:var(--grey-500);
+  cursor:pointer;
+}
+.store-tab:hover,.store-tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.store-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1rem;
+  margin-bottom:2rem;
+}
+.store-card{
+  border:1px solid var(--rule-light);
+  background:var(--paper-bright);
+  padding:1rem 1rem .9rem;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  transition:background .15s ease;
+}
+.store-card:hover{background:var(--grey-100)}
+.store-card-head{display:flex;gap:.75rem;align-items:flex-start;margin-bottom:.55rem}
+.store-card-icon{
+  width:56px;height:56px;
+  border:1px solid var(--rule-light);
+  object-fit:cover;
+  flex-shrink:0;
+}
+.store-card-title h3{
+  font-family:var(--serif-display);
+  font-size:1.05rem;
+  margin:0 0 .15rem;
+  line-height:1.2;
+}
+.store-card-title .store-tagline{
+  font-style:italic;
+  color:var(--grey-500);
+  font-size:.8rem;
+  margin:0;
+  line-height:1.35;
+}
+.store-card-meta{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.58rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--grey-500);
+  font-weight:600;
+  margin-bottom:.45rem;
+}
+.store-card-notes{
+  font-size:.8rem;
+  color:var(--ink-soft);
+  line-height:1.45;
+  margin:0 0 .65rem;
+  flex:1;
+}
+.store-card-status{
+  display:inline-block;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.58rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:700;
+  margin-bottom:.65rem;
+}
+.store-card-status.status-install{color:var(--ink)}
+.store-card-status.status-update{color:#0a5c36}
+.store-card-status.status-installed{color:var(--grey-500)}
+.store-card-status.status-soon{color:var(--grey-400)}
+.store-card-status.status-progress{color:var(--ink);font-style:normal}
+.store-card-actions{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.store-card-actions .btn{flex:1 1 auto;text-align:center;min-width:7rem}
+.store-card-actions .btn-ghost{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.58rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:600;
+  padding:.45rem .55rem;
+  border:none;
+  background:transparent;
+  color:var(--grey-500);
+  cursor:pointer;
+  text-decoration:underline;
+}
+.store-progress{
+  height:3px;
+  background:var(--rule-light);
+  margin:.5rem 0 .35rem;
+  overflow:hidden;
+}
+.store-progress-bar{
+  height:100%;
+  background:var(--ink);
+  width:0%;
+  transition:width .2s ease;
+}
+.store-toast{
+  position:fixed;
+  bottom:1rem;
+  left:50%;
+  transform:translateX(-50%);
+  max-width:min(92vw,28rem);
+  padding:.75rem 1rem;
+  background:var(--ink);
+  color:var(--paper);
+  font-size:.85rem;
+  z-index:9999;
+  border:1px solid var(--ink);
+  box-shadow:0 4px 20px rgba(0,0,0,.2);
+  animation:store-toast-in .2s ease;
+}
+.store-toast.error{background:#8b1a1a;border-color:#8b1a1a}
+@keyframes store-toast-in{
+  from{opacity:0;transform:translate(-50%,8px)}
+  to{opacity:1;transform:translate(-50%,0)}
+}
+.store-loading{
+  grid-column:1 / -1;
+  text-align:center;
+  font-style:italic;
+  color:var(--grey-500);
+  padding:2.5rem 1rem;
+}
+.store-empty{
+  grid-column:1 / -1;
+  text-align:center;
+  color:var(--grey-500);
+  padding:2rem 1rem;
+}
+@media(max-width:640px){
+  .store-stats{grid-template-columns:1fr}
+  .store-grid{grid-template-columns:1fr}
+}

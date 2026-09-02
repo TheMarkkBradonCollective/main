@@ -682,6 +682,68 @@
     ]
   },
   {
+    "slug": "navigate",
+    "theme": "navigate",
+    "name": "Navigate",
+    "tagline": "Custom GPS · Android Auto",
+    "url": "https://navigate-tmbc.vercel.app",
+    "section": "navigation",
+    "listing": "Navigation · A",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Your map. Your route. Your dashboard.",
+    "description": "Custom GPS navigation with OpenStreetMap routing and Android Auto in-car support — built for drivers who want their own stack, not another subscription map app.",
+    "features": [
+      {
+        "title": "Live GPS map",
+        "blurb": "OpenStreetMap tiles with your position updating in real time.",
+        "shot": 0
+      },
+      {
+        "title": "Route planning",
+        "blurb": "Search a destination and get turn-by-turn steps via OSRM.",
+        "shot": 1
+      },
+      {
+        "title": "Android Auto",
+        "blurb": "Shows on your car dashboard when Android Auto is connected.",
+        "shot": 2
+      }
+    ],
+    "steps": [
+      {
+        "title": "Open Navigate",
+        "blurb": "Grant GPS when prompted."
+      },
+      {
+        "title": "Search destination",
+        "blurb": "Type an address or place name."
+      },
+      {
+        "title": "Start navigation",
+        "blurb": "Follow the route on your phone or car display."
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Navigate",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://navigate-tmbc.vercel.app/icon-512.png",
+      "/icons/apps/navigate.png"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet"],
+    "readDetails": [
+      "Navigate is MBC's custom GPS app — OpenStreetMap on the phone, OSRM routing, no Google Maps API key required for the base experience.",
+      "Android Auto registers Navigate as a navigation app on your car dashboard. Apple CarPlay would be a separate native build later.",
+      "Install from The MBC App Store. Updates ship through the same catalog as every other Collective app."
+    ],
+    "highlights": [
+      "Custom GPS stack",
+      "Android Auto shell",
+      "MBC App Store distribution"
+    ]
+  },
+  {
     "slug": "guardr",
     "theme": "guardr",
     "name": "Guardr",

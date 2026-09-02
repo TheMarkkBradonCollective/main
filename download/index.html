@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Download Android APKs for Markk Brandon Collective apps — sideload, install, and update from one place.">
+<meta name="description" content="MBC App Store — install and update Markk Brandon Collective Android apps from one place.">
 <meta name="theme-color" content="#121212">
 <link rel="manifest" href="../manifest.webmanifest">
 <link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="MBC">
+<meta name="apple-mobile-web-app-title" content="MBC Store">
 <meta name="mobile-web-app-capable" content="yes">
-<title>Downloads — The Markk Brandon Collective</title>
+<title>App Store — The Markk Brandon Collective</title>
 <link rel="stylesheet" href="../css/style.css?v=1.5.12">
+<link rel="stylesheet" href="store.css?v=1.0.0">
 </head>
 <body>
 <div id="mbc-splash" class="mbc-splash" aria-live="polite">
   <img class="mbc-splash-logo" src="../icons/logo.png" width="120" height="120" alt="The Markk Brandon Collective">
-  <p class="mbc-splash-loading">Loading downloads…</p>
-  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.5.5</p>
+  <p class="mbc-splash-loading">Loading app store…</p>
+  <p id="mbc-splash-version" class="mbc-splash-version">MBC Store</p>
 </div>
 <div class="site">
 
@@ -31,7 +32,7 @@
       <li><a href="../about/">About</a></li>
       <li><a href="../apps/">The Classifieds</a></li>
       <li><a href="../security/">Security</a></li>
-      <li><a href="./" class="active">Downloads</a></li>
+      <li><a href="./" class="active">App Store</a></li>
       <li><a href="../support/">Support</a></li>
       <li><a href="../request/">Hire Me</a></li>
     </ul>
@@ -42,57 +43,77 @@
   <div class="masthead-top-rule"></div>
   <div class="masthead-edition">
     <span>Section D</span>
-    <span class="edition-center">Downloads</span>
-    <span>Android · APK</span>
+    <span class="edition-center">App Store</span>
+    <span>Android · Install &amp; update</span>
   </div>
-  <h1 class="unstyled page-title">The MBC App Market</h1>
-  <p class="masthead-tagline">Sideload, install, and update — all my apps from one market</p>
+  <h1 class="unstyled page-title">The MBC App Store</h1>
+  <p class="masthead-tagline">Install once from the store app · update everything here</p>
   <div class="masthead-bottom-rule"></div>
 </header>
 
-<main class="content">
+<main class="content store-shell">
 
-<p class="breadcrumb"><a href="../index.html">Front Page</a> / Downloads</p>
+<p class="breadcrumb"><a href="../index.html">Front Page</a> / App Store</p>
 
 <section class="download-hero prose">
-  <p class="drop-cap">This is the download desk. Every app I ship under the Markk Brandon Collective lives here when an Android APK is ready — one place to grab the latest build, reinstall after a reset, or check if something new dropped. No Play Store gatekeeping. Download the APK, install it, and come back here when I push an update.</p>
-  <p>APK listings are pulled from each app's live deployment and linked GitHub repos when you load this page (or hit <strong>Refresh listings</strong>). Private repos are mirrored to this site during sync — APKs from those builds appear here once synced. If an app shows <strong>Coming soon</strong>, the Android package isn't published yet — use <a href="../apps/">The Classifieds</a> for the web version until it lands.</p>
+  <p class="drop-cap">This is the install desk for every Android app I ship under the Markk Brandon Collective. Browse the catalog, tap Install or Update, and let the MBC Store app handle the rest — no digging through your Downloads folder for APK files every time something new drops.</p>
+  <p>The catalog syncs from each app's live deployment when you load this page. <strong>Get MBC Store</strong> first if you're in a browser; after that, installs and updates happen right here.</p>
 </section>
 
+<div id="store-banner" class="store-banner" aria-live="polite"></div>
+
+<div class="store-stats" id="store-stats">
+  <div class="store-stat">
+    <strong id="store-stat-available">—</strong>
+    <span>APKs ready</span>
+  </div>
+  <div class="store-stat">
+    <strong id="store-stat-installed">—</strong>
+    <span>Installed on device</span>
+  </div>
+  <div class="store-stat">
+    <strong id="store-stat-updates">—</strong>
+    <span>Updates pending</span>
+  </div>
+</div>
+
 <div class="cta-strip compact">
-  <button class="btn btn-primary" type="button" id="download-refresh">Refresh listings</button>
+  <button class="btn btn-primary" type="button" id="store-refresh">Refresh catalog</button>
   <a class="btn" href="../apps/">The Classifieds</a>
 </div>
 
-<div class="download-toolbar">
-  <label class="download-sort-label" for="download-sort">Sort listings</label>
-  <select class="download-sort" id="download-sort" aria-label="Sort app listings">
-    <option value="site">Site order (Classifieds)</option>
+<div class="store-toolbar">
+  <input class="store-search" id="store-search" type="search" placeholder="Search apps…" aria-label="Search apps">
+  <label class="download-sort-label" for="store-sort">Sort</label>
+  <select class="download-sort" id="store-sort" aria-label="Sort app listings">
+    <option value="site">Site order</option>
+    <option value="available">Updates &amp; installs first</option>
     <option value="name">Name A–Z</option>
-    <option value="available">Available first</option>
     <option value="section">Section</option>
     <option value="version">Version (newest)</option>
   </select>
 </div>
 
-<p id="download-stamp" class="download-stamp mono">Checking listings…</p>
+<div class="store-section-tabs" id="store-section-tabs" role="tablist" aria-label="App sections"></div>
 
-<div id="download-grid" class="classified-grid download-grid">
-  <p class="dl-loading">Checking the wire for latest APK listings…</p>
+<p id="store-stamp" class="download-stamp mono">Loading catalog…</p>
+
+<div id="store-grid" class="store-grid">
+  <p class="store-loading">Loading app catalog…</p>
 </div>
 
 <section class="section install-guide">
   <div class="section-head">
-    <p class="kicker">How to install</p>
-    <h2>Android sideload · 60 seconds</h2>
+    <p class="kicker">How it works</p>
+    <h2>Store app · one-time setup</h2>
   </div>
   <ol class="steps-list">
-    <li><strong>Download the APK</strong> from the card above (tap Download APK).</li>
-    <li><strong>Allow installs</strong> — Android may ask you to allow installs from your browser or Files app (Settings → Security → Install unknown apps).</li>
-    <li><strong>Open the file</strong> from your notification shade or Downloads folder and tap Install.</li>
-    <li><strong>Update later</strong> — come back here, hit Refresh listings, and download the newest APK. Install over the old one to update.</li>
+    <li><strong>Get MBC Store</strong> — tap the banner above and install the store APK (allow installs from your browser when Android asks).</li>
+    <li><strong>Open MBC Store</strong> — the store loads this catalog and knows what's already on your phone.</li>
+    <li><strong>Install or Update</strong> — tap the button on any app. Confirm in the Android installer if prompted.</li>
+    <li><strong>Come back here</strong> — refresh the catalog anytime; updates show automatically when a new build ships.</li>
   </ol>
-  <p class="install-footnote">These are my own apps, signed and hosted on each project's deployment. If your phone warns about an unknown source, that's normal for sideloading outside the Play Store — only install apps you trust.</p>
+  <p class="install-footnote">These are my own apps, signed and hosted on each project's deployment. Sideloading outside Google Play is normal for indie catalogs — only install apps you trust.</p>
 </section>
 
 </main>
@@ -107,17 +128,17 @@
     <a href="../about/">About</a>
     <a href="../apps/">The Classifieds</a>
     <a href="../security/">Security</a>
-    <a href="../download/">Downloads</a>
+    <a href="./">App Store</a>
     <a href="../support/">Support</a>
     <a href="../request/">Hire Me</a>
   </nav>
   <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
   <p>All Rights Reserved · Built with care by <strong>StickzCoder.Lua</strong></p>
-  <p class="site-version">MBC v1.5.5</p>
+  <p class="site-version">MBC Store</p>
 </footer>
 
 </div>
 <script src="../js/pwa.js?v=1.5.12"></script>
-<script src="../js/downloads.js?v=1.5.12"></script>
+<script src="js/store.js?v=1.0.0"></script>
 </body>
 </html>

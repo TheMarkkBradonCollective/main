@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1b2a" />
+  <meta name="description" content="Navigate — custom GPS navigation with Android Auto in-car support by The Markk Brandon Collective." />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon-192.png" type="image/png" />
+  <title>Navigate</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="nav-header">
+      <div class="nav-brand">
+        <span class="nav-logo" aria-hidden="true">◎</span>
+        <div>
+          <h1>Navigate</h1>
+          <p class="nav-sub">Custom GPS · Android Auto</p>
+        </div>
+      </div>
+      <div class="nav-status" id="gps-status" aria-live="polite">Acquiring GPS…</div>
+    </header>
+
+    <section class="search-panel">
+      <label class="search-label" for="destination">Destination</label>
+      <div class="search-row">
+        <input id="destination" type="search" placeholder="Address or place name" autocomplete="off" />
+        <button type="button" id="btn-route" class="btn-primary">Route</button>
+      </div>
+      <p class="search-hint">OpenStreetMap routing · works offline after route loads</p>
+    </section>
+
+    <div id="map" class="map" role="application" aria-label="Navigation map"></div>
+
+    <section class="route-panel" id="route-panel" hidden>
+      <h2>Route</h2>
+      <p id="route-summary" class="route-summary"></p>
+      <div class="route-actions">
+        <button type="button" id="btn-start" class="btn-primary">Start navigation</button>
+        <button type="button" id="btn-clear" class="btn-ghost">Clear</button>
+      </div>
+      <ol id="route-steps" class="route-steps"></ol>
+    </section>
+
+    <section class="auto-panel">
+      <h2>Android Auto</h2>
+      <p>Connect your phone to your car dashboard. Navigate appears as a navigation app when Android Auto is enabled. Use the Desktop Head Unit emulator during development.</p>
+      <p class="auto-note">Apple CarPlay requires a separate native build — this repo targets Google Android Auto first.</p>
+    </section>
+
+    <footer class="nav-footer">
+      <span>Navigate v1.0.0</span>
+      <span>The Markk Brandon Collective</span>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

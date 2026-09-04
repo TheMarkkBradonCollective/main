@@ -215,6 +215,27 @@
   color:var(--grey-500);
   padding:2rem 1rem;
 }
+.store-archives{
+  margin-top:.75rem;
+  font-size:.78rem;
+}
+.store-archives summary{
+  cursor:pointer;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:.62rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--grey-500);
+  font-weight:600;
+}
+.store-archives ul{
+  list-style:none;
+  margin:.45rem 0 0;
+  padding:0;
+}
+.store-archives li{margin-bottom:.25rem}
+.store-archives a{font-size:.8rem}
+.store-size{color:var(--grey-400);font-style:normal}
 @media(max-width:640px){
   .store-stats{grid-template-columns:1fr}
   .store-grid{grid-template-columns:1fr}

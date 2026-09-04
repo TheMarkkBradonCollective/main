@@ -1,16 +1,16 @@
 [
   {
     "slug": "buynothing",
-    "name": "Sacramento Buy Nothing",
-    "projectUrl": "https://sacramentobuynothing-tmbc.vercel.app",
-    "source": "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg",
+    "name": "TheSacramentoFree",
+    "projectUrl": "https://www.sacramentobuynothing.com",
+    "source": "https://www.sacramentobuynothing.com/logo.png",
     "file": "icons/apps/buynothing.png"
   },
   {
     "slug": "strainverse",
     "name": "StrainVerse",
     "projectUrl": "https://strainverse-tmbc.vercel.app",
-    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png",
+    "source": "https://strainverse-tmbc.vercel.app/pwa-512.png",
     "file": "icons/apps/strainverse.png"
   },
   {
@@ -26,6 +26,13 @@
     "projectUrl": "https://cookverse-tmbc.vercel.app",
     "source": "https://cookverse-tmbc.vercel.app/logo-mark.png",
     "file": "icons/apps/cookverse.png"
+  },
+  {
+    "slug": "gigos",
+    "name": "GigOS",
+    "projectUrl": "https://gigos.vercel.app",
+    "source": "https://gigos.vercel.app/favicon.ico",
+    "file": "icons/apps/gigos.png"
   },
   {
     "slug": "friendr",
@@ -47,6 +54,13 @@
     "projectUrl": "https://chatr-tmbc.vercel.app",
     "source": "https://chatr-tmbc.vercel.app/icon.png",
     "file": "icons/apps/chatr.png"
+  },
+  {
+    "slug": "navigate",
+    "name": "Navigate",
+    "projectUrl": "https://navigate-tmbc.vercel.app",
+    "source": "icons/apps/navigate.png",
+    "file": "icons/apps/navigate.png"
   },
   {
     "slug": "guardr",

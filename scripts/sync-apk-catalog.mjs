@@ -439,6 +439,16 @@ async function discoverApp(app) {
 
   const webVersion = manifest?.version || manifest?.label || manifest?.versionName || null;
 
+  if (android && (app.hideArchives || app.slug === 'sss')) {
+    android = { ...android, archives: [] };
+    if (app.slug === 'sss') {
+      android.releaseNotes =
+        android.version
+          ? `SSS Staff v${android.version} — main Signature Security Specialist Android app.`
+          : 'SSS Staff — main Signature Security Specialist Android app.';
+    }
+  }
+
   return {
     slug: app.slug,
     name: app.name,

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mbc-v1-5-12';
+const CACHE_NAME = 'mbc-v1-5-13';
 
 const PRECACHE_URLS = [
   './icons/icon-192.png',

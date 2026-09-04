@@ -2,7 +2,7 @@
 
 > Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
 
-**Version:** **v1.5.12** (see [`version.json`](version.json))
+**Version:** **v1.5.13** (see [`version.json`](version.json))
 
 ## Live site
 
@@ -29,13 +29,14 @@ This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkk
 
 | Project | Notes | URL |
 |---------|-------|-----|
-| Sacramento Buy Nothing | Free local gifting | [sacramentobuynothing-tmbc.vercel.app](https://sacramentobuynothing-tmbc.vercel.app) |
+| TheSacramentoFree | Free local gifting | [sacramentobuynothing.com](https://www.sacramentobuynothing.com) |
 | StrainVerse | Fun / boredom build | [strainverse-tmbc.vercel.app](https://strainverse-tmbc.vercel.app) |
 | SpiritsVerse | Fun / boredom build | [spiritsverse-tmbc.vercel.app](https://spiritsverse-tmbc.vercel.app) |
 | Cookverse | Fun / boredom build | [cookverse-tmbc.vercel.app](https://cookverse-tmbc.vercel.app) |
+| GigOS | Live performance OS | [gigos.vercel.app](https://gigos.vercel.app) |
 | Friendr | Free by design | [friendr-tmbc.vercel.app](https://friendr-tmbc.vercel.app) |
-| Findr | Free by design | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
 | Chatr | Free by design | [chatr-tmbc.vercel.app](https://chatr-tmbc.vercel.app) |
+| Findr | Free by design · last in the App Store | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
 
 ## Security Showcase
 
@@ -66,7 +67,7 @@ Several apps live in **private** GitHub repos under `TheMarkkBradonCollective`. 
 | Friendr | `Friendr` | Private |
 | Findr | `Findr` | Private |
 | Chatr | `Chatr` | Private |
-| Sacramento Buy Nothing | `SacramentoBuyNothing` | Private |
+| TheSacramentoFree | `TheSacramentoFree` | Public |
 | Guardr | `Guardr` | Private |
 | Signature Security Specialist | `Signature-Security-Specialist` | Private |
 

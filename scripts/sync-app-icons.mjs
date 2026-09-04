@@ -14,6 +14,18 @@ const outDir = join(root, 'icons', 'apps');
 const catalogPath = join(root, 'My-Projects.json');
 const SIZE = 256;
 
+function decodeIconBuffer(buf) {
+  if (buf.length >= 8 && buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) {
+    return buf;
+  }
+  // Windows ICO — prefer an embedded PNG payload (256² and similar).
+  if (buf.length >= 6 && buf[0] === 0x00 && buf[1] === 0x00 && buf[2] === 0x01 && buf[3] === 0x00) {
+    const pngAt = buf.indexOf(Buffer.from([0x89, 0x50, 0x4e, 0x47]));
+    if (pngAt >= 0) return buf.subarray(pngAt);
+  }
+  return buf;
+}
+
 async function fetchFirst(urls) {
   const errors = [];
   for (const url of urls) {
@@ -23,12 +35,13 @@ async function fetchFirst(urls) {
         errors.push(`${url} → ${res.status}`);
         continue;
       }
-      const buf = Buffer.from(await res.arrayBuffer());
-      const head = buf.subarray(0, 16).toString('utf8').toLowerCase();
+      const raw = Buffer.from(await res.arrayBuffer());
+      const head = raw.subarray(0, 16).toString('utf8').toLowerCase();
       if (head.includes('<!doctype') || head.includes('<html')) {
         errors.push(`${url} → HTML`);
         continue;
       }
+      const buf = decodeIconBuffer(raw);
       await sharp(buf).metadata();
       return { url, buf };
     } catch (err) {

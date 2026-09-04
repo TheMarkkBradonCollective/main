@@ -10,11 +10,12 @@
     'strainverse',
     'spiritsverse',
     'cookverse',
+    'gigos',
     'friendr',
-    'findr',
     'chatr',
     'guardr',
     'sss',
+    'findr',
   ];
 
   const SECTION_ORDER = ['all', 'navigation', 'community', 'lifestyle', 'social', 'security'];
@@ -125,61 +126,39 @@
     },
   };
 
+  function olderBuilds(android, slug) {
+    if (!android?.archives?.length || slug === 'sss') return [];
+    return android.archives.filter((archive) => compareVersions(android.version, archive.version) > 0);
+  }
+
   function flattenCatalog(apps) {
-    const items = [];
-    for (const app of apps) {
+    // One card per app. Old APKs stay nested; SSS companion shells are omitted.
+    return (apps || []).map((app) => {
       const android = app.android || {};
-      if (android.status === 'available') {
-        items.push({
-          slug: app.slug,
-          installKey: app.slug,
-          name: app.name,
-          tagline: app.tagline,
-          section: app.section,
-          webUrl: app.webUrl,
-          icon: app.icon,
-          android,
-        });
-        if (android.archives?.length) {
-          for (const archive of android.archives) {
-            items.push({
-              slug: app.slug,
-              installKey: `${app.slug}::${archive.downloadName || archive.label}`,
-              name: archive.label || `${app.name} (${archive.version})`,
-              tagline: app.tagline,
-              section: app.section,
-              webUrl: app.webUrl,
-              icon: app.icon,
-              android: {
-                status: 'available',
-                version: archive.version,
-                versionCode: archive.versionCode,
-                downloadUrl: archive.downloadUrl,
-                downloadName: archive.downloadName,
-                fileSize: archive.fileSize,
-                sha256: archive.sha256,
-                releaseNotes: archive.releaseNotes,
-                packageId: archive.packageId || android.packageId,
-                archives: [],
-              },
-              isArchive: true,
-            });
-          }
-        }
-      } else {
-        items.push({
-          slug: app.slug,
-          installKey: app.slug,
-          name: app.name,
-          tagline: app.tagline,
-          section: app.section,
-          webUrl: app.webUrl,
-          icon: app.icon,
-          android,
-        });
-      }
+      return {
+        slug: app.slug,
+        installKey: app.slug,
+        name: app.name,
+        tagline: app.tagline,
+        section: app.section,
+        webUrl: app.webUrl,
+        icon: app.icon,
+        android: {
+          ...android,
+          archives: olderBuilds(android, app.slug),
+        },
+      };
+    });
+  }
+
+  function pinFindrLast(list) {
+    const findr = [];
+    const rest = [];
+    for (const item of list) {
+      if (item.slug === 'findr') findr.push(item);
+      else rest.push(item);
     }
-    return items;
+    return [...rest, ...findr];
   }
 
   function getInstallState(item) {
@@ -234,9 +213,10 @@
 
     switch (mode) {
       case 'name':
-        return list.sort((a, b) => a.name.localeCompare(b.name));
+        list.sort((a, b) => a.name.localeCompare(b.name));
+        break;
       case 'available':
-        return list.sort((a, b) => {
+        list.sort((a, b) => {
           const rank = (item) => {
             const s = getInstallState(item);
             if (s === 'update') return 0;
@@ -248,26 +228,33 @@
           if (diff !== 0) return diff;
           return (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999);
         });
-      case 'section':
+        break;
+      case 'section': {
         const sectionRank = Object.fromEntries(
           SECTION_ORDER.map((section, index) => [section, index])
         );
-        return list.sort((a, b) => {
+        list.sort((a, b) => {
           const sectionDiff =
             (sectionRank[a.section] ?? 999) - (sectionRank[b.section] ?? 999);
           if (sectionDiff !== 0) return sectionDiff;
           return a.name.localeCompare(b.name);
         });
+        break;
+      }
       case 'version':
-        return list.sort((a, b) => {
+        list.sort((a, b) => {
           const versionDiff = compareVersions(b.android?.version, a.android?.version);
           if (versionDiff !== 0) return versionDiff;
           return a.name.localeCompare(b.name);
         });
+        break;
       case 'site':
       default:
-        return list.sort((a, b) => (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999));
+        list.sort((a, b) => (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999));
+        break;
     }
+
+    return pinFindrLast(list);
   }
 
   function filterItems(items) {
@@ -285,6 +272,17 @@
       );
     }
     return list;
+  }
+
+  function renderArchive(archive) {
+    const size = formatBytes(archive.fileSize);
+    return `
+      <li>
+        <a href="${downloadHref(archive.downloadUrl)}" download="${archive.downloadName || ''}" rel="noopener">
+          ${archive.label || archive.version || 'Archive'}
+          ${size ? ` <span class="store-size">(${size})</span>` : ''}
+        </a>
+      </li>`;
   }
 
   function renderCard(item) {
@@ -344,6 +342,14 @@
       actions += `<div class="store-card-actions"><span class="btn btn-soon" aria-disabled="true">Coming Soon</span></div>`;
     }
 
+    const archives =
+      isAvailable && android.archives?.length
+        ? `<details class="store-archives">
+            <summary>Older builds (${android.archives.length})</summary>
+            <ul>${android.archives.map(renderArchive).join('')}</ul>
+          </details>`
+        : '';
+
     return `
       <article class="store-card" data-slug="${item.slug}" data-install-key="${item.installKey}">
         <div class="store-card-head">
@@ -357,6 +363,7 @@
         ${notes}
         <span class="store-card-status status-${isInstalling ? 'progress' : state}">${isInstalling ? statusLabels.progress : statusLabels[state]}</span>
         ${actions}
+        ${archives}
       </article>`;
   }
 

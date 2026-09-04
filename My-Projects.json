@@ -2,15 +2,15 @@
   {
     "slug": "buynothing",
     "theme": "buynothing",
-    "name": "Sacramento Buy Nothing",
+    "name": "TheSacramentoFree",
     "tagline": "Give Freely. Ask Kindly.",
-    "url": "https://sacramentobuynothing-tmbc.vercel.app",
+    "url": "https://www.sacramentobuynothing.com",
     "section": "community",
     "listing": "Listing #001",
     "status": "live",
     "statusLabel": "Active · Free",
     "heroLine": "See what neighbors are giving — before you join.",
-    "description": "Community-powered free gifting for Sacramento neighbors. No selling, no bidding, no flipping. 100% free, no ads, ever.",
+    "description": "Community-powered free gifting for Sacramento neighbors — plus live Go Get pickup in the Android app. No selling, no bidding, no flipping. 100% free, no ads, ever.",
     "features": [
       {
         "title": "Neighborhood feed",
@@ -42,15 +42,17 @@
         "blurb": "Coordinate with a neighbor — free."
       }
     ],
-    "github": "https://github.com/TheMarkkBradonCollective/SacramentoBuyNothing",
-    "githubPrivate": true,
+    "github": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
+    "githubPrivate": false,
     "iconSources": [
+      "https://www.sacramentobuynothing.com/logo.png",
+      "https://www.sacramentobuynothing.com/Logo.jpeg",
       "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg"
     ],
     "screenshots": [
       {
         "src": "images/screenshots/buynothing-phone-hero.jpg",
-        "caption": "Sacramento Buy Nothing on Google Pixel 6",
+        "caption": "TheSacramentoFree on Google Pixel 6",
         "device": "phone",
         "framed": true
       },
@@ -73,8 +75,8 @@
       "chromebook"
     ],
     "readDetails": [
-      "Sacramento Buy Nothing is a neighborhood gifting board — not a marketplace. Neighbors post what they are giving away, what they need, or what they would trade. No money changes hands.",
-      "Built for Sacramento because this is home. The app runs on Supabase with real-time listings, photos, and messaging. Install as a PWA on Android, tablet, or Chromebook — same account everywhere.",
+      "TheSacramentoFree is a neighborhood gifting board — not a marketplace. Neighbors post what they are giving away, what they need, or what they would trade. No money changes hands.",
+      "Built for Sacramento because this is home. The website covers give, ask, map, events, and messages. The Android app adds Go Get: live map pickup, both people locked onto the trip until the item changes hands.",
       "No ads, no data selling, no premium tier. If you use it and want it to stay online, the Support page is there."
     ],
     "highlights": [
@@ -85,7 +87,7 @@
     "screenshotsTablet": [
       {
         "src": "images/screenshots/buynothing-tablet-hero.jpg",
-        "caption": "Sacramento Buy Nothing on Samsung Galaxy Tab S7",
+        "caption": "TheSacramentoFree on Samsung Galaxy Tab S7",
         "device": "tablet",
         "framed": true
       }
@@ -93,7 +95,7 @@
     "screenshotsDesktop": [
       {
         "src": "images/screenshots/buynothing-desktop-hero.jpg",
-        "caption": "Sacramento Buy Nothing on Macbook Air",
+        "caption": "TheSacramentoFree on Macbook Air",
         "device": "desktop",
         "framed": true
       }
@@ -418,13 +420,72 @@
     ]
   },
   {
+    "slug": "gigos",
+    "theme": "gigos",
+    "name": "GigOS",
+    "tagline": "The operating system for live performance",
+    "url": "https://gigos.vercel.app",
+    "section": "lifestyle",
+    "listing": "Listing #005",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Less chaos. Better shows.",
+    "description": "Organize your band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime. GigOS Bands keeps songs, sets, gigs, and performance notes in one clear system.",
+    "features": [
+      {
+        "title": "Bands",
+        "blurb": "Keep the roster, songs, and notes in one place.",
+        "shot": 0
+      },
+      {
+        "title": "Sets & gigs",
+        "blurb": "Build reusable sets and plan the next show.",
+        "shot": 0
+      },
+      {
+        "title": "Live Mode",
+        "blurb": "Stay aligned from rehearsal through showtime.",
+        "shot": 0
+      }
+    ],
+    "steps": [
+      {
+        "title": "Create an account",
+        "blurb": "Sign up and start a band space."
+      },
+      {
+        "title": "Load songs and sets",
+        "blurb": "Reusable set lists instead of scattered notes."
+      },
+      {
+        "title": "Run the gig",
+        "blurb": "Live Mode keeps the room on the same page."
+      }
+    ],
+    "iconSources": [
+      "https://gigos.vercel.app/favicon.ico"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "GigOS is the operating system for live performance — songs, sets, gigs, and notes without the pre-show scramble.",
+      "GigOS Bands is the current product: organize the band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime.",
+      "Free to try on the web. Android APK will land in the MBC App Store when a build ships."
+    ],
+    "highlights": [
+      "Songs, sets, and gigs",
+      "Live Mode for showtime",
+      "Less chaos. Better shows."
+    ]
+  },
+  {
     "slug": "friendr",
     "theme": "friendr",
     "name": "Friendr",
     "tagline": "Consent-First Social Connection",
     "url": "https://friendr-tmbc.vercel.app",
     "section": "social",
-    "listing": "Listing #005",
+    "listing": "Listing #006",
     "status": "live",
     "statusLabel": "Active · Free",
     "heroLine": "Three layers. You decide how far things go.",
@@ -597,7 +658,7 @@
     "tagline": "Secure Private Chat",
     "url": "https://chatr-tmbc.vercel.app",
     "section": "social",
-    "listing": "Listing #009",
+    "listing": "Listing #007",
     "status": "live",
     "statusLabel": "Active · Free",
     "heroLine": "Pin encrypted sticky notes to anyone with a code.",
@@ -869,6 +930,7 @@
     "status": "dev",
     "statusLabel": "In Development",
     "heroLine": "Ops, training, and the company behind the badge.",
+    "hideArchives": true,
     "description": "Executive security company connecting guards, event staff, and medical responders with clients. Mobile-first ops, mission scheduling, training LMS, companion apps.",
     "features": [
       {

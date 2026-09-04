@@ -119,6 +119,8 @@ for (const rel of htmlFiles) {
   html = html.replace(/(src="[^"]*timeline\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*showcase\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*security\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*store\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(href="[^"]*store\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   writeFileSync(htmlPath, html);
 }
 console.log('→ Cache-busted CSS/JS in HTML pages');

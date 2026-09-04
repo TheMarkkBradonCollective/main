@@ -25,11 +25,12 @@
     'strainverse',
     'spiritsverse',
     'cookverse',
+    'gigos',
     'friendr',
-    'findr',
     'chatr',
     'guardr',
     'sss',
+    'findr',
   ];
 
   const SECTION_ORDER = ['community', 'lifestyle', 'social', 'security'];
@@ -45,6 +46,16 @@
     return 0;
   }
 
+  function pinFindrLast(list) {
+    const findr = [];
+    const rest = [];
+    for (const item of list) {
+      if (item.slug === 'findr') findr.push(item);
+      else rest.push(item);
+    }
+    return [...rest, ...findr];
+  }
+
   function sortApps(apps, mode) {
     const list = [...apps];
     const marketRank = Object.fromEntries(MARKET_ORDER.map((slug, index) => [slug, index]));
@@ -52,31 +63,38 @@
 
     switch (mode) {
       case 'name':
-        return list.sort((a, b) => a.name.localeCompare(b.name));
+        list.sort((a, b) => a.name.localeCompare(b.name));
+        break;
       case 'available':
-        return list.sort((a, b) => {
+        list.sort((a, b) => {
           const aReady = a.android?.status === 'available' ? 0 : 1;
           const bReady = b.android?.status === 'available' ? 0 : 1;
           if (aReady !== bReady) return aReady - bReady;
           return (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999);
         });
+        break;
       case 'section':
-        return list.sort((a, b) => {
+        list.sort((a, b) => {
           const sectionDiff =
             (sectionRank[a.section] ?? 999) - (sectionRank[b.section] ?? 999);
           if (sectionDiff !== 0) return sectionDiff;
           return a.name.localeCompare(b.name);
         });
+        break;
       case 'version':
-        return list.sort((a, b) => {
+        list.sort((a, b) => {
           const versionDiff = compareVersions(b.android?.version, a.android?.version);
           if (versionDiff !== 0) return versionDiff;
           return a.name.localeCompare(b.name);
         });
+        break;
       case 'site':
       default:
-        return list.sort((a, b) => (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999));
+        list.sort((a, b) => (marketRank[a.slug] ?? 999) - (marketRank[b.slug] ?? 999));
+        break;
     }
+
+    return pinFindrLast(list);
   }
 
   function sectionLabel(section) {
@@ -118,7 +136,7 @@
           : '';
 
     const archives =
-      isAvailable && android.archives?.length
+      isAvailable && app.slug !== 'sss' && android.archives?.length
         ? `<details class="dl-archives">
             <summary>Older builds (${android.archives.length})</summary>
             <ul>${android.archives.map(renderArchive).join('')}</ul>

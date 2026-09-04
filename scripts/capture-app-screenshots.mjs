@@ -17,7 +17,7 @@ const outDir = path.join(root, 'images', 'screenshots');
 const apps = [
   {
     slug: 'buynothing',
-    url: 'https://sacramentobuynothing-tmbc.vercel.app',
+    url: 'https://www.sacramentobuynothing.com',
     prep: async (page) => {
       // Prefer a live listing if one is visible from home/browse
       await clickFirst(page, [
@@ -74,6 +74,13 @@ const apps = [
         'text=Recipes',
       ]);
       await settle(page, 1500);
+    },
+  },
+  {
+    slug: 'gigos',
+    url: 'https://gigos.vercel.app',
+    prep: async (page) => {
+      await settle(page, 800);
     },
   },
   {

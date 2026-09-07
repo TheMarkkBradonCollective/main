@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Rink Studios is a historic Sacramento venue on Del Paso Blvd — live music, private events, and a community room with concert-grade production.">
+<title>The Rink Studios Sacramento — A Home for the Bold</title>
+<link rel="icon" href="images/mark.png" type="image/png">
+<link rel="apple-touch-icon" href="images/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home" data-root="./">
+<main id="main">
+  <section class="hero">
+    <div class="hero-media" role="img" aria-label="Concert crowd under stage lights"></div>
+    <div class="hero-copy">
+      <p class="kicker">Sacramento · Del Paso Blvd · Historic brownstone</p>
+      <h1>A Home<br>for the Bold.</h1>
+      <p class="lede">Live music, fashion, brand nights, and private celebrations in the old skating rink — now a 5,000 sq ft room with a concert PA, a 15 ft LED wall, and a neighborhood at the door.</p>
+      <p class="hero-actions">
+        <a class="btn btn-gold" href="events/">See upcoming shows</a>
+        <a class="btn btn-ghost" href="rent/">Rent the venue</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div id="show-marquee"></div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="kicker">On the board</p>
+        <h2>Upcoming events</h2>
+      </div>
+      <a class="btn btn-ghost" href="events/">Full calendar</a>
+    </div>
+    <div class="ticket-grid" id="featured-events"></div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <p class="kicker">The room</p>
+    <h2>The Rink at a glance</h2>
+    <div class="stat-grid" id="amenity-grid" style="margin-top:1.6rem"></div>
+  </section>
+
+  <section class="section split">
+    <img src="images/brick.jpg" alt="Brick street and historic storefronts at dusk" width="1400" height="933">
+    <div class="story">
+      <p class="kicker">Our story</p>
+      <h2>The wheels stopped. The room did not.</h2>
+      <p>The Rink Studios sits in a classic brownstone that once held a beloved local skating rink. The floor still wants people on it — now for bands, runways, brand activations, and the nights neighbors actually remember.</p>
+      <p>Artists, curators, and planners use the space because the production is real: modular stage, concert sound, cameras, a VIP balcony, and a load-in door that does not make a crew invent a miracle.</p>
+      <p><a class="btn btn-ghost" href="about/">Read the story</a></p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <p class="kicker">In the room</p>
+    <h2>A brownstone that photographs like a set</h2>
+    <div class="gallery" style="margin-top:1.4rem">
+      <img src="images/stage.jpg" alt="Stage lights over a live performance">
+      <img src="images/bar.jpg" alt="Dimly lit bar interior">
+      <img src="images/concert3.jpg" alt="Crowd with hands raised at a show">
+      <img src="images/dj.jpg" alt="DJ performing under colored lights">
+      <img src="images/festival.jpg" alt="Festival lights and a packed floor">
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <p class="kicker">Join the house</p>
+    <h2>Be first on the list</h2>
+    <p class="lede">Upcoming shows, member giveaways, and the nights that do not get a wide post.</p>
+    <form class="newsletter" data-mock>
+      <label class="visually-hidden" for="email-home" style="position:absolute;left:-999px">Email</label>
+      <input id="email-home" name="email" type="email" required placeholder="Your email">
+      <button class="btn btn-gold" type="submit">Sign up</button>
+    </form>
+    <p class="success" data-success hidden>You’re on the list. This mock form does not send mail.</p>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

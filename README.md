@@ -55,34 +55,37 @@ Canonical live links + icon sources for every listed app live in [`My-Projects.j
 npm run sync-app-icons
 ```
 
-### Private repo APKs
+### GitHub repos
 
-Several apps live in **private** GitHub repos under `TheMarkkBradonCollective`. The sync script discovers APKs in `release/`, `android-app/`, etc. and **mirrors** them to `apks/{slug}/` on this site so the App Market stays publicly downloadable.
+Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `githubPrivate` flags live in [`My-Projects.json`](My-Projects.json).
 
 | App | Repo | Visibility |
 |-----|------|------------|
-| StrainVerse | `StrainVerse` | Public |
-| SpiritsVerse | `SpiritsVerse` | Private |
-| CookVerse | `CookVerse` | Private |
-| Friendr | `Friendr` | Private |
-| Findr | `Findr` | Private |
-| Chatr | `Chatr` | Private |
 | TheSacramentoFree | `TheSacramentoFree` | Public |
-| Guardr | `Guardr` | Private |
-| Signature Security Specialist | `Signature-Security-Specialist` | Private |
+| StrainVerse | `StrainVerse` | Public |
+| SpiritsVerse | `SpiritsVerse` | Public |
+| CookVerse | `CookVerse` | Public |
+| Friendr | `Friendr` | Public |
+| Findr | `Findr` | Public |
+| Chatr | `Chatr` | Public |
+| Navigate | `Navigate` | Public |
+| Guardr | `Guardr` | Public |
+| Signature Security Specialist | `Signature-Security-Specialist` | Public |
 
-1. Repo URLs and `githubPrivate` flags live in [`My-Projects.json`](My-Projects.json).
-2. Export a GitHub token with `repo` scope:
-   ```bash
-   export GITHUB_TOKEN=ghp_your_token_here
-   # or: export GITHUB_TOKEN=$(gh auth token)
-   ```
-3. Run:
-   ```bash
-   npm run sync-apk-catalog
-   # or
-   npm run update
-   ```
+To flip any still-private catalog repos to public (and sync `githubPrivate` flags):
+
+```bash
+export GITHUB_TOKEN=ghp_your_org_owner_token   # classic PAT, repo scope
+npm run make-repos-public
+```
+
+APK sync discovers builds in `release/`, `android-app/`, etc. and can **mirror** them to `apks/{slug}/` on this site:
+
+```bash
+npm run sync-apk-catalog
+# or
+npm run update
+```
 
 Mirrored APKs are committed under `apks/` (see `.gitignore` exception). Live deployments with `version.json` `apk.ready` still take priority when available.
 

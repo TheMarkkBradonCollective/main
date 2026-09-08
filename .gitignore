@@ -3,3 +3,5 @@ package-lock.json
 android/*.keystore
 *.apk
 !apks/**/*.apk
+release/*.zip
+release/staging-*/

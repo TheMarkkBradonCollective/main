@@ -18,6 +18,8 @@
     "make-repos-public": "node scripts/make-repos-public.mjs",
     "lock-catalog-repos": "node scripts/lock-catalog-repos.mjs",
     "lock-unlisted-repos": "node scripts/lock-unlisted-repos.mjs",
+    "package-apk-release": "node scripts/package-apk-release.mjs",
+    "publish-apk-release": "bash scripts/publish-apk-release.sh",
     "generate-icons": "node scripts/generate-icons.mjs",
     "capture-screenshots": "node scripts/capture-app-screenshots.mjs",
     "capture-device-screenshots": "node scripts/capture-device-screenshots.mjs"

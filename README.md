@@ -129,6 +129,16 @@ npm run update
 
 Mirrored APKs are committed under `apks/` (see `.gitignore` exception). Live deployments with `version.json` `apk.ready` still take priority when available.
 
+### Download all APKs as one zip (GitHub Releases)
+
+```bash
+npm run package-apk-release              # latest build per app (~170 MB)
+npm run package-apk-release -- --full    # every mirrored APK incl. archives (~1 GB)
+npm run publish-apk-release              # upload to github.com/.../main/releases
+```
+
+Release tag: `apks-v{version}` from `version.json`. See [`release/README.md`](release/README.md).
+
 ## Brand logo
 
 Masters (black backdrop): [`icons/logo-master.png`](icons/logo-master.png), [`icons/wordmark-master.png`](icons/wordmark-master.png).

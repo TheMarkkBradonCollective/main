@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rent The Rink Studios in Sacramento — 5,000 sq ft, 550 capacity, LED wall, concert sound, and a full bar.">
+<title>Rent the Venue | The Rink Studios Sacramento</title>
+<link rel="icon" href="../images/mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-page="rent" data-root="../">
+<main id="main">
+  <header class="page-hero" data-tone="rent">
+    <div class="page-hero-media"></div>
+    <div class="page-hero-copy">
+      <p class="kicker">Private events · productions · brand nights</p>
+      <h1>Rent the venue</h1>
+      <p class="lede">Weddings, concerts, launch parties, panels, and shoots. Packages from $1,250 to $4,500 — or we quote the night you actually need.</p>
+    </div>
+  </header>
+  <section class="section">
+    <p class="kicker">Starting points</p>
+    <h2>Choose a shape, then we spec it</h2>
+    <div class="package-grid" id="package-grid" style="margin-top:1.5rem"></div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <p class="kicker">In the building</p>
+    <h2>What you are actually renting</h2>
+    <ul class="amenity-list" id="rent-amenities"></ul>
+  </section>
+  <section class="section form-grid">
+    <div>
+      <p class="kicker">Inquiry</p>
+      <h2>Hold a date</h2>
+      <p class="lede">Tell us the night, the headcount, and the kind of room you want. A coordinator replies with hold rules and a real quote. This mock form stays on the page.</p>
+    </div>
+    <div class="form-card">
+      <form data-mock>
+        <label class="field"><span>Name</span><input name="name" required></label>
+        <label class="field"><span>Email</span><input name="email" type="email" required></label>
+        <label class="field"><span>Event date</span><input name="date" type="date" required></label>
+        <label class="field"><span>Guest count</span><input name="guests" type="number" min="10" max="550" required></label>
+        <label class="field"><span>Event type</span>
+          <select name="type" required>
+            <option value="">Select</option>
+            <option>Concert / DJ</option>
+            <option>Wedding / reception</option>
+            <option>Brand / launch</option>
+            <option>Private celebration</option>
+            <option>Conference / panel</option>
+            <option>Creative shoot</option>
+          </select>
+        </label>
+        <label class="field"><span>Package</span>
+          <select name="package">
+            <option>Not sure yet</option>
+            <option>Studio Night</option>
+            <option>After Hours</option>
+            <option>Full Production</option>
+          </select>
+        </label>
+        <label class="field field-full"><span>What are you building?</span><textarea name="notes" rows="4" required></textarea></label>
+        <button class="btn btn-gold" type="submit">Send inquiry</button>
+      </form>
+      <p class="success" data-success hidden>Inquiry captured on this mock page. Email info@therinkstudiossac.com on the official site to actually book.</p>
+    </div>
+  </section>
+</main>
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>

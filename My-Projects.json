@@ -253,7 +253,7 @@
       "cookverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
     ],
@@ -359,7 +359,7 @@
       "spiritsverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://cookverse-tmbc.vercel.app/logo-mark.png"
     ],
@@ -466,7 +466,11 @@
       "https://gigos.vercel.app/favicon.ico"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "GigOS is the operating system for live performance — songs, sets, gigs, and notes without the pre-show scramble.",
       "GigOS Bands is the current product: organize the band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime.",
@@ -517,7 +521,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Friendr",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://friendr-tmbc.vercel.app/icons/icon-512.png"
     ],
@@ -599,7 +603,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Findr",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://findr-tmbc.vercel.app/logo.png"
     ],
@@ -686,7 +690,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Chatr",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://chatr-tmbc.vercel.app/icon.png"
     ],
@@ -786,13 +790,16 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Navigate",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://navigate-tmbc.vercel.app/icon-512.png",
       "/icons/apps/navigate.png"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet"],
+    "platforms": [
+      "phone",
+      "tablet"
+    ],
     "readDetails": [
       "Navigate is MBC's custom GPS app — OpenStreetMap on the phone, OSRM routing, no Google Maps API key required for the base experience.",
       "Android Auto registers Navigate as a navigation app on your car dashboard. Apple CarPlay would be a separate native build later.",
@@ -859,7 +866,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Guardr",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://www.guardr.co/logo.png"
     ],
@@ -960,7 +967,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
-    "githubPrivate": true,
+    "githubPrivate": false,
     "iconSources": [
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png"
     ],

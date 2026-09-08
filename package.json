@@ -21,6 +21,7 @@
     "package-apk-release": "node scripts/package-apk-release.mjs",
     "build-mbc-store-apk": "node scripts/build-mbc-store-apk.mjs",
     "package-mbc-store-zip": "node scripts/package-mbc-store-zip.mjs",
+    "package-verse-zip": "node scripts/package-verse-zip.mjs",
     "publish-apk-release": "bash scripts/publish-apk-release.sh",
     "generate-icons": "node scripts/generate-icons.mjs",
     "capture-screenshots": "node scripts/capture-app-screenshots.mjs",

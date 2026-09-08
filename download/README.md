@@ -38,6 +38,14 @@ npm run build-mbc-store-apk
 
 That generates a signed release APK (v2 signing) and copies it to `apks/mbc-store/`.
 
+For reliable mobile download, package a ZIP (recommended on phones):
+
+```bash
+npm run package-mbc-store-zip
+```
+
+Serves `download/releases/MBC-Store-v1.0.0.zip` — unzip, then tap the APK inside.
+
 Requires Android SDK (API 34) and JDK 17.
 
 ## First-time user flow

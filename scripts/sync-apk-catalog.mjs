@@ -6,7 +6,7 @@
  * mirrored to apks/{slug}/ on this site so downloads stay public.
  */
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -542,18 +542,30 @@ const catalog = {
 };
 
 async function readStoreAppMeta() {
-  const storeApk = join(root, 'apks', 'mbc-store', 'MBC-Store-v1.0.0.apk');
+  const storeVersion = '1.0.0';
+  const apkName = `MBC-Store-v${storeVersion}.apk`;
+  const zipName = `MBC-Store-v${storeVersion}.zip`;
+  const storeApk = join(root, 'apks', 'mbc-store', apkName);
   try {
     const buffer = await readFile(storeApk);
     const sha256 = createHash('sha256').update(buffer).digest('hex');
+    let zipFileSize = null;
+    try {
+      zipFileSize = (await stat(join(root, 'download', 'releases', zipName))).size;
+    } catch {
+      /* zip optional until package-mbc-store-zip runs */
+    }
     return {
       packageId: 'com.themarkkbradoncollective.store',
       name: 'MBC Store',
-      version: '1.0.0',
+      version: storeVersion,
       versionCode: 100,
-      downloadUrl: 'apks/mbc-store/MBC-Store-v1.0.0.apk',
-      downloadName: 'MBC-Store-v1.0.0.apk',
+      downloadUrl: `apks/mbc-store/${apkName}`,
+      downloadName: apkName,
+      zipDownloadUrl: `download/releases/${zipName}`,
+      zipDownloadName: zipName,
       fileSize: buffer.length,
+      zipFileSize,
       sha256,
       releaseNotes:
         'MBC Store — install and update every Markk Brandon Collective Android app from one catalog.',

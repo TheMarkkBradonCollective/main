@@ -159,6 +159,13 @@ if (!existsSync(built)) {
 
 run('jarsigner', ['-verify', '-verbose', '-certs', built]);
 
+const apksigner = [join(sdkRoot, 'build-tools', '34.0.0', 'apksigner')].find(existsSync)
+  ? join(sdkRoot, 'build-tools', '34.0.0', 'apksigner')
+  : null;
+if (apksigner) {
+  run(apksigner, ['verify', '--verbose', built]);
+}
+
 const destDir = join(root, 'apks', 'mbc-store');
 await mkdir(destDir, { recursive: true });
 const dest = join(destDir, outName);
@@ -167,4 +174,4 @@ copyFileSync(built, dest);
 const sha256 = sha256File(dest);
 console.log(`\n✓ Signed MBC Store APK → ${dest}`);
 console.log(`  SHA-256: ${sha256}`);
-console.log('  Run: npm run sync-apk-catalog');
+console.log('  Run: npm run package-mbc-store-zip && npm run sync-apk-catalog');

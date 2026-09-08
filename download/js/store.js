@@ -7,15 +7,19 @@
   const MARKET_ORDER = [
     'navigate',
     'buynothing',
+    'buffalofree',
     'strainverse',
     'spiritsverse',
     'cookverse',
     'gigos',
     'friendr',
     'chatr',
-    'guardr',
-    'sss',
     'findr',
+    'sss',
+    'runr',
+    'dlvrd',
+    'brandr',
+    'checkdeck',
   ];
 
   const SECTION_ORDER = ['all', 'navigation', 'community', 'lifestyle', 'social', 'security'];

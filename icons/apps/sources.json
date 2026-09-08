@@ -56,13 +56,6 @@
     "file": "icons/apps/navigate.png"
   },
   {
-    "slug": "guardr",
-    "name": "Guardr",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#guardr",
-    "source": "https://www.guardr.co/logo.png",
-    "file": "icons/apps/guardr.png"
-  },
-  {
     "slug": "sss",
     "name": "Signature Security Specialist",
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sss",
@@ -75,13 +68,6 @@
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#buffalofree",
     "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/TheBuffaloFree/main/public/logo.png",
     "file": "icons/apps/buffalofree.png"
-  },
-  {
-    "slug": "stoner4therecord",
-    "name": "Stoner4TheRecord",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#stoner4therecord",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/stoner4therecord.png"
   },
   {
     "slug": "runr",
@@ -110,47 +96,5 @@
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#checkdeck",
     "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
     "file": "icons/apps/checkdeck.png"
-  },
-  {
-    "slug": "myvenue",
-    "name": "MyVenue",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#myvenue",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/myvenue.png"
-  },
-  {
-    "slug": "meus-them",
-    "name": "MeUs-Them",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#meus-them",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/meus-them.png"
-  },
-  {
-    "slug": "groupdominoscore",
-    "name": "GroupDominoScore",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#groupdominoscore",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/groupdominoscore.png"
-  },
-  {
-    "slug": "css",
-    "name": "Customer Service Specialist",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#css",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/css.png"
-  },
-  {
-    "slug": "layoutlab",
-    "name": "LayoutLab",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#layoutlab",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/layoutlab.png"
-  },
-  {
-    "slug": "theplan",
-    "name": "ThePlan",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#theplan",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/theplan.png"
   }
 ]

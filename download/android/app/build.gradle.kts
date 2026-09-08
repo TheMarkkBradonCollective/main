@@ -4,6 +4,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        create("release") {
+            storeFile = file("../mbc-store-release.keystore")
+            storePassword = "mbcstore"
+            keyAlias = "mbcstore"
+            keyPassword = "mbcstore"
+        }
+    }
     namespace = "com.themarkkbradoncollective.store"
     compileSdk = 34
 
@@ -17,6 +25,7 @@ android {
 
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

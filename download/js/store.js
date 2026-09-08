@@ -504,13 +504,16 @@
     banner.className = 'store-banner';
     const storeUrl = storeApp?.downloadUrl ? downloadHref(storeApp.downloadUrl) : '#';
     const storeName = storeApp?.downloadName || 'MBC-Store.apk';
+    const onAndroid = /Android/i.test(navigator.userAgent);
     banner.innerHTML = `
       <div class="store-banner-text">
         <h2>Get the MBC Store app</h2>
         <p>Install the store once, then install and update every MBC app from here — no hunting through Downloads for APK files.</p>
+        ${onAndroid ? '<p class="store-banner-hint"><strong>On Android:</strong> tap the button, then tap <strong>Install</strong> when the system screen appears. Allow installs from Chrome if asked.</p>' : ''}
       </div>
       <div class="store-banner-actions">
-        <a class="btn btn-primary" href="${storeUrl}" download="${storeName}" rel="noopener">Get MBC Store</a>
+        <a class="btn btn-primary" href="${storeUrl}" ${onAndroid ? '' : `download="${storeName}"`} rel="noopener">Get MBC Store</a>
+        <a class="btn" href="${storeUrl}" rel="noopener">Direct APK link</a>
         <a class="btn" href="#store-grid">Browse catalog</a>
       </div>`;
   }

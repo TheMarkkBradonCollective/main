@@ -147,7 +147,7 @@
       "cookverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png"
     ],
@@ -254,7 +254,7 @@
       "cookverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png"
     ],
@@ -361,7 +361,7 @@
       "spiritsverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/CookVerse/main/public/logo-mark.png"
     ],
@@ -472,7 +472,7 @@
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Munchline",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "screenshots": [],
     "platforms": [
       "phone",
@@ -530,7 +530,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Friendr",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/Friendr/main/apps/web/public/icons/icon-512.png"
     ],
@@ -613,7 +613,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Findr",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/Findr/main/website/public/logo.png"
     ],
@@ -701,7 +701,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Chatr",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/Chatr/main/public/icon.png"
     ],
@@ -802,7 +802,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Navigate",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/Navigate/main/public/icon-512.png",
       "/icons/apps/navigate.png"
@@ -954,7 +954,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/TheBuffaloFree",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/TheBuffaloFree/main/public/logo.png",
@@ -985,7 +985,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Runr",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
@@ -1015,7 +1015,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Dlvrd",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
@@ -1045,7 +1045,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Brandr",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
@@ -1075,7 +1075,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/CheckDeck",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
@@ -1105,7 +1105,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/HangMan",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
@@ -1135,7 +1135,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/MyVenue",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
@@ -1165,7 +1165,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/MeUs-Them",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
@@ -1195,7 +1195,7 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/GroupDominoScore",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "apkOnly": true,
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"

@@ -6,6 +6,8 @@
  *   npm run mirror-all-apks
  *   npm run lock-catalog-repos
  *   npm run sync-apk-catalog
+ *
+ * Requires a token with admin on each repo (owner classic PAT or gh auth as TheMarkkBradonCollective).
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
@@ -63,22 +65,14 @@ async function githubRequest(token, method, path, body) {
     data = { message: text };
   }
 
-  if (!res.ok) {
-    const message = data?.message || res.statusText;
-    const hint =
-      res.status === 404
-        ? ' (repo missing, or token lacks admin access to this private repo)'
-        : '';
-    throw new Error(`${method} ${path} → ${res.status} ${message}${hint}`);
-  }
-
-  return data;
+  return { ok: res.ok, status: res.status, data };
 }
 
 async function main() {
   const token = getToken();
   if (!token) {
     console.error('Set GITHUB_TOKEN (classic PAT with repo scope + admin on each repo).');
+    console.error('Or: gh auth login as TheMarkkBradonCollective → https://github.com/login/device');
     process.exit(1);
   }
 
@@ -97,21 +91,45 @@ async function main() {
   }
 
   console.log(`Locking ${targets.length} catalog source repos under ${owner}…`);
-  console.log('APK downloads stay public via apks/ on the main site — run npm run mirror-all-apks first.\n');
+  console.log('APK downloads stay public via apks/ on the main site.\n');
 
   const locked = [];
+  const skipped = [];
+  const failed = [];
+
   for (const { app, repo } of targets) {
     const current = await githubRequest(token, 'GET', `/repos/${owner}/${repo}`);
-    if (current.private === true) {
+    if (!current.ok) {
+      const msg = current.data?.message || current.status;
+      if (current.status === 404) {
+        console.log(`? ${repo} — not visible to token (already private or no access)`);
+        locked.push(app.slug);
+        skipped.push({ repo, reason: msg });
+      } else {
+        console.log(`✗ ${repo} — cannot read (${msg})`);
+        failed.push({ repo, reason: msg });
+      }
+      continue;
+    }
+
+    if (current.data.private === true) {
       console.log(`✓ ${repo} — already private`);
       locked.push(app.slug);
       continue;
     }
 
-    await githubRequest(token, 'PATCH', `/repos/${owner}/${repo}`, {
+    const patch = await githubRequest(token, 'PATCH', `/repos/${owner}/${repo}`, {
       visibility: 'private',
       private: true,
     });
+
+    if (!patch.ok) {
+      const msg = patch.data?.message || patch.status;
+      console.log(`✗ ${repo} — lock failed (${msg})`);
+      failed.push({ repo, reason: msg });
+      continue;
+    }
+
     console.log(`✓ ${repo} — now private`);
     locked.push(app.slug);
   }
@@ -127,6 +145,16 @@ async function main() {
   if (changed) {
     await writeFile(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`);
     console.log('\nUpdated My-Projects.json (githubPrivate → true).');
+  }
+
+  console.log(`\nSummary: ${locked.length} private/locked, ${failed.length} failed`);
+  if (failed.length) {
+    console.log('\nFailed repos need owner auth (not the cursor bot integration):');
+    for (const { repo, reason } of failed) console.log(`  • ${repo}: ${reason}`);
+    console.log('\nAuthenticate as TheMarkkBradonCollective, then re-run:');
+    console.log('  gh auth login --hostname github.com --git-protocol https --scopes repo');
+    console.log('  npm run lock-catalog-repos');
+    process.exit(1);
   }
 
   console.log('\nDone. Re-run npm run sync-apk-catalog to refresh download URLs.');

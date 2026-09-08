@@ -14,6 +14,13 @@ window.RINK = {
       "https://maps.google.com/maps?q=1031%20Del%20Paso%20Blvd%2C%20Sacramento%2C%20CA%2095815&z=16&output=embed",
     mapLink: "https://maps.google.com/?q=1031+Del+Paso+Blvd,+Sacramento,+CA+95815",
   },
+  googleForm: {
+    id: "1FAIpQLSdxGOng79TPegQhrGpYlYrNwNcBg78w89KhLLgFW2vyKc-AnQ",
+    embedUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdxGOng79TPegQhrGpYlYrNwNcBg78w89KhLLgFW2vyKc-AnQ/viewform?embedded=true",
+    submitUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdxGOng79TPegQhrGpYlYrNwNcBg78w89KhLLgFW2vyKc-AnQ/formResponse",
+  },
   events: [
     {
       id: "late-night-sessions",

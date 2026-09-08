@@ -18,9 +18,9 @@ The live Wix site is live and branded, but the events calendar, rental page, and
 | Rent | Packages ($1,250–$4,500), amenity list, inquiry form |
 | FAQ | Attendee / rental / location answers (the live FAQ lists questions only) |
 | Contact | Desk details, form, map |
-| Team | Roles + apply form |
+| Team | Roles + embedded Google Form application (submits to Google) |
 | Privacy | Notes that this is a concept |
 
-Forms stay in the browser. Ticket buttons do not check out.
+Newsletter, contact, and rental forms stay in the browser. The team application embeds the venue’s Google Form inline. Ticket buttons do not check out.
 
 Venue facts (address, phone, capacity, LED wall, stage, bar, ADA) come from the official site and public listings. Event nights on the calendar are invented for the mock.

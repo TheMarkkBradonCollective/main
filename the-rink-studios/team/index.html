@@ -36,34 +36,24 @@
     <h2>Roles we hire</h2>
     <div class="role-grid" id="role-grid" style="margin-top:1.4rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))"></div>
   </section>
-  <section class="section form-grid" style="padding-top:0">
-    <div>
+  <section class="section google-form-section" style="padding-top:0">
+    <div class="google-form-intro">
       <p class="kicker">Apply</p>
       <h2>Tell us the lane</h2>
-      <p class="lede">This mock form stays in the browser. For a real application, write the official desk.</p>
+      <p class="lede">Fill out the application right here. Your answers go straight to The Rink Studios hiring form — no new tab, no leaving this page.</p>
     </div>
-    <div class="form-card">
-      <form data-mock>
-        <label class="field"><span>Name</span><input name="name" required></label>
-        <label class="field"><span>Email</span><input name="email" type="email" required></label>
-        <label class="field field-full"><span>Role</span>
-          <select name="role" required>
-            <option value="">Select</option>
-            <option>Event staff</option>
-            <option>Security & safety</option>
-            <option>Bar & concessions</option>
-            <option>Event technician</option>
-            <option>Ops support</option>
-          </select>
-        </label>
-        <label class="field field-full"><span>Why The Rink</span><textarea name="why" rows="4" required></textarea></label>
-        <button class="btn btn-gold" type="submit">Submit application</button>
-      </form>
-      <p class="success" data-success hidden>Application staged. Email info@therinkstudiossac.com on the official site to apply for real.</p>
+    <div class="google-form-shell" data-google-form data-min-height="1500">
+      <noscript>
+        <p class="google-form-fallback">JavaScript is required to load the embedded application. If it still does not appear, open the form directly:
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxGOng79TPegQhrGpYlYrNwNcBg78w89KhLLgFW2vyKc-AnQ/viewform" target="_blank" rel="noopener">Team application</a>.
+        </p>
+      </noscript>
     </div>
+    <p class="google-form-note">Responses are stored in the venue’s Google Form. If the form asks you to sign in, the owner needs to set sharing to “Anyone with the link can respond.”</p>
   </section>
 </main>
 <script src="../js/data.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/google-form.js"></script>
 </body>
 </html>

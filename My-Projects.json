@@ -468,7 +468,8 @@
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/Munchline/main/public/icon-512.png",
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/Munchline/main/public/icon.png",
-      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Munchline/main/public/pwa-512.png"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Munchline/main/public/pwa-512.png",
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Munchline",
     "githubPrivate": false,

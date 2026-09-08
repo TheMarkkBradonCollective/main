@@ -28,6 +28,13 @@
     "file": "icons/apps/cookverse.png"
   },
   {
+    "slug": "gigos",
+    "name": "GigOS",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#gigos",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/gigos.png"
+  },
+  {
     "slug": "friendr",
     "name": "Friendr",
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#friendr",

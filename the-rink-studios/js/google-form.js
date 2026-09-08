@@ -25,6 +25,12 @@
       shell.classList.add("is-ready");
     });
 
+    window.setTimeout(() => {
+      if (shell.classList.contains("is-ready")) return;
+      loading.textContent =
+        "Still loading the application. If this stays blank, the Google Form may need public sharing enabled.";
+    }, 10000);
+
     shell.append(loading, frame);
   });
 })();

@@ -1,4 +1,8 @@
 window.RINK = {
+  site: {
+    url: "https://themarkkbradoncollective.github.io/the-rink-studios/",
+    repo: "https://github.com/TheMarkkBradonCollective/the-rink-studios",
+  },
   venue: {
     name: "The Rink Studios",
     city: "Sacramento",

@@ -65,7 +65,7 @@
       <div class="preview-banner">
         Concept redesign · not the official site ·
         <a href="${window.RINK.venue.official}" target="_blank" rel="noopener">therinkstudiossac.com</a>
-        · by <a href="${ROOT}../">The Markk Brandon Collective</a>
+        · by <a href="https://themarkkbradoncollective.github.io/main/" target="_blank" rel="noopener">The Markk Brandon Collective</a>
       </div>
       <header class="site-header">
         <div class="nav-inner">

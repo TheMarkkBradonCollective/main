@@ -96,5 +96,33 @@
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#checkdeck",
     "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
     "file": "icons/apps/checkdeck.png"
+  },
+  {
+    "slug": "hangman",
+    "name": "HangMan",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#hangman",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/hangman.png"
+  },
+  {
+    "slug": "myvenue",
+    "name": "MyVenue",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#myvenue",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/myvenue.png"
+  },
+  {
+    "slug": "meus-them",
+    "name": "MeUs-Them",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#meus-them",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/meus-them.png"
+  },
+  {
+    "slug": "groupdominoscore",
+    "name": "GroupDominoScore",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#groupdominoscore",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/groupdominoscore.png"
   }
 ]

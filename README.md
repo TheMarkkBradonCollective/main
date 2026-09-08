@@ -27,7 +27,7 @@ This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkk
 
 ## The Classifieds — Free apps (APK-only)
 
-All catalog apps install from the [MBC App Store](/download/). See [`My-Projects.json`](My-Projects.json) for the full list (15 apps).
+All catalog apps install from the [MBC App Store](/download/). See [`My-Projects.json`](My-Projects.json) for the full list (19 apps).
 
 | Project | Notes |
 |---------|-------|
@@ -45,6 +45,10 @@ All catalog apps install from the [MBC App Store](/download/). See [`My-Projects
 | Dlvrd | Delivery companion |
 | Brandr | Brand tools |
 | CheckDeck | Checklists & decks |
+| HangMan | Classic word game |
+| MyVenue | Venue management |
+| GroupDominoScore | Domino scoreboard |
+| MeUs-Them | Social connection |
 
 ## Security Showcase
 
@@ -82,6 +86,10 @@ Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `gith
 | Dlvrd | `Dlvrd` | Public |
 | Brandr | `Brandr` | Public |
 | CheckDeck | `CheckDeck` | Public |
+| HangMan | `HangMan` | Public |
+| MyVenue | `MyVenue` | Public |
+| MeUs-Them | `MeUs-Them` | Public |
+| GroupDominoScore | `GroupDominoScore` | Public |
 
 All catalog apps are **APK-only** (Vercel sites removed). Install via [MBC App Store](/download/).
 

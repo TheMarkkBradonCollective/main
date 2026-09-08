@@ -8,6 +8,7 @@
     'navigate',
     'buynothing',
     'buffalofree',
+    'hangman',
     'strainverse',
     'spiritsverse',
     'cookverse',
@@ -15,11 +16,14 @@
     'friendr',
     'chatr',
     'findr',
+    'meus-them',
     'sss',
     'runr',
     'dlvrd',
     'brandr',
     'checkdeck',
+    'myvenue',
+    'groupdominoscore',
   ];
 
   const SECTION_ORDER = ['all', 'navigation', 'community', 'lifestyle', 'social', 'security'];

@@ -1079,5 +1079,125 @@
     "iconSources": [
       "https://themarkkbradoncollective.github.io/main/icons/logo.png"
     ]
+  },
+  {
+    "slug": "hangman",
+    "theme": "default",
+    "name": "HangMan",
+    "tagline": "HangMan The Game",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#hangman",
+    "section": "lifestyle",
+    "listing": "Listing #010",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "HangMan The Game",
+    "description": "Classic HangMan — Android APK from The Markk Brandon Collective.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Classic HangMan — Android APK from The Markk Brandon Collective."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/HangMan",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "myvenue",
+    "theme": "default",
+    "name": "MyVenue",
+    "tagline": "Venue management",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#myvenue",
+    "section": "lifestyle",
+    "listing": "Listing #017",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Venue management",
+    "description": "MyVenue — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "MyVenue — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/MyVenue",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "meus-them",
+    "theme": "default",
+    "name": "MeUs-Them",
+    "tagline": "Social connection",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#meus-them",
+    "section": "social",
+    "listing": "Listing #018",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Social connection",
+    "description": "MeUs-Them — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "MeUs-Them — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/MeUs-Them",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "groupdominoscore",
+    "theme": "default",
+    "name": "GroupDominoScore",
+    "tagline": "Domino scoreboard",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#groupdominoscore",
+    "section": "lifestyle",
+    "listing": "Listing #019",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Domino scoreboard",
+    "description": "Group domino score tracking — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Group domino score tracking — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/GroupDominoScore",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
   }
 ]

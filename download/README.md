@@ -28,7 +28,23 @@ cd download/android
 
 Output: `app/build/outputs/apk/release/app-release-unsigned.apk`
 
-Copy to `apks/mbc-store/MBC-Store-v1.0.0.apk`, bump `versionCode` / `versionName` in `app/build.gradle.kts`, then run `npm run sync-apk-catalog` from the repo root.
+Copy to `apks/mbc-store/MBC-Store-v1.0.0.apk`, then run `npm run sync-apk-catalog` from the repo root.
+
+**Important:** release builds must be **signed** or Android will refuse to install. Use:
+
+```bash
+npm run build-mbc-store-apk
+```
+
+That generates a signed release APK (v2 signing) and copies it to `apks/mbc-store/`.
+
+For reliable mobile download, package a ZIP (recommended on phones):
+
+```bash
+npm run package-mbc-store-zip
+```
+
+Serves `download/releases/MBC-Store-v1.0.0.zip` — unzip, then tap the APK inside.
 
 Requires Android SDK (API 34) and JDK 17.
 

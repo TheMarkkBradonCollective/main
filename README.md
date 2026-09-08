@@ -20,31 +20,42 @@ This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkk
 |------|-----|-------------|
 | **Front Page** | `/` | Who I am, why I build, AI note, CTAs |
 | **The Classifieds** | `/apps/` | Free apps & sites to try |
-| **Security Showcase** | `/security/` | Guardr, Signature Security Specialist, and BSIS certificates |
+| **Security Showcase** | `/security/` | Signature Security Specialist and BSIS certificates |
 | **Downloads** | `/download/` | Android APK app market — sideload & update MBC apps |
 | **Support** | `/support/` | GoFundMe — keep free apps online |
 | **Hire Me** | `/request/` | Request a website/app build + budget range |
 
-## The Classifieds — Free apps
+## The Classifieds — Free apps (APK-only)
 
-| Project | Notes | URL |
-|---------|-------|-----|
-| TheSacramentoFree | Free local gifting | [sacramentobuynothing.com](https://www.sacramentobuynothing.com) |
-| StrainVerse | Fun / boredom build | [strainverse-tmbc.vercel.app](https://strainverse-tmbc.vercel.app) |
-| SpiritsVerse | Fun / boredom build | [spiritsverse-tmbc.vercel.app](https://spiritsverse-tmbc.vercel.app) |
-| Cookverse | Fun / boredom build | [cookverse-tmbc.vercel.app](https://cookverse-tmbc.vercel.app) |
-| GigOS | Live performance OS | [gigos.vercel.app](https://gigos.vercel.app) |
-| Friendr | Free by design | [friendr-tmbc.vercel.app](https://friendr-tmbc.vercel.app) |
-| Chatr | Free by design | [chatr-tmbc.vercel.app](https://chatr-tmbc.vercel.app) |
-| Findr | Free by design · last in the App Store | [findr-tmbc.vercel.app](https://findr-tmbc.vercel.app) |
+All catalog apps install from the [MBC App Store](/download/). See [`My-Projects.json`](My-Projects.json) for the full list (19 apps).
+
+| Project | Notes |
+|---------|-------|
+| TheSacramentoFree | Free local gifting · Sacramento |
+| TheBuffaloFree | Free local gifting · Buffalo |
+| StrainVerse | Cannabis social · Verse family |
+| SpiritsVerse | Drinks social · Verse family |
+| Cookverse | Cooking social · Verse family |
+| GigOS | Live performance OS |
+| Friendr | Consent-first social |
+| Chatr | Encrypted sticky-note chat |
+| Findr | Location sharing |
+| Navigate | Custom GPS · Android Auto |
+| Runr | Delivery platform |
+| Dlvrd | Delivery companion |
+| Brandr | Brand tools |
+| CheckDeck | Checklists & decks |
+| HangMan | Classic word game |
+| MyVenue | Venue management |
+| GroupDominoScore | Domino scoreboard |
+| MeUs-Them | Social connection |
 
 ## Security Showcase
 
-Guardr and Signature Security Specialist live on [`/security/`](security/) with BSIS training certificates. Operator credentials (guard card, etc.) go in `security/certs.json` under `operators` once the scans are in — drop JPEGs in `images/certs/` and add an entry.
+Signature Security Specialist lives on [`/security/`](security/) with BSIS training certificates. Operator credentials (guard card, etc.) go in `security/certs.json` under `operators` once the scans are in — drop JPEGs in `images/certs/` and add an entry.
 
 | Project | Notes | URL |
 |---------|-------|-----|
-| Guardr | Marketplace angle | [guardr.co](https://guardr.co) |
 | Signature Security Specialist | Company / ops angle | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
 
 ## Classifieds apps (`My-Projects.json`)
@@ -55,36 +66,78 @@ Canonical live links + icon sources for every listed app live in [`My-Projects.j
 npm run sync-app-icons
 ```
 
-### Private repo APKs
+### GitHub repos
 
-Several apps live in **private** GitHub repos under `TheMarkkBradonCollective`. The sync script discovers APKs in `release/`, `android-app/`, etc. and **mirrors** them to `apks/{slug}/` on this site so the App Market stays publicly downloadable.
+Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `githubPrivate` flags live in [`My-Projects.json`](My-Projects.json).
 
 | App | Repo | Visibility |
 |-----|------|------------|
+| TheSacramentoFree | `TheSacramentoFree` | Private |
+| TheBuffaloFree | `TheBuffaloFree` | Public |
 | StrainVerse | `StrainVerse` | Public |
-| SpiritsVerse | `SpiritsVerse` | Private |
-| CookVerse | `CookVerse` | Private |
-| Friendr | `Friendr` | Private |
-| Findr | `Findr` | Private |
-| Chatr | `Chatr` | Private |
-| TheSacramentoFree | `TheSacramentoFree` | Public |
-| Guardr | `Guardr` | Private |
+| SpiritsVerse | `SpiritsVerse` | Public |
+| CookVerse | `CookVerse` | Public |
+| Friendr | `Friendr` | Public |
+| Findr | `Findr` | Public |
+| Chatr | `Chatr` | Public |
+| Navigate | `Navigate` | Public |
 | Signature Security Specialist | `Signature-Security-Specialist` | Private |
+| Runr | `Runr` | Public |
+| Dlvrd | `Dlvrd` | Public |
+| Brandr | `Brandr` | Public |
+| CheckDeck | `CheckDeck` | Public |
+| HangMan | `HangMan` | Public |
+| MyVenue | `MyVenue` | Public |
+| MeUs-Them | `MeUs-Them` | Public |
+| GroupDominoScore | `GroupDominoScore` | Public |
 
-1. Repo URLs and `githubPrivate` flags live in [`My-Projects.json`](My-Projects.json).
-2. Export a GitHub token with `repo` scope:
+All catalog apps are **APK-only** (Vercel sites removed). Install via [MBC App Store](/download/).
+
+### Lock source repos, keep APK downloads public
+
+Source code can live in **private** GitHub repos while APKs stay downloadable from this site:
+
+1. **Mirror every APK** into `apks/{slug}/` on the public `main` repo (needs `GITHUB_TOKEN`):
    ```bash
-   export GITHUB_TOKEN=ghp_your_token_here
-   # or: export GITHUB_TOKEN=$(gh auth token)
+   npm run mirror-all-apks
    ```
-3. Run:
+2. **Lock catalog app repos** (sets them private, updates `githubPrivate` in `My-Projects.json`):
+   ```bash
+   npm run lock-catalog-repos
+   ```
+3. **Refresh the catalog** so download links point at mirrored files, not `raw.githubusercontent.com`:
    ```bash
    npm run sync-apk-catalog
-   # or
-   npm run update
    ```
 
+Only `main` stays public — it hosts the newspaper site and mirrored APKs on GitHub Pages. Future syncs need `GITHUB_TOKEN` to pull new builds from private repos and re-mirror them.
+
+To flip private catalog repos back to public:
+
+```bash
+export GITHUB_TOKEN=ghp_your_org_owner_token   # classic PAT, repo scope
+npm run make-repos-public
+```
+
+APK sync discovers builds in `release/`, `android-app/`, etc. and can **mirror** them to `apks/{slug}/` on this site:
+
+```bash
+npm run sync-apk-catalog
+# or
+npm run update
+```
+
 Mirrored APKs are committed under `apks/` (see `.gitignore` exception). Live deployments with `version.json` `apk.ready` still take priority when available.
+
+### Download all APKs as one zip (GitHub Releases)
+
+```bash
+npm run package-apk-release              # latest build per app (~170 MB)
+npm run package-apk-release -- --full    # every mirrored APK incl. archives (~1 GB)
+npm run publish-apk-release              # upload to github.com/.../main/releases
+```
+
+Release tag: `apks-v{version}` from `version.json`. See [`release/README.md`](release/README.md).
 
 ## Brand logo
 

@@ -72,7 +72,7 @@ Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `gith
 | Navigate | `Navigate` | Public |
 | Guardr | `Guardr` | Private |
 | Signature Security Specialist | `Signature-Security-Specialist` | Private |
-| + 20 more catalog apps | see `My-Projects.json` | Public |
+| + 14 more catalog apps | see `My-Projects.json` | Public |
 
 All catalog apps are **APK-only** (Vercel sites removed). Install via [MBC App Store](/download/).
 

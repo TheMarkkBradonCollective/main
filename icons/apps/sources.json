@@ -166,47 +166,5 @@
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#theplan",
     "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
     "file": "icons/apps/theplan.png"
-  },
-  {
-    "slug": "sigsecspec",
-    "name": "SigSecSpec",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/sigsecspec.png"
-  },
-  {
-    "slug": "sigsecspec-companion",
-    "name": "SigSecSpec Companion",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-companion",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/sigsecspec-companion.png"
-  },
-  {
-    "slug": "sigsecspec-fieldops",
-    "name": "SigSecSpec FieldOps",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-fieldops",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/sigsecspec-fieldops.png"
-  },
-  {
-    "slug": "sigsecspec-messenger",
-    "name": "SigSecSpec Messenger",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-messenger",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/sigsecspec-messenger.png"
-  },
-  {
-    "slug": "sss-demo",
-    "name": "SSS Demo",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sss-demo",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/sss-demo.png"
-  },
-  {
-    "slug": "sss-platform",
-    "name": "SSS Platform",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sss-platform",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/sss-platform.png"
   }
 ]

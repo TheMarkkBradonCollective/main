@@ -36,7 +36,12 @@ fi
 
 if gh release view "$TAG" --repo "$REPO" &>/dev/null; then
   gh release upload "$TAG" "$ZIP" --repo "$REPO" --clobber
-  echo "Updated asset on existing release $TAG"
+  for extra in release/MBC-Store-v1.0.0.zip release/Verse-v1.zip download/releases/MBC-Store-v1.0.0.zip download/releases/Verse-v1.zip; do
+    if [[ -f "$extra" ]]; then
+      gh release upload "$TAG" "$extra" --repo "$REPO" --clobber
+    fi
+  done
+  echo "Updated assets on existing release $TAG"
 else
   gh release create "$TAG" \
     --repo "$REPO" \

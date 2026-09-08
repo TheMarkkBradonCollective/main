@@ -457,7 +457,7 @@ async function discoverApp(app) {
     android = await discoverGithubApk(app);
   }
 
-  if (!android) {
+  if (!android && !app.githubPrivate) {
     android = await discoverLocalMirror(app);
   }
 

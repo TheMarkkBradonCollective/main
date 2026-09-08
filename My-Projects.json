@@ -466,8 +466,12 @@
       }
     ],
     "iconSources": [
-      "https://gigos.vercel.app/favicon.ico"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Munchline/main/public/icon-512.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Munchline/main/public/icon.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Munchline/main/public/pwa-512.png"
     ],
+    "github": "https://github.com/TheMarkkBradonCollective/Munchline",
+    "githubPrivate": false,
     "screenshots": [],
     "platforms": [
       "phone",
@@ -477,7 +481,7 @@
     "readDetails": [
       "GigOS is the operating system for live performance — songs, sets, gigs, and notes without the pre-show scramble.",
       "GigOS Bands is the current product: organize the band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime.",
-      "Free to try on the web. Android APK will land in the MBC App Store when a build ships."
+      "Ships as an Android APK from the Munchline repo (package builds are named gigos-v*.apk)."
     ],
     "highlights": [
       "Songs, sets, and gigs",
@@ -1162,36 +1166,6 @@
       "Android APK · MBC App Store"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Runr",
-    "githubPrivate": false,
-    "apkOnly": true,
-    "iconSources": [
-      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
-    ]
-  },
-  {
-    "slug": "munchline",
-    "theme": "default",
-    "name": "Munchline",
-    "tagline": "Food & delivery",
-    "url": "https://themarkkbradoncollective.github.io/main/download/#munchline",
-    "section": "lifestyle",
-    "listing": "Listing #013",
-    "status": "live",
-    "statusLabel": "Active · APK",
-    "heroLine": "Food & delivery",
-    "description": "Munchline — Android APK.",
-    "features": [],
-    "screenshots": [],
-    "platforms": [
-      "phone"
-    ],
-    "readDetails": [
-      "Munchline — Android APK."
-    ],
-    "highlights": [
-      "Android APK · MBC App Store"
-    ],
-    "github": "https://github.com/TheMarkkBradonCollective/Munchline",
     "githubPrivate": false,
     "apkOnly": true,
     "iconSources": [

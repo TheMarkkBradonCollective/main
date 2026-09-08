@@ -28,13 +28,6 @@
     "file": "icons/apps/cookverse.png"
   },
   {
-    "slug": "gigos",
-    "name": "GigOS",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#gigos",
-    "source": "https://gigos.vercel.app/favicon.ico",
-    "file": "icons/apps/gigos.png"
-  },
-  {
     "slug": "friendr",
     "name": "Friendr",
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#friendr",
@@ -96,13 +89,6 @@
     "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#runr",
     "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
     "file": "icons/apps/runr.png"
-  },
-  {
-    "slug": "munchline",
-    "name": "Munchline",
-    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#munchline",
-    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
-    "file": "icons/apps/munchline.png"
   },
   {
     "slug": "dlvrd",

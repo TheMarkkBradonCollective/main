@@ -43,7 +43,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://www.sacramentobuynothing.com/logo.png",
       "https://www.sacramentobuynothing.com/Logo.jpeg",
@@ -866,7 +866,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Guardr",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://www.guardr.co/logo.png"
     ],
@@ -967,7 +967,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png"
     ],

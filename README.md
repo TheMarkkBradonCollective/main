@@ -61,7 +61,7 @@ Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `gith
 
 | App | Repo | Visibility |
 |-----|------|------------|
-| TheSacramentoFree | `TheSacramentoFree` | Public |
+| TheSacramentoFree | `TheSacramentoFree` | Private |
 | StrainVerse | `StrainVerse` | Public |
 | SpiritsVerse | `SpiritsVerse` | Public |
 | CookVerse | `CookVerse` | Public |
@@ -69,8 +69,8 @@ Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `gith
 | Findr | `Findr` | Public |
 | Chatr | `Chatr` | Public |
 | Navigate | `Navigate` | Public |
-| Guardr | `Guardr` | Public |
-| Signature Security Specialist | `Signature-Security-Specialist` | Public |
+| Guardr | `Guardr` | Private |
+| Signature Security Specialist | `Signature-Security-Specialist` | Private |
 
 To flip any still-private catalog repos to public (and sync `githubPrivate` flags):
 

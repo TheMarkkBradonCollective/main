@@ -93,7 +93,26 @@ Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `gith
 
 All catalog apps are **APK-only** (Vercel sites removed). Install via [MBC App Store](/download/).
 
-To flip any still-private catalog repos to public (and sync `githubPrivate` flags):
+### Lock source repos, keep APK downloads public
+
+Source code can live in **private** GitHub repos while APKs stay downloadable from this site:
+
+1. **Mirror every APK** into `apks/{slug}/` on the public `main` repo (needs `GITHUB_TOKEN`):
+   ```bash
+   npm run mirror-all-apks
+   ```
+2. **Lock catalog app repos** (sets them private, updates `githubPrivate` in `My-Projects.json`):
+   ```bash
+   npm run lock-catalog-repos
+   ```
+3. **Refresh the catalog** so download links point at mirrored files, not `raw.githubusercontent.com`:
+   ```bash
+   npm run sync-apk-catalog
+   ```
+
+Only `main` stays public — it hosts the newspaper site and mirrored APKs on GitHub Pages. Future syncs need `GITHUB_TOKEN` to pull new builds from private repos and re-mirror them.
+
+To flip private catalog repos back to public:
 
 ```bash
 export GITHUB_TOKEN=ghp_your_org_owner_token   # classic PAT, repo scope

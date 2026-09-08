@@ -67,6 +67,10 @@ function getGithubToken() {
 }
 
 const githubToken = getGithubToken();
+const forceMirror =
+  process.env.MIRROR_ALL_APKS === '1' ||
+  process.env.MIRROR_ALL_APKS === 'true' ||
+  process.argv.includes('--mirror-all');
 
 function githubHeaders(extra = {}) {
   const headers = {
@@ -296,7 +300,7 @@ async function resolveGithubDownload(app, owner, repo, entry, isPrivate) {
   const fileName = entry.path.split('/').pop();
   const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${entry.branch}/${entry.path}`;
 
-  if (!isPrivate && (await isRealApk(rawUrl))) {
+  if (!forceMirror && !isPrivate && (await isRealApk(rawUrl))) {
     return {
       downloadUrl: rawUrl,
       downloadName: fileName,
@@ -491,9 +495,17 @@ async function discoverApp(app) {
 const apps = JSON.parse(await readFile(catalogPath, 'utf8'));
 console.log(`\nSyncing APK catalog for ${apps.length} apps…`);
 if (githubToken) {
-  console.log('GitHub token found — private repos can be scanned and mirrored.\n');
+  console.log(
+    forceMirror
+      ? 'GitHub token found — mirroring all APKs to apks/ on this site.\n'
+      : 'GitHub token found — private repos can be scanned and mirrored.\n'
+  );
 } else {
   console.log('No GITHUB_TOKEN — only public repos and live deployments.\n');
+  if (forceMirror) {
+    console.error('MIRROR_ALL_APKS requires GITHUB_TOKEN (or gh auth token).');
+    process.exit(1);
+  }
 }
 
 const results = [];

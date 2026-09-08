@@ -2,78 +2,211 @@
   {
     "slug": "buynothing",
     "name": "TheSacramentoFree",
-    "projectUrl": "https://www.sacramentobuynothing.com",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#buynothing",
     "source": "https://www.sacramentobuynothing.com/logo.png",
     "file": "icons/apps/buynothing.png"
   },
   {
     "slug": "strainverse",
     "name": "StrainVerse",
-    "projectUrl": "https://strainverse-tmbc.vercel.app",
-    "source": "https://strainverse-tmbc.vercel.app/pwa-512.png",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#strainverse",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png",
     "file": "icons/apps/strainverse.png"
   },
   {
     "slug": "spiritsverse",
     "name": "SpiritsVerse",
-    "projectUrl": "https://spiritsverse-tmbc.vercel.app",
-    "source": "https://spiritsverse-tmbc.vercel.app/pwa-512.png",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#spiritsverse",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png",
     "file": "icons/apps/spiritsverse.png"
   },
   {
     "slug": "cookverse",
     "name": "Cookverse",
-    "projectUrl": "https://cookverse-tmbc.vercel.app",
-    "source": "https://cookverse-tmbc.vercel.app/logo-mark.png",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#cookverse",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/CookVerse/main/public/logo-mark.png",
     "file": "icons/apps/cookverse.png"
   },
   {
     "slug": "gigos",
     "name": "GigOS",
-    "projectUrl": "https://gigos.vercel.app",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#gigos",
     "source": "https://gigos.vercel.app/favicon.ico",
     "file": "icons/apps/gigos.png"
   },
   {
     "slug": "friendr",
     "name": "Friendr",
-    "projectUrl": "https://friendr-tmbc.vercel.app",
-    "source": "https://friendr-tmbc.vercel.app/icons/icon-512.png",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#friendr",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/Friendr/main/apps/web/public/icons/icon-512.png",
     "file": "icons/apps/friendr.png"
   },
   {
     "slug": "findr",
     "name": "Findr",
-    "projectUrl": "https://findr-tmbc.vercel.app",
-    "source": "https://findr-tmbc.vercel.app/logo.png",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#findr",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/Findr/main/website/public/logo.png",
     "file": "icons/apps/findr.png"
   },
   {
     "slug": "chatr",
     "name": "Chatr",
-    "projectUrl": "https://chatr-tmbc.vercel.app",
-    "source": "https://chatr-tmbc.vercel.app/icon.png",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#chatr",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/Chatr/main/public/icon.png",
     "file": "icons/apps/chatr.png"
   },
   {
     "slug": "navigate",
     "name": "Navigate",
-    "projectUrl": "https://navigate-tmbc.vercel.app",
-    "source": "icons/apps/navigate.png",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#navigate",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/Navigate/main/public/icon-512.png",
     "file": "icons/apps/navigate.png"
   },
   {
     "slug": "guardr",
     "name": "Guardr",
-    "projectUrl": "https://guardr.co",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#guardr",
     "source": "https://www.guardr.co/logo.png",
     "file": "icons/apps/guardr.png"
   },
   {
     "slug": "sss",
     "name": "Signature Security Specialist",
-    "projectUrl": "https://signaturesecurityspecialist.com",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sss",
     "source": "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
     "file": "icons/apps/sss.png"
+  },
+  {
+    "slug": "buffalofree",
+    "name": "TheBuffaloFree",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#buffalofree",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/TheBuffaloFree/main/public/logo.png",
+    "file": "icons/apps/buffalofree.png"
+  },
+  {
+    "slug": "stoner4therecord",
+    "name": "Stoner4TheRecord",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#stoner4therecord",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/stoner4therecord.png"
+  },
+  {
+    "slug": "runr",
+    "name": "Runr",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#runr",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/runr.png"
+  },
+  {
+    "slug": "munchline",
+    "name": "Munchline",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#munchline",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/munchline.png"
+  },
+  {
+    "slug": "dlvrd",
+    "name": "Dlvrd",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#dlvrd",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/dlvrd.png"
+  },
+  {
+    "slug": "brandr",
+    "name": "Brandr",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#brandr",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/brandr.png"
+  },
+  {
+    "slug": "checkdeck",
+    "name": "CheckDeck",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#checkdeck",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/checkdeck.png"
+  },
+  {
+    "slug": "myvenue",
+    "name": "MyVenue",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#myvenue",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/myvenue.png"
+  },
+  {
+    "slug": "meus-them",
+    "name": "MeUs-Them",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#meus-them",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/meus-them.png"
+  },
+  {
+    "slug": "groupdominoscore",
+    "name": "GroupDominoScore",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#groupdominoscore",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/groupdominoscore.png"
+  },
+  {
+    "slug": "css",
+    "name": "Customer Service Specialist",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#css",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/css.png"
+  },
+  {
+    "slug": "layoutlab",
+    "name": "LayoutLab",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#layoutlab",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/layoutlab.png"
+  },
+  {
+    "slug": "theplan",
+    "name": "ThePlan",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#theplan",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/theplan.png"
+  },
+  {
+    "slug": "sigsecspec",
+    "name": "SigSecSpec",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/sigsecspec.png"
+  },
+  {
+    "slug": "sigsecspec-companion",
+    "name": "SigSecSpec Companion",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-companion",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/sigsecspec-companion.png"
+  },
+  {
+    "slug": "sigsecspec-fieldops",
+    "name": "SigSecSpec FieldOps",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-fieldops",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/sigsecspec-fieldops.png"
+  },
+  {
+    "slug": "sigsecspec-messenger",
+    "name": "SigSecSpec Messenger",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-messenger",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/sigsecspec-messenger.png"
+  },
+  {
+    "slug": "sss-demo",
+    "name": "SSS Demo",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sss-demo",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/sss-demo.png"
+  },
+  {
+    "slug": "sss-platform",
+    "name": "SSS Platform",
+    "projectUrl": "https://themarkkbradoncollective.github.io/main/download/#sss-platform",
+    "source": "https://themarkkbradoncollective.github.io/main/icons/logo.png",
+    "file": "icons/apps/sss-platform.png"
   }
 ]

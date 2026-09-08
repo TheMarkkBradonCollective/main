@@ -235,8 +235,10 @@ function rankGithubApk(path) {
 }
 
 function pickBestGithubApk(apks) {
-  if (!apks.length) return null;
-  return [...apks].sort((a, b) => {
+  const real = apks.filter((entry) => !entry.size || entry.size >= 50_000);
+  const pool = real.length ? real : apks;
+  if (!pool.length) return null;
+  return [...pool].sort((a, b) => {
     const versionDiff = compareVersions(
       parseVersionFromFilename(b.path.split('/').pop()),
       parseVersionFromFilename(a.path.split('/').pop())
@@ -326,11 +328,23 @@ async function discoverGithubApk(app) {
   const isPrivate = meta?.private === true || app.githubPrivate === true;
 
   const apks = await fetchGithubApkTree(owner, repo);
-  const best = pickBestGithubApk(apks);
-  if (!best) return null;
+  const ranked = [...apks].sort((a, b) => {
+    const versionDiff = compareVersions(
+      parseVersionFromFilename(b.path.split('/').pop()),
+      parseVersionFromFilename(a.path.split('/').pop())
+    );
+    if (versionDiff !== 0) return versionDiff;
+    return rankGithubApk(b.path) - rankGithubApk(a.path);
+  });
 
-  const primary = await resolveGithubDownload(app, owner, repo, best, isPrivate);
-  if (!primary) return null;
+  let best = null;
+  let primary = null;
+  for (const candidate of ranked.length ? ranked : [pickBestGithubApk(apks)].filter(Boolean)) {
+    best = candidate;
+    primary = await resolveGithubDownload(app, owner, repo, candidate, isPrivate);
+    if (primary) break;
+  }
+  if (!best || !primary) return null;
 
   const fileName = best.path.split('/').pop();
   const version = parseVersionFromFilename(fileName);
@@ -417,16 +431,22 @@ async function discoverLocalMirror(app) {
 }
 
 async function discoverApp(app) {
-  const base = normalizeBase(app.url);
-  const manifest = await fetchVersionManifest(base);
-  let android = manifest ? apkFromManifest(base, manifest) : null;
+  const apkOnly = app.apkOnly === true;
+  const base = app.url && !apkOnly ? normalizeBase(app.url) : null;
+  let manifest = null;
+  let android = null;
 
-  if (android?.downloadUrl && !(await isRealApk(android.downloadUrl))) {
-    android = null;
-  }
+  if (base && !apkOnly) {
+    manifest = await fetchVersionManifest(base);
+    android = manifest ? apkFromManifest(base, manifest) : null;
 
-  if (!android) {
-    android = await probeCandidates(base, app.slug, manifest);
+    if (android?.downloadUrl && !(await isRealApk(android.downloadUrl))) {
+      android = null;
+    }
+
+    if (!android) {
+      android = await probeCandidates(base, app.slug, manifest);
+    }
   }
 
   if (!android && (app.github || app.apkGithub)) {
@@ -454,15 +474,16 @@ async function discoverApp(app) {
     name: app.name,
     tagline: app.tagline,
     section: app.section,
-    webUrl: app.url,
+    webUrl: apkOnly ? null : app.url,
+    apkOnly: apkOnly || undefined,
     icon: `icons/apps/${app.slug}.png`,
     webVersion,
     android: android
       ? { status: 'available', ...android }
       : {
-          status: 'web-only',
+          status: apkOnly ? 'coming-soon' : 'web-only',
           version: webVersion,
-          releaseNotes: 'Coming soon',
+          releaseNotes: apkOnly ? 'APK coming soon' : 'Coming soon',
         },
   };
 }

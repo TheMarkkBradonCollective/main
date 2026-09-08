@@ -307,7 +307,7 @@
       isAvailable && android.releaseNotes
         ? `<p class="store-card-notes">${android.releaseNotes}</p>`
         : !isAvailable
-          ? `<p class="store-card-notes">Android build not published yet — try the web app from The Classifieds.</p>`
+          ? `<p class="store-card-notes">${item.apkOnly ? 'Android build not published yet — check back soon.' : 'Android build not published yet — try the web app from The Classifieds.'}</p>`
           : '';
 
     let actions = '';
@@ -351,7 +351,7 @@
         : '';
 
     return `
-      <article class="store-card" data-slug="${item.slug}" data-install-key="${item.installKey}">
+      <article class="store-card" id="download-${item.slug}" data-slug="${item.slug}" data-install-key="${item.installKey}">
         <div class="store-card-head">
           <img class="store-card-icon" src="${asset(item.icon)}" width="56" height="56" alt="" loading="lazy">
           <div class="store-card-title">

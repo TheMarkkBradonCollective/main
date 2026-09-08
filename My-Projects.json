@@ -4,11 +4,11 @@
     "theme": "buynothing",
     "name": "TheSacramentoFree",
     "tagline": "Give Freely. Ask Kindly.",
-    "url": "https://www.sacramentobuynothing.com",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#buynothing",
     "section": "community",
     "listing": "Listing #001",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "See what neighbors are giving — before you join.",
     "description": "Community-powered free gifting for Sacramento neighbors — plus live Go Get pickup in the Android app. No selling, no bidding, no flipping. 100% free, no ads, ever.",
     "features": [
@@ -45,9 +45,8 @@
     "github": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
     "githubPrivate": true,
     "iconSources": [
-      "https://www.sacramentobuynothing.com/logo.png",
-      "https://www.sacramentobuynothing.com/Logo.jpeg",
-      "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/TheSacramentoFree/main/public/Logo.jpeg",
+      "https://www.sacramentobuynothing.com/logo.png"
     ],
     "screenshots": [
       {
@@ -99,7 +98,8 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "strainverse",
@@ -108,11 +108,11 @@
     "verseTint": "#e8f5ee",
     "name": "StrainVerse",
     "tagline": "Stoner-First Social Network",
-    "url": "https://strainverse-tmbc.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#strainverse",
     "section": "lifestyle",
     "listing": "Listing #002",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Inside the Verse — strains, sessions, and your stash.",
     "description": "Cannabis-centered social platform with strain directory, HerbHub, SocialSesh chats, MatchIt, and community feeds.",
     "features": [
@@ -149,7 +149,7 @@
     "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
     "githubPrivate": false,
     "iconSources": [
-      "https://strainverse-tmbc.vercel.app/pwa-512.png"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/StrainVerse/main/public/pwa-512.png"
     ],
     "screenshots": [
       {
@@ -205,7 +205,8 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "spiritsverse",
@@ -214,11 +215,11 @@
     "verseTint": "#e6fffa",
     "name": "SpiritsVerse",
     "tagline": "Social Network for Drink Lovers",
-    "url": "https://spiritsverse-tmbc.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#spiritsverse",
     "section": "lifestyle",
     "listing": "Listing #003",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Inside the Verse — drinks, crawls, and SipStream.",
     "description": "Cocktails, beer, spirits, wine. Drink Directory, SipStream, Local Pub map, BarSesh groups, digital bar.",
     "features": [
@@ -255,7 +256,7 @@
     "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
     "githubPrivate": false,
     "iconSources": [
-      "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/SpiritsVerse/main/public/pwa-512.png"
     ],
     "screenshots": [
       {
@@ -311,7 +312,8 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "cookverse",
@@ -320,11 +322,11 @@
     "verseTint": "#fff4eb",
     "name": "Cookverse",
     "tagline": "The Social Table",
-    "url": "https://cookverse-tmbc.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#cookverse",
     "section": "lifestyle",
     "listing": "Listing #004",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Inside the Verse — recipes, pantry, and the table.",
     "description": "Social cooking with Chef Gemini AI — pairings, substitutions, techniques, kitchen experiments. Part of the Verse family.",
     "features": [
@@ -361,7 +363,7 @@
     "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
     "githubPrivate": false,
     "iconSources": [
-      "https://cookverse-tmbc.vercel.app/logo-mark.png"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/CookVerse/main/public/logo-mark.png"
     ],
     "screenshots": [
       {
@@ -417,18 +419,19 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "gigos",
     "theme": "gigos",
     "name": "GigOS",
     "tagline": "The operating system for live performance",
-    "url": "https://gigos.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#gigos",
     "section": "lifestyle",
     "listing": "Listing #005",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Less chaos. Better shows.",
     "description": "Organize your band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime. GigOS Bands keeps songs, sets, gigs, and performance notes in one clear system.",
     "features": [
@@ -480,18 +483,19 @@
       "Songs, sets, and gigs",
       "Live Mode for showtime",
       "Less chaos. Better shows."
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "friendr",
     "theme": "friendr",
     "name": "Friendr",
     "tagline": "Consent-First Social Connection",
-    "url": "https://friendr-tmbc.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#friendr",
     "section": "social",
     "listing": "Listing #006",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Three layers. You decide how far things go.",
     "description": "Free, ad-free social app with three opt-in layers: Friends, A Bit More, and Way More. 18+ ID-verified, human moderation, no data sold.",
     "features": [
@@ -523,7 +527,7 @@
     "github": "https://github.com/TheMarkkBradonCollective/Friendr",
     "githubPrivate": false,
     "iconSources": [
-      "https://friendr-tmbc.vercel.app/icons/icon-512.png"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Friendr/main/apps/web/public/icons/icon-512.png"
     ],
     "screenshots": [
       {
@@ -571,18 +575,19 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "findr",
     "theme": "findr",
     "name": "Findr",
     "tagline": "Location sharing for your people",
-    "url": "https://findr-tmbc.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#findr",
     "section": "social",
     "listing": "Listing #008",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Account on the web. Live map with your people.",
     "description": "Share live location with the people you trust — account on the web, map sharing from the Findr app.",
     "features": [
@@ -605,7 +610,7 @@
     "github": "https://github.com/TheMarkkBradonCollective/Findr",
     "githubPrivate": false,
     "iconSources": [
-      "https://findr-tmbc.vercel.app/logo.png"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Findr/main/website/public/logo.png"
     ],
     "screenshots": [
       {
@@ -653,18 +658,19 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "chatr",
     "theme": "chatr",
     "name": "Chatr",
     "tagline": "Secure Private Chat",
-    "url": "https://chatr-tmbc.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#chatr",
     "section": "social",
     "listing": "Listing #007",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Pin encrypted sticky notes to anyone with a code.",
     "description": "Your private bulletin board — pin encrypted sticky notes to anyone with a code. Works offline and syncs when you're back.",
     "features": [
@@ -692,7 +698,7 @@
     "github": "https://github.com/TheMarkkBradonCollective/Chatr",
     "githubPrivate": false,
     "iconSources": [
-      "https://chatr-tmbc.vercel.app/icon.png"
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Chatr/main/public/icon.png"
     ],
     "screenshots": [
       {
@@ -744,18 +750,19 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "navigate",
     "theme": "navigate",
     "name": "Navigate",
     "tagline": "Custom GPS · Android Auto",
-    "url": "https://navigate-tmbc.vercel.app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#navigate",
     "section": "navigation",
     "listing": "Navigation · A",
     "status": "live",
-    "statusLabel": "Active · Free",
+    "statusLabel": "Active · APK",
     "heroLine": "Your map. Your route. Your dashboard.",
     "description": "Custom GPS navigation with OpenStreetMap routing and Android Auto in-car support — built for drivers who want their own stack, not another subscription map app.",
     "features": [
@@ -792,7 +799,7 @@
     "github": "https://github.com/TheMarkkBradonCollective/Navigate",
     "githubPrivate": false,
     "iconSources": [
-      "https://navigate-tmbc.vercel.app/icon-512.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Navigate/main/public/icon-512.png",
       "/icons/apps/navigate.png"
     ],
     "screenshots": [],
@@ -809,14 +816,15 @@
       "Custom GPS stack",
       "Android Auto shell",
       "MBC App Store distribution"
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "guardr",
     "theme": "guardr",
     "name": "Guardr",
     "tagline": "Independent Security Marketplace",
-    "url": "https://guardr.co",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#guardr",
     "section": "security",
     "listing": "Security · A",
     "status": "live",
@@ -868,7 +876,11 @@
     "github": "https://github.com/TheMarkkBradonCollective/Guardr",
     "githubPrivate": true,
     "iconSources": [
-      "https://www.guardr.co/logo.png"
+      "https://www.guardr.co/logo.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Guardr/main/public/icon-512.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Guardr/main/public/icon.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Guardr/main/public/pwa-512.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Guardr/main/favicon.ico"
     ],
     "screenshots": [
       {
@@ -924,14 +936,15 @@
         "device": "desktop",
         "framed": true
       }
-    ]
+    ],
+    "apkOnly": true
   },
   {
     "slug": "sss",
     "theme": "sss",
     "name": "Signature Security Specialist",
     "tagline": "Protect with Purpose · Perform with Excellence",
-    "url": "https://signaturesecurityspecialist.com",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#sss",
     "section": "security",
     "listing": "Security · B",
     "status": "dev",
@@ -969,7 +982,11 @@
     "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
     "githubPrivate": true,
     "iconSources": [
-      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png"
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Signature-Security-Specialist/main/public/icon-512.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Signature-Security-Specialist/main/public/icon.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Signature-Security-Specialist/main/public/pwa-512.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/Signature-Security-Specialist/main/favicon.ico"
     ],
     "screenshots": [
       {
@@ -1025,6 +1042,610 @@
         "device": "desktop",
         "framed": true
       }
+    ],
+    "apkOnly": true
+  },
+  {
+    "slug": "buffalofree",
+    "theme": "buynothing",
+    "name": "TheBuffaloFree",
+    "tagline": "Give Freely. Ask Kindly.",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#buffalofree",
+    "section": "community",
+    "listing": "Listing #009",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Give Freely. Ask Kindly.",
+    "description": "Community-powered free gifting for Buffalo neighbors — Android app.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Community-powered free gifting for Buffalo neighbors — Android app."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/TheBuffaloFree",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/TheBuffaloFree/main/public/logo.png",
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/TheBuffaloFree/main/public/Logo.jpeg"
+    ]
+  },
+  {
+    "slug": "hangman",
+    "theme": "default",
+    "name": "HangMan",
+    "tagline": "HangMan The Game",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#hangman",
+    "section": "lifestyle",
+    "listing": "Listing #010",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "HangMan The Game",
+    "description": "Classic HangMan — Android APK from The Markk Brandon Collective.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Classic HangMan — Android APK from The Markk Brandon Collective."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/HangMan",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/HangMan/main/icon.png"
+    ]
+  },
+  {
+    "slug": "stoner4therecord",
+    "theme": "verse",
+    "verseAccent": "#2d6a4f",
+    "verseTint": "#e8f5ee",
+    "name": "Stoner4TheRecord",
+    "tagline": "Cannabis culture on the record",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#stoner4therecord",
+    "section": "lifestyle",
+    "listing": "Listing #011",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Cannabis culture on the record",
+    "description": "Stoner culture app — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Stoner culture app — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Stoner4TheRecord",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "runr",
+    "theme": "default",
+    "name": "Runr",
+    "tagline": "Delivery platform",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#runr",
+    "section": "lifestyle",
+    "listing": "Listing #012",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Delivery platform",
+    "description": "Runr delivery platform — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Runr delivery platform — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Runr",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "munchline",
+    "theme": "default",
+    "name": "Munchline",
+    "tagline": "Food & delivery",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#munchline",
+    "section": "lifestyle",
+    "listing": "Listing #013",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Food & delivery",
+    "description": "Munchline — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Munchline — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Munchline",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "dlvrd",
+    "theme": "default",
+    "name": "Dlvrd",
+    "tagline": "Delivery companion",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#dlvrd",
+    "section": "lifestyle",
+    "listing": "Listing #014",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Delivery companion",
+    "description": "Dlvrd delivery companion — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Dlvrd delivery companion — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Dlvrd",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "brandr",
+    "theme": "default",
+    "name": "Brandr",
+    "tagline": "Brand tools",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#brandr",
+    "section": "lifestyle",
+    "listing": "Listing #015",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Brand tools",
+    "description": "Brandr — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Brandr — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Brandr",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "checkdeck",
+    "theme": "default",
+    "name": "CheckDeck",
+    "tagline": "Checklists & decks",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#checkdeck",
+    "section": "lifestyle",
+    "listing": "Listing #016",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Checklists & decks",
+    "description": "CheckDeck — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "CheckDeck — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/CheckDeck",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "myvenue",
+    "theme": "default",
+    "name": "MyVenue",
+    "tagline": "Venue management",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#myvenue",
+    "section": "lifestyle",
+    "listing": "Listing #017",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Venue management",
+    "description": "MyVenue — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "MyVenue — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/MyVenue",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "meus-them",
+    "theme": "default",
+    "name": "MeUs-Them",
+    "tagline": "Social connection",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#meus-them",
+    "section": "social",
+    "listing": "Listing #018",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Social connection",
+    "description": "MeUs-Them — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "MeUs-Them — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/MeUs-Them",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "groupdominoscore",
+    "theme": "default",
+    "name": "GroupDominoScore",
+    "tagline": "Domino scoreboard",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#groupdominoscore",
+    "section": "lifestyle",
+    "listing": "Listing #019",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Domino scoreboard",
+    "description": "Group domino score tracking — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Group domino score tracking — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/GroupDominoScore",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "css",
+    "theme": "default",
+    "name": "Customer Service Specialist",
+    "tagline": "CSS training app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#css",
+    "section": "lifestyle",
+    "listing": "Listing #020",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "CSS training app",
+    "description": "Customer Service Specialist — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Customer Service Specialist — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/CSS",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "layoutlab",
+    "theme": "default",
+    "name": "LayoutLab",
+    "tagline": "Layout experiments",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#layoutlab",
+    "section": "lifestyle",
+    "listing": "Listing #021",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Layout experiments",
+    "description": "LayoutLab — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "LayoutLab — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/LayoutLab",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "theplan",
+    "theme": "default",
+    "name": "ThePlan",
+    "tagline": "Planning app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#theplan",
+    "section": "lifestyle",
+    "listing": "Listing #022",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Planning app",
+    "description": "ThePlan — Android APK.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "ThePlan — Android APK."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/ThePlan",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "sigsecspec",
+    "theme": "sss",
+    "name": "SigSecSpec",
+    "tagline": "Operations portal",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec",
+    "section": "security",
+    "listing": "Security · C",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Operations portal",
+    "description": "SigSecSpec operations portal — licenses, insurance, certifications, permits.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "SigSecSpec operations portal — licenses, insurance, certifications, permits."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/SigSecSpec",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "sigsecspec-companion",
+    "theme": "sss",
+    "name": "SigSecSpec Companion",
+    "tagline": "Field companion app",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-companion",
+    "section": "security",
+    "listing": "Security · D",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Field companion app",
+    "description": "SigSecSpec companion Android app.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "SigSecSpec companion Android app."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/SigSecSpec-Companion",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "sigsecspec-fieldops",
+    "theme": "sss",
+    "name": "SigSecSpec FieldOps",
+    "tagline": "Field operations",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-fieldops",
+    "section": "security",
+    "listing": "Security · E",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Field operations",
+    "description": "SigSecSpec field operations Android app.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "SigSecSpec field operations Android app."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/SigSecSpec-FieldOps",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "sigsecspec-messenger",
+    "theme": "sss",
+    "name": "SigSecSpec Messenger",
+    "tagline": "Secure messaging",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#sigsecspec-messenger",
+    "section": "security",
+    "listing": "Security · F",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Secure messaging",
+    "description": "SigSecSpec messenger Android app.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "SigSecSpec messenger Android app."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/SigSecSpec-Messanger",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "sss-demo",
+    "theme": "sss",
+    "name": "SSS Demo",
+    "tagline": "Investor demo",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#sss-demo",
+    "section": "security",
+    "listing": "Security · G",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Investor demo",
+    "description": "Signature Security Specialist investor demo.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "Signature Security Specialist investor demo."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/SignatureSecuritySpecialist-Demo",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
+    ]
+  },
+  {
+    "slug": "sss-platform",
+    "theme": "sss",
+    "name": "SSS Platform",
+    "tagline": "Platform shell",
+    "url": "https://themarkkbradoncollective.github.io/main/download/#sss-platform",
+    "section": "security",
+    "listing": "Security · H",
+    "status": "live",
+    "statusLabel": "Active · APK",
+    "heroLine": "Platform shell",
+    "description": "SSS platform Android app.",
+    "features": [],
+    "screenshots": [],
+    "platforms": [
+      "phone"
+    ],
+    "readDetails": [
+      "SSS platform Android app."
+    ],
+    "highlights": [
+      "Android APK · MBC App Store"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/SSS",
+    "githubPrivate": false,
+    "apkOnly": true,
+    "iconSources": [
+      "https://themarkkbradoncollective.github.io/main/icons/logo.png"
     ]
   }
 ]

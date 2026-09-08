@@ -62,6 +62,7 @@ Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `gith
 | App | Repo | Visibility |
 |-----|------|------------|
 | TheSacramentoFree | `TheSacramentoFree` | Private |
+| TheBuffaloFree | `TheBuffaloFree` | Public |
 | StrainVerse | `StrainVerse` | Public |
 | SpiritsVerse | `SpiritsVerse` | Public |
 | CookVerse | `CookVerse` | Public |
@@ -71,6 +72,9 @@ Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `gith
 | Navigate | `Navigate` | Public |
 | Guardr | `Guardr` | Private |
 | Signature Security Specialist | `Signature-Security-Specialist` | Private |
+| + 20 more catalog apps | see `My-Projects.json` | Public |
+
+All catalog apps are **APK-only** (Vercel sites removed). Install via [MBC App Store](/download/).
 
 To flip any still-private catalog repos to public (and sync `githubPrivate` flags):
 

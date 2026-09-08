@@ -803,6 +803,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Navigate",
     "githubPrivate": true,
+    "localMirrorFallback": true,
     "iconSources": [
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/Navigate/main/public/icon-512.png",
       "/icons/apps/navigate.png"

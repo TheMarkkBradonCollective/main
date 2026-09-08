@@ -187,10 +187,15 @@ if (fullArchive) {
   await rm(staging, { recursive: true, force: true });
   await mkdir(staging, { recursive: true });
   const { entries, manifest } = await stageLatest(catalog, staging);
-  const zipPath = join(releaseDir, `MBC-All-APKs-latest-v${version}.zip`);
+  const zipName = `MBC-All-APKs-latest-v${version}.zip`;
+  const zipPath = join(releaseDir, zipName);
   zipDirectory(staging, zipPath);
+  const pagesZip = join(root, 'download', 'releases', zipName);
+  await mkdir(dirname(pagesZip), { recursive: true });
+  await copyFile(zipPath, pagesZip);
   const zipStat = await stat(zipPath);
-  console.log(`\nWrote ${relative(root, zipPath)} (${formatBytes(zipStat.size)}, ${entries.length} APKs)\n`);
+  console.log(`\nWrote ${relative(root, zipPath)} (${formatBytes(zipStat.size)}, ${entries.length} APKs)`);
+  console.log(`Wrote ${relative(root, pagesZip)}\n`);
 }
 
 await writeFile(

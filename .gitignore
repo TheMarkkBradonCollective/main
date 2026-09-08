@@ -4,5 +4,6 @@ android/*.keystore
 *.apk
 !apks/**/*.apk
 !download/releases/*.zip
+download/releases/MBC-All-APKs-*.zip
 release/*.zip
 release/staging-*/

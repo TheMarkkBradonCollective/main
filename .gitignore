@@ -6,8 +6,9 @@ secrets/
 **/keystore.properties
 *.apk
 !apks/**/*.apk
-aabs/
-!aabs/.gitkeep
+aabs/**/latest.json
+!aabs/**/*.aab
+!aabs/catalog.json
 play-scaffolds/
 download/android/keystore.properties
 Navigate/android/keystore.properties

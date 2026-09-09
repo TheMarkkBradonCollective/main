@@ -1,6 +1,7 @@
 node_modules/
 dist/
-release/
+release/*.zip
+!release/*.aab
 *.keystore
 android/navigate-release.keystore
 .DS_Store

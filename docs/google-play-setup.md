@@ -17,8 +17,11 @@ npm run play:sync-apps
 # 3. Build AABs (local apps first)
 npm run play:build -- mbc-store navigate
 
-# 4. Build ALL apps (needs GITHUB_TOKEN with repo scope for private repos)
-export GITHUB_TOKEN=$(gh auth token)   # or a classic PAT with repo scope
+# 4. Build ALL apps — needs a GitHub Personal Access Token (not the 6-digit 2FA code)
+#    You enter the 6-digit code on github.com when creating the token.
+#    Then paste the token here (starts with ghp_):
+#    https://github.com/settings/tokens  → Generate new token (classic) → scope: repo
+export GITHUB_TOKEN=ghp_your_token_here
 npm run play:build:all
 
 # 5. Generate copy-paste files for each app repo

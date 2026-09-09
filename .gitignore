@@ -1,5 +1,14 @@
 node_modules/
 package-lock.json
 android/*.keystore
+secrets/
+!secrets/.gitkeep
+**/keystore.properties
 *.apk
 !apks/**/*.apk
+aabs/**/latest.json
+!aabs/**/*.aab
+!aabs/catalog.json
+play-scaffolds/
+download/android/keystore.properties
+Navigate/android/keystore.properties

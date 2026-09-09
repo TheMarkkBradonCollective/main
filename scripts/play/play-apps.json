@@ -1,0 +1,171 @@
+{
+  "developerAccount": "themarkkbrandoncollective@gmail.com",
+  "defaultTrack": "internal",
+  "outputDir": "aabs",
+  "apps": [
+    {
+      "slug": "mbc-store",
+      "name": "MBC Store",
+      "packageId": "com.themarkkbradoncollective.store",
+      "github": "https://github.com/TheMarkkBradonCollective/main",
+      "build": {
+        "type": "gradle",
+        "projectDir": "download/android",
+        "capacitor": false
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "navigate",
+      "name": "Navigate",
+      "packageId": "com.themarkkbradoncollective.navigate",
+      "github": "https://github.com/TheMarkkBradonCollective/Navigate",
+      "build": {
+        "type": "capacitor",
+        "projectDir": "Navigate",
+        "androidDir": "Navigate/android"
+      },
+      "signing": {
+        "keystore": "Navigate/android/navigate-release.keystore",
+        "alias": "navigate",
+        "storePasswordEnv": "NAVIGATE_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "NAVIGATE_KEY_PASSWORD",
+        "defaultStorePassword": "mbcnavigate",
+        "defaultKeyPassword": "mbcnavigate"
+      }
+    },
+    {
+      "slug": "buynothing",
+      "name": "TheSacramentoFree",
+      "packageId": "org.sacramentobuynothing.app",
+      "github": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "strainverse",
+      "name": "StrainVerse",
+      "packageId": "com.themarkkbradoncollective.strainverse",
+      "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "spiritsverse",
+      "name": "SpiritsVerse",
+      "packageId": "com.themarkkbradoncollective.spiritsverse",
+      "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "cookverse",
+      "name": "Cookverse",
+      "packageId": "com.themarkkbradoncollective.cookverse",
+      "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "friendr",
+      "name": "Friendr",
+      "packageId": "app.friendr.mobile",
+      "github": "https://github.com/TheMarkkBradonCollective/Friendr",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "findr",
+      "name": "Findr",
+      "packageId": "com.themarkkbradoncollective.findr",
+      "github": "https://github.com/TheMarkkBradonCollective/Findr",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "chatr",
+      "name": "Chatr",
+      "packageId": "com.themarkkbradoncollective.chatr",
+      "github": "https://github.com/TheMarkkBradonCollective/Chatr",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    },
+    {
+      "slug": "sss",
+      "name": "Signature Security Specialist",
+      "packageId": "com.signaturesecurityspecialist.staff",
+      "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
+      "build": {
+        "type": "capacitor",
+        "clone": true
+      },
+      "signing": {
+        "keystore": "secrets/mbc-upload.keystore",
+        "alias": "mbc-upload",
+        "storePasswordEnv": "MBC_UPLOAD_KEYSTORE_PASSWORD",
+        "keyPasswordEnv": "MBC_UPLOAD_KEY_PASSWORD"
+      }
+    }
+  ]
+}

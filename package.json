@@ -16,9 +16,14 @@
     "sync-apk-catalog": "node scripts/sync-apk-catalog.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
     "capture-screenshots": "node scripts/capture-app-screenshots.mjs",
-    "capture-device-screenshots": "node scripts/capture-device-screenshots.mjs"
+    "capture-device-screenshots": "node scripts/capture-device-screenshots.mjs",
+    "play:build": "node scripts/play/build-aab.mjs",
+    "play:build:all": "node scripts/play/build-aab.mjs --all",
+    "play:upload": "node scripts/play/upload-to-play.mjs",
+    "play:upload:all": "node scripts/play/upload-to-play.mjs --all"
   },
   "devDependencies": {
+    "googleapis": "^144.0.0",
     "playwright": "^1.49.0",
     "sharp": "^0.34.3"
   }

@@ -1,5 +1,10 @@
 node_modules/
 package-lock.json
 android/*.keystore
+secrets/
+!secrets/.gitkeep
+**/keystore.properties
 *.apk
 !apks/**/*.apk
+aabs/
+!aabs/.gitkeep

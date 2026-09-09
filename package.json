@@ -17,8 +17,10 @@
     "generate-icons": "node scripts/generate-icons.mjs",
     "capture-screenshots": "node scripts/capture-app-screenshots.mjs",
     "capture-device-screenshots": "node scripts/capture-device-screenshots.mjs",
+    "play:sync-apps": "node scripts/play/sync-play-apps.mjs",
+    "play:scaffold": "node scripts/play/scaffold-repo-aab.mjs",
     "play:build": "node scripts/play/build-aab.mjs",
-    "play:build:all": "node scripts/play/build-aab.mjs --all",
+    "play:build:all": "node scripts/play/build-aab.mjs --sync --all",
     "play:upload": "node scripts/play/upload-to-play.mjs",
     "play:upload:all": "node scripts/play/upload-to-play.mjs --all"
   },

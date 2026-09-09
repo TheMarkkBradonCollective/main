@@ -11,17 +11,27 @@ Upload pipeline for all Collective Android apps. Builds signed **AAB** files and
 export MBC_UPLOAD_KEYSTORE_PASSWORD='your-secure-password'
 export MBC_UPLOAD_KEY_PASSWORD="$MBC_UPLOAD_KEYSTORE_PASSWORD"
 
-# 2. Build AABs (local apps first)
+# 2. Sync app list from apk-catalog.json (auto-discovers all APK apps)
+npm run play:sync-apps
+
+# 3. Build AABs (local apps first)
 npm run play:build -- mbc-store navigate
 
-# 3. Build all apps (needs GITHUB_TOKEN for private repos)
-export GITHUB_TOKEN=$(gh auth token)
+# 4. Build ALL apps (needs GITHUB_TOKEN with repo scope for private repos)
+export GITHUB_TOKEN=$(gh auth token)   # or a classic PAT with repo scope
 npm run play:build:all
 
-# 4. Upload (after service account is linked — see below)
+# 5. Generate copy-paste files for each app repo
+npm run play:scaffold
+
+# 6. Upload (after service account is linked — see below)
 export PLAY_SERVICE_ACCOUNT_JSON=secrets/play-service-account.json
 npm run play:upload -- navigate --track internal
 ```
+
+### Multiple APK versions (e.g. Findr has 8 archives)
+
+Only the **latest** version is built as an AAB for Play Store. Older APK archives stay as sideload downloads in the app catalog — Play only needs the current release.
 
 ## Apps covered
 

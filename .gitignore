@@ -8,3 +8,6 @@ secrets/
 !apks/**/*.apk
 aabs/
 !aabs/.gitkeep
+play-scaffolds/
+download/android/keystore.properties
+Navigate/android/keystore.properties

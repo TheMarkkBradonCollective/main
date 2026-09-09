@@ -40,7 +40,7 @@
     <span>All apps · one view</span>
   </div>
   <h1 class="unstyled page-title">Founder Bridge</h1>
-  <p class="masthead-tagline">Health, versions, APKs, and admin portals across the whole portfolio</p>
+  <p class="masthead-tagline">Search everything at once — apps, pages, certs, APKs, GitHub, live sites</p>
   <div class="masthead-bottom-rule"></div>
 </header>
 
@@ -50,7 +50,7 @@
   <form class="founder-gate-card" id="founder-pin-form">
     <p class="breadcrumb">Private · Founder only</p>
     <h2>Founder Bridge</h2>
-    <p class="prose">One desk for every MBC app — live health, deploy versions, Android builds, GitHub activity, and staff portals. Not linked from the public site.</p>
+    <p class="prose">One desk for every MBC app — unified search across all sites, live health, deploy versions, Android builds, GitHub activity, and staff portals. Not linked from the public site.</p>
     <label for="founder-pin">Founder PIN</label>
     <input id="founder-pin" name="pin" type="password" autocomplete="current-password" required>
     <p class="btn-row"><button type="submit" class="founder-btn founder-btn-primary">Open the bridge</button></p>
@@ -73,9 +73,22 @@
     </div>
   </div>
 
+  <section class="founder-search-panel" aria-label="Unified search">
+    <form class="founder-search-form" id="founder-search-form" role="search">
+      <label class="founder-search-label" for="founder-search-input">Search all apps &amp; sites</label>
+      <div class="founder-search-row">
+        <input id="founder-search-input" class="founder-search-input" type="search" name="q" placeholder="Search apps, features, certs, APKs, pages, GitHub, live sites…" autocomplete="off" spellcheck="false">
+        <button type="button" class="founder-btn" id="founder-search-clear" hidden>Clear</button>
+      </div>
+      <p class="founder-search-hint">Press <kbd>/</kbd> to focus · searches catalog, live homepages, certs, APKs, and GitHub READMEs</p>
+    </form>
+    <div class="founder-type-filters" id="founder-type-filters" hidden></div>
+    <div class="founder-search-results" id="founder-search-results" hidden></div>
+  </section>
+
   <section class="founder-summary" id="founder-summary" aria-label="Portfolio summary"></section>
 
-  <section aria-label="Section filters">
+  <section aria-label="Section filters" id="founder-browse">
     <div class="founder-filters" id="founder-filters"></div>
   </section>
 

@@ -8,6 +8,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { execSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildFounderSearchIndex } from './founder-search-index.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const projectsPath = join(root, 'My-Projects.json');
@@ -429,6 +430,33 @@ for (const dest of outPaths) {
   await writeFile(dest, JSON.stringify(payload, null, 2) + '\n');
 }
 
+let certs = null;
+try {
+  certs = JSON.parse(await readFile(join(root, 'security', 'certs.json'), 'utf8'));
+} catch {
+  /* optional */
+}
+
+console.log('\n→ Building unified search index…');
+const searchIndex = await buildFounderSearchIndex({
+  projects,
+  metricsApps: apps,
+  catalog,
+  certs,
+  githubHeaders: githubToken ? githubHeaders() : null,
+});
+
+const searchPaths = [
+  join(root, 'founder-search-index.json'),
+  join(root, 'public', 'founder-search-index.json'),
+];
+for (const dest of searchPaths) {
+  await writeFile(dest, JSON.stringify(searchIndex, null, 2) + '\n');
+}
+
 console.log(
-  `\nWrote founder-metrics.json — ${summary.healthy}/${summary.total} healthy · ${summary.apkAvailable} APKs · ${summary.withAdmin} admin portals\n`
+  `\nWrote founder-metrics.json — ${summary.healthy}/${summary.total} healthy · ${summary.apkAvailable} APKs · ${summary.withAdmin} admin portals`
+);
+console.log(
+  `Wrote founder-search-index.json — ${searchIndex.documentCount} searchable documents across ${Object.keys(searchIndex.types).length} types\n`
 );

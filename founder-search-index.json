@@ -1,0 +1,3727 @@
+{
+  "generatedAt": "2026-09-09T22:15:35.213Z",
+  "note": "Auto-generated search index for Founder Bridge — re-run npm run sync-founder-bridge.",
+  "documentCount": 200,
+  "types": {
+    "app": 77,
+    "feature": 51,
+    "github": 12,
+    "role": 3,
+    "ops": 21,
+    "apk": 12,
+    "cert": 10,
+    "page": 8,
+    "site": 6
+  },
+  "typeLabels": {
+    "app": "App",
+    "feature": "Feature",
+    "role": "Role",
+    "apk": "APK",
+    "cert": "Certificate",
+    "page": "Site page",
+    "ops": "Ops / health",
+    "github": "GitHub",
+    "release": "Release notes",
+    "site": "Live site",
+    "internal": "Internal"
+  },
+  "documents": [
+    {
+      "id": "app-buynothing",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "TheSacramentoFree",
+      "body": "Give Freely. Ask Kindly. · See what neighbors are giving — before you join. · Community-powered free gifting for Sacramento neighbors — plus live Go Get pickup in the Android app. No selling, no bidding, no flipping. 100% free, no ads, ever. · Active · Free · Listing #001",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-buynothing-neighborhood-feed",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Neighborhood feed — TheSacramentoFree",
+      "body": "Giving, looking, and trade — filter by area, photos, and pickup.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-buynothing-listing-detail",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Listing detail — TheSacramentoFree",
+      "body": "Photos, pickup notes, and message the poster when you’re ready.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-buynothing-your-neighbor-profile",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Your neighbor profile — TheSacramentoFree",
+      "body": "Track what you’ve given and claimed in your sector.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "step-buynothing-browse-the-feed",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Browse the feed — TheSacramentoFree",
+      "body": "See live gifts near you.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "step-buynothing-open-a-listing",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Open a listing — TheSacramentoFree",
+      "body": "Check photos and pickup notes.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "step-buynothing-go-get-it",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Go get it — TheSacramentoFree",
+      "body": "Coordinate with a neighbor — free.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "detail-buynothing-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "TheSacramentoFree — detail 1",
+      "body": "TheSacramentoFree is a neighborhood gifting board — not a marketplace. Neighbors post what they are giving away, what they need, or what they would trade. No money changes hands.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-buynothing-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "TheSacramentoFree — detail 2",
+      "body": "Built for Sacramento because this is home. The website covers give, ask, map, events, and messages. The Android app adds Go Get: live map pickup, both people locked onto the trip until the item changes hands.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-buynothing-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "TheSacramentoFree — detail 3",
+      "body": "No ads, no data selling, no premium tier. If you use it and want it to stay online, the Support page is there.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-buynothing-100%-free-·-no-ads",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "TheSacramentoFree — 100% free · no ads",
+      "body": "100% free · no ads",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-buynothing-sacramento-neighborhoods",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "TheSacramentoFree — Sacramento neighborhoods",
+      "body": "Sacramento neighborhoods",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-buynothing-pwa-on-phone,-tablet,-chromebook",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "TheSacramentoFree — PWA on phone, tablet, Chromebook",
+      "body": "PWA on phone, tablet, Chromebook",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-buynothing",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "TheSacramentoFree — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/TheSacramentoFree. Public repo.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
+      "source": "My-Projects.json",
+      "tags": [
+        "buynothing",
+        "community",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-strainverse",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "StrainVerse",
+      "body": "Stoner-First Social Network · Inside the Verse — strains, sessions, and your stash. · Cannabis-centered social platform with strain directory, HerbHub, SocialSesh chats, MatchIt, and community feeds. · Active · Free · Listing #002",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-strainverse-strain-detail",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Strain detail — StrainVerse",
+      "body": "Genetics, effects, flavors, and live chat on every strain.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-strainverse-herbhub",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "HerbHub — StrainVerse",
+      "body": "Stories and posts from the culture — add yours.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-strainverse-matchit",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "MatchIt — StrainVerse",
+      "body": "Find people near you once you set a city.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-strainverse-socialsesh",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "SocialSesh — StrainVerse",
+      "body": "Private and public smoke sessions.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-strainverse-my-stash",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "My Stash — StrainVerse",
+      "body": "Your profile, posts, and friends in one place.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "detail-strainverse-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "StrainVerse — detail 1",
+      "body": "StrainVerse is a cannabis-first social network — strain directory, community feeds, HerbHub stories, SocialSesh chats, and MatchIt for meeting people near you.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-strainverse-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "StrainVerse — detail 2",
+      "body": "Part of the Verse family alongside SpiritsVerse and Cookverse. Same newspaper energy on the Collective site; full color inside the app. Works on phone, tablet, and desktop Chromebook as a PWA.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-strainverse-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "StrainVerse — detail 3",
+      "body": "Free to use. Real database, real moderation hooks, real features — not a landing-page demo.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-strainverse-strain-directory-+-social-feeds",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "StrainVerse — Strain directory + social feeds",
+      "body": "Strain directory + social feeds",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-strainverse-herbhub-&-socialsesh",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "StrainVerse — HerbHub & SocialSesh",
+      "body": "HerbHub & SocialSesh",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-strainverse-verse-family-app",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "StrainVerse — Verse family app",
+      "body": "Verse family app",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-strainverse",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "StrainVerse — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/StrainVerse. Public repo.",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://github.com/TheMarkkBradonCollective/StrainVerse",
+      "source": "My-Projects.json",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-spiritsverse",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "SpiritsVerse",
+      "body": "Social Network for Drink Lovers · Inside the Verse — drinks, crawls, and SipStream. · Cocktails, beer, spirits, wine. Drink Directory, SipStream, Local Pub map, BarSesh groups, digital bar. · Active · Free · Listing #003",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-spiritsverse-drink-feed",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Drink feed — SpiritsVerse",
+      "body": "Thousands of pours — filter by flavor mood and type.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-spiritsverse-bar-crawl",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Bar Crawl — SpiritsVerse",
+      "body": "Public routes and multi-stop nights you can start.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-spiritsverse-sipstream",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "SipStream — SpiritsVerse",
+      "body": "Live updates from bars and homes.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-spiritsverse-local-map",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Local map — SpiritsVerse",
+      "body": "Bars, pubs, and clubs near you.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-spiritsverse-your-bar-profile",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Your bar profile — SpiritsVerse",
+      "body": "Edit bio, track your pours, own your shelf.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "detail-spiritsverse-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "SpiritsVerse — detail 1",
+      "body": "SpiritsVerse is the drinks side of the Verse — cocktails, beer, wine, spirits. Drink Directory, SipStream live updates, Local Pub map, BarSesh groups, and your digital bar shelf.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-spiritsverse-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "SpiritsVerse — detail 2",
+      "body": "Built the same way as StrainVerse: Supabase backend, PWA install on Android phone, tablet, or Chromebook. One account, three screen sizes.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-spiritsverse-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "SpiritsVerse — detail 3",
+      "body": "For people who care about what is in the glass and who they share a pour with.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-spiritsverse-drink-directory-&-sipstream",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "SpiritsVerse — Drink Directory & SipStream",
+      "body": "Drink Directory & SipStream",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-spiritsverse-bar-crawl-routes",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "SpiritsVerse — Bar Crawl routes",
+      "body": "Bar Crawl routes",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-spiritsverse-local-pub-map",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "SpiritsVerse — Local pub map",
+      "body": "Local pub map",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-spiritsverse",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "SpiritsVerse — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/SpiritsVerse. Private repo.",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
+      "source": "My-Projects.json",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-cookverse",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Cookverse",
+      "body": "The Social Table · Inside the Verse — recipes, pantry, and the table. · Social cooking with Chef Gemini AI — pairings, substitutions, techniques, kitchen experiments. Part of the Verse family. · Active · Free · Listing #004",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-cookverse-the-table",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "The Table — Cookverse",
+      "body": "Home feed — what’s cooking, categories, trending.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-cookverse-create-a-dish",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Create a dish — Cookverse",
+      "body": "New recipe flow with cover photo and kitchen tools.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-cookverse-my-pantry",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "My Pantry — Cookverse",
+      "body": "Stock ingredients from thousands of items.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-cookverse-profile-kitchen",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Profile kitchen — Cookverse",
+      "body": "Followers, dishes, and your saved recipes.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-cookverse-the-forum",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "The Forum — Cookverse",
+      "body": "Kitchen stories from the community.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "detail-cookverse-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Cookverse — detail 1",
+      "body": "Cookverse is the social table — recipes, pantry tracking, Chef Gemini AI for pairings and substitutions, and a community forum for kitchen experiments.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-cookverse-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Cookverse — detail 2",
+      "body": "Third sister in the Verse. Responsive layouts mean the same app on your phone in the kitchen, a tablet on the counter, or a Chromebook for longer writes.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-cookverse-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Cookverse — detail 3",
+      "body": "Free, ad-free, and meant to be used weekly — not once and forgotten.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-cookverse-chef-gemini-ai-assistant",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Cookverse — Chef Gemini AI assistant",
+      "body": "Chef Gemini AI assistant",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-cookverse-pantry-+-recipes",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Cookverse — Pantry + recipes",
+      "body": "Pantry + recipes",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-cookverse-community-forum",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Cookverse — Community forum",
+      "body": "Community forum",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-cookverse",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "Cookverse — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/CookVerse. Private repo.",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://github.com/TheMarkkBradonCollective/CookVerse",
+      "source": "My-Projects.json",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-gigos",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "GigOS",
+      "body": "The operating system for live performance · Less chaos. Better shows. · Organize your band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime. GigOS Bands keeps songs, sets, gigs, and performance notes in one clear system. · Active · Free · Listing #005",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-gigos-bands",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Bands — GigOS",
+      "body": "Keep the roster, songs, and notes in one place.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-gigos-sets-&-gigs",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Sets & gigs — GigOS",
+      "body": "Build reusable sets and plan the next show.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-gigos-live-mode",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Live Mode — GigOS",
+      "body": "Stay aligned from rehearsal through showtime.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "step-gigos-create-an-account",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Create an account — GigOS",
+      "body": "Sign up and start a band space.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "step-gigos-load-songs-and-sets",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Load songs and sets — GigOS",
+      "body": "Reusable set lists instead of scattered notes.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "step-gigos-run-the-gig",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Run the gig — GigOS",
+      "body": "Live Mode keeps the room on the same page.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "detail-gigos-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "GigOS — detail 1",
+      "body": "GigOS is the operating system for live performance — songs, sets, gigs, and notes without the pre-show scramble.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-gigos-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "GigOS — detail 2",
+      "body": "GigOS Bands is the current product: organize the band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-gigos-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "GigOS — detail 3",
+      "body": "Free to try on the web. Android APK will land in the MBC App Store when a build ships.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-gigos-songs,-sets,-and-gigs",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "GigOS — Songs, sets, and gigs",
+      "body": "Songs, sets, and gigs",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-gigos-live-mode-for-showtime",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "GigOS — Live Mode for showtime",
+      "body": "Live Mode for showtime",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-gigos-less-chaos.-better-shows.",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "GigOS — Less chaos. Better shows.",
+      "body": "Less chaos. Better shows.",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "app-friendr",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Friendr",
+      "body": "Consent-First Social Connection · Three layers. You decide how far things go. · Free, ad-free social app with three opt-in layers: Friends, A Bit More, and Way More. 18+ ID-verified, human moderation, no data sold. · Active · Free · Listing #006",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-friendr-consent-first-home",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Consent-first home — Friendr",
+      "body": "Friends · A Bit More · Way More — opt in on purpose.",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-friendr-18+-id-verification",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "18+ ID verification — Friendr",
+      "body": "Real checks before the deeper layers unlock.",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "detail-friendr-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Friendr — detail 1",
+      "body": "Friendr is consent-first social connection. Three opt-in layers: Friends, A Bit More, and Way More. You choose how far things go — the app never opts you in.",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-friendr-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Friendr — detail 2",
+      "body": "18+ ID verification before deeper layers unlock. Human moderation, no ads, no data sold. Android PWA plus tablet and Chromebook layouts.",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-friendr-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Friendr — detail 3",
+      "body": "Built as a direct answer to paywalled, ad-driven social apps that treat people as inventory.",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-friendr-three-consent-layers",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Friendr — Three consent layers",
+      "body": "Three consent layers",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-friendr-18+-id-verified",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Friendr — 18+ ID verified",
+      "body": "18+ ID verified",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-friendr-no-ads-·-no-data-sold",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Friendr — No ads · no data sold",
+      "body": "No ads · no data sold",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-friendr",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "Friendr — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/Friendr. Private repo.",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://github.com/TheMarkkBradonCollective/Friendr",
+      "source": "My-Projects.json",
+      "tags": [
+        "friendr",
+        "social",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-findr",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Findr",
+      "body": "Location sharing for your people · Account on the web. Live map with your people. · Share live location with the people you trust — account on the web, map sharing from the Findr app. · Active · Free · Listing #008",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-findr-account-home",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Account home — Findr",
+      "body": "Profile, devices, privacy, and open the live app.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-findr-account-&-security",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Account & security — Findr",
+      "body": "Handle, bio, password, and Findr+ controls.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-findr-get-started",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Get started — Findr",
+      "body": "Sign up, then install for map sharing.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "detail-findr-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Findr — detail 1",
+      "body": "Findr is live location sharing for people you trust. Account and privacy controls on the web; map sharing from the mobile app.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-findr-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Findr — detail 2",
+      "body": "Works across phone, tablet, and Chromebook for account management. The map experience is tuned for mobile; settings and billing are comfortable on a laptop too.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-findr-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Findr — detail 3",
+      "body": "Free core — Findr+ adds extras without locking basics behind a wall.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-findr-trust-circle-location-sharing",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Findr — Trust-circle location sharing",
+      "body": "Trust-circle location sharing",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-findr-web-account-+-mobile-map",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Findr — Web account + mobile map",
+      "body": "Web account + mobile map",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-findr-privacy-controls-built-in",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Findr — Privacy controls built in",
+      "body": "Privacy controls built in",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-findr",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "Findr — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/Findr. Private repo.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://github.com/TheMarkkBradonCollective/Findr",
+      "source": "My-Projects.json",
+      "tags": [
+        "findr",
+        "social",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-chatr",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Chatr",
+      "body": "Secure Private Chat · Pin encrypted sticky notes to anyone with a code. · Your private bulletin board — pin encrypted sticky notes to anyone with a code. Works offline and syncs when you're back. · Active · Free · Listing #007",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-chatr-pin-to-the-board",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Pin to the board — Chatr",
+      "body": "Pick a name — get your code on the corkboard.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-chatr-share-your-code",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Share your code — Chatr",
+      "body": "Invite link + connect by typing their code.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-chatr-chats-/-notes",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Chats / notes — Chatr",
+      "body": "Encrypted notes land on your board.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-chatr-account-&-expiry",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Account & expiry — Chatr",
+      "body": "Control how long notes live.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "detail-chatr-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Chatr — detail 1",
+      "body": "Chatr is a private bulletin board. Pin encrypted sticky notes to anyone with a code. Works offline and syncs when you are back.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-chatr-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Chatr — detail 2",
+      "body": "No phone number required. No public feed. Connect by code, write a note, it lands on their board. PWA on Android, tablet, and Chromebook.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-chatr-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Chatr — detail 3",
+      "body": "For conversations that should not live in a group chat forever.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-chatr-encrypted-sticky-notes",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Chatr — Encrypted sticky notes",
+      "body": "Encrypted sticky notes",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-chatr-connect-by-code",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Chatr — Connect by code",
+      "body": "Connect by code",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-chatr-offline-capable-pwa",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Chatr — Offline-capable PWA",
+      "body": "Offline-capable PWA",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-chatr",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "Chatr — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/Chatr. Private repo.",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://github.com/TheMarkkBradonCollective/Chatr",
+      "source": "My-Projects.json",
+      "tags": [
+        "chatr",
+        "social",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-navigate",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Navigate",
+      "body": "Custom GPS · Android Auto · Your map. Your route. Your dashboard. · Custom GPS navigation with OpenStreetMap routing and Android Auto in-car support — built for drivers who want their own stack, not another subscription map app. · Active · Free · Navigation · A",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "app",
+        "phone",
+        "tablet"
+      ]
+    },
+    {
+      "id": "feature-navigate-live-gps-map",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Live GPS map — Navigate",
+      "body": "OpenStreetMap tiles with your position updating in real time.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-navigate-route-planning",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Route planning — Navigate",
+      "body": "Search a destination and get turn-by-turn steps via OSRM.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-navigate-android-auto",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Android Auto — Navigate",
+      "body": "Shows on your car dashboard when Android Auto is connected.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "step-navigate-open-navigate",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Open Navigate — Navigate",
+      "body": "Grant GPS when prompted.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "step-navigate-search-destination",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Search destination — Navigate",
+      "body": "Type an address or place name.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "step-navigate-start-navigation",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Start navigation — Navigate",
+      "body": "Follow the route on your phone or car display.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "how-to",
+        "step"
+      ]
+    },
+    {
+      "id": "detail-navigate-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Navigate — detail 1",
+      "body": "Navigate is MBC's custom GPS app — OpenStreetMap on the phone, OSRM routing, no Google Maps API key required for the base experience.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-navigate-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Navigate — detail 2",
+      "body": "Android Auto registers Navigate as a navigation app on your car dashboard. Apple CarPlay would be a separate native build later.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-navigate-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Navigate — detail 3",
+      "body": "Install from The MBC App Store. Updates ship through the same catalog as every other Collective app.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-navigate-custom-gps-stack",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Navigate — Custom GPS stack",
+      "body": "Custom GPS stack",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-navigate-android-auto-shell",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Navigate — Android Auto shell",
+      "body": "Android Auto shell",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-navigate-mbc-app-store-distribution",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Navigate — MBC App Store distribution",
+      "body": "MBC App Store distribution",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-navigate",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "Navigate — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/Navigate. Private repo.",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://github.com/TheMarkkBradonCollective/Navigate",
+      "source": "My-Projects.json",
+      "tags": [
+        "navigate",
+        "navigation",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-guardr",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Guardr",
+      "body": "Independent Security Marketplace · Post coverage. Hire licensed guards. Or find the work. · Connect with protection services on demand — discovering and engaging security professionals, anytime, anywhere. · Active · Security · A",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-guardr-marketplace-home",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Marketplace home — Guardr",
+      "body": "Post a job or find work — map-first, licensed only.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-guardr-guard-sign-in",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Guard sign-in — Guardr",
+      "body": "Jobs and earnings for independent guards.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-guardr-create-guard-account",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Create guard account — Guardr",
+      "body": "Independent onboarding for licensed pros.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-guardr-create-client-account",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Create client account — Guardr",
+      "body": "Post coverage requests as a client.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "feature"
+      ]
+    },
+    {
+      "id": "role-guardr-guard",
+      "type": "role",
+      "typeLabel": "Role",
+      "title": "Guard — Guardr",
+      "body": "Browse open shifts, clock in, track earnings, and manage your guard profile — independent licensed pros only.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "role",
+        "guard"
+      ]
+    },
+    {
+      "id": "role-guardr-client",
+      "type": "role",
+      "typeLabel": "Role",
+      "title": "Client — Guardr",
+      "body": "Post coverage requests, schedule shifts, review guard profiles, and hire licensed protection on demand.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "role",
+        "client"
+      ]
+    },
+    {
+      "id": "role-guardr-staff",
+      "type": "role",
+      "typeLabel": "Role",
+      "title": "Staff — Guardr",
+      "body": "Operations dashboard — verify licenses, dispatch coverage, monitor active posts, and support guards and clients.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "role",
+        "staff"
+      ]
+    },
+    {
+      "id": "detail-guardr-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Guardr — detail 1",
+      "body": "Guardr is an independent security marketplace. Clients post coverage needs. Licensed guards browse jobs, clock shifts, and get paid direct. Staff ops handle verification and dispatch.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-guardr-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Guardr — detail 2",
+      "body": "Three distinct experiences — Guard, Client, and Staff — each with flows tuned to that role. Map-first job discovery, license checks, and shift tracking.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-guardr-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Guardr — detail 3",
+      "body": "Available on Android phone, tablet, and Chromebook/desktop web. Same platform, role-based views.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-guardr-guard-·-client-·-staff-roles",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Guardr — Guard · Client · Staff roles",
+      "body": "Guard · Client · Staff roles",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-guardr-licensed-guards-only",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Guardr — Licensed guards only",
+      "body": "Licensed guards only",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-guardr-map-first-job-board",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Guardr — Map-first job board",
+      "body": "Map-first job board",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-guardr",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "Guardr — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/Guardr. Private repo.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://github.com/TheMarkkBradonCollective/Guardr",
+      "source": "My-Projects.json",
+      "tags": [
+        "guardr",
+        "security",
+        "live",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "app-sss",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Signature Security Specialist",
+      "body": "Protect with Purpose · Perform with Excellence · Ops, training, and the company behind the badge. · Executive security company connecting guards, event staff, and medical responders with clients. Mobile-first ops, mission scheduling, training LMS, companion apps. · In Development · Security · B",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "app",
+        "phone",
+        "tablet",
+        "chromebook"
+      ]
+    },
+    {
+      "id": "feature-sss-company-home",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Company home — Signature Security Specialist",
+      "body": "Sacramento · San Francisco — persons, places, things.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-sss-training-paths",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Training paths — Signature Security Specialist",
+      "body": "Unarmed, armed, event security — get training.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-sss-certifications",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Certifications — Signature Security Specialist",
+      "body": "Rank levels and training tracks.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-sss-trusted-voices",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "Trusted voices — Signature Security Specialist",
+      "body": "What clients and pros say.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "feature"
+      ]
+    },
+    {
+      "id": "feature-sss-the-platform-story",
+      "type": "feature",
+      "typeLabel": "Feature",
+      "title": "The platform story — Signature Security Specialist",
+      "body": "Why Signature exists.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "feature"
+      ]
+    },
+    {
+      "id": "detail-sss-0",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Signature Security Specialist — detail 1",
+      "body": "Signature Security Specialist is the company angle — executive protection, event security, training LMS, and ops tooling for guards and medical responders.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-sss-1",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Signature Security Specialist — detail 2",
+      "body": "Mobile-first missions, scheduling, certifications, and the public company site. In active development with live training and company pages shipping incrementally.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "description"
+      ]
+    },
+    {
+      "id": "detail-sss-2",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Signature Security Specialist — detail 3",
+      "body": "Phone for field work, tablet for briefings, Chromebook for admin — all part of the same stack.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "description"
+      ]
+    },
+    {
+      "id": "highlight-sss-training-&-certifications",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Signature Security Specialist — Training & certifications",
+      "body": "Training & certifications",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-sss-event-&-executive-security",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Signature Security Specialist — Event & executive security",
+      "body": "Event & executive security",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "highlight"
+      ]
+    },
+    {
+      "id": "highlight-sss-company-ops-platform",
+      "type": "app",
+      "typeLabel": "App",
+      "title": "Signature Security Specialist — Company ops platform",
+      "body": "Company ops platform",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "highlight"
+      ]
+    },
+    {
+      "id": "github-sss",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "Signature Security Specialist — GitHub",
+      "body": "Repository https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist. Private repo.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
+      "source": "My-Projects.json",
+      "tags": [
+        "sss",
+        "security",
+        "dev",
+        "github",
+        "code"
+      ]
+    },
+    {
+      "id": "ops-buynothing",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "TheSacramentoFree — ops snapshot",
+      "body": "Health: healthy · Web version: 0.2.0 · APK: available v0.2.0 · Package: org.sacramentobuynothing.app · Last deploy: 2026-08-30T00:48:42.211Z · GitHub push: — · Open issues: —",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "founder-metrics",
+      "tags": [
+        "buynothing",
+        "community",
+        "ops",
+        "health",
+        "healthy",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-strainverse",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "StrainVerse — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.1.0 · Package: com.themarkkbradoncollective.strainverse · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "strainverse",
+        "lifestyle",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-spiritsverse",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "SpiritsVerse — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.5.3 · Package: com.themarkkbradoncollective.spiritsverse · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "spiritsverse",
+        "lifestyle",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-cookverse",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Cookverse — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.0.12 · Package: com.themarkkbradoncollective.cookverse · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "cookverse",
+        "lifestyle",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-gigos",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "GigOS — ops snapshot",
+      "body": "Health: partial · Web version: — · APK: web-only  · Package: — · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "gigos",
+        "lifestyle",
+        "ops",
+        "health",
+        "partial",
+        "web-only"
+      ]
+    },
+    {
+      "id": "ops-friendr",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Friendr — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.1.0 · Package: app.friendr.mobile · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "friendr",
+        "social",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-findr",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Findr — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.4.6 · Package: — · Last deploy: — · GitHub push: — · Open issues: — · Admin: Findr Staff Portal https://findr-tmbc.vercel.app/staff",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app/staff",
+      "source": "founder-metrics",
+      "tags": [
+        "findr",
+        "social",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "admin-findr",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Findr Staff Portal — Findr",
+      "body": "Staff / admin portal for Findr.",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app/staff",
+      "source": "founder-metrics",
+      "tags": [
+        "findr",
+        "admin",
+        "staff",
+        "portal"
+      ]
+    },
+    {
+      "id": "ops-chatr",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Chatr — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.0.0 · Package: com.themarkkbradoncollective.chatr · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "chatr",
+        "social",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-navigate",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Navigate — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.0.0 · Package: com.themarkkbradoncollective.navigate · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "navigate",
+        "navigation",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-guardr",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Guardr — ops snapshot",
+      "body": "Health: healthy · Web version: — · APK: web-only  · Package: — · Last deploy: 2026-08-19T07:19:11.514Z · GitHub push: — · Open issues: — · Admin: Guardr Staff https://www.guardr.co/staff",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://www.guardr.co/staff",
+      "source": "founder-metrics",
+      "tags": [
+        "guardr",
+        "security",
+        "ops",
+        "health",
+        "healthy",
+        "web-only"
+      ]
+    },
+    {
+      "id": "admin-guardr",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Guardr Staff — Guardr",
+      "body": "Staff / admin portal for Guardr.",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://www.guardr.co/staff",
+      "source": "founder-metrics",
+      "tags": [
+        "guardr",
+        "admin",
+        "staff",
+        "portal"
+      ]
+    },
+    {
+      "id": "ops-sss",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Signature Security Specialist — ops snapshot",
+      "body": "Health: healthy · Web version: 1.0.0 · APK: available v1.0.0 · Package: com.signaturesecurityspecialist.staff · Last deploy: 2026-08-01T11:41:42.067Z · GitHub push: — · Open issues: — · Admin: SSS Staff https://signaturesecurityspecialist.com/staff",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com/staff",
+      "source": "founder-metrics",
+      "tags": [
+        "sss",
+        "security",
+        "ops",
+        "health",
+        "healthy",
+        "available"
+      ]
+    },
+    {
+      "id": "admin-sss",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "SSS Staff — Signature Security Specialist",
+      "body": "Staff / admin portal for Signature Security Specialist.",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com/staff",
+      "source": "founder-metrics",
+      "tags": [
+        "sss",
+        "admin",
+        "staff",
+        "portal"
+      ]
+    },
+    {
+      "id": "ops-mbc-site",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "MBC Main Site — ops snapshot",
+      "body": "Health: healthy · Web version: 1.5.13 · APK: available v1.5.13 · Package: — · Last deploy: 2026-09-04T07:11:41.305Z · GitHub push: 2026-09-09T21:34:55Z · Open issues: 6 · Admin: Founder Bridge https://themarkkbradoncollective.github.io/main/founder/",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/main/founder/",
+      "source": "founder-metrics",
+      "tags": [
+        "mbc-site",
+        "internal",
+        "ops",
+        "health",
+        "healthy",
+        "available"
+      ]
+    },
+    {
+      "id": "admin-mbc-site",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Founder Bridge — MBC Main Site",
+      "body": "Staff / admin portal for MBC Main Site.",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/main/founder/",
+      "source": "founder-metrics",
+      "tags": [
+        "mbc-site",
+        "admin",
+        "staff",
+        "portal"
+      ]
+    },
+    {
+      "id": "ops-mbc-store",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "MBC App Store — ops snapshot",
+      "body": "Health: partial · Web version: — · APK: available v1.0.0 · Package: com.themarkkbradoncollective.store · Last deploy: — · GitHub push: 2026-09-09T21:34:55Z · Open issues: 6",
+      "app": "mbc-store",
+      "appName": "MBC App Store",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/main/download/",
+      "source": "founder-metrics",
+      "tags": [
+        "mbc-store",
+        "internal",
+        "ops",
+        "health",
+        "partial",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-navigate",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Navigate — ops snapshot",
+      "body": "Health: down · Web version: — · APK: available v1.0.0 · Package: com.themarkkbradoncollective.navigate · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "founder-metrics",
+      "tags": [
+        "navigate",
+        "navigation",
+        "ops",
+        "health",
+        "down",
+        "available"
+      ]
+    },
+    {
+      "id": "ops-my-happy-plate",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "My Happy Plate — ops snapshot",
+      "body": "Health: down · Web version: — · APK: web-only  · Package: — · Last deploy: — · GitHub push: — · Open issues: — · Admin: Kitchen Board https://themarkkbradoncollective.github.io/my-happy-plate/kitchen/",
+      "app": "my-happy-plate",
+      "appName": "My Happy Plate",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/my-happy-plate/kitchen/",
+      "source": "founder-metrics",
+      "tags": [
+        "my-happy-plate",
+        "internal",
+        "ops",
+        "health",
+        "down",
+        "web-only"
+      ]
+    },
+    {
+      "id": "admin-my-happy-plate",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "Kitchen Board — My Happy Plate",
+      "body": "Staff / admin portal for My Happy Plate.",
+      "app": "my-happy-plate",
+      "appName": "My Happy Plate",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/my-happy-plate/kitchen/",
+      "source": "founder-metrics",
+      "tags": [
+        "my-happy-plate",
+        "admin",
+        "staff",
+        "portal"
+      ]
+    },
+    {
+      "id": "ops-the-rink-studios",
+      "type": "ops",
+      "typeLabel": "Ops / health",
+      "title": "The Rink Studios — ops snapshot",
+      "body": "Health: down · Web version: — · APK: web-only  · Package: — · Last deploy: — · GitHub push: — · Open issues: —",
+      "app": "the-rink-studios",
+      "appName": "The Rink Studios",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/the-rink-studios/",
+      "source": "founder-metrics",
+      "tags": [
+        "the-rink-studios",
+        "internal",
+        "ops",
+        "health",
+        "down",
+        "web-only"
+      ]
+    },
+    {
+      "id": "apk-mbc-store",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "MBC Store v1.0.0",
+      "body": "MBC Store — install and update every Markk Brandon Collective Android app from one catalog. · com.themarkkbradoncollective.store · MBC-Store-v1.0.0.apk",
+      "app": "mbc-store",
+      "appName": "MBC Store",
+      "section": "internal",
+      "url": "../download/",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "store",
+        "com.themarkkbradoncollective.store"
+      ]
+    },
+    {
+      "id": "apk-buynothing",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "TheSacramentoFree Android v0.2.0",
+      "body": "TheSacramentoFree v0.2.0 Android APK — Capacitor build with native FCM push for the MBC App Market. · org.sacramentobuynothing.app · buynothing-v0.2.0.apk · Status: available · Source: live · SHA256: 90dbcd937db7ac4ff083ea8c1e0c21d40fba80bb6c2bf78b62af431d12f4958d",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "buynothing",
+        "org.sacramentobuynothing.app",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-strainverse",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "StrainVerse Android v1.1.0",
+      "body": "StrainVerse v1.1.0 Android APK — full Capacitor build with embedded web shell. MatchIt multi-intent, mutual flame chat, look editor, and map. · com.themarkkbradoncollective.strainverse · StrainVerse-v1.1.0.apk · Status: available · Source: live · SHA256: 5db4eab8deca79b5e1c762897db53d7ab400068c0c190d79e7c9b9604c6af6c1",
+      "app": "strainverse",
+      "appName": "StrainVerse",
+      "section": "lifestyle",
+      "url": "https://strainverse-tmbc.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "strainverse",
+        "com.themarkkbradoncollective.strainverse",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-spiritsverse",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "SpiritsVerse Android v1.5.3",
+      "body": "SpiritsVerse v1.5.3 — Android TWA install for the MBC App Market. · com.themarkkbradoncollective.spiritsverse · spiritsverse-v1.5.3.apk · Status: available · Source: live · SHA256: 126edd659bdfdeb5023b2d4477679f5cc56d71133a99c140c24554c6b2f6a3d6",
+      "app": "spiritsverse",
+      "appName": "SpiritsVerse",
+      "section": "lifestyle",
+      "url": "https://spiritsverse-tmbc.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "spiritsverse",
+        "com.themarkkbradoncollective.spiritsverse",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-cookverse",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "Cookverse Android v1.0.12",
+      "body": "CookVerse v1.0.12 Android APK — Trusted Web Activity for recipes, pantry, and community cooking. · com.themarkkbradoncollective.cookverse · CookVerse-v1.0.12.apk · Status: available · Source: live · SHA256: 8b4d0a679660ec47c995c51fa5e50bbfafb4ab0ff474a3c46ac2d4304607d33f",
+      "app": "cookverse",
+      "appName": "Cookverse",
+      "section": "lifestyle",
+      "url": "https://cookverse-tmbc.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "cookverse",
+        "com.themarkkbradoncollective.cookverse",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-gigos",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "GigOS Android ",
+      "body": "Coming soon · Status: web-only · Source: unknown",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "gigos",
+        "web-only"
+      ]
+    },
+    {
+      "id": "apk-friendr",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "Friendr Android v1.1.0",
+      "body": "Friendr v1.1.0 Android APK — full-screen A Bit More map, auto-refresh, PWA install, versioned loading screen. · app.friendr.mobile · friendr-v1.1.0.apk · Status: available · Source: live · SHA256: bd622bff47b77047380d24418218de6428efe47f56723ca4487d79d8d0a4c1dc",
+      "app": "friendr",
+      "appName": "Friendr",
+      "section": "social",
+      "url": "https://friendr-tmbc.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "friendr",
+        "app.friendr.mobile",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-findr",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "Findr Android v1.4.6",
+      "body": "Findr v1.4.6 Android APK — map chrome aligned with PWA, fixed search and dock positioning. · Findr-v1.4.6.apk · Status: available · Source: live · SHA256: bddc6d44ffc1367d11da4b781bf83ca2ee933186f3bf7325fe7681d6c0c13bb6",
+      "app": "findr",
+      "appName": "Findr",
+      "section": "social",
+      "url": "https://findr-tmbc.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "findr",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-chatr",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "Chatr Android v1.0.0",
+      "body": "Noter v1.0.0 Android APK — first release. Secure sticky-note chat with invite links, live sessions, and end-to-end encryption. · com.themarkkbradoncollective.chatr · Noter-v1.0.0.apk · Status: available · Source: live · SHA256: 29ebc96e745b3363dd09e49303acfce12d1638681857383e2d31978dd9d1cf91",
+      "app": "chatr",
+      "appName": "Chatr",
+      "section": "social",
+      "url": "https://chatr-tmbc.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "chatr",
+        "com.themarkkbradoncollective.chatr",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-navigate",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "Navigate Android v1.0.0",
+      "body": "Navigate v1.0.0 — custom GPS with OpenStreetMap routing and Android Auto. · com.themarkkbradoncollective.navigate · navigate-v1.0.0.apk · Status: available · Source: mirror · SHA256: dd0a45a63ab80a3aacf0143b609bbfb668049fd2ef9b3dc3a0c4004deeca5c0a",
+      "app": "navigate",
+      "appName": "Navigate",
+      "section": "navigation",
+      "url": "https://navigate-tmbc.vercel.app",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "navigate",
+        "com.themarkkbradoncollective.navigate",
+        "available"
+      ]
+    },
+    {
+      "id": "apk-guardr",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "Guardr Android ",
+      "body": "Coming soon · Status: web-only · Source: unknown",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "guardr",
+        "web-only"
+      ]
+    },
+    {
+      "id": "apk-sss",
+      "type": "apk",
+      "typeLabel": "APK",
+      "title": "Signature Security Specialist Android v1.0.0",
+      "body": "SSS Staff v1.0.0 — main Signature Security Specialist Android app. · com.signaturesecurityspecialist.staff · SSS-Staff-v1.0.0.apk · Status: available · Source: live · SHA256: df1eb849d36c7ef4639f4d3a52c6e5e81c21f46ee00eda17fbd6a6825d278ea5",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "apk-catalog.json",
+      "tags": [
+        "apk",
+        "android",
+        "sss",
+        "com.signaturesecurityspecialist.staff",
+        "available"
+      ]
+    },
+    {
+      "id": "cert-annual-refresher-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "8-Hour BSIS Annual Refresher",
+      "body": "CE 2025 · GCC-2025 · 569317 · TwoProtect Training Institute · TFF1266 · 2025-12-15 · 8 hours · PTA — 1hr · AUOF — 2hrs · Communication and its Significance — 1hr · Public Relations — 1hr · Observation & Documentation — 1hr · Liability / Legal Aspects — 1hr · Arrests, Search & Seizure — 1hr",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "GCC-2025"
+      ]
+    },
+    {
+      "id": "cert-public-relations-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Public Relations",
+      "body": "CE 2025 · SC-103 · 569140 · TwoProtect Training Institute · TFF1266 · 2025-12-14 · 4 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-103"
+      ]
+    },
+    {
+      "id": "cert-observation-documentation-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Observation and Documentation",
+      "body": "CE 2025 · SC-104 · 569132 · TwoProtect Training Institute · TFF1266 · 2025-12-13 · 4 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-104"
+      ]
+    },
+    {
+      "id": "cert-liability-legal-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Liability — Legal Aspects",
+      "body": "CE 2025 · SC-105 · 569051 · TwoProtect Training Institute · TFF1266 · 2025-12-12 · 4 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-105"
+      ]
+    },
+    {
+      "id": "cert-officer-safety-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Officer Safety",
+      "body": "CE 2025 · SC-107 · 569029 · TwoProtect Training Institute · TFF1266 · 2025-12-12 · 4 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-107"
+      ]
+    },
+    {
+      "id": "cert-arrests-search-seizure-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Arrests, Search and Seizure",
+      "body": "CE 2025 · SC-109 · 568856 · TwoProtect Training Institute · TFF1266 · 2025-12-11 · 4 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-109"
+      ]
+    },
+    {
+      "id": "cert-trespass-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Trespass",
+      "body": "CE 2025 · SC-106 · 568861 · TwoProtect Training Institute · TFF1266 · 2025-12-11 · 4 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-106"
+      ]
+    },
+    {
+      "id": "cert-chemical-agents-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Chemical Agents",
+      "body": "CE 2025 · SC-116 · 568604 · TwoProtect Training Institute · TFF1266 · 2025-12-08 · 2 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-116"
+      ]
+    },
+    {
+      "id": "cert-parking-traffic-2025",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Parking and Traffic Control",
+      "body": "CE 2025 · SC-122 · 568489 · TwoProtect Training Institute · TFF1266 · 2025-12-07 · 2 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "CE 2025",
+        "SC-122"
+      ]
+    },
+    {
+      "id": "cert-pta-wmd-2018",
+      "type": "cert",
+      "typeLabel": "Certificate",
+      "title": "Power to Arrest & Weapons of Mass Destruction",
+      "body": "Original · 2018 · SC-101 · 144928 · TwoProtect Training Institute · TFF1266 · 2018-06-07 · 8 hours",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "../security/",
+      "source": "security/certs.json",
+      "tags": [
+        "cert",
+        "bsis",
+        "training",
+        "Original · 2018",
+        "SC-101"
+      ]
+    },
+    {
+      "id": "page-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "Front Page — MBC site",
+      "body": "The Markk Brandon Collective — Front Page Loading edition… MBC v1.5.13 Sacramento, California · Digital Edition · Vol. I · The Markk Brandon Collective The Markk Brandon Collective Front Page About The Classifieds Security Downloads Support Hire Me Vol. I, No. 2 Sacramento, Calif. Thursday, July 30, 2026 The Markk Brandon Collective Free apps worth opening · APKs to sideload · Support if they help you · Hire me if you need a build Markeith Nicholas White · Markk Brandon · StickzCoder.Lua Markeith Nicholas White Markk Brandon · StickzCoder.Lua Welcome to The Markk Brandon Collective — the classifieds for everything I've been building out of Sacramento. Late nights. Real backends. No “book a demo” nonsense. Some of these started because I got sick of apps charging for basics that should be free — those stay free to use, no matter what . Others — StrainVerse, SpiritsVerse, Cookverse — I made because I was bored, curious, or had a random idea at 1 a.m. and couldn't let it go. All of them are here for you to try on your own: live on Vercel, data in Supabase, source on GitHub, domains on GoDaddy, built in Cursor when I need to move. Before all this I ran game servers for five years — Min…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "../index.html",
+      "source": "index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "front page"
+      ]
+    },
+    {
+      "id": "page-about-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "About — MBC site",
+      "body": "About — The Markk Brandon Collective Loading… MBC v1.5.6 The Markk Brandon Collective Front Page About The Classifieds Security Downloads Support Hire Me Section A About Markeith Nicholas White About me Sacramento · full-stack websites and apps · the person behind the work Front Page / About Sacramento · Markk Brandon · StickzCoder.Lua Markeith Nicholas White Markk Brandon · StickzCoder.Lua I'm the developer behind The Markk Brandon Collective — full-stack websites and apps built out of Sacramento. Late nights, real backends, no “book a demo” nonsense. Some of these started because I got sick of apps charging for basics that should be free — those stay free to use, no matter what . Others — StrainVerse, SpiritsVerse, Cookverse — I made because I was bored, curious, or had a random idea at 1 a.m. and couldn't let it go. Before the web apps I ran game servers for five years — Minecraft, FiveM, Assetto Corsa, Beaming, and yes, a Roblox server. Communities don't stick around for a pretty landing page; they stick around when stuff works. That's the energy I brought here. To pull this off I write and ship in Cursor , track everything on GitHub , run the backends through Supabase , host o…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "../about/",
+      "source": "about/index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "about"
+      ]
+    },
+    {
+      "id": "page-apps-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "The Classifieds — MBC site",
+      "body": "The Classifieds — The Markk Brandon Collective Loading listings… MBC v1.5.13 The Markk Brandon Collective Front Page About The Classifieds Security Downloads Support Hire Me Section C The Classifieds Est. 2026 The Classifieds Free apps & sites to try — security has its own page Front Page / The Classifieds This is the list — the classifieds of projects under the Markk Brandon Collective. Open View details for screenshots and the full rundown, or jump straight to a live site. Most of these are free to use on purpose (spite for paywalls, or just boredom builds I still want people using). Guardr, Signature Security Specialist, and the BSIS certificates live on the Security Showcase — different lane, different goal. Not mixed into this free-app list. Support on GoFundMe Request a Build Community Free on purpose Why this exists Sacramento is home. I watched good stuff hit the curb while neighbors needed the same things — and every “free” app still wanted a cut somewhere. So I built something that stays free: give, ask, no selling, no flipping, no ads. The Android app adds live Go Get pickup. Listing #001 TheSacramentoFree Give Freely. Ask Kindly. Community-powered free gifting for Sacra…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "../apps/",
+      "source": "apps/index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "the classifieds"
+      ]
+    },
+    {
+      "id": "page-security-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "Security Showcase — MBC site",
+      "body": "Security Showcase — The Markk Brandon Collective Loading security desk… MBC v1.5.12 The Markk Brandon Collective Front Page About The Classifieds Security Downloads Support Hire Me Section G Security Showcase Guardr · SSS · BSIS Security Showcase The company, the marketplace, and the certificates behind the badge Front Page / Security This is the security desk — kept apart from the free classifieds on purpose. Guardr is the marketplace. Signature Security Specialist is the company. The certificates below are the BSIS training that backs both. Operator credentials (guard card and related permits) will land in their own section when they’re scanned in. 36 Hours of 2025 BSIS CE 10 Training certificates 2 Companies in this lane The companies Marketplace · ops Two paths, same passion From wanting to be an entrepreneur, I've always wanted it to do with security. Guardr is the marketplace angle — protection on demand, independent, not gatekept. Signature Security Specialist is the company angle — ops, guards, events, training, the real business of protecting people and places. Security · A Guardr Independent Security Marketplace Connect with protection services on demand — discovering and…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "../security/",
+      "source": "security/index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "security showcase"
+      ]
+    },
+    {
+      "id": "page-download-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "MBC App Store — MBC site",
+      "body": "App Store — The Markk Brandon Collective Loading app store… MBC Store The Markk Brandon Collective Front Page About The Classifieds Security App Store Support Hire Me Section D App Store Android · Install & update The MBC App Store Install once from the store app · update everything here Front Page / App Store This is the install desk for every Android app I ship under the Markk Brandon Collective. Browse the catalog, tap Install or Update, and let the MBC Store app handle the rest — no digging through your Downloads folder for APK files every time something new drops. The catalog syncs from each app's live deployment when you load this page. Get MBC Store first if you're in a browser; after that, installs and updates happen right here. — APKs ready — Installed on device — Updates pending Refresh catalog The Classifieds Sort Site order Updates & installs first Name A–Z Section Version (newest) Loading catalog… Loading app catalog… How it works Store app · one-time setup Get MBC Store — tap the banner above and install the store APK (allow installs from your browser when Android asks). Open MBC Store — the store loads this catalog and knows what's already on your phone. Install or U…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "../download/",
+      "source": "download/index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "mbc app store"
+      ]
+    },
+    {
+      "id": "page-support-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "Support / GoFundMe — MBC site",
+      "body": "Support — The Markk Brandon Collective Loading… MBC v1.5.5 The Markk Brandon Collective Front Page About The Classifieds Security Downloads Support Hire Me Section S Support GoFundMe Keep it running Free for you still costs me — help keep the apps operating Front Page / Support I've built a whole stack of free apps — Friendr, Findr, Chatr, TheSacramentoFree, StrainVerse, SpiritsVerse, Cookverse, GigOS, and more — and I want them to stay free. No ads. No selling your data. No paywall on the basics. But free for you still costs me: hosting, databases, domains, email, monitoring, and the time to fix what breaks. Browse The Classifieds , try what interests you, and if you want this work to keep going, chip in on GoFundMe. Every dollar goes toward keeping the apps online and shipping updates — not toward ads or investor decks. GoFundMe Keep The Markk Brandon Collective running Help me keep free apps free — servers up, domains renewed, and fixes shipped instead of projects taken offline when the bill hits. Support on GoFundMe Link goes live when the campaign is published. Check back — or bookmark this page. Campaign copy What goes on the GoFundMe page Use this text when you publish the f…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "../support/",
+      "source": "support/index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "support / gofundme"
+      ]
+    },
+    {
+      "id": "page-request-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "Hire Me — MBC site",
+      "body": "Hire Me — The Markk Brandon Collective Loading… MBC v1.5.5 The Markk Brandon Collective Front Page About The Classifieds Security Downloads Support Hire Me Section H Hire Me Build requests Request a build Tell me what you need · add your min–max · I'll reach out Front Page / Hire Me This page stays open for people who want me to build their website or app. I've gained a ton of knowledge developing these projects over the past two to three years — right after about five years building game servers (Minecraft, FiveM, Assetto Corsa, Beaming, and yes, sadly, a Roblox server). That path taught me how to ship things people actually use, not just screenshots. I feel ready to put myself out there and start building for others — at a cost, of course. Here's where you make that request: say what you want, add your price range (min–max), and I'll reach out if it's something I can take on. No fake “instant quote” bots. Just me reading what you sent. What you get when we work together is the same standard I hold my own apps to — full stack when that's what you need, real databases, tested flows, buttons that work. AI helps me move faster; the experience is what makes it finish. And I don't call…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "../request/",
+      "source": "request/index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "hire me"
+      ]
+    },
+    {
+      "id": "page-founder-index-html",
+      "type": "page",
+      "typeLabel": "Site page",
+      "title": "Founder Bridge — MBC site",
+      "body": "Founder Bridge — The Markk Brandon Collective Loading founder desk… Founder Bridge The Markk Brandon Collective Front Page The Classifieds App Store Private desk Founder Bridge All apps · one view Founder Bridge Search everything at once — apps, pages, certs, APKs, GitHub, live sites Private · Founder only Founder Bridge One desk for every MBC app — unified search across all sites, live health, deploy versions, Android builds, GitHub activity, and staff portals. Not linked from the public site. Founder PIN Open the bridge Wrong PIN. Pulling portfolio metrics… Markk Brandon · portfolio ops Refresh data Lock desk Classifieds App Store Search all apps & sites Clear Press / to focus · searches catalog, live homepages, certs, APKs, and GitHub READMEs The Markk Brandon Collective Founder Bridge · not indexed © 2026 Markk Brandon (Markeith Nicholas White)",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "./",
+      "source": "founder/index.html",
+      "tags": [
+        "page",
+        "mbc-site",
+        "founder bridge"
+      ]
+    },
+    {
+      "id": "site-buynothing",
+      "type": "site",
+      "typeLabel": "Live site",
+      "title": "TheSacramentoFree — live homepage",
+      "body": "TheSacramentoFree — Give freely. Ask kindly.",
+      "app": "buynothing",
+      "appName": "TheSacramentoFree",
+      "section": "community",
+      "url": "https://www.sacramentobuynothing.com",
+      "source": "https://www.sacramentobuynothing.com",
+      "tags": [
+        "buynothing",
+        "live",
+        "homepage",
+        "community"
+      ]
+    },
+    {
+      "id": "site-gigos",
+      "type": "site",
+      "typeLabel": "Live site",
+      "title": "GigOS — live homepage",
+      "body": "GigOS GigOS Login Signup GigOS Bands The operating system for live performance. Organize your band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime. Brand Promise Less chaos. Better shows. Current Product GigOS Bands keeps songs, sets, gigs, and performance notes in one clear system. Create an account Sign in Explore The System Bands Prototype Demo Band Live Mode",
+      "app": "gigos",
+      "appName": "GigOS",
+      "section": "lifestyle",
+      "url": "https://gigos.vercel.app",
+      "source": "https://gigos.vercel.app",
+      "tags": [
+        "gigos",
+        "live",
+        "homepage",
+        "lifestyle"
+      ]
+    },
+    {
+      "id": "site-guardr",
+      "type": "site",
+      "typeLabel": "Live site",
+      "title": "Guardr — live homepage",
+      "body": "Guardr — Independent Security Marketplace",
+      "app": "guardr",
+      "appName": "Guardr",
+      "section": "security",
+      "url": "https://guardr.co",
+      "source": "https://www.guardr.co",
+      "tags": [
+        "guardr",
+        "live",
+        "homepage",
+        "security"
+      ]
+    },
+    {
+      "id": "site-sss",
+      "type": "site",
+      "typeLabel": "Live site",
+      "title": "Signature Security Specialist — live homepage",
+      "body": "Signature Security Specialist | Professional Security, Delivered Signature Security Specialist SigSecSpec Security Management System Services About How It Works Get Training Contact Careers Apply New Client New Guard Event Staff Medical Staff Careers (all roles) Operations / Operations Dispatch / Management Log In Signature Security Specialist is under development and obtaining licenses. Applications are being accepted but will not be reviewed until licensing is complete and the company is fully operational. Thank you for your patience. — Signature Security Specialist is under development and obtaining licenses. Applications are being accepted but will not be reviewed until licensing is complete and the company is fully operational. Thank you for your patience. — Sacramento · San Francisco, CA Signature Security Specialist Protect with Purpose · Perform with Excellence We work every angle— persons, places, and things —with the same standard of professionalism and care. Connect qualified guards, event staff, and medical responders with clients through cutting-edge technology. Operations Team, dispatch, or command center Tap to view next · 1 / 3 New Client New Guard Event Staff Medic…",
+      "app": "sss",
+      "appName": "Signature Security Specialist",
+      "section": "security",
+      "url": "https://signaturesecurityspecialist.com",
+      "source": "https://signaturesecurityspecialist.com",
+      "tags": [
+        "sss",
+        "live",
+        "homepage",
+        "security"
+      ]
+    },
+    {
+      "id": "site-mbc-site",
+      "type": "site",
+      "typeLabel": "Live site",
+      "title": "MBC Main Site — live homepage",
+      "body": "The Markk Brandon Collective — Front Page Loading edition… MBC v1.5.13 Sacramento, California · Digital Edition · Vol. I · The Markk Brandon Collective The Markk Brandon Collective Front Page About The Classifieds Security Downloads Support Hire Me Vol. I, No. 2 Sacramento, Calif. Thursday, July 30, 2026 The Markk Brandon Collective Free apps worth opening · APKs to sideload · Support if they help you · Hire me if you need a build Markeith Nicholas White · Markk Brandon · StickzCoder.Lua Markeith Nicholas White Markk Brandon · StickzCoder.Lua Welcome to The Markk Brandon Collective — the classifieds for everything I've been building out of Sacramento. Late nights. Real backends. No “book a demo” nonsense. Some of these started because I got sick of apps charging for basics that should be free — those stay free to use, no matter what . Others — StrainVerse, SpiritsVerse, Cookverse — I made because I was bored, curious, or had a random idea at 1 a.m. and couldn't let it go. All of them are here for you to try on your own: live on Vercel, data in Supabase, source on GitHub, domains on GoDaddy, built in Cursor when I need to move. Before all this I ran game servers for five years — Min…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/main/",
+      "source": "https://themarkkbradoncollective.github.io/main",
+      "tags": [
+        "mbc-site",
+        "live",
+        "homepage",
+        "internal"
+      ]
+    },
+    {
+      "id": "site-mbc-store",
+      "type": "site",
+      "typeLabel": "Live site",
+      "title": "MBC App Store — live homepage",
+      "body": "App Store — The Markk Brandon Collective Loading app store… MBC Store The Markk Brandon Collective Front Page About The Classifieds Security App Store Support Hire Me Section D App Store Android · Install & update The MBC App Store Install once from the store app · update everything here Front Page / App Store This is the install desk for every Android app I ship under the Markk Brandon Collective. Browse the catalog, tap Install or Update, and let the MBC Store app handle the rest — no digging through your Downloads folder for APK files every time something new drops. The catalog syncs from each app's live deployment when you load this page. Get MBC Store first if you're in a browser; after that, installs and updates happen right here. — APKs ready — Installed on device — Updates pending Refresh catalog The Classifieds Sort Site order Updates & installs first Name A–Z Section Version (newest) Loading catalog… Loading app catalog… How it works Store app · one-time setup Get MBC Store — tap the banner above and install the store APK (allow installs from your browser when Android asks). Open MBC Store — the store loads this catalog and knows what's already on your phone. Install or U…",
+      "app": "mbc-store",
+      "appName": "MBC App Store",
+      "section": "internal",
+      "url": "https://themarkkbradoncollective.github.io/main/download/",
+      "source": "https://themarkkbradoncollective.github.io/main/download",
+      "tags": [
+        "mbc-store",
+        "live",
+        "homepage",
+        "internal"
+      ]
+    },
+    {
+      "id": "readme-mbc-site",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "MBC Main Site — README",
+      "body": "THE MARKK BRANDON COLLECTIVE\n\n> Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.\n\n**Version:** **v1.5.13** (see [`version.json`](version.json))\n\nLive site\n\n**Canonical host:** [themarkkbradoncollective.github.io/main](https://themarkkbradoncollective.github.io/main/)\n\n**Repository:** [github.com/TheMarkkBradonCollective/main](https://github.com/TheMarkkBradonCollective/main)\n\nThis newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkkade.io`) and Vercel project (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) are retired — ignore those URLs if they still 404.\n\n> After deleting the Vercel project, also clear the GitHub repo **Homepage** URL if it still points at `*.vercel.app` (Settings → General → Website). Point it at the Pages link above.\n\nSite Structure\n\n| Page | URL | Description |\n|------|-----|-------------|\n| **Front Page** | `/` | Who I am, why I build, AI note, CTAs |\n| **The Classifieds** | `/apps/` | Free apps & sites to try |\n| **Security Showcase** | `/security/` | Guardr, Signature Security Specialist, and BSIS certificates |\n| **Downloads** |…",
+      "app": "mbc-site",
+      "appName": "MBC Main Site",
+      "section": "internal",
+      "url": "https://github.com/TheMarkkBradonCollective/main",
+      "source": "GitHub README",
+      "tags": [
+        "mbc-site",
+        "github",
+        "readme",
+        "docs"
+      ]
+    },
+    {
+      "id": "readme-mbc-store",
+      "type": "github",
+      "typeLabel": "GitHub",
+      "title": "MBC App Store — README",
+      "body": "THE MARKK BRANDON COLLECTIVE\n\n> Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.\n\n**Version:** **v1.5.13** (see [`version.json`](version.json))\n\nLive site\n\n**Canonical host:** [themarkkbradoncollective.github.io/main](https://themarkkbradoncollective.github.io/main/)\n\n**Repository:** [github.com/TheMarkkBradonCollective/main](https://github.com/TheMarkkBradonCollective/main)\n\nThis newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkkade.io`) and Vercel project (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) are retired — ignore those URLs if they still 404.\n\n> After deleting the Vercel project, also clear the GitHub repo **Homepage** URL if it still points at `*.vercel.app` (Settings → General → Website). Point it at the Pages link above.\n\nSite Structure\n\n| Page | URL | Description |\n|------|-----|-------------|\n| **Front Page** | `/` | Who I am, why I build, AI note, CTAs |\n| **The Classifieds** | `/apps/` | Free apps & sites to try |\n| **Security Showcase** | `/security/` | Guardr, Signature Security Specialist, and BSIS certificates |\n| **Downloads** |…",
+      "app": "mbc-store",
+      "appName": "MBC App Store",
+      "section": "internal",
+      "url": "https://github.com/TheMarkkBradonCollective/main",
+      "source": "GitHub README",
+      "tags": [
+        "mbc-store",
+        "github",
+        "readme",
+        "docs"
+      ]
+    }
+  ]
+}

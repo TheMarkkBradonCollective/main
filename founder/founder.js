@@ -2,6 +2,7 @@
   const PIN = 'founder';
   const PIN_KEY = 'mbc-founder-ok';
   const METRICS_URL = '../founder-metrics.json';
+  const SEARCH_URL = '../founder-search-index.json';
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -57,7 +58,12 @@
   }
 
   let activeFilter = 'all';
+  let activeTypeFilter = 'all';
   let metrics = null;
+  let searchIndex = null;
+  let searchQuery = '';
+  let searchTimer = null;
+  let searchReady = false;
 
   function renderSummary(summary, generatedAt, githubTokenUsed) {
     const el = $('#founder-summary');
@@ -198,6 +204,232 @@
     el.innerHTML = filtered.map(renderCard).join('');
   }
 
+  function tokenize(text) {
+    return String(text || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9@.+#-]+/g, ' ')
+      .split(/\s+/)
+      .filter((t) => t.length > 1);
+  }
+
+  function uniqueTokens(text) {
+    return [...new Set(tokenize(text))];
+  }
+
+  function highlightSnippet(text, terms) {
+    const raw = String(text || '').trim();
+    if (!raw) return '';
+    const lower = raw.toLowerCase();
+    let start = 0;
+    for (const term of terms) {
+      const idx = lower.indexOf(term);
+      if (idx >= 0) {
+        start = Math.max(0, idx - 60);
+        break;
+      }
+    }
+    let snippet = raw.slice(start, start + 220);
+    if (start > 0) snippet = `…${snippet}`;
+    if (start + 220 < raw.length) snippet = `${snippet}…`;
+
+    let html = escapeHtml(snippet);
+    for (const term of terms) {
+      if (term.length < 2) continue;
+      const re = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      html = html.replace(re, '<mark>$1</mark>');
+    }
+    return html;
+  }
+
+  function scoreDocument(doc, terms) {
+    if (!terms.length) return 0;
+    const title = String(doc.title || '').toLowerCase();
+    const body = String(doc.body || '').toLowerCase();
+    const tags = (doc.tags || []).join(' ').toLowerCase();
+    const appName = String(doc.appName || '').toLowerCase();
+    let score = 0;
+
+    for (const term of terms) {
+      if (title.includes(term)) score += 12;
+      if (appName.includes(term)) score += 8;
+      if (tags.includes(term)) score += 5;
+      if (body.includes(term)) score += 3;
+      if (title.startsWith(term)) score += 4;
+    }
+    return score;
+  }
+
+  function searchDocuments(query, typeFilter = 'all') {
+    if (!searchIndex?.documents?.length || !query.trim()) return [];
+    const terms = uniqueTokens(query);
+    if (!terms.length) return [];
+
+    return searchIndex.documents
+      .map((doc) => ({ doc, score: scoreDocument(doc, terms) }))
+      .filter((row) => row.score > 0)
+      .filter((row) => typeFilter === 'all' || row.doc.type === typeFilter)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 80)
+      .map((row) => row.doc);
+  }
+
+  function renderTypeFilters() {
+    const el = $('#founder-type-filters');
+    if (!el || !searchIndex) return;
+
+    const counts = {};
+    const terms = uniqueTokens(searchQuery);
+    const baseResults = searchIndex.documents
+      .map((doc) => ({ doc, score: scoreDocument(doc, terms) }))
+      .filter((row) => row.score > 0);
+
+    for (const row of baseResults) {
+      counts[row.doc.type] = (counts[row.doc.type] || 0) + 1;
+    }
+
+    const types = [
+      ['all', `All (${baseResults.length})`],
+      ...Object.entries(searchIndex.typeLabels || {}).map(([key, label]) => [
+        key,
+        `${label} (${counts[key] || 0})`,
+      ]),
+    ];
+
+    el.innerHTML = types
+      .filter(([, label]) => !label.endsWith('(0)') || label.startsWith('All'))
+      .map(
+        ([key, label]) =>
+          `<button type="button" class="founder-type-filter${activeTypeFilter === key ? ' active' : ''}" data-type="${escapeHtml(key)}">${escapeHtml(label)}</button>`
+      )
+      .join('');
+
+    el.querySelectorAll('[data-type]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activeTypeFilter = btn.dataset.type;
+        renderTypeFilters();
+        renderSearchResults();
+      });
+    });
+  }
+
+  function renderSearchResults() {
+    const panel = $('#founder-search-results');
+    const browse = $('#founder-browse');
+    const summary = $('#founder-summary');
+    const typeFilters = $('#founder-type-filters');
+    const clearBtn = $('#founder-search-clear');
+    const q = searchQuery.trim();
+
+    if (!panel) return;
+
+    if (!q) {
+      panel.hidden = true;
+      if (typeFilters) typeFilters.hidden = true;
+      if (clearBtn) clearBtn.hidden = true;
+      if (browse) browse.classList.remove('founder-browse-hidden');
+      if (summary) summary.classList.remove('founder-browse-hidden');
+      return;
+    }
+
+    if (clearBtn) clearBtn.hidden = false;
+    if (typeFilters) typeFilters.hidden = false;
+    if (browse) browse.classList.add('founder-browse-hidden');
+    if (summary) summary.classList.add('founder-browse-hidden');
+    panel.hidden = false;
+
+    const results = searchDocuments(q, activeTypeFilter);
+    const terms = uniqueTokens(q);
+
+    if (!results.length) {
+      panel.innerHTML = `<p class="founder-search-meta">No matches for “${escapeHtml(q)}”</p><p class="founder-empty">Try a different keyword — app name, feature, cert, APK package, or page content.</p>`;
+      return;
+    }
+
+    panel.innerHTML = `
+      <p class="founder-search-meta">${results.length} result${results.length === 1 ? '' : 's'} for “${escapeHtml(q)}”${activeTypeFilter !== 'all' ? ` · ${escapeHtml(searchIndex.typeLabels?.[activeTypeFilter] || activeTypeFilter)}` : ''}</p>
+      <div class="founder-result-list">
+        ${results
+          .map((doc) => {
+            const href = doc.url || (doc.app ? `../apps/showcase/?app=${doc.app}` : null);
+            const title = href
+              ? `<a href="${escapeHtml(href)}"${href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${escapeHtml(doc.title)}</a>`
+              : escapeHtml(doc.title);
+            return `
+              <article class="founder-result">
+                <div class="founder-result-head">
+                  <h3 class="founder-result-title">${title}</h3>
+                  <span class="founder-badge">${escapeHtml(doc.typeLabel || doc.type)}</span>
+                  ${doc.appName ? `<span class="founder-badge">${escapeHtml(doc.appName)}</span>` : ''}
+                </div>
+                <p class="founder-result-snippet">${highlightSnippet(doc.body, terms)}</p>
+                <div class="founder-result-foot">
+                  ${doc.source ? `<span>${escapeHtml(doc.source)}</span>` : ''}
+                  ${doc.section ? `<span>${escapeHtml(doc.section)}</span>` : ''}
+                </div>
+              </article>`;
+          })
+          .join('')}
+      </div>`;
+  }
+
+  function setSearchQuery(value) {
+    searchQuery = value;
+    const input = $('#founder-search-input');
+    if (input && input.value !== value) input.value = value;
+    activeTypeFilter = 'all';
+    renderTypeFilters();
+    renderSearchResults();
+  }
+
+  function initSearch() {
+    if (searchReady) return;
+    const form = $('#founder-search-form');
+    const input = $('#founder-search-input');
+    const clearBtn = $('#founder-search-clear');
+    if (!form || !input) return;
+    searchReady = true;
+
+    input.addEventListener('input', () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => setSearchQuery(input.value), 120);
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      setSearchQuery(input.value);
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        setSearchQuery('');
+        input.focus();
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      const tag = (e.target && e.target.tagName) || '';
+      if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(tag)) {
+        e.preventDefault();
+        input.focus();
+      }
+      if (e.key === 'Escape' && document.activeElement === input && searchQuery) {
+        input.value = '';
+        setSearchQuery('');
+      }
+    });
+  }
+
+  async function loadSearchIndex() {
+    try {
+      const res = await fetch(SEARCH_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      searchIndex = await res.json();
+    } catch {
+      searchIndex = { documents: [], typeLabels: {} };
+    }
+  }
+
   async function loadMetrics() {
     const loading = $('#founder-loading');
     const app = $('#founder-app');
@@ -205,12 +437,16 @@
     if (app) app.classList.add('founder-hidden');
 
     try {
-      const res = await fetch(METRICS_URL, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      metrics = await res.json();
+      const [metricsRes] = await Promise.all([
+        fetch(METRICS_URL, { cache: 'no-store' }),
+        loadSearchIndex(),
+      ]);
+      if (!metricsRes.ok) throw new Error(`HTTP ${metricsRes.status}`);
+      metrics = await metricsRes.json();
       renderSummary(metrics.summary, metrics.generatedAt, metrics.githubTokenUsed);
       renderFilters(metrics.sectionLabels, metrics.apps);
       renderCards(metrics.apps);
+      initSearch();
       if (loading) loading.classList.add('founder-hidden');
       if (app) app.classList.remove('founder-hidden');
     } catch (err) {
@@ -261,7 +497,10 @@
     initGate();
     const refresh = $('#founder-refresh');
     if (refresh) {
-      refresh.addEventListener('click', () => loadMetrics());
+      refresh.addEventListener('click', async () => {
+        await loadSearchIndex();
+        await loadMetrics();
+      });
     }
     const lock = $('#founder-lock');
     if (lock) {

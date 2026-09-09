@@ -1,0 +1,331 @@
+/* Founder Bridge — ops desk for MBC apps */
+
+.founder-gate {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.founder-gate-card {
+  width: min(420px, 100%);
+  border: 1px solid var(--rule);
+  background: var(--paper-bright);
+  padding: 2rem 1.75rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.founder-gate-card h2 {
+  font-family: var(--serif-display);
+  font-size: 1.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.founder-gate-card label {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-600);
+  margin: 1.25rem 0 0.35rem;
+}
+
+.founder-gate-card input {
+  width: 100%;
+  border: 1px solid var(--rule-light);
+  background: var(--paper);
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+}
+
+.founder-gate-card .btn-row {
+  margin-top: 1.25rem;
+}
+
+.founder-gate-card .pin-error {
+  color: #8b1e1e;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+.founder-hidden {
+  display: none !important;
+}
+
+.founder-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.founder-toolbar-meta {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-500);
+}
+
+.founder-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.founder-btn {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--rule);
+  background: var(--paper-bright);
+  color: var(--ink);
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.founder-btn:hover {
+  background: var(--grey-100);
+}
+
+.founder-btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.founder-btn-primary:hover {
+  background: #2a2a2a;
+}
+
+.founder-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.founder-stat {
+  border: 1px solid var(--rule-light);
+  background: var(--paper-bright);
+  padding: 1rem 1.1rem;
+}
+
+.founder-stat p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-500);
+  margin-bottom: 0.35rem;
+}
+
+.founder-stat strong {
+  display: block;
+  font-family: var(--serif-display);
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.founder-stat span {
+  font-size: 0.75rem;
+  color: var(--grey-600);
+}
+
+.founder-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.founder-filter {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--rule-light);
+  background: var(--paper);
+  color: var(--grey-600);
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+.founder-filter.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.founder-card {
+  border: 1px solid var(--rule-light);
+  background: var(--paper-bright);
+  padding: 1.1rem 1.15rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.founder-card-head {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.founder-card-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--rule-light);
+  background: var(--paper);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.founder-card-title {
+  font-family: var(--serif-display);
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.founder-card-tagline {
+  font-size: 0.82rem;
+  color: var(--grey-600);
+  margin: 0.15rem 0 0;
+}
+
+.founder-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.founder-badge {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--rule-light);
+  padding: 0.2rem 0.45rem;
+  color: var(--grey-600);
+}
+
+.founder-badge.health-healthy {
+  border-color: #2d6a4f;
+  color: #2d6a4f;
+  background: #edf7f1;
+}
+
+.founder-badge.health-partial,
+.founder-badge.health-version-only {
+  border-color: #b08900;
+  color: #7a6200;
+  background: #fff9e6;
+}
+
+.founder-badge.health-down,
+.founder-badge.health-unknown {
+  border-color: #9b2226;
+  color: #9b2226;
+  background: #fde8e8;
+}
+
+.founder-badge.status-live {
+  color: var(--ink);
+}
+
+.founder-badge.status-concept {
+  color: var(--grey-500);
+}
+
+.founder-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+}
+
+.founder-meta-grid dt {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey-500);
+}
+
+.founder-meta-grid dd {
+  margin: 0;
+  color: var(--ink);
+  word-break: break-word;
+}
+
+.founder-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.15rem;
+}
+
+.founder-links a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--rule-light);
+  padding: 0.3rem 0.5rem;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.founder-links a:hover {
+  background: var(--grey-100);
+}
+
+.founder-links a.admin-link {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.founder-roles {
+  font-size: 0.75rem;
+  color: var(--grey-600);
+}
+
+.founder-empty {
+  border: 1px dashed var(--rule-light);
+  padding: 2rem;
+  text-align: center;
+  color: var(--grey-500);
+}
+
+.founder-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--grey-500);
+}
+
+@media (max-width: 640px) {
+  .founder-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}

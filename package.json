@@ -14,6 +14,8 @@
     "process-brand": "node scripts/process-brand-assets.mjs",
     "sync-app-icons": "node scripts/sync-app-icons.mjs",
     "sync-apk-catalog": "node scripts/sync-apk-catalog.mjs",
+    "make-repos-public": "node scripts/make-repos-public.mjs",
+    "lock-unlisted-repos": "node scripts/lock-unlisted-repos.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
     "capture-screenshots": "node scripts/capture-app-screenshots.mjs",
     "capture-device-screenshots": "node scripts/capture-device-screenshots.mjs"

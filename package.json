@@ -14,6 +14,7 @@
     "process-brand": "node scripts/process-brand-assets.mjs",
     "sync-app-icons": "node scripts/sync-app-icons.mjs",
     "sync-apk-catalog": "node scripts/sync-apk-catalog.mjs",
+    "sync-founder-bridge": "node scripts/sync-founder-bridge.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
     "capture-screenshots": "node scripts/capture-app-screenshots.mjs",
     "capture-device-screenshots": "node scripts/capture-device-screenshots.mjs"

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Founder Bridge — private ops desk for The Markk Brandon Collective portfolio.">
+<meta name="theme-color" content="#121212">
+<meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<title>Founder Bridge — The Markk Brandon Collective</title>
+<link rel="stylesheet" href="../css/style.css?v=1.5.13">
+<link rel="stylesheet" href="../css/founder.css?v=1.5.13">
+</head>
+<body>
+<div id="mbc-splash" class="mbc-splash" aria-live="polite">
+  <img class="mbc-splash-logo" src="../icons/logo.png" width="120" height="120" alt="The Markk Brandon Collective">
+  <p class="mbc-splash-loading">Loading founder desk…</p>
+  <p id="mbc-splash-version" class="mbc-splash-version">Founder Bridge</p>
+</div>
+<div class="site">
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="logo" href="../index.html">The Markk Brandon Collective</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Front Page</a></li>
+      <li><a href="../apps/">The Classifieds</a></li>
+      <li><a href="../download/">App Store</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="masthead masthead-branded">
+  <div class="masthead-top-rule"></div>
+  <div class="masthead-edition">
+    <span>Private desk</span>
+    <span class="edition-center">Founder Bridge</span>
+    <span>All apps · one view</span>
+  </div>
+  <h1 class="unstyled page-title">Founder Bridge</h1>
+  <p class="masthead-tagline">Search everything at once — apps, pages, certs, APKs, GitHub, live sites</p>
+  <div class="masthead-bottom-rule"></div>
+</header>
+
+<main class="content founder-page">
+
+<div id="founder-gate" class="founder-gate">
+  <form class="founder-gate-card" id="founder-pin-form">
+    <p class="breadcrumb">Private · Founder only</p>
+    <h2>Founder Bridge</h2>
+    <p class="prose">One desk for every MBC app — unified search across all sites, live health, deploy versions, Android builds, GitHub activity, and staff portals. Not linked from the public site.</p>
+    <label for="founder-pin">Founder PIN</label>
+    <input id="founder-pin" name="pin" type="password" autocomplete="current-password" required>
+    <p class="btn-row"><button type="submit" class="founder-btn founder-btn-primary">Open the bridge</button></p>
+    <p id="founder-pin-error" class="pin-error" hidden>Wrong PIN.</p>
+  </form>
+</div>
+
+<div id="founder-loading" class="founder-loading founder-hidden">
+  <p>Pulling portfolio metrics…</p>
+</div>
+
+<div id="founder-app" class="founder-hidden">
+  <div class="founder-toolbar">
+    <p class="founder-toolbar-meta">Markk Brandon · portfolio ops</p>
+    <div class="founder-toolbar-actions">
+      <button type="button" class="founder-btn" id="founder-refresh">Refresh data</button>
+      <button type="button" class="founder-btn" id="founder-lock">Lock desk</button>
+      <a class="founder-btn" href="../apps/">Classifieds</a>
+      <a class="founder-btn" href="../download/">App Store</a>
+    </div>
+  </div>
+
+  <section class="founder-search-panel" aria-label="Unified search">
+    <form class="founder-search-form" id="founder-search-form" role="search">
+      <label class="founder-search-label" for="founder-search-input">Search all apps &amp; sites</label>
+      <div class="founder-search-row">
+        <input id="founder-search-input" class="founder-search-input" type="search" name="q" placeholder="Search apps, features, certs, APKs, pages, GitHub, live sites…" autocomplete="off" spellcheck="false">
+        <button type="button" class="founder-btn" id="founder-search-clear" hidden>Clear</button>
+      </div>
+      <p class="founder-search-hint">Press <kbd>/</kbd> to focus · searches catalog, live homepages, certs, APKs, and GitHub READMEs</p>
+    </form>
+    <div class="founder-type-filters" id="founder-type-filters" hidden></div>
+    <div class="founder-search-results" id="founder-search-results" hidden></div>
+  </section>
+
+  <section class="founder-summary" id="founder-summary" aria-label="Portfolio summary"></section>
+
+  <section aria-label="Section filters" id="founder-browse">
+    <div class="founder-filters" id="founder-filters"></div>
+  </section>
+
+  <section aria-label="App portfolio">
+    <div class="founder-grid" id="founder-grid"></div>
+  </section>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <a class="footer-brand" href="../index.html">
+    <p class="footer-masthead">The Markk Brandon Collective</p>
+    <p class="footer-masthead-sub">Founder Bridge · not indexed</p>
+  </a>
+  <p>© 2026 Markk Brandon (Markeith Nicholas White)</p>
+</footer>
+
+</div>
+<script src="../js/pwa.js?v=1.5.13" defer></script>
+<script src="founder.js?v=1.5.13" defer></script>
+</body>
+</html>

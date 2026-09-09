@@ -42,6 +42,15 @@ if (apkCatalog.status !== 0) {
   console.warn('⚠ APK catalog sync skipped or partial (network / missing sources).');
 }
 
+console.log('→ Syncing Founder Bridge metrics…');
+const founderBridge = spawnSync(process.execPath, [resolve(root, 'scripts/sync-founder-bridge.mjs')], {
+  cwd: root,
+  stdio: 'inherit',
+});
+if (founderBridge.status !== 0) {
+  console.warn('⚠ Founder Bridge sync skipped or partial (network / missing sources).');
+}
+
 // 1) PWA icons (skip gracefully if sharp isn't installed and icons already exist)
 console.log('→ Regenerating PWA icons…');
 const icons = spawnSync(process.execPath, [resolve(root, 'scripts/generate-icons.mjs')], {
@@ -107,6 +116,7 @@ const htmlFiles = [
   'download/index.html',
   'support/index.html',
   'request/index.html',
+  'founder/index.html',
 ];
 for (const rel of htmlFiles) {
   const htmlPath = resolve(root, rel);
@@ -121,6 +131,8 @@ for (const rel of htmlFiles) {
   html = html.replace(/(src="[^"]*security\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*store\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(href="[^"]*store\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(href="[^"]*founder\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*founder\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   writeFileSync(htmlPath, html);
 }
 console.log('→ Cache-busted CSS/JS in HTML pages');

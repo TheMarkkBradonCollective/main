@@ -61,7 +61,7 @@ const INTERNAL_PROJECTS = [
     url: 'https://navigate-tmbc.vercel.app',
     section: 'navigation',
     status: 'live',
-    github: 'https://github.com/TheMarkkBradonCollective/Navigate',
+    github: 'https://github.com/TheMarkkBradonCollective/AndroidAutoApps',
     githubPrivate: true,
     localRepo: 'Navigate',
   },

@@ -33,6 +33,15 @@ if (appIcons.status !== 0) {
   console.warn('⚠ App icon sync skipped or partial (network / missing sources).');
 }
 
+console.log('→ Syncing classifieds from My-Projects.json…');
+const classifieds = spawnSync(process.execPath, [resolve(root, 'scripts/sync-classifieds.mjs')], {
+  cwd: root,
+  stdio: 'inherit',
+});
+if (classifieds.status !== 0) {
+  console.warn('⚠ Classifieds sync failed.');
+}
+
 console.log('→ Syncing APK catalog…');
 const apkCatalog = spawnSync(process.execPath, [resolve(root, 'scripts/sync-apk-catalog.mjs')], {
   cwd: root,

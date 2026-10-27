@@ -16,7 +16,6 @@
     "sync-classifieds": "node scripts/sync-classifieds.mjs",
     "sync-apk-catalog": "node scripts/sync-apk-catalog.mjs",
     "mirror-all-apks": "MIRROR_ALL_APKS=1 node scripts/sync-apk-catalog.mjs",
-    "make-repos-public": "node scripts/make-repos-public.mjs",
     "lock-catalog-repos": "node scripts/lock-catalog-repos.mjs",
     "lock-unlisted-repos": "node scripts/lock-unlisted-repos.mjs",
     "package-apk-release": "node scripts/package-apk-release.mjs",

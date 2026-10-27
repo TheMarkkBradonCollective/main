@@ -6,6 +6,7 @@
     community: 'Community',
     lifestyle: 'Lifestyle & Culture',
     social: 'Social & Connection',
+    navigation: 'Navigation & In-Car',
     security: 'Security Company',
   };
 
@@ -161,9 +162,13 @@
   }
 
   function actions(project) {
+    const githubBtn = project.github
+      ? `<a class="btn" href="${escapeHtml(project.github)}" target="_blank" rel="noopener">GitHub</a>`
+      : '';
     return `
       <div class="btn-row sc-actions">
         <a class="btn btn-primary" href="${escapeHtml(project.url)}" target="_blank" rel="noopener">Open live app</a>
+        ${githubBtn}
         <a class="btn" href="../../download/">Downloads</a>
         <a class="btn" href="${catalogHref(project)}">Back to ${catalogLabel(project)}</a>
       </div>`;
@@ -713,6 +718,45 @@
       </div>`;
   }
 
+  function renderNavigate(project) {
+    return renderGigos({ ...project, theme: 'navigate' });
+  }
+
+  function renderGigos(project) {
+    const shots = project.screenshots;
+    return `
+      <div class="sc sc-gigos">
+        ${breadcrumb(project)}
+        <section class="sc-fi-hero">
+          <div class="sc-fi-copy">
+            <p class="sc-kicker">Live performance · less chaos</p>
+            <div class="sc-brand-row">
+              <img class="sc-logo" src="${escapeHtml(asset(`icons/apps/${project.slug}.png`))}" width="72" height="72" alt="">
+              <div>
+                <h2 class="sc-name">${escapeHtml(project.name)}</h2>
+                <p class="sc-tag">${escapeHtml(project.tagline)}</p>
+              </div>
+            </div>
+            <p class="sc-hero-line">${escapeHtml(project.heroLine || '')}</p>
+            <p class="sc-blurb">${escapeHtml(project.description)}</p>
+            ${actions(project)}
+          </div>
+          <div class="sc-fi-device">${phone(shots[0], { className: 'is-hero', eager: true })}</div>
+        </section>
+        ${readDetails(project)}
+        ${devicePlatforms(project, 0)}
+        <section class="sc-deep">
+          <div class="section-head">
+            <p class="kicker">Inside the system</p>
+            <h2>From rehearsal to showtime</h2>
+          </div>
+          ${featureRows(project)}
+        </section>
+        ${gallery(project, 'GigOS screens')}
+        ${coverCta()}
+      </div>`;
+  }
+
   function renderDefault(project) {
     return renderVerse({ ...project });
   }
@@ -722,6 +766,8 @@
     buynothing: renderBuyNothing,
     friendr: renderFriendr,
     findr: renderFindr,
+    gigos: renderGigos,
+    navigate: renderNavigate,
     chatr: renderChatr,
     guardr: renderGuardr,
     sss: renderSss,

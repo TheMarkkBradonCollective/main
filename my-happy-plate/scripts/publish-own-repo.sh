@@ -6,7 +6,7 @@ set -euo pipefail
 
 REPO="${1:-TheMarkkBradonCollective/MyHappyPlate}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-TOKEN="FAKESECRET_q3r4s5t6u7v8w9x0y1z2"
+TOKEN="${GITHUB_TOKEN:-}"
 
 api() {
   if [[ -n "$TOKEN" ]]; then

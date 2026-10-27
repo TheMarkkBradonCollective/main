@@ -23,10 +23,11 @@ const root = path.resolve(__dirname, '..');
 const outDir = path.join(root, 'images', 'screenshots');
 
 const APPS = [
-  { slug: 'buynothing', url: 'https://sacramentobuynothing-tmbc.vercel.app' },
+  { slug: 'buynothing', url: 'https://www.sacramentobuynothing.com' },
   { slug: 'strainverse', url: 'https://strainverse-tmbc.vercel.app' },
   { slug: 'spiritsverse', url: 'https://spiritsverse-tmbc.vercel.app' },
   { slug: 'cookverse', url: 'https://cookverse-tmbc.vercel.app' },
+  { slug: 'gigos', url: 'https://gigos.vercel.app' },
   { slug: 'friendr', url: 'https://friendr-tmbc.vercel.app' },
   { slug: 'findr', url: 'https://findr-tmbc.vercel.app' },
   { slug: 'chatr', url: 'https://chatr-tmbc.vercel.app' },

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Markeith White — Resume</title>
+<style>
+@page {
+  size: letter;
+  margin: 0.35in 0.40in 0.35in 0.40in;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 8.5pt;
+  line-height: 1.32;
+  color: #222;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ===== TOP HEADER ===== */
+.top {
+  position: relative;
+  margin: 0 0 14px 0;
+  min-height: 1.35in;
+}
+.header-bar {
+  background: #B7C9B1;
+  height: 0.95in;
+  margin-left: 0.70in;
+  border-radius: 0 2px 2px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.18in 0 0.85in;
+}
+.photo-wrap {
+  position: absolute;
+  left: 0.02in;
+  top: 0.08in;
+  width: 1.28in;
+  height: 1.28in;
+  z-index: 5;
+}
+.photo-wrap img {
+  width: 1.28in;
+  height: 1.28in;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 4px solid #6B8F71;
+  display: block;
+  background: #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+h1.name {
+  font-size: 22pt;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+  color: #1A1A1A;
+  line-height: 1.05;
+}
+.pro-title {
+  margin: 4px 0 0;
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #1A1A1A;
+}
+
+/* ===== TWO COLUMNS ===== */
+.columns {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32%;
+  padding-right: 14px;
+  border-right: 1px solid #D0D0D0;
+}
+.right {
+  margin-left: 32%;
+  padding-left: 16px;
+  border-left: 1px solid #D0D0D0;
+  min-height: 6in;
+}
+
+/* Section headings */
+h2 {
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #1A1A1A;
+  margin: 0 0 6px;
+  padding: 0 0 3px;
+  border-bottom: 1.5px solid #6B8F71;
+  page-break-after: avoid;
+  break-after: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.left h2 { margin-top: 12px; }
+.left h2:first-child { margin-top: 2px; }
+.right h2 { margin-top: 0; }
+.right h2 + * { margin-top: 0; }
+.right h2.spaced { margin-top: 12px; }
+
+/* Personal info */
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 8px;
+  font-size: 8pt;
+  line-height: 1.3;
+  color: #222;
+}
+.info-icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #6B8F71;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  line-height: 1;
+  margin-top: 1px;
+}
+.info-text { word-break: break-word; }
+.cred-line {
+  margin: 4px 0 0;
+  font-size: 7.5pt;
+  color: #555555;
+  line-height: 1.35;
+}
+.cred-line strong { color: #222; font-weight: 700; }
+
+/* Skills */
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skills li {
+  position: relative;
+  padding: 0 0 5px 12px;
+  font-size: 8pt;
+  line-height: 1.25;
+}
+.skills li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #6B8F71;
+}
+
+/* Education (left) */
+.edu-block { margin: 0 0 6px; }
+.edu-school { font-weight: 700; font-size: 8.5pt; color: #111; margin: 0; }
+.edu-meta { font-size: 7.5pt; color: #555555; margin: 1px 0 3px; }
+.edu-block ul {
+  margin: 2px 0 0 0;
+  padding: 0 0 0 12px;
+}
+.edu-block li {
+  font-size: 7.5pt;
+  margin: 0 0 3px;
+  line-height: 1.3;
+}
+
+/* Profile */
+.profile-text {
+  margin: 0 0 10px;
+  font-size: 8.5pt;
+  line-height: 1.38;
+  text-align: justify;
+}
+
+/* Work experience */
+.job {
+  margin: 0 0 8px;
+  page-break-inside: avoid;
+}
+.job-title {
+  font-weight: 700;
+  font-size: 9pt;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #111;
+  margin: 0;
+  page-break-after: avoid;
+}
+.job-meta {
+  font-size: 8pt;
+  color: #555555;
+  margin: 1px 0 3px;
+  page-break-after: avoid;
+}
+.job ul {
+  margin: 0;
+  padding: 0 0 0 14px;
+}
+.job li {
+  margin: 0 0 2px;
+  font-size: 8pt;
+  line-height: 1.3;
+}
+
+/* Certs */
+.cert-intro {
+  margin: 4px 0 6px;
+  font-size: 8pt;
+  line-height: 1.35;
+}
+.cert {
+  margin: 0 0 5px;
+  page-break-inside: avoid;
+  font-size: 8pt;
+  line-height: 1.3;
+}
+.cert .ctitle { font-weight: 700; color: #111; }
+.cert .cmeta { color: #555555; font-size: 7.5pt; }
+.cert .cnote {
+  font-size: 7.5pt;
+  font-style: italic;
+  color: #666;
+  display: block;
+  margin-top: 1px;
+}
+.guard-card {
+  margin: 0 0 6px;
+  page-break-inside: avoid;
+}
+.guard-card .ctitle { font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="photo-wrap">
+    <img src="photo.jpg" alt="Markeith White">
+  </div>
+  <div class="header-bar">
+    <h1 class="name">MARKEITH WHITE</h1>
+    <p class="pro-title">Security / Door / Loss Prevention</p>
+  </div>
+</div>
+
+<div class="columns">
+  <aside class="left">
+    <h2>Personal Info</h2>
+    <div class="info-item">
+      <div class="info-icon">☎</div>
+      <div class="info-text">(530) 978-9886</div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">✉</div>
+      <div class="info-text">markeithwhite1996@gmail.com</div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div class="info-text">Sacramento, CA 95822</div>
+    </div>
+    <p class="cred-line"><strong>California BSIS Guard Card</strong><br>G-6876341</p>
+    <p class="cred-line"><strong>U.S. Work Authorized</strong></p>
+
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>Venue & Event Security</li>
+      <li>Loss Prevention</li>
+      <li>Access Control & ID Checks</li>
+      <li>Conflict De-escalation</li>
+      <li>Crowd Management</li>
+      <li>Patrol & Surveillance</li>
+      <li>Incident Reporting</li>
+      <li>Observation & Documentation</li>
+      <li>Arrests, Search & Seizure Awareness</li>
+      <li>Liability / Legal Aspects</li>
+      <li>Public Relations</li>
+      <li>Team Leadership</li>
+      <li>Customer Service</li>
+      <li>Staff Training</li>
+      <li>Brand Ambassador / Field Marketing</li>
+    </ul>
+
+    <h2>Education</h2>
+    <div class="edu-block">
+      <p class="edu-school">C.K. McClatchy High School</p>
+      <p class="edu-meta">Sacramento, CA · Diploma, 2015</p>
+      <ul>
+        <li>Sacramento Police Department Criminal Justice Academy — coursework in law enforcement procedures, criminal justice, and community policing.</li>
+        <li>Air Force Junior ROTC — leadership, discipline, teamwork, and physical training.</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="right">
+    <h2>Profile</h2>
+    <p class="profile-text">Security and loss prevention professional with 7+ years protecting nightclubs, live-music venues, bars, events, and retail in Sacramento. Experienced in ID checks, access control, crowd management, conflict de-escalation, patrol, surveillance, and incident reporting. Active California BSIS Security Guard Card with recent BSIS continuing education through TwoProtect Training Institute. Seeking full-time security, door, or loss prevention roles.</p>
+
+    <h2 class="spaced">Work Experience</h2>
+
+    <div class="job">
+      <p class="job-title">Security / Door ID Checker / Event Staff</p>
+      <p class="job-meta">The Rink, Sacramento, CA | March 2026 – Present</p>
+      <ul>
+        <li>Control entry for events: ID checks, capacity limits, and house policies.</li>
+        <li>Maintain a visible security presence, de-escalate conflicts, and coordinate with management during peak events.</li>
+        <li>Support event operations and guest service as event staff.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <p class="job-title">City Manager / Brand Ambassador</p>
+      <p class="job-meta">Oppizi, Sacramento, CA | March 2024 – July 2026</p>
+      <ul>
+        <li>Led city-level marketing activations and street campaigns, including daily logistics and performance reporting.</li>
+        <li>Recruited, trained, and managed teams of brand ambassadors to hit outreach and campaign goals.</li>
+        <li>Represented brands in public-facing settings with professional, high-energy customer engagement.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Barback / Security</p>
+      <p class="job-meta">Dive Bar, Sacramento, CA | 2025 – 2026</p>
+      <ul>
+        <li>Combined door security and barback support on high-volume nightlife shifts, restocking the bar and preventing incidents.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Security / Door Host / Barback</p>
+      <p class="job-meta">Benny's Qst Bar &amp; Grill, Sacramento, CA | 2022 – 2023</p>
+      <ul>
+        <li>Managed guest entry, checked IDs, supported the bar, and kept a secure guest environment.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Security / Loss Prevention</p>
+      <p class="job-meta">Sacramento Natural Foods Co-op, Sacramento, CA | 2021 – 2022</p>
+      <ul>
+        <li>Monitored store activity to prevent theft and keep a safe shopping environment for staff and customers.</li>
+        <li>Documented incidents, reported findings to management, and used de-escalation to resolve conflicts.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Car Hop</p>
+      <p class="job-meta">Sonic Drive-In, Delta Shores, Sacramento, CA | 2019 – 2021</p>
+      <ul>
+        <li>Served customers as a car hop on roller blades in a fast-paced drive-in environment.</li>
+        <li>Delivered orders accurately, handled payments, and maintained friendly, efficient customer service.</li>
+        <li>Skated steady, fast, and controlled while carrying food and drinks across the lot.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Venue Security &amp; Hospitality (Contracted / In-House)</p>
+      <p class="job-meta">MIB Security (K Bar) | Solomon's Deli / The Russ Room | Metro Surveillance Security | Patrol Solutions Security (Badlands Night Club) | Goldfield Trading Post | Sacramento, CA | 2019 – 2022</p>
+      <ul>
+        <li>Door security and patron screening for nightclubs, bars, and events: IDs, crowd control, and policy enforcement.</li>
+        <li>Patrolled indoor and outdoor areas, responded to incidents, and coordinated with management and law enforcement.</li>
+        <li>Barback and host support including restocking, setup/breakdown, reservations, and guest service.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <p class="job-title">Petitioner / Community Outreach</p>
+      <p class="job-meta">Discovery Petitions / Bay Area Petitions, California | 2015 – 2017</p>
+      <ul>
+        <li>Engaged the public at high-traffic locations and events, collecting 1,000+ petition signatures while keeping accurate records and following state election-law rules.</li>
+      </ul>
+    </div>
+
+    <h2 class="spaced">Licenses and Certifications</h2>
+
+    <div class="guard-card">
+      <p class="ctitle">California BSIS Security Guard Card — G-6876341</p>
+      <p class="cmeta">California BSIS operator credential (guard card)</p>
+    </div>
+
+    <p class="cert-intro"><strong>BSIS Continuing Education &amp; Training</strong> — TwoProtect Training Institute (CA training license TFF1266). 36 hours of 2025 BSIS CE plus original PTA/WMD training.</p>
+
+    <div class="cert">
+      <span class="ctitle">8-Hour BSIS Annual Refresher</span> (Course GCC-2025) — 8 hours<br>
+      <span class="cmeta">Completed: December 15, 2025 | Serial: 569317 | Issuer: TwoProtect Training Institute (TFF1266)</span><br>
+      <span class="cmeta">Modules: PTA — 1hr; AUOF — 2hrs; Communication and its Significance — 1hr; Public Relations — 1hr; Observation &amp; Documentation — 1hr; Liability / Legal Aspects — 1hr; Arrests, Search &amp; Seizure — 1hr</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Public Relations</span> (Course SC-103) — 4 hours<br>
+      <span class="cmeta">Completed: December 14, 2025 | Serial: 569140 | Issuer: TwoProtect Training Institute (TFF1266)</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Observation and Documentation</span> (Course SC-104) — 4 hours<br>
+      <span class="cmeta">Completed: December 13, 2025 | Serial: 569132 | Issuer: TwoProtect Training Institute (TFF1266)</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Liability — Legal Aspects</span> (Course SC-105) — 4 hours<br>
+      <span class="cmeta">Completed: December 12, 2025 | Serial: 569051 | Issuer: TwoProtect Training Institute (TFF1266)</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Officer Safety</span> (Course SC-107) — 4 hours<br>
+      <span class="cmeta">Completed: December 12, 2025 | Serial: 569029 | Issuer: TwoProtect Training Institute (TFF1266)</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Arrests, Search and Seizure</span> (Course SC-109) — 4 hours<br>
+      <span class="cmeta">Completed: December 11, 2025 | Serial: 568856 | Issuer: TwoProtect Training Institute (TFF1266)</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Trespass</span> (Course SC-106) — 4 hours<br>
+      <span class="cmeta">Completed: December 11, 2025 | Serial: 568861 | Issuer: TwoProtect Training Institute (TFF1266)</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Chemical Agents</span> (Course SC-116) — 2 hours<br>
+      <span class="cmeta">Completed: December 8, 2025 | Serial: 568604 | Issuer: TwoProtect Training Institute (TFF1266)</span><br>
+      <span class="cnote">Online CE — not valid to carry chemical spray in California; in-person training is required for that.</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Parking and Traffic Control</span> (Course SC-122) — 2 hours<br>
+      <span class="cmeta">Completed: December 7, 2025 | Serial: 568489 | Issuer: TwoProtect Training Institute (TFF1266)</span>
+    </div>
+
+    <div class="cert">
+      <span class="ctitle">Power to Arrest &amp; Weapons of Mass Destruction</span> (Course SC-101) — 8 hours<br>
+      <span class="cmeta">Completed: June 7, 2018 | Serial: 144928 | Issuer: TwoProtect Training Institute (TFF1266)</span><br>
+      <span class="cnote">Original 8-hour PTA &amp; WMD. Certificate serial expired July 1, 2024 — current PTA hours are in the 2025 annual refresher.</span>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>

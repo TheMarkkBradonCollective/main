@@ -33,6 +33,15 @@ if (appIcons.status !== 0) {
   console.warn('⚠ App icon sync skipped or partial (network / missing sources).');
 }
 
+console.log('→ Syncing classifieds from My-Projects.json…');
+const classifieds = spawnSync(process.execPath, [resolve(root, 'scripts/sync-classifieds.mjs')], {
+  cwd: root,
+  stdio: 'inherit',
+});
+if (classifieds.status !== 0) {
+  console.warn('⚠ Classifieds sync failed.');
+}
+
 console.log('→ Syncing APK catalog…');
 const apkCatalog = spawnSync(process.execPath, [resolve(root, 'scripts/sync-apk-catalog.mjs')], {
   cwd: root,
@@ -40,6 +49,15 @@ const apkCatalog = spawnSync(process.execPath, [resolve(root, 'scripts/sync-apk-
 });
 if (apkCatalog.status !== 0) {
   console.warn('⚠ APK catalog sync skipped or partial (network / missing sources).');
+}
+
+console.log('→ Syncing Founder Bridge metrics…');
+const founderBridge = spawnSync(process.execPath, [resolve(root, 'scripts/sync-founder-bridge.mjs')], {
+  cwd: root,
+  stdio: 'inherit',
+});
+if (founderBridge.status !== 0) {
+  console.warn('⚠ Founder Bridge sync skipped or partial (network / missing sources).');
 }
 
 // 1) PWA icons (skip gracefully if sharp isn't installed and icons already exist)
@@ -107,6 +125,7 @@ const htmlFiles = [
   'download/index.html',
   'support/index.html',
   'request/index.html',
+  'founder/index.html',
 ];
 for (const rel of htmlFiles) {
   const htmlPath = resolve(root, rel);
@@ -119,6 +138,10 @@ for (const rel of htmlFiles) {
   html = html.replace(/(src="[^"]*timeline\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*showcase\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   html = html.replace(/(src="[^"]*security\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*store\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(href="[^"]*store\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(href="[^"]*founder\.css)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
+  html = html.replace(/(src="[^"]*founder\.js)(?:\?v=[^"]*)?"/g, `$1?v=${version}"`);
   writeFileSync(htmlPath, html);
 }
 console.log('→ Cache-busted CSS/JS in HTML pages');

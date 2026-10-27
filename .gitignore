@@ -12,3 +12,7 @@ aabs/**/latest.json
 play-scaffolds/
 download/android/keystore.properties
 Navigate/android/keystore.properties
+!download/releases/*.zip
+download/releases/MBC-All-APKs-*.zip
+release/*.zip
+release/staging-*/

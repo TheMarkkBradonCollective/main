@@ -43,7 +43,7 @@
       }
     ],
     "github": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://www.sacramentobuynothing.com/logo.png",
       "https://www.sacramentobuynothing.com/Logo.jpeg",
@@ -147,7 +147,7 @@
       "cookverse"
     ],
     "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
-    "githubPrivate": false,
+    "githubPrivate": true,
     "iconSources": [
       "https://strainverse-tmbc.vercel.app/pwa-512.png"
     ],
@@ -468,7 +468,11 @@
       "https://gigos.vercel.app/favicon.ico"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "GigOS is the operating system for live performance — songs, sets, gigs, and notes without the pre-show scramble.",
       "GigOS Bands is the current product: organize the band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime.",
@@ -793,7 +797,10 @@
       "https://navigate-tmbc.vercel.app/icon-512.png"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet"],
+    "platforms": [
+      "phone",
+      "tablet"
+    ],
     "readDetails": [
       "Navigate is MBC's custom GPS app — OpenStreetMap on the phone, OSRM routing, no Google Maps API key required for the base experience.",
       "Navigate and YouCarPlay ship together from the AndroidAutoApps repo. Android Auto registers Navigate on your car dashboard; Apple CarPlay would be a separate native build later.",
@@ -803,7 +810,8 @@
       "Custom GPS stack",
       "Android Auto shell",
       "MBC App Store distribution"
-    ]
+    ],
+    "localMirrorFallback": true
   },
   {
     "slug": "guardr",
@@ -1041,7 +1049,11 @@
       "https://www.buffalobuynothing.com/logo.png"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "TheBuffaloFree is the Buffalo edition of the buy-nothing stack — neighbors post gifts, asks, and trades with no selling and no ads.",
       "Same product family as TheSacramentoFree; tuned for Buffalo neighborhoods and the buffalobuynothing.com site."
@@ -1072,12 +1084,19 @@
       "https://github.com/TheMarkkBradonCollective/Brandr/raw/main/favicon.ico"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "Brandr is part of the shipped app set under TheMarkkBradonCollective on GitHub.",
       "Open the repo for the current UI, routes, and deploy instructions — this listing stays thin until showcase shots land."
     ],
-    "highlights": ["Shipped · MBC", "Source on GitHub"]
+    "highlights": [
+      "Shipped · MBC",
+      "Source on GitHub"
+    ]
   },
   {
     "slug": "checkdeck",
@@ -1099,12 +1118,19 @@
       "https://github.com/TheMarkkBradonCollective/CheckDeck/raw/main/favicon.ico"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "CheckDeck ships from its own repo under TheMarkkBradonCollective.",
       "Open GitHub for the current feature set — showcase screenshots will follow when they are captured."
     ],
-    "highlights": ["Shipped · MBC", "Source on GitHub"]
+    "highlights": [
+      "Shipped · MBC",
+      "Source on GitHub"
+    ]
   },
   {
     "slug": "portr",
@@ -1125,7 +1151,11 @@
       "https://raw.githubusercontent.com/TheMarkkBradonCollective/FoodDelivery/main/brands/store/porter-512.png"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "Portr is a monorepo marketplace — customer (Portr), delivery (Portr Runner), business (Portr Vendor), and ops (Portr Command).",
       "APKs publish through the MBC App Store; the company site at portr.com covers downloads, login, and how the ecosystem fits together."
@@ -1156,12 +1186,19 @@
       "https://github.com/TheMarkkBradonCollective/FREQ/raw/main/favicon.ico"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "FREQ ships from TheMarkkBradonCollective/FREQ on GitHub.",
       "This classified listing stays thin until live URL and showcase shots are wired in."
     ],
-    "highlights": ["Shipped · MBC", "Source on GitHub"]
+    "highlights": [
+      "Shipped · MBC",
+      "Source on GitHub"
+    ]
   },
   {
     "slug": "groupdominoscore",
@@ -1183,12 +1220,19 @@
       "https://github.com/TheMarkkBradonCollective/GroupDominoScore/raw/main/favicon.ico"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "Domino Score ships as GroupDominoScore on GitHub — built for group domino scorekeeping.",
       "Open the repo for gameplay rules, UI, and install steps."
     ],
-    "highlights": ["Group scorekeeping", "Shipped · MBC"]
+    "highlights": [
+      "Group scorekeeping",
+      "Shipped · MBC"
+    ]
   },
   {
     "slug": "hangman",
@@ -1210,12 +1254,19 @@
       "https://github.com/TheMarkkBradonCollective/HangMan/raw/main/favicon.ico"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "HangMan ships from TheMarkkBradonCollective/HangMan.",
       "Open GitHub for the current build and install path."
     ],
-    "highlights": ["Shipped · MBC", "Source on GitHub"]
+    "highlights": [
+      "Shipped · MBC",
+      "Source on GitHub"
+    ]
   },
   {
     "slug": "me-us-them",
@@ -1237,12 +1288,19 @@
       "https://me-us-them.vercel.app/icon.png"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "MeUs-Them deploys at me-us-them.vercel.app with source in TheMarkkBradonCollective/MeUs-Them.",
       "Showcase screenshots will land when device captures are synced."
     ],
-    "highlights": ["Live on Vercel", "Source on GitHub"]
+    "highlights": [
+      "Live on Vercel",
+      "Source on GitHub"
+    ]
   },
   {
     "slug": "myvenue",
@@ -1264,12 +1322,19 @@
       "https://my-venue.vercel.app/icon.png"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "MyVenue runs at my-venue.vercel.app with code in TheMarkkBradonCollective/MyVenue.",
       "Open the repo for venue flows and deploy notes."
     ],
-    "highlights": ["Live on Vercel", "Source on GitHub"]
+    "highlights": [
+      "Live on Vercel",
+      "Source on GitHub"
+    ]
   },
   {
     "slug": "markkade",
@@ -1291,11 +1356,18 @@
       "https://the-markkade-tmbc.vercel.app/icon.png"
     ],
     "screenshots": [],
-    "platforms": ["phone", "tablet", "chromebook"],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
     "readDetails": [
       "TheMarkkade.io was the earlier Collective portfolio host; this listing points at the shipped Vercel deploy and GitHub repo.",
       "For the current newspaper site and classifieds, use themarkkbradoncollective.github.io/main — this app remains in the catalog as a shipped deploy."
     ],
-    "highlights": ["Portfolio hub", "Source on GitHub"]
+    "highlights": [
+      "Portfolio hub",
+      "Source on GitHub"
+    ]
   }
 ]

@@ -5,6 +5,7 @@ app/build/
 local.properties
 gradle-8.6/
 gradle.zip
+mbc-store-release.keystore
 
 # IDE
 .idea/

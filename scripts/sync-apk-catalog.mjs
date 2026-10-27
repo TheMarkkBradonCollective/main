@@ -6,7 +6,7 @@
  * mirrored to apks/{slug}/ on this site so downloads stay public.
  */
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -67,6 +67,10 @@ function getGithubToken() {
 }
 
 const githubToken = getGithubToken();
+const forceMirror =
+  process.env.MIRROR_ALL_APKS === '1' ||
+  process.env.MIRROR_ALL_APKS === 'true' ||
+  process.argv.includes('--mirror-all');
 
 function githubHeaders(extra = {}) {
   const headers = {
@@ -235,8 +239,10 @@ function rankGithubApk(path) {
 }
 
 function pickBestGithubApk(apks) {
-  if (!apks.length) return null;
-  return [...apks].sort((a, b) => {
+  const real = apks.filter((entry) => !entry.size || entry.size >= 50_000);
+  const pool = real.length ? real : apks;
+  if (!pool.length) return null;
+  return [...pool].sort((a, b) => {
     const versionDiff = compareVersions(
       parseVersionFromFilename(b.path.split('/').pop()),
       parseVersionFromFilename(a.path.split('/').pop())
@@ -294,7 +300,7 @@ async function resolveGithubDownload(app, owner, repo, entry, isPrivate) {
   const fileName = entry.path.split('/').pop();
   const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${entry.branch}/${entry.path}`;
 
-  if (!isPrivate && (await isRealApk(rawUrl))) {
+  if (!forceMirror && !isPrivate && (await isRealApk(rawUrl))) {
     return {
       downloadUrl: rawUrl,
       downloadName: fileName,
@@ -326,11 +332,23 @@ async function discoverGithubApk(app) {
   const isPrivate = meta?.private === true || app.githubPrivate === true;
 
   const apks = await fetchGithubApkTree(owner, repo);
-  const best = pickBestGithubApk(apks);
-  if (!best) return null;
+  const ranked = [...apks].sort((a, b) => {
+    const versionDiff = compareVersions(
+      parseVersionFromFilename(b.path.split('/').pop()),
+      parseVersionFromFilename(a.path.split('/').pop())
+    );
+    if (versionDiff !== 0) return versionDiff;
+    return rankGithubApk(b.path) - rankGithubApk(a.path);
+  });
 
-  const primary = await resolveGithubDownload(app, owner, repo, best, isPrivate);
-  if (!primary) return null;
+  let best = null;
+  let primary = null;
+  for (const candidate of ranked.length ? ranked : [pickBestGithubApk(apks)].filter(Boolean)) {
+    best = candidate;
+    primary = await resolveGithubDownload(app, owner, repo, candidate, isPrivate);
+    if (primary) break;
+  }
+  if (!best || !primary) return null;
 
   const fileName = best.path.split('/').pop();
   const version = parseVersionFromFilename(fileName);
@@ -417,23 +435,29 @@ async function discoverLocalMirror(app) {
 }
 
 async function discoverApp(app) {
-  const base = normalizeBase(app.url);
-  const manifest = await fetchVersionManifest(base);
-  let android = manifest ? apkFromManifest(base, manifest) : null;
+  const apkOnly = app.apkOnly === true;
+  const base = app.url && !apkOnly ? normalizeBase(app.url) : null;
+  let manifest = null;
+  let android = null;
 
-  if (android?.downloadUrl && !(await isRealApk(android.downloadUrl))) {
-    android = null;
-  }
+  if (base && !apkOnly) {
+    manifest = await fetchVersionManifest(base);
+    android = manifest ? apkFromManifest(base, manifest) : null;
 
-  if (!android) {
-    android = await probeCandidates(base, app.slug, manifest);
+    if (android?.downloadUrl && !(await isRealApk(android.downloadUrl))) {
+      android = null;
+    }
+
+    if (!android) {
+      android = await probeCandidates(base, app.slug, manifest);
+    }
   }
 
   if (!android && (app.github || app.apkGithub)) {
     android = await discoverGithubApk(app);
   }
 
-  if (!android) {
+  if (!android && (!app.githubPrivate || app.localMirrorFallback === true)) {
     android = await discoverLocalMirror(app);
   }
 
@@ -454,15 +478,16 @@ async function discoverApp(app) {
     name: app.name,
     tagline: app.tagline,
     section: app.section,
-    webUrl: app.url,
+    webUrl: apkOnly ? null : app.url,
+    apkOnly: apkOnly || undefined,
     icon: `icons/apps/${app.slug}.png`,
     webVersion,
     android: android
       ? { status: 'available', ...android }
       : {
-          status: 'web-only',
+          status: apkOnly ? 'coming-soon' : 'web-only',
           version: webVersion,
-          releaseNotes: 'Coming soon',
+          releaseNotes: apkOnly ? 'APK coming soon' : 'Coming soon',
         },
   };
 }
@@ -470,9 +495,17 @@ async function discoverApp(app) {
 const apps = JSON.parse(await readFile(catalogPath, 'utf8'));
 console.log(`\nSyncing APK catalog for ${apps.length} apps…`);
 if (githubToken) {
-  console.log('GitHub token found — private repos can be scanned and mirrored.\n');
+  console.log(
+    forceMirror
+      ? 'GitHub token found — mirroring all APKs to apks/ on this site.\n'
+      : 'GitHub token found — private repos can be scanned and mirrored.\n'
+  );
 } else {
   console.log('No GITHUB_TOKEN — only public repos and live deployments.\n');
+  if (forceMirror) {
+    console.error('MIRROR_ALL_APKS requires GITHUB_TOKEN (or gh auth token).');
+    process.exit(1);
+  }
 }
 
 const results = [];
@@ -509,18 +542,30 @@ const catalog = {
 };
 
 async function readStoreAppMeta() {
-  const storeApk = join(root, 'apks', 'mbc-store', 'MBC-Store-v1.0.0.apk');
+  const storeVersion = '1.0.0';
+  const apkName = `MBC-Store-v${storeVersion}.apk`;
+  const zipName = `MBC-Store-v${storeVersion}.zip`;
+  const storeApk = join(root, 'apks', 'mbc-store', apkName);
   try {
     const buffer = await readFile(storeApk);
     const sha256 = createHash('sha256').update(buffer).digest('hex');
+    let zipFileSize = null;
+    try {
+      zipFileSize = (await stat(join(root, 'download', 'releases', zipName))).size;
+    } catch {
+      /* zip optional until package-mbc-store-zip runs */
+    }
     return {
       packageId: 'com.themarkkbradoncollective.store',
       name: 'MBC Store',
-      version: '1.0.0',
+      version: storeVersion,
       versionCode: 100,
-      downloadUrl: 'apks/mbc-store/MBC-Store-v1.0.0.apk',
-      downloadName: 'MBC-Store-v1.0.0.apk',
+      downloadUrl: `apks/mbc-store/${apkName}`,
+      downloadName: apkName,
+      zipDownloadUrl: `download/releases/${zipName}`,
+      zipDownloadName: zipName,
       fileSize: buffer.length,
+      zipFileSize,
       sha256,
       releaseNotes:
         'MBC Store — install and update every Markk Brandon Collective Android app from one catalog.',

@@ -13,6 +13,14 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
+    signingConfigs {
+        create("release") {
+            storeFile = file("../mbc-store-release.keystore")
+            storePassword = "mbcstore"
+            keyAlias = "mbcstore"
+            keyPassword = "mbcstore"
+        }
+    }
     namespace = "com.themarkkbradoncollective.store"
     compileSdk = 34
 

@@ -13,6 +13,8 @@ function isNetworkOnly(url) {
   if (path.endsWith('/sw.js') || path.endsWith('/version.json')) return true;
   if (path.endsWith('.html') || path.endsWith('/') || !/\.[a-z0-9]+$/i.test(path)) return true;
   if (/\.(css|js|json)$/i.test(path)) return true;
+  if (/\.apk$/i.test(path)) return true;
+  if (/\.zip$/i.test(path)) return true;
   if (path.includes('/images/')) return true;
   return false;
 }

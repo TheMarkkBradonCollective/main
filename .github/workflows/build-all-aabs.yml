@@ -25,7 +25,7 @@ jobs:
           node-version: '22'
 
       - name: Install root dependencies
-        run: npm ci
+        run: npm install
 
       - name: Compute build matrix from APK catalog
         id: matrix
@@ -51,7 +51,7 @@ jobs:
           java-version: '21'
 
       - name: Install root dependencies
-        run: npm ci
+        run: npm install
 
       - name: Skip empty matrix slot
         if: matrix.app == '__skip__'
@@ -112,7 +112,7 @@ jobs:
           java-version: '21'
 
       - name: Install root dependencies
-        run: npm ci
+        run: npm install
 
       - name: Skip empty matrix slot
         if: matrix.app == '__skip__'

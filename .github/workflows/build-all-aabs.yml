@@ -12,12 +12,32 @@ on:
       - 'apk-catalog.json'
 
 jobs:
+  prepare-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      local: ${{ steps.matrix.outputs.local }}
+      cloned: ${{ steps.matrix.outputs.cloned }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Compute build matrix from APK catalog
+        id: matrix
+        run: node scripts/play/ci-matrix.mjs
+
   build-local-aabs:
+    needs: prepare-matrix
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        app: [mbc-store, navigate]
+        app: ${{ fromJson(needs.prepare-matrix.outputs.local) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,7 +53,12 @@ jobs:
       - name: Install root dependencies
         run: npm ci
 
+      - name: Skip empty matrix slot
+        if: matrix.app == '__skip__'
+        run: echo "No local AAB apps in catalog — skipping."
+
       - name: Restore keystores
+        if: matrix.app != '__skip__'
         env:
           MBC_KEYSTORE_B64: ${{ secrets.MBC_UPLOAD_KEYSTORE_BASE64 }}
           NAV_KEYSTORE_B64: ${{ secrets.NAVIGATE_KEYSTORE_BASE64 }}
@@ -47,9 +72,11 @@ jobs:
           fi
 
       - name: Sync play app catalog
+        if: matrix.app != '__skip__'
         run: node scripts/play/sync-play-apps.mjs
 
       - name: Build AAB
+        if: matrix.app != '__skip__'
         env:
           MBC_UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.MBC_UPLOAD_KEYSTORE_PASSWORD }}
           MBC_UPLOAD_KEY_PASSWORD: ${{ secrets.MBC_UPLOAD_KEY_PASSWORD }}
@@ -58,6 +85,7 @@ jobs:
         run: npm run play:build -- ${{ matrix.app }}
 
       - name: Upload AAB artifact
+        if: matrix.app != '__skip__'
         uses: actions/upload-artifact@v4
         with:
           name: aab-${{ matrix.app }}
@@ -65,19 +93,12 @@ jobs:
           if-no-files-found: error
 
   build-cloned-aabs:
+    needs: prepare-matrix
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        app:
-          - buynothing
-          - strainverse
-          - spiritsverse
-          - cookverse
-          - friendr
-          - findr
-          - chatr
-          - sss
+        app: ${{ fromJson(needs.prepare-matrix.outputs.cloned) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -93,7 +114,12 @@ jobs:
       - name: Install root dependencies
         run: npm ci
 
+      - name: Skip empty matrix slot
+        if: matrix.app == '__skip__'
+        run: echo "No clone-build apps in catalog — skipping."
+
       - name: Restore upload keystore
+        if: matrix.app != '__skip__'
         env:
           MBC_KEYSTORE_B64: ${{ secrets.MBC_UPLOAD_KEYSTORE_BASE64 }}
         run: |
@@ -103,16 +129,26 @@ jobs:
           fi
 
       - name: Sync play app catalog
+        if: matrix.app != '__skip__'
         run: node scripts/play/sync-play-apps.mjs
 
       - name: Build AAB from private repo
+        if: matrix.app != '__skip__'
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.GH_PAT }}
           MBC_UPLOAD_KEYSTORE_PASSWORD: ${{ secrets.MBC_UPLOAD_KEYSTORE_PASSWORD }}
           MBC_UPLOAD_KEY_PASSWORD: ${{ secrets.MBC_UPLOAD_KEY_PASSWORD }}
-        run: npm run play:build -- ${{ matrix.app }}
+        run: |
+          if [ -z "$GH_PAT" ]; then
+            echo "GH_PAT secret not configured — skipping private repo clone for ${{ matrix.app }}."
+            mkdir -p "aabs/${{ matrix.app }}"
+            exit 0
+          fi
+          export GITHUB_TOKEN="$GH_PAT"
+          npm run play:build -- ${{ matrix.app }}
 
       - name: Upload AAB artifact
+        if: matrix.app != '__skip__'
         uses: actions/upload-artifact@v4
         with:
           name: aab-${{ matrix.app }}

@@ -126,8 +126,17 @@ async function buildViaRepoScript(app) {
   const script = scriptMap[app.slug];
   if (!script || !existsSync(script)) return null;
 
+  const projectRoot = path.dirname(path.dirname(script));
+  if (existsSync(path.join(projectRoot, 'package.json'))) {
+    if (existsSync(path.join(projectRoot, 'package-lock.json'))) {
+      run('npm', ['ci'], { cwd: projectRoot });
+    } else {
+      run('npm', ['install'], { cwd: projectRoot });
+    }
+  }
+
   await ensureAndroidSdk();
-  run(process.execPath, [script], { cwd: path.dirname(path.dirname(script)) });
+  run(process.execPath, [script], { cwd: projectRoot });
   const latestPath = path.join(repoRoot, config.outputDir, app.slug, 'latest.json');
   if (!existsSync(latestPath)) throw new Error(`${app.slug}: repo build script did not write latest.json`);
   return JSON.parse(readFileSync(latestPath, 'utf8'));

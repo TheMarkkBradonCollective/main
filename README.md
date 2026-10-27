@@ -118,13 +118,6 @@ Source code can live in **private** GitHub repos while APKs stay downloadable fr
 
 Only `main` stays public — it hosts the newspaper site and mirrored APKs on GitHub Pages. Future syncs need `GITHUB_TOKEN` to pull new builds from private repos and re-mirror them.
 
-To flip private catalog repos back to public:
-
-```bash
-export GITHUB_TOKEN=ghp_your_org_owner_token   # classic PAT, repo scope
-npm run make-repos-public
-```
-
 APK sync discovers builds in `release/`, `android-app/`, etc. and can **mirror** them to `apks/{slug}/` on this site:
 
 ```bash

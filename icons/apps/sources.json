@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "gigos",
+    "name": "GigOS",
+    "projectUrl": "https://gigos.vercel.app",
+    "source": "https://gigos.vercel.app/favicon.ico",
+    "file": "icons/apps/gigos.png"
+  },
+  {
+    "slug": "portr",
+    "name": "Portr",
+    "projectUrl": "https://portr.com",
+    "source": "https://raw.githubusercontent.com/TheMarkkBradonCollective/FoodDelivery/main/brands/store/porter-512.png",
+    "file": "icons/apps/portr.png"
+  }
+]

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+release/
+*.keystore
+android/navigate-release.keystore
+.DS_Store
+.idea/
+local.properties
+capacitor.config.json

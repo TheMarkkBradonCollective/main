@@ -1,0 +1,1301 @@
+[
+  {
+    "slug": "buynothing",
+    "theme": "buynothing",
+    "name": "TheSacramentoFree",
+    "tagline": "Give Freely. Ask Kindly.",
+    "url": "https://www.sacramentobuynothing.com",
+    "section": "community",
+    "listing": "Listing #001",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "See what neighbors are giving — before you join.",
+    "description": "Community-powered free gifting for Sacramento neighbors — plus live Go Get pickup in the Android app. No selling, no bidding, no flipping. 100% free, no ads, ever.",
+    "features": [
+      {
+        "title": "Neighborhood feed",
+        "blurb": "Giving, looking, and trade — filter by area, photos, and pickup.",
+        "shot": 0
+      },
+      {
+        "title": "Listing detail",
+        "blurb": "Photos, pickup notes, and message the poster when you’re ready.",
+        "shot": 1
+      },
+      {
+        "title": "Your neighbor profile",
+        "blurb": "Track what you’ve given and claimed in your sector.",
+        "shot": 2
+      }
+    ],
+    "steps": [
+      {
+        "title": "Browse the feed",
+        "blurb": "See live gifts near you."
+      },
+      {
+        "title": "Open a listing",
+        "blurb": "Check photos and pickup notes."
+      },
+      {
+        "title": "Go get it",
+        "blurb": "Coordinate with a neighbor — free."
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
+    "githubPrivate": false,
+    "iconSources": [
+      "https://www.sacramentobuynothing.com/logo.png",
+      "https://www.sacramentobuynothing.com/Logo.jpeg",
+      "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/buynothing-phone-hero.jpg",
+        "caption": "TheSacramentoFree on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/buynothing-2.jpg",
+        "caption": "Listing detail"
+      },
+      {
+        "src": "images/screenshots/buynothing-3.jpg",
+        "caption": "Neighbor profile"
+      },
+      {
+        "src": "images/screenshots/buynothing.jpg",
+        "caption": "Listing preview"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "TheSacramentoFree is a neighborhood gifting board — not a marketplace. Neighbors post what they are giving away, what they need, or what they would trade. No money changes hands.",
+      "Built for Sacramento because this is home. The website covers give, ask, map, events, and messages. The Android app adds Go Get: live map pickup, both people locked onto the trip until the item changes hands.",
+      "No ads, no data selling, no premium tier. If you use it and want it to stay online, the Support page is there."
+    ],
+    "highlights": [
+      "100% free · no ads",
+      "Sacramento neighborhoods",
+      "PWA on phone, tablet, Chromebook"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/buynothing-tablet-hero.jpg",
+        "caption": "TheSacramentoFree on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/buynothing-desktop-hero.jpg",
+        "caption": "TheSacramentoFree on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "strainverse",
+    "theme": "verse",
+    "verseAccent": "#2d6a4f",
+    "verseTint": "#e8f5ee",
+    "name": "StrainVerse",
+    "tagline": "Stoner-First Social Network",
+    "url": "https://strainverse-tmbc.vercel.app",
+    "section": "lifestyle",
+    "listing": "Listing #002",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Inside the Verse — strains, sessions, and your stash.",
+    "description": "Cannabis-centered social platform with strain directory, HerbHub, SocialSesh chats, MatchIt, and community feeds.",
+    "features": [
+      {
+        "title": "Strain detail",
+        "blurb": "Genetics, effects, flavors, and live chat on every strain.",
+        "shot": 0
+      },
+      {
+        "title": "HerbHub",
+        "blurb": "Stories and posts from the culture — add yours.",
+        "shot": 1
+      },
+      {
+        "title": "MatchIt",
+        "blurb": "Find people near you once you set a city.",
+        "shot": 2
+      },
+      {
+        "title": "SocialSesh",
+        "blurb": "Private and public smoke sessions.",
+        "shot": 3
+      },
+      {
+        "title": "My Stash",
+        "blurb": "Your profile, posts, and friends in one place.",
+        "shot": 4
+      }
+    ],
+    "sisters": [
+      "spiritsverse",
+      "cookverse"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
+    "githubPrivate": false,
+    "iconSources": [
+      "https://strainverse-tmbc.vercel.app/pwa-512.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/strainverse-phone-hero.jpg",
+        "caption": "StrainVerse on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/strainverse-3.jpg",
+        "caption": "HerbHub"
+      },
+      {
+        "src": "images/screenshots/strainverse-4.jpg",
+        "caption": "MatchIt"
+      },
+      {
+        "src": "images/screenshots/strainverse-5.jpg",
+        "caption": "SocialSesh"
+      },
+      {
+        "src": "images/screenshots/strainverse-6.jpg",
+        "caption": "My Stash"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "StrainVerse is a cannabis-first social network — strain directory, community feeds, HerbHub stories, SocialSesh chats, and MatchIt for meeting people near you.",
+      "Part of the Verse family alongside SpiritsVerse and Cookverse. Same newspaper energy on the Collective site; full color inside the app. Works on phone, tablet, and desktop Chromebook as a PWA.",
+      "Free to use. Real database, real moderation hooks, real features — not a landing-page demo."
+    ],
+    "highlights": [
+      "Strain directory + social feeds",
+      "HerbHub & SocialSesh",
+      "Verse family app"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/strainverse-tablet-hero.jpg",
+        "caption": "StrainVerse on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/strainverse-desktop-hero.jpg",
+        "caption": "StrainVerse on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "spiritsverse",
+    "theme": "verse",
+    "verseAccent": "#0d9488",
+    "verseTint": "#e6fffa",
+    "name": "SpiritsVerse",
+    "tagline": "Social Network for Drink Lovers",
+    "url": "https://spiritsverse-tmbc.vercel.app",
+    "section": "lifestyle",
+    "listing": "Listing #003",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Inside the Verse — drinks, crawls, and SipStream.",
+    "description": "Cocktails, beer, spirits, wine. Drink Directory, SipStream, Local Pub map, BarSesh groups, digital bar.",
+    "features": [
+      {
+        "title": "Drink feed",
+        "blurb": "Thousands of pours — filter by flavor mood and type.",
+        "shot": 0
+      },
+      {
+        "title": "Bar Crawl",
+        "blurb": "Public routes and multi-stop nights you can start.",
+        "shot": 1
+      },
+      {
+        "title": "SipStream",
+        "blurb": "Live updates from bars and homes.",
+        "shot": 2
+      },
+      {
+        "title": "Local map",
+        "blurb": "Bars, pubs, and clubs near you.",
+        "shot": 3
+      },
+      {
+        "title": "Your bar profile",
+        "blurb": "Edit bio, track your pours, own your shelf.",
+        "shot": 4
+      }
+    ],
+    "sisters": [
+      "strainverse",
+      "cookverse"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/spiritsverse-phone-hero.jpg",
+        "caption": "SpiritsVerse on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/spiritsverse-3.jpg",
+        "caption": "Bar Crawl"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-4.jpg",
+        "caption": "SipStream"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-5.jpg",
+        "caption": "Local map"
+      },
+      {
+        "src": "images/screenshots/spiritsverse-6.jpg",
+        "caption": "Profile"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "SpiritsVerse is the drinks side of the Verse — cocktails, beer, wine, spirits. Drink Directory, SipStream live updates, Local Pub map, BarSesh groups, and your digital bar shelf.",
+      "Built the same way as StrainVerse: Supabase backend, PWA install on Android phone, tablet, or Chromebook. One account, three screen sizes.",
+      "For people who care about what is in the glass and who they share a pour with."
+    ],
+    "highlights": [
+      "Drink Directory & SipStream",
+      "Bar Crawl routes",
+      "Local pub map"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/spiritsverse-tablet-hero.jpg",
+        "caption": "SpiritsVerse on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/spiritsverse-desktop-hero.jpg",
+        "caption": "SpiritsVerse on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "cookverse",
+    "theme": "verse",
+    "verseAccent": "#e85d04",
+    "verseTint": "#fff4eb",
+    "name": "Cookverse",
+    "tagline": "The Social Table",
+    "url": "https://cookverse-tmbc.vercel.app",
+    "section": "lifestyle",
+    "listing": "Listing #004",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Inside the Verse — recipes, pantry, and the table.",
+    "description": "Social cooking with Chef Gemini AI — pairings, substitutions, techniques, kitchen experiments. Part of the Verse family.",
+    "features": [
+      {
+        "title": "The Table",
+        "blurb": "Home feed — what’s cooking, categories, trending.",
+        "shot": 0
+      },
+      {
+        "title": "Create a dish",
+        "blurb": "New recipe flow with cover photo and kitchen tools.",
+        "shot": 1
+      },
+      {
+        "title": "My Pantry",
+        "blurb": "Stock ingredients from thousands of items.",
+        "shot": 2
+      },
+      {
+        "title": "Profile kitchen",
+        "blurb": "Followers, dishes, and your saved recipes.",
+        "shot": 3
+      },
+      {
+        "title": "The Forum",
+        "blurb": "Kitchen stories from the community.",
+        "shot": 4
+      }
+    ],
+    "sisters": [
+      "strainverse",
+      "spiritsverse"
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://cookverse-tmbc.vercel.app/logo-mark.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/cookverse-phone-hero.jpg",
+        "caption": "Cookverse on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/cookverse-2.jpg",
+        "caption": "Create a dish"
+      },
+      {
+        "src": "images/screenshots/cookverse-3.jpg",
+        "caption": "My Pantry"
+      },
+      {
+        "src": "images/screenshots/cookverse-4.jpg",
+        "caption": "Profile"
+      },
+      {
+        "src": "images/screenshots/cookverse-5.jpg",
+        "caption": "The Forum"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Cookverse is the social table — recipes, pantry tracking, Chef Gemini AI for pairings and substitutions, and a community forum for kitchen experiments.",
+      "Third sister in the Verse. Responsive layouts mean the same app on your phone in the kitchen, a tablet on the counter, or a Chromebook for longer writes.",
+      "Free, ad-free, and meant to be used weekly — not once and forgotten."
+    ],
+    "highlights": [
+      "Chef Gemini AI assistant",
+      "Pantry + recipes",
+      "Community forum"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/cookverse-tablet-hero.jpg",
+        "caption": "Cookverse on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/cookverse-desktop-hero.jpg",
+        "caption": "Cookverse on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "gigos",
+    "theme": "gigos",
+    "name": "GigOS",
+    "tagline": "The operating system for live performance",
+    "url": "https://gigos.vercel.app",
+    "section": "lifestyle",
+    "listing": "Listing #005",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Less chaos. Better shows.",
+    "description": "Organize your band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime. GigOS Bands keeps songs, sets, gigs, and performance notes in one clear system.",
+    "features": [
+      {
+        "title": "Bands",
+        "blurb": "Keep the roster, songs, and notes in one place.",
+        "shot": 0
+      },
+      {
+        "title": "Sets & gigs",
+        "blurb": "Build reusable sets and plan the next show.",
+        "shot": 0
+      },
+      {
+        "title": "Live Mode",
+        "blurb": "Stay aligned from rehearsal through showtime.",
+        "shot": 0
+      }
+    ],
+    "steps": [
+      {
+        "title": "Create an account",
+        "blurb": "Sign up and start a band space."
+      },
+      {
+        "title": "Load songs and sets",
+        "blurb": "Reusable set lists instead of scattered notes."
+      },
+      {
+        "title": "Run the gig",
+        "blurb": "Live Mode keeps the room on the same page."
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/GigOS",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://gigos.vercel.app/favicon.ico"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "GigOS is the operating system for live performance — songs, sets, gigs, and notes without the pre-show scramble.",
+      "GigOS Bands is the current product: organize the band, build reusable sets, plan gigs, and keep everyone aligned from rehearsal to showtime.",
+      "Free to try on the web. Android APK will land in the MBC App Store when a build ships."
+    ],
+    "highlights": [
+      "Songs, sets, and gigs",
+      "Live Mode for showtime",
+      "Less chaos. Better shows."
+    ]
+  },
+  {
+    "slug": "friendr",
+    "theme": "friendr",
+    "name": "Friendr",
+    "tagline": "Consent-First Social Connection",
+    "url": "https://friendr-tmbc.vercel.app",
+    "section": "social",
+    "listing": "Listing #006",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Three layers. You decide how far things go.",
+    "description": "Free, ad-free social app with three opt-in layers: Friends, A Bit More, and Way More. 18+ ID-verified, human moderation, no data sold.",
+    "features": [
+      {
+        "title": "Consent-first home",
+        "blurb": "Friends · A Bit More · Way More — opt in on purpose.",
+        "shot": 0
+      },
+      {
+        "title": "18+ ID verification",
+        "blurb": "Real checks before the deeper layers unlock.",
+        "shot": 1
+      }
+    ],
+    "layers": [
+      {
+        "title": "Friends",
+        "blurb": "Connection without the dating pressure."
+      },
+      {
+        "title": "A Bit More",
+        "blurb": "Opt-in when you want something closer."
+      },
+      {
+        "title": "Way More",
+        "blurb": "The deepest layer — still your call."
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Friendr",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://friendr-tmbc.vercel.app/icons/icon-512.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/friendr-phone-hero.jpg",
+        "caption": "Friendr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/friendr-2.jpg",
+        "caption": "ID verification"
+      },
+      {
+        "src": "images/screenshots/friendr.jpg",
+        "caption": "Get started"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Friendr is consent-first social connection. Three opt-in layers: Friends, A Bit More, and Way More. You choose how far things go — the app never opts you in.",
+      "18+ ID verification before deeper layers unlock. Human moderation, no ads, no data sold. Android PWA plus tablet and Chromebook layouts.",
+      "Built as a direct answer to paywalled, ad-driven social apps that treat people as inventory."
+    ],
+    "highlights": [
+      "Three consent layers",
+      "18+ ID verified",
+      "No ads · no data sold"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/friendr-tablet-hero.jpg",
+        "caption": "Friendr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/friendr-desktop-hero.jpg",
+        "caption": "Friendr on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "findr",
+    "theme": "findr",
+    "name": "Findr",
+    "tagline": "Location sharing for your people",
+    "url": "https://findr-tmbc.vercel.app",
+    "section": "social",
+    "listing": "Listing #008",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Account on the web. Live map with your people.",
+    "description": "Share live location with the people you trust — account on the web, map sharing from the Findr app.",
+    "features": [
+      {
+        "title": "Account home",
+        "blurb": "Profile, devices, privacy, and open the live app.",
+        "shot": 0
+      },
+      {
+        "title": "Account & security",
+        "blurb": "Handle, bio, password, and Findr+ controls.",
+        "shot": 1
+      },
+      {
+        "title": "Get started",
+        "blurb": "Sign up, then install for map sharing.",
+        "shot": 2
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Findr",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://findr-tmbc.vercel.app/logo.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/findr-phone-hero.jpg",
+        "caption": "Findr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/findr-2.jpg",
+        "caption": "Profile & security"
+      },
+      {
+        "src": "images/screenshots/findr.jpg",
+        "caption": "Get started"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Findr is live location sharing for people you trust. Account and privacy controls on the web; map sharing from the mobile app.",
+      "Works across phone, tablet, and Chromebook for account management. The map experience is tuned for mobile; settings and billing are comfortable on a laptop too.",
+      "Free core — Findr+ adds extras without locking basics behind a wall."
+    ],
+    "highlights": [
+      "Trust-circle location sharing",
+      "Web account + mobile map",
+      "Privacy controls built in"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/findr-tablet-hero.jpg",
+        "caption": "Findr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/findr-desktop-hero.jpg",
+        "caption": "Findr on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "chatr",
+    "theme": "chatr",
+    "name": "Chatr",
+    "tagline": "Secure Private Chat",
+    "url": "https://chatr-tmbc.vercel.app",
+    "section": "social",
+    "listing": "Listing #007",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Pin encrypted sticky notes to anyone with a code.",
+    "description": "Your private bulletin board — pin encrypted sticky notes to anyone with a code. Works offline and syncs when you're back.",
+    "features": [
+      {
+        "title": "Pin to the board",
+        "blurb": "Pick a name — get your code on the corkboard.",
+        "shot": 0
+      },
+      {
+        "title": "Share your code",
+        "blurb": "Invite link + connect by typing their code.",
+        "shot": 1
+      },
+      {
+        "title": "Chats / notes",
+        "blurb": "Encrypted notes land on your board.",
+        "shot": 2
+      },
+      {
+        "title": "Account & expiry",
+        "blurb": "Control how long notes live.",
+        "shot": 3
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Chatr",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://chatr-tmbc.vercel.app/icon.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/chatr-phone-hero.jpg",
+        "caption": "Chatr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/chatr-2.jpg",
+        "caption": "Board & connect"
+      },
+      {
+        "src": "images/screenshots/chatr-3.jpg",
+        "caption": "Chats"
+      },
+      {
+        "src": "images/screenshots/chatr-4.jpg",
+        "caption": "Account"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Chatr is a private bulletin board. Pin encrypted sticky notes to anyone with a code. Works offline and syncs when you are back.",
+      "No phone number required. No public feed. Connect by code, write a note, it lands on their board. PWA on Android, tablet, and Chromebook.",
+      "For conversations that should not live in a group chat forever."
+    ],
+    "highlights": [
+      "Encrypted sticky notes",
+      "Connect by code",
+      "Offline-capable PWA"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/chatr-tablet-hero.jpg",
+        "caption": "Chatr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/chatr-desktop-hero.jpg",
+        "caption": "Chatr on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "navigate",
+    "theme": "navigate",
+    "name": "Navigate",
+    "tagline": "Custom GPS · Android Auto",
+    "url": "https://navigate-tmbc.vercel.app",
+    "section": "navigation",
+    "listing": "Navigation · A",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Your map. Your route. Your dashboard.",
+    "description": "Custom GPS navigation with OpenStreetMap routing and Android Auto in-car support. Shipped with YouCarPlay from the AndroidAutoApps repo — built for drivers who want their own stack, not another subscription map app.",
+    "features": [
+      {
+        "title": "Live GPS map",
+        "blurb": "OpenStreetMap tiles with your position updating in real time.",
+        "shot": 0
+      },
+      {
+        "title": "Route planning",
+        "blurb": "Search a destination and get turn-by-turn steps via OSRM.",
+        "shot": 1
+      },
+      {
+        "title": "Android Auto",
+        "blurb": "Shows on your car dashboard when Android Auto is connected.",
+        "shot": 2
+      }
+    ],
+    "steps": [
+      {
+        "title": "Open Navigate",
+        "blurb": "Grant GPS when prompted."
+      },
+      {
+        "title": "Search destination",
+        "blurb": "Type an address or place name."
+      },
+      {
+        "title": "Start navigation",
+        "blurb": "Follow the route on your phone or car display."
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/AndroidAutoApps",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://navigate-tmbc.vercel.app/icon-512.png"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet"],
+    "readDetails": [
+      "Navigate is MBC's custom GPS app — OpenStreetMap on the phone, OSRM routing, no Google Maps API key required for the base experience.",
+      "Navigate and YouCarPlay ship together from the AndroidAutoApps repo. Android Auto registers Navigate on your car dashboard; Apple CarPlay would be a separate native build later.",
+      "Install from The MBC App Store. Updates ship through the same catalog as every other Collective app."
+    ],
+    "highlights": [
+      "Custom GPS stack",
+      "Android Auto shell",
+      "MBC App Store distribution"
+    ]
+  },
+  {
+    "slug": "guardr",
+    "theme": "guardr",
+    "name": "Guardr",
+    "tagline": "Independent Security Marketplace",
+    "url": "https://guardr.co",
+    "section": "security",
+    "listing": "Security · A",
+    "status": "live",
+    "statusLabel": "Active",
+    "heroLine": "Post coverage. Hire licensed guards. Or find the work.",
+    "description": "Connect with protection services on demand — discovering and engaging security professionals, anytime, anywhere.",
+    "features": [
+      {
+        "title": "Marketplace home",
+        "blurb": "Post a job or find work — map-first, licensed only.",
+        "shot": 0
+      },
+      {
+        "title": "Guard sign-in",
+        "blurb": "Jobs and earnings for independent guards.",
+        "shot": 1
+      },
+      {
+        "title": "Create guard account",
+        "blurb": "Independent onboarding for licensed pros.",
+        "shot": 2
+      },
+      {
+        "title": "Create client account",
+        "blurb": "Post coverage requests as a client.",
+        "shot": 3
+      }
+    ],
+    "roles": [
+      {
+        "id": "guard",
+        "title": "Guard",
+        "blurb": "Browse open shifts, clock in, track earnings, and manage your guard profile — independent licensed pros only.",
+        "shot": 1
+      },
+      {
+        "id": "client",
+        "title": "Client",
+        "blurb": "Post coverage requests, schedule shifts, review guard profiles, and hire licensed protection on demand.",
+        "shot": 3
+      },
+      {
+        "id": "staff",
+        "title": "Staff",
+        "blurb": "Operations dashboard — verify licenses, dispatch coverage, monitor active posts, and support guards and clients.",
+        "shot": 0
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Guardr",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://www.guardr.co/logo.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/guardr-phone-hero.jpg",
+        "caption": "Guardr on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/guardr-7.jpg",
+        "caption": "Guard sign-in"
+      },
+      {
+        "src": "images/screenshots/guardr-10.jpg",
+        "caption": "Guard signup"
+      },
+      {
+        "src": "images/screenshots/guardr-11.jpg",
+        "caption": "Client signup"
+      },
+      {
+        "src": "images/screenshots/guardr-5.jpg",
+        "caption": "Explore paths"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Guardr is an independent security marketplace. Clients post coverage needs. Licensed guards browse jobs, clock shifts, and get paid direct. Staff ops handle verification and dispatch.",
+      "Three distinct experiences — Guard, Client, and Staff — each with flows tuned to that role. Map-first job discovery, license checks, and shift tracking.",
+      "Available on Android phone, tablet, and Chromebook/desktop web. Same platform, role-based views."
+    ],
+    "highlights": [
+      "Guard · Client · Staff roles",
+      "Licensed guards only",
+      "Map-first job board"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/guardr-tablet-hero.jpg",
+        "caption": "Guardr on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/guardr-desktop-hero.jpg",
+        "caption": "Guardr on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "sss",
+    "theme": "sss",
+    "name": "Signature Security Specialist",
+    "tagline": "Protect with Purpose · Perform with Excellence",
+    "url": "https://signaturesecurityspecialist.com",
+    "section": "security",
+    "listing": "Security · B",
+    "status": "dev",
+    "statusLabel": "In Development",
+    "heroLine": "Ops, training, and the company behind the badge.",
+    "hideArchives": true,
+    "description": "Executive security company connecting guards, event staff, and medical responders with clients. Mobile-first ops, mission scheduling, training LMS, companion apps.",
+    "features": [
+      {
+        "title": "Company home",
+        "blurb": "Sacramento · San Francisco — persons, places, things.",
+        "shot": 0
+      },
+      {
+        "title": "Training paths",
+        "blurb": "Unarmed, armed, event security — get training.",
+        "shot": 1
+      },
+      {
+        "title": "Certifications",
+        "blurb": "Rank levels and training tracks.",
+        "shot": 2
+      },
+      {
+        "title": "Trusted voices",
+        "blurb": "What clients and pros say.",
+        "shot": 3
+      },
+      {
+        "title": "The platform story",
+        "blurb": "Why Signature exists.",
+        "shot": 4
+      }
+    ],
+    "github": "https://github.com/TheMarkkBradonCollective/Signature-Security-Specialist",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://htakvshlkqebuyjrcxnf.supabase.co/storage/v1/object/public/Site/patch.png"
+    ],
+    "screenshots": [
+      {
+        "src": "images/screenshots/sss-phone-hero.jpg",
+        "caption": "Signature Security Specialist on Google Pixel 6",
+        "device": "phone",
+        "framed": true
+      },
+      {
+        "src": "images/screenshots/sss-5.jpg",
+        "caption": "Training"
+      },
+      {
+        "src": "images/screenshots/sss-9.jpg",
+        "caption": "Certifications"
+      },
+      {
+        "src": "images/screenshots/sss-10.jpg",
+        "caption": "Testimonials"
+      },
+      {
+        "src": "images/screenshots/sss-15.jpg",
+        "caption": "About the platform"
+      }
+    ],
+    "platforms": [
+      "phone",
+      "tablet",
+      "chromebook"
+    ],
+    "readDetails": [
+      "Signature Security Specialist is the company angle — executive protection, event security, training LMS, and ops tooling for guards and medical responders.",
+      "Mobile-first missions, scheduling, certifications, and the public company site. In active development with live training and company pages shipping incrementally.",
+      "Phone for field work, tablet for briefings, Chromebook for admin — all part of the same stack."
+    ],
+    "highlights": [
+      "Training & certifications",
+      "Event & executive security",
+      "Company ops platform"
+    ],
+    "screenshotsTablet": [
+      {
+        "src": "images/screenshots/sss-tablet-hero.jpg",
+        "caption": "Signature Security Specialist on Samsung Galaxy Tab S7",
+        "device": "tablet",
+        "framed": true
+      }
+    ],
+    "screenshotsDesktop": [
+      {
+        "src": "images/screenshots/sss-desktop-hero.jpg",
+        "caption": "Signature Security Specialist on Macbook Air",
+        "device": "desktop",
+        "framed": true
+      }
+    ]
+  },
+  {
+    "slug": "buffalofree",
+    "theme": "buynothing",
+    "name": "TheBuffaloFree",
+    "tagline": "Give Freely. Ask Kindly.",
+    "url": "https://www.buffalobuynothing.com",
+    "section": "community",
+    "listing": "Listing #009",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Buffalo neighbors — give, ask, and trade without a marketplace.",
+    "description": "Community buy-nothing board for Buffalo — the same free gifting lane as TheSacramentoFree, built for a different city.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/TheBuffaloFree",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://www.buffalobuynothing.com/favicon.ico",
+      "https://www.buffalobuynothing.com/logo.png"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "TheBuffaloFree is the Buffalo edition of the buy-nothing stack — neighbors post gifts, asks, and trades with no selling and no ads.",
+      "Same product family as TheSacramentoFree; tuned for Buffalo neighborhoods and the buffalobuynothing.com site."
+    ],
+    "highlights": [
+      "Buy-nothing · Buffalo",
+      "Same lane as Sacramento",
+      "Free to use"
+    ]
+  },
+  {
+    "slug": "brandr",
+    "theme": "default",
+    "name": "Brandr",
+    "tagline": "Brandr",
+    "url": "https://github.com/TheMarkkBradonCollective/Brandr",
+    "section": "lifestyle",
+    "listing": "Listing #010",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Brand tooling from the Collective repo.",
+    "description": "Brandr — shipped app from The Markk Brandon Collective. Source and release notes live on GitHub.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/Brandr",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://github.com/TheMarkkBradonCollective/Brandr/raw/main/public/favicon.ico",
+      "https://github.com/TheMarkkBradonCollective/Brandr/raw/main/favicon.ico"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "Brandr is part of the shipped app set under TheMarkkBradonCollective on GitHub.",
+      "Open the repo for the current UI, routes, and deploy instructions — this listing stays thin until showcase shots land."
+    ],
+    "highlights": ["Shipped · MBC", "Source on GitHub"]
+  },
+  {
+    "slug": "checkdeck",
+    "theme": "default",
+    "name": "CheckDeck",
+    "tagline": "CheckDeck",
+    "url": "https://github.com/TheMarkkBradonCollective/CheckDeck",
+    "section": "lifestyle",
+    "listing": "Listing #011",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "CheckDeck — shipped from the Collective repo.",
+    "description": "CheckDeck — shipped app from The Markk Brandon Collective. Source and release notes live on GitHub.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/CheckDeck",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://github.com/TheMarkkBradonCollective/CheckDeck/raw/main/public/favicon.ico",
+      "https://github.com/TheMarkkBradonCollective/CheckDeck/raw/main/favicon.ico"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "CheckDeck ships from its own repo under TheMarkkBradonCollective.",
+      "Open GitHub for the current feature set — showcase screenshots will follow when they are captured."
+    ],
+    "highlights": ["Shipped · MBC", "Source on GitHub"]
+  },
+  {
+    "slug": "portr",
+    "theme": "default",
+    "name": "Portr",
+    "tagline": "Pick Your Place. Run Your Time.",
+    "url": "https://portr.com",
+    "section": "lifestyle",
+    "listing": "Listing #012",
+    "status": "live",
+    "statusLabel": "Active",
+    "heroLine": "Coverage-driven delivery — customer, runner, vendor, and ops in one marketplace.",
+    "description": "Portr is the coverage-driven delivery marketplace — Portr customer app, Portr Runner, Portr Vendor, and Portr Command ops. Monorepo source lives in FoodDelivery on GitHub; product home is portr.com.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/FoodDelivery",
+    "githubPrivate": false,
+    "iconSources": [
+      "https://raw.githubusercontent.com/TheMarkkBradonCollective/FoodDelivery/main/brands/store/porter-512.png"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "Portr is a monorepo marketplace — customer (Portr), delivery (Portr Runner), business (Portr Vendor), and ops (Portr Command).",
+      "APKs publish through the MBC App Store; the company site at portr.com covers downloads, login, and how the ecosystem fits together."
+    ],
+    "highlights": [
+      "Portr · Runner · Vendor · Command",
+      "Coverage-driven marketplace",
+      "APKs on MBC App Store"
+    ]
+  },
+  {
+    "slug": "freq",
+    "theme": "default",
+    "name": "FREQ",
+    "tagline": "FREQ",
+    "url": "https://github.com/TheMarkkBradonCollective/FREQ",
+    "section": "lifestyle",
+    "listing": "Listing #013",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "FREQ — shipped from the Collective.",
+    "description": "FREQ — shipped app from The Markk Brandon Collective. Source and release notes live on GitHub.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/FREQ",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://github.com/TheMarkkBradonCollective/FREQ/raw/main/public/favicon.ico",
+      "https://github.com/TheMarkkBradonCollective/FREQ/raw/main/favicon.ico"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "FREQ ships from TheMarkkBradonCollective/FREQ on GitHub.",
+      "This classified listing stays thin until live URL and showcase shots are wired in."
+    ],
+    "highlights": ["Shipped · MBC", "Source on GitHub"]
+  },
+  {
+    "slug": "groupdominoscore",
+    "theme": "default",
+    "name": "Domino Score",
+    "tagline": "Group domino scorekeeping",
+    "url": "https://github.com/TheMarkkBradonCollective/GroupDominoScore",
+    "section": "lifestyle",
+    "listing": "Listing #014",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Keep domino night honest — group scores in one place.",
+    "description": "Domino Score (GroupDominoScore) — group scorekeeping app from The Markk Brandon Collective. Source on GitHub.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/GroupDominoScore",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://github.com/TheMarkkBradonCollective/GroupDominoScore/raw/main/public/favicon.ico",
+      "https://github.com/TheMarkkBradonCollective/GroupDominoScore/raw/main/favicon.ico"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "Domino Score ships as GroupDominoScore on GitHub — built for group domino scorekeeping.",
+      "Open the repo for gameplay rules, UI, and install steps."
+    ],
+    "highlights": ["Group scorekeeping", "Shipped · MBC"]
+  },
+  {
+    "slug": "hangman",
+    "theme": "default",
+    "name": "HangMan",
+    "tagline": "HangMan",
+    "url": "https://github.com/TheMarkkBradonCollective/HangMan",
+    "section": "lifestyle",
+    "listing": "Listing #015",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "Classic word game — shipped from HangMan on GitHub.",
+    "description": "HangMan — word game app from The Markk Brandon Collective. Source and release notes live on GitHub.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/HangMan",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://github.com/TheMarkkBradonCollective/HangMan/raw/main/public/favicon.ico",
+      "https://github.com/TheMarkkBradonCollective/HangMan/raw/main/favicon.ico"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "HangMan ships from TheMarkkBradonCollective/HangMan.",
+      "Open GitHub for the current build and install path."
+    ],
+    "highlights": ["Shipped · MBC", "Source on GitHub"]
+  },
+  {
+    "slug": "me-us-them",
+    "theme": "default",
+    "name": "MeUs-Them",
+    "tagline": "MeUs-Them",
+    "url": "https://me-us-them.vercel.app",
+    "section": "social",
+    "listing": "Listing #016",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "MeUs-Them — live on Vercel, source on GitHub.",
+    "description": "MeUs-Them — shipped social app from The Markk Brandon Collective. Try the live site or open the repo on GitHub.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/MeUs-Them",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://me-us-them.vercel.app/favicon.ico",
+      "https://me-us-them.vercel.app/icon.png"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "MeUs-Them deploys at me-us-them.vercel.app with source in TheMarkkBradonCollective/MeUs-Them.",
+      "Showcase screenshots will land when device captures are synced."
+    ],
+    "highlights": ["Live on Vercel", "Source on GitHub"]
+  },
+  {
+    "slug": "myvenue",
+    "theme": "default",
+    "name": "MyVenue",
+    "tagline": "MyVenue",
+    "url": "https://my-venue.vercel.app",
+    "section": "social",
+    "listing": "Listing #017",
+    "status": "live",
+    "statusLabel": "Active · Free",
+    "heroLine": "MyVenue — venue-facing app on Vercel.",
+    "description": "MyVenue — shipped app from The Markk Brandon Collective. Live site on Vercel; source on GitHub.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/MyVenue",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://my-venue.vercel.app/favicon.ico",
+      "https://my-venue.vercel.app/icon.png"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "MyVenue runs at my-venue.vercel.app with code in TheMarkkBradonCollective/MyVenue.",
+      "Open the repo for venue flows and deploy notes."
+    ],
+    "highlights": ["Live on Vercel", "Source on GitHub"]
+  },
+  {
+    "slug": "markkade",
+    "theme": "default",
+    "name": "TheMarkkade",
+    "tagline": "Collective portfolio hub",
+    "url": "https://the-markkade-tmbc.vercel.app",
+    "section": "lifestyle",
+    "listing": "Listing #018",
+    "status": "live",
+    "statusLabel": "Active",
+    "heroLine": "Portfolio and project hub for the Collective.",
+    "description": "TheMarkkade — portfolio and project hub from TheMarkkBradonCollective/TheMarkkade.io. Public site on Vercel; the newspaper front page now lives on GitHub Pages.",
+    "features": [],
+    "github": "https://github.com/TheMarkkBradonCollective/TheMarkkade.io",
+    "githubPrivate": true,
+    "iconSources": [
+      "https://the-markkade-tmbc.vercel.app/favicon.ico",
+      "https://the-markkade-tmbc.vercel.app/icon.png"
+    ],
+    "screenshots": [],
+    "platforms": ["phone", "tablet", "chromebook"],
+    "readDetails": [
+      "TheMarkkade.io was the earlier Collective portfolio host; this listing points at the shipped Vercel deploy and GitHub repo.",
+      "For the current newspaper site and classifieds, use themarkkbradoncollective.github.io/main — this app remains in the catalog as a shipped deploy."
+    ],
+    "highlights": ["Portfolio hub", "Source on GitHub"]
+  }
+]

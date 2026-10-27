@@ -1,23 +1,39 @@
 import sharp from 'sharp';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { access, copyFile, mkdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const iconsDir = join(root, 'icons');
+const master = join(iconsDir, 'logo.png');
 
-const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <rect width="512" height="512" fill="#121212"/>
-  <rect x="48" y="48" width="416" height="416" fill="none" stroke="#f7f7f5" stroke-width="6"/>
-  <line x1="48" y1="128" x2="464" y2="128" stroke="#f7f7f5" stroke-width="4"/>
-  <text x="256" y="340" text-anchor="middle" fill="#f7f7f5" font-family="Georgia, 'Times New Roman', serif" font-size="220" font-weight="700">M</text>
-  <text x="256" y="78" text-anchor="middle" fill="#f7f7f5" font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="6">THE MARKK</text>
-  <text x="256" y="108" text-anchor="middle" fill="#f7f7f5" font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="4">BRANDON COLLECTIVE</text>
-</svg>`;
-
+/**
+ * Generates PWA / favicon sizes from the official brand logo (icons/logo.png).
+ * First refreshes transparent logo/wordmark from *-master.png when present.
+ * App icons are composited onto brand black so home-screen tiles stay opaque.
+ */
 await mkdir(iconsDir, { recursive: true });
-await writeFile(join(iconsDir, 'icon.svg'), svg);
+
+const processBrand = spawnSync(process.execPath, [join(root, 'scripts/process-brand-assets.mjs')], {
+  cwd: root,
+  stdio: 'inherit',
+});
+if (processBrand.status !== 0) {
+  console.warn('⚠ Brand asset processing skipped or failed; using existing logo.png');
+}
+
+let source = master;
+try {
+  await access(master);
+} catch {
+  const fallback = join(iconsDir, 'logo-master.png');
+  await access(fallback);
+  source = fallback;
+  await copyFile(fallback, master);
+}
+
+const BRAND_BLACK = { r: 0, g: 0, b: 0, alpha: 255 };
 
 const sizes = [
   { name: 'icon-192.png', size: 192 },
@@ -27,10 +43,22 @@ const sizes = [
 ];
 
 for (const { name, size } of sizes) {
-  await sharp(Buffer.from(svg))
-    .resize(size, size)
+  const logo = await sharp(source)
+    .resize(size, size, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .png()
+    .toBuffer();
+
+  await sharp({
+    create: {
+      width: size,
+      height: size,
+      channels: 4,
+      background: BRAND_BLACK,
+    },
+  })
+    .composite([{ input: logo, gravity: 'centre' }])
     .png()
     .toFile(join(iconsDir, name));
 }
 
-console.log('Generated icons in', iconsDir);
+console.log('Generated icons from brand logo →', iconsDir);

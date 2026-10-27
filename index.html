@@ -3,166 +3,263 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The Markk Brandon Collective — an umbrella of companies by Markk Brandon. The official newspaper of Markeith Nicholas White.">
+<meta name="description" content="The Markk Brandon Collective — free apps and sites built in Sacramento. Try them, sideload APKs, support the work, or hire Markk Brandon for your own build.">
 <meta name="theme-color" content="#121212">
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="MBC">
 <meta name="mobile-web-app-capable" content="yes">
 <title>The Markk Brandon Collective — Front Page</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=1.5.14">
 </head>
 <body>
+<div id="mbc-splash" class="mbc-splash" aria-live="polite">
+  <img class="mbc-splash-logo" src="icons/logo.png" width="120" height="120" alt="The Markk Brandon Collective">
+  <p class="mbc-splash-loading">Loading edition…</p>
+  <p id="mbc-splash-version" class="mbc-splash-version">MBC v1.5.13</p>
+</div>
 <div class="site">
 
-<div class="cover-banner">Sacramento, California · Digital Edition · Vol. I</div>
+<div class="cover-banner">Sacramento, California · Digital Edition · Vol. I · The Markk Brandon Collective</div>
 
 <nav class="site-nav">
   <div class="site-nav-inner">
     <a class="logo" href="index.html">The Markk Brandon Collective</a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Front Page</a></li>
+      <li><a href="about/">About</a></li>
       <li><a href="apps/">The Classifieds</a></li>
+      <li><a href="security/">Security</a></li>
+      <li><a href="download/">Downloads</a></li>
+      <li><a href="support/">Support</a></li>
+      <li><a href="request/">Hire Me</a></li>
     </ul>
   </div>
 </nav>
 
-<header class="masthead" id="front-page">
+<header class="masthead masthead-branded" id="front-page">
   <div class="masthead-top-rule"></div>
   <div class="masthead-edition">
-    <span>Vol. I, No. 1</span>
+    <span>Vol. I, No. 2</span>
     <span class="edition-center">Sacramento, Calif.</span>
-    <span>Saturday, July 25, 2026</span>
+    <span>Thursday, July 30, 2026</span>
   </div>
   <h1>The Markk Brandon<br>Collective</h1>
-  <p class="masthead-tagline">An umbrella of companies by me</p>
+  <p class="masthead-tagline">Free apps worth opening · APKs to sideload · Support if they help you · Hire me if you need a build</p>
   <p class="masthead-rule"><strong>Markeith Nicholas White</strong> · Markk Brandon · StickzCoder.Lua</p>
   <div class="masthead-bottom-rule"></div>
 </header>
 
 <main class="content">
 
-<div class="cover-quote">
-  "Every company has a story. Every venture becomes tomorrow's headline."
-</div>
-
 <section class="bio-hero">
-  <div class="bio-card">
+  <div class="bio-card bio-with-portrait">
+    <a href="about/" class="bio-portrait-link" aria-label="About Markk Brandon">
+      <figure class="bio-portrait">
+        <img
+          src="images/markk-headshot.jpg"
+          width="220"
+          height="293"
+          alt="Markeith Nicholas White"
+          loading="lazy"
+        >
+      </figure>
+    </a>
     <p class="name">Markeith Nicholas White</p>
     <p class="aliases">Markk Brandon · StickzCoder.Lua</p>
     <div class="prose">
-      <p class="drop-cap">Welcome to The Markk Brandon Collective — my personal newspaper and the umbrella behind every company I build. From security marketplaces and social platforms to community apps and AI-powered experiences, this is where my ventures live, launch, and get documented like front-page news.</p>
-      <p>Each company operates independently under one roof. I build software that helps people, run businesses that protect communities, and ship platforms where culture meets code. Every venture that launches becomes tomorrow's headline.</p>
-      <p>Based in Sacramento, California, browse <a href="apps/">The Classifieds</a> for every company in the collective — organized by section, each with its own listing and link to the live site.</p>
+      <p class="drop-cap">Welcome to The Markk Brandon Collective — the classifieds for everything I've been building out of Sacramento. Late nights. Real backends. No “book a demo” nonsense. Some of these started because I got sick of apps charging for basics that should be free — those stay <strong>free to use, no matter what</strong>. Others — StrainVerse, SpiritsVerse, Cookverse — I made because I was bored, curious, or had a random idea at 1 a.m. and couldn't let it go. All of them are here for you to try on your own: live on Vercel, data in Supabase, source on GitHub, domains on GoDaddy, built in Cursor when I need to move.</p>
+      <p>Before all this I ran game servers for five years — Minecraft, FiveM, Assetto Corsa, Beaming, and yes, a Roblox server. Communities don't stick around for a pretty landing page; they stick around when stuff works. That's the energy I brought to the web apps.</p>
+      <p>Three doors on this site: <strong>The Classifieds</strong> — browse and try the work. <strong>GoFundMe</strong> — help keep the free ones online if something actually helped you. <strong>Hire Me</strong> — want your own site or app? Tell me what you're picturing and your budget. I'll reach out if it's a fit.</p>
     </div>
+
+    <section class="ai-note" id="about-ai">
+      <p class="ai-note-label">Real talk, up front</p>
+      <p>I use AI. Not hiding it. You've seen the ads — one prompt, boom, you've got an “app.” What they <em>don't</em> tell you is how basic that actually is. A front page. Maybe a button that goes nowhere. Boring. Dead on arrival. <strong>That is not what I built. That is not what I showcase here.</strong></p>
+      <p>What's actually here is full-stack websites and apps — complete backends, not brochureware. Logins that work. Data that persists. Permissions that mean something. APIs behind every screen. Android builds you can install on your phone. Tap something — something happens. Products, not previews.</p>
+      <p>To pull this off I write and ship in <strong>Cursor</strong> — that's where the actual building happens, feature by feature, bug by bug. Every change goes to <strong>GitHub</strong> so nothing vanishes into the void; I can see what shipped, when, and roll back when I break something at midnight. <strong>Supabase</strong> is the backend: real Postgres tables, auth so people can sign in, storage for uploads and assets, row-level security so users only see what's theirs. <strong>Vercel</strong> keeps the sites and apps live — push to main and it's up, no server closet to babysit. <strong>GoDaddy</strong> holds the domains and DNS so guardr.co, signaturesecurityspecialist.com, and the rest actually resolve to the right deploy instead of a parking page. AI speeds up the typing. It doesn't replace knowing how any of this fits together. I still own the architecture, the deploys, and the 2 a.m. fix when something breaks.</p>
+      <p>Stack that against what those ads are selling and you're looking at roughly <strong>67<span class="six-seven" title="yeah, that meme"> 🫴&nbsp;6&nbsp;7&nbsp;🫴 😏</span>%</strong> more than a one-prompt landing page. Open The Classifieds. Sideload an APK if you want it on your phone. Click into something that interests you, use it for real, and see if any of it actually helps — that's what all of this is here for.</p>
+    </section>
   </div>
   <aside class="bio-sidebar">
-    <h3>At a Glance</h3>
+    <h3>What this site is</h3>
     <ul>
-      <li>Founder, Signature Security Specialist</li>
-      <li>Director, Sacramento Buy Nothing</li>
-      <li>Builder of Guardr, Friendr, Findr, StrainVerse &amp; more</li>
-      <li>Sacramento · San Francisco Bay Area</li>
-      <li>Full-stack · Mobile · AI · Security</li>
+      <li>The Classifieds — my free apps &amp; sites</li>
+      <li>GoFundMe to keep them operating</li>
+      <li>Hire me — request your own build</li>
+      <li>Security Showcase — company, marketplace, certs</li>
+      <li>Sacramento · Bay Area</li>
+      <li>GitHub · GoDaddy · Cursor · Vercel · Supabase</li>
     </ul>
-    <h3 style="margin-top:1.25rem">Sections</h3>
+    <h3 style="margin-top:1.25rem">Jump to</h3>
     <ul>
+      <li><a href="about/#timeline">Career timeline</a></li>
+      <li><a href="about/">About me</a></li>
+      <li><a href="resume/">Résumé (PDF)</a></li>
       <li><a href="apps/">The Classifieds</a></li>
-      <li><a href="apps/#community">Community</a></li>
-      <li><a href="apps/#lifestyle">Lifestyle &amp; Culture</a></li>
-      <li><a href="apps/#social">Social &amp; Connection</a></li>
-      <li><a href="apps/#security">Security &amp; Protection</a></li>
+      <li><a href="download/">Download APKs</a></li>
+      <li><a href="security/">Security Showcase</a></li>
+      <li><a href="support/">GoFundMe / Support</a></li>
+      <li><a href="request/">Request a Build</a></li>
     </ul>
   </aside>
 </section>
 
+<div class="cta-strip">
+  <a class="btn btn-primary" href="apps/">Browse The Classifieds</a>
+  <a class="btn" href="security/">Security Showcase</a>
+  <a class="btn" href="download/">Download APKs</a>
+  <a class="btn" href="support/">Support on GoFundMe</a>
+  <a class="btn" href="request/">Request a Build</a>
+</div>
+
 <section class="section">
   <div class="section-head">
     <p class="kicker">Above the Fold</p>
-    <h2>Today's Headlines</h2>
-    <p>Latest from The Classifieds</p>
+    <h2>Why I build this stuff</h2>
+    <p>Spite, boredom, and apps that ought to stay free</p>
   </div>
 
   <div class="front-grid">
     <div class="front-main">
       <article class="story-card">
-        <p class="kicker">The Classifieds · Community</p>
-        <h3><a href="https://www.sacramentobuynothing.com" target="_blank" rel="noopener">Sacramento Buy Nothing Connects Neighbors Through Free Gifting</a></h3>
-        <p class="deck">Give freely. Ask kindly.</p>
-        <p>A community-powered platform where Sacramento neighbors give away what they no longer need — no selling, no bidding, no flipping. 100% free, no ads, ever.</p>
-        <a class="read-more" href="apps/#community">Read Full Listing →</a>
+        <p class="kicker">Free by design</p>
+        <h3><a href="apps/#social">Built because other apps wouldn't stop charging</a></h3>
+        <p class="deck">You're not the product. Come use the thing.</p>
+        <p>Friendr, Chatr, Findr, TheSacramentoFree — I got tired of watching apps paywall the basics. So I built my own. Free to use. No ads selling your attention. No subscription to unlock what should've been free from the start. Click in. See if any of it fits your life.</p>
+        <a class="read-more" href="apps/">See the free apps →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">The Classifieds · Lifestyle</p>
-        <h3><a href="apps/#lifestyle">StrainVerse, SpiritsVerse &amp; Cookbook.io Build Culture-First Platforms</a></h3>
-        <p class="deck">Where culture meets code</p>
-        <p>Experimental social platforms for cannabis culture, drink lovers, and the kitchen — each powered by Supabase and Gemini AI, built for the communities that live in those worlds.</p>
-        <a class="read-more" href="apps/#lifestyle">Browse Lifestyle →</a>
+        <p class="kicker">For fun / off the top</p>
+        <h3><a href="apps/#lifestyle">StrainVerse, SpiritsVerse &amp; Cookverse</a></h3>
+        <p class="deck">What happens when boredom gets a database.</p>
+        <p>StrainVerse, SpiritsVerse, Cookverse — not pitch decks. Cannabis, drinks, the kitchen. Built for fun, stuck around because people actually used them. Full Supabase backends. Gemini in the mix. Still free. Still weird in the best way. Worth a look if any of that sounds like you.</p>
+        <a class="read-more" href="apps/#lifestyle">Browse the Verse →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">The Classifieds · Social</p>
-        <h3><a href="https://friendr-web.vercel.app" target="_blank" rel="noopener">Friendr &amp; Findr Expand the Social Connection Family</a></h3>
-        <p class="deck">Real people. Real choices. Real discovery.</p>
-        <p>Friendr puts consent first with opt-in intimacy layers, ID verification, and human moderation. Findr joins the family as a new discovery app for finding people, places, and communities.</p>
-        <a class="read-more" href="apps/#social">Read Full Listing →</a>
+        <p class="kicker">Support</p>
+        <h3><a href="support/">I've built a crap ton of free apps — operating them isn't free</a></h3>
+        <p class="deck">Free for you. Not free for me.</p>
+        <p>I've built a crap ton of apps that don't charge you — but hosting, databases, domains, and tools still hit my card every month. If something here saved you time, made you laugh, or just worked when you needed it, the GoFundMe keeps the lights on. No pressure. But that's the lane.</p>
+        <a class="read-more" href="support/">Go to Support →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">The Classifieds · Security</p>
-        <h3><a href="apps/#security">Guardr &amp; Signature Security Specialist Lead Protection Ventures</a></h3>
-        <p class="deck">Code. Create. Protect.</p>
-        <p>An independent security marketplace and an executive security company — two ventures built on the belief that real protection is professionalism first, always.</p>
-        <a class="read-more" href="apps/#security">Browse Security →</a>
+        <p class="kicker">Hire me</p>
+        <h3><a href="request/">Need a website or app? Leave a request</a></h3>
+        <p class="deck">Your idea. My stack. Let's see if it clicks.</p>
+        <p>Got a site or app in your head? This page stays open. Tell me what you're trying to build, who it's for, and your budget range. Five years of game servers taught me uptime; the last few years taught me product. I'll reach out if I can actually help — not to sell you a template.</p>
+        <a class="read-more" href="request/">Open the request form →</a>
       </article>
 
       <article class="story-card">
-        <p class="kicker">Front Page</p>
-        <h3><a href="apps/">The Markk Brandon Collective Opens as Umbrella for Every Company</a></h3>
-        <p class="deck">2026 — A new chapter begins</p>
-        <p>After years of building across security, social, community, and lifestyle platforms, The Markk Brandon Collective launches as the official newspaper and parent company — with every venture listed in The Classifieds.</p>
-        <a class="read-more" href="apps/">Browse The Classifieds →</a>
+        <p class="kicker">Security · separate page</p>
+        <h3><a href="security/">Guardr, Signature Security &amp; the certificates</a></h3>
+        <p class="deck">Protection on two different paths — plus the BSIS wall.</p>
+        <p>I've always wanted entrepreneurship to land in security. <strong>Guardr</strong> is the marketplace — protection on demand, no gatekeepers. <strong>Signature Security Specialist</strong> is the company — ops, guards, events, the real business. Certificates live on the same desk. Same passion, listed apart from the free apps so you know which door you're walking through.</p>
+        <a class="read-more" href="security/">Open the Security Showcase →</a>
       </article>
     </div>
 
     <aside class="front-aside">
-      <p class="sidebar-label">Also in Today's Edition</p>
+      <p class="sidebar-label">Quick links</p>
 
       <div class="sidebar-story">
-        <h4><a href="apps/#community">Sacramento Buy Nothing</a></h4>
-        <p>Free local gifting — give freely, ask kindly.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/buynothing.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="apps/#community">TheSacramentoFree</a></h4>
+            <p>Free local gifting — give freely, ask kindly.</p>
+          </div>
+        </div>
       </div>
       <div class="sidebar-story">
-        <h4><a href="https://strainverse-web.vercel.app" target="_blank" rel="noopener">StrainVerse</a></h4>
-        <p>Stoner-first social network for cannabis culture.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/strainverse.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="https://strainverse-tmbc.vercel.app" target="_blank" rel="noopener">StrainVerse</a></h4>
+            <p>Stoner-first social — for fun, still real.</p>
+          </div>
+        </div>
       </div>
       <div class="sidebar-story">
-        <h4><a href="https://spiritsverse-web.vercel.app" target="_blank" rel="noopener">SpiritsVerse</a></h4>
-        <p>Social network for drink lovers and digital bars.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/spiritsverse.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="https://spiritsverse-tmbc.vercel.app" target="_blank" rel="noopener">SpiritsVerse</a></h4>
+            <p>Drinks, pubs, crawls — boredom build.</p>
+          </div>
+        </div>
       </div>
       <div class="sidebar-story">
-        <h4><a href="https://cookbook-web.vercel.app" target="_blank" rel="noopener">Cookbook.io</a></h4>
-        <p>The Social Table with Chef Gemini AI.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/cookverse.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="https://cookverse-tmbc.vercel.app" target="_blank" rel="noopener">Cookverse</a></h4>
+            <p>The Social Table with Chef Gemini AI.</p>
+          </div>
+        </div>
       </div>
       <div class="sidebar-story">
-        <h4><a href="https://friendr-web.vercel.app" target="_blank" rel="noopener">Friendr</a></h4>
-        <p>Consent-first social connection.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/gigos.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="https://gigos.vercel.app" target="_blank" rel="noopener">GigOS</a></h4>
+            <p>The operating system for live performance.</p>
+          </div>
+        </div>
       </div>
       <div class="sidebar-story">
-        <h4><a href="https://findr-web.vercel.app" target="_blank" rel="noopener">Findr</a></h4>
-        <p>Discovery app — in development.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/friendr.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="https://friendr-tmbc.vercel.app" target="_blank" rel="noopener">Friendr</a></h4>
+            <p>Consent-first. Free. No data sold.</p>
+          </div>
+        </div>
       </div>
       <div class="sidebar-story">
-        <h4><a href="https://www.guardr.co" target="_blank" rel="noopener">Guardr</a></h4>
-        <p>Independent security marketplace.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/chatr.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="https://chatr-tmbc.vercel.app" target="_blank" rel="noopener">Chatr</a></h4>
+            <p>Encrypted sticky-note chat.</p>
+          </div>
+        </div>
       </div>
       <div class="sidebar-story">
-        <h4><a href="https://signaturesecurityspecialist.com" target="_blank" rel="noopener">Signature Security Specialist</a></h4>
-        <p>Executive security operations platform.</p>
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/findr.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="https://findr-tmbc.vercel.app" target="_blank" rel="noopener">Findr</a></h4>
+            <p>Location sharing for your people.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="sidebar-label" style="margin-top:1.25rem">Security Showcase</p>
+      <div class="sidebar-story">
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/guardr.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="security/#guardr">Guardr</a></h4>
+            <p>Independent security marketplace.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-story">
+        <div class="sidebar-story-row">
+          <img class="sidebar-thumb" src="icons/apps/sss.png" width="36" height="36" alt="" loading="lazy">
+          <div>
+            <h4><a href="security/#sss">Signature Security Specialist</a></h4>
+            <p>Executive security ops company.</p>
+          </div>
+        </div>
       </div>
     </aside>
   </div>
@@ -173,24 +270,38 @@
 </div>
 
 <div class="cover-cta">
-  <p>Every company in the collective has its own listing in The Classifieds.</p>
+  <p>You made it this far — might as well click into something. Try an app. Grab an APK. Kick in on GoFundMe if it earned it. Or tell me what <em>you</em> want built.</p>
   <div class="btn-row">
-    <a class="btn btn-primary" href="apps/">Browse The Classifieds</a>
+    <a class="btn btn-primary" href="apps/">The Classifieds</a>
+    <a class="btn" href="security/">Security</a>
+    <a class="btn" href="download/">Downloads</a>
+    <a class="btn" href="support/">Support</a>
+    <a class="btn" href="request/">Hire Me</a>
   </div>
 </div>
 
 </main>
 
 <footer class="site-footer">
+  <a class="footer-brand" href="index.html" aria-label="The Markk Brandon Collective">
+    <p class="footer-masthead">The Markk Brandon Collective</p>
+    <p class="footer-masthead-sub">All the projects fit to ship</p>
+  </a>
   <nav class="footer-nav">
     <a href="index.html">Front Page</a>
+    <a href="about/">About</a>
     <a href="apps/">The Classifieds</a>
+    <a href="security/">Security</a>
+    <a href="download/">Downloads</a>
+    <a href="support/">Support</a>
+    <a href="request/">Hire Me</a>
   </nav>
   <p>&copy; 2026 <strong>Markk Brandon</strong> (Markeith Nicholas White)</p>
   <p>All Rights Reserved · Built with care by <strong>StickzCoder.Lua</strong></p>
+  <p class="site-version">MBC v1.5.13</p>
 </footer>
 
 </div>
-<script src="/js/pwa.js"></script>
+<script src="js/pwa.js?v=1.5.14"></script>
 </body>
 </html>

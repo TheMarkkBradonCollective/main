@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-09-09T22:44:35.777Z",
+  "apps": [
+    {
+      "slug": "mbc-store",
+      "name": "MBC Store",
+      "packageId": "com.themarkkbradoncollective.store",
+      "version": "1.0.0",
+      "versionCode": 100,
+      "fileSize": 3124575,
+      "sha256": "474e8f88eac6b3ecc1b1856ddcaa3fbc4ca598e33d8180a6d70793f932bdf012",
+      "builtAt": "2026-09-09T22:42:40.686Z",
+      "path": "aabs/mbc-store/mbc-store-v1.0.0.aab",
+      "apkArchives": 0,
+      "note": null
+    },
+    {
+      "slug": "navigate",
+      "name": "Navigate",
+      "packageId": "com.themarkkbradoncollective.navigate",
+      "version": "1.0.0",
+      "versionCode": 10000,
+      "fileSize": 4708766,
+      "sha256": "b9f72ba6565bf940ba6223d29e45973874af3fa2c11434359df2003b159c2d83",
+      "builtAt": "2026-09-09T22:44:35.757Z",
+      "path": "Navigate/release/navigate-v1.0.0.aab"
+    }
+  ]
+}

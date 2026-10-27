@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "update": "node scripts/update.mjs",
     "build:apk": "node scripts/build-apk.mjs",
+    "build:aab": "node scripts/build-aab.mjs",
     "release:zip": "node scripts/release-zip.mjs"
   },
   "dependencies": {

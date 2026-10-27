@@ -6,6 +6,7 @@ on:
     branches:
       - cursor/**
     paths:
+      - '.github/workflows/build-all-aabs.yml'
       - 'scripts/play/**'
       - 'download/android/**'
       - 'Navigate/**'

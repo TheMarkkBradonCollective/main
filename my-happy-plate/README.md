@@ -4,13 +4,20 @@ Food truck site for **Tyrone Johnson**.
 
 Tagline: *A Little Happy in Every Bite.*
 
-This folder is the **standalone app**. It is sitting inside The Markk Brandon Collective `main` repo only until GitHub lets us create `TheMarkkBradonCollective/MyHappyPlate`. Split it with the commands below.
+Pre-orders run in the browser for now (`localStorage`). Database comes later — schema is in `migrations/202608280145_init_and_preorders.sql`.
 
-## Live (while still on main)
+## Live
 
-- Public: https://themarkkbradoncollective.github.io/main/my-happy-plate/
-- Pre-order: https://themarkkbradoncollective.github.io/main/my-happy-plate/order/
-- Kitchen: https://themarkkbradoncollective.github.io/main/my-happy-plate/kitchen/
+Public site (GitHub Pages, on the Collective `main` repo until `MyHappyPlate` exists):
+
+- **Home:** https://themarkkbradoncollective.github.io/main/my-happy-plate/
+- **Pre-order:** https://themarkkbradoncollective.github.io/main/my-happy-plate/order/
+
+Kitchen is staff-only (`/kitchen/`, PIN `plate`). Not linked from the public footer.
+
+When this folder is its own repo, Pages will be:
+
+- https://themarkkbradoncollective.github.io/MyHappyPlate/
 
 ## Pre-orders
 
@@ -23,21 +30,15 @@ Customers hold a plate for a pickup window. They pay at the truck.
 
 Dinner quantity counts down when a dinner plate is pre-ordered.
 
-Browser storage for now (`localStorage`). Schema for Supabase is in `migrations/202608280145_init_and_preorders.sql`.
+## Own GitHub repo
 
-## Split into its own GitHub repo
-
-On a machine with repo-create permission:
+This agent cannot create `TheMarkkBradonCollective/MyHappyPlate` (GitHub App 403). Create an **empty public repo** with that name (no README, no .gitignore, no license). Then:
 
 ```bash
-cd my-happy-plate
-git init
-git add .
-git commit -m "My Happy Plate — site, kitchen, pre-orders"
-gh repo create TheMarkkBradonCollective/MyHappyPlate --public --source=. --remote=origin --push
+./scripts/publish-own-repo.sh TheMarkkBradonCollective/MyHappyPlate
 ```
 
-Then point a Vercel project at that repo (this folder is the site root). `vercel.json` is already here.
+That push enables GitHub Pages from `main`. `vercel.json` is here if you point Vercel at the same repo later.
 
 ## Brand
 

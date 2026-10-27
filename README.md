@@ -60,7 +60,13 @@ Signature Security Specialist lives on [`/security/`](security/) with BSIS train
 
 ## Classifieds apps (`My-Projects.json`)
 
-Canonical live links + icon sources for every listed app live in [`My-Projects.json`](My-Projects.json). Icons are pulled from those URLs (GitHub raw when a public repo exists, otherwise the live deployment):
+Canonical live links + icon sources for every listed app live in [`My-Projects.json`](My-Projects.json). **The Classifieds page** (`apps/index.html`) is regenerated from that file (security apps stay on `/security/` only):
+
+```bash
+npm run sync-classifieds
+```
+
+Icons are pulled from the URLs in the catalog (GitHub raw when a public repo exists, otherwise the live deployment):
 
 ```bash
 npm run sync-app-icons

@@ -1,0 +1,11 @@
+{
+  "name": "the-rink-studios",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Concept redesign of The Rink Studios Sacramento venue site",
+  "homepage": "https://themarkkbradoncollective.github.io/the-rink-studios/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheMarkkBradonCollective/the-rink-studios.git"
+  }
+}

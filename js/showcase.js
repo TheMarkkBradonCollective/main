@@ -6,6 +6,7 @@
     community: 'Community',
     lifestyle: 'Lifestyle & Culture',
     social: 'Social & Connection',
+    navigation: 'Navigation & In-Car',
     security: 'Security Company',
   };
 
@@ -161,14 +162,14 @@
   }
 
   function actions(project) {
-    const downloadHref = '../../download/#download-' + encodeURIComponent(project.slug || '');
-    const primary = project.apkOnly
-      ? `<a class="btn btn-primary" href="${downloadHref}">Get APK</a>`
-      : `<a class="btn btn-primary" href="${escapeHtml(project.url)}" target="_blank" rel="noopener">Open live app</a>`;
+    const githubBtn = project.github
+      ? `<a class="btn" href="${escapeHtml(project.github)}" target="_blank" rel="noopener">GitHub</a>`
+      : '';
     return `
       <div class="btn-row sc-actions">
-        ${primary}
-        <a class="btn" href="../../download/">App Store</a>
+        <a class="btn btn-primary" href="${escapeHtml(project.url)}" target="_blank" rel="noopener">Open live app</a>
+        ${githubBtn}
+        <a class="btn" href="../../download/">Downloads</a>
         <a class="btn" href="${catalogHref(project)}">Back to ${catalogLabel(project)}</a>
       </div>`;
   }
@@ -717,6 +718,10 @@
       </div>`;
   }
 
+  function renderNavigate(project) {
+    return renderGigos({ ...project, theme: 'navigate' });
+  }
+
   function renderGigos(project) {
     const shots = project.screenshots;
     return `
@@ -762,6 +767,7 @@
     friendr: renderFriendr,
     findr: renderFindr,
     gigos: renderGigos,
+    navigate: renderNavigate,
     chatr: renderChatr,
     guardr: renderGuardr,
     sss: renderSss,

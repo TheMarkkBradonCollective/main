@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="My Happy Plate — food truck. What's for dinner? Pre-order for pickup.">
+<meta name="description" content="My Happy Plate — Sacramento food truck by Tyrone Johnson. What's for dinner? Pre-order for pickup. A Little Happy in Every Bite.">
+<meta name="theme-color" content="#7a1f33">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://themarkkbradoncollective.github.io/main/my-happy-plate/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="My Happy Plate — A Little Happy in Every Bite">
+<meta property="og:description" content="Today’s food. Made with love. Served fresh. Pre-order so your plate is waiting.">
+<meta property="og:url" content="https://themarkkbradoncollective.github.io/main/my-happy-plate/">
+<meta name="twitter:card" content="summary">
 <title>My Happy Plate — A Little Happy in Every Bite</title>
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
 <link rel="stylesheet" href="styles.css">
@@ -52,117 +61,140 @@
 
 <main id="top">
 <section class="hero">
-  <svg class="hero-plate" viewBox="0 0 220 220" aria-hidden="true">
-    <defs>
-      <radialGradient id="glaze" cx="40%" cy="30%">
-        <stop offset="0%" stop-color="#fffaf3"/>
-        <stop offset="70%" stop-color="#f6efe4"/>
-        <stop offset="100%" stop-color="#e4d4c0"/>
-      </radialGradient>
-    </defs>
-    <circle cx="110" cy="110" r="104" fill="url(#glaze)" stroke="#7a1f33" stroke-width="8"/>
-    <circle cx="110" cy="110" r="62" fill="none" stroke="#355e3b" stroke-width="6"/>
-    <path d="M48 78c28 8 34 48 6 68" fill="none" stroke="#2c2a28" stroke-width="6" stroke-linecap="round"/>
-    <path d="M172 70v76" fill="none" stroke="#2c2a28" stroke-width="6" stroke-linecap="round"/>
-    <path d="M162 70h20" fill="none" stroke="#2c2a28" stroke-width="6"/>
-    <path d="M96 104c8 14 20 14 28 0" fill="none" stroke="#7a1f33" stroke-width="5" stroke-linecap="round"/>
-  </svg>
-  <p class="kicker">Food truck · Tyrone Johnson</p>
-  <h1>A Little Happy in Every Bite.</h1>
-  <p class="lede">Today’s food. Made with love. Served fresh. Pre-order so your plate is waiting.</p>
-  <div class="hero-actions">
-    <a class="btn btn-primary" href="#dinner">See today’s plate</a>
-    <a class="btn btn-ghost" href="order/">Pre-order pickup</a>
+  <div class="hero-inner wrap">
+    <svg class="hero-plate" viewBox="0 0 220 220" aria-hidden="true">
+      <defs>
+        <radialGradient id="glaze" cx="40%" cy="30%">
+          <stop offset="0%" stop-color="#fffaf3"/>
+          <stop offset="70%" stop-color="#f6efe4"/>
+          <stop offset="100%" stop-color="#e4d4c0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="110" cy="110" r="104" fill="url(#glaze)" stroke="#7a1f33" stroke-width="8"/>
+      <circle cx="110" cy="110" r="62" fill="none" stroke="#355e3b" stroke-width="6"/>
+      <path d="M48 78c28 8 34 48 6 68" fill="none" stroke="#2c2a28" stroke-width="6" stroke-linecap="round"/>
+      <path d="M172 70v76" fill="none" stroke="#2c2a28" stroke-width="6" stroke-linecap="round"/>
+      <path d="M162 70h20" fill="none" stroke="#2c2a28" stroke-width="6"/>
+      <path d="M96 104c8 14 20 14 28 0" fill="none" stroke="#7a1f33" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="hero-copy">
+      <p class="kicker">Food truck · Tyrone Johnson · Sacramento</p>
+      <h1>A Little Happy in Every Bite.</h1>
+      <p class="lede">Today’s food. Made with love. Served fresh. Pre-order so your plate is waiting.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#dinner">See today’s plate</a>
+        <a class="btn btn-ghost" href="order/">Pre-order pickup</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="dinner-wrap" id="dinner">
+<section class="today-stage wrap" id="dinner">
   <article class="dinner" id="dinner-card"></article>
+  <aside id="happy">
+    <p class="kicker">⭐ Today’s Happy Plate</p>
+    <div class="happy-card" id="happy-card"></div>
+  </aside>
 </section>
 
-<section id="happy">
-  <p class="kicker">⭐ Today’s Happy Plate</p>
-  <div class="happy-card" id="happy-card"></div>
+<section id="menu" class="band">
+  <div class="wrap">
+    <p class="kicker">What’s being served</p>
+    <h2 id="menu-date">Today’s Happy Plate</h2>
+    <div class="menu-grid" id="menu-grid"></div>
+  </div>
 </section>
 
-<section id="menu">
-  <p class="kicker">What’s being served</p>
-  <h2 id="menu-date">Today’s Happy Plate</h2>
-  <div class="menu-grid" id="menu-grid"></div>
-</section>
-
-<section id="find">
+<section id="find" class="wrap">
   <p class="kicker">📍 Find My Happy Plate</p>
   <h2>Come get you a plate.</h2>
   <div class="find">
     <div class="happy-card">
       <p id="truck-status" class="status-pill">We’re open ❤️</p>
-      <h3 id="truck-label" style="margin:.7rem 0 .3rem">We’re here today</h3>
+      <h3 id="truck-label">We’re here today</h3>
       <p id="truck-address"></p>
       <p id="truck-hours"></p>
-      <p style="margin-top:1rem"><a class="btn btn-green" id="directions" href="#" target="_blank" rel="noopener">Get directions</a></p>
+      <p class="find-actions"><a class="btn btn-green" id="directions" href="#" target="_blank" rel="noopener">Get directions</a></p>
     </div>
     <iframe class="gmap" id="gmap" title="Map of today’s truck stop" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Sacramento%20CA&output=embed"></iframe>
   </div>
 </section>
 
-<section id="home-feel">
-  <p class="kicker">Feels like home</p>
-  <h2>Food that feels like home</h2>
-  <p class="home-copy">My Happy Plate is about more than filling your stomach. It’s about that feeling you get when you sit down with a plate of food and everything feels alright. A Little Happy in Every Bite.</p>
-</section>
-
-<section id="about">
-  <p class="kicker">The person behind the plate</p>
-  <h2>Meet Tyrone</h2>
-  <div class="tyrone-grid">
-    <div class="tyrone-photo" role="img" aria-label="Portrait placeholder for Tyrone Johnson"></div>
-    <div class="tyrone">
-      <h3>Tyrone Johnson</h3>
-      <p>I cook the food I want people to come back for — the plate that tastes like somebody at home made it for you. Comfort first. Fresh when I can. Seasoned like I mean it.</p>
-      <p>Pre-order so I can have it ready when you roll up. Pay at the window.</p>
+<section class="story-band band">
+  <div class="wrap story-grid">
+    <div id="home-feel">
+      <p class="kicker">Feels like home</p>
+      <h2>Food that feels like home</h2>
+      <p class="home-copy">My Happy Plate is about more than filling your stomach. It’s about that feeling you get when you sit down with a plate of food and everything feels alright. A Little Happy in Every Bite.</p>
+    </div>
+    <div id="about">
+      <p class="kicker">The person behind the plate</p>
+      <h2>Meet Tyrone</h2>
+      <div class="tyrone-grid">
+        <div class="tyrone-photo" role="img" aria-label="Portrait placeholder for Tyrone Johnson"></div>
+        <div class="tyrone">
+          <h3>Tyrone Johnson</h3>
+          <p>I cook the food I want people to come back for — the plate that tastes like somebody at home made it for you. Comfort first. Fresh when I can. Seasoned like I mean it.</p>
+          <p>Pre-order so I can have it ready when you roll up. Pay at the window.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
-  <p class="kicker">⭐ Customer favorites</p>
-  <div class="favs">
-    <article class="fav"><h3>Tyrone’s Smothered Chicken Dinner</h3><p>The one people ask for by name.</p></article>
-    <article class="fav"><h3>Mac &amp; Cheese</h3><p>On plates, on the side, in the dinner special — same recipe every time.</p></article>
-    <article class="fav"><h3>Peach cobbler</h3><p>When it’s on the truck, it doesn’t last.</p></article>
+<section class="wrap extras">
+  <div>
+    <p class="kicker">⭐ Customer favorites</p>
+    <div class="favs">
+      <article class="fav"><h3>Tyrone’s Smothered Chicken Dinner</h3><p>The one people ask for by name.</p></article>
+      <article class="fav"><h3>Mac &amp; Cheese</h3><p>On plates, on the side, in the dinner special — same recipe every time.</p></article>
+      <article class="fav"><h3>Peach cobbler</h3><p>When it’s on the truck, it doesn’t last.</p></article>
+    </div>
   </div>
+  <aside id="catering">
+    <p class="kicker">Feed the whole table</p>
+    <h2>Catering</h2>
+    <div class="cater">
+      <p>Family gatherings, office lunches, church events. Tell me how many plates and I’ll build a spread that feels like home.</p>
+    </div>
+  </aside>
 </section>
 
-<section id="catering">
-  <p class="kicker">Feed the whole table</p>
-  <h2>Catering</h2>
-  <div class="cater">
-    <p>Family gatherings, office lunches, church events. Tell me how many plates and I’ll build a spread that feels like home.</p>
-  </div>
-</section>
-
-<section>
+<section class="wrap" id="week">
   <p class="kicker">Dinner history</p>
   <h2>What I made this week</h2>
-  <div class="favs" id="history"></div>
+  <div class="week-strip" id="history"></div>
 </section>
 
-<section id="contact">
-  <p class="kicker">Stay close</p>
-  <h2>Come get you a plate.</h2>
+<section id="contact" class="wrap split-section">
+  <div class="section-head">
+    <p class="kicker">Stay close</p>
+    <h2>Come get you a plate.</h2>
+    <p class="home-copy">Leave a note. Hungry? Hold a plate for pickup instead.</p>
+  </div>
   <form class="happy-card" id="contact-form">
     <label>Name <input name="name" required></label>
-    <label>Message <textarea name="message" required></textarea></label>
-    <p style="margin-top:1rem"><button class="btn btn-primary" type="submit">Send a note</button></p>
+    <label>Message <textarea name="message" required rows="5"></textarea></label>
+    <p class="form-actions"><button class="btn btn-primary" type="submit">Send a note</button></p>
   </form>
 </section>
 </main>
 
 <footer class="site-footer">
-  <p class="footer-brand">My Happy Plate</p>
-  <p>A Little Happy in Every Bite.</p>
-  <p><a href="order/">Pre-order pickup</a> · <a href="kitchen/">Kitchen</a></p>
+  <div class="footer-inner wrap">
+    <div>
+      <p class="footer-brand">My Happy Plate</p>
+      <p>A Little Happy in Every Bite.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="#menu">Menu</a>
+      <a href="#dinner">Dinner</a>
+      <a href="#find">Find us</a>
+      <a href="#about">Tyrone</a>
+      <a href="#catering">Catering</a>
+    </nav>
+    <p><a class="btn btn-primary" href="order/">Pre-order pickup</a></p>
+  </div>
 </footer>
 
 <script src="js/store.js"></script>

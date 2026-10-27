@@ -4,27 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pre-order pickup — My Happy Plate</title>
+<meta name="description" content="Hold a plate at My Happy Plate. Pay at the truck.">
+<meta name="theme-color" content="#7a1f33">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
 <link rel="stylesheet" href="../styles.css">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 </head>
 <body data-season="fall">
 <header class="site-header">
   <div class="nav-inner">
     <a class="brand" href="../index.html">
-      <span class="brand-name">My Happy Plate</span>
+      <span>
+        <span class="brand-name">My Happy Plate</span>
+        <span class="brand-tag">A Little Happy in Every Bite</span>
+      </span>
     </a>
-    <a class="btn btn-ghost" href="../index.html">Back to menu</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#menu">Today’s Menu</a>
+      <a href="../index.html#dinner">What’s for Dinner?</a>
+      <a href="../index.html#find">Find Us</a>
+    </nav>
+    <a class="btn btn-ghost btn-header" href="../index.html">Back to menu</a>
+    <button class="nav-toggle" type="button" aria-expanded="false">Menu</button>
   </div>
 </header>
 <main>
-  <section>
+  <section class="wrap order-hero">
     <p class="kicker">Hold a plate</p>
     <h2>Pre-order for pickup</h2>
     <p class="home-copy">Tyrone cooks it. You roll up. Pay at the window. No account needed.</p>
   </section>
-  <section class="order-layout">
+  <section class="wrap order-layout">
     <div>
       <h3>Your bag</h3>
       <div id="cart" class="happy-card"></div>
@@ -41,7 +53,7 @@
       <p style="margin-top:1rem"><button class="btn btn-primary" type="submit">Place pre-order</button></p>
     </form>
   </section>
-  <section id="confirm" class="hidden">
+  <section id="confirm" class="wrap hidden">
     <article class="dinner">
       <p class="kicker">You’re on the list ❤️</p>
       <h2 id="confirm-code"></h2>

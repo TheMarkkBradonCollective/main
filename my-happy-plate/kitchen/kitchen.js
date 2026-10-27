@@ -1,6 +1,12 @@
 (function () {
   const $ = (s, r = document) => r.querySelector(s);
   const flow = ["new", "confirmed", "cooking", "ready", "picked_up"];
+  const PIN = "plate";
+  const PIN_KEY = "mhp-kitchen-ok";
+
+  function unlocked() {
+    try { return sessionStorage.getItem(PIN_KEY) === "1"; } catch { return false; }
+  }
 
   function fillDinnerForm() {
     const d = window.MHPStore.state().dinner;
@@ -94,6 +100,31 @@
     f.mapQuery.value = loc.mapQuery || "";
   }
 
+  function notes() {
+    const list = window.MHPStore.load().notes || [];
+    const box = $("#site-notes");
+    if (!box) return;
+    if (!list.length) {
+      box.innerHTML = `<p class="sides">No notes yet. Contact form messages land here.</p>`;
+      return;
+    }
+    box.innerHTML = list.map((n) => {
+      const when = n.at ? new Date(n.at).toLocaleString() : "";
+      return `<article class="admin-item"><div><strong>${n.name || "Guest"}</strong><p>${n.message || ""}</p><p class="sides">${when}</p></div></article>`;
+    }).join("");
+  }
+
+  function showKitchen() {
+    $("#gate")?.classList.add("hidden");
+    $("#kitchen-app")?.classList.remove("hidden");
+    dash();
+    orders();
+    menu();
+    truckForm();
+    fillDinnerForm();
+    notes();
+  }
+
   document.querySelectorAll("[data-open]").forEach((btn) => {
     btn.addEventListener("click", () => {
       $("#dinner-builder").classList.toggle("hidden", btn.dataset.open !== "dinner");
@@ -141,10 +172,24 @@
     dash();
   });
 
-  window.addEventListener("mhp-update", () => { dash(); orders(); });
-  dash();
-  orders();
-  menu();
-  truckForm();
-  fillDinnerForm();
+  $("#pin-form")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const pin = String(e.target.pin.value || "").trim();
+    if (pin !== PIN) {
+      const err = $("#pin-error");
+      if (err) err.hidden = false;
+      return;
+    }
+    sessionStorage.setItem(PIN_KEY, "1");
+    showKitchen();
+  });
+
+  window.addEventListener("mhp-update", () => {
+    if (!unlocked()) return;
+    dash();
+    orders();
+    notes();
+  });
+
+  if (unlocked()) showKitchen();
 })();

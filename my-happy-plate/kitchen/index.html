@@ -10,6 +10,17 @@
 <link rel="stylesheet" href="admin.css">
 </head>
 <body data-season="fall">
+<div id="gate" class="gate">
+  <form class="happy-card" id="pin-form">
+    <p class="kicker">Staff only</p>
+    <h1>Kitchen</h1>
+    <p class="sides">PIN for the line. Not the public menu.</p>
+    <label>Kitchen PIN <input name="pin" type="password" autocomplete="current-password" required></label>
+    <p class="actions"><button class="btn btn-primary" type="submit">Open the board</button></p>
+    <p id="pin-error" class="sides" hidden>Wrong PIN.</p>
+  </form>
+</div>
+<div id="kitchen-app" class="hidden">
 <header class="admin-top">
   <div>
     <p class="kicker">Good morning, Tyrone 👋</p>
@@ -63,6 +74,11 @@
     <div id="admin-menu"></div>
   </section>
 
+  <section id="notes">
+    <h2>Notes from the site</h2>
+    <div id="site-notes"></div>
+  </section>
+
   <section id="truck" class="builder">
     <h2>Truck status</h2>
     <form id="truck-form">
@@ -81,6 +97,7 @@
     </form>
   </section>
 </main>
+</div>
 <script src="../js/store.js"></script>
 <script src="kitchen.js"></script>
 </body>

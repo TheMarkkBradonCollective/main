@@ -1,7 +1,7 @@
 {
   "name": "the-markk-brandon-collective",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "MBC Store — mobile app store PWA for Markk Brandon Collective Android apps (catalog-driven APK downloads)",
   "homepage": "https://mbc-store.pages.dev",
   "repository": {
@@ -33,7 +33,8 @@
     "play:build": "node scripts/play/build-aab.mjs",
     "play:build:all": "node scripts/play/build-aab.mjs --sync --all",
     "play:upload": "node scripts/play/upload-to-play.mjs",
-    "play:upload:all": "node scripts/play/upload-to-play.mjs --all"
+    "play:upload:all": "node scripts/play/upload-to-play.mjs --all",
+    "deploy:pages": "node scripts/deploy-pages.mjs"
   },
   "devDependencies": {
     "googleapis": "^144.0.0",

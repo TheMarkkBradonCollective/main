@@ -13,6 +13,7 @@
   };
 
   let catalog = null;
+  let aboutData = null;
   let route = parseRoute();
   let activeTab = 'home';
   let categoryFilter = 'all';
@@ -118,6 +119,8 @@
     if (hash.startsWith('/categories')) return { view: 'categories' };
     if (hash.startsWith('/settings')) return { view: 'settings' };
     if (hash.startsWith('/apps')) return { view: 'apps' };
+    const aboutMatch = hash.match(/^\/about(?:\/([\w-]+))?/);
+    if (aboutMatch) return { view: 'about', section: aboutMatch[1] || null };
     return { view: 'home' };
   }
 
@@ -283,11 +286,7 @@
         </div>
         <div class="store-settings-row">
           <span>About the collective</span>
-          <a href="about/">Open</a>
-        </div>
-        <div class="store-settings-row">
-          <span>Support &amp; hire</span>
-          <a href="support/">Support</a>
+          <a href="#/about">Open About</a>
         </div>
       </div>
       <p style="font-size:.78rem;color:var(--store-text-muted);line-height:1.45">Catalog updated ${escapeHtml(formatDate(catalog?.generatedAt))}. Sideload APKs from trusted sources only — these builds are from The Markk Brandon Collective, not Google Play.</p>`;
@@ -364,27 +363,51 @@
     });
   }
 
+  async function renderAboutView() {
+    if (!window.MbcStoreAbout) {
+      els.main.innerHTML = '<p class="store-empty">About module failed to load.</p>';
+      return;
+    }
+    try {
+      if (!aboutData) aboutData = await window.MbcStoreAbout.loadAboutData();
+      els.main.innerHTML = window.MbcStoreAbout.renderAboutContent(
+        aboutData,
+        catalog,
+        escapeHtml,
+        route.section
+      );
+      await window.MbcStoreAbout.bindCerts();
+      window.MbcStoreAbout.scrollToSection(route.section);
+    } catch {
+      els.main.innerHTML = '<p class="store-empty">Could not load About page.</p>';
+    }
+  }
+
   function updateChrome() {
     route = parseRoute();
     const isDetail = route.view === 'detail';
+    const isAbout = route.view === 'about';
     els.header?.classList.toggle('has-back', isDetail);
     if (els.back) els.back.hidden = !isDetail;
     if (els.title) {
       if (isDetail) {
         const app = appBySlug(route.slug);
         els.title.textContent = app?.name || 'App';
+      } else if (isAbout) {
+        els.title.textContent = 'About Us';
       } else {
         els.title.textContent = 'MBC Store';
       }
     }
     if (els.search) {
-      els.search.parentElement.style.display = isDetail ? 'none' : '';
+      els.search.parentElement.style.display = isDetail || isAbout ? 'none' : '';
     }
 
     if (route.view === 'home') setTab('home');
     else if (route.view === 'apps') setTab('apps');
     else if (route.view === 'categories') setTab('categories');
     else if (route.view === 'settings') setTab('settings');
+    else if (route.view === 'about') setTab('about');
     else if (route.view === 'detail') setTab('home');
   }
 
@@ -405,6 +428,9 @@
       case 'settings':
         els.main.innerHTML = renderSettings();
         bindSettingsEvents();
+        break;
+      case 'about':
+        void renderAboutView();
         break;
       case 'home':
       default:
@@ -437,6 +463,7 @@
         else if (tab === 'apps') navigate('/apps');
         else if (tab === 'categories') navigate('/categories');
         else if (tab === 'settings') navigate('/settings');
+        else if (tab === 'about') navigate('/about');
       });
     });
 

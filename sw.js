@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mbc-store-v2-0-0';
+const CACHE_NAME = 'mbc-store-v2-1-0';
 
 const PRECACHE_URLS = [
   './icons/icon-192.png',
@@ -7,6 +7,8 @@ const PRECACHE_URLS = [
   './icons/favicon-32.png',
   './css/app-store.css',
   './js/app-store.js',
+  './js/store-about.js',
+  './data/store-about.json',
 ];
 
 function isNetworkOnly(url) {

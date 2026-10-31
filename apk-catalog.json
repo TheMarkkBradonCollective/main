@@ -79,12 +79,12 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "updatedAt": "2026-10-31",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/chatr/latest.apk",
-        "downloadName": "chatr-v1.0.1.apk",
-        "fileSize": 12011783,
-        "releaseNotes": "Central R2 mirror (v1.0.1 staged; release v1.1.0 not reachable from build agent)."
+        "downloadName": "chatr-v1.1.0.apk",
+        "fileSize": 11979975,
+        "releaseNotes": "Central R2 mirror of GitHub release v1.1.0."
       }
     },
     {
@@ -141,14 +141,13 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.0.0",
-        "versionCode": 10000,
+        "version": "2.4.0",
         "updatedAt": "2026-10-31",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/navigate/latest.apk",
-        "downloadName": "navigate-v1.0.0.apk",
-        "fileSize": 4975644,
+        "downloadName": "navigate-v2.4.0.apk",
+        "fileSize": 11677868,
         "packageId": "com.themarkkbradoncollective.navigate",
-        "releaseNotes": "Central R2 mirror (local mirror)."
+        "releaseNotes": "Central R2 mirror of GitHub release latest-2026-10-26."
       }
     },
     {
@@ -161,10 +160,13 @@
       "webUrl": "https://mbc-navigate.pages.dev",
       "screenshots": [],
       "android": {
-        "status": "coming-soon",
-        "version": null,
-        "updatedAt": "2026-10-26",
-        "releaseNotes": "Ships with AndroidAutoApps — APK from release latest-2026-10-26 when mirrored to public hosting."
+        "status": "available",
+        "version": "1.8.0",
+        "updatedAt": "2026-10-31",
+        "releaseNotes": "Central R2 mirror of GitHub release latest-2026-10-26.",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/youcarplay/latest.apk",
+        "downloadName": "youcarplay-v1.8.0.apk",
+        "fileSize": 10273302
       }
     },
     {
@@ -187,7 +189,7 @@
       "slug": "myvenue",
       "name": "MyVenue",
       "tagline": "Venue management",
-      "description": "Venue-facing tools for operators. Android v1.2.0 APK is in progress — use the web app today.",
+      "description": "Venue-facing tools for operators.",
       "category": "lifestyle",
       "newUpdated": true,
       "icon": "icons/apps/myvenue.png",
@@ -197,7 +199,7 @@
         "status": "available",
         "version": "1.1.0",
         "updatedAt": "2026-10-31",
-        "releaseNotes": "MyVenue v1.1.0 on central R2 (v1.2.0 in progress).",
+        "releaseNotes": "Central R2 mirror of GitHub release v1.1.0.",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/myvenue/latest.apk",
         "downloadName": "myvenue-v1.1.0.apk",
         "fileSize": 4010045
@@ -401,12 +403,12 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.2.0",
+        "version": "1.2.2",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/strainverse/latest.apk",
-        "downloadName": "strainverse-v1.2.0.apk",
-        "fileSize": 8039067,
+        "downloadName": "strainverse-v1.2.2.apk",
+        "fileSize": 7888610,
         "updatedAt": "2026-10-31",
-        "releaseNotes": "Central R2 mirror (local mirror)."
+        "releaseNotes": "Central R2 mirror of GitHub release v1.2.2."
       }
     },
     {

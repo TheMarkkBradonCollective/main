@@ -6,6 +6,11 @@ secrets/
 **/keystore.properties
 *.apk
 !apks/**/*.apk
+# Large APK mirrors — canonical copies on R2 (mbc-store-apks)
+apks/friendr/
+apks/buffalofree/
+apks/buynothing/
+download/releases/Verse-v1.zip
 aabs/**/latest.json
 !aabs/**/*.aab
 !aabs/catalog.json

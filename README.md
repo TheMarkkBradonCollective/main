@@ -87,7 +87,9 @@ python3 -m http.server 8080
 
 ## Mirrored APKs & release zips
 
-APKs under `apks/` remain for offline mirroring and the native MBC Store Android shell. Packaging scripts are unchanged:
+Large community APK trees (`apks/friendr/`, `apks/buffalofree/`, `apks/buynothing/`) and `download/releases/Verse-v1.zip` are **not** deployed with Pages (see [`.assetsignore`](.assetsignore)). Canonical downloads live on public R2 bucket **`mbc-store-apks`** — base URL in [`apk-catalog.json`](apk-catalog.json) (`apkCdnBase`, per-app `android.downloadUrl`, and `verseBundle`).
+
+Other APKs under `apks/` remain for offline mirroring and the native MBC Store Android shell. Packaging scripts are unchanged:
 
 ```bash
 npm run mirror-all-apks      # needs GITHUB_TOKEN

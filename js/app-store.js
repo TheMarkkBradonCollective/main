@@ -284,6 +284,14 @@
           <span>Install MBC Store APK</span>
           <a href="${asset(catalog?.storeApp?.downloadUrl || 'apks/mbc-store/MBC-Store-v1.0.0.apk')}" download rel="noopener">Download</a>
         </div>
+        ${
+          catalog?.verseBundle?.downloadUrl
+            ? `<div class="store-settings-row">
+          <span>${escapeHtml(catalog.verseBundle.name || 'The Verse bundle')}</span>
+          <a href="${asset(catalog.verseBundle.downloadUrl)}" download="${escapeHtml(catalog.verseBundle.downloadName || '')}" rel="noopener">Download ZIP</a>
+        </div>`
+            : ''
+        }
         <div class="store-settings-row">
           <span>About the collective</span>
           <a href="#/about">Open About</a>

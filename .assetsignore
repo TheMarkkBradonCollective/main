@@ -1,0 +1,5 @@
+# Cloudflare Pages — skip large binaries (served from mbc-store-apks R2)
+apks/friendr/
+apks/buffalofree/
+apks/buynothing/
+download/releases/Verse-v1.zip

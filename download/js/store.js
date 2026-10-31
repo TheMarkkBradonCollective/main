@@ -148,7 +148,7 @@
         installKey: app.slug,
         name: app.name,
         tagline: app.tagline,
-        section: app.section,
+        section: app.section || app.category,
         webUrl: app.webUrl,
         icon: app.icon,
         android: {

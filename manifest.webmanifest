@@ -1,15 +1,15 @@
 {
-  "name": "The Markk Brandon Collective",
-  "short_name": "MBC",
-  "description": "The Markk Brandon Collective — an umbrella of companies by Markk Brandon, documented like a newspaper.",
+  "name": "MBC Store",
+  "short_name": "MBC Store",
+  "description": "Install and explore Markk Brandon Collective Android apps — featured picks, categories, and APK downloads.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#000000",
-  "theme_color": "#121212",
+  "background_color": "#f5f5f7",
+  "theme_color": "#01875f",
   "lang": "en",
-  "categories": ["business", "news"],
+  "categories": ["utilities", "productivity"],
   "icons": [
     {
       "src": "icons/icon-192.png",

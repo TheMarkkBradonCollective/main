@@ -1,9 +1,9 @@
 {
   "name": "the-markk-brandon-collective",
   "private": true,
-  "version": "1.5.14",
-  "description": "The Markk Brandon Collective — newspaper site, classifieds, security showcase, downloads, support, and hire-me requests",
-  "homepage": "https://themarkkbradoncollective.github.io/main/",
+  "version": "2.0.0",
+  "description": "MBC Store — mobile app store PWA for Markk Brandon Collective Android apps (catalog-driven APK downloads)",
+  "homepage": "https://mbc-store.pages.dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/TheMarkkBradonCollective/main.git"

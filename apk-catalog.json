@@ -403,12 +403,12 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.2.2",
+        "version": "1.3.0",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/strainverse/latest.apk",
-        "downloadName": "strainverse-v1.2.2.apk",
-        "fileSize": 7888610,
+        "downloadName": "strainverse-v1.3.0.apk",
+        "fileSize": 7835125,
         "updatedAt": "2026-10-31",
-        "releaseNotes": "Central R2 mirror of GitHub release v1.2.2."
+        "releaseNotes": "StrainVerse v1.3.0 — mirrored from StrainVerse worker media to central R2."
       }
     },
     {

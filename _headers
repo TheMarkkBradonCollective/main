@@ -1,0 +1,15 @@
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Service-Worker-Allowed: /
+
+/version.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/apk-catalog.json
+  Cache-Control: no-cache, must-revalidate
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+
+/.well-known/assetlinks.json
+  Content-Type: application/json

@@ -1,177 +1,106 @@
-# THE MARKK BRANDON COLLECTIVE
+# MBC Store
 
-> Apps & websites by **Markk Brandon** · **Markeith Nicholas White** — free ones to try, a GoFundMe to keep them running, and a door to hire me.
+> **The Markk Brandon Collective** app store — browse, search, and sideload Android APKs from one installable PWA. Catalog-driven: add an app by editing [`apk-catalog.json`](apk-catalog.json) only.
 
-**Version:** **v1.5.13** (see [`version.json`](version.json))
+**Version:** **v2.0.0** (see [`version.json`](version.json))
 
 ## Live site
 
-**Canonical host:** [themarkkbradoncollective.github.io/main](https://themarkkbradoncollective.github.io/main/)
+**Host:** [Cloudflare Pages](https://pages.cloudflare.com/) (recommended project name: `mbc-store`)
 
-**Repository:** [github.com/TheMarkkBradonCollective/main](https://github.com/TheMarkkBradonCollective/main)
+**Repository:** [github.com/TheMarkkBradonCollective/main](https://github.com/TheMarkkBradonCollective/main) — keep **private**; APKs and static assets deploy from this repo.
 
-This newspaper site ships on **GitHub Pages** only. The old repo name (`TheMarkkade.io`) and Vercel project (`the-markkade-io` / `themarkkbrandoncollective.vercel.app`) are retired — ignore those URLs if they still 404.
+Legacy newspaper pages (`/about/`, `/apps/`, `/support/`, etc.) remain in the tree; the **root `/` is the app store**.
 
-> After deleting the Vercel project, also clear the GitHub repo **Homepage** URL if it still points at `*.vercel.app` (Settings → General → Website). Point it at the Pages link above.
+## Deploy to Cloudflare Pages
 
-## Site Structure
+1. Create a Pages project linked to this GitHub repo (production branch: `main`).
+2. **Build settings:** Framework preset **None**, build command empty, output directory **`.`** (repository root).
+3. Config is in [`wrangler.toml`](wrangler.toml). Optional CLI deploy from a machine with Cloudflare credentials:
 
-| Page | URL | Description |
-|------|-----|-------------|
-| **Front Page** | `/` | Who I am, why I build, AI note, CTAs |
-| **The Classifieds** | `/apps/` | Free apps & sites to try |
-| **Security Showcase** | `/security/` | Signature Security Specialist and BSIS certificates |
-| **Downloads** | `/download/` | Android APK app market — sideload & update MBC apps |
-| **Support** | `/support/` | GoFundMe — keep free apps online |
-| **Hire Me** | `/request/` | Request a website/app build + budget range |
-
-## The Classifieds — Free apps (APK-only)
-
-All catalog apps install from the [MBC App Store](/download/). See [`My-Projects.json`](My-Projects.json) for the full list (19 apps).
-
-| Project | Notes |
-|---------|-------|
-| TheSacramentoFree | Free local gifting · Sacramento |
-| TheBuffaloFree | Free local gifting · Buffalo |
-| StrainVerse | Cannabis social · Verse family |
-| SpiritsVerse | Drinks social · Verse family |
-| Cookverse | Cooking social · Verse family |
-| GigOS | Live performance OS |
-| Friendr | Consent-first social |
-| Chatr | Encrypted sticky-note chat |
-| Findr | Location sharing |
-| Navigate | Custom GPS · Android Auto |
-| Runr | Delivery platform |
-| Dlvrd | Delivery companion |
-| Brandr | Brand tools |
-| CheckDeck | Checklists & decks |
-| HangMan | Classic word game |
-| MyVenue | Venue management |
-| GroupDominoScore | Domino scoreboard |
-| MeUs-Them | Social connection |
-
-## Security Showcase
-
-Signature Security Specialist lives on [`/security/`](security/) with BSIS training certificates. Operator credentials (guard card, etc.) go in `security/certs.json` under `operators` once the scans are in — drop JPEGs in `images/certs/` and add an entry.
-
-| Project | Notes | URL |
-|---------|-------|-----|
-| Signature Security Specialist | Company / ops angle | [signaturesecurityspecialist.com](https://signaturesecurityspecialist.com) |
-
-## Classifieds apps (`My-Projects.json`)
-
-Canonical live links + icon sources for every listed app live in [`My-Projects.json`](My-Projects.json). **The Classifieds page** (`apps/index.html`) is regenerated from that file (security apps stay on `/security/` only):
-
-```bash
-npm run sync-classifieds
-```
-
-Icons are pulled from the URLs in the catalog (GitHub raw when a public repo exists, otherwise the live deployment):
-
-```bash
-npm run sync-app-icons
-```
-
-### GitHub repos
-
-Catalog apps live in repos under `TheMarkkBradonCollective`. Repo URLs and `githubPrivate` flags live in [`My-Projects.json`](My-Projects.json).
-
-| App | Repo | Visibility |
-|-----|------|------------|
-| TheSacramentoFree | `TheSacramentoFree` | Private |
-| TheBuffaloFree | `TheBuffaloFree` | Public |
-| StrainVerse | `StrainVerse` | Public |
-| SpiritsVerse | `SpiritsVerse` | Public |
-| CookVerse | `CookVerse` | Public |
-| Friendr | `Friendr` | Public |
-| Findr | `Findr` | Public |
-| Chatr | `Chatr` | Public |
-| Navigate | `Navigate` | Public |
-| Signature Security Specialist | `Signature-Security-Specialist` | Private |
-| Runr | `Runr` | Public |
-| Dlvrd | `Dlvrd` | Public |
-| Brandr | `Brandr` | Public |
-| CheckDeck | `CheckDeck` | Public |
-| HangMan | `HangMan` | Public |
-| MyVenue | `MyVenue` | Public |
-| MeUs-Them | `MeUs-Them` | Public |
-| GroupDominoScore | `GroupDominoScore` | Public |
-
-All catalog apps are **APK-only** (Vercel sites removed). Install via [MBC App Store](/download/).
-
-### Lock source repos, keep APK downloads public
-
-Source code can live in **private** GitHub repos while APKs stay downloadable from this site:
-
-1. **Mirror every APK** into `apks/{slug}/` on the public `main` repo (needs `GITHUB_TOKEN`):
    ```bash
-   npm run mirror-all-apks
-   ```
-2. **Lock catalog app repos** (sets them private, updates `githubPrivate` in `My-Projects.json`):
-   ```bash
-   npm run lock-catalog-repos
-   ```
-3. **Refresh the catalog** so download links point at mirrored files, not `raw.githubusercontent.com`:
-   ```bash
-   npm run sync-apk-catalog
+   npx wrangler pages deploy . --project-name=mbc-store
    ```
 
-Only `main` stays public — it hosts the newspaper site and mirrored APKs on GitHub Pages. Future syncs need `GITHUB_TOKEN` to pull new builds from private repos and re-mirror them.
+4. Attach a custom domain in the Cloudflare dashboard (e.g. `store.themarkkbradoncollective.com`).
+5. Headers and redirects: [`_headers`](_headers), [`_redirects`](_redirects) (`/download/` → `/`).
 
-APK sync discovers builds in `release/`, `android-app/`, etc. and can **mirror** them to `apks/{slug}/` on this site:
+## App catalog (`apk-catalog.json`)
 
-```bash
-npm run sync-apk-catalog
-# or
-npm run update
+| Field | Purpose |
+|-------|---------|
+| `featuredSlugs` / `newUpdatedSlugs` | Home carousels |
+| `categories` | Category chips and tabs |
+| `apps[].slug` | URL hash `#/app/{slug}` |
+| `apps[].name`, `tagline`, `description` | Listing and detail page |
+| `apps[].category` | Section (navigation, social, lifestyle, …) |
+| `apps[].icon` | Path under repo root or absolute URL |
+| `apps[].webUrl` | Enables **Open web app** when set |
+| `apps[].screenshots` | Optional image paths for detail carousel |
+| `apps[].android.status` | `available`, `coming-soon`, or `web-only` |
+| `apps[].android.downloadUrl` | Public HTTPS or repo-relative APK (prefer R2/worker URLs over private GitHub releases) |
+| `apps[].android.version`, `fileSize`, `updatedAt` | Detail metadata |
+
+Example new app entry:
+
+```json
+{
+  "slug": "my-app",
+  "name": "My App",
+  "tagline": "Short tagline",
+  "description": "Longer copy for the detail page.",
+  "category": "lifestyle",
+  "icon": "icons/apps/my-app.png",
+  "webUrl": "https://my-app.pages.dev",
+  "screenshots": [],
+  "android": {
+    "status": "available",
+    "version": "1.0.0",
+    "updatedAt": "2026-10-31",
+    "downloadUrl": "https://example.r2.dev/my-app.apk",
+    "downloadName": "my-app.apk",
+    "fileSize": 1234567
+  }
+}
 ```
 
-Mirrored APKs are committed under `apks/` (see `.gitignore` exception). Live deployments with `version.json` `apk.ready` still take priority when available.
+`npm run sync-apk-catalog` can still refresh mirrored APK metadata from repos; for production URLs, edit `apk-catalog.json` directly when you ship a new build.
 
-### Download all APKs as one zip (GitHub Releases)
+## Store UI
 
-```bash
-npm run package-apk-release              # latest build per app (~170 MB)
-npm run package-apk-release -- --full    # every mirrored APK incl. archives (~1 GB)
-npm run publish-apk-release              # upload to github.com/.../main/releases
-```
+| Route | Description |
+|-------|-------------|
+| `/` | Home — featured & new carousels, categories, app grid |
+| `#/app/{slug}` | App detail — install button, web link, screenshots, description |
+| `#/apps` | Full list |
+| `#/categories` | Browse by category |
+| `#/settings` | Light/dark theme, MBC Store APK, links to About/Support |
 
-Release tag: `apks-v{version}` from `version.json`. See [`release/README.md`](release/README.md).
+Assets: [`css/app-store.css`](css/app-store.css), [`js/app-store.js`](js/app-store.js), PWA via [`manifest.webmanifest`](manifest.webmanifest) and [`sw.js`](sw.js).
 
-## Brand logo
-
-Masters (black backdrop): [`icons/logo-master.png`](icons/logo-master.png), [`icons/wordmark-master.png`](icons/wordmark-master.png).
-
-Display assets are **transparent PNGs** (black knocked out) so they sit cleanly on the dark splash / masthead and on black brand plates in the nav and footer:
-
-- Circular badge: [`icons/logo.png`](icons/logo.png)
-- Horizontal wordmark: [`icons/wordmark.png`](icons/wordmark.png)
-
-```bash
-npm run process-brand   # masters → transparent logo + wordmark
-npm run sync-app-icons  # pull each app's icon from GitHub / live site → icons/apps/
-npm run sync-apk-catalog  # discover Android APKs from each app's version.json → apk-catalog.json
-npm run generate-icons  # also rebuilds favicon / PWA tiles (opaque black)
-# or
-npm run update
-```
-
-## Local Development
+## Local development
 
 ```bash
 python3 -m http.server 8080
+# open http://localhost:8080/
 ```
 
-## GoFundMe
+## Mirrored APKs & release zips
 
-Edit the campaign URL on [`support/index.html`](support/index.html) (`#gofundme-link`) once the GoFundMe is live.
-
-## App readiness (`/update`)
+APKs under `apks/` remain for offline mirroring and the native MBC Store Android shell. Packaging scripts are unchanged:
 
 ```bash
-npm run update
+npm run mirror-all-apks      # needs GITHUB_TOKEN
+npm run sync-apk-catalog
+npm run package-apk-release
 ```
 
-Cursor slash command **`/update`** — see `.cursor/commands/update.md`.
+## Brand & icons
+
+```bash
+npm run process-brand
+npm run sync-app-icons
+npm run generate-icons
+```
 
 © 2026 Markk Brandon (Markeith Nicholas White)

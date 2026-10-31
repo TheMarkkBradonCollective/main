@@ -1,0 +1,4 @@
+# Cloudflare Pages — MBC Store (static site, repo root)
+name = "mbc-store"
+compatibility_date = "2024-08-01"
+pages_build_output_dir = "."

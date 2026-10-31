@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-31T14:38:00.000Z",
+  "generatedAt": "2026-10-31T14:42:00.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -315,11 +315,13 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.0.0",
+        "version": "1.2.0",
+        "updatedAt": "2026-10-31",
+        "packageId": "com.tmbcworks.friendr",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/friendr/latest.apk",
-        "downloadName": "friendr.apk",
-        "fileSize": 26937950,
-        "releaseNotes": "Central R2 mirror — Friendr v1.0.0."
+        "downloadName": "friendr-v1.2.0.apk",
+        "fileSize": 26786399,
+        "releaseNotes": "Friendr v1.2.0 — mirrored from friendr worker to central R2."
       }
     },
     {

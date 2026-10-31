@@ -512,9 +512,283 @@ body.store-body {
   font-size: 0.82rem;
 }
 
+.store-bottom-nav .store-tab-btn {
+  font-size: 0.55rem;
+  padding: 0.3rem 0.15rem;
+}
+
+.store-about-hero {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.store-about-logo {
+  border-radius: 18px;
+  margin-bottom: 0.65rem;
+}
+
+.store-about-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.35rem;
+}
+
+.store-about-tagline {
+  font-size: 0.88rem;
+  color: var(--store-text-muted);
+  line-height: 1.45;
+  margin: 0 0 1rem;
+}
+
+.store-about-portrait {
+  margin: 0 0 1rem;
+}
+
+.store-about-portrait img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--store-radius);
+  object-fit: cover;
+}
+
+.store-about-portrait figcaption {
+  font-size: 0.78rem;
+  color: var(--store-text-muted);
+  margin-top: 0.5rem;
+}
+
+.store-about-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.store-about-aliases {
+  color: var(--store-text-muted);
+  font-size: 0.88rem;
+  margin: 0.2rem 0 0;
+}
+
+.store-about-block {
+  margin-bottom: 1.75rem;
+}
+
+.store-about-callout {
+  background: var(--store-surface);
+  border: 1px solid var(--store-border);
+  border-radius: var(--store-radius);
+  padding: 1rem;
+}
+
+.store-about-kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--store-accent);
+  margin: 0 0 0.35rem;
+}
+
+.store-about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.store-about-card {
+  background: var(--store-surface);
+  border: 1px solid var(--store-border);
+  border-radius: var(--store-radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.store-about-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.store-about-deck {
+  font-size: 0.82rem;
+  color: var(--store-text-muted);
+  margin: 0 0 0.45rem;
+}
+
+.store-about-card-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--store-accent);
+  text-decoration: none;
+}
+
+.store-about-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.store-about-timeline li {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--store-border);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.store-about-year {
+  display: block;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--store-accent);
+  margin-bottom: 0.15rem;
+}
+
+.store-about-list {
+  padding-left: 1.1rem;
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
+.store-about-list a {
+  color: var(--store-accent);
+}
+
+.store-about-companies {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.store-about-company {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  background: var(--store-surface);
+  border: 1px solid var(--store-border);
+  border-radius: var(--store-radius-sm);
+  padding: 0.85rem;
+}
+
+.store-about-company h4 {
+  margin: 0 0 0.2rem;
+}
+
+.store-about-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.65rem;
+}
+
+.store-about-cert {
+  border: 1px solid var(--store-border);
+  border-radius: 10px;
+  background: var(--store-surface);
+  padding: 0.35rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.store-about-cert img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.store-about-cert span {
+  display: block;
+  font-size: 0.62rem;
+  margin-top: 0.35rem;
+  line-height: 1.25;
+  color: var(--store-text-muted);
+}
+
+.store-about-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.store-about-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.store-about-form input,
+.store-about-form select,
+.store-about-form textarea {
+  font: inherit;
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  border: 1px solid var(--store-border);
+  background: var(--store-surface);
+  color: var(--store-text);
+}
+
+.store-about-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.store-about-honey {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+.store-about-resume-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.store-about-resume-link {
+  display: block;
+  padding: 0.65rem 0.85rem;
+  background: var(--store-surface);
+  border: 1px solid var(--store-border);
+  border-radius: 10px;
+  color: var(--store-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.store-about-subhead {
+  font-size: 0.95rem;
+  margin: 1rem 0 0.35rem;
+}
+
+.store-about-motto {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--store-text-muted);
+}
+
+.store-about-footer {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--store-text-muted);
+  line-height: 1.45;
+}
+
+.store-about-footnote {
+  font-size: 0.78rem;
+  color: var(--store-text-muted);
+  margin-top: 0.5rem;
+}
+
+.store-about-project-list {
+  margin-top: 0.5rem;
+}
+
 @media (min-width: 768px) {
   .store-bottom-nav {
-    max-width: 420px;
+    max-width: 480px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 16px 16px 0 0;

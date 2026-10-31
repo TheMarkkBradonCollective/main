@@ -1,0 +1,125 @@
+{
+  "hero": {
+    "name": "Markeith Nicholas White",
+    "aliases": "Markk Brandon · StickzCoder.Lua",
+    "location": "Sacramento, California · Bay Area",
+    "tagline": "Free apps worth opening · APKs to sideload · Support if they help you · Hire me if you need a build",
+    "headshot": "images/markk-headshot.jpg",
+    "logo": "icons/logo.png"
+  },
+  "welcome": [
+    "Welcome to The Markk Brandon Collective — everything I've been building out of Sacramento. Late nights. Real backends. No \"book a demo\" nonsense. Some apps started because I got sick of tools charging for basics — those stay free to use, no matter what. Others — StrainVerse, SpiritsVerse, CookVerse — started as late-night ideas and stuck around because people actually used them.",
+    "Before the web apps I ran game servers for five years — Minecraft, FiveM, Assetto Corsa, Beaming, and yes, a Roblox server. Communities don't stick around for a pretty landing page; they stick around when stuff works.",
+    "Three doors: browse and install apps here in MBC Store, chip in on GoFundMe if something helped you, or hire me if you want your own site or app built."
+  ],
+  "bio": [
+    "I'm the developer behind The Markk Brandon Collective — full-stack websites and apps built out of Sacramento. Late nights, real backends, no fluff.",
+    "I write and ship in Cursor, track everything on GitHub, host on Cloudflare Pages and Workers, and point domains with GoDaddy. AI speeds up the typing. I still own the architecture, the deploys, and the 2 a.m. fix when something breaks."
+  ],
+  "aiNote": {
+    "label": "Real talk, up front",
+    "paragraphs": [
+      "I use AI. Not hiding it. One-prompt \"apps\" are usually a front page and a dead button — that is not what I built here.",
+      "What's in this store is full-stack work: logins, databases, permissions, APIs, Android builds you can install. Products, not previews.",
+      "Open an app, sideload an APK, use it for real — that's what all of this is for."
+    ]
+  },
+  "storyCards": [
+    {
+      "kicker": "Free by design",
+      "title": "Built because other apps wouldn't stop charging",
+      "deck": "You're not the product. Come use the thing.",
+      "body": "Friendr, Chatr, Findr, TheSacramentoFree — I got tired of paywalls on basics. Free to use. No ads selling your attention.",
+      "linkSlug": "friendr"
+    },
+    {
+      "kicker": "For fun / off the top",
+      "title": "StrainVerse, SpiritsVerse & CookVerse",
+      "deck": "What happens when boredom gets a database.",
+      "body": "Cannabis, drinks, the kitchen — built for fun, stuck around because people used them. Still free.",
+      "linkSlug": "strainverse"
+    },
+    {
+      "kicker": "Support",
+      "title": "Free for you still costs me",
+      "deck": "Hosting, databases, domains, fixes.",
+      "body": "I've built a stack of free apps. If something here saved you time or just worked when you needed it, GoFundMe keeps the lights on.",
+      "anchor": "support"
+    },
+    {
+      "kicker": "Hire me",
+      "title": "Need a website or app?",
+      "deck": "Your idea. My stack.",
+      "body": "Tell me what you're building, who it's for, and your budget. I'll reach out if it's a fit — not to sell you a template.",
+      "anchor": "hire"
+    },
+    {
+      "kicker": "Security",
+      "title": "Signature Security & Guardr",
+      "deck": "Ops, marketplace, BSIS training.",
+      "body": "Signature Security Specialist is the company. Guardr is the marketplace. Training certificates are listed below.",
+      "anchor": "security"
+    }
+  ],
+  "timeline": [
+    { "year": "2019–2023", "text": "Game servers & communities — Minecraft, FiveM, Assetto Corsa, Beaming, Roblox. Learned to ship things people use." },
+    { "year": "2024", "text": "Web platform experiments — security tools, community apps, foundation for today's catalog." },
+    { "year": "2025", "text": "Friendr, StrainVerse, SpiritsVerse, and CookVerse ship — full-stack social and lifestyle apps." },
+    { "year": "2026", "text": "MBC Store goes live — Collective apps, APK catalog, and security desk under one roof." },
+    { "year": "Next", "text": "Whatever gets built next lands in the store." }
+  ],
+  "siteBullets": [
+    "MBC Store — install & browse Collective apps",
+    "GoFundMe — keep free apps operating",
+    "Hire me — request your own build",
+    "Security — company, marketplace, BSIS certs",
+    "Sacramento · Bay Area"
+  ],
+  "support": {
+    "title": "Keep it running",
+    "intro": "I've built a whole stack of free apps — Friendr, Findr, Chatr, TheSacramentoFree, StrainVerse, SpiritsVerse, CookVerse, GigOS, and more — and I want them to stay free. No ads. No selling your data. But hosting, databases, domains, email, and fixes still cost money.",
+    "gofundmeUrl": "https://www.gofundme.com/",
+    "gofundmeNote": "Link goes live when the campaign is published.",
+    "donationUses": [
+      "Server and database costs so apps stay online",
+      "Domain renewals and email for account flows",
+      "Bug fixes, security patches, and updates",
+      "Time to keep shipping — not to run ads or sell your data"
+    ]
+  },
+  "security": {
+    "lead": "The security desk — kept apart from the free apps on purpose. Guardr is the marketplace. Signature Security Specialist is the company. BSIS training certificates are below.",
+    "companies": [
+      {
+        "name": "Guardr",
+        "tagline": "Independent Security Marketplace",
+        "body": "Connect with protection services on demand — discovering and engaging security professionals.",
+        "icon": "icons/apps/guardr.png",
+        "webUrl": "https://guardr.co"
+      },
+      {
+        "name": "Signature Security Specialist",
+        "tagline": "Protect with Purpose · Perform with Excellence",
+        "body": "Executive security — guards, events, training, companion apps.",
+        "icon": "icons/apps/sss.png",
+        "webUrl": "https://signaturesecurityspecialist.com"
+      }
+    ],
+    "certsIntro": "California BSIS continuing education completed by Markeith White through TwoProtect Training Institute (CA license TFF1266). Tap a certificate to view."
+  },
+  "resume": {
+    "intro": "Résumé for security, door host, barback, and hospitality roles in Sacramento — active California BSIS Guard Card G-6876341.",
+    "pdfs": [
+      { "label": "Primary (turquoise & mandarin)", "href": "resume/Markeith_White_Resume.pdf" },
+      { "label": "Sage green & white", "href": "resume/styled/sage_white/Markeith_White_Resume.pdf" },
+      { "label": "Black & white", "href": "resume/styled/black_white/Markeith_White_Resume.pdf" }
+    ]
+  },
+  "contact": {
+    "email": "themarkkbrandoncollective@gmail.com",
+    "github": "https://github.com/TheMarkkBradonCollective",
+    "storeUrl": "https://mbc-store.pages.dev"
+  },
+  "motto": "Code. Create. Protect. Share. Repeat.",
+  "footer": "© 2026 Markk Brandon (Markeith Nicholas White) · All Rights Reserved · Built with care by StickzCoder.Lua"
+}

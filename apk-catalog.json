@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-31T14:42:00.000Z",
+  "generatedAt": "2026-10-31T14:45:00.638Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -17,22 +17,54 @@
     "name": "MBC Store",
     "version": "1.0.0",
     "versionCode": 100,
-    "downloadUrl": "apks/mbc-store/MBC-Store-v1.0.0.apk",
+    "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/mbc-store/latest.apk",
     "downloadName": "MBC-Store-v1.0.0.apk",
     "fileSize": 3241630,
-    "releaseNotes": "MBC Store — install and update every Markk Brandon Collective Android app from one catalog."
+    "releaseNotes": "MBC Store catalog app — central R2 mirror."
   },
   "categories": [
-    { "id": "navigation", "label": "Navigation & Auto" },
-    { "id": "social", "label": "Social" },
-    { "id": "lifestyle", "label": "Lifestyle & Culture" },
-    { "id": "community", "label": "Community" },
-    { "id": "productivity", "label": "Productivity" },
-    { "id": "security", "label": "Security" },
-    { "id": "games", "label": "Games" }
+    {
+      "id": "navigation",
+      "label": "Navigation & Auto"
+    },
+    {
+      "id": "social",
+      "label": "Social"
+    },
+    {
+      "id": "lifestyle",
+      "label": "Lifestyle & Culture"
+    },
+    {
+      "id": "community",
+      "label": "Community"
+    },
+    {
+      "id": "productivity",
+      "label": "Productivity"
+    },
+    {
+      "id": "security",
+      "label": "Security"
+    },
+    {
+      "id": "games",
+      "label": "Games"
+    }
   ],
-  "featuredSlugs": ["chatr", "navigate", "cookverse", "dlvrd", "strainverse"],
-  "newUpdatedSlugs": ["chatr", "cookverse", "dlvrd", "myvenue"],
+  "featuredSlugs": [
+    "chatr",
+    "navigate",
+    "cookverse",
+    "dlvrd",
+    "strainverse"
+  ],
+  "newUpdatedSlugs": [
+    "chatr",
+    "cookverse",
+    "dlvrd",
+    "myvenue"
+  ],
   "apps": [
     {
       "slug": "chatr",
@@ -47,12 +79,12 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.0",
+        "version": "1.0.1",
         "updatedAt": "2026-10-31",
-        "downloadUrl": "https://github.com/TheMarkkBradonCollective/Chatr/releases/download/v1.1.0/chatr-v1.1.0.apk",
-        "downloadName": "chatr-v1.1.0.apk",
-        "fileSize": null,
-        "releaseNotes": "Chatr v1.1.0 — latest release APK."
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/chatr/latest.apk",
+        "downloadName": "chatr-v1.0.1.apk",
+        "fileSize": 12011783,
+        "releaseNotes": "Central R2 mirror (v1.0.1 staged; release v1.1.0 not reachable from build agent)."
       }
     },
     {
@@ -70,10 +102,10 @@
         "status": "available",
         "version": "1.0.0",
         "updatedAt": "2026-10-31",
-        "downloadUrl": "https://pub-54c223e811894250883493507bd607d3.r2.dev/dasher-companion.apk",
-        "downloadName": "dasher-companion.apk",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/dlvrd/latest.apk",
+        "downloadName": "dlvrd-v1.0.0.apk",
         "fileSize": 23212526,
-        "releaseNotes": "Public R2 mirror — no GitHub sign-in required."
+        "releaseNotes": "Central R2 mirror (upstream)."
       }
     },
     {
@@ -91,10 +123,10 @@
         "status": "available",
         "version": "1.0.17",
         "updatedAt": "2026-10-31",
-        "downloadUrl": "https://cookverse-api.themarkkbrandoncollective-2d9.workers.dev/media/apk/cookverse-v1.0.17.apk",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/cookverse/latest.apk",
         "downloadName": "cookverse-v1.0.17.apk",
-        "fileSize": null,
-        "releaseNotes": "CookVerse v1.0.17 APK."
+        "fileSize": 5574204,
+        "releaseNotes": "Central R2 mirror (upstream)."
       }
     },
     {
@@ -111,12 +143,12 @@
         "status": "available",
         "version": "1.0.0",
         "versionCode": 10000,
-        "updatedAt": "2026-10-26",
-        "downloadUrl": "apks/navigate/navigate-v1.0.0.apk",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/navigate/latest.apk",
         "downloadName": "navigate-v1.0.0.apk",
         "fileSize": 4975644,
         "packageId": "com.themarkkbradoncollective.navigate",
-        "releaseNotes": "Navigate v1.0.0 — also see AndroidAutoApps release latest-2026-10-26 on GitHub."
+        "releaseNotes": "Central R2 mirror (local mirror)."
       }
     },
     {
@@ -162,10 +194,13 @@
       "webUrl": "https://myvenue.pages.dev",
       "screenshots": [],
       "android": {
-        "status": "coming-soon",
-        "version": "1.2.0",
+        "status": "available",
+        "version": "1.1.0",
         "updatedAt": "2026-10-31",
-        "releaseNotes": "APK coming soon — v1.2.0 target."
+        "releaseNotes": "MyVenue v1.1.0 on central R2 (v1.2.0 in progress).",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/myvenue/latest.apk",
+        "downloadName": "myvenue-v1.1.0.apk",
+        "fileSize": 4010045
       }
     },
     {
@@ -177,7 +212,15 @@
       "icon": "icons/apps/portr.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
-      "android": { "status": "web-only", "releaseNotes": "Web app only for now." }
+      "android": {
+        "status": "available",
+        "releaseNotes": "Portr vendr role APK on central R2.",
+        "version": "0.3.5",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr/latest.apk",
+        "downloadName": "portr-v0.3.5.apk",
+        "fileSize": 3753501
+      }
     },
     {
       "slug": "meusthem",
@@ -188,7 +231,15 @@
       "icon": "icons/apps/meus-them.png",
       "webUrl": "https://meusthem.pages.dev",
       "screenshots": [],
-      "android": { "status": "web-only", "releaseNotes": "Web app live; Android build coming soon." }
+      "android": {
+        "status": "available",
+        "releaseNotes": "Central R2 mirror (local mirror).",
+        "version": "1.0.0",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/meusthem/latest.apk",
+        "downloadName": "meusthem-v1.0.0.apk",
+        "fileSize": 3281079
+      }
     },
     {
       "slug": "layoutlab",
@@ -199,7 +250,9 @@
       "icon": "icons/icon-192.png",
       "webUrl": "https://layoutlab.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
-      "android": { "status": "web-only" }
+      "android": {
+        "status": "web-only"
+      }
     },
     {
       "slug": "stoner4therecord",
@@ -210,7 +263,9 @@
       "icon": "icons/icon-192.png",
       "webUrl": "https://stoner4therecord.pages.dev",
       "screenshots": [],
-      "android": { "status": "web-only" }
+      "android": {
+        "status": "web-only"
+      }
     },
     {
       "slug": "buffalofree",
@@ -224,11 +279,11 @@
       "android": {
         "status": "available",
         "version": "0.2.0.0053",
-        "updatedAt": "2026-10-27",
+        "updatedAt": "2026-10-31",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/buffalofree/latest.apk",
-        "downloadName": "sac-buy-nothing-beta-v0.2.0.0053.apk",
+        "downloadName": "buffalofree-v0.2.0.0053.apk",
         "fileSize": 31844634,
-        "releaseNotes": "Central R2 mirror — latest Buffalo free gifting APK."
+        "releaseNotes": "Central R2 mirror (upstream)."
       }
     },
     {
@@ -240,7 +295,9 @@
       "icon": "icons/icon-192.png",
       "webUrl": "https://css-web.pages.dev",
       "screenshots": [],
-      "android": { "status": "web-only" }
+      "android": {
+        "status": "web-only"
+      }
     },
     {
       "slug": "groupdominoscore",
@@ -254,9 +311,11 @@
       "android": {
         "status": "available",
         "version": "1.0.0",
-        "downloadUrl": "apks/groupdominoscore/groupdominoscore-v1.0.0.apk",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/groupdominoscore/latest.apk",
         "downloadName": "groupdominoscore-v1.0.0.apk",
-        "fileSize": 3499647
+        "fileSize": 3499647,
+        "updatedAt": "2026-10-31",
+        "releaseNotes": "Central R2 mirror (local mirror)."
       }
     },
     {
@@ -271,9 +330,11 @@
       "android": {
         "status": "available",
         "version": "1.5.4",
-        "downloadUrl": "apks/spiritsverse/spiritsverse-v1.5.4.apk",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/spiritsverse/latest.apk",
         "downloadName": "spiritsverse-v1.5.4.apk",
-        "fileSize": 9494192
+        "fileSize": 9494192,
+        "updatedAt": "2026-10-31",
+        "releaseNotes": "Central R2 mirror (local mirror)."
       }
     },
     {
@@ -288,9 +349,11 @@
       "android": {
         "status": "available",
         "version": "1.4.6",
-        "downloadUrl": "apks/findr/findr-v1.4.6.apk",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/findr/latest.apk",
         "downloadName": "findr-v1.4.6.apk",
-        "fileSize": 2737299
+        "fileSize": 2737299,
+        "updatedAt": "2026-10-31",
+        "releaseNotes": "Central R2 mirror (local mirror)."
       }
     },
     {
@@ -302,7 +365,9 @@
       "icon": "icons/icon-192.png",
       "webUrl": "https://line.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
-      "android": { "status": "web-only" }
+      "android": {
+        "status": "web-only"
+      }
     },
     {
       "slug": "friendr",
@@ -337,9 +402,11 @@
       "android": {
         "status": "available",
         "version": "1.2.0",
-        "downloadUrl": "apks/strainverse/strainverse-v1.2.0.apk",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/strainverse/latest.apk",
         "downloadName": "strainverse-v1.2.0.apk",
-        "fileSize": 8039067
+        "fileSize": 8039067,
+        "updatedAt": "2026-10-31",
+        "releaseNotes": "Central R2 mirror (local mirror)."
       }
     },
     {
@@ -351,7 +418,9 @@
       "icon": "icons/apps/freq.png",
       "webUrl": "https://freq-cxt.pages.dev",
       "screenshots": [],
-      "android": { "status": "web-only" }
+      "android": {
+        "status": "web-only"
+      }
     },
     {
       "slug": "signature-shine",
@@ -362,7 +431,9 @@
       "icon": "icons/icon-192.png",
       "webUrl": "https://signature-shine-services.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
-      "android": { "status": "web-only" }
+      "android": {
+        "status": "web-only"
+      }
     },
     {
       "slug": "markkade",
@@ -373,7 +444,9 @@
       "icon": "icons/apps/markkade.png",
       "webUrl": "https://themarkkade.pages.dev",
       "screenshots": [],
-      "android": { "status": "web-only" }
+      "android": {
+        "status": "web-only"
+      }
     },
     {
       "slug": "buynothing",
@@ -388,9 +461,10 @@
         "status": "available",
         "version": "0.2.0.0057",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/buynothing/latest.apk",
-        "downloadName": "sac-buy-nothing-beta-v0.2.0.0057.apk",
+        "downloadName": "buynothing-v0.2.0.0057.apk",
         "fileSize": 34483068,
-        "releaseNotes": "Central R2 mirror — TheSacramentoFree latest beta APK."
+        "releaseNotes": "Central R2 mirror (upstream).",
+        "updatedAt": "2026-10-31"
       }
     },
     {
@@ -405,9 +479,11 @@
       "android": {
         "status": "available",
         "version": "1.3.4",
-        "downloadUrl": "apks/gigos/gigos-v1.3.4.apk",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/gigos/latest.apk",
         "downloadName": "gigos-v1.3.4.apk",
-        "fileSize": 4814356
+        "fileSize": 4814356,
+        "updatedAt": "2026-10-31",
+        "releaseNotes": "Central R2 mirror (local mirror)."
       }
     },
     {
@@ -422,9 +498,106 @@
       "android": {
         "status": "available",
         "version": "1.0.0",
-        "downloadUrl": "apks/sss/sss-clients-v1.0.0.apk",
-        "downloadName": "sss-clients-v1.0.0.apk",
-        "fileSize": 6665323
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/sss/latest.apk",
+        "downloadName": "sss-v1.0.0.apk",
+        "fileSize": 6665323,
+        "updatedAt": "2026-10-31",
+        "releaseNotes": "Central R2 mirror (local mirror)."
+      }
+    },
+    {
+      "slug": "guardr",
+      "name": "Guardr",
+      "tagline": "Security marketplace",
+      "description": "Independent security marketplace — clients, guards, and staff.",
+      "category": "security",
+      "icon": "icons/icon-192.png",
+      "webUrl": "https://www.guardr.co",
+      "screenshots": [],
+      "android": {
+        "status": "available",
+        "version": "1.0.131-beta",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr/latest.apk",
+        "downloadName": "guardr-v1.0.131-beta.apk",
+        "fileSize": 9323598,
+        "releaseNotes": "Central R2 mirror (upstream)."
+      }
+    },
+    {
+      "slug": "hangman",
+      "name": "HangMan",
+      "tagline": "Classic word game",
+      "description": "HangMan word game from the Collective.",
+      "category": "games",
+      "icon": "icons/icon-192.png",
+      "webUrl": "https://github.com/TheMarkkBradonCollective/HangMan",
+      "screenshots": [],
+      "android": {
+        "status": "available",
+        "version": "1.0.0",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/hangman/latest.apk",
+        "downloadName": "hangman-v1.0.0.apk",
+        "fileSize": 3201346,
+        "releaseNotes": "Central R2 mirror (local mirror)."
+      }
+    },
+    {
+      "slug": "brandr",
+      "name": "Brandr",
+      "tagline": "Brand tools",
+      "description": "Brandr app from the Collective.",
+      "category": "productivity",
+      "icon": "icons/icon-192.png",
+      "webUrl": "https://github.com/TheMarkkBradonCollective/Brandr",
+      "screenshots": [],
+      "android": {
+        "status": "available",
+        "version": "1.1.0",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/brandr/latest.apk",
+        "downloadName": "brandr-v1.1.0.apk",
+        "fileSize": 3168380,
+        "releaseNotes": "Central R2 mirror (local mirror)."
+      }
+    },
+    {
+      "slug": "checkdeck",
+      "name": "CheckDeck",
+      "tagline": "CheckDeck",
+      "description": "CheckDeck from the Collective.",
+      "category": "productivity",
+      "icon": "icons/icon-192.png",
+      "webUrl": "https://github.com/TheMarkkBradonCollective/CheckDeck",
+      "screenshots": [],
+      "android": {
+        "status": "available",
+        "version": "1.0.0",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/checkdeck/latest.apk",
+        "downloadName": "checkdeck-v1.0.0.apk",
+        "fileSize": 15644656,
+        "releaseNotes": "Central R2 mirror (local mirror)."
+      }
+    },
+    {
+      "slug": "runr",
+      "name": "Runr",
+      "tagline": "Runr companion",
+      "description": "Runr — Portr family scheduling companion.",
+      "category": "productivity",
+      "icon": "icons/apps/portr.png",
+      "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
+      "screenshots": [],
+      "android": {
+        "status": "available",
+        "version": "0.2.1",
+        "updatedAt": "2026-10-31",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/runr/latest.apk",
+        "downloadName": "runr-v0.2.1.apk",
+        "fileSize": 3746336,
+        "releaseNotes": "Central R2 mirror (local mirror)."
       }
     }
   ]

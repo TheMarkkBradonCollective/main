@@ -21,3 +21,4 @@ Navigate/android/keystore.properties
 download/releases/MBC-All-APKs-*.zip
 release/*.zip
 release/staging-*/
+.r2-staging/

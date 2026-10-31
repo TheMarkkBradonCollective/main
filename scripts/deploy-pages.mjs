@@ -13,6 +13,8 @@ const SKIP_TOP = new Set([
   '.git',
   'node_modules',
   '.pages-deploy',
+  '.r2-staging',
+  'build-repos',
   'Navigate',
   'The-Rink-Studios',
   'the-rink-studios',

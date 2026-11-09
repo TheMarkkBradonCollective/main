@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T12:00:00.000Z",
+  "generatedAt": "2026-11-09T12:10:00.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -214,6 +214,30 @@
     },
     {
       "slug": "portr",
+      "name": "Portr — Vendor",
+      "tagline": "Sell. Manage. Grow.",
+      "description": "Portr vendor app for restaurants and merchants. Signed v0.4.0 APK (Cloudflare/Neon) from the FoodDelivery release.",
+      "category": "productivity",
+      "icon": "icons/apps/portr-vendor.png",
+      "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
+      "screenshots": [],
+      "android": {
+        "status": "available",
+        "version": "0.4.0",
+        "versionCode": 400,
+        "updatedAt": "2026-11-09",
+        "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/vendr-v0.4.0.apk",
+        "downloadName": "vendr-v0.4.0.apk",
+        "fileSize": 3688803,
+        "packageId": "com.tmbcworks.portr.vendor",
+        "releaseNotes": "Signed FoodDelivery v0.4.0. versionCode 400."
+      },
+      "product": "portr",
+      "productName": "Portr",
+      "audience": "Vendor"
+    },
+    {
+      "slug": "portr-customer",
       "name": "Portr — Customer",
       "tagline": "Get what you need.",
       "description": "Customer app. Discover nearby businesses, order, and track a Runner. Download is the FoodDelivery v0.4.0 GitHub release.",
@@ -229,7 +253,8 @@
         "downloadName": "porter-v0.4.0.apk",
         "fileSize": 3773075,
         "packageId": "com.tmbcworks.portr.porter",
-        "releaseNotes": "FoodDelivery GitHub release v0.4.0."
+        "releaseNotes": "FoodDelivery GitHub release v0.4.0.",
+        "versionCode": 400
       },
       "product": "portr",
       "productName": "Portr",
@@ -612,9 +637,9 @@
     },
     {
       "slug": "runr",
-      "name": "Portr — Runner",
+      "name": "Runr — Driver",
       "tagline": "Pick it up. Run it there.",
-      "description": "Delivery worker app. Choose a business and a time window. Download is the FoodDelivery v0.4.0 GitHub release.",
+      "description": "Runr driver app. Signed v0.4.0 APK (Cloudflare/Neon) from the FoodDelivery release.",
       "category": "productivity",
       "icon": "icons/apps/runr.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
@@ -622,16 +647,17 @@
       "android": {
         "status": "available",
         "version": "0.4.0",
+        "versionCode": 400,
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/runr-v0.4.0.apk",
         "downloadName": "runr-v0.4.0.apk",
         "fileSize": 3737348,
         "packageId": "com.tmbcworks.portr.runner",
-        "releaseNotes": "FoodDelivery GitHub release v0.4.0."
+        "releaseNotes": "Signed FoodDelivery v0.4.0. versionCode 400."
       },
       "product": "portr",
       "productName": "Portr",
-      "audience": "Runner / Driver"
+      "audience": "Driver / Runner"
     },
     {
       "slug": "sentinel",
@@ -755,29 +781,6 @@
         "downloadName": "Guardr-Messenger.apk",
         "fileSize": 9657220,
         "releaseNotes": "Repo APK. native product app is messenger."
-      }
-    },
-    {
-      "slug": "portr-vendor",
-      "name": "Portr — Vendor",
-      "product": "portr",
-      "productName": "Portr",
-      "audience": "Restaurant / Merchant",
-      "tagline": "Sell. Manage. Grow.",
-      "description": "Business app. Sell on Portr and set how many Runners you need. Download is the FoodDelivery v0.4.0 GitHub release.",
-      "category": "productivity",
-      "icon": "icons/apps/portr-vendor.png",
-      "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
-      "screenshots": [],
-      "android": {
-        "status": "available",
-        "version": "0.4.0",
-        "updatedAt": "2026-11-09",
-        "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/vendr-v0.4.0.apk",
-        "downloadName": "vendr-v0.4.0.apk",
-        "fileSize": 3688803,
-        "packageId": "com.tmbcworks.portr.vendor",
-        "releaseNotes": "FoodDelivery GitHub release v0.4.0. The older central R2 file portr/latest.apk is vendr 0.3.5."
       }
     },
     {

@@ -1,26 +1,26 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T13:32:49.000Z",
+  "generatedAt": "2026-11-09T16:52:34.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
     "name": "The Verse (StrainVerse · SpiritsVerse · CookVerse)",
     "version": "1",
-    "updatedAt": "2026-10-31",
+    "updatedAt": "2026-11-09",
     "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/verse/latest.zip",
     "downloadName": "Verse-v1.zip",
-    "fileSize": 35038395,
-    "releaseNotes": "Zip of the three Verse family APKs — hosted on central R2 (not bundled in Pages deploy)."
+    "fileSize": 22065162,
+    "releaseNotes": "Zip of StrainVerse 1.3.1, SpiritsVerse 1.5.5, CookVerse 1.0.17 (re-signed Verse APKs as of 2026-11-09)."
   },
   "storeApp": {
     "packageId": "com.themarkkbradoncollective.store",
     "name": "MBC Store",
-    "version": "1.0.0",
-    "versionCode": 100,
+    "version": "1.0.1",
+    "versionCode": 101,
     "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/mbc-store/latest.apk",
-    "downloadName": "MBC-Store-v1.0.0.apk",
-    "fileSize": 3241630,
-    "releaseNotes": "MBC Store catalog app — central R2 mirror."
+    "downloadName": "MBC-Store-v1.0.1.apk",
+    "fileSize": 3367192,
+    "releaseNotes": "Fresh sideload build signed with a new release key. Existing installs must uninstall once, then install this version."
   },
   "categories": [
     {
@@ -61,9 +61,18 @@
   ],
   "newUpdatedSlugs": [
     "chatr",
-    "cookverse",
     "dlvrd",
-    "myvenue"
+    "myvenue",
+    "findr",
+    "guardr",
+    "strainverse",
+    "spiritsverse",
+    "brandr",
+    "portr",
+    "buffalofree",
+    "buynothing",
+    "cookverse",
+    "runr"
   ],
   "apps": [
     {
@@ -79,12 +88,14 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.0",
-        "updatedAt": "2026-10-31",
+        "version": "1.1.1",
+        "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/chatr/latest.apk",
-        "downloadName": "chatr-v1.1.0.apk",
-        "fileSize": 11979975,
-        "releaseNotes": "Central R2 mirror of GitHub release v1.1.0."
+        "downloadName": "chatr-v1.1.1.apk",
+        "fileSize": 12092367,
+        "releaseNotes": "Fresh sideload build signed with a new release key. Existing installs must uninstall once, then install this version.",
+        "versionCode": 10101,
+        "packageId": "com.tmbcworks.chatr"
       }
     },
     {
@@ -100,13 +111,14 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.0",
-        "updatedAt": "2026-10-31",
+        "version": "1.1.1",
+        "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/dlvrd/latest.apk",
-        "downloadName": "dlvrd-v1.1.0.apk",
-        "fileSize": 23066464,
-        "releaseNotes": "Central R2 mirror (upstream).",
-        "versionCode": 2
+        "downloadName": "dlvrd-v1.1.1.apk",
+        "fileSize": 20288818,
+        "releaseNotes": "Fresh sideload build signed with a new release key (was debug-signed). Existing installs must uninstall once, then install this version.",
+        "versionCode": 3,
+        "packageId": "com.themarkkbradoncollective.dashercompanion"
       },
       "product": "dlvrd",
       "productName": "Dlvrd",
@@ -121,7 +133,7 @@
       "featured": true,
       "newUpdated": true,
       "icon": "icons/apps/cookverse.png",
-      "webUrl": null,
+      "webUrl": "https://cookverse.pages.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -201,12 +213,14 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.0",
-        "updatedAt": "2026-10-31",
-        "releaseNotes": "Central R2 mirror of GitHub release v1.1.0.",
+        "version": "1.1.1",
+        "updatedAt": "2026-11-09",
+        "releaseNotes": "Fresh sideload build signed with a new release key. Existing installs must uninstall once, then install this version.",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/myvenue/latest.apk",
-        "downloadName": "myvenue-v1.1.0.apk",
-        "fileSize": 4010045
+        "downloadName": "myvenue-v1.1.1.apk",
+        "fileSize": 4118268,
+        "versionCode": 111,
+        "packageId": "com.themarkkbradoncollective.myvenue"
       },
       "product": "myvenue",
       "productName": "MyVenue",
@@ -223,18 +237,19 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.0",
-        "versionCode": 400,
+        "version": "0.4.1",
+        "versionCode": 401,
         "updatedAt": "2026-11-09",
-        "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/vendr-v0.4.0.apk",
-        "downloadName": "vendr-v0.4.0.apk",
-        "fileSize": 3688803,
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr/latest.apk",
+        "downloadName": "vendr-v0.4.1.apk",
+        "fileSize": 3798014,
         "packageId": "com.tmbcworks.portr.vendor",
-        "releaseNotes": "Signed FoodDelivery v0.4.0. versionCode 400."
+        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version."
       },
       "product": "portr",
       "productName": "Portr",
-      "audience": "Vendor"
+      "audience": "Vendor",
+      "newUpdated": true
     },
     {
       "slug": "portr-customer",
@@ -247,18 +262,19 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.0",
+        "version": "0.4.1",
         "updatedAt": "2026-11-09",
-        "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/porter-v0.4.0.apk",
-        "downloadName": "porter-v0.4.0.apk",
-        "fileSize": 3773075,
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr-customer/latest.apk",
+        "downloadName": "porter-v0.4.1.apk",
+        "fileSize": 3885186,
         "packageId": "com.tmbcworks.portr.porter",
-        "releaseNotes": "FoodDelivery GitHub release v0.4.0.",
-        "versionCode": 400
+        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version.",
+        "versionCode": 401
       },
       "product": "portr",
       "productName": "Portr",
-      "audience": "Customer"
+      "audience": "Customer",
+      "newUpdated": true
     },
     {
       "slug": "meusthem",
@@ -316,13 +332,16 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.2.0.0053",
-        "updatedAt": "2026-10-31",
+        "version": "0.2.1",
+        "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/buffalofree/latest.apk",
-        "downloadName": "buffalofree-v0.2.0.0053.apk",
-        "fileSize": 31844634,
-        "releaseNotes": "Central R2 mirror (upstream)."
-      }
+        "downloadName": "buffalofree-v0.2.1.apk",
+        "fileSize": 32000236,
+        "releaseNotes": "Re-signed with the existing Sacramento release key so current installs can update in place. Published binary still uses package org.sacramentobuynothing.app (same as TheSacramentoFree); source appId is com.tmbcworks.thebuffalofree.",
+        "versionCode": 54,
+        "packageId": "org.sacramentobuynothing.app"
+      },
+      "newUpdated": true
     },
     {
       "slug": "css",
@@ -370,13 +389,16 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.5.4",
+        "version": "1.5.5",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/spiritsverse/latest.apk",
-        "downloadName": "spiritsverse-v1.5.4.apk",
-        "fileSize": 9494192,
-        "updatedAt": "2026-10-31",
-        "releaseNotes": "Central R2 mirror (local mirror)."
-      }
+        "downloadName": "spiritsverse-v1.5.5.apk",
+        "fileSize": 9603759,
+        "updatedAt": "2026-11-09",
+        "releaseNotes": "Fresh sideload build signed with a new release key. Existing installs must uninstall once, then install this version.",
+        "versionCode": 155,
+        "packageId": "com.themarkkbradoncollective.spiritsverse"
+      },
+      "newUpdated": true
     },
     {
       "slug": "findr",
@@ -389,13 +411,16 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.4.6",
+        "version": "1.4.7",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/findr/latest.apk",
-        "downloadName": "findr-v1.4.6.apk",
-        "fileSize": 2737299,
-        "updatedAt": "2026-10-31",
-        "releaseNotes": "Central R2 mirror (local mirror)."
-      }
+        "downloadName": "findr-v1.4.7.apk",
+        "fileSize": 2863468,
+        "updatedAt": "2026-11-09",
+        "releaseNotes": "Fresh sideload build signed with a new release key (was debug-signed). Existing installs must uninstall once, then install this version.",
+        "versionCode": 11,
+        "packageId": "app.findr.android"
+      },
+      "newUpdated": true
     },
     {
       "slug": "line",
@@ -445,13 +470,16 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.3.0",
+        "version": "1.3.1",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/strainverse/latest.apk",
-        "downloadName": "strainverse-v1.3.0.apk",
-        "fileSize": 7835125,
-        "updatedAt": "2026-10-31",
-        "releaseNotes": "StrainVerse v1.3.0 — mirrored from StrainVerse worker media to central R2."
-      }
+        "downloadName": "strainverse-v1.3.1.apk",
+        "fileSize": 7945032,
+        "updatedAt": "2026-11-09",
+        "releaseNotes": "Fresh sideload build signed with a new release key. Existing installs must uninstall once, then install this version.",
+        "versionCode": 10301,
+        "packageId": "com.tmbcworks.strainverse"
+      },
+      "newUpdated": true
     },
     {
       "slug": "freq",
@@ -499,17 +527,20 @@
       "description": "Sacramento free gifting community.",
       "category": "community",
       "icon": "icons/apps/buynothing.png",
-      "webUrl": "https://thesacramentofree.themarkkbrandoncollective-2d9.workers.dev",
+      "webUrl": "https://sacramentobuynothing.com",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.2.0.0057",
+        "version": "0.2.1",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/buynothing/latest.apk",
-        "downloadName": "buynothing-v0.2.0.0057.apk",
-        "fileSize": 34483068,
-        "releaseNotes": "Central R2 mirror (upstream).",
-        "updatedAt": "2026-10-31"
-      }
+        "downloadName": "buynothing-v0.2.1.apk",
+        "fileSize": 34643018,
+        "releaseNotes": "Re-signed with the existing Sacramento release key so current installs can update in place.",
+        "updatedAt": "2026-11-09",
+        "versionCode": 58,
+        "packageId": "org.sacramentobuynothing.app"
+      },
+      "newUpdated": true
     },
     {
       "slug": "gigos",
@@ -518,7 +549,7 @@
       "description": "GigOS Performer (package com.dasher.companion, versionCode 10306). Version 1.3.6 updates existing installs.",
       "category": "lifestyle",
       "icon": "icons/apps/gigos.png",
-      "webUrl": null,
+      "webUrl": "https://gigos.pages.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -542,7 +573,7 @@
       "description": "SSS Clients Android app. The central R2 file matches sss-clients-v1.0.0.apk. The APK opens the company site with shell=clients.",
       "category": "security",
       "icon": "icons/apps/sss.png",
-      "webUrl": "https://signaturesecurityspecialist.com/app?shell=clients",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -564,20 +595,23 @@
       "description": "Customer app. Post coverage, follow activity, and read reports. Opens at /client/home on the Guardr worker.",
       "category": "security",
       "icon": "icons/apps/guardr.png",
-      "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/client/home",
+      "webUrl": "https://www.guardr.co",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.0-cf-beta",
-        "updatedAt": "2026-10-31",
-        "downloadUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/guardr.apk",
-        "downloadName": "guardr-v1.1.0.apk",
-        "fileSize": 9586203,
-        "releaseNotes": "Current Guardr build published by the app (versionName 1.1.0-cf-beta, versionCode 110). The older R2 client beta is 1.0.131-beta versionCode 231, which Android treats as newer until versionCode is raised above 231."
+        "version": "1.1.1",
+        "updatedAt": "2026-11-09",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr/latest.apk",
+        "downloadName": "guardr-v1.1.1.apk",
+        "fileSize": 9748027,
+        "releaseNotes": "Fresh sideload build signed with a new release key (was debug-signed). Existing installs must uninstall once, then install this version.",
+        "versionCode": 1101,
+        "packageId": "com.tmbcworks.guardr"
       },
       "product": "guardr",
       "productName": "Guardr",
-      "audience": "Customer"
+      "audience": "Customer",
+      "newUpdated": true
     },
     {
       "slug": "hangman",
@@ -586,7 +620,7 @@
       "description": "HangMan word game from the Collective.",
       "category": "games",
       "icon": "icons/apps/hangman.png",
-      "webUrl": null,
+      "webUrl": "https://hangman.pages.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -609,14 +643,16 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.3.0",
-        "updatedAt": "2026-10-31",
+        "version": "1.3.1",
+        "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/brandr/latest.apk",
-        "downloadName": "brandr-v1.3.0.apk",
-        "fileSize": 3173401,
-        "releaseNotes": "Central R2 mirror (local mirror).",
-        "versionCode": 10300
-      }
+        "downloadName": "brandr-v1.3.1.apk",
+        "fileSize": 3281664,
+        "releaseNotes": "Fresh sideload build signed with a new release key. Existing installs must uninstall once, then install this version.",
+        "versionCode": 10301,
+        "packageId": "com.tmbcworks.brandr"
+      },
+      "newUpdated": true
     },
     {
       "slug": "checkdeck",
@@ -648,14 +684,14 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.0",
-        "versionCode": 400,
+        "version": "0.4.1",
+        "versionCode": 401,
         "updatedAt": "2026-11-09",
-        "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/runr-v0.4.0.apk",
-        "downloadName": "runr-v0.4.0.apk",
-        "fileSize": 3737348,
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/runr/latest.apk",
+        "downloadName": "runr-v0.4.1.apk",
+        "fileSize": 3847505,
         "packageId": "com.tmbcworks.portr.runner",
-        "releaseNotes": "Signed FoodDelivery v0.4.0. versionCode 400."
+        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version."
       },
       "product": "portr",
       "productName": "Portr",
@@ -755,7 +791,7 @@
       "description": "Guard field app from the Guardr repo (guard-app). The website route is live. No Guard APK is in this repo or on the central R2 mirror.",
       "category": "security",
       "icon": "icons/apps/guardr-guard.png",
-      "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/guard",
+      "webUrl": "https://www.guardr.co/guard",
       "screenshots": [],
       "android": {
         "status": "coming-soon"
@@ -771,7 +807,7 @@
       "description": "Staff operations on the Guardr worker at /staff/overview. No separate Staff APK is published.",
       "category": "security",
       "icon": "icons/apps/guardr-staff.png",
-      "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/staff/overview",
+      "webUrl": "https://www.guardr.co/staff/overview",
       "screenshots": [],
       "android": {
         "status": "coming-soon"
@@ -787,7 +823,7 @@
       "description": "Messenger companion. Sign in, then messages and support for that Guard, Customer, or Staff account. APK is the repo build, not the central R2 client mirror.",
       "category": "security",
       "icon": "icons/apps/guardr-messenger.png",
-      "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/messenger",
+      "webUrl": "https://www.guardr.co/messenger",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -812,14 +848,16 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.0",
+        "version": "0.4.1",
         "updatedAt": "2026-11-09",
-        "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/staff-v0.4.0.apk",
-        "downloadName": "staff-v0.4.0.apk",
-        "fileSize": 3692727,
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr-command/latest.apk",
+        "downloadName": "staff-v0.4.1.apk",
+        "fileSize": 3802637,
         "packageId": "com.tmbcworks.portr.command",
-        "releaseNotes": "FoodDelivery GitHub release v0.4.0."
-      }
+        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version.",
+        "versionCode": 401
+      },
+      "newUpdated": true
     },
     {
       "slug": "portr-fastfood",
@@ -835,14 +873,16 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.0",
+        "version": "0.4.1",
         "updatedAt": "2026-11-09",
-        "downloadUrl": "https://github.com/TheMarkkBradonCollective/FoodDelivery/releases/download/v0.4.0/fastfood-v0.4.0.apk",
-        "downloadName": "fastfood-v0.4.0.apk",
-        "fileSize": 3755738,
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr-fastfood/latest.apk",
+        "downloadName": "fastfood-v0.4.1.apk",
+        "fileSize": 3864706,
         "packageId": "com.tmbcworks.portr.fastfood",
-        "releaseNotes": "FoodDelivery GitHub release v0.4.0."
-      }
+        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version.",
+        "versionCode": 401
+      },
+      "newUpdated": true
     },
     {
       "slug": "portr-command-windows",
@@ -870,7 +910,7 @@
       "description": "GigOS Munchline (package com.tmbcworks.gigos.gigmi, versionCode 10306). Separate app from Performer.",
       "category": "lifestyle",
       "icon": "icons/apps/gigos-munchline.png",
-      "webUrl": null,
+      "webUrl": "https://gigos.pages.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -926,7 +966,7 @@
       "description": "SSS Guards Android app. Opens the mission board with shell=guards.",
       "category": "security",
       "icon": "icons/apps/sss-guards.png",
-      "webUrl": "https://signaturesecurityspecialist.com/app/mission-board?shell=guards",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -948,7 +988,7 @@
       "description": "SSS Staff Android app. The unversioned sss.apk in the repo is this same staff package.",
       "category": "security",
       "icon": "icons/apps/sss-staff.png",
-      "webUrl": "https://signaturesecurityspecialist.com/app?shell=staff",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -970,7 +1010,7 @@
       "description": "SSS Messenger Android app. Opens communication with shell=messenger.",
       "category": "security",
       "icon": "icons/apps/sss-messenger.png",
-      "webUrl": "https://signaturesecurityspecialist.com/app/communication?shell=messenger",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -992,7 +1032,7 @@
       "description": "Admin tools for directors and founders. Opens the management section at /staff/management on the Guardr worker. No separate Admin APK is published.",
       "category": "security",
       "icon": "icons/apps/guardr-admin.png",
-      "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/staff/management",
+      "webUrl": "https://www.guardr.co/staff/management",
       "screenshots": [],
       "android": {
         "status": "coming-soon"

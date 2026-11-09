@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T12:51:00.000Z",
+  "generatedAt": "2026-11-09T13:32:49.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -515,19 +515,21 @@
       "slug": "gigos",
       "name": "GigOS — Performer",
       "tagline": "Live performance OS",
-      "description": "GigOS Android shell (package com.dasher.companion, app name GIGOS). The central R2 file matches the local gigos-v1.3.4.apk.",
+      "description": "GigOS Performer (package com.dasher.companion, versionCode 10306). Version 1.3.6 updates existing installs.",
       "category": "lifestyle",
       "icon": "icons/apps/gigos.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.3.4",
+        "version": "1.3.6",
+        "versionCode": 10306,
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/gigos/latest.apk",
-        "downloadName": "gigos-v1.3.4.apk",
-        "fileSize": 4814356,
-        "updatedAt": "2026-10-31",
-        "releaseNotes": "Central R2 mirror (local mirror)."
+        "downloadName": "gigos-performer-v1.3.6.apk",
+        "fileSize": 4822766,
+        "packageId": "com.dasher.companion",
+        "updatedAt": "2026-11-09",
+        "releaseNotes": "GigOS Performer 1.3.6. Package com.dasher.companion, versionCode 10306."
       },
       "product": "gigos",
       "productName": "GigOS",
@@ -865,19 +867,21 @@
       "productName": "GigOS",
       "audience": "Munchline",
       "tagline": "Munchline shell",
-      "description": "Munchline-branded build of the same package (com.dasher.companion). APK is in this repo. It is not the central R2 GigOS 1.3.4 file.",
+      "description": "GigOS Munchline (package com.tmbcworks.gigos.gigmi, versionCode 10306). Separate app from Performer.",
       "category": "lifestyle",
       "icon": "icons/apps/gigos-munchline.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": null,
-        "downloadUrl": "apks/gigos/munchline.apk",
-        "downloadName": "munchline.apk",
-        "fileSize": 4265550,
-        "packageId": "com.dasher.companion",
-        "releaseNotes": "Repo APK. appName Munchline."
+        "version": "1.3.6",
+        "versionCode": 10306,
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/gigos/munchline-v1.3.6.apk",
+        "downloadName": "munchline-v1.3.6.apk",
+        "fileSize": 4612731,
+        "packageId": "com.tmbcworks.gigos.gigmi",
+        "updatedAt": "2026-11-09",
+        "releaseNotes": "GigOS Munchline 1.3.6. Package com.tmbcworks.gigos.gigmi, versionCode 10306."
       }
     },
     {

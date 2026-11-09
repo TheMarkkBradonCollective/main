@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T17:09:49.000Z",
-  "note": "Edit this file to add or update apps \u2014 no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09.",
+  "generatedAt": "2026-11-09T18:49:57.000Z",
+  "note": "Edit this file to add or update apps \u2014 no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09. SSS Clients/Guards/Staff/Messenger WebView APKs published 2026-11-09.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
     "name": "The Verse (StrainVerse \u00b7 SpiritsVerse \u00b7 CookVerse)",
@@ -60,6 +60,10 @@
     "strainverse"
   ],
   "newUpdatedSlugs": [
+    "sss-messenger",
+    "sss-staff",
+    "sss-guards",
+    "sss",
     "guardr-messenger",
     "chatr",
     "dlvrd",
@@ -578,20 +582,23 @@
       "description": "SSS Clients Android app. The central R2 file matches sss-clients-v1.0.0.apk. The APK opens the company site with shell=clients.",
       "category": "security",
       "icon": "icons/apps/sss.png",
-      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev/app?shell=clients",
       "screenshots": [],
       "android": {
         "status": "available",
         "version": "1.0.0",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/sss/latest.apk",
-        "downloadName": "sss-v1.0.0.apk",
-        "fileSize": 6665323,
-        "updatedAt": "2026-10-31",
-        "releaseNotes": "Central R2 mirror (local mirror)."
+        "downloadName": "sss-clients-v1.0.0.apk",
+        "fileSize": 4791991,
+        "updatedAt": "2026-11-09",
+        "releaseNotes": "New Cloudflare WebView build (1.0.0) with a new release key and package id com.tmbcworks.sss.clients. Opens the live sigsecspec-sms worker. Existing old-package installs must uninstall once, then install this version.",
+        "versionCode": 1,
+        "packageId": "com.tmbcworks.sss.clients"
       },
       "product": "sss",
       "productName": "Signature Security Specialist",
-      "audience": "Clients"
+      "audience": "Clients",
+      "newUpdated": true
     },
     {
       "slug": "guardr",
@@ -976,17 +983,20 @@
       "description": "SSS Guards Android app. Opens the mission board with shell=guards.",
       "category": "security",
       "icon": "icons/apps/sss-guards.png",
-      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev/app/mission-board?shell=guards",
       "screenshots": [],
       "android": {
         "status": "available",
         "version": "1.0.0",
-        "updatedAt": "2026-10-31",
-        "downloadUrl": "apks/sss/sss-guards-v1.0.0.apk",
+        "updatedAt": "2026-11-09",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/sss-guards/latest.apk",
         "downloadName": "sss-guards-v1.0.0.apk",
-        "fileSize": 6665337,
-        "releaseNotes": "Repo APK. Not a separate central R2 object."
-      }
+        "fileSize": 4791991,
+        "releaseNotes": "New Cloudflare WebView build (1.0.0) with a new release key and package id com.tmbcworks.sss.guards. Opens the live sigsecspec-sms worker. Existing old-package installs must uninstall once, then install this version.",
+        "versionCode": 1,
+        "packageId": "com.tmbcworks.sss.guards"
+      },
+      "newUpdated": true
     },
     {
       "slug": "sss-staff",
@@ -998,17 +1008,20 @@
       "description": "SSS Staff Android app. The unversioned sss.apk in the repo is this same staff package.",
       "category": "security",
       "icon": "icons/apps/sss-staff.png",
-      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev/app?shell=staff",
       "screenshots": [],
       "android": {
         "status": "available",
         "version": "1.0.0",
-        "updatedAt": "2026-10-31",
-        "downloadUrl": "apks/sss/sss-staff-v1.0.0.apk",
+        "updatedAt": "2026-11-09",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/sss-staff/latest.apk",
         "downloadName": "sss-staff-v1.0.0.apk",
-        "fileSize": 6665309,
-        "releaseNotes": "Repo APK. Not a separate central R2 object."
-      }
+        "fileSize": 4791991,
+        "releaseNotes": "New Cloudflare WebView build (1.0.0) with a new release key and package id com.tmbcworks.sss.staff. Opens the live sigsecspec-sms worker. Existing old-package installs must uninstall once, then install this version.",
+        "versionCode": 1,
+        "packageId": "com.tmbcworks.sss.staff"
+      },
+      "newUpdated": true
     },
     {
       "slug": "sss-messenger",
@@ -1020,17 +1033,20 @@
       "description": "SSS Messenger Android app. Opens communication with shell=messenger.",
       "category": "security",
       "icon": "icons/apps/sss-messenger.png",
-      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev/app/communication?shell=messenger",
       "screenshots": [],
       "android": {
         "status": "available",
         "version": "1.0.0",
-        "updatedAt": "2026-10-31",
-        "downloadUrl": "apks/sss/sss-messenger-v1.0.0.apk",
+        "updatedAt": "2026-11-09",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/sss-messenger/latest.apk",
         "downloadName": "sss-messenger-v1.0.0.apk",
-        "fileSize": 6665558,
-        "releaseNotes": "Repo APK. Not a separate central R2 object."
-      }
+        "fileSize": 4791991,
+        "releaseNotes": "New Cloudflare WebView build (1.0.0) with a new release key and package id com.tmbcworks.sss.messenger. Opens the live sigsecspec-sms worker. Existing old-package installs must uninstall once, then install this version.",
+        "versionCode": 1,
+        "packageId": "com.tmbcworks.sss.messenger"
+      },
+      "newUpdated": true
     },
     {
       "slug": "guardr-admin",

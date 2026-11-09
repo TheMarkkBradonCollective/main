@@ -1,6 +1,7 @@
 name: Deploy Cloudflare Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main

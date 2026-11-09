@@ -13,14 +13,6 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    signingConfigs {
-        create("release") {
-            storeFile = file("../mbc-store-release.keystore")
-            storePassword = "mbcstore"
-            keyAlias = "mbcstore"
-            keyPassword = "mbcstore"
-        }
-    }
     namespace = "com.themarkkbradoncollective.store"
     compileSdk = 34
 
@@ -39,6 +31,12 @@ android {
                 keyPassword = keystoreProperties["keyPassword"] as String
                 storeFile = rootProject.file(keystoreProperties["storeFile"] as String)
                 storePassword = keystoreProperties["storePassword"] as String
+            } else {
+                // Existing sideload keystore. Do not generate a replacement.
+                storeFile = file("../mbc-store-release.keystore")
+                storePassword = "mbcstore"
+                keyAlias = "mbcstore"
+                keyPassword = "mbcstore"
             }
         }
     }

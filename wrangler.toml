@@ -1,22 +1,8 @@
-# MBC Store static site.
+# MBC Store static site (Cloudflare Pages).
 # Do not set pages_build_output_dir to "." — that publishes the repo root,
 # including this config, and a slash-less asset manifest 404s on pages.dev.
-# `node scripts/stage-pages-output.mjs` writes the site to ./dist.
+# `node scripts/stage-pages-output.mjs` writes the site to dist/.
+# Pages rejects Workers-only keys (assets, observability). Keep this file Pages-safe.
 name = "mbc-store"
 compatibility_date = "2026-11-09"
-pages_build_output_dir = "./dist"
-
-[assets]
-directory = "./dist"
-html_handling = "auto-trailing-slash"
-
-[observability]
-enabled = true
-
-[observability.logs]
-enabled = true
-head_sampling_rate = 1
-
-[observability.traces]
-enabled = true
-head_sampling_rate = 1
+pages_build_output_dir = "dist"

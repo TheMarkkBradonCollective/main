@@ -105,6 +105,8 @@
       list = list.filter(
         (a) =>
           a.name.toLowerCase().includes(q) ||
+          (a.audience || '').toLowerCase().includes(q) ||
+          (a.productName || '').toLowerCase().includes(q) ||
           (a.tagline || '').toLowerCase().includes(q) ||
           (a.description || '').toLowerCase().includes(q)
       );
@@ -191,6 +193,62 @@
     </a>`;
   }
 
+  function productSiblings(app, pool) {
+    if (!app?.product) return [app];
+    const source = pool || normalizeApps();
+    const group = source.filter((a) => a.product === app.product);
+    return group.length ? group : [app];
+  }
+
+  function audienceChips(apps, currentSlug) {
+    return apps
+      .map((a) => {
+        const label = a.audience || a.name;
+        const active = a.slug === currentSlug ? ' active' : '';
+        return `<a class="store-chip${active}" href="#/app/${encodeURIComponent(a.slug)}">${escapeHtml(label)}</a>`;
+      })
+      .join('');
+  }
+
+  function layoutEntries(apps) {
+    const seen = new Set();
+    const entries = [];
+    for (const app of apps) {
+      if (app.product) {
+        if (seen.has(app.product)) continue;
+        seen.add(app.product);
+        const group = apps.filter((a) => a.product === app.product);
+        if (group.length > 1) {
+          entries.push({ kind: 'group', apps: group });
+          continue;
+        }
+      }
+      entries.push({ kind: 'app', app });
+    }
+    return entries;
+  }
+
+  function renderProductCard(group) {
+    const head = group[0];
+    const title = head.productName || head.name;
+    return `<article class="store-product-card">
+      <a class="store-product-head" href="#/app/${encodeURIComponent(head.slug)}">
+        <img class="store-icon store-icon-sm" src="${iconSrc(head)}" alt="" width="48" height="48" loading="lazy">
+        <div>
+          <strong>${escapeHtml(title)}</strong>
+          <p>${group.length} apps</p>
+        </div>
+      </a>
+      <div class="store-audience-row">${audienceChips(group)}</div>
+    </article>`;
+  }
+
+  function renderGrid(apps) {
+    return layoutEntries(apps)
+      .map((entry) => (entry.kind === 'group' ? renderProductCard(entry.apps) : renderGridItem(entry.app)))
+      .join('');
+  }
+
   function renderListRow(app) {
     const ver = app.android?.version ? `v${app.android.version}` : hasApk(app) ? 'APK' : 'Coming soon';
     return `<a class="store-list-row" href="#/app/${encodeURIComponent(app.slug)}">
@@ -245,15 +303,24 @@
       </section>
       <section aria-label="All apps">
         <h2 class="store-section-title">${categoryFilter === 'all' ? 'All apps' : escapeHtml(categoryLabel(categoryFilter))}</h2>
-        <div class="store-grid">${filtered.length ? filtered.map(renderGridItem).join('') : '<p class="store-empty">No apps match.</p>'}</div>
+        <div class="store-grid">${filtered.length ? renderGrid(filtered) : '<p class="store-empty">No apps match.</p>'}</div>
       </section>`;
   }
 
   function renderApps() {
-    const apps = filterApps(normalizeApps()).sort((a, b) => a.name.localeCompare(b.name));
+    const apps = filterApps(normalizeApps()).sort((a, b) =>
+      (a.productName || a.name).localeCompare(b.productName || b.name) ||
+      (a.audience || a.name).localeCompare(b.audience || b.name)
+    );
+    const body = layoutEntries(apps)
+      .map((entry) => {
+        if (entry.kind === 'group') return renderProductCard(entry.apps);
+        return renderListRow(entry.app);
+      })
+      .join('');
     return `
       <h2 class="store-section-title">All apps</h2>
-      <div>${apps.length ? apps.map(renderListRow).join('') : '<p class="store-empty">No apps match your search.</p>'}</div>`;
+      <div>${apps.length ? body : '<p class="store-empty">No apps match your search.</p>'}</div>`;
   }
 
   function renderCategories() {
@@ -265,7 +332,7 @@
         if (!inCat.length) return '';
         return `<section>
           <h2 class="store-section-title">${escapeHtml(cat.label)}</h2>
-          <div class="store-grid">${inCat.map(renderGridItem).join('')}</div>
+          <div class="store-grid">${renderGrid(inCat)}</div>
         </section>`;
       })
       .join('');
@@ -337,9 +404,16 @@
             <h1>${escapeHtml(app.name)}</h1>
             <p>${escapeHtml(app.tagline || '')}</p>
             <span class="store-category-tag">${escapeHtml(categoryLabel(app.category || app.section))}</span>
+            ${app.audience ? `<p class="store-audience-label">${escapeHtml(app.productName || '')} · ${escapeHtml(app.audience)}</p>` : ''}
           </div>
         </div>
         <div class="store-detail-actions">${installBtn}${webBtn}</div>
+        ${
+          productSiblings(app).length > 1
+            ? `<h2 class="store-section-title">Apps in ${escapeHtml(app.productName || 'this product')}</h2>
+        <div class="store-audience-row">${audienceChips(productSiblings(app), app.slug)}</div>`
+            : ''
+        }
         <div class="store-meta-grid">
           <div class="store-meta-cell"><span>Version</span><strong>${escapeHtml(android.version || '—')}</strong></div>
           <div class="store-meta-cell"><span>Size</span><strong>${formatBytes(android.fileSize)}</strong></div>

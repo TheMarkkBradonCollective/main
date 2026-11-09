@@ -50,7 +50,8 @@ Pages serves an asset only when its manifest key starts with `/` (`/index.html`,
 | `featuredSlugs` / `newUpdatedSlugs` | Home carousels |
 | `categories` | Category chips and tabs |
 | `apps[].slug` | URL hash `#/app/{slug}` |
-| `apps[].name`, `tagline`, `description` | Listing and detail page |
+| `apps[].name`, `tagline`, `description` | Listing and detail page. Multi-app products use `Name — Audience` |
+| `apps[].product`, `productName`, `audience` | Groups sibling apps on one card. `audience` is the visible label |
 | `apps[].category` | Section (navigation, social, lifestyle, …) |
 | `apps[].icon` | Path under repo root or absolute URL |
 | `apps[].webUrl` | Enables **Open web app** when set |

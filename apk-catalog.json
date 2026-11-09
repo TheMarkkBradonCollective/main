@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T18:49:57.000Z",
+  "generatedAt": "2026-11-09T19:32:03.000Z",
   "note": "Edit this file to add or update apps \u2014 no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09. SSS Clients/Guards/Staff/Messenger WebView APKs published 2026-11-09.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -60,16 +60,16 @@
     "strainverse"
   ],
   "newUpdatedSlugs": [
+    "guardr",
+    "guardr-messenger",
+    "dlvrd",
     "sss-messenger",
     "sss-staff",
     "sss-guards",
     "sss",
-    "guardr-messenger",
     "chatr",
-    "dlvrd",
     "myvenue",
     "findr",
-    "guardr",
     "strainverse",
     "spiritsverse",
     "brandr",
@@ -116,14 +116,15 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.1",
+        "version": "1.2.0",
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/dlvrd/latest.apk",
-        "downloadName": "dlvrd-v1.1.1.apk",
-        "fileSize": 20288818,
-        "releaseNotes": "Fresh sideload build signed with a new release key (was debug-signed). Existing installs must uninstall once, then install this version.",
-        "versionCode": 3,
-        "packageId": "com.themarkkbradoncollective.dashercompanion"
+        "downloadName": "dlvrd-v1.2.0.apk",
+        "fileSize": 16177336,
+        "releaseNotes": "FCM push rebuild 1.2.0 \u2014 Firebase project dlvrd-tmbc + device push registration baked in. Same Dlvrd release key as prior store APK.",
+        "versionCode": 4,
+        "packageId": "com.themarkkbradoncollective.dashercompanion",
+        "sha256": "274f7c6242af18fe87356c1e62c2fbfb00d530e52b44b02a96c6dc1ac61f813c"
       },
       "product": "dlvrd",
       "productName": "Dlvrd",
@@ -611,14 +612,15 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.1",
+        "version": "1.0.135",
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr/latest.apk",
-        "downloadName": "guardr-v1.1.1.apk",
-        "fileSize": 9748027,
-        "releaseNotes": "Fresh sideload build signed with a new release key (was debug-signed). Existing installs must uninstall once, then install this version.",
-        "versionCode": 1101,
-        "packageId": "com.tmbcworks.guardr"
+        "downloadName": "guardr-v1.0.135.apk",
+        "fileSize": 9588528,
+        "releaseNotes": "FCM push rebuild 1.0.135 \u2014 Firebase project guardr-tmbc baked in. Same Guardr release key as prior store APK; uninstall not required if you already have the new-key build.",
+        "versionCode": 235,
+        "packageId": "com.tmbcworks.guardr",
+        "sha256": "0796ac86f5de514399daf5ae884e470920fdb59375f2c7a5c254254d36df2f38"
       },
       "product": "guardr",
       "productName": "Guardr",
@@ -839,15 +841,15 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.1-cf",
+        "version": "1.1.2",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr-messenger/latest.apk",
-        "downloadName": "Guardr-Messenger-v1.1.1-cf.apk",
-        "fileSize": 9563952,
-        "releaseNotes": "Cloudflare rebuild 1.1.1-cf \u2014 package com.tmbcworks.guardr.messenger, loads https://www.guardr.co. Signed with new Guardr release key. Uninstall old com.signaturesecurity.guardr.messenger first (package id changed).",
-        "versionCode": 232,
+        "downloadName": "Guardr-Messenger-v1.1.2.apk",
+        "fileSize": 9568048,
+        "releaseNotes": "FCM push rebuild 1.1.2 \u2014 Firebase project guardr-tmbc baked in. Same Guardr release key as 1.1.1-cf.",
+        "versionCode": 233,
         "packageId": "com.tmbcworks.guardr.messenger",
         "updatedAt": "2026-11-09",
-        "sha256": "2598f42607b83ce738935453478eae0a922c1f7e2d7050471eef2a1f4246be51"
+        "sha256": "5145a64a6d94bd8d1ac55b620b3eea3b2d0d85d903692e5345a1d23b561f02af"
       },
       "newUpdated": true
     },

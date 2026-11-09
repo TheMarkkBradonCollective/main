@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T12:10:00.000Z",
+  "generatedAt": "2026-11-09T12:51:00.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -663,10 +663,10 @@
       "slug": "sentinel",
       "name": "Sentinel",
       "tagline": "See everything. Build anything.",
-      "description": "Development command center for monitoring, understanding, and improving the health of projects across GitHub. Responsive web app and installable PWA. No public deployment yet.",
+      "description": "Development command center for monitoring, understanding, and improving the health of projects across GitHub. Responsive web app and installable PWA. The website is live. No APK is published.",
       "category": "productivity",
       "icon": "icons/apps/sentinel.png",
-      "webUrl": null,
+      "webUrl": "https://sentinel.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "coming-soon"
@@ -676,10 +676,10 @@
       "slug": "litapp",
       "name": "LitApp",
       "tagline": "Multi-organizer events",
-      "description": "Multi-organizer event platform. First planned use is Sacramento Lime Takeover. No public web build or APK is published.",
+      "description": "Multi-organizer event platform. First planned use is Sacramento Lime Takeover. The website is live. No APK is published.",
       "category": "lifestyle",
       "icon": "icons/icon-192.png",
-      "webUrl": null,
+      "webUrl": "https://litapp-web.pages.dev",
       "screenshots": [],
       "android": {
         "status": "coming-soon"
@@ -689,10 +689,10 @@
       "slug": "signature-security-specialist-demo",
       "name": "Signature Security Specialist — Demo",
       "tagline": "Investor demo",
-      "description": "Investor demo repo. No public Worker, Pages site, or APK was found.",
+      "description": "Investor demo repo. The website is live. No APK was found.",
       "category": "security",
       "icon": "icons/icon-192.png",
-      "webUrl": null,
+      "webUrl": "https://signature-security-specialist-demo.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "coming-soon"
@@ -705,10 +705,10 @@
       "slug": "signature-security-specialist-sms",
       "name": "Signature Security Specialist — SMS",
       "tagline": "Security management system",
-      "description": "Security Management System repo. No public Worker, Pages site, or APK was found.",
+      "description": "Security Management System repo. The website is live. No APK was found.",
       "category": "security",
       "icon": "icons/icon-192.png",
-      "webUrl": null,
+      "webUrl": "https://signature-security-sms.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "coming-soon"
@@ -721,10 +721,23 @@
       "slug": "sigsecspec",
       "name": "SigSecSpec",
       "tagline": "Signature Security showcase",
-      "description": "Signature Security Specialist showcase. No public Worker or Pages site is deployed.",
+      "description": "Signature Security Specialist showcase. The website is live. No APK is published.",
       "category": "security",
       "icon": "icons/icon-192.png",
-      "webUrl": null,
+      "webUrl": "https://sigsecspec.themarkkbrandoncollective-2d9.workers.dev",
+      "screenshots": [],
+      "android": {
+        "status": "coming-soon"
+      }
+    },
+    {
+      "slug": "sigsecspec-sms",
+      "name": "Signature-Security-Specialist (sigsecspec-sms)",
+      "tagline": "sigsecspec-sms",
+      "description": "Signature-Security-Specialist worker (sigsecspec-sms). The website is live. No APK is published.",
+      "category": "security",
+      "icon": "icons/icon-192.png",
+      "webUrl": "https://sigsecspec-sms.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "coming-soon"
@@ -985,10 +998,10 @@
       "slug": "skiptheline",
       "name": "SkipTheLine",
       "tagline": "Coming soon",
-      "description": "Not deployed yet. No public web URL or APK.",
+      "description": "The website is live. No APK is published.",
       "category": "lifestyle",
       "icon": "icons/icon-192.png",
-      "webUrl": null,
+      "webUrl": "https://skiptheline.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "coming-soon"

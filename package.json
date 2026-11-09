@@ -34,11 +34,13 @@
     "play:build:all": "node scripts/play/build-aab.mjs --sync --all",
     "play:upload": "node scripts/play/upload-to-play.mjs",
     "play:upload:all": "node scripts/play/upload-to-play.mjs --all",
+    "build:pages": "node scripts/stage-pages-output.mjs",
     "deploy:pages": "node scripts/deploy-pages.mjs"
   },
   "devDependencies": {
     "googleapis": "^144.0.0",
     "playwright": "^1.49.0",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.3",
+    "wrangler": "^4.158.0"
   }
 }

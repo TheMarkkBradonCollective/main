@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-31T15:32:00.000Z",
+  "generatedAt": "2026-11-09T11:30:00.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -117,7 +117,7 @@
       "featured": true,
       "newUpdated": true,
       "icon": "icons/apps/cookverse.png",
-      "webUrl": "https://cookverse.pages.dev",
+      "webUrl": null,
       "screenshots": [],
       "android": {
         "status": "available",
@@ -457,7 +457,7 @@
       "description": "Sacramento free gifting community.",
       "category": "community",
       "icon": "icons/apps/buynothing.png",
-      "webUrl": null,
+      "webUrl": "https://thesacramentofree.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -514,7 +514,7 @@
       "description": "Independent security marketplace — clients, guards, and staff.",
       "category": "security",
       "icon": "icons/icon-192.png",
-      "webUrl": "https://www.guardr.co",
+      "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -533,7 +533,7 @@
       "description": "HangMan word game from the Collective.",
       "category": "games",
       "icon": "icons/icon-192.png",
-      "webUrl": "https://github.com/TheMarkkBradonCollective/HangMan",
+      "webUrl": null,
       "screenshots": [],
       "android": {
         "status": "available",
@@ -548,11 +548,11 @@
     {
       "slug": "brandr",
       "name": "Brandr",
-      "tagline": "Brand tools",
-      "description": "Brandr app from the Collective.",
+      "tagline": "Hire brand ambassadors",
+      "description": "Hire brand ambassadors to promote or audit your business. Real people, real conversations, real impact.",
       "category": "productivity",
       "icon": "icons/icon-192.png",
-      "webUrl": "https://github.com/TheMarkkBradonCollective/Brandr",
+      "webUrl": "https://brandr.pages.dev",
       "screenshots": [],
       "android": {
         "status": "available",
@@ -571,7 +571,7 @@
       "description": "CheckDeck from the Collective.",
       "category": "productivity",
       "icon": "icons/icon-192.png",
-      "webUrl": "https://github.com/TheMarkkBradonCollective/CheckDeck",
+      "webUrl": null,
       "screenshots": [],
       "android": {
         "status": "available",
@@ -600,6 +600,71 @@
         "downloadName": "runr-v0.2.1.apk",
         "fileSize": 3746336,
         "releaseNotes": "Central R2 mirror (local mirror)."
+      }
+    },
+    {
+      "slug": "sentinel",
+      "name": "Sentinel",
+      "tagline": "See everything. Build anything.",
+      "description": "Development command center for monitoring, understanding, and improving the health of projects across GitHub. Responsive web app and installable PWA. No public deployment yet.",
+      "category": "productivity",
+      "icon": "icons/icon-192.png",
+      "webUrl": null,
+      "screenshots": [],
+      "android": {
+        "status": "coming-soon"
+      }
+    },
+    {
+      "slug": "litapp",
+      "name": "LitApp",
+      "tagline": "Multi-organizer events",
+      "description": "Multi-organizer event platform. First planned use is Sacramento Lime Takeover. No public web build or APK is published.",
+      "category": "lifestyle",
+      "icon": "icons/icon-192.png",
+      "webUrl": null,
+      "screenshots": [],
+      "android": {
+        "status": "coming-soon"
+      }
+    },
+    {
+      "slug": "signature-security-specialist-demo",
+      "name": "Signature Security Specialist Demo",
+      "tagline": "Investor demo",
+      "description": "Investor demo of Signature Security Specialist. No public Worker or Pages site is deployed.",
+      "category": "security",
+      "icon": "icons/apps/sss.png",
+      "webUrl": null,
+      "screenshots": [],
+      "android": {
+        "status": "coming-soon"
+      }
+    },
+    {
+      "slug": "signature-security-specialist-sms",
+      "name": "Signature Security Specialist SMS",
+      "tagline": "Security management system",
+      "description": "Security Management System for Signature Security Specialist. No public web build or APK is published.",
+      "category": "security",
+      "icon": "icons/apps/sss.png",
+      "webUrl": null,
+      "screenshots": [],
+      "android": {
+        "status": "coming-soon"
+      }
+    },
+    {
+      "slug": "sigsecspec",
+      "name": "SigSecSpec",
+      "tagline": "Signature Security showcase",
+      "description": "Signature Security Specialist showcase. No public Worker or Pages site is deployed.",
+      "category": "security",
+      "icon": "icons/apps/sss.png",
+      "webUrl": null,
+      "screenshots": [],
+      "android": {
+        "status": "coming-soon"
       }
     }
   ]

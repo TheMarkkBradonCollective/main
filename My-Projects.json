@@ -4,7 +4,7 @@
     "theme": "buynothing",
     "name": "TheSacramentoFree",
     "tagline": "Give Freely. Ask Kindly.",
-    "url": "https://www.sacramentobuynothing.com",
+    "url": "https://thesacramentofree.themarkkbrandoncollective-2d9.workers.dev",
     "section": "community",
     "listing": "Listing #001",
     "status": "live",
@@ -44,11 +44,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/TheSacramentoFree",
     "githubPrivate": true,
-    "iconSources": [
-      "https://www.sacramentobuynothing.com/logo.png",
-      "https://www.sacramentobuynothing.com/Logo.jpeg",
-      "https://sacramentobuynothing-tmbc.vercel.app/Logo.jpeg"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/buynothing-phone-hero.jpg",
@@ -108,7 +104,7 @@
     "verseTint": "#e8f5ee",
     "name": "StrainVerse",
     "tagline": "Stoner-First Social Network",
-    "url": "https://strainverse-tmbc.vercel.app",
+    "url": "https://strainverse.themarkkbrandoncollective-2d9.workers.dev",
     "section": "lifestyle",
     "listing": "Listing #002",
     "status": "live",
@@ -148,9 +144,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/StrainVerse",
     "githubPrivate": true,
-    "iconSources": [
-      "https://strainverse-tmbc.vercel.app/pwa-512.png"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/strainverse-phone-hero.jpg",
@@ -214,7 +208,7 @@
     "verseTint": "#e6fffa",
     "name": "SpiritsVerse",
     "tagline": "Social Network for Drink Lovers",
-    "url": "https://spiritsverse-tmbc.vercel.app",
+    "url": "https://spiritsverse.themarkkbrandoncollective-2d9.workers.dev",
     "section": "lifestyle",
     "listing": "Listing #003",
     "status": "live",
@@ -254,9 +248,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/SpiritsVerse",
     "githubPrivate": true,
-    "iconSources": [
-      "https://spiritsverse-tmbc.vercel.app/pwa-512.png"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/spiritsverse-phone-hero.jpg",
@@ -320,7 +312,7 @@
     "verseTint": "#fff4eb",
     "name": "Cookverse",
     "tagline": "The Social Table",
-    "url": "https://cookverse-tmbc.vercel.app",
+    "url": null,
     "section": "lifestyle",
     "listing": "Listing #004",
     "status": "live",
@@ -360,9 +352,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/CookVerse",
     "githubPrivate": true,
-    "iconSources": [
-      "https://cookverse-tmbc.vercel.app/logo-mark.png"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/cookverse-phone-hero.jpg",
@@ -424,7 +414,7 @@
     "theme": "gigos",
     "name": "GigOS",
     "tagline": "The operating system for live performance",
-    "url": "https://gigos.vercel.app",
+    "url": null,
     "section": "lifestyle",
     "listing": "Listing #005",
     "status": "live",
@@ -464,9 +454,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/GigOS",
     "githubPrivate": true,
-    "iconSources": [
-      "https://gigos.vercel.app/favicon.ico"
-    ],
+    "iconSources": [],
     "screenshots": [],
     "platforms": [
       "phone",
@@ -489,7 +477,7 @@
     "theme": "friendr",
     "name": "Friendr",
     "tagline": "Consent-First Social Connection",
-    "url": "https://friendr-tmbc.vercel.app",
+    "url": "https://friendr.themarkkbrandoncollective-2d9.workers.dev",
     "section": "social",
     "listing": "Listing #006",
     "status": "live",
@@ -524,9 +512,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Friendr",
     "githubPrivate": true,
-    "iconSources": [
-      "https://friendr-tmbc.vercel.app/icons/icon-512.png"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/friendr-phone-hero.jpg",
@@ -580,7 +566,7 @@
     "theme": "findr",
     "name": "Findr",
     "tagline": "Location sharing for your people",
-    "url": "https://findr-tmbc.vercel.app",
+    "url": "https://findr.themarkkbrandoncollective-2d9.workers.dev",
     "section": "social",
     "listing": "Listing #008",
     "status": "live",
@@ -606,9 +592,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Findr",
     "githubPrivate": true,
-    "iconSources": [
-      "https://findr-tmbc.vercel.app/logo.png"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/findr-phone-hero.jpg",
@@ -662,7 +646,7 @@
     "theme": "chatr",
     "name": "Chatr",
     "tagline": "Secure Private Chat",
-    "url": "https://chatr-tmbc.vercel.app",
+    "url": "https://chatr.pages.dev",
     "section": "social",
     "listing": "Listing #007",
     "status": "live",
@@ -693,9 +677,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Chatr",
     "githubPrivate": true,
-    "iconSources": [
-      "https://chatr-tmbc.vercel.app/icon.png"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/chatr-phone-hero.jpg",
@@ -753,7 +735,7 @@
     "theme": "navigate",
     "name": "Navigate",
     "tagline": "Custom GPS · Android Auto",
-    "url": "https://navigate-tmbc.vercel.app",
+    "url": "https://mbc-navigate.pages.dev",
     "section": "navigation",
     "listing": "Navigation · A",
     "status": "live",
@@ -793,9 +775,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/AndroidAutoApps",
     "githubPrivate": true,
-    "iconSources": [
-      "https://navigate-tmbc.vercel.app/icon-512.png"
-    ],
+    "iconSources": [],
     "screenshots": [],
     "platforms": [
       "phone",
@@ -818,7 +798,7 @@
     "theme": "guardr",
     "name": "Guardr",
     "tagline": "Independent Security Marketplace",
-    "url": "https://guardr.co",
+    "url": "https://guardr.themarkkbrandoncollective-2d9.workers.dev",
     "section": "security",
     "listing": "Security · A",
     "status": "live",
@@ -869,9 +849,7 @@
     ],
     "github": "https://github.com/TheMarkkBradonCollective/Guardr",
     "githubPrivate": true,
-    "iconSources": [
-      "https://www.guardr.co/logo.png"
-    ],
+    "iconSources": [],
     "screenshots": [
       {
         "src": "images/screenshots/guardr-phone-hero.jpg",
@@ -1034,7 +1012,7 @@
     "theme": "buynothing",
     "name": "TheBuffaloFree",
     "tagline": "Give Freely. Ask Kindly.",
-    "url": "https://www.buffalobuynothing.com",
+    "url": "https://thebuffalofree.themarkkbrandoncollective-2d9.workers.dev",
     "section": "community",
     "listing": "Listing #009",
     "status": "live",
@@ -1044,10 +1022,7 @@
     "features": [],
     "github": "https://github.com/TheMarkkBradonCollective/TheBuffaloFree",
     "githubPrivate": true,
-    "iconSources": [
-      "https://www.buffalobuynothing.com/favicon.ico",
-      "https://www.buffalobuynothing.com/logo.png"
-    ],
+    "iconSources": [],
     "screenshots": [],
     "platforms": [
       "phone",
@@ -1056,7 +1031,7 @@
     ],
     "readDetails": [
       "TheBuffaloFree is the Buffalo edition of the buy-nothing stack — neighbors post gifts, asks, and trades with no selling and no ads.",
-      "Same product family as TheSacramentoFree; tuned for Buffalo neighborhoods and the buffalobuynothing.com site."
+      "Same product family as TheSacramentoFree; tuned for Buffalo neighborhoods."
     ],
     "highlights": [
       "Buy-nothing · Buffalo",
@@ -1069,7 +1044,7 @@
     "theme": "default",
     "name": "Brandr",
     "tagline": "Brandr",
-    "url": "https://github.com/TheMarkkBradonCollective/Brandr",
+    "url": "https://brandr.pages.dev",
     "section": "lifestyle",
     "listing": "Listing #010",
     "status": "live",
@@ -1103,7 +1078,7 @@
     "theme": "default",
     "name": "CheckDeck",
     "tagline": "CheckDeck",
-    "url": "https://github.com/TheMarkkBradonCollective/CheckDeck",
+    "url": null,
     "section": "lifestyle",
     "listing": "Listing #011",
     "status": "live",
@@ -1137,13 +1112,13 @@
     "theme": "default",
     "name": "Portr",
     "tagline": "Pick Your Place. Run Your Time.",
-    "url": "https://portr.com",
+    "url": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
     "section": "lifestyle",
     "listing": "Listing #012",
     "status": "live",
     "statusLabel": "Active",
     "heroLine": "Coverage-driven delivery — customer, runner, vendor, and ops in one marketplace.",
-    "description": "Portr is the coverage-driven delivery marketplace — Portr customer app, Portr Runner, Portr Vendor, and Portr Command ops. Monorepo source lives in FoodDelivery on GitHub; product home is portr.com.",
+    "description": "Portr is the coverage-driven delivery marketplace — Portr customer app, Portr Runner, Portr Vendor, and Portr Command ops. Monorepo source lives in FoodDelivery on GitHub; the live site is https://portr-web.themarkkbrandoncollective-2d9.workers.dev.",
     "features": [],
     "github": "https://github.com/TheMarkkBradonCollective/FoodDelivery",
     "githubPrivate": false,
@@ -1158,7 +1133,7 @@
     ],
     "readDetails": [
       "Portr is a monorepo marketplace — customer (Portr), delivery (Portr Runner), business (Portr Vendor), and ops (Portr Command).",
-      "APKs publish through the MBC App Store; the company site at portr.com covers downloads, login, and how the ecosystem fits together."
+      "APKs publish through the MBC App Store; the company site on Cloudflare covers downloads, login, and how the ecosystem fits together."
     ],
     "highlights": [
       "Portr · Runner · Vendor · Command",
@@ -1171,7 +1146,7 @@
     "theme": "default",
     "name": "FREQ",
     "tagline": "FREQ",
-    "url": "https://github.com/TheMarkkBradonCollective/FREQ",
+    "url": "https://freq-cxt.pages.dev",
     "section": "lifestyle",
     "listing": "Listing #013",
     "status": "live",
@@ -1205,7 +1180,7 @@
     "theme": "default",
     "name": "Domino Score",
     "tagline": "Group domino scorekeeping",
-    "url": "https://github.com/TheMarkkBradonCollective/GroupDominoScore",
+    "url": "https://groupdominoscore.pages.dev",
     "section": "lifestyle",
     "listing": "Listing #014",
     "status": "live",
@@ -1239,7 +1214,7 @@
     "theme": "default",
     "name": "HangMan",
     "tagline": "HangMan",
-    "url": "https://github.com/TheMarkkBradonCollective/HangMan",
+    "url": null,
     "section": "lifestyle",
     "listing": "Listing #015",
     "status": "live",
@@ -1273,20 +1248,17 @@
     "theme": "default",
     "name": "MeUs-Them",
     "tagline": "MeUs-Them",
-    "url": "https://me-us-them.vercel.app",
+    "url": "https://meusthem.pages.dev",
     "section": "social",
     "listing": "Listing #016",
     "status": "live",
     "statusLabel": "Active · Free",
-    "heroLine": "MeUs-Them — live on Vercel, source on GitHub.",
+    "heroLine": "MeUs-Them — live on Cloudflare Pages, source on GitHub.",
     "description": "MeUs-Them — shipped social app from The Markk Brandon Collective. Try the live site or open the repo on GitHub.",
     "features": [],
     "github": "https://github.com/TheMarkkBradonCollective/MeUs-Them",
     "githubPrivate": true,
-    "iconSources": [
-      "https://me-us-them.vercel.app/favicon.ico",
-      "https://me-us-them.vercel.app/icon.png"
-    ],
+    "iconSources": [],
     "screenshots": [],
     "platforms": [
       "phone",
@@ -1294,11 +1266,11 @@
       "chromebook"
     ],
     "readDetails": [
-      "MeUs-Them deploys at me-us-them.vercel.app with source in TheMarkkBradonCollective/MeUs-Them.",
+      "MeUs-Them is on Cloudflare Pages at https://meusthem.pages.dev, with source in TheMarkkBradonCollective/MeUs-Them.",
       "Showcase screenshots will land when device captures are synced."
     ],
     "highlights": [
-      "Live on Vercel",
+      "Live on Cloudflare",
       "Source on GitHub"
     ]
   },
@@ -1307,20 +1279,17 @@
     "theme": "default",
     "name": "MyVenue",
     "tagline": "MyVenue",
-    "url": "https://my-venue.vercel.app",
+    "url": "https://myvenue.pages.dev",
     "section": "social",
     "listing": "Listing #017",
     "status": "live",
     "statusLabel": "Active · Free",
-    "heroLine": "MyVenue — venue-facing app on Vercel.",
-    "description": "MyVenue — shipped app from The Markk Brandon Collective. Live site on Vercel; source on GitHub.",
+    "heroLine": "MyVenue — venue-facing app on Cloudflare Pages.",
+    "description": "MyVenue — shipped app from The Markk Brandon Collective. Live site on Cloudflare Pages; source on GitHub.",
     "features": [],
     "github": "https://github.com/TheMarkkBradonCollective/MyVenue",
     "githubPrivate": true,
-    "iconSources": [
-      "https://my-venue.vercel.app/favicon.ico",
-      "https://my-venue.vercel.app/icon.png"
-    ],
+    "iconSources": [],
     "screenshots": [],
     "platforms": [
       "phone",
@@ -1328,11 +1297,11 @@
       "chromebook"
     ],
     "readDetails": [
-      "MyVenue runs at my-venue.vercel.app with code in TheMarkkBradonCollective/MyVenue.",
+      "MyVenue is on Cloudflare Pages at https://myvenue.pages.dev, with code in TheMarkkBradonCollective/MyVenue.",
       "Open the repo for venue flows and deploy notes."
     ],
     "highlights": [
-      "Live on Vercel",
+      "Live on Cloudflare",
       "Source on GitHub"
     ]
   },
@@ -1341,20 +1310,17 @@
     "theme": "default",
     "name": "TheMarkkade",
     "tagline": "Collective portfolio hub",
-    "url": "https://the-markkade-tmbc.vercel.app",
+    "url": "https://themarkkade.pages.dev",
     "section": "lifestyle",
     "listing": "Listing #018",
     "status": "live",
     "statusLabel": "Active",
     "heroLine": "Portfolio and project hub for the Collective.",
-    "description": "TheMarkkade — portfolio and project hub from TheMarkkBradonCollective/TheMarkkade.io. Public site on Vercel; the newspaper front page now lives on GitHub Pages.",
+    "description": "TheMarkkade — portfolio and project hub from TheMarkkBradonCollective/TheMarkkade.io. Public site on Cloudflare Pages; the newspaper front page now lives on GitHub Pages.",
     "features": [],
     "github": "https://github.com/TheMarkkBradonCollective/TheMarkkade.io",
     "githubPrivate": true,
-    "iconSources": [
-      "https://the-markkade-tmbc.vercel.app/favicon.ico",
-      "https://the-markkade-tmbc.vercel.app/icon.png"
-    ],
+    "iconSources": [],
     "screenshots": [],
     "platforms": [
       "phone",
@@ -1362,7 +1328,7 @@
       "chromebook"
     ],
     "readDetails": [
-      "TheMarkkade.io was the earlier Collective portfolio host; this listing points at the shipped Vercel deploy and GitHub repo.",
+      "TheMarkkade.io was the earlier Collective portfolio host; this listing points at the Cloudflare Pages site and GitHub repo.",
       "For the current newspaper site and classifieds, use themarkkbradoncollective.github.io/main — this app remains in the catalog as a shipped deploy."
     ],
     "highlights": [

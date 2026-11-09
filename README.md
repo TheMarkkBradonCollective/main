@@ -6,24 +6,42 @@
 
 ## Live site
 
-**Host:** [Cloudflare Pages](https://pages.cloudflare.com/) (recommended project name: `mbc-store`)
+**Cloudflare Pages:** [mbc-store.pages.dev](https://mbc-store.pages.dev) (project `mbc-store`).
 
-**Repository:** [github.com/TheMarkkBradonCollective/main](https://github.com/TheMarkkBradonCollective/main) — keep **private**; APKs and static assets deploy from this repo.
+**GitHub Pages fallback:** [themarkkbradoncollective.github.io/main/](https://themarkkbradoncollective.github.io/main/) stays up until a Cloudflare production deploy is confirmed.
+
+**Repository:** [github.com/TheMarkkBradonCollective/main](https://github.com/TheMarkkBradonCollective/main).
 
 Legacy newspaper pages (`/about/`, `/apps/`, `/support/`, etc.) remain in the tree; the **root `/` is the app store**.
 
 ## Deploy to Cloudflare Pages
 
-1. Create a Pages project linked to this GitHub repo (production branch: `main`).
-2. **Build settings:** Framework preset **None**, build command empty, output directory **`.`** (repository root).
-3. Config is in [`wrangler.toml`](wrangler.toml). Optional CLI deploy from a machine with Cloudflare credentials:
+Pages serves an asset only when its manifest key starts with `/` (`/index.html`, not `index.html`). A direct upload that omitted that slash reported success and then returned an empty 404 for every URL, including deploy aliases. [`pages_build_output_dir = "."`](wrangler.toml) also published the repo root instead of a site directory.
+
+1. Stage the site (skips files over 25 MiB and the large APK trees in [`.assetsignore`](.assetsignore)):
 
    ```bash
-   npx wrangler pages deploy . --project-name=mbc-store
+   npm run build:pages
    ```
 
-4. Attach a custom domain in the Cloudflare dashboard (e.g. `store.themarkkbradoncollective.com`).
-5. Headers and redirects: [`_headers`](_headers), [`_redirects`](_redirects) (`/download/` → `/`).
+   Output is `dist/` and must contain `index.html`, `apk-catalog.json`, `css/app-store.css`, and `js/app-store.js`.
+
+2. Deploy that directory with Wrangler (it writes slash-prefixed manifest keys):
+
+   ```bash
+   npx wrangler pages deploy dist --project-name=mbc-store
+   ```
+
+   `npm run deploy:pages` does both steps. `npx wrangler deploy --dry-run` packages the same `dist/` as Workers static assets without uploading.
+
+3. GitHub Actions (`.github/workflows/deploy-cloudflare-pages.yml`) deploys on push to `main`. Repository secrets, not committed:
+
+   | Secret | Value |
+   | --- | --- |
+   | `CLOUDFLARE_API_TOKEN` | API token with **Account → Cloudflare Pages → Edit** |
+   | `CLOUDFLARE_ACCOUNT_ID` | Account ID from the Workers & Pages overview |
+
+4. Headers and redirects: [`_headers`](_headers), [`_redirects`](_redirects) (`/download/` → `/`). They are copied into `dist/`.
 
 ## App catalog (`apk-catalog.json`)
 

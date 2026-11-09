@@ -1,4 +1,5 @@
-# Cloudflare Pages — skip large binaries (served from mbc-store-apks R2)
+# Cloudflare asset upload — skip large binaries (served from mbc-store-apks R2).
+# Keep these paths specific. A "*" or "**" line drops the whole site and pages.dev 404s.
 apks/friendr/
 apks/buffalofree/
 apks/buynothing/

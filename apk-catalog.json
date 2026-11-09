@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T11:40:00.000Z",
+  "generatedAt": "2026-11-09T11:50:00.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -100,11 +100,11 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "updatedAt": "2026-10-31",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/dlvrd/latest.apk",
         "downloadName": "dlvrd-v1.0.0.apk",
-        "fileSize": 23212526,
+        "fileSize": 23066464,
         "releaseNotes": "Central R2 mirror (upstream)."
       },
       "product": "dlvrd",
@@ -159,7 +159,7 @@
       "tagline": "In-car media · Android Auto",
       "description": "Companion app from the AndroidAutoApps repo for in-car experiences alongside Navigate.",
       "category": "navigation",
-      "icon": "icons/apps/navigate.png",
+      "icon": "icons/icon-192.png",
       "webUrl": "https://mbc-navigate.pages.dev",
       "screenshots": [],
       "android": {
@@ -178,7 +178,7 @@
       "tagline": "Audio · Android Auto",
       "description": "Audio experience from the AndroidAutoApps bundle.",
       "category": "navigation",
-      "icon": "icons/apps/navigate.png",
+      "icon": "icons/icon-192.png",
       "webUrl": "https://mbc-navigate.pages.dev",
       "screenshots": [],
       "android": {
@@ -240,7 +240,7 @@
       "tagline": "Social connection",
       "description": "Consent-forward social connection app.",
       "category": "social",
-      "icon": "icons/apps/meus-them.png",
+      "icon": "icons/apps/meusthem.png",
       "webUrl": "https://meusthem.pages.dev",
       "screenshots": [],
       "android": {
@@ -377,7 +377,7 @@
       "tagline": "Line app",
       "description": "Line — Collective web app.",
       "category": "social",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/line.png",
       "webUrl": "https://line.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
@@ -533,19 +533,19 @@
       "slug": "guardr",
       "name": "Guardr — Customer",
       "tagline": "Coverage, activity, and reports",
-      "description": "Customer app. Post coverage, follow activity, and read reports. The published R2 APK is the client build (native product app \"client\").",
+      "description": "Customer app. Post coverage, follow activity, and read reports. The download is the current build the Guardr site publishes (package com.tmbcworks.guardr).",
       "category": "security",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/guardr.png",
       "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/client",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.0.131-beta",
+        "version": "1.1.0-cf-beta",
         "updatedAt": "2026-10-31",
-        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr/latest.apk",
-        "downloadName": "guardr-v1.0.131-beta.apk",
-        "fileSize": 9323598,
-        "releaseNotes": "Central R2 mirror (upstream)."
+        "downloadUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/guardr.apk",
+        "downloadName": "guardr-v1.1.0.apk",
+        "fileSize": 9586203,
+        "releaseNotes": "Current Guardr build published by the app (versionName 1.1.0-cf-beta, versionCode 110). The older R2 client beta is 1.0.131-beta versionCode 231, which Android treats as newer until versionCode is raised above 231."
       },
       "product": "guardr",
       "productName": "Guardr",
@@ -557,7 +557,7 @@
       "tagline": "Classic word game",
       "description": "HangMan word game from the Collective.",
       "category": "games",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/hangman.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
@@ -576,16 +576,16 @@
       "tagline": "Hire brand ambassadors",
       "description": "Hire brand ambassadors to promote or audit your business. Real people, real conversations, real impact.",
       "category": "productivity",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/brandr.png",
       "webUrl": "https://brandr.pages.dev",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.1.0",
+        "version": "1.3.0",
         "updatedAt": "2026-10-31",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/brandr/latest.apk",
         "downloadName": "brandr-v1.1.0.apk",
-        "fileSize": 3168380,
+        "fileSize": 3173401,
         "releaseNotes": "Central R2 mirror (local mirror)."
       }
     },
@@ -614,7 +614,7 @@
       "tagline": "Pick it up. Run it there.",
       "description": "Delivery worker app. Choose a business and a time window. Download is the FoodDelivery v0.4.0 GitHub release.",
       "category": "productivity",
-      "icon": "icons/apps/portr.png",
+      "icon": "icons/apps/runr.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
@@ -637,7 +637,7 @@
       "tagline": "See everything. Build anything.",
       "description": "Development command center for monitoring, understanding, and improving the health of projects across GitHub. Responsive web app and installable PWA. No public deployment yet.",
       "category": "productivity",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/sentinel.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
@@ -663,7 +663,7 @@
       "tagline": "Investor demo",
       "description": "Investor demo repo. No public Worker, Pages site, or APK was found.",
       "category": "security",
-      "icon": "icons/apps/sss.png",
+      "icon": "icons/icon-192.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
@@ -679,7 +679,7 @@
       "tagline": "Security management system",
       "description": "Security Management System repo. No public Worker, Pages site, or APK was found.",
       "category": "security",
-      "icon": "icons/apps/sss.png",
+      "icon": "icons/icon-192.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
@@ -695,7 +695,7 @@
       "tagline": "Signature Security showcase",
       "description": "Signature Security Specialist showcase. No public Worker or Pages site is deployed.",
       "category": "security",
-      "icon": "icons/apps/sss.png",
+      "icon": "icons/icon-192.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
@@ -711,7 +711,7 @@
       "tagline": "Shifts, check-in, and field work",
       "description": "Guard field app from the Guardr repo (guard-app). The website route is live. No Guard APK is in this repo or on the central R2 mirror.",
       "category": "security",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/guardr-guard.png",
       "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/guard",
       "screenshots": [],
       "android": {
@@ -727,7 +727,7 @@
       "tagline": "Operations, people, and administration",
       "description": "Staff operations app. Same system as the website /staff tools. No Staff APK is published on the central R2 mirror.",
       "category": "security",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/guardr-staff.png",
       "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/staff",
       "screenshots": [],
       "android": {
@@ -743,7 +743,7 @@
       "tagline": "Messages and support",
       "description": "Messenger companion. Sign in, then messages and support for that Guard, Customer, or Staff account. APK is the repo build, not the central R2 client mirror.",
       "category": "security",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/guardr-messenger.png",
       "webUrl": "https://guardr.themarkkbrandoncollective-2d9.workers.dev/messenger",
       "screenshots": [],
       "android": {
@@ -764,7 +764,7 @@
       "tagline": "Sell. Manage. Grow.",
       "description": "Business app. Sell on Portr and set how many Runners you need. Download is the FoodDelivery v0.4.0 GitHub release.",
       "category": "productivity",
-      "icon": "icons/apps/portr.png",
+      "icon": "icons/apps/portr-vendor.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
@@ -787,7 +787,7 @@
       "tagline": "Run the marketplace.",
       "description": "Ops app. Advance orders, coverage, and users. The same tools are on the website staff portal. Download is the FoodDelivery v0.4.0 GitHub release.",
       "category": "productivity",
-      "icon": "icons/apps/portr.png",
+      "icon": "icons/apps/portr-command.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev/staff",
       "screenshots": [],
       "android": {
@@ -810,7 +810,7 @@
       "tagline": "Get what you need.",
       "description": "Customer app with the FastFood name and palette. Same marketplace flows as Portr Customer. Download is the FoodDelivery v0.4.0 GitHub release.",
       "category": "productivity",
-      "icon": "icons/apps/portr.png",
+      "icon": "icons/apps/portr-fastfood.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
@@ -833,7 +833,7 @@
       "tagline": "Run the marketplace on Windows.",
       "description": "Windows build of Portr Command advertised on the Portr site. The v0.4.0 .exe URL returns 404, and no Windows build is in this repo.",
       "category": "productivity",
-      "icon": "icons/apps/portr.png",
+      "icon": "icons/apps/portr-command-windows.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev/staff",
       "screenshots": [],
       "android": {
@@ -849,7 +849,7 @@
       "tagline": "Munchline shell",
       "description": "Munchline-branded build of the same package (com.dasher.companion). APK is in this repo. It is not the central R2 GigOS 1.3.4 file.",
       "category": "lifestyle",
-      "icon": "icons/apps/gigos.png",
+      "icon": "icons/apps/gigos-munchline.png",
       "webUrl": null,
       "screenshots": [],
       "android": {
@@ -871,7 +871,7 @@
       "tagline": "Moderation and member review",
       "description": "Staff portal for appeals, audit, ID review, reports, and support. Web route only; no separate staff APK was found.",
       "category": "social",
-      "icon": "icons/apps/friendr.png",
+      "icon": "icons/apps/friendr-staff.png",
       "webUrl": "https://friendr.themarkkbrandoncollective-2d9.workers.dev/staff",
       "screenshots": [],
       "android": {
@@ -903,7 +903,7 @@
       "tagline": "Guards",
       "description": "SSS Guards Android app. Opens the mission board with shell=guards.",
       "category": "security",
-      "icon": "icons/apps/sss.png",
+      "icon": "icons/apps/sss-guards.png",
       "webUrl": "https://signaturesecurityspecialist.com/app/mission-board?shell=guards",
       "screenshots": [],
       "android": {
@@ -925,7 +925,7 @@
       "tagline": "Staff",
       "description": "SSS Staff Android app. The unversioned sss.apk in the repo is this same staff package.",
       "category": "security",
-      "icon": "icons/apps/sss.png",
+      "icon": "icons/apps/sss-staff.png",
       "webUrl": "https://signaturesecurityspecialist.com/app?shell=staff",
       "screenshots": [],
       "android": {
@@ -947,7 +947,7 @@
       "tagline": "Messenger",
       "description": "SSS Messenger Android app. Opens communication with shell=messenger.",
       "category": "security",
-      "icon": "icons/apps/sss.png",
+      "icon": "icons/apps/sss-messenger.png",
       "webUrl": "https://signaturesecurityspecialist.com/app/communication?shell=messenger",
       "screenshots": [],
       "android": {

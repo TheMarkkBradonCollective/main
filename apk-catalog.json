@@ -1,10 +1,10 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T19:32:03.000Z",
-  "note": "Edit this file to add or update apps \u2014 no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09. SSS Clients/Guards/Staff/Messenger WebView APKs published 2026-11-09.",
+  "generatedAt": "2026-11-09T20:13:13.000Z",
+  "note": "Edit this file to add or update apps — no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09. SSS Clients/Guards/Staff/Messenger WebView APKs published 2026-11-09. TheSacramentoFree/buynothing 0.2.2 published 2026-11-09 (Cloudflare, no supabase.co).",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
-    "name": "The Verse (StrainVerse \u00b7 SpiritsVerse \u00b7 CookVerse)",
+    "name": "The Verse (StrainVerse · SpiritsVerse · CookVerse)",
     "version": "1",
     "updatedAt": "2026-11-09",
     "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/verse/latest.zip",
@@ -105,7 +105,7 @@
     },
     {
       "slug": "dlvrd",
-      "name": "Dlvrd \u2014 Driver",
+      "name": "Dlvrd — Driver",
       "tagline": "Delivery driver messages",
       "description": "Dasher Companion for delivery drivers. One Android app: copy customer messages at each delivery stage. No second audience app was found in the public download site.",
       "category": "lifestyle",
@@ -121,7 +121,7 @@
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/dlvrd/latest.apk",
         "downloadName": "dlvrd-v1.2.0.apk",
         "fileSize": 16177336,
-        "releaseNotes": "FCM push rebuild 1.2.0 \u2014 Firebase project dlvrd-tmbc + device push registration baked in. Same Dlvrd release key as prior store APK.",
+        "releaseNotes": "FCM push rebuild 1.2.0 — Firebase project dlvrd-tmbc + device push registration baked in. Same Dlvrd release key as prior store APK.",
         "versionCode": 4,
         "packageId": "com.themarkkbradoncollective.dashercompanion",
         "sha256": "274f7c6242af18fe87356c1e62c2fbfb00d530e52b44b02a96c6dc1ac61f813c"
@@ -154,7 +154,7 @@
     {
       "slug": "navigate",
       "name": "Navigate",
-      "tagline": "Custom GPS \u00b7 Android Auto",
+      "tagline": "Custom GPS · Android Auto",
       "description": "OpenStreetMap routing with Android Auto integration. Part of the AndroidAutoApps bundle with YouCarPlay and Spektr.",
       "category": "navigation",
       "featured": true,
@@ -175,7 +175,7 @@
     {
       "slug": "youcarplay",
       "name": "YouCarPlay",
-      "tagline": "In-car media \u00b7 Android Auto",
+      "tagline": "In-car media · Android Auto",
       "description": "Companion app from the AndroidAutoApps repo for in-car experiences alongside Navigate.",
       "category": "navigation",
       "icon": "icons/icon-192.png",
@@ -194,7 +194,7 @@
     {
       "slug": "spektr",
       "name": "Spektr",
-      "tagline": "Audio \u00b7 Android Auto",
+      "tagline": "Audio · Android Auto",
       "description": "Audio experience from the AndroidAutoApps bundle.",
       "category": "navigation",
       "icon": "icons/icon-192.png",
@@ -204,12 +204,12 @@
         "status": "coming-soon",
         "version": null,
         "updatedAt": "2026-10-26",
-        "releaseNotes": "Ships with AndroidAutoApps \u2014 APK from release latest-2026-10-26 when mirrored to public hosting."
+        "releaseNotes": "Ships with AndroidAutoApps — APK from release latest-2026-10-26 when mirrored to public hosting."
       }
     },
     {
       "slug": "myvenue",
-      "name": "MyVenue \u2014 Venue",
+      "name": "MyVenue — Venue",
       "tagline": "Floor plan and operations",
       "description": "One venue-operations app. In-app roles are Founder, Owner, Manager, Event Planner, Security Director, Supervisor, Staff, and Read Only. They are permissions in this app, not separate downloads.",
       "category": "lifestyle",
@@ -221,7 +221,7 @@
         "status": "available",
         "version": "1.2.1",
         "updatedAt": "2026-11-09",
-        "releaseNotes": "Cloudflare rebuild 1.2.1 \u2014 API URL points at myvenue-api Worker. Signed with new MyVenue release key.",
+        "releaseNotes": "Cloudflare rebuild 1.2.1 — API URL points at myvenue-api Worker. Signed with new MyVenue release key.",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/myvenue/latest.apk",
         "downloadName": "myvenue-v1.2.1.apk",
         "fileSize": 5452358,
@@ -235,7 +235,7 @@
     },
     {
       "slug": "portr",
-      "name": "Portr \u2014 Vendor",
+      "name": "Portr — Vendor",
       "tagline": "Sell. Manage. Grow.",
       "description": "Portr vendor app for restaurants and merchants. Signed v0.4.0 APK (Cloudflare/Neon) from the FoodDelivery release.",
       "category": "productivity",
@@ -260,7 +260,7 @@
     },
     {
       "slug": "portr-customer",
-      "name": "Portr \u2014 Customer",
+      "name": "Portr — Customer",
       "tagline": "Get what you need.",
       "description": "Customer app. Discover nearby businesses, order, and track a Runner. Download is the FoodDelivery v0.4.0 GitHub release.",
       "category": "productivity",
@@ -344,7 +344,7 @@
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/buffalofree/latest.apk",
         "downloadName": "buffalofree-v0.2.2.apk",
         "fileSize": 13619426,
-        "releaseNotes": "Correct BuffaloFree binary 0.2.2 (package com.tmbcworks.thebuffalofree). Replaces the mislabeled Sacramento APK. Wraps thebuffalofree Worker. New package id \u2014 uninstall any wrong-package install first.",
+        "releaseNotes": "Correct BuffaloFree binary 0.2.2 (package com.tmbcworks.thebuffalofree). Replaces the mislabeled Sacramento APK. Wraps thebuffalofree Worker. New package id — uninstall any wrong-package install first.",
         "versionCode": 25,
         "packageId": "com.tmbcworks.thebuffalofree",
         "sha256": "e587dbeb50091a4d8cf61ab066bbc3717fa96f231bafc6d27f3e298949c4cf76"
@@ -353,7 +353,7 @@
     },
     {
       "slug": "css",
-      "name": "CSS \u2014 Business",
+      "name": "CSS — Business",
       "tagline": "Post missions and read reports",
       "description": "Business side of Customer Service Specialists. Post missions and open completed reports. Web route /business. No APK in this repo.",
       "category": "productivity",
@@ -390,7 +390,7 @@
       "slug": "spiritsverse",
       "name": "SpiritsVerse",
       "tagline": "Social network for drink lovers",
-      "description": "SpiritsVerse \u2014 drinks-focused social network in the Verse family.",
+      "description": "SpiritsVerse — drinks-focused social network in the Verse family.",
       "category": "lifestyle",
       "icon": "icons/apps/spiritsverse.png",
       "webUrl": "https://spiritsverse.themarkkbrandoncollective-2d9.workers.dev",
@@ -402,7 +402,7 @@
         "downloadName": "spiritsverse-v1.5.6.apk",
         "fileSize": 7902576,
         "updatedAt": "2026-11-09",
-        "releaseNotes": "Cloudflare rebuild 1.5.6 \u2014 API base points at spiritsverse Worker (was Supabase). Signed with new SpiritsVerse release key; uninstall old install first.",
+        "releaseNotes": "Cloudflare rebuild 1.5.6 — API base points at spiritsverse Worker (was Supabase). Signed with new SpiritsVerse release key; uninstall old install first.",
         "versionCode": 156,
         "packageId": "com.themarkkbradoncollective.spiritsverse",
         "sha256": "0049f20b75e35bdc921dfebbcb6486093cab1221d74d493c80ac3e06c51667de"
@@ -425,7 +425,7 @@
         "downloadName": "findr-v1.4.8.apk",
         "fileSize": 2775996,
         "updatedAt": "2026-11-09",
-        "releaseNotes": "Cloudflare rebuild 1.4.8 \u2014 points at findr Worker (was Vercel). Signed with new Findr release key; uninstall old install first if the previous key differed.",
+        "releaseNotes": "Cloudflare rebuild 1.4.8 — points at findr Worker (was Vercel). Signed with new Findr release key; uninstall old install first if the previous key differed.",
         "versionCode": 12,
         "packageId": "app.findr.android",
         "sha256": "a71e996620094f0d81aabfeb87076399dd54adeaec800b5a99667ca3e008cb5b"
@@ -436,7 +436,7 @@
       "slug": "line",
       "name": "Line",
       "tagline": "Line app",
-      "description": "Line \u2014 Collective web app.",
+      "description": "Line — Collective web app.",
       "category": "social",
       "icon": "icons/apps/line.png",
       "webUrl": "https://line.themarkkbrandoncollective-2d9.workers.dev",
@@ -447,7 +447,7 @@
     },
     {
       "slug": "friendr",
-      "name": "Friendr \u2014 Member",
+      "name": "Friendr — Member",
       "tagline": "Consent-first social connection",
       "description": "Member app: home, chats, friends, and profile. Staff tools are a separate portal.",
       "category": "social",
@@ -462,7 +462,7 @@
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/friendr/latest.apk",
         "downloadName": "friendr-v1.2.0.apk",
         "fileSize": 26786399,
-        "releaseNotes": "Friendr v1.2.0 \u2014 mirrored from friendr worker to central R2."
+        "releaseNotes": "Friendr v1.2.0 — mirrored from friendr worker to central R2."
       },
       "product": "friendr",
       "productName": "Friendr",
@@ -472,7 +472,7 @@
       "slug": "strainverse",
       "name": "StrainVerse",
       "tagline": "Stoner-first social network",
-      "description": "Cannabis culture social network \u2014 Verse family.",
+      "description": "Cannabis culture social network — Verse family.",
       "category": "lifestyle",
       "featured": true,
       "icon": "icons/apps/strainverse.png",
@@ -541,20 +541,21 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.2.1",
+        "version": "0.2.2",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/buynothing/latest.apk",
-        "downloadName": "buynothing-v0.2.1.apk",
-        "fileSize": 34643018,
-        "releaseNotes": "Re-signed with the existing Sacramento release key so current installs can update in place.",
+        "downloadName": "buynothing-v0.2.2.apk",
+        "fileSize": 44596436,
+        "releaseNotes": "Rebuild 0.2.2 pointing at sacramentobuynothing.com (Supabase removed). Signed with existing Sacramento release key so current installs can update in place (versionCode 59).",
         "updatedAt": "2026-11-09",
-        "versionCode": 58,
-        "packageId": "org.sacramentobuynothing.app"
+        "versionCode": 59,
+        "packageId": "org.sacramentobuynothing.app",
+        "sha256": "129ad0683088dcb8f07fd2691f2a3b450905488ee1f9df17f0810e1cd814d5ff"
       },
       "newUpdated": true
     },
     {
       "slug": "gigos",
-      "name": "GigOS \u2014 Performer",
+      "name": "GigOS — Performer",
       "tagline": "Live performance OS",
       "description": "GigOS Performer (package com.dasher.companion, versionCode 10306). Version 1.3.6 updates existing installs.",
       "category": "lifestyle",
@@ -578,7 +579,7 @@
     },
     {
       "slug": "sss",
-      "name": "Signature Security Specialist \u2014 Clients",
+      "name": "Signature Security Specialist — Clients",
       "tagline": "Client operations",
       "description": "SSS Clients Android app. The central R2 file matches sss-clients-v1.0.0.apk. The APK opens the company site with shell=clients.",
       "category": "security",
@@ -603,7 +604,7 @@
     },
     {
       "slug": "guardr",
-      "name": "Guardr \u2014 Customer",
+      "name": "Guardr — Customer",
       "tagline": "Coverage, activity, and reports",
       "description": "Customer app. Post coverage, follow activity, and read reports. Opens at /client/home on the Guardr worker.",
       "category": "security",
@@ -617,7 +618,7 @@
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr/latest.apk",
         "downloadName": "guardr-v1.0.135.apk",
         "fileSize": 9588528,
-        "releaseNotes": "FCM push rebuild 1.0.135 \u2014 Firebase project guardr-tmbc baked in. Same Guardr release key as prior store APK; uninstall not required if you already have the new-key build.",
+        "releaseNotes": "FCM push rebuild 1.0.135 — Firebase project guardr-tmbc baked in. Same Guardr release key as prior store APK; uninstall not required if you already have the new-key build.",
         "versionCode": 235,
         "packageId": "com.tmbcworks.guardr",
         "sha256": "0796ac86f5de514399daf5ae884e470920fdb59375f2c7a5c254254d36df2f38"
@@ -689,7 +690,7 @@
     },
     {
       "slug": "runr",
-      "name": "Runr \u2014 Driver",
+      "name": "Runr — Driver",
       "tagline": "Pick it up. Run it there.",
       "description": "Runr driver app. Signed v0.4.0 APK (Cloudflare/Neon) from the FoodDelivery release.",
       "category": "productivity",
@@ -739,7 +740,7 @@
     },
     {
       "slug": "signature-security-specialist-demo",
-      "name": "Signature Security Specialist \u2014 Demo",
+      "name": "Signature Security Specialist — Demo",
       "tagline": "Investor demo",
       "description": "Investor demo repo. The website is live. No APK was found.",
       "category": "security",
@@ -755,7 +756,7 @@
     },
     {
       "slug": "signature-security-specialist-sms",
-      "name": "Signature Security Specialist \u2014 SMS",
+      "name": "Signature Security Specialist — SMS",
       "tagline": "Security management system",
       "description": "Security Management System repo. The website is live. No APK was found.",
       "category": "security",
@@ -797,7 +798,7 @@
     },
     {
       "slug": "guardr-guard",
-      "name": "Guardr \u2014 Guard",
+      "name": "Guardr — Guard",
       "product": "guardr",
       "productName": "Guardr",
       "audience": "Guard",
@@ -813,7 +814,7 @@
     },
     {
       "slug": "guardr-staff",
-      "name": "Guardr \u2014 Staff",
+      "name": "Guardr — Staff",
       "product": "guardr",
       "productName": "Guardr",
       "audience": "Staff",
@@ -829,7 +830,7 @@
     },
     {
       "slug": "guardr-messenger",
-      "name": "Guardr \u2014 Messenger",
+      "name": "Guardr — Messenger",
       "product": "guardr",
       "productName": "Guardr",
       "audience": "Messenger",
@@ -845,7 +846,7 @@
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr-messenger/latest.apk",
         "downloadName": "Guardr-Messenger-v1.1.2.apk",
         "fileSize": 9568048,
-        "releaseNotes": "FCM push rebuild 1.1.2 \u2014 Firebase project guardr-tmbc baked in. Same Guardr release key as 1.1.1-cf.",
+        "releaseNotes": "FCM push rebuild 1.1.2 — Firebase project guardr-tmbc baked in. Same Guardr release key as 1.1.1-cf.",
         "versionCode": 233,
         "packageId": "com.tmbcworks.guardr.messenger",
         "updatedAt": "2026-11-09",
@@ -855,7 +856,7 @@
     },
     {
       "slug": "portr-command",
-      "name": "Portr \u2014 Command",
+      "name": "Portr — Command",
       "product": "portr",
       "productName": "Portr",
       "audience": "Admin",
@@ -880,7 +881,7 @@
     },
     {
       "slug": "portr-fastfood",
-      "name": "Portr \u2014 FastFood",
+      "name": "Portr — FastFood",
       "product": "portr",
       "productName": "Portr",
       "audience": "Customer (FastFood)",
@@ -905,7 +906,7 @@
     },
     {
       "slug": "portr-command-windows",
-      "name": "Portr \u2014 Command (Windows)",
+      "name": "Portr — Command (Windows)",
       "product": "portr",
       "productName": "Portr",
       "audience": "Admin (Windows)",
@@ -921,7 +922,7 @@
     },
     {
       "slug": "gigos-munchline",
-      "name": "GigOS \u2014 Munchline",
+      "name": "GigOS — Munchline",
       "product": "gigos",
       "productName": "GigOS",
       "audience": "Munchline",
@@ -945,7 +946,7 @@
     },
     {
       "slug": "friendr-staff",
-      "name": "Friendr \u2014 Staff",
+      "name": "Friendr — Staff",
       "product": "friendr",
       "productName": "Friendr",
       "audience": "Staff",
@@ -961,7 +962,7 @@
     },
     {
       "slug": "css-specialist",
-      "name": "CSS \u2014 Specialist",
+      "name": "CSS — Specialist",
       "product": "css",
       "productName": "CSS",
       "audience": "Specialist",
@@ -977,7 +978,7 @@
     },
     {
       "slug": "sss-guards",
-      "name": "Signature Security Specialist \u2014 Guards",
+      "name": "Signature Security Specialist — Guards",
       "product": "sss",
       "productName": "Signature Security Specialist",
       "audience": "Guards",
@@ -1002,7 +1003,7 @@
     },
     {
       "slug": "sss-staff",
-      "name": "Signature Security Specialist \u2014 Staff",
+      "name": "Signature Security Specialist — Staff",
       "product": "sss",
       "productName": "Signature Security Specialist",
       "audience": "Staff",
@@ -1027,7 +1028,7 @@
     },
     {
       "slug": "sss-messenger",
-      "name": "Signature Security Specialist \u2014 Messenger",
+      "name": "Signature Security Specialist — Messenger",
       "product": "sss",
       "productName": "Signature Security Specialist",
       "audience": "Messenger",
@@ -1052,7 +1053,7 @@
     },
     {
       "slug": "guardr-admin",
-      "name": "Guardr \u2014 Admin",
+      "name": "Guardr — Admin",
       "product": "guardr",
       "productName": "Guardr",
       "audience": "Admin",

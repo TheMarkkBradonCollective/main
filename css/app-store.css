@@ -232,6 +232,46 @@ body.store-body {
   gap: 0.85rem 0.5rem;
 }
 
+.store-product-card {
+  grid-column: 1 / -1;
+  background: var(--store-surface);
+  border: 1px solid var(--store-border);
+  border-radius: var(--store-radius);
+  padding: 0.85rem;
+  box-shadow: var(--store-shadow);
+}
+
+.store-product-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.store-product-head p {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  color: var(--store-text-muted);
+}
+
+.store-audience-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.store-audience-row .store-chip {
+  text-decoration: none;
+}
+
+.store-audience-label {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  color: var(--store-text-muted);
+}
+
 .store-grid-item {
   text-decoration: none;
   color: inherit;

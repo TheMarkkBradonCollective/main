@@ -1,0 +1,36 @@
+name: Deploy Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage static site
+        run: node scripts/stage-pages-output.mjs
+
+      - name: Confirm Pages output
+        run: |
+          test -f dist/index.html
+          test -f dist/apk-catalog.json
+          test -f dist/css/app-store.css
+          test -f dist/js/app-store.js
+          echo "Deploying dist/ ($(find dist -type f | wc -l) files), including index.html"
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=mbc-store --branch=main
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -165,9 +165,12 @@
     const githubBtn = project.github
       ? `<a class="btn" href="${escapeHtml(project.github)}" target="_blank" rel="noopener">GitHub</a>`
       : '';
+    const liveBtn = project.url && String(project.url).startsWith('http')
+      ? `<a class="btn btn-primary" href="${escapeHtml(project.url)}" target="_blank" rel="noopener">Open live app</a>`
+      : '';
     return `
       <div class="btn-row sc-actions">
-        <a class="btn btn-primary" href="${escapeHtml(project.url)}" target="_blank" rel="noopener">Open live app</a>
+        ${liveBtn}
         ${githubBtn}
         <a class="btn" href="../../download/">Downloads</a>
         <a class="btn" href="${catalogHref(project)}">Back to ${catalogLabel(project)}</a>

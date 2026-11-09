@@ -95,7 +95,8 @@ export PLAY_SERVICE_ACCOUNT_JSON=secrets/play-service-account.json
 
 Google Play App Signing is on by default. You upload with an **upload key**; Google holds the app signing key.
 
-- Most MBC apps use `secrets/mbc-upload.keystore` (auto-created on first build)
+- Most MBC apps use the existing `secrets/mbc-upload.keystore` (restore it; builds do not generate a new keystore)
+- MBC Store falls back to the existing `download/android/mbc-store-release.keystore` when that upload keystore is already on disk
 - Navigate uses its own `Navigate/android/navigate-release.keystore` (existing sideload builds)
 
 **Save passwords securely.** If you lose the upload key, reset it in Play Console → App signing.

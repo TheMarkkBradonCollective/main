@@ -88,26 +88,9 @@ async function ensureSdk() {
 
 async function ensureKeystore() {
   if (existsSync(keystorePath)) return;
-  run('keytool', [
-    '-genkeypair',
-    '-v',
-    '-keystore',
-    keystorePath,
-    '-alias',
-    KEY_ALIAS,
-    '-keyalg',
-    'RSA',
-    '-keysize',
-    '2048',
-    '-validity',
-    '10000',
-    '-storepass',
-    STORE_PASS,
-    '-keypass',
-    STORE_PASS,
-    '-dname',
-    'CN=MBC Store, OU=MBC, O=The Markk Brandon Collective, L=Sacramento, ST=CA, C=US',
-  ]);
+  throw new Error(
+    'Existing keystore not found at download/android/mbc-store-release.keystore. Refusing to create a new keystore.'
+  );
 }
 
 async function ensureSigningConfig() {

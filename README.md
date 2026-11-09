@@ -32,7 +32,7 @@ Pages serves an asset only when its manifest key starts with `/` (`/index.html`,
    npx wrangler pages deploy dist --project-name=mbc-store
    ```
 
-   `npm run deploy:pages` does both steps. `npx wrangler deploy --dry-run` packages the same `dist/` as Workers static assets without uploading.
+   `npm run deploy:pages` does both steps. `wrangler.toml` is Pages-safe (`name`, `pages_build_output_dir = "dist"`). Workers-only keys such as `[assets]` and `[observability]` make `wrangler pages deploy` reject the config.
 
 3. GitHub Actions (`.github/workflows/deploy-cloudflare-pages.yml`) deploys on push to `main`. Repository secrets, not committed:
 

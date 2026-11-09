@@ -2,7 +2,6 @@
 import { existsSync } from 'node:fs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { run } from './android-sdk.mjs';
 
 export function resolveSigningConfig(signing, repoRoot) {
   const storePassword =
@@ -28,38 +27,49 @@ export function resolveSigningConfig(signing, repoRoot) {
   };
 }
 
+function existingSideloadKeystore(signing, repoRoot) {
+  const configured = signing.keystore || '';
+  const sharedUpload =
+    configured.endsWith('secrets/mbc-upload.keystore') || signing.alias === 'mbc-upload';
+  if (!sharedUpload) return null;
+  const sideload = path.join(repoRoot, 'download/android/mbc-store-release.keystore');
+  if (!existsSync(sideload)) return null;
+  return sideload;
+}
+
 export async function ensureKeystore(signing, repoRoot, appName) {
   const config = resolveSigningConfig(signing, repoRoot);
   if (existsSync(config.keystorePath)) return config;
 
-  await fs.mkdir(path.dirname(config.keystorePath), { recursive: true });
-  console.log(`Creating upload keystore at ${config.keystorePath}`);
-  run('keytool', [
-    '-genkeypair',
-    '-v',
-    '-keystore',
-    config.keystorePath,
-    '-alias',
-    config.alias,
-    '-keyalg',
-    'RSA',
-    '-keysize',
-    '2048',
-    '-validity',
-    '10000',
-    '-storepass',
-    config.storePassword,
-    '-keypass',
-    config.keyPassword,
-    '-dname',
-    `CN=${appName}, OU=MBC, O=The Markk Brandon Collective, L=Sacramento, ST=CA, C=US`,
-  ]);
-  return config;
+  const sideload = existingSideloadKeystore(signing, repoRoot);
+  if (sideload) {
+    return {
+      ...config,
+      keystorePath: sideload,
+      alias: 'mbcstore',
+      storePassword: process.env.MBC_STORE_KEYSTORE_PASS || config.storePassword,
+      keyPassword:
+        process.env.MBC_STORE_KEY_PASSWORD ||
+        process.env.MBC_STORE_KEYSTORE_PASS ||
+        config.keyPassword,
+      useExistingSideload: true,
+    };
+  }
+
+  const relative = path.relative(repoRoot, config.keystorePath);
+  throw new Error(
+    `Existing keystore not found at ${relative} (app: ${appName}). Refusing to create a new keystore.`
+  );
 }
 
 export async function writeKeystoreProperties(androidDir, signing, repoRoot) {
   const config = await ensureKeystore(signing, repoRoot, path.basename(androidDir));
   const propsPath = path.join(androidDir, 'keystore.properties');
+  if (config.useExistingSideload) {
+    // build.gradle.kts already signs with mbc-store-release.keystore when this file is absent.
+    if (existsSync(propsPath)) await fs.rm(propsPath);
+    return propsPath;
+  }
   const relKeystore = path.relative(androidDir, config.keystorePath).replace(/\\/g, '/');
   const content = [
     `storeFile=${relKeystore}`,

@@ -118,13 +118,9 @@ async function patchAndroidProject() {
 
   const keystore = path.join(androidRoot, 'navigate-release.keystore');
   if (!existsSync(keystore)) {
-    run('keytool', [
-      '-genkeypair', '-v', '-keystore', keystore, '-alias', 'navigate',
-      '-keyalg', 'RSA', '-keysize', '2048', '-validity', '10000',
-      '-storepass', process.env.NAVIGATE_KEYSTORE_PASSWORD || 'mbcnavigate',
-      '-keypass', process.env.NAVIGATE_KEY_PASSWORD || 'mbcnavigate',
-      '-dname', 'CN=Navigate, OU=MBC, O=The Markk Brandon Collective, L=Sacramento, ST=CA, C=US',
-    ]);
+    throw new Error(
+      'Existing Navigate keystore not found at android/navigate-release.keystore. Refusing to create a new keystore.'
+    );
   }
 }
 

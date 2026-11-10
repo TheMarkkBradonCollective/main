@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-09T20:13:13.000Z",
+  "generatedAt": "2026-11-10T04:49:16.000Z",
   "note": "Edit this file to add or update apps — no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09. SSS Clients/Guards/Staff/Messenger WebView APKs published 2026-11-09. TheSacramentoFree/buynothing 0.2.2 published 2026-11-09 (Cloudflare, no supabase.co).",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
@@ -77,7 +77,8 @@
     "buffalofree",
     "buynothing",
     "cookverse",
-    "runr"
+    "runr",
+    "markkade"
   ],
   "apps": [
     {
@@ -224,10 +225,10 @@
         "releaseNotes": "Cloudflare rebuild 1.2.1 — API URL points at myvenue-api Worker. Signed with new MyVenue release key.",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/myvenue/latest.apk",
         "downloadName": "myvenue-v1.2.1.apk",
-        "fileSize": 5452358,
+        "fileSize": 5450364,
         "versionCode": 121,
         "packageId": "com.themarkkbradoncollective.myvenue",
-        "sha256": "1d3f298a13e0ee7d06e47df91637d4272b89acfe4baecb90a99559be9748a5d9"
+        "sha256": "dbe96c147e837559bd67a3b4ccbec43bd990d335f714ce80a88528acd5214d9f"
       },
       "product": "myvenue",
       "productName": "MyVenue",
@@ -237,21 +238,22 @@
       "slug": "portr",
       "name": "Portr — Vendor",
       "tagline": "Sell. Manage. Grow.",
-      "description": "Portr vendor app for restaurants and merchants. Signed v0.4.0 APK (Cloudflare/Neon) from the FoodDelivery release.",
+      "description": "Portr vendor app for restaurants and merchants. Signed v0.4.2 APK (Cloudflare/Neon) from the FoodDelivery release.",
       "category": "productivity",
       "icon": "icons/apps/portr-vendor.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.1",
-        "versionCode": 401,
+        "version": "0.4.2",
+        "versionCode": 402,
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr/latest.apk",
-        "downloadName": "vendr-v0.4.1.apk",
-        "fileSize": 3798014,
+        "downloadName": "vendr-v0.4.2.apk",
+        "fileSize": 3696110,
         "packageId": "com.tmbcworks.portr.vendor",
-        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version."
+        "releaseNotes": "v0.4.2 sideload build. It is signed with a new Portr release key, so if you have 0.4.1 (or older) installed, uninstall it first, then install 0.4.2.",
+        "sha256": "e0783cb310d43967c8aa8cca8f220d2af1b6dcf770bc20996ea4504c037aaa80"
       },
       "product": "portr",
       "productName": "Portr",
@@ -262,21 +264,22 @@
       "slug": "portr-customer",
       "name": "Portr — Customer",
       "tagline": "Get what you need.",
-      "description": "Customer app. Discover nearby businesses, order, and track a Runner. Download is the FoodDelivery v0.4.0 GitHub release.",
+      "description": "Customer app. Discover nearby businesses, order, and track a Runner. Download is the FoodDelivery v0.4.2 release.",
       "category": "productivity",
       "icon": "icons/apps/portr.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.1",
+        "version": "0.4.2",
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr-customer/latest.apk",
-        "downloadName": "porter-v0.4.1.apk",
-        "fileSize": 3885186,
+        "downloadName": "porter-v0.4.2.apk",
+        "fileSize": 3780127,
         "packageId": "com.tmbcworks.portr.porter",
-        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version.",
-        "versionCode": 401
+        "releaseNotes": "v0.4.2 sideload build. It is signed with a new Portr release key, so if you have 0.4.1 (or older) installed, uninstall it first, then install 0.4.2.",
+        "versionCode": 402,
+        "sha256": "adbaeb7ae0e5a7513f614fe63f895f5d192cce787de9ed1448ee097435b31d1a"
       },
       "product": "portr",
       "productName": "Portr",
@@ -527,7 +530,15 @@
       "webUrl": "https://themarkkade.pages.dev",
       "screenshots": [],
       "android": {
-        "status": "web-only"
+        "status": "available",
+        "version": "1.1.0",
+        "versionCode": 110,
+        "updatedAt": "2026-11-09",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/themarkkade/TheMarkkade-v1.1.1.apk",
+        "downloadName": "TheMarkkade-v1.1.0.apk",
+        "fileSize": 4556006,
+        "packageId": "com.markkade.app",
+        "sha256": "068ddbfeb0aae6dc76d363c88a66a15a7d065f5a09ef1cec5aa0deb19a5c3dd9"
       }
     },
     {
@@ -613,15 +624,15 @@
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "1.0.135",
+        "version": "1.1.1",
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/guardr/latest.apk",
-        "downloadName": "guardr-v1.0.135.apk",
-        "fileSize": 9588528,
-        "releaseNotes": "FCM push rebuild 1.0.135 — Firebase project guardr-tmbc baked in. Same Guardr release key as prior store APK; uninstall not required if you already have the new-key build.",
-        "versionCode": 235,
+        "downloadName": "guardr-v1.1.1.apk",
+        "fileSize": 9748027,
+        "releaseNotes": "Guardr 1.1.1 update. Installs as an update over the previous store build.",
+        "versionCode": 1101,
         "packageId": "com.tmbcworks.guardr",
-        "sha256": "0796ac86f5de514399daf5ae884e470920fdb59375f2c7a5c254254d36df2f38"
+        "sha256": "5d6d73eb6e956047fa8b69d28d84e213f5fa8b22343d7bf2690d912d4bcab6a6"
       },
       "product": "guardr",
       "productName": "Guardr",
@@ -692,21 +703,22 @@
       "slug": "runr",
       "name": "Runr — Driver",
       "tagline": "Pick it up. Run it there.",
-      "description": "Runr driver app. Signed v0.4.0 APK (Cloudflare/Neon) from the FoodDelivery release.",
+      "description": "Runr driver app. Signed v0.4.2 APK (Cloudflare/Neon) from the FoodDelivery release.",
       "category": "productivity",
       "icon": "icons/apps/runr.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.1",
-        "versionCode": 401,
+        "version": "0.4.2",
+        "versionCode": 402,
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/runr/latest.apk",
-        "downloadName": "runr-v0.4.1.apk",
-        "fileSize": 3847505,
+        "downloadName": "runr-v0.4.2.apk",
+        "fileSize": 3745162,
         "packageId": "com.tmbcworks.portr.runner",
-        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version."
+        "releaseNotes": "v0.4.2 sideload build. It is signed with a new Portr release key, so if you have 0.4.1 (or older) installed, uninstall it first, then install 0.4.2.",
+        "sha256": "569fb275f413d49ad007fbff84cf14478f1cab2b9156434045c6d79cfb4db8a1"
       },
       "product": "portr",
       "productName": "Portr",
@@ -861,21 +873,22 @@
       "productName": "Portr",
       "audience": "Admin",
       "tagline": "Run the marketplace.",
-      "description": "Ops app. Advance orders, coverage, and users. The same tools are on the website staff portal. Download is the FoodDelivery v0.4.0 GitHub release.",
+      "description": "Ops app. Advance orders, coverage, and users. The same tools are on the website staff portal. Download is the FoodDelivery v0.4.2 release.",
       "category": "productivity",
       "icon": "icons/apps/portr-command.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev/staff",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.1",
+        "version": "0.4.2",
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr-command/latest.apk",
-        "downloadName": "staff-v0.4.1.apk",
-        "fileSize": 3802637,
+        "downloadName": "staff-v0.4.2.apk",
+        "fileSize": 3702039,
         "packageId": "com.tmbcworks.portr.command",
-        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version.",
-        "versionCode": 401
+        "releaseNotes": "v0.4.2 sideload build. It is signed with a new Portr release key, so if you have 0.4.1 (or older) installed, uninstall it first, then install 0.4.2.",
+        "versionCode": 402,
+        "sha256": "5af9420e9a8e3e05a5e86335e3417565e88de8b88fa0c18ae434face3d4e63a7"
       },
       "newUpdated": true
     },
@@ -886,21 +899,22 @@
       "productName": "Portr",
       "audience": "Customer (FastFood)",
       "tagline": "Get what you need.",
-      "description": "Customer app with the FastFood name and palette. Same marketplace flows as Portr Customer. Download is the FoodDelivery v0.4.0 GitHub release.",
+      "description": "Customer app with the FastFood name and palette. Same marketplace flows as Portr Customer. Download is the FoodDelivery v0.4.2 release.",
       "category": "productivity",
       "icon": "icons/apps/portr-fastfood.png",
       "webUrl": "https://portr-web.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
         "status": "available",
-        "version": "0.4.1",
+        "version": "0.4.2",
         "updatedAt": "2026-11-09",
         "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/portr-fastfood/latest.apk",
-        "downloadName": "fastfood-v0.4.1.apk",
-        "fileSize": 3864706,
+        "downloadName": "fastfood-v0.4.2.apk",
+        "fileSize": 3762818,
         "packageId": "com.tmbcworks.portr.fastfood",
-        "releaseNotes": "Fresh sideload build signed with a new Portr release key. Existing installs must uninstall once, then install this version.",
-        "versionCode": 401
+        "releaseNotes": "v0.4.2 sideload build. It is signed with a new Portr release key, so if you have 0.4.1 (or older) installed, uninstall it first, then install 0.4.2.",
+        "versionCode": 402,
+        "sha256": "770181ebadc4d53b45572aca917bfa15b251f012bacbe0231c0da49b040efe94"
       },
       "newUpdated": true
     },

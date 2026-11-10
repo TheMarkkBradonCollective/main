@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-10T04:49:16.000Z",
-  "note": "Edit this file to add or update apps — no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09. SSS Clients/Guards/Staff/Messenger WebView APKs published 2026-11-09. TheSacramentoFree/buynothing 0.2.2 published 2026-11-09 (Cloudflare, no supabase.co).",
+  "generatedAt": "2026-11-10T04:59:58.000Z",
+  "note": "Edit this file to add or update apps — no code changes required for new APKs. Cloudflare-rebuild APKs for findr/myvenue/spiritsverse/buffalofree/guardr-messenger published 2026-11-09. SSS Clients/Guards/Staff/Messenger WebView APKs published 2026-11-09. TheSacramentoFree/buynothing 0.2.2 published 2026-11-09 (Cloudflare, no supabase.co). LINE 1.0.1 (com.tmbcworks.line) published 2026-11-09. LitApp 1.0.0 APK published 2026-11-09. SkipTheLine 1.0.0 (com.tmbcworks.skiptheline) WebView APK published 2026-11-10. LitApp 1.0.1 (black, white, and yellow ticket mark) published 2026-11-10.",
   "apkCdnBase": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev",
   "verseBundle": {
     "name": "The Verse (StrainVerse · SpiritsVerse · CookVerse)",
@@ -60,6 +60,9 @@
     "strainverse"
   ],
   "newUpdatedSlugs": [
+    "skiptheline",
+    "litapp",
+    "line",
     "guardr",
     "guardr-messenger",
     "dlvrd",
@@ -437,15 +440,25 @@
     },
     {
       "slug": "line",
-      "name": "Line",
-      "tagline": "Line app",
-      "description": "Line — Collective web app.",
+      "name": "LINE",
+      "tagline": "Sent, not served.",
+      "description": "A social app with one rule: no share, no see. You only see a post if you made it or someone shared it with you. Same account as the website.",
       "category": "social",
+      "newUpdated": true,
       "icon": "icons/apps/line.png",
       "webUrl": "https://line.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
-        "status": "web-only"
+        "status": "available",
+        "version": "1.0.1",
+        "updatedAt": "2026-11-09",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/line/latest.apk",
+        "downloadName": "LINE-1.0.1.apk",
+        "fileSize": 2997033,
+        "releaseNotes": "Opens the live LINE site. Package com.tmbcworks.line. The 1.0.0 shell opened a Vercel URL that is down and used a different package id, so install this build fresh.",
+        "versionCode": 2,
+        "packageId": "com.tmbcworks.line",
+        "sha256": "561b82be41f10cf44c88c3ca6ab51186934516163bfd04bb7bf79498465b78f5"
       }
     },
     {
@@ -741,14 +754,24 @@
       "slug": "litapp",
       "name": "LitApp",
       "tagline": "Multi-organizer events",
-      "description": "Multi-organizer event platform. First planned use is Sacramento Lime Takeover. The website is live. No APK is published.",
+      "description": "Multi-organizer event platform. First planned use is Sacramento Lime Takeover. The Android app opens the live website.",
       "category": "lifestyle",
-      "icon": "icons/icon-192.png",
+      "icon": "icons/apps/litapp.png",
       "webUrl": "https://litapp-web.pages.dev",
       "screenshots": [],
       "android": {
-        "status": "coming-soon"
-      }
+        "status": "available",
+        "version": "1.0.1",
+        "versionCode": 2,
+        "updatedAt": "2026-11-10",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/litapp/litapp-v1.0.1.apk",
+        "downloadName": "litapp-v1.0.1.apk",
+        "fileSize": 63140,
+        "packageId": "com.tmbcworks.litapp",
+        "sha256": "a9248fe76f3a6cf98c0780aed3fe7d9bf87e32a313406c6b4c29b55bc40c3caf",
+        "releaseNotes": "Black, white, and yellow ticket mark. Opens the live LitApp site."
+      },
+      "newUpdated": true
     },
     {
       "slug": "signature-security-specialist-demo",
@@ -1084,15 +1107,25 @@
     {
       "slug": "skiptheline",
       "name": "SkipTheLine",
-      "tagline": "Coming soon",
-      "description": "The website is live. No APK is published.",
+      "tagline": "Order ahead from the truck",
+      "description": "QR ordering for Markk My Words and other mobile food vendors. Sign in, build an order, and pay online or at pickup. This Android app opens the live SkipTheLine site.",
       "category": "lifestyle",
-      "icon": "icons/icon-192.png",
+      "icon": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/skiptheline/icon-512.png?v=1.0.1",
       "webUrl": "https://skiptheline.themarkkbrandoncollective-2d9.workers.dev",
       "screenshots": [],
       "android": {
-        "status": "coming-soon"
-      }
+        "status": "available",
+        "version": "1.0.1",
+        "versionCode": 2,
+        "updatedAt": "2026-11-10",
+        "downloadUrl": "https://pub-07d688bf950545ddba9025a723c0798e.r2.dev/skiptheline/skiptheline-v1.0.1.apk",
+        "downloadName": "skiptheline-v1.0.1.apk",
+        "fileSize": 2895112,
+        "packageId": "com.tmbcworks.skiptheline",
+        "sha256": "ed4c4d5e4858c7aad3935b275d1b8975c3460a6edf5ed8242cc5633ee0be6ee0",
+        "releaseNotes": "Launcher icon is the crown bag logo. Opens the live SkipTheLine site."
+      },
+      "newUpdated": true
     }
   ]
 }

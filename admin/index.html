@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#01875f">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<title>Founder dashboard — MBC Store</title>
+<link rel="stylesheet" href="/admin/admin.css?v=1">
+</head>
+<body>
+<header class="adm-header">
+  <a class="adm-brand" href="/"><img src="/icons/icon-192.png" width="32" height="32" alt="">MBC Store</a>
+  <span class="adm-spacer"></span>
+  <form method="post" action="/api/admin/logout" id="adm-logout-form">
+    <button class="adm-btn ghost" type="submit">Sign out</button>
+  </form>
+</header>
+<main class="adm-main" id="adm-dashboard">
+  <div class="adm-who">
+    <span class="adm-badge" id="adm-role">Founder</span>
+    <span>Signed in as <span class="email" id="adm-email-out">…</span></span>
+  </div>
+  <div class="adm-stats" id="adm-stats"></div>
+  <div class="adm-toolbar">
+    <h2>Catalog overview <small style="font-weight:400;color:var(--muted)">(read-only)</small></h2>
+    <button class="adm-btn ghost" type="button" id="adm-check">Check download links</button>
+  </div>
+  <div class="adm-tablewrap">
+    <table class="adm-table">
+      <thead><tr><th>App</th><th>Category</th><th>Android</th><th>Version</th><th>Updated</th><th>Size</th><th>Download</th></tr></thead>
+      <tbody id="adm-rows"><tr><td colspan="7">Loading catalog…</td></tr></tbody>
+    </table>
+  </div>
+  <p class="adm-foot" id="adm-foot"></p>
+</main>
+<script src="/admin/admin.js?v=1"></script>
+</body>
+</html>

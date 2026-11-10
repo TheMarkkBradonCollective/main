@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#01875f">
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+<title>Founder sign in — MBC Store</title>
+<link rel="stylesheet" href="/admin/admin.css?v=1">
+</head>
+<body>
+<header class="adm-header">
+  <a class="adm-brand" href="/"><img src="/icons/icon-192.png" width="32" height="32" alt="">MBC Store</a>
+</header>
+<main class="adm-main">
+  <form class="adm-card adm-login" id="adm-login-form" method="post" action="/api/admin/login">
+    <span class="adm-badge">Founder</span>
+    <h1>Sign in</h1>
+    <p class="sub">Founder &amp; admin access to the MBC Store.</p>
+    <label class="adm-field"><span>Email</span>
+      <input type="email" name="email" id="adm-email" autocomplete="username" required autofocus></label>
+    <label class="adm-field"><span>Password</span>
+      <input type="password" name="password" id="adm-password" autocomplete="current-password" required></label>
+    <button class="adm-btn block" type="submit" id="adm-submit">Sign in</button>
+    <p class="adm-msg" id="adm-msg" role="status" aria-live="polite"></p>
+  </form>
+</main>
+<script src="/admin/admin.js?v=1"></script>
+</body>
+</html>

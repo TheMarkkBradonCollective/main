@@ -22,6 +22,7 @@ const SKIP_TOP = new Set([
   'secrets',
   '.r2-staging',
   'play-scaffolds',
+  'functions', // Pages Functions source; wrangler bundles it from the repo root
 ]);
 const SKIP_FILES = new Set([
   'wrangler.toml',

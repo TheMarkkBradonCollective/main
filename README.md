@@ -85,6 +85,10 @@ Example new app entry:
 
 `npm run sync-apk-catalog` can still refresh mirrored APK metadata from repos; for production URLs, edit `apk-catalog.json` directly when you ship a new build.
 
+## APK publishing and updates
+
+MBC Store distributes our own Android products as signed APKs. See [docs/APK-RELEASES.md](docs/APK-RELEASES.md) for the release checklist, signing/version rules, Android installation behavior, and the remaining private-access setup. The store can download APKs and explain updates; Android's package installer performs native installs and updates with user approval. A PWA cannot silently install APKs or reliably inspect installed packages.
+
 ## Store UI
 
 | Route | Description |

@@ -74,8 +74,16 @@
   function androidStatus(app) {
     const st = app?.android?.status;
     if (st === 'available') return 'available';
+    if (st === 'request-to-download') return 'request';
     if (st === 'coming-soon' || st === 'web-only') return 'soon';
     return 'soon';
+  }
+
+  function availabilityLabel(app) {
+    const status = androidStatus(app);
+    if (status === 'request') return 'Request to Download';
+    if (status === 'available') return 'Available';
+    return 'Coming soon';
   }
 
   function hasApk(app) {
@@ -250,7 +258,7 @@
   }
 
   function renderListRow(app) {
-    const ver = app.android?.version ? `v${app.android.version}` : hasApk(app) ? 'APK' : 'Coming soon';
+    const ver = app.android?.version ? `v${app.android.version}` : hasApk(app) ? 'APK' : availabilityLabel(app);
     return `<a class="store-list-row" href="#/app/${encodeURIComponent(app.slug)}">
       <img class="store-icon store-icon-sm" src="${iconSrc(app)}" alt="" width="48" height="48" loading="lazy">
       <div class="store-list-meta" style="flex:1;min-width:0">
@@ -390,7 +398,9 @@
     const available = hasApk(app);
     const installBtn = available
       ? `<a class="store-btn store-btn-install" href="${downloadHref(app)}" download="${escapeHtml(android.downloadName || '')}" rel="noopener">Download APK</a>`
-      : `<span class="store-btn store-btn-soon">${android.status === 'coming-soon' ? 'Coming soon' : 'No APK yet'}</span>`;
+      : androidStatus(app) === 'request'
+        ? `<span class="store-btn store-btn-soon" aria-disabled="true">Request to Download</span>`
+        : `<span class="store-btn store-btn-soon">${android.status === 'coming-soon' ? 'Coming soon' : 'No APK yet'}</span>`;
     const webBtn =
       app.webUrl && app.webUrl.startsWith('http')
         ? `<a class="store-btn store-btn-secondary" href="${escapeHtml(app.webUrl)}" target="_blank" rel="noopener noreferrer">Open web app</a>`
@@ -408,6 +418,7 @@
           </div>
         </div>
         <div class="store-detail-actions">${installBtn}${webBtn}</div>
+        ${androidStatus(app) === 'request' ? '<p class="store-description" role="status">This app is set to Request to Download by the Founder. Requests are not enabled yet, so downloading is currently unavailable.</p>' : ''}
         ${
           productSiblings(app).length > 1
             ? `<h2 class="store-section-title">Apps in ${escapeHtml(app.productName || 'this product')}</h2>

@@ -389,7 +389,7 @@
     const android = app.android || {};
     const available = hasApk(app);
     const installBtn = available
-      ? `<a class="store-btn store-btn-install" href="${downloadHref(app)}" download="${escapeHtml(android.downloadName || '')}" rel="noopener">Install / Download APK</a>`
+      ? `<a class="store-btn store-btn-install" href="${downloadHref(app)}" download="${escapeHtml(android.downloadName || '')}" rel="noopener">Download APK</a>`
       : `<span class="store-btn store-btn-soon">${android.status === 'coming-soon' ? 'Coming soon' : 'No APK yet'}</span>`;
     const webBtn =
       app.webUrl && app.webUrl.startsWith('http')
@@ -419,7 +419,20 @@
           <div class="store-meta-cell"><span>Size</span><strong>${formatBytes(android.fileSize)}</strong></div>
           <div class="store-meta-cell"><span>Updated</span><strong>${formatDate(android.updatedAt || catalog?.generatedAt)}</strong></div>
           <div class="store-meta-cell"><span>Category</span><strong>${escapeHtml(categoryLabel(app.category || app.section))}</strong></div>
+          ${android.packageId ? `<div class="store-meta-cell"><span>Android package</span><strong>${escapeHtml(android.packageId)}</strong></div>` : ''}
+          ${Number.isInteger(android.versionCode) ? `<div class="store-meta-cell"><span>Build number</span><strong>${android.versionCode}</strong></div>` : ''}
         </div>
+        ${available ? `<section class="store-install-help" aria-label="Android installation instructions">
+          <h2 class="store-section-title">Install on Android</h2>
+          <ol>
+            <li>Tap <strong>Download APK</strong> above and wait for the download to finish.</li>
+            <li>Open the downloaded APK from your browser's download notification or the Downloads folder.</li>
+            <li>If Android asks, allow your browser to install unknown apps, then return to the installer.</li>
+            <li>Review the app name and tap <strong>Install</strong>.</li>
+          </ol>
+          <p class="store-description">MBC Store downloads the APK; Android performs the installation and may ask you to approve it. Updates install over an existing copy only when the package name and signing certificate match. If this release's notes say a new signing key was used, uninstall the old copy first; this can erase that app's local data.</p>
+          ${android.sha256 ? `<p class="store-description"><strong>APK SHA-256:</strong> <code>${escapeHtml(android.sha256)}</code></p>` : ''}
+        </section>` : ''}
         <h2 class="store-section-title">Screenshots</h2>
         <div class="store-screenshots">${screenshotHtml(app)}</div>
         <h2 class="store-section-title">About this app</h2>

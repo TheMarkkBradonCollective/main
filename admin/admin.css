@@ -44,3 +44,8 @@ table.adm-table{width:100%;border-collapse:collapse;font-size:.9rem}
 .pill.good{background:rgba(1,135,95,.12);color:var(--accent)}
 .pill.bad{background:rgba(198,40,40,.12);color:var(--danger)}
 .adm-foot{color:var(--muted);font-size:.8rem;margin-top:1rem}
+
+.adm-status{max-width:190px;padding:.55rem .65rem;border:1px solid var(--border);border-radius:9px;background:var(--bg);color:var(--text);font:inherit;font-size:.82rem}
+.adm-btn.small{padding:.48rem .8rem;font-size:.82rem;margin-left:.25rem}
+.adm-status-msg{display:inline-block;min-width:3rem;margin-left:.35rem;color:var(--muted);font-size:.78rem}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

@@ -61,6 +61,12 @@
       const an = a.android || {};
       const st = an.status || (a.webUrl ? 'web' : 'none');
       const cls = st === 'available' ? 'good' : '';
+      const options = [
+        ['available', 'Available'],
+        ['request-to-download', 'Request to Download'],
+        ['coming-soon', 'Coming soon'],
+        ['web-only', 'Web only'],
+      ];
       return `<tr data-slug="${esc(a.slug)}">
         <td class="app"><img src="/${esc(a.icon || 'icons/icon-192.png')}" alt="" loading="lazy">${esc(a.name)}</td>
         <td>${esc(a.category || '')}</td>
@@ -69,9 +75,40 @@
         <td>${esc(an.updatedAt || '—')}</td>
         <td>${esc(fmtSize(an.fileSize))}</td>
         <td class="dl">${an.downloadUrl ? `<a href="${esc(an.downloadUrl)}" rel="noopener">APK</a> <span class="pill">not checked</span>` : '—'}</td>
+        <td class="availability">
+          <label class="sr-only" for="status-${esc(a.slug)}">Availability for ${esc(a.name)}</label>
+          <select id="status-${esc(a.slug)}" class="adm-status" data-status>${options.map(([v, label]) => `<option value="${v}" ${st === v ? 'selected' : ''}>${label}</option>`).join('')}</select>
+          <button class="adm-btn small" type="button" data-save-status>Save</button>
+          <span class="adm-status-msg" role="status" aria-live="polite"></span>
+        </td>
       </tr>`;
     }).join('');
-    $('adm-foot').textContent = `Catalog generated ${cat.generatedAt || 'unknown'} · read-only view`;
+    $('adm-foot').textContent = `Catalog generated ${cat.generatedAt || 'unknown'} · Founder controls enabled`;
+    $('adm-rows').querySelectorAll('[data-save-status]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const row = button.closest('tr');
+        const select = row.querySelector('[data-status]');
+        const msg = row.querySelector('.adm-status-msg');
+        button.disabled = true; msg.textContent = 'Saving…';
+        try {
+          const r = await fetch('/api/admin/set-app-status', {
+            method: 'POST', credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ slug: row.dataset.slug, status: select.value }),
+          });
+          const result = await r.json().catch(() => ({}));
+          if (r.status === 401) { location.replace('/admin/login/'); return; }
+          if (!r.ok) throw new Error(result.error || 'Could not save status.');
+          const app = apps.find((item) => item.slug === row.dataset.slug);
+          if (app) { app.android = app.android || {}; app.android.status = select.value; }
+          row.querySelector('.pill').textContent = select.value;
+          row.querySelector('.pill').className = 'pill ' + (select.value === 'available' ? 'good' : '');
+          msg.textContent = 'Saved';
+        } catch (err) {
+          msg.textContent = err.message || 'Save failed';
+        } finally { button.disabled = false; }
+      });
+    });
   }
 
   async function checkLinks() {

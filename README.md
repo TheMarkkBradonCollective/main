@@ -87,6 +87,8 @@ Example new app entry:
 
 Founder availability control: set an app's `android.status` to `request-to-download` to hide its APK download and show a disabled **Request to Download** state. Requests are not wired up yet. Set it back to `available` to restore downloads. See [docs/FOUNDER-APP-AVAILABILITY.md](docs/FOUNDER-APP-AVAILABILITY.md) for the exact steps. This is a storefront switch; it does not revoke a public APK URL that someone already has.
 
+Founder dashboard: sign in at `/admin/login/` and manage app availability at `/admin/`. The existing login is retained; the dashboard now has Founder-only availability controls that save to GitHub. See [docs/FOUNDER-DASHBOARD.md](docs/FOUNDER-DASHBOARD.md) for required Cloudflare secrets, including the `GITHUB_TOKEN` needed to save changes.
+
 ## APK publishing and updates
 
 MBC Store distributes our own Android products as signed APKs. See [docs/APK-RELEASES.md](docs/APK-RELEASES.md) for the release checklist, signing/version rules, Android installation behavior, and the remaining private-access setup. The store can download APKs and explain updates; Android's package installer performs native installs and updates with user approval. A PWA cannot silently install APKs or reliably inspect installed packages.

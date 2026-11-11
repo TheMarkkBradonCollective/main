@@ -56,7 +56,7 @@ Pages serves an asset only when its manifest key starts with `/` (`/index.html`,
 | `apps[].icon` | Path under repo root or absolute URL |
 | `apps[].webUrl` | Enables **Open web app** when set |
 | `apps[].screenshots` | Optional image paths for detail carousel |
-| `apps[].android.status` | `available`, `coming-soon`, or `web-only` |
+| `apps[].android.status` | `available`, `request-to-download`, `coming-soon`, or `web-only` |
 | `apps[].android.downloadUrl` | Public HTTPS or repo-relative APK (prefer R2/worker URLs over private GitHub releases) |
 | `apps[].android.version`, `fileSize`, `updatedAt` | Detail metadata |
 
@@ -84,6 +84,8 @@ Example new app entry:
 ```
 
 `npm run sync-apk-catalog` can still refresh mirrored APK metadata from repos; for production URLs, edit `apk-catalog.json` directly when you ship a new build.
+
+Founder availability control: set an app's `android.status` to `request-to-download` to hide its APK download and show a disabled **Request to Download** state. Requests are not wired up yet. Set it back to `available` to restore downloads. See [docs/FOUNDER-APP-AVAILABILITY.md](docs/FOUNDER-APP-AVAILABILITY.md) for the exact steps. This is a storefront switch; it does not revoke a public APK URL that someone already has.
 
 ## APK publishing and updates
 
